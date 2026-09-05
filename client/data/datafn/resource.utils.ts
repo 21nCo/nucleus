@@ -9,12 +9,12 @@ import type { IRecordId } from "@21n/types/data.type";
 import { logger } from "@21n/components/debug/logger.client";
 import { properCase } from "@21n/shared-utils/text.utils";
 import type { IResourceSwitchItem } from "@21n/types/select.type";
-import { Product } from "@21n/shared-config/product.type";
+import { Product } from "@nucleum/schema/product.type";
 import {
   nextResourceIcons,
   nextUncountableResources
 } from "@21n/next/resource.utils";
-import { nucleumDatafnSchema } from "@21n/shared-data/datafn/schema.datafn";
+import { nucleumDatafnSchema } from "@nucleum/schema/datafn";
 
 export function resourceAction(resource: Resource, action: ResourceActionType) {
   return `${resource}_${action}`;

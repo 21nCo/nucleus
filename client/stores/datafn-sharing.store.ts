@@ -5,7 +5,7 @@ import {
   datafnRuntime,
   type NucleumDatafnRuntime
 } from "@21n/stores/datafn.store";
-import type { NucleumDatafnResource } from "@21n/shared-data/datafn";
+import type { NucleumDatafnResource } from "@nucleum/schema";
 
 export type DatafnShareLevel = "viewer" | "editor" | "owner";
 export type DatafnShareScope = "record" | "resource";

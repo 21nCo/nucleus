@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { Resource } from "@21n/shared-data/datafn/resource.enum";
+import { Resource } from "@nucleum/schema/resource.enum";
 import type { EmailParts } from "@21n/types/account.type";
 import type { IMarkdown } from "@21n/components/markdown/md.type";
 import { Display } from "@21n/types/view.type";

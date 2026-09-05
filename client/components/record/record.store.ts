@@ -11,7 +11,7 @@ import type { BulkEditStore } from "@21n/components/record/bulkedit.store";
 import { appStore } from "@21n/stores/app.store";
 import { determineResourceType } from "@21n/data/datafn/resource.utils";
 import { datafn } from "@21n/stores/datafn.store";
-import type { NucleumDatafnResource } from "@21n/shared-data/datafn";
+import type { NucleumDatafnResource } from "@nucleum/schema";
 import { Action } from "@21n/types/action.enum";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
 import { LinkType } from "@21n/products/memotron/linking/link.type";

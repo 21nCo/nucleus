@@ -13,7 +13,7 @@ import {
 import type { AuthFnSession } from 'authfn';
 import type { Adapter, RuntimeStores } from '@superfunctions/db';
 import type { SuperfunctionObservability } from '@superfunctions/observability';
-import { nucleumDatafnSchema } from '@21n/shared-data/datafn/schema.datafn';
+import { nucleumDatafnSchema } from '@nucleum/schema/datafn';
 import { createSyncSearchProvider } from './search-provider.js';
 import { resolveAccountUserNamespace } from './namespace.js';
 import { readPositiveIntegerEnv } from './env.js';

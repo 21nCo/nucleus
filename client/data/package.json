@@ -6,8 +6,7 @@
   "dependencies": {
     "@21n/components": "*",
     "@21n/products": "*",
-    "@21n/shared-config": "*",
-    "@21n/shared-data": "*",
+    "@nucleum/schema": "*",
     "@21n/shared-utils": "*",
     "@21n/stores": "*",
     "@21n/utils": "*"

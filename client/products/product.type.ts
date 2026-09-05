@@ -1,10 +1,10 @@
 import {
   BaseOverviewPanel,
   BaseProduct
-} from "@21n/shared-config/product.type";
+} from "@nucleum/schema/product.type";
 import { NextOverviewPanel, NextProduct } from "@21n/next/product.type";
 
-export { Extension } from "@21n/shared-config/product.type";
+export { Extension } from "@nucleum/schema/product.type";
 
 export const Product = { ...BaseProduct, ...NextProduct } as const;
 export type Product =

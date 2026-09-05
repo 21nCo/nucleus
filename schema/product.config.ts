@@ -1,4 +1,5 @@
-import { Resource } from "@21n/shared-data/datafn/resource.enum";
+import { Resource } from "./resource.enum";
+import { resolveProductTableNames } from "./features";
 import { Extension, Product } from "./product.type";
 
 export interface IProductConfigBase {
@@ -12,28 +13,9 @@ export interface IProductConfigBase {
   databaseName?: string;
 }
 
-export const commonTables = [Resource.accessLog];
-
-export const linkabilityTables = [
-  Resource.collection,
-  Resource.property,
-  Resource.view,
-  Resource.link,
-  Resource.linkTag
-];
-
-export const filesAbilityTables = [Resource.file];
-
-export const resourceTableMap: Record<Product, Resource[]> = {
-  [Product.NUCLEUM]: [Resource.event],
-  [Product.MEMOTRON]: [Resource.node, Resource.capture],
-  [Product.POINTRON]: [
-    Resource.objective,
-    Resource.task,
-    Resource.session,
-    Resource.sessionLog
-  ]
-};
+function productTables(product: Product): Resource[] {
+  return resolveProductTableNames(product) as Resource[];
+}
 
 export function resolveProductResourceConfig(
   product: Product | string,
@@ -61,13 +43,7 @@ export const productRegistry: Record<Product, IProductConfigBase> = {
     databaseName: "nativeone",
     resources: {
       browse: [Resource.collection, Resource.event],
-      table: [
-        ...commonTables,
-        ...Array.from(Object.values(resourceTableMap)).flat(),
-        ...linkabilityTables,
-        ...filesAbilityTables,
-        Resource.space
-      ]
+      table: productTables(Product.NUCLEUM)
     },
     displayName: "Nucleum",
     tagline: "Your digital harmony"
@@ -77,12 +53,7 @@ export const productRegistry: Record<Product, IProductConfigBase> = {
     databaseName: "nativeone",
     resources: {
       browse: [Resource.node, Resource.collection],
-      table: [
-        ...commonTables,
-        ...resourceTableMap[Product.MEMOTRON],
-        ...linkabilityTables,
-        ...filesAbilityTables
-      ]
+      table: productTables(Product.MEMOTRON)
     },
     displayName: "Memotron",
     tagline: "Your memory partner"
@@ -97,11 +68,7 @@ export const productRegistry: Record<Product, IProductConfigBase> = {
         Resource.collection,
         Resource.event
       ],
-      table: [
-        ...commonTables,
-        ...resourceTableMap[Product.POINTRON],
-        ...linkabilityTables
-      ]
+      table: productTables(Product.POINTRON)
     },
     displayName: "Pointron",
     tagline: "Your focus haven"
@@ -113,12 +80,7 @@ export const sharedExtensions: Record<Extension, IProductConfigBase> = {
     name: "Memotron Clipper",
     resources: {
       browse: [],
-      table: [
-        ...commonTables,
-        ...resourceTableMap[Product.MEMOTRON],
-        ...linkabilityTables,
-        ...filesAbilityTables
-      ]
+      table: productTables(Product.MEMOTRON)
     },
     displayName: "Memotron Clipper",
     tagline: ""

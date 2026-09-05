@@ -485,45 +485,25 @@
       "@21n/shared-dbo/*": [
         "../shared/dbo/*"
       ],
-      "@21n/shared-data": [
-        "../shared/data/index.ts",
-        "../shared/data/index.tsx",
-        "../shared/data/index.js",
-        "../shared/data/index.mjs",
-        "../shared/data/index.cjs",
-        "../shared/data/index.svelte",
-        "../shared/data/index.d.ts",
-        "../shared/data/src/index.ts",
-        "../shared/data/src/index.tsx",
-        "../shared/data/src/index.js",
-        "../shared/data/src/index.mjs",
-        "../shared/data/src/index.cjs",
-        "../shared/data/src/index.svelte",
-        "../shared/data/src/index.d.ts",
-        "../shared/data"
+      "@nucleum/schema": [
+        "../schema/index.ts",
+        "../schema/index.tsx",
+        "../schema/index.js",
+        "../schema/index.mjs",
+        "../schema/index.cjs",
+        "../schema/index.svelte",
+        "../schema/index.d.ts",
+        "../schema/src/index.ts",
+        "../schema/src/index.tsx",
+        "../schema/src/index.js",
+        "../schema/src/index.mjs",
+        "../schema/src/index.cjs",
+        "../schema/src/index.svelte",
+        "../schema/src/index.d.ts",
+        "../schema"
       ],
-      "@21n/shared-data/*": [
-        "../shared/data/*"
-      ],
-      "@21n/shared-config": [
-        "../shared/config/index.ts",
-        "../shared/config/index.tsx",
-        "../shared/config/index.js",
-        "../shared/config/index.mjs",
-        "../shared/config/index.cjs",
-        "../shared/config/index.svelte",
-        "../shared/config/index.d.ts",
-        "../shared/config/src/index.ts",
-        "../shared/config/src/index.tsx",
-        "../shared/config/src/index.js",
-        "../shared/config/src/index.mjs",
-        "../shared/config/src/index.cjs",
-        "../shared/config/src/index.svelte",
-        "../shared/config/src/index.d.ts",
-        "../shared/config"
-      ],
-      "@21n/shared-config/*": [
-        "../shared/config/*"
+      "@nucleum/schema/*": [
+        "../schema/*"
       ],
       "@21n/next": [
         "./next/noop/index.ts",

@@ -1,6 +1,6 @@
 import { Product } from "@21n/products/product.type";
-import { productRegistry } from "@21n/shared-config/product.config";
-import { nucleumDatafnSchema } from "@21n/shared-data/datafn/schema.datafn";
+import { productRegistry } from "@nucleum/schema/product.config";
+import { nucleumDatafnSchema } from "@nucleum/schema/datafn";
 import { parse } from "@21n/shared-utils/json.utils";
 import { ClientStorageKey } from "@21n/persistence/persistence.type";
 import { clientStorage } from "@21n/persistence/persistence.utils";

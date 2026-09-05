@@ -12,7 +12,12 @@ export default defineConfig({
     environment: "node",
     name: "shared",
     setupFiles: [baseSetupFile],
-    include: ["shared/**/*.test.ts", "shared/**/*.spec.ts"],
+    include: [
+      "shared/**/*.test.ts",
+      "shared/**/*.spec.ts",
+      "schema/**/*.test.ts",
+      "schema/**/*.spec.ts"
+    ],
     exclude: ["**/node_modules/**", "**/.turbo/**", "**/dist/**"],
     coverage: coverageConfig("shared")
   }

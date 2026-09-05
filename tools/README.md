@@ -2,13 +2,13 @@
 
 ## Alias System
 
-All `@21n/*` import aliases are managed from a single source of truth: `alias-map.json`.
+All workspace import aliases (`@21n/*` and `@nucleum/*`) are managed from a single source of truth: `alias-map.json`.
 
 ### Files
 
 | File | Purpose |
 |---|---|
-| `alias-map.json` | Single source of truth for all `@21n/*` alias mappings |
+| `alias-map.json` | Single source of truth for all workspace alias mappings |
 | `alias-utils.mjs` | Shared functions for building aliases in different formats |
 | `alias-utils.cjs` | CJS wrapper for environments that need `require()` |
 | `sync-aliases.mjs` | Writes tsconfig `paths` to root and client tsconfigs |

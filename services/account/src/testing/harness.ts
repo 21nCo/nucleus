@@ -9,7 +9,7 @@ import { createSearchProvider } from "@searchfn/datafn-provider";
 import { MemoryAdapter } from "@searchfn/adapter-memory";
 import { createMemoryRuntimeStores, memoryAdapter } from "@superfunctions/db/adapters/memory";
 import type { Adapter, KVStoreAdapter } from "@superfunctions/db";
-import { resolveNucleumDatafnSearchResourceFields } from "@21n/shared-data/datafn";
+import { resolveNucleumDatafnSearchResourceFields } from "@nucleum/schema";
 import { buildAccountServices, registerCoreRoutes } from "../app.js";
 import {
   registerTestRoutes,

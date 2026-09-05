@@ -78,6 +78,7 @@ const DISALLOWED_IMPORT_PATTERNS = [
   /^client\//,
   /^apps\//,
   /^shared\//,
+  /^schema\//,
   /^\$lib\//,
   /^\$lib$/
 ];

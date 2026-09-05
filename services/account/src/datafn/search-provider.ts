@@ -4,7 +4,7 @@ import type { SuperfunctionObservability } from '@superfunctions/observability';
 import {
   nucleumDatafnSearchDefaults,
   resolveNucleumDatafnSearchResourceFields
-} from '@21n/shared-data/datafn';
+} from '@nucleum/schema';
 import {
   readNonNegativeIntegerEnv,
   readPositiveIntegerEnv

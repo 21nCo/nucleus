@@ -17,7 +17,7 @@ import {
   IResourceFilterDateGrouping,
   type IResourceSelectProperties
 } from "@21n/types/data.type";
-import { Resource } from "@21n/shared-data/datafn/resource.enum";
+import { Resource } from "@nucleum/schema/resource.enum";
 import { generateRandomId } from "@21n/shared-utils/crypto.utils";
 
 type IComparisonFilterValue = {

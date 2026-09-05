@@ -1,7 +1,7 @@
 import {
   BaseResource,
   MetaResource as SharedMetaResource
-} from "@21n/shared-data/datafn/resource.enum";
+} from "@nucleum/schema/resource.enum";
 import { NextResource } from "@21n/next/resource.enum";
 
 export const Resource = { ...BaseResource, ...NextResource } as const;

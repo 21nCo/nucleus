@@ -22,7 +22,6 @@
   "@21n/shared-types": "shared/types",
   "@21n/shared-utils": "shared/utils",
   "@21n/shared-dbo": "shared/dbo",
-  "@21n/shared-data": "shared/data",
-  "@21n/shared-config": "shared/config",
+  "@nucleum/schema": "schema",
   "@21n/next": "client/next/noop"
 }

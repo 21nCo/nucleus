@@ -3,7 +3,7 @@ export {
   nucleumDatafnSchema,
   type NucleumDatafnResource,
   type NucleumDatafnSchema
-} from "./schema.datafn";
+} from "./datafn";
 
 export {
   nucleumDatafnSearchDefaults,
@@ -16,3 +16,15 @@ export {
 
 export { BaseResource, MetaResource, Resource } from "./resource.enum";
 export type { Resource as ResourceValue } from "./resource.enum";
+
+export {
+  allFeatureIds,
+  composeDefinition,
+  features,
+  productFeatures,
+  resolveProductTableNames,
+  type FeatureId
+} from "./features";
+
+export * from "./product.config";
+export * from "./product.type";

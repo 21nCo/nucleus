@@ -1,0 +1,20 @@
+{
+  "name": "@nucleum/schema",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@datafn/core": "0.1.0"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./datafn": "./datafn.ts",
+    "./features": "./features.ts",
+    "./fields": "./fields.ts",
+    "./search.provider": "./search.provider.ts",
+    "./resource.enum": "./resource.enum.ts",
+    "./product.config": "./product.config.ts",
+    "./product.type": "./product.type.ts",
+    "./*": "./*"
+  }
+}

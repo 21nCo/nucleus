@@ -13,8 +13,8 @@ import {
   resolveProductResourceConfig,
   sharedExtensions,
   productRegistry
-} from "@21n/shared-config/product.config";
-import type { IProductConfigBase as ISharedProductConfigBase } from "@21n/shared-config/product.config";
+} from "@nucleum/schema/product.config";
+import type { IProductConfigBase as ISharedProductConfigBase } from "@nucleum/schema/product.config";
 
 const isDev = import.meta.env?.DEV || false;
 

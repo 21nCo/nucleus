@@ -16,10 +16,10 @@ import {
   resolveNucleumDatafnSearchResourceFields,
   type NucleumDatafnResource,
   type NucleumDatafnSchema
-} from "@21n/shared-data/datafn";
+} from "@nucleum/schema";
 import { createSearchProvider } from "@searchfn/datafn-provider";
 import { IndexedDbAdapter } from "@searchfn/adapter-indexeddb";
-import { resolveProductResourceConfig } from "@21n/shared-config/product.config";
+import { resolveProductResourceConfig } from "@nucleum/schema/product.config";
 import { resolveAccountBaseUrl } from "@21n/components/network";
 import { createNucleumAuthFnTransportAuth } from "@21n/components/account/auth";
 import type { Product } from "@21n/products/product.type";

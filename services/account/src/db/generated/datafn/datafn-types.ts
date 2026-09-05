@@ -134,9 +134,9 @@ export interface Node {
   file?: string;
   id: string;
   importId?: string;
+  isAncestorInactive?: boolean;
   isArchived?: boolean;
   isLocked?: boolean;
-  isAncestorInactive?: boolean;
   isStarred?: boolean;
   label?: string;
   labelSearch?: string;
@@ -167,9 +167,9 @@ export interface Objective {
   endDate?: number;
   id: string;
   importId?: string;
+  isAncestorInactive?: boolean;
   isArchived?: boolean;
   isLocked?: boolean;
-  isAncestorInactive?: boolean;
   isPinnedForQuickFocus?: boolean;
   isStarred?: boolean;
   label?: string;
@@ -226,6 +226,7 @@ export interface PublicLink {
   principalId: string;
   recordId?: string;
   resource: string;
+  resourceRegion?: string;
   revokedAt?: number;
   scope: string;
   tokenHash: string;
@@ -309,9 +310,9 @@ export interface Task {
   dateUnix: number;
   estimated?: number;
   id: string;
+  isAncestorInactive?: boolean;
   isArchived?: boolean;
   isChecked?: boolean;
-  isAncestorInactive?: boolean;
   label?: string;
   minutes?: number;
   objectiveId?: string | null;
@@ -404,6 +405,18 @@ export interface RecordLinks {
   readonly updatedBy?: string | null;
 }
 
+export interface PropertyValues {
+  itemId: string;
+  fromResource: string;
+  propertyId: string;
+  collectionId: string;
+  value: unknown;
+  readonly createdAt?: number | null;
+  readonly updatedAt?: number | null;
+  readonly createdBy?: string | null;
+  readonly updatedBy?: string | null;
+}
+
 export interface SpaceItems {
   spaceId: string;
   itemId: string;
@@ -413,18 +426,6 @@ export interface SpaceItems {
   label: string;
   parentId: string;
   sortOrder: number;
-  readonly createdAt?: number | null;
-  readonly updatedAt?: number | null;
-  readonly createdBy?: string | null;
-  readonly updatedBy?: string | null;
-}
-
-export interface PropertyValues {
-  itemId: string;
-  fromResource: string;
-  propertyId: string;
-  collectionId: string;
-  value: unknown;
   readonly createdAt?: number | null;
   readonly updatedAt?: number | null;
   readonly createdBy?: string | null;
@@ -465,8 +466,8 @@ export interface Tables {
   collection_views: CollectionViews;
   collection_items: CollectionItems;
   record_links: RecordLinks;
-  space_items: SpaceItems;
   property_values: PropertyValues;
+  space_items: SpaceItems;
   session_items: SessionItems;
 }
 

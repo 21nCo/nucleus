@@ -1,6 +1,6 @@
 import type { DatafnSchemaLiteral } from "@datafn/core";
 
-import { nucleumDatafnSchema } from "./schema.datafn";
+import { nucleumDatafnSchema } from "./datafn";
 
 export type NucleumDatafnSearchResourceFields = Record<string, string[]>;
 
