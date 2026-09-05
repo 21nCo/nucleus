@@ -1,0 +1,210 @@
+{
+  "cli_version": "0.10.4",
+  "checkpoint_id": "01M1RSATSPXWMWTS0W7EEXQNVK",
+  "session_id": "07f47ec2-e770-4be8-9d5c-8e737c82d470",
+  "strategy": "manual-commit",
+  "created_at": "2026-09-05T12:40:14.118832Z",
+  "branch": "dev",
+  "checkpoints_count": 9,
+  "save_step_count": 9,
+  "files_touched": [
+    "AGENTS.md",
+    "client/components/package.json",
+    "client/components/record/record.store.ts",
+    "client/data/datafn/resource.enum.ts",
+    "client/data/datafn/resource.utils.ts",
+    "client/data/package.json",
+    "client/persistence/legacyLocalDataBackup.ts",
+    "client/persistence/package.json",
+    "client/products/package.json",
+    "client/products/product.config.ts",
+    "client/products/product.type.ts",
+    "client/stores/datafn-sharing.store.ts",
+    "client/stores/datafn.store.ts",
+    "client/stores/package.json",
+    "client/tsconfig.json",
+    "package-lock.json",
+    "package.json",
+    "schema/datafn.ts",
+    "schema/features.test.ts",
+    "schema/features.ts",
+    "schema/fields.ts",
+    "schema/index.ts",
+    "schema/package.json",
+    "schema/product.config.ts",
+    "schema/product.type.ts",
+    "schema/resource.enum.ts",
+    "schema/search.provider.invariants.test.ts",
+    "schema/search.provider.test.ts",
+    "schema/search.provider.ts",
+    "services/account/package.json",
+    "services/account/src/datafn/search-provider.ts",
+    "services/account/src/datafn/server.ts",
+    "services/account/src/datafn/sync.datafn.ts",
+    "services/account/src/db/generated/datafn/datafn-schema.drizzle.ts",
+    "services/account/src/db/generated/datafn/datafn-types.ts",
+    "services/account/src/testing/harness.ts",
+    "shared/config/index.ts",
+    "shared/config/package.json",
+    "shared/config/product.config.ts",
+    "shared/config/product.type.ts",
+    "shared/data/datafn/index.ts",
+    "shared/data/datafn/resource.enum.ts",
+    "shared/data/datafn/schema.datafn.ts",
+    "shared/data/datafn/search.provider.invariants.test.ts",
+    "shared/data/datafn/search.provider.test.ts",
+    "shared/data/datafn/search.provider.ts",
+    "shared/data/index.ts",
+    "shared/data/package.json",
+    "shared/utils/package.json",
+    "shared/utils/surreal.utils.ts",
+    "shared/utils/text.utils.test.ts",
+    "shared/utils/text.utils.ts",
+    "tests/projects/shared.vitest.config.ts",
+    "tools/README.md",
+    "tools/alias-map.json",
+    "tools/alias-utils.cjs",
+    "tools/alias-utils.mjs",
+    "tsconfig.json"
+  ],
+  "agent": "Cursor",
+  "model": "cursor-grok-4.6-high-fast",
+  "turn_id": "1ce8235f5995",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 691899,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 18063808,
+    "output_tokens": 74790,
+    "api_call_count": 9
+  },
+  "session_metrics": {
+    "turn_count": 9,
+    "context_tokens": 236078,
+    "context_window_size": 256000
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-09-05T12:40:14.078038Z",
+    "agent_lines": 664,
+    "agent_removed": 557,
+    "human_added": 0,
+    "human_modified": 102,
+    "human_removed": 723,
+    "total_committed": 732,
+    "total_lines_changed": 2046,
+    "agent_percentage": 59.67741935483871,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 997,
+      "user_lines_removed": 723,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "shared/config/product.config.ts": 8,
+        "shared/data/datafn/index.ts": 9,
+        "shared/data/datafn/schema.datafn.ts": 8,
+        "shared/data/datafn/schema.features.test.ts": 63,
+        "shared/data/datafn/schema.features.ts": 746,
+        "shared/data/datafn/schema.fields.ts": 163
+      },
+      "user_removed_per_file": {
+        "shared/config/product.config.ts": 46,
+        "shared/data/datafn/schema.datafn.ts": 677
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 997,
+      "agent_lines_removed": 723
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 997,
+      "agent_lines_removed": 723
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1549,
+      "agent_lines_removed": 1322
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1549,
+      "agent_lines_removed": 1322
+    },
+    {
+      "checkpoint_number": 6,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1494,
+      "agent_lines_removed": 1322
+    },
+    {
+      "checkpoint_number": 7,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1494,
+      "agent_lines_removed": 1322
+    },
+    {
+      "checkpoint_number": 8,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1494,
+      "agent_lines_removed": 1322
+    },
+    {
+      "checkpoint_number": 9,
+      "user_lines_added": 34,
+      "user_lines_removed": 34,
+      "agent_lines_added": 1548,
+      "agent_lines_removed": 1348,
+      "user_added_per_file": {
+        "schema/datafn.ts": 2,
+        "schema/features.test.ts": 7,
+        "schema/features.ts": 18,
+        "schema/index.ts": 5,
+        "schema/product.config.ts": 2
+      },
+      "user_removed_per_file": {
+        "schema/datafn.ts": 2,
+        "schema/features.test.ts": 7,
+        "schema/features.ts": 18,
+        "schema/index.ts": 5,
+        "schema/product.config.ts": 2
+      }
+    },
+    {
+      "checkpoint_number": 10,
+      "user_lines_added": 34,
+      "user_lines_removed": 34,
+      "agent_lines_added": 1548,
+      "agent_lines_removed": 1348,
+      "user_added_per_file": {
+        "schema/datafn.ts": 2,
+        "schema/features.test.ts": 7,
+        "schema/features.ts": 18,
+        "schema/index.ts": 5,
+        "schema/product.config.ts": 2
+      },
+      "user_removed_per_file": {
+        "schema/datafn.ts": 2,
+        "schema/features.test.ts": 7,
+        "schema/features.ts": 18,
+        "schema/index.ts": 5,
+        "schema/product.config.ts": 2
+      }
+    }
+  ]
+}
