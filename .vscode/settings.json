@@ -1,3 +1,7 @@
 {
-  "window.autoDetectColorScheme": true
+  "window.autoDetectColorScheme": true,
+  "sonarlint.connectedMode.project": {
+    "connectionId": "21nco",
+    "projectKey": "21nCo_nucleum"
+  }
 }

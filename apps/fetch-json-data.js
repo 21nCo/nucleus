@@ -42,9 +42,8 @@ export default function fetchJsonPlugin(outputPath) {
       const env = loadEnv(config.mode, process.cwd(), "");
       const baseUrl = env.VITE_STATIC_URL || "https://cdn.21n.org";
       const envMode = env.VITE_ENV || "live";
-      const product = env.VITE_PRODUCT || "nucleus";
-      const staticProduct = product === "nucleum" ? "nucleus" : product;
-      url = `${baseUrl}/${staticProduct}/${envMode}.json`;
+      const product = env.VITE_PRODUCT || "nucleum";
+      url = `${baseUrl}/${product}/${envMode}.json`;
 
       console.log({
         at: "fetchJsonPlugin",
