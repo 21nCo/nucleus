@@ -1,0 +1,35 @@
+@/after/client/persistence/persistence.ts:192-196 why did we do this? because nucleum.json isn't available on that endpoint?
+
+---
+
+where is the source code of cdn? I believe it should be in 21n repo
+
+---
+
+change that folder from nucleus to nucleum and create a PR on that repo - then make the corresponding changes in the nucleus repo
+
+---
+
+resume
+
+---
+
+@/after/client/stores/productKeyMigration.utils.ts:7 where is this used?
+
+---
+
+whats happening at those call sites?
+
+---
+
+is this necessary if we migrate data on the db when the update is released? just answer
+
+---
+
+search on linear whether there is already an issue created for db migrations in nucleum team
+
+---
+
+https://linear.app/21n/issue/TIDY-476/nucleum-db-migrations-r10
+
+Add this item as a pending item in this issue description

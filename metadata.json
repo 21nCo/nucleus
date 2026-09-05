@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.10.4",
+  "checkpoint_id": "01M1R6NT11T91WRB0CAKFS98VW",
+  "strategy": "manual-commit",
+  "branch": "dev",
+  "checkpoints_count": 9,
+  "files_touched": [
+    "apps/fetch-json-data.js",
+    "client/persistence/persistence.ts"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 229631,
+    "cache_creation_tokens": 118662,
+    "cache_read_tokens": 2523036,
+    "output_tokens": 13730,
+    "api_call_count": 6
+  }
+}
