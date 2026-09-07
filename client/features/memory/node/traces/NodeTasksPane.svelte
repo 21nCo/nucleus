@@ -5,7 +5,7 @@
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import TaskThumbnail from "@nucleum/features/focus/tasks/TaskThumbnail.svelte";
   import { LoadingAnimationType } from "@21n/types/feedback.type";
-  import type { IEmbedBlock } from "@nucleum/components/markdown/md.type";
+  import type { IEmbedBlock } from "@nucleum/features/memory/markdown/md.type";
   import type { IRecordId } from "@21n/types/data.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import {
     ButtonStyle,
     ButtonVariant,

@@ -1,6 +1,6 @@
 import { attachTimeToDate, formatTime } from "@21n/utils/time.utils";
 import { currentTime } from "@nucleum/stores/app.store";
-import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
 import { get } from "svelte/store";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { toasts } from "@nucleum/stores/notification.store";

@@ -5,7 +5,7 @@
   import Icon from "../Icon.svelte";
   import { popover } from "@nucleum/actions/popover.action";
   import { ButtonVariant } from "@21n/types/button.type";
-  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
+  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import ShortcutText from "../text/ShortcutText.svelte";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";

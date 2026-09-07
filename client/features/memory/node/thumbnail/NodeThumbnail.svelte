@@ -16,8 +16,8 @@
     resolveIfImageShouldContain,
     resolveUrlPreview
   } from "@nucleum/features/memory/node/node.utils";
-  import ResourceGridThumbnail from "@nucleum/components/record/thumbnail/ResourceGridThumbnail.svelte";
-  import ResourceThumbnailBase from "@nucleum/components/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceGridThumbnail from "@nucleum/application/record/thumbnail/ResourceGridThumbnail.svelte";
+  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
@@ -29,14 +29,14 @@
     formatSeconds,
     formatTime
   } from "@21n/utils/time.utils";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import NodeThumbnailAudioPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailAudioPreview.svelte";
   import NodeThumbnailPdfPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailPdfPreview.svelte";
   import { TimeFormat } from "@21n/types/time.type";
   import type { IRecordId } from "@21n/types/data.type";
   import { fileStore } from "@nucleum/features/files/file.store";
   import type { IFile } from "@nucleum/features/files/file.type";
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import CollectionItemThumbnailProperties from "@nucleum/features/collections/properties/CollectionItemThumbnailProperties.svelte";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
   import { enumToString, isValidString } from "@21n/shared-utils/text.utils";

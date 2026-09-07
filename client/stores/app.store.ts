@@ -12,7 +12,7 @@ import { IdentityProvider } from "@21n/types/oauth.type";
 import { dispatchCustomEvent, goto } from "@21n/utils/browser.utils";
 import { persistLocally, getDapId } from "@nucleum/persistence/persistence.utils";
 import { postDataToParent } from "@21n/utils/embed.utils";
-import modalEvent from "@nucleum/components/modal/modal.store";
+import modalEvent from "@nucleum/application/modal/modal.store";
 import view from "@nucleum/stores/view.store";
 import context from "@nucleum/stores/context.store";
 import {
@@ -21,7 +21,7 @@ import {
 } from "@nucleum/stores/notification.store";
 import { Embed, OperatingSystem } from "@21n/types/context.type";
 import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
-import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
+import { InteractionMode } from "@21n/types/interaction-mode.type";
 import { Action } from "@21n/types/action.enum";
 import { GlobalEvent, type Event } from "@21n/types/event.enum";
 import { logger } from "@nucleum/client/runtime/logging/logger";

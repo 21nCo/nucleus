@@ -1,7 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import Library from "@nucleum/components/library/Library.svelte";
+  import Library from "@nucleum/application/library/Library.svelte";
   import { Product } from "@21n/types/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
 

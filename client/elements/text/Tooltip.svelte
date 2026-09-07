@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import view from "@nucleum/stores/view.store";
   import { Size } from "@21n/types/size.enum";
   import type { FormLabelInfoTooltip } from "@21n/types/text.type";

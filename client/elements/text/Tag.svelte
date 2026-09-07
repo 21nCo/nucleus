@@ -10,7 +10,7 @@
   import type { IRecordId } from "@21n/types/data.type";
   import { Placement } from "@21n/types/direction.enum";
   import context from "@nucleum/stores/context.store";
-  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
+  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
 
   let {

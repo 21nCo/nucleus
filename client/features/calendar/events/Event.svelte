@@ -4,7 +4,7 @@
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import TextArea from "@21n/elements/input/TextArea.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import RecordTrashBanner from "@nucleum/components/record/RecordTrashBanner.svelte";
+  import RecordTrashBanner from "@nucleum/application/record/RecordTrashBanner.svelte";
   import type { ICalendarEvent } from "@nucleum/features/calendar/events/event.type";
   import {
     AccessMode,

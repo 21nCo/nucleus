@@ -10,7 +10,7 @@
   import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType } from "@21n/types/notification.type";
-  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import {
     NodeType,
     socialPostNodeTypeList
@@ -28,7 +28,7 @@
   import type { IWebpageStore } from "@nucleum/extensions/clipper/contentScripts/types";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceError } from "@nucleum/components/error/errors";
+  import { ResourceError } from "@nucleum/application/error/errors";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import NodeThumbnailSocialPostPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailSocialPostPreview.svelte";
   let {

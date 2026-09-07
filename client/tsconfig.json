@@ -544,6 +544,26 @@
       ],
       "@nucleum/next/*": [
         "./next/noop/*"
+      ],
+      "@nucleum/application": [
+        "./application/index.ts",
+        "./application/index.tsx",
+        "./application/index.js",
+        "./application/index.mjs",
+        "./application/index.cjs",
+        "./application/index.svelte",
+        "./application/index.d.ts",
+        "./application/src/index.ts",
+        "./application/src/index.tsx",
+        "./application/src/index.js",
+        "./application/src/index.mjs",
+        "./application/src/index.cjs",
+        "./application/src/index.svelte",
+        "./application/src/index.d.ts",
+        "./application"
+      ],
+      "@nucleum/application/*": [
+        "./application/*"
       ]
     }
   },

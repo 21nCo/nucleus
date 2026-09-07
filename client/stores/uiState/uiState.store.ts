@@ -6,7 +6,7 @@ import { appStore } from "@nucleum/stores/app.store";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { Action } from "@21n/types/action.enum";
-import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
+import { InteractionMode } from "@21n/types/interaction-mode.type";
 import {
   UIState,
   UIStateScope,

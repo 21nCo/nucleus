@@ -1,12 +1,12 @@
 <script lang="ts">
   import { generateUID } from "@21n/utils/utils";
   import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
-  import Markdown from "@nucleum/components/markdown/Markdown.svelte";
-  import NodularMarkdown from "@nucleum/components/markdown/NodularMarkdown.svelte";
+  import Markdown from "@nucleum/features/memory/markdown/Markdown.svelte";
+  import NodularMarkdown from "@nucleum/features/memory/markdown/NodularMarkdown.svelte";
   import type { INode } from "@nucleum/features/memory/node/node.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { performApiCall } from "@21n/utils/network.utils";
-  import type { IMarkdown } from "@nucleum/components/markdown/md.type";
+  import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
   let {
     params,
     mdId = generateUID()

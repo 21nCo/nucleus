@@ -1,7 +1,7 @@
 <script lang="ts">
   import { tick, type Snippet } from "svelte";
   import { Size } from "@21n/types/size.enum";
-  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { InputStyle, type InputLabel } from "@21n/types/input.type";
   import InputBaseElement from "@21n/elements/InputBaseElement.svelte";

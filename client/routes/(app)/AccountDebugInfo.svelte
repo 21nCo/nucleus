@@ -5,7 +5,7 @@
   import { authClient } from "@nucleum/client/runtime/account/auth";
   import Button from "@21n/elements/button/Button.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import NewAccountDebugInfo from "@nucleum/components/settings/account/NewAccountDebugInfo.svelte";
+  import NewAccountDebugInfo from "@nucleum/application/settings/account/NewAccountDebugInfo.svelte";
   async function refresh() {
     const val = await clientStorage.get(ClientStorageKey.USER);
     return parse(val ?? "{}");

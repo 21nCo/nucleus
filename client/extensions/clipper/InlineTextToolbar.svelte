@@ -7,14 +7,14 @@
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType } from "@21n/types/notification.type";
-  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import LinkActionOnClipper from "@nucleum/features/memory/common/linkbox/LinkActionOnClipper.svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import HighlightColors from "@nucleum/features/memory/common/highlighters/HighlightColors.svelte";
   import { debouncer } from "@21n/utils/utils";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceError } from "@nucleum/components/error/errors";
+  import { ResourceError } from "@nucleum/application/error/errors";
   import { ButtonVariant } from "@21n/types/button.type";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/types/size.enum";

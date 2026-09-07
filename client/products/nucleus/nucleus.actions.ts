@@ -5,13 +5,13 @@ import { pointronActions } from "@nucleum/products/pointron/pointron.actions";
 import NucleusLibrary from "@nucleum/products/nucleus/NucleusLibrary.svelte";
 import NucleusOverview from "@nucleum/products/nucleus/overview/NucleusOverview.svelte";
 import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
-import LibraryPanelContentResolver from "@nucleum/components/library/LibraryPanelContentResolver.svelte";
+import LibraryPanelContentResolver from "@nucleum/application/library/LibraryPanelContentResolver.svelte";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import NucleusOverviewPanel from "@nucleum/products/nucleus/overview/NucleusOverviewPanel.svelte";
 import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
 import { resourceAction } from "@nucleum/datafn/resource.utils";
 import { appMenuActionLabelsByAction } from "@nucleum/client/config/product-nav.config";
-import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
+import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
 
 const actionsToFilterInSub = [Action.LIBRARY, Action.OVERVIEW];
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";
 
   let {

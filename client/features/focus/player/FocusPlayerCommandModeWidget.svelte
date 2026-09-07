@@ -1,5 +1,5 @@
 <script>
-  import { fullScreen } from "@nucleum/components/modal/modal.store";
+  import { fullScreen } from "@nucleum/application/modal/modal.store";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
   import { SessionUIContext } from "@21n/types/pointron/session.type";
   import IntervalBar from "@nucleum/features/focus/elements/intervalbar/IntervalBar.svelte";

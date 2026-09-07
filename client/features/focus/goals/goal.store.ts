@@ -1,7 +1,7 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
-import { PanelSwitcherMixin } from "@nucleum/components/resource/panelSwitcher.mixin";
-import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
+import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
+import { PanelSwitcherMixin } from "@nucleum/application/resource/panelSwitcher.mixin";
+import { ResourcePanelType } from "@21n/types/resource-panel.type";
 import { type IRecordId } from "@21n/types/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type {
@@ -17,7 +17,7 @@ import {
   ResourceActionType,
   type IResourceMutationParams
 } from "@nucleum/datafn/resource.type";
-import { ResourceActions } from "@nucleum/components/record/resource.actions";
+import { ResourceActions } from "@nucleum/application/record/resource.actions";
 import {
   ContextMenuType,
   type IContextMenu,

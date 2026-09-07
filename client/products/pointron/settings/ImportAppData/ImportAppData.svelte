@@ -1,6 +1,6 @@
 <script lang="ts">
   import view from "@nucleum/stores/view.store";
-  import modalEvent from "@nucleum/components/modal/modal.store";
+  import modalEvent from "@nucleum/application/modal/modal.store";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
@@ -25,7 +25,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import { Display } from "@21n/types/view.type";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { parse } from "@21n/shared-utils/json.utils";
   import {
     datafn,

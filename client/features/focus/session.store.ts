@@ -25,7 +25,7 @@ import { appStore } from "@nucleum/stores/app.store";
 import modalEvent, {
   fullScreen,
   player
-} from "@nucleum/components/modal/modal.store";
+} from "@nucleum/application/modal/modal.store";
 import {
   toasts,
   scheduledNotifications,

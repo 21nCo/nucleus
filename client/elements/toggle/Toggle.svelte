@@ -6,7 +6,7 @@
   import Badge from "@21n/elements/text/Badge.svelte";
   import { tooltip as tooltipAction } from "@nucleum/actions/popover.action";
   import { Placement } from "@21n/types/direction.enum";
-  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
+  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
   let {
     icon,

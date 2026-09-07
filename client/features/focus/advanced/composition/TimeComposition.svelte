@@ -20,7 +20,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import ComposeTotalsText from "@nucleum/features/focus/advanced/composition/ComposeTotalsText.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import {
     UIState,
     UIStateScope

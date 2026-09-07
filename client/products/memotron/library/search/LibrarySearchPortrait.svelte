@@ -3,8 +3,8 @@
   import { InputStyle } from "@21n/types/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import { fly } from "svelte/transition";
-  import { recentsStore } from "@nucleum/components/record/recent.store";
-  import Records from "@nucleum/components/record/Records.svelte";
+  import { recentsStore } from "@nucleum/application/record/recent.store";
+  import Records from "@nucleum/application/record/Records.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/types/size.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";

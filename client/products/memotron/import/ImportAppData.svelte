@@ -1,6 +1,6 @@
 <script lang="ts">
   import view from "@nucleum/stores/view.store";
-  import modalEvent from "@nucleum/components/modal/modal.store";
+  import modalEvent from "@nucleum/application/modal/modal.store";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { Size } from "@21n/types/size.enum";
@@ -18,7 +18,7 @@
   import Divider from "@21n/elements/Divider.svelte";
   import { Display } from "@21n/types/view.type";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";

@@ -30,7 +30,8 @@
     "shared/utils",
     "shared/dbo",
     "schema",
-    "tests"
+    "tests",
+    "client/application"
   ],
   "dependencies": {
     "@carbon/charts": "1.22.18",

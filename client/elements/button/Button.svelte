@@ -11,7 +11,7 @@
   import { hoverable } from "@nucleum/actions/hover.action";
   import { popover } from "@nucleum/actions/popover.action";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
-  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
+  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import context from "@nucleum/stores/context.store";

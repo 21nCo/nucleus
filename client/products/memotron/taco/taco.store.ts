@@ -1,4 +1,4 @@
-import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
 import { get } from "svelte/store";
 import { NodeType } from "@nucleum/features/memory/node/node.type";
 import { TacoActions } from "@nucleum/products/memotron/taco/taco.types";

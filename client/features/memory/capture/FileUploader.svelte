@@ -13,7 +13,7 @@
   import { ButtonVariant } from "@21n/types/button.type";
   import { Embed } from "@21n/types/context.type";
   import { wait } from "@21n/utils/time.utils";
-  import { MAX_FILE_SIZE_MB } from "@nucleum/components/record/record.store";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/application/record/record.store";
   import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import type { NodeType } from "@nucleum/features/memory/node/node.type";

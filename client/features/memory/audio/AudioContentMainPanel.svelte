@@ -1,17 +1,17 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import NodularMarkdown from "@nucleum/components/markdown/NodularMarkdown.svelte";
+  import NodularMarkdown from "@nucleum/features/memory/markdown/NodularMarkdown.svelte";
   import { InputStyle } from "@21n/types/input.type";
   import view from "@nucleum/stores/view.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { type IJobStatus } from "@nucleum/components/taco/taco.type";
+  import { type IJobStatus } from "@nucleum/application/taco/taco.type";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import TranscriptionWithTimestamps from "@nucleum/features/memory/audio/TranscriptionWithTimestamps.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { Size } from "@21n/types/size.enum";
   import { copyToClipboard } from "@21n/utils/utils";
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { toasts } from "@nucleum/stores/notification.store";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import {

@@ -35,7 +35,7 @@
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { ActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
-  import type { IMarkdownTemplate } from "@nucleum/components/markdown/md.type";
+  import type { IMarkdownTemplate } from "@nucleum/features/memory/markdown/md.type";
   import { Size } from "@21n/types/size.enum";
   import { page } from "$app/stores";
   import { Context } from "@21n/types/appStore.type";

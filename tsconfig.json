@@ -533,6 +533,26 @@
       ],
       "@nucleum/next/*": [
         "./client/next/noop/*"
+      ],
+      "@nucleum/application": [
+        "./client/application/index.ts",
+        "./client/application/index.tsx",
+        "./client/application/index.js",
+        "./client/application/index.mjs",
+        "./client/application/index.cjs",
+        "./client/application/index.svelte",
+        "./client/application/index.d.ts",
+        "./client/application/src/index.ts",
+        "./client/application/src/index.tsx",
+        "./client/application/src/index.js",
+        "./client/application/src/index.mjs",
+        "./client/application/src/index.cjs",
+        "./client/application/src/index.svelte",
+        "./client/application/src/index.d.ts",
+        "./client/application"
+      ],
+      "@nucleum/application/*": [
+        "./client/application/*"
       ]
     }
   },

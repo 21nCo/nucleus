@@ -5,7 +5,7 @@
     type INodeThumb,
     NodeType
   } from "@nucleum/features/memory/node/node.type";
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { appStore } from "@nucleum/stores/app.store";
   import { cn } from "@21n/utils/ui.utils";
   import {

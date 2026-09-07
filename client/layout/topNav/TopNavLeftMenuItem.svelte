@@ -15,7 +15,7 @@
   import type { IAction } from "@21n/types/action.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { keyboardShortcuts } from "@nucleum/components/shortcuts/shortcuts.store";
+  import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
   import context from "@nucleum/stores/context.store";
 
   let {

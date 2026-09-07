@@ -6,7 +6,7 @@
     AccessMode,
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
-  import ResourceThumbnailBase from "@nucleum/components/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
   import { compareDates, parseAndFormatDate } from "@21n/utils/time.utils";
   import TaskCheckbox from "@nucleum/features/focus/tasks/TaskCheckbox.svelte";
   import { hoverable } from "@nucleum/actions/hover.action";
@@ -18,7 +18,7 @@
   import type { IRecordId } from "@21n/types/data.type";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import ResourceThumbnailContextMenu from "@nucleum/components/record/thumbnail/ResourceThumbnailContextMenu.svelte";
+  import ResourceThumbnailContextMenu from "@nucleum/application/record/thumbnail/ResourceThumbnailContextMenu.svelte";
   import view from "@nucleum/stores/view.store";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
   import AbsoluteTimeRangePopoverV2 from "@21n/elements/datetime/absolute/AbsoluteTimeRangePopoverV2.svelte";
@@ -34,7 +34,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import { resolveBulkSelectionAccessPointId } from "@nucleum/datafn/resource.utils";
   import Task from "@nucleum/features/focus/tasks/Task.svelte";
   import context from "@nucleum/stores/context.store";

@@ -19,7 +19,7 @@
   import { getPort } from "@plasmohq/messaging/port";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import { extensionDatafn } from "@nucleum/extensions/extension.store";
   import {
     blankUrls,

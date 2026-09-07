@@ -13,7 +13,7 @@
     filterZeroValuesLine,
     truncateText
   } from "./chart.utils";
-  import { userPreferences } from "../settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
 
   let {
     type,

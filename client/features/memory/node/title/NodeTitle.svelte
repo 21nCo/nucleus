@@ -8,7 +8,7 @@
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import context from "@nucleum/stores/context.store";
   import TextInputOnKeyboardToolbar from "@21n/elements/input/TextInputOnKeyboardToolbar.svelte";
-  import RecordStarStatusFeedback from "@nucleum/components/record/RecordStarStatusFeedback.svelte";
+  import RecordStarStatusFeedback from "@nucleum/application/record/RecordStarStatusFeedback.svelte";
   let {
     node,
     accessPoint = ResourceAccessPoint.SELF,

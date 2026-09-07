@@ -1,27 +1,27 @@
 import { ActionType, type IAction } from "@21n/types/action.type";
-import AccountSettings from "@nucleum/components/settings/account/AccountSettings.svelte";
-import SettingsAsPage from "@nucleum/components/settings/asPage/SettingsAsPage.svelte";
-import ShortcutSettings from "@nucleum/components/shortcuts/settings/ShortcutSettings.svelte";
-import AboutSettings from "@nucleum/components/settings/about/AboutSettings.svelte";
-import ShareToFriends from "@nucleum/components/settings/ShareToFriends.svelte";
-import DateTimeSettings from "@nucleum/components/settings/datetime/DateTimeSettings.svelte";
-import AppMenuSettings from "@nucleum/components/settings/AppMenuSettings.svelte";
-import AccessibilitySettings from "@nucleum/components/settings/appearance/accessibility/AccessibilitySettings.svelte";
-import AppearanceSettings from "@nucleum/components/settings/appearance/AppearanceSettings.svelte";
-import SettingsAsModal from "@nucleum/components/settings/SettingsAsModal.svelte";
+import AccountSettings from "@nucleum/application/settings/account/AccountSettings.svelte";
+import SettingsAsPage from "@nucleum/application/settings/asPage/SettingsAsPage.svelte";
+import ShortcutSettings from "@nucleum/application/shortcuts/settings/ShortcutSettings.svelte";
+import AboutSettings from "@nucleum/application/settings/about/AboutSettings.svelte";
+import ShareToFriends from "@nucleum/application/settings/ShareToFriends.svelte";
+import DateTimeSettings from "@nucleum/application/settings/datetime/DateTimeSettings.svelte";
+import AppMenuSettings from "@nucleum/application/settings/AppMenuSettings.svelte";
+import AccessibilitySettings from "@nucleum/application/settings/appearance/accessibility/AccessibilitySettings.svelte";
+import AppearanceSettings from "@nucleum/application/settings/appearance/AppearanceSettings.svelte";
+import SettingsAsModal from "@nucleum/application/settings/SettingsAsModal.svelte";
 import { Size } from "@21n/types/size.enum";
 import { Orientation } from "@21n/types/direction.enum";
 import { Action } from "@21n/types/action.enum";
-import InteractionModeSettings from "@nucleum/components/settings/interactionMode/InteractionModeSettings.svelte";
+import InteractionModeSettings from "@nucleum/application/settings/interactionMode/InteractionModeSettings.svelte";
 import { Embed, OperatingSystem } from "@21n/types/context.type";
-import SyncSettings from "@nucleum/components/settings/sync/SyncSettings.svelte";
-import TacoSettings from "@nucleum/components/settings/taco/TacoSettings.svelte";
+import SyncSettings from "@nucleum/application/settings/sync/SyncSettings.svelte";
+import TacoSettings from "@nucleum/application/settings/taco/TacoSettings.svelte";
 import { UserDataMode } from "@21n/types/account.type";
 import AnalyticsSettings from "@nucleum/products/pointron/settings/AnalyticsSettings.svelte";
 import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
 import SessionSettings from "@nucleum/products/pointron/settings/SessionSettings.svelte";
-import ModSettings from "@nucleum/components/settings/mod/ModSettings.svelte";
-import DeveloperSettings from "@nucleum/components/settings/developer/DeveloperSettings.svelte";
+import ModSettings from "@nucleum/application/settings/mod/ModSettings.svelte";
+import DeveloperSettings from "@nucleum/application/settings/developer/DeveloperSettings.svelte";
 
 const settings: (Required<Pick<IAction, "action">> & Partial<IAction>)[] = [
   {

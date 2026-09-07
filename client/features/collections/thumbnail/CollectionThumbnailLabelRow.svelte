@@ -9,7 +9,7 @@
   import { type ICollectionThumb } from "@nucleum/features/collections/collection.type";
   import CollectionThumbnailLabel from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
   import CollectionItemCount from "@nucleum/features/collections/counts/CollectionItemCount.svelte";
-  import RecordStarStatusFeedback from "@nucleum/components/record/RecordStarStatusFeedback.svelte";
+  import RecordStarStatusFeedback from "@nucleum/application/record/RecordStarStatusFeedback.svelte";
   let {
     item,
     arrangement = Arrangement.LIST,

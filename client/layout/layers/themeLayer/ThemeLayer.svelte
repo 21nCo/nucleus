@@ -20,7 +20,7 @@
   import "@fontsource/noto-color-emoji";
   // Do not remove this import as it is required for the global css propagation in case of custom colors are absent - ex: PanelSwitcher
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
   import { generateGoogleFontsUrl } from "@21n/layout/layers/themeLayer/fonts.config";
 

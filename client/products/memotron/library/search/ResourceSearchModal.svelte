@@ -3,7 +3,7 @@
   import ResourceSearchBase from "@nucleum/products/memotron/library/search/ResourceSearchBase.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@21n/types/action.enum";
-  import SearchInput from "@nucleum/components/search/SearchInput.svelte";
+  import SearchInput from "@nucleum/application/search/SearchInput.svelte";
 
   let { isInline = false }: { isInline?: boolean } = $props();
   let searchInputRef: SearchInput;

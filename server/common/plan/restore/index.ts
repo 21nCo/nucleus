@@ -1,5 +1,5 @@
-import { BillingCycle } from "$lib/client/components/subscription/userPlan.type";
-import { PlanType } from "$lib/client/components/subscription/userPlan.type";
+import { BillingCycle } from "@21n/shared-types/subscription.type";
+import { PlanType } from "@21n/shared-types/subscription.type";
 import { performQueryOnMasterDb } from "$lib/server/surrealHelpers";
 import { Agent } from "../../account/account.type";
 import {

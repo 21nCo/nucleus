@@ -2,7 +2,7 @@ import { Agent } from "../../account/account.type";
 import {
   BillingCycle,
   PlanType
-} from "$lib/client/components/subscription/userPlan.type";
+} from "@21n/shared-types/subscription.type";
 import { ValidationError } from "../../errors";
 import { performQueryOnMasterDb } from "$lib/server/surrealHelpers";
 import {

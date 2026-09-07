@@ -1,5 +1,5 @@
 <script>
-  import PageError from "@nucleum/components/error/PageError.svelte";
+  import PageError from "@nucleum/application/error/PageError.svelte";
 </script>
 
 <PageError />

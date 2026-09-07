@@ -1,4 +1,4 @@
-import { BillingCycle } from "$lib/client/components/subscription/userPlan.type";
+import { BillingCycle } from "@21n/shared-types/subscription.type";
 import { performQueryOnMasterDb } from "$lib/server/surrealHelpers";
 import { PaymentProvider } from "$lib/shared/types/plan.type";
 import { generateSHA256Hash } from "$lib/shared/utils/crypto.utils";

@@ -21,8 +21,8 @@
   import { haptic } from "@21n/utils/embed.utils";
   import TypeSelectorOnMobile from "@nucleum/features/memory/capture/typeSelector/TypeSelectorOnMobile.svelte";
   import { fly } from "svelte/transition";
-  import HomeQuickAccess from "@nucleum/components/home/mobile/HomeQuickAccess.svelte";
-  import type { IQuickAccessItem } from "@nucleum/components/home/home.type";
+  import HomeQuickAccess from "@nucleum/application/home/mobile/HomeQuickAccess.svelte";
+  import type { IQuickAccessItem } from "@nucleum/application/home/home.type";
   import type { IRecordId } from "@21n/types/data.type";
   import CaptureTopBar from "@nucleum/features/memory/capture/CaptureTopBar.svelte";
   import context from "@nucleum/stores/context.store";
@@ -47,7 +47,7 @@
   import { InfoTextType } from "@21n/types/text.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import { searchStore } from "@nucleum/components/search";
+  import { searchStore } from "@nucleum/application/search/index";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";
   import { resolveCollectionResource } from "@nucleum/features/collections/collection.utils";

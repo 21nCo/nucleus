@@ -1,6 +1,6 @@
 <script lang="ts">
   import ObjectiveThumbnailDates from "@nucleum/features/focus/goals/thumbnail/GoalThumbnailDates.svelte";
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import { ObjectiveType, type IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import ObjectiveThumbnailSubBadge from "@nucleum/features/focus/goals/thumbnail/GoalThumbnailSubBadge.svelte";

@@ -5,7 +5,7 @@
     ResourceActionType
   } from "@nucleum/datafn/resource.type";
   import { onDestroy, onMount } from "svelte";
-  import { BulkEditor } from "@nucleum/components/record/record.store";
+  import { BulkEditor } from "@nucleum/application/record/record.store";
   import {
     TaskDueDateFilter,
     TaskSubTypeForSwitcher,
@@ -20,8 +20,8 @@
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
   import { InputStyle } from "@21n/types/input.type";
   import { page } from "$app/stores";
-  import type { SubType } from "@nucleum/components/library/library.type";
-  import LibrarySubTypeSwitcher from "@nucleum/components/library/LibrarySubTypeSwitcher.svelte";
+  import type { SubType } from "@nucleum/application/library/library.type";
+  import LibrarySubTypeSwitcher from "@nucleum/application/library/LibrarySubTypeSwitcher.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import {
@@ -49,7 +49,7 @@
   import { ButtonVariant, ButtonStyle } from "@21n/types/button.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { generateMiniRandomId } from "@21n/shared-utils/crypto.utils";
-  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import view from "@nucleum/stores/view.store";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import { fly } from "svelte/transition";

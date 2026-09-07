@@ -8,7 +8,7 @@
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
   import { manualLogStore } from "@nucleum/features/focus/logs/log.store";
@@ -22,7 +22,7 @@
   import { Orientation } from "@21n/types/direction.enum";
   import FocusNotes from "@nucleum/features/focus/notes/FocusNotes.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import { isPrimaryActionDisabled } from "@nucleum/components/modal/modal.store";
+  import { isPrimaryActionDisabled } from "@nucleum/application/modal/modal.store";
   import ObjectiveSearchResultItem from "@nucleum/features/focus/goals/GoalSearchResultItem.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";

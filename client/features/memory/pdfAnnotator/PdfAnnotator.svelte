@@ -21,7 +21,7 @@
   import { debouncer } from "@21n/utils/utils";
   import { mount, onDestroy, onMount, unmount } from "svelte";
   import TextHiglighter from "@nucleum/features/memory/pdfAnnotator/TextHiglighter.svelte";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import InlineToolBar from "@nucleum/features/memory/pdfAnnotator/toolbar/InlineToolBar.svelte";
   import Comment from "@nucleum/features/memory/pdfAnnotator/comment/Comment.svelte";
   import InlineEditToolBar from "@nucleum/features/memory/pdfAnnotator/toolbar/InlineEditToolBar.svelte";

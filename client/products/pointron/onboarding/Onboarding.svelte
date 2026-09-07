@@ -2,7 +2,7 @@
   import Header from "@nucleum/products/pointron/onboarding/OnboardingHeader.svelte";
   import Footer from "@nucleum/products/pointron/onboarding/OnboardingFooter.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import view from "@nucleum/stores/view.store";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/types/button.type";

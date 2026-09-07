@@ -15,7 +15,7 @@
   import { Display } from "@21n/types/view.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
+  import { InteractionMode } from "@21n/types/interaction-mode.type";
   import { tooltip } from "@nucleum/actions/popover.action";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import type { InputLabelInfoToolTip } from "@21n/types/input.type";

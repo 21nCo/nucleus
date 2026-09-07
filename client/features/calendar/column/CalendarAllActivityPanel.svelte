@@ -3,7 +3,7 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { type IRecordId } from "@21n/types/data.type";
   import { formatSeconds, formatTime } from "@21n/utils/time.utils";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { appStore } from "@nucleum/stores/app.store";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";

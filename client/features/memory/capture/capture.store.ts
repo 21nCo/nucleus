@@ -49,7 +49,7 @@ import {
   resourceAction,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import { resolveResource } from "@nucleum/components/record/record.store";
+import { resolveResource } from "@nucleum/application/record/record.store";
 import type { IFile } from "@nucleum/features/files/file.type";
 import {
   generateMiniRandomId,
@@ -80,16 +80,16 @@ import {
   isEmptyMd,
   resolveDefaultBodyForBlock,
   textToMdBlocks
-} from "@nucleum/components/markdown/markdown.utils";
-import type { IBlock } from "@nucleum/components/markdown/md.type";
-import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
-import { embedBridge } from "@nucleum/components/embed/embed.store";
+} from "@nucleum/features/memory/markdown/markdown.utils";
+import type { IBlock } from "@nucleum/features/memory/markdown/md.type";
+import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
+import { embedBridge } from "@nucleum/application/embed/embed.store";
 import { EmbedMessage } from "@21n/types/embedMessage.enum";
 import { convertWebMToWav } from "@21n/utils/audio.utils";
 import { TimeScaleUnit } from "@21n/types/time.type";
 import { resolveCalendarNotesId } from "@nucleum/features/calendar/calendar.utils";
 import { getUtcSafeDay } from "@21n/elements/datetime/datetime.utils";
-import type { IMarkdownTemplate } from "@nucleum/components/markdown/md.type";
+import type { IMarkdownTemplate } from "@nucleum/features/memory/markdown/md.type";
 import { isValidString } from "@21n/shared-utils/text.utils";
 import { isRecordId } from "@nucleum/datafn/resource.utils";
 import { debouncer } from "@21n/utils/utils";

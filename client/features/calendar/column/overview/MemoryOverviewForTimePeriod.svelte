@@ -13,7 +13,7 @@
   import { Action } from "@21n/types/action.enum";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import { LoadingAnimationType } from "@21n/types/feedback.type";
-  import { tzStore } from "@nucleum/components/settings/timezone/tz.store";
+  import { tzStore } from "@nucleum/stores/preferences/timezone.store";
   import { datafn } from "@nucleum/datafn/datafn.store";
 
   let {

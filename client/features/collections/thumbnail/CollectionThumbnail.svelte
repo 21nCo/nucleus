@@ -1,16 +1,16 @@
 <script lang="ts">
   import { Arrangement } from "@21n/types/direction.enum";
   import { type ICollectionThumb } from "@nucleum/features/collections/collection.type";
-  import ResourceGridThumbnail from "@nucleum/components/record/thumbnail/ResourceGridThumbnail.svelte";
+  import ResourceGridThumbnail from "@nucleum/application/record/thumbnail/ResourceGridThumbnail.svelte";
   import Cover from "@nucleum/features/collections/thumbnail/Cover.svelte";
   import { Size } from "@21n/types/size.enum";
   import {
     ResourceAccessPoint,
     ResourceAccessPointState
   } from "@nucleum/datafn/resource.type";
-  import ResourceThumbnailBase from "@nucleum/components/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
   import CollectionThumbnailLabelRow from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabelRow.svelte";
-  import ResourceThumbnailContentTypeOverlay from "@nucleum/components/record/thumbnail/ResourceThumbnailContentTypeOverlay.svelte";
+  import ResourceThumbnailContentTypeOverlay from "@nucleum/application/record/thumbnail/ResourceThumbnailContentTypeOverlay.svelte";
   import CollectionPropertyCount from "@nucleum/features/collections/counts/CollectionPropertyCount.svelte";
   import CollectionItemCount from "@nucleum/features/collections/counts/CollectionItemCount.svelte";
   import CollectionThumbnailLabel from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";

@@ -4,12 +4,12 @@
   import { activeSession } from "@nucleum/features/focus/session.store";
   import type { IActiveSessionStore } from "@21n/types/pointron/session.type";
   import { SessionState } from "@21n/types/pointron/sessionState.enum";
-  import Popover from "@nucleum/components/modal/Modal.svelte";
+  import Popover from "@nucleum/application/modal/Modal.svelte";
   import { TimeUnit } from "@21n/types/time.type";
   import { AppSkin } from "@21n/types/appearance.type";
   import appearance from "@nucleum/stores/appearance.store";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
 
   let {
     parentBackgroundIndex = 1,

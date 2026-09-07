@@ -18,7 +18,7 @@
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import ResourceStatusBanner from "@nucleum/components/record/RecordStatusBanner.svelte";
+  import ResourceStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceActionType } from "@nucleum/datafn/resource.type";
   import { cn } from "@21n/utils/ui.utils";

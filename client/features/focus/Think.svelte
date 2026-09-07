@@ -1,7 +1,7 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import TypewritingText from "@21n/elements/text/animatingText/TypewritingText.svelte";
-  import modalEvent from "@nucleum/components/modal/modal.store";
+  import modalEvent from "@nucleum/application/modal/modal.store";
   import { Size } from "@21n/types/size.enum";
   import FocusPlayerTimeText from "@nucleum/features/focus/player/FocusPlayerTimeText.svelte";
   import SessionNotes from "@nucleum/features/focus/notes/SessionNotes.svelte";

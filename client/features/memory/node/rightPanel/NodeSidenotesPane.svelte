@@ -1,5 +1,5 @@
 <script lang="ts">
-  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import { focusById } from "@nucleum/actions/focusById.action";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";

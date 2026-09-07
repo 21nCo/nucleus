@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Markdown from "@nucleum/components/markdown/Markdown.svelte";
-  import type { IMarkdown } from "@nucleum/components/markdown/md.type";
+  import Markdown from "@nucleum/features/memory/markdown/Markdown.svelte";
+  import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
   import type { Snippet } from "svelte";
 
   let {

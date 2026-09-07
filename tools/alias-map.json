@@ -24,5 +24,6 @@
   "@21n/shared-utils": "shared/utils",
   "@21n/shared-dbo": "shared/dbo",
   "@nucleum/schema": "schema",
-  "@nucleum/next": "client/next/noop"
+  "@nucleum/next": "client/next/noop",
+  "@nucleum/application": "client/application"
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { appStore } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";
   import { getContext, onMount } from "svelte";
   import { resolveContentPreview } from "@nucleum/features/memory/node/node.utils";

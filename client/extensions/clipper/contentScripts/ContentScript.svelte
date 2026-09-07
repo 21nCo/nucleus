@@ -22,7 +22,7 @@
   import LoginNotification from "@nucleum/extensions/clipper/feedbackPane/LoginNotification.svelte";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
-  import { ResourceError } from "@nucleum/components/error/errors";
+  import { ResourceError } from "@nucleum/application/error/errors";
   import { Placement } from "@21n/types/direction.enum";
   import ToolbarPlacementHintBlock from "@nucleum/extensions/clipper/toolbar/ToolbarPlacementHintBlock.svelte";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";

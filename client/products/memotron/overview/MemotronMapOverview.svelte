@@ -1,6 +1,6 @@
 <script lang="ts">
   import MemotronOverviewLayout from "@nucleum/products/memotron/overview/MemotronOverviewLayout.svelte";
-  import MapOverview from "@nucleum/components/overview/MapOverview.svelte";
+  import MapOverview from "@nucleum/application/overview/MapOverview.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import type { INode } from "@nucleum/features/memory/node/node.type";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";

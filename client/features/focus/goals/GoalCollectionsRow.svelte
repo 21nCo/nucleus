@@ -13,8 +13,8 @@
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { ResourceError } from "@nucleum/components/error/errors";
-  import { ResourceErrorCode } from "@nucleum/components/error/error.type";
+  import { ResourceError } from "@nucleum/application/error/errors";
+  import { ResourceErrorCode } from "@21n/types/resource-error.type";
   import type { IActiveObjectiveStore } from "@nucleum/features/focus/goals/goal.store";
   import { resolveObjectiveTypeIcon } from "@nucleum/features/focus/goals/goal.utils";
   import { enumToString } from "@21n/shared-utils/text.utils";

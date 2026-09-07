@@ -3,7 +3,7 @@ import { modify } from "./index";
 import {
   BillingCycle,
   PlanType
-} from "$lib/client/components/subscription/userPlan.type";
+} from "@21n/shared-types/subscription.type";
 import { ValidationError } from "../../errors";
 
 describe("modify", () => {

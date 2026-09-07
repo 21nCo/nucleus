@@ -6,7 +6,7 @@
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { appStoreShuffleEmojis } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { Size } from "@21n/types/size.enum";
   import { onMount, tick } from "svelte";
   import { debouncer } from "@21n/utils/utils";

@@ -28,8 +28,8 @@
   import context from "@nucleum/stores/context.store";
   import NodePanelSwitcher from "./floatingBar/NodePanelSwitcher.svelte";
   import { fly } from "svelte/transition";
-  import { resolvePanelParam } from "@nucleum/components/resource/panelParam.mixin";
-  import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
+  import { resolvePanelParam } from "@nucleum/application/resource/panelParam.mixin";
+  import { ResourcePanelType } from "@21n/types/resource-panel.type";
   import { Context } from "@21n/types/appStore.type";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";

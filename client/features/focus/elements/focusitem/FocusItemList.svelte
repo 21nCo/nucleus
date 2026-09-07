@@ -23,12 +23,12 @@
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { ErrorMessage } from "@nucleum/components/error/error.type";
+  import { ErrorMessage } from "@21n/types/resource-error.type";
   import type { IRecordId } from "@21n/types/data.type";
   import { LoadingAnimationType } from "@21n/types/feedback.type";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import Records from "@nucleum/components/record/Records.svelte";
+  import Records from "@nucleum/application/record/Records.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import Text from "@21n/elements/text/Text.svelte";

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Records from "@nucleum/components/record/Records.svelte";
+  import Records from "@nucleum/application/record/Records.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import type { ICalendarEvent } from "@nucleum/features/calendar/events/event.type";
   import { Resource } from "@nucleum/datafn/resource.enum";

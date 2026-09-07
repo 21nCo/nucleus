@@ -1,4 +1,4 @@
-import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
+import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
 import type { IRecordId } from "@21n/types/data.type";
 import {
   determineResourceType,

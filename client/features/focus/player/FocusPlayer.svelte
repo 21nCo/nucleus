@@ -21,7 +21,7 @@
     fallBackTypefaceString
   } from "@nucleum/stores/appearance.store";
   import IntervalBar from "@nucleum/features/focus/elements/intervalbar/IntervalBar.svelte";
-  import { fullScreen, player } from "@nucleum/components/modal/modal.store";
+  import { fullScreen, player } from "@nucleum/application/modal/modal.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import { resolveObjectiveColor } from "@nucleum/features/focus/goals/goal.utils";

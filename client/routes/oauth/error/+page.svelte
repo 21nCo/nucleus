@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores";
-  import PageError from "@nucleum/components/error/PageError.svelte";
+  import PageError from "@nucleum/application/error/PageError.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { ButtonVariant } from "@21n/types/button.type";
 

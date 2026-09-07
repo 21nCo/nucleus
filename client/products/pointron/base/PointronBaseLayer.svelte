@@ -14,7 +14,7 @@
   import context from "@nucleum/stores/context.store";
   import UserBaseLayer from "@21n/layout/layers/UserBaseLayer.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import { fullScreen } from "@nucleum/components/modal/modal.store";
+  import { fullScreen } from "@nucleum/application/modal/modal.store";
   import { UIState } from "@nucleum/stores/uiState/uiState.type";
   import SessionTitle from "@nucleum/products/pointron/base/SessionTitle.svelte";
   import { SessionState } from "@21n/types/pointron/sessionState.enum";

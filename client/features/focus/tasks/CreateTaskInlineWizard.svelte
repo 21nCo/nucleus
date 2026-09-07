@@ -17,7 +17,7 @@
     type IObjective,
     type IObjectiveThumb
   } from "@nucleum/features/focus/goals/goal.type";
-  import modalEvent from "@nucleum/components/modal/modal.store";
+  import modalEvent from "@nucleum/application/modal/modal.store";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
   import { Product } from "@21n/types/product.type";
   import { appStore } from "@nucleum/stores/app.store";

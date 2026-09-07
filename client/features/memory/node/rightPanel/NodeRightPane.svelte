@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
+  import { ResourcePanelType } from "@21n/types/resource-panel.type";
   import { cn } from "@21n/utils/ui.utils";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import NodeRightPanelContent from "@nucleum/features/memory/node/rightPanel/NodeRightPaneContent.svelte";

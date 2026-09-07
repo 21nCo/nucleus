@@ -1,13 +1,13 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import Modal from "@nucleum/components/modal/Modal.svelte";
+  import Modal from "@nucleum/application/modal/Modal.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
   import modalEvent, {
     fullScreen,
     player
-  } from "@nucleum/components/modal/modal.store";
+  } from "@nucleum/application/modal/modal.store";
   import {
     toasts,
     confirmationNotification,
@@ -24,7 +24,7 @@
   import { postDataToParent } from "@21n/utils/embed.utils";
   import ToastNotification from "@21n/elements/feedback/ToastNotification.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import ModalLayout from "@nucleum/components/modal/ModalLayout.svelte";
+  import ModalLayout from "@nucleum/application/modal/ModalLayout.svelte";
   import PageLoadingAnimation from "@21n/elements/feedback/animations/PageLoadingAnimation.svelte";
   import context from "@nucleum/stores/context.store";
   import { Embed } from "@21n/types/context.type";
@@ -36,7 +36,7 @@
   import { Action } from "@21n/types/action.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
-  import ConfirmationNotification from "@nucleum/components/notifications/ConfirmationNotification.svelte";
+  import ConfirmationNotification from "@nucleum/application/notifications/ConfirmationNotification.svelte";
   import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
   let modals = $state<ModalEvent[]>([]);
   let isShowAppearancePreview = $state(false);

@@ -5,7 +5,7 @@
     SessionUIContext
   } from "@21n/types/pointron/session.type";
   import { currentTime } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import view from "@nucleum/stores/view.store";
   import { formatTime } from "@21n/utils/time.utils";
   import { cn } from "@21n/utils/ui.utils";

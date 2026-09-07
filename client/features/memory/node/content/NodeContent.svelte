@@ -16,17 +16,17 @@
     isValidArrayWithData,
     shallowDiff
   } from "@21n/shared-utils/obj.utils";
-  import NodularMarkdown from "@nucleum/components/markdown/NodularMarkdown.svelte";
+  import NodularMarkdown from "@nucleum/features/memory/markdown/NodularMarkdown.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import { ColorStrength } from "@21n/types/appearance.type";
   import { formatDatetime } from "@21n/utils/time.utils";
   import { onDestroy, onMount } from "svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { setContext, getContext } from "svelte";
-  import { BlockAction } from "@nucleum/components/markdown/md.type";
+  import { BlockAction } from "@nucleum/features/memory/markdown/md.type";
   import { wordCounter } from "@nucleum/actions/counter.action";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";

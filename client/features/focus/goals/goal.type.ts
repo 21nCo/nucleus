@@ -1,4 +1,4 @@
-import type { IMarkdown } from "@nucleum/components/markdown/md.type";
+import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
 import type { IRecordId } from "@21n/types/data.type";
 import type {
   IActiveResource,

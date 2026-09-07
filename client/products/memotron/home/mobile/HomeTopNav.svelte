@@ -1,8 +1,8 @@
 <script lang="ts">
-  import ProfilePicture from "@nucleum/components/settings/account/ProfilePicture.svelte";
+  import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import { Size } from "@21n/types/size.enum";
   import account from "@nucleum/stores/account.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/types/button.type";

@@ -3,8 +3,8 @@ import type { DfqlRelations } from "@datafn/core";
 import {
   ErrorMessage,
   ResourceErrorCode
-} from "@nucleum/components/error/error.type";
-import { ResourceError } from "@nucleum/components/error/errors";
+} from "@21n/types/resource-error.type";
+import { ResourceError } from "@nucleum/application/error/errors";
 import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { extensionDatafn } from "@nucleum/extensions/extension.store";

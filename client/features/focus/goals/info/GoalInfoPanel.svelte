@@ -1,7 +1,7 @@
 <script lang="ts">
   import { type IActiveObjectiveStore } from "@nucleum/features/focus/goals/goal.store";
   import ObjectiveCollectionsRow from "@nucleum/features/focus/goals/GoalCollectionsRow.svelte";
-  import Markdown from "@nucleum/components/markdown/Markdown.svelte";
+  import Markdown from "@nucleum/features/memory/markdown/Markdown.svelte";
   import ObjectiveTitleRow from "@nucleum/features/focus/goals/info/GoalTitleRow.svelte";
   import ObjectiveStatusSwitcher from "@nucleum/features/focus/goals/status/GoalStatusSwitcher.svelte";
   import {
@@ -15,12 +15,12 @@
     activeSession,
     currentFocusItem
   } from "@nucleum/features/focus/session.store";
-  import { isEmptyMd } from "@nucleum/components/markdown/markdown.utils";
+  import { isEmptyMd } from "@nucleum/features/memory/markdown/markdown.utils";
   import ObjectiveInfoEditControl from "@nucleum/features/focus/goals/info/GoalInfoEditControl.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
   import { formatDatetime } from "@21n/utils/time.utils";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import PropertiesPane from "@nucleum/features/collections/properties/PropertiesPane.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { debouncer } from "@21n/utils/utils";

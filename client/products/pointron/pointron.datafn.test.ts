@@ -11,7 +11,7 @@ import { appStore } from "@nucleum/stores/app.store";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { focusAggregates } from "@nucleum/features/focus/analytics/analytics.store";
-import { recentsStore } from "@nucleum/components/record/recent.store";
+import { recentsStore } from "@nucleum/application/record/recent.store";
 import { BlockType } from "@21n/types/pointron/session.type";
 import { SessionType } from "@nucleum/features/focus/logs/log.type";
 import { ObjectiveStatus, ObjectiveType } from "@nucleum/features/focus/goals/goal.type";

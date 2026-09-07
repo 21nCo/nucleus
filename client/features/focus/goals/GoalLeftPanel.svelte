@@ -6,7 +6,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import { type IInlineStatus } from "@21n/types/notification.type";
   import SubObjectivesPanel from "@nucleum/features/focus/goals/sub/SubGoalsPanel.svelte";
-  import RecordStatusBanner from "@nucleum/components/record/RecordStatusBanner.svelte";
+  import RecordStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
 
   let {
     objective,

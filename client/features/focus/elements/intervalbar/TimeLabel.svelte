@@ -9,7 +9,7 @@
   import { SessionState } from "@21n/types/pointron/sessionState.enum";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
   import { appStore, currentTime } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatTime } from "@21n/utils/time.utils";
   import { onMount } from "svelte";
   import { cn } from "@21n/utils/ui.utils";

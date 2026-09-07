@@ -1,6 +1,6 @@
 <script lang="ts">
   import { currentTime } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatTime } from "@21n/utils/time.utils";
 </script>
 

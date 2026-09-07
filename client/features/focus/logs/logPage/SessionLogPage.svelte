@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Markdown from "@nucleum/components/markdown/Markdown.svelte";
+  import Markdown from "@nucleum/features/memory/markdown/Markdown.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { Size } from "@21n/types/size.enum";
   import { isValidMarkdown } from "@21n/shared-utils/text.utils";
@@ -12,12 +12,12 @@
   } from "@21n/types/switcher.enum";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
-  import ModalFooter from "@nucleum/components/modal/ModalFooter.svelte";
+  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
   import FocusItem from "@nucleum/features/focus/elements/focusitem/FocusItem.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import {
     formatDatetime,
     formatTime,
@@ -32,10 +32,10 @@
   } from "@nucleum/features/focus/logs/log.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import Button from "@21n/elements/button/Button.svelte";
-  import ModalContentPadded from "@nucleum/components/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
-  import type { IMarkdown } from "@nucleum/components/markdown/md.type";
+  import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
   import { resolveSessionFocusView } from "@nucleum/features/focus/logs/session-items.utils";
 
   let {

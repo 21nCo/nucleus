@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PageError from "@nucleum/components/error/PageError.svelte";
+  import PageError from "@nucleum/application/error/PageError.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { Product } from "@21n/types/product.type";
   import { Action } from "@21n/types/action.enum";

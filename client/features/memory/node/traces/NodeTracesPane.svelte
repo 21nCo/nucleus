@@ -13,7 +13,7 @@
   } from "@nucleum/features/memory/node/node.type";
   import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";
   import { AnnotationType } from "@nucleum/features/memory/pdfAnnotator/pdfAnnotator.type";
-  import Resources from "@nucleum/components/record/Records.svelte";
+  import Resources from "@nucleum/application/record/Records.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";

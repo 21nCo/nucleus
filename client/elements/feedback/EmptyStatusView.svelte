@@ -15,8 +15,8 @@
   import ComingSoon from "@21n/illustrations/pixelsmarket/ComingSoon.svelte";
   import QuickFocusItemsGridPulse from "@21n/elements/feedback/animations/thumbnailPulse/QuickFocusItemsGridPulse.svelte";
   import QuickFocusItemPulse from "@21n/elements/feedback/animations/thumbnailPulse/QuickFocusItemPulse.svelte";
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
-  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
   import InboxZero from "@21n/illustrations/InboxZero.svelte";
   import Travel from "@21n/illustrations/Travel.svelte";
   import Check from "@21n/illustrations/Check.svelte";

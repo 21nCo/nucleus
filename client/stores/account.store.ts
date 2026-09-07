@@ -25,8 +25,8 @@ import {
 import {
   determineIfPlanIsActive,
   determineIfSubscriptionExpired
-} from "@nucleum/components/subscription/userPlan.utils";
-import { PlanType } from "@nucleum/components/subscription/userPlan.type";
+} from "@nucleum/application/subscription/userPlan.utils";
+import { PlanType } from "@21n/shared-types/subscription.type";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { StoreDataType, type IRecordId } from "@21n/types/data.type";
 import {

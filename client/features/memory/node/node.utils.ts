@@ -3,7 +3,7 @@ import type { IFile } from "@nucleum/features/files/file.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { isRecordId } from "@nucleum/datafn/resource.utils";
-import type { IBlock } from "@nucleum/components/markdown/md.type";
+import type { IBlock } from "@nucleum/features/memory/markdown/md.type";
 import {
   NodeType,
   type INode,

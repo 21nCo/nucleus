@@ -39,7 +39,7 @@
   import { productData } from "@nucleum/products/product.resolver";
   import { product, resolveProductConfig } from "@nucleum/products/product.config";
   import view from "@nucleum/stores/view.store";
-  import { initDevLogCapture } from "@nucleum/components/debug/devLogCapture";
+  import { initDevLogCapture } from "@nucleum/application/debug/devLogCapture";
 
   let { children }: { children?: Snippet } = $props();
   let timer: any;

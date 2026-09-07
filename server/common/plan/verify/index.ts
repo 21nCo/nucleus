@@ -13,7 +13,7 @@ import {
 import {
   BillingCycle,
   PlanType
-} from "$lib/client/components/subscription/userPlan.type";
+} from "@21n/shared-types/subscription.type";
 import {
   resolvePlanQuery,
   resolvePromotePlanQuery,

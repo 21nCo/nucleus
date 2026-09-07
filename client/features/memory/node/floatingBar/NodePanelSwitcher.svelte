@@ -8,9 +8,9 @@
     resolvePanelOptions,
     type IActiveNodeStore
   } from "../node.store";
-  import ResourcePanelSwitcher from "@nucleum/components/resource/ResourcePanelSwitcher.svelte";
+  import ResourcePanelSwitcher from "@nucleum/application/resource/ResourcePanelSwitcher.svelte";
   import { derived } from "svelte/store";
-  import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
+  import { ResourcePanelType } from "@21n/types/resource-panel.type";
   import type { IResourcePageWithPanels } from "@nucleum/datafn/resource.type";
   import type { ISelectValue } from "@21n/types/select.type";
   let {

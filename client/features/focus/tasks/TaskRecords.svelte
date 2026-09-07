@@ -9,7 +9,7 @@
   import { Size } from "@21n/types/size.enum";
   import type { IRecordId } from "@21n/types/data.type";
   import Button from "@21n/elements/button/Button.svelte";
-  import type { SubType } from "@nucleum/components/library/library.type";
+  import type { SubType } from "@nucleum/application/library/library.type";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { onMount } from "svelte";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
@@ -21,7 +21,7 @@
   import view from "@nucleum/stores/view.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import ComponentShortcutListener from "@nucleum/components/shortcuts/ComponentShortcutListener.svelte";
+  import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
   import { Action } from "@21n/types/action.enum";
   import TasksGroupedByObjective from "./TasksGroupedByGoal.svelte";
   let {

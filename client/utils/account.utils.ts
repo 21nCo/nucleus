@@ -7,7 +7,7 @@ import { LicenseType, type IUserPlan } from "@21n/types/account.type";
 import {
   BillingCycle,
   PlanType
-} from "@nucleum/components/subscription/userPlan.type";
+} from "@21n/shared-types/subscription.type";
 import { parseAndFormatDate } from "@21n/utils/time.utils";
 import { enumToString } from "@21n/shared-utils/text.utils";
 import { EmbedDataMessage } from "@21n/types/embedMessage.enum";

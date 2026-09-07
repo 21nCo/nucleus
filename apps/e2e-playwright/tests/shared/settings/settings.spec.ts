@@ -15,7 +15,7 @@ import {
 
 const appStorePath = resolveRepoFsImportPath("client/stores/app.store.ts");
 const interactionModePath = resolveRepoFsImportPath(
-  "client/components/settings/interactionMode/interactionMode.type.ts"
+  "client/types/interaction-mode.type.ts"
 );
 const actionEnumPath = resolveRepoFsImportPath("client/types/action.enum.ts");
 const uiStateStorePath = resolveRepoFsImportPath(

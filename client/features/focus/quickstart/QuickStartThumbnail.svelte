@@ -4,7 +4,7 @@
     currentFocusItem
   } from "@nucleum/features/focus/session.store";
   import Icon from "@21n/elements/Icon.svelte";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { Layout } from "@21n/types/layout.type";
   import { TimeFormat } from "@21n/types/time.type";
   import { formatTime, formatSeconds } from "@21n/utils/time.utils";

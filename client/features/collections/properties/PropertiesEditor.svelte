@@ -23,7 +23,7 @@
     ActiveCollectionStore,
     type IActiveCollectionStore
   } from "@nucleum/features/collections/collection.store";
-  import ModalFooter from "@nucleum/components/modal/ModalFooter.svelte";
+  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import {
     AccessMode,
     ResourceActionType,
@@ -46,7 +46,7 @@
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/types/button.type";
   import { acquireDnDPage, appStore } from "@nucleum/stores/app.store";
-  import modalEvent from "@nucleum/components/modal/modal.store";
+  import modalEvent from "@nucleum/application/modal/modal.store";
   import PropertyTypeSelector from "@nucleum/features/collections/properties/propertyTypeSelector/PropertyTypeSelector.svelte";
   import {
     isSameResource,
@@ -58,7 +58,7 @@
   import CollectionTitleLabelPart from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
   import { Product } from "@21n/types/product.type";
   import Table3 from "@21n/elements/table/Table3.svelte";
-  import ModalContentPadded from "@nucleum/components/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
 
   let { id = undefined }: { id?: IRecordId | undefined } = $props();
   const collection = $derived<IActiveCollectionStore | undefined>(

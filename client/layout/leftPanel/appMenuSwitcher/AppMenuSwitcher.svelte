@@ -5,7 +5,7 @@
   import { onMount } from "svelte";
   import AppMenuSwitcherItem from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcherItem.svelte";
   import { ActionType, type IAction } from "@21n/types/action.type";
-  import CaptureComponent from "@nucleum/components/CaptureComponent.svelte";
+  import CaptureComponent from "@nucleum/application/CaptureComponent.svelte";
   import { appStore, isInEditMode } from "@nucleum/stores/app.store";
   import { appMenuStore } from "@nucleum/stores/appMenu/appMenu.store";
   import type { IAppMenuStore } from "@nucleum/stores/appMenu/appMenu.type";

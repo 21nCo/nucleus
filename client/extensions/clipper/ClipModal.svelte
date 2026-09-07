@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { feedbackPane } from "@nucleum/extensions/clipper/contentScripts/store";
   import LinkBoxOnClipper from "@nucleum/features/memory/common/linkbox/LinkBoxOnClipper.svelte";

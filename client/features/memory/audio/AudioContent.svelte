@@ -14,11 +14,11 @@
   import view from "@nucleum/stores/view.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { Taco } from "@nucleum/components/taco/taco";
+  import { Taco } from "@nucleum/application/taco/taco";
   import FileView from "@nucleum/features/files/FileView.svelte";
   import { isRecordId } from "@nucleum/datafn/resource.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import type { IJobStatus } from "@nucleum/components/taco/taco.type";
+  import type { IJobStatus } from "@nucleum/application/taco/taco.type";
   import { AudioView } from "@nucleum/features/memory/audio/audio.type";
   import AudioContentMainPanel from "@nucleum/features/memory/audio/AudioContentMainPanel.svelte";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";

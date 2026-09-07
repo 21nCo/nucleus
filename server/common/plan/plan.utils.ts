@@ -1,5 +1,5 @@
-import { BillingCycle } from "$lib/client/components/subscription/userPlan.type";
-import { PlanType } from "$lib/client/components/subscription/userPlan.type";
+import { BillingCycle } from "@21n/shared-types/subscription.type";
+import { PlanType } from "@21n/shared-types/subscription.type";
 import { PaymentProvider } from "$lib/shared/types/plan.type";
 import { paymentProductsList } from "./paymentProducts";
 

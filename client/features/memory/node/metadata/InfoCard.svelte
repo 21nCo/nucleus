@@ -1,6 +1,6 @@
 <script lang="ts">
   import { bg, cn } from "@21n/utils/ui.utils";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import {
     formatDateRelativeToToday,
     formatDatetime

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import view from "@nucleum/stores/view.store";
   import { isEmptyArray } from "@21n/shared-utils/obj.utils";
   import { formatTime } from "@21n/utils/time.utils";

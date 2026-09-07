@@ -11,9 +11,9 @@ import {
   mediaNodeTypeList,
   socialPostNodeTypeList
 } from "@nucleum/features/memory/node/node.type";
-import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
-import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
-import { PanelSwitcherMixin } from "@nucleum/components/resource/panelSwitcher.mixin";
+import { ResourcePanelType } from "@21n/types/resource-panel.type";
+import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
+import { PanelSwitcherMixin } from "@nucleum/application/resource/panelSwitcher.mixin";
 import {
   activeResourceFilterIgnoreAncestorInactive
 } from "@21n/utils/utils";
@@ -23,7 +23,7 @@ import {
   ResourceActionType,
   type IResourceMutationParams
 } from "@nucleum/datafn/resource.type";
-import { ResourceActions } from "@nucleum/components/record/resource.actions";
+import { ResourceActions } from "@nucleum/application/record/resource.actions";
 import { get, writable } from "svelte/store";
 import {
   ContextMenuType,
@@ -47,7 +47,7 @@ import context from "@nucleum/stores/context.store";
 import { Embed } from "@21n/types/context.type";
 import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
 import { fileStore } from "@nucleum/features/files/file.store";
-import { recursivelyExtractAllChildrenIntoArray } from "@nucleum/components/markdown/markdown.utils";
+import { recursivelyExtractAllChildrenIntoArray } from "@nucleum/features/memory/markdown/markdown.utils";
 import view from "@nucleum/stores/view.store";
 import { CollectibleStore } from "@nucleum/features/collections/collectible.store";
 import { appStore } from "@nucleum/stores/app.store";

@@ -8,9 +8,9 @@
   import account from "$lib/client/stores/account.store";
   import { ButtonVariant } from "$lib/client/types/button.type";
   import type { IRecordId } from "$lib/client/types/data.type";
-  import { MAX_FILE_SIZE_MB } from "$lib/client/components/record/record.store";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/application/record/record.store";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
-  import modalStore from "$lib/client/components/modal/modal.store";
+  import modalStore from "@nucleum/application/modal/modal.store";
   import { Size } from "$lib/client/types/size.enum";
   import { toasts } from "$lib/client/stores/notification.store";
   import { onDestroy } from "svelte";

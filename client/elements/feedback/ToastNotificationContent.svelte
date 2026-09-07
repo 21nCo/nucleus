@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { AlertType, type Toast } from "@21n/types/notification.type";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "../Icon.svelte";

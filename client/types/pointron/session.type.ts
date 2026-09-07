@@ -1,6 +1,6 @@
 import type { SessionComposition } from "@21n/types/pointron/sessionComposition.type";
 import type { SessionState } from "@21n/types/pointron/sessionState.enum";
-import type { IMarkdown } from "@nucleum/components/markdown/md.type";
+import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
 import type { IRecordId } from "@21n/types/data.type";
 import type { SessionType } from "@nucleum/features/focus/logs/log.type";
 

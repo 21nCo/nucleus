@@ -8,7 +8,7 @@
   import { TextStyle } from "@21n/types/text.enum";
   import { activeSession } from "@nucleum/features/focus/session.store";
   import FocusNotes from "@nucleum/features/focus/notes/FocusNotes.svelte";
-  import type { IMarkdown } from "@nucleum/components/markdown/md.type";
+  import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
 
   let feedback = $state<IInlineStatus | undefined>(undefined);
   const mountTs = new Date().getTime();

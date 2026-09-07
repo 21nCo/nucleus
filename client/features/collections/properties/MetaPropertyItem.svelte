@@ -1,7 +1,7 @@
 <script lang="ts">
   import { get } from "svelte/store";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";
   import {
     type IProperty,

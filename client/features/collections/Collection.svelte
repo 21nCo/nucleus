@@ -35,7 +35,7 @@
     type ICollectionItem,
     type ICollectionViewWithData
   } from "@nucleum/features/collections/collection.type";
-  import ResourceStatusBanner from "@nucleum/components/record/RecordStatusBanner.svelte";
+  import ResourceStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
   import {
     Arrangement,
     Orientation,

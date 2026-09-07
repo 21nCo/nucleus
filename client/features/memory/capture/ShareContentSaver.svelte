@@ -31,7 +31,7 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import context from "@nucleum/stores/context.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import ButtonGroup from "@21n/elements/button/ButtonGroup.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType, type IInlineStatus } from "@21n/types/notification.type";

@@ -18,8 +18,8 @@
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
-  import { BulkEditor } from "@nucleum/components/record/record.store";
+  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { BulkEditor } from "@nucleum/application/record/record.store";
   import { toasts } from "@nucleum/stores/notification.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { resolveFilePreview } from "@nucleum/features/memory/node/node.utils";

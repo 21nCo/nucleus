@@ -24,7 +24,7 @@
   import QuickStartLayoutToggle from "@nucleum/features/focus/quickstart/actions/QuickStartLayoutToggle.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import ComponentShortcutListener from "@nucleum/components/shortcuts/ComponentShortcutListener.svelte";
+  import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";

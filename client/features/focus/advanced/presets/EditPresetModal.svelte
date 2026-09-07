@@ -7,7 +7,7 @@
     BreakCompositionType
   } from "@21n/types/pointron/sessionComposition.type";
   import ComposeDuration from "@nucleum/features/focus/advanced/composition/ComposeDuration.svelte";
-  import ModalFooter from "@nucleum/components/modal/ModalFooter.svelte";
+  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
   import { ButtonVariant } from "@21n/types/button.type";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
@@ -18,7 +18,7 @@
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import PresetObjectivesSelector from "@nucleum/features/focus/advanced/presets/PresetGoalsSelector.svelte";
-  import ModalContentPadded from "@nucleum/components/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
 
   let { id = "" }: { id?: string } = $props();

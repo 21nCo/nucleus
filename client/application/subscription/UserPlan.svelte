@@ -1,0 +1,194 @@
+<script lang="ts">
+  import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
+  import { Size } from "@21n/types/size.enum";
+  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import type { IPlan, IBillingAddress } from "@21n/shared-types/subscription.type";
+  import { BillingCycle } from "@21n/shared-types/subscription.type";
+  import PlanCard from "@nucleum/application/subscription/elements/PlanCard.svelte";
+  import FullScreenCloseButton from "@21n/elements/button/FullScreenCloseButton.svelte";
+  import { Action } from "@21n/types/action.enum";
+  import account from "@nucleum/stores/account.store";
+  import { SUBSCRIPTION_PLANS } from "@nucleum/application/subscription/userPlan.utils";
+  import BillingAddressCapture from "@nucleum/application/subscription/BillingAddressCapture.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
+  import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
+  import context from "@nucleum/stores/context.store";
+  import { OperatingSystem } from "@21n/types/context.type";
+  import { postDataToParent } from "@21n/utils/embed.utils";
+  import { toasts } from "@nucleum/stores/notification.store";
+  import { dispatchCustomEvent } from "@21n/utils/browser.utils";
+  import { GlobalEvent } from "@21n/types/event.enum";
+  import { PaymentProvider } from "@21n/shared-types/plan.type";
+  import DropDown from "@21n/elements/dropdown/DropDown.svelte";
+  import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
+
+  let selectedCycle: BillingCycle = BillingCycle.YEARLY;
+  let isBillingAddressCapture = false;
+  let selectedPlan: IPlan | null = null;
+  let billingAddress: IBillingAddress | undefined = undefined;
+  let isRedirecting = false;
+  let isSwitching = false;
+  const billingPeriods = [
+    { value: BillingCycle.MONTHLY, label: "Billed monthly" },
+    {
+      value: BillingCycle.YEARLY,
+      label: "Billed yearly",
+      badge: "-20%"
+    }
+  ];
+
+  function resolveIsAppleContext() {
+    return (
+      $context.isEmbed &&
+      ($context.os === OperatingSystem.IOS ||
+        $context.os === OperatingSystem.MACOS)
+    );
+  }
+
+  function resolveBillingPeriods() {
+    const periods = [...billingPeriods];
+    if (!resolveIsAppleContext()) {
+      periods.push({ value: BillingCycle.LIFETIME, label: "Lifetime" });
+    }
+    return periods;
+  }
+
+  async function onSwitch(plan?: IPlan) {
+    selectedPlan = plan || null;
+    if (resolveIsAppleContext()) {
+      await completePurchaseOnIOS();
+      return;
+    }
+    isBillingAddressCapture = true;
+    isSwitching = true;
+  }
+
+  async function onSwitchProceed() {
+    isRedirecting = true;
+    const response = await account.modifySubscription({
+      type: "switch",
+      plan: selectedPlan?.type,
+      cycle: selectedCycle,
+      billing: billingAddress,
+      product: $appStore.product
+    });
+    console.log({ at: "onSwitchProceed", response });
+    if (response && response.nonce) {
+      window.location.href = response.paymentLink;
+    }
+  }
+
+  async function onCancel() {
+    appStore.runAction(Action.USER_PLAN_CANCELATION);
+  }
+
+  async function onChoose(plan: IPlan) {
+    selectedPlan = plan;
+    if (resolveIsAppleContext()) {
+      await completePurchaseOnIOS();
+      return;
+    }
+    isBillingAddressCapture = true;
+  }
+
+  async function completePurchaseOnIOS() {
+    const productId = formProductId();
+    const response = await account.initiateSubscription({
+      plan: selectedPlan?.type,
+      cycle: selectedCycle,
+      billing: billingAddress,
+      product: $appStore.product,
+      provider: PaymentProvider.APPLE
+    });
+    if (!response || !response.nonce) {
+      toasts.error("Something went wrong. Please try again");
+      return;
+    }
+    postDataToParent(EmbedDataMessage.PURCHASE, {
+      productId,
+      nonce: response.nonce
+    });
+    dispatchCustomEvent(GlobalEvent.APP_LOADING_STATUS, {
+      message: `Purchasing the plan...`,
+      subMessage: ""
+    });
+    function formProductId() {
+      return `app.${$appStore.product}.${selectedPlan?.type}.${selectedCycle}`;
+    }
+  }
+
+  async function onProceed() {
+    if (!selectedPlan || !billingAddress) {
+      return;
+    }
+    if (isSwitching) {
+      await onSwitchProceed();
+      return;
+    }
+    isRedirecting = true;
+    const response = await account.initiateSubscription({
+      plan: selectedPlan?.type,
+      cycle: selectedCycle,
+      billing: billingAddress,
+      product: $appStore.product
+    });
+    if (response && response.nonce) {
+      window.location.href = response.paymentLink;
+    }
+  }
+</script>
+
+{#if isRedirecting}
+  <EmptyStatusView
+    isLoadingState={true}
+    loadingText="Redirecting to payment..."
+  />
+{:else if isBillingAddressCapture}
+  <BillingAddressCapture bind:billingAddress onProceed={onProceed} />
+{:else}
+  <div
+    class="flex flex-col gap-8 h-full w-full overflow-auto max-w-4xl mx-auto"
+  >
+    <div
+      class="flex justify-between items-center w-full cw:mb-6 px-4 cw:mt-12 pt-6 dp:pt-8"
+    >
+      <div class="flex items-center flex-wrap gap-2">
+        <div class="cw:text-h3 text-h1 text-fgs2">Choose your plan</div>
+        {#if $account.plan?.discount && !resolveIsAppleContext() && selectedCycle !== BillingCycle.MONTHLY}
+          <div
+            class="cw:text-b3 text-b2 px-2 py-1 rounded-md bg-bgs2 text-ags1 font-medium border border-brs3"
+          >
+            Early Member - {$account.plan?.discount?.first}% discount applied.
+          </div>
+        {/if}
+      </div>
+      <div>
+        <DropDown
+          items={resolveBillingPeriods()}
+          isDisableSearch={true}
+          bind:value={selectedCycle}
+          size={Size.sm}
+          popoverWidth="w-40"
+        />
+      </div>
+    </div>
+
+    <div class="flex-1 px-4 pb-3 dp:pb-12 w-full">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto h-full">
+        {#each SUBSCRIPTION_PLANS as plan}
+          <PlanCard
+            plans={SUBSCRIPTION_PLANS}
+            {plan}
+            currentPlan={$account.plan}
+            period={selectedCycle}
+            isPreventDiscounting={resolveIsAppleContext()}
+            onSwitch={() => onSwitch(plan)}
+            onChoose={() => onChoose(plan)}
+            onCancel={() => onCancel()}
+          />
+        {/each}
+      </div>
+    </div>
+  </div>
+{/if}
+<FullScreenCloseButton isFloat={true} path={Action.USER_PLAN} />

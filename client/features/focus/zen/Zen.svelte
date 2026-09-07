@@ -18,11 +18,11 @@
   import Extras from "@nucleum/features/focus/elements/controls/Extras.svelte";
   import SessionNotes from "@nucleum/features/focus/notes/SessionNotes.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { fullScreen } from "@nucleum/components/modal/modal.store";
+  import { fullScreen } from "@nucleum/application/modal/modal.store";
   import { page } from "$app/stores";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";
   import { Context } from "@21n/types/appStore.type";

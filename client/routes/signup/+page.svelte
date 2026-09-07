@@ -1,5 +1,5 @@
 <script>
-  import Signup from "@nucleum/components/settings/account/Signup.svelte";
+  import Signup from "@nucleum/application/settings/account/Signup.svelte";
 </script>
 
 <Signup />

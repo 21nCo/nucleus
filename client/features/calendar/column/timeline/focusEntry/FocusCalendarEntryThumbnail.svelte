@@ -1,7 +1,7 @@
 <script lang="ts">
   import { resizeListener } from "@nucleum/actions/resize.action";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import type { ISessionThumb } from "@nucleum/features/focus/logs/log.type";
   import LogThumbnailObjectivesInfo from "@nucleum/features/focus/logs/LogThumbnailGoalsInfo.svelte";
   import { appStore } from "@nucleum/stores/app.store";

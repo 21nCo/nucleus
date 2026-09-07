@@ -3,7 +3,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import { type IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import NodeTitle from "@nucleum/features/memory/node/title/NodeTitle.svelte";
-  import ResourceStatusBanner from "@nucleum/components/record/RecordStatusBanner.svelte";
+  import ResourceStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
   import CollectionsLane from "@nucleum/features/memory/node/floatingBar/CollectionsLane.svelte";
   import { isShowStatusBanner } from "@nucleum/datafn/resource.utils";
   let { node }: { node: IActiveNodeStore } = $props();

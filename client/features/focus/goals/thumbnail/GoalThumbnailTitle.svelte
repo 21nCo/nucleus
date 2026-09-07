@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import RecordStarStatusFeedback from "@nucleum/components/record/RecordStarStatusFeedback.svelte";
+  import RecordStarStatusFeedback from "@nucleum/application/record/RecordStarStatusFeedback.svelte";
   import { ObjectiveStatus, ObjectiveType, type IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import { resolveObjectiveTypeIcon } from "@nucleum/features/focus/goals/goal.utils";
 

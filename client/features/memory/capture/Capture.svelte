@@ -40,7 +40,7 @@
   import type { WebArtifact } from "@nucleum/features/memory/capture/web/webCapture.types";
   import { fly } from "svelte/transition";
   import { Placement } from "@21n/types/direction.enum";
-  import ComponentShortcutListener from "@nucleum/components/shortcuts/ComponentShortcutListener.svelte";
+  import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import { Action } from "@21n/types/action.enum";
   import { Context } from "@21n/types/appStore.type";

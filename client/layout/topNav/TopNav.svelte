@@ -27,12 +27,12 @@
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { toasts } from "@nucleum/stores/notification.store";
   import ToastNotificationContent from "@21n/elements/feedback/ToastNotificationContent.svelte";
-  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
-  import BulkEditBar from "@nucleum/components/record/BulkEditBar.svelte";
+  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import BulkEditBar from "@nucleum/application/record/BulkEditBar.svelte";
   import { InputStyle } from "@21n/types/input.type";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import SearchInput from "@nucleum/components/search/SearchInput.svelte";
-  import { searchStore } from "@nucleum/components/search/search.store";
+  import SearchInput from "@nucleum/application/search/SearchInput.svelte";
+  import { searchStore } from "@nucleum/application/search/search.store";
   let { topnav }: { topnav?: Snippet } = $props();
   let pinnedItems = $state<IRecordId[]>(tabs.get() ?? []);
   let bulkEditCount = $state(0);

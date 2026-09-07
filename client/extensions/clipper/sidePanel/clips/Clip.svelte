@@ -7,7 +7,7 @@
   } from "@nucleum/features/memory/node/node.type";
   import { TimeFormat } from "@21n/types/time.type";
   import { formatDatetime, formatSeconds } from "@21n/utils/time.utils";
-  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import { AlertType } from "@21n/types/notification.type";
   import LinkBoxOnClipper from "@nucleum/features/memory/common/linkbox/LinkBoxOnClipper.svelte";
   import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
@@ -23,13 +23,13 @@
   import FileView from "@nucleum/features/files/FileView.svelte";
   import TextClip from "@nucleum/extensions/clipper/sidePanel/clips/TextClip.svelte";
   import { hoverable } from "@nucleum/actions/hover.action";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/types/size.enum";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import ResourceThumbnailContextMenu from "@nucleum/components/record/thumbnail/ResourceThumbnailContextMenu.svelte";
+  import ResourceThumbnailContextMenu from "@nucleum/application/record/thumbnail/ResourceThumbnailContextMenu.svelte";
   import { Arrangement } from "@21n/types/direction.enum";
   import {
     ResourceAccessPoint,

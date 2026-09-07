@@ -4,10 +4,10 @@
   import { cn } from "@21n/utils/ui.utils";
   import { Size } from "@21n/types/size.enum";
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
-  import ProfilePicture from "@nucleum/components/settings/account/ProfilePicture.svelte";
+  import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { tooltip } from "@nucleum/actions/popover.action";
-  import { determineIfActiveSubscriber } from "@nucleum/components/subscription/userPlan.utils";
+  import { determineIfActiveSubscriber } from "@nucleum/application/subscription/userPlan.utils";
   import { UserDataMode } from "@21n/types/account.type";
   import account from "@nucleum/stores/account.store";
   import { Action } from "@21n/types/action.enum";

@@ -5,7 +5,7 @@
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/types/size.enum";
   import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { recentsStore } from "@nucleum/components/record/recent.store";
+  import { recentsStore } from "@nucleum/application/record/recent.store";
   import { onMount, onDestroy } from "svelte";
   import { isValidString, properCase } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
@@ -27,7 +27,7 @@
   import { Embed } from "@21n/types/context.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { Action } from "@21n/types/action.enum";
-  import { searchStore } from "@nucleum/components/search";
+  import { searchStore } from "@nucleum/application/search/index";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import {
     highlightSearchQuery,

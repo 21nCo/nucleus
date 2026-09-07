@@ -15,7 +15,7 @@ const artifacts = path.join(
 );
 const sessionPath = `/@fs${repoRoot}/client/features/focus/session.store.ts`;
 const datafnPath = `/@fs${repoRoot}/client/datafn/datafn.store.ts`;
-const modalPath = `/@fs${repoRoot}/client/components/modal/modal.store.ts`;
+const modalPath = `/@fs${repoRoot}/client/application/modal/modal.store.ts`;
 const errors = [];
 const results = [];
 await fs.mkdir(artifacts, { recursive: true });

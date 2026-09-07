@@ -5,8 +5,8 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@21n/types/action.enum";
   import account from "@nucleum/stores/account.store";
-  import { PlanType } from "@nucleum/components/subscription/userPlan.type";
-  import { resolveTrialDaysLeft } from "@nucleum/components/subscription/userPlan.utils";
+  import { PlanType } from "@21n/shared-types/subscription.type";
+  import { resolveTrialDaysLeft } from "@nucleum/application/subscription/userPlan.utils";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import { Orientation } from "@21n/types/direction.enum";
   let {

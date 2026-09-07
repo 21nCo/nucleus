@@ -34,7 +34,7 @@
   import { Size } from "@21n/types/size.enum";
   import { OptionSelectorStyle } from "@21n/types/select.type";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { fly } from "svelte/transition";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";

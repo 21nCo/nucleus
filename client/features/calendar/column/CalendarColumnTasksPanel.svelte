@@ -4,12 +4,12 @@
   import TaskRecords from "@nucleum/features/focus/tasks/TaskRecords.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { BulkEditor } from "@nucleum/components/record/record.store";
+  import { BulkEditor } from "@nucleum/application/record/record.store";
   import { appStore } from "@nucleum/stores/app.store";
   import type { IRecordId } from "@21n/types/data.type";
   import { toasts } from "@nucleum/stores/notification.store";
   import { dragSelection } from "@nucleum/actions/dragSelection.action";
-  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

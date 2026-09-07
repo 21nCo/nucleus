@@ -12,7 +12,7 @@
   import context from "@nucleum/stores/context.store";
   import { UserDataMode, UserSessionType } from "@21n/types/account.type";
   import { Product } from "@21n/types/product.type";
-  import { PlanType } from "@nucleum/components/subscription/userPlan.type";
+  import { PlanType } from "@21n/shared-types/subscription.type";
   import { postTokenToExtension } from "@21n/utils/embed.utils";
   import { onMount } from "svelte";
   import {

@@ -13,7 +13,7 @@ describe('TursoProvider', () => {
     provider = new TursoProvider();
   });
 
-  describe('constructor', () => {
+  describe('function Object() { [native code] }', () => {
     it('should initialize with environment variables', () => {
       expect(provider).toBeDefined();
     });

@@ -20,15 +20,15 @@
   import { Size } from "@21n/types/size.enum";
   import ResourceInlineCloseButton from "@21n/elements/button/ResourceInlineCloseButton.svelte";
   import ObjectivePanelSwitcher from "./GoalPanelSwitcher.svelte";
-  import { resolvePanelParam } from "@nucleum/components/resource/panelParam.mixin";
+  import { resolvePanelParam } from "@nucleum/application/resource/panelParam.mixin";
   import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import ObjectivePanelContentResolver from "./GoalPanelContentResolver.svelte";
   import ObjectiveLeftPanel from "./GoalLeftPanel.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
+  import { ResourcePanelType } from "@21n/types/resource-panel.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { ErrorMessage } from "@nucleum/components/error/error.type";
+  import { ErrorMessage } from "@21n/types/resource-error.type";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";
   import { Context } from "@21n/types/appStore.type";

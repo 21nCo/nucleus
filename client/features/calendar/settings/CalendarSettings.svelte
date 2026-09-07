@@ -9,10 +9,10 @@
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { toasts } from "@nucleum/stores/notification.store";
-  import NodularMarkdown from "@nucleum/components/markdown/NodularMarkdown.svelte";
+  import NodularMarkdown from "@nucleum/features/memory/markdown/NodularMarkdown.svelte";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import context from "@nucleum/stores/context.store";
-  import type { IMarkdownTemplate } from "@nucleum/components/markdown/md.type";
+  import type { IMarkdownTemplate } from "@nucleum/features/memory/markdown/md.type";
   import { TimeScaleUnit } from "@21n/types/time.type";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import CalendarNotesTemplateCard from "@nucleum/features/calendar/settings/CalendarNotesTemplateCard.svelte";

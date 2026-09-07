@@ -57,7 +57,7 @@ import {
   resourceAction,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
+import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
 import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
 import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
 import { appMenuActionLabelsByAction } from "@nucleum/client/config/product-nav.config";
@@ -73,7 +73,7 @@ import {
   type IObjective
 } from "@nucleum/features/focus/goals/goal.type";
 import { updateObjectiveParent } from "@nucleum/features/focus/goals/goal.utils";
-import LibraryPanelContentResolver from "@nucleum/components/library/LibraryPanelContentResolver.svelte";
+import LibraryPanelContentResolver from "@nucleum/application/library/LibraryPanelContentResolver.svelte";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 
 const isSessionRunningPreCondition = () => get(activeSession).isSessionRunning;

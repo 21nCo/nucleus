@@ -27,14 +27,14 @@
   import {
     BulkEditor,
     resolveResource
-  } from "@nucleum/components/record/record.store";
-  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
+  } from "@nucleum/application/record/record.store";
+  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import { toasts } from "@nucleum/stores/notification.store";
   import {
     ErrorMessage,
     ResourceErrorCode
-  } from "@nucleum/components/error/error.type";
-  import { ResourceError } from "@nucleum/components/error/errors";
+  } from "@21n/types/resource-error.type";
+  import { ResourceError } from "@nucleum/application/error/errors";
   import { LoadingAnimationType } from "@21n/types/feedback.type";
   import Tag from "@21n/elements/text/Tag.svelte";
   import { resolveLinkTypeConfig } from "@nucleum/features/memory/linking/link.utils";

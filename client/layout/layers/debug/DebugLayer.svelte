@@ -16,7 +16,7 @@
   import account from "@nucleum/stores/account.store";
   import { Action } from "@21n/types/action.enum";
   import { FallbackTracker } from "@21n/utils/fallbackTracker.utils";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   let { isShowAsPage = false }: { isShowAsPage?: boolean } = $props();
   let isShowDebugOverlay: boolean = false;
   let environment: string = $appStore.env;

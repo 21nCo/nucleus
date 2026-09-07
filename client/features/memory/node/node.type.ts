@@ -19,10 +19,10 @@ import {
   type OmitFields,
   type OmitForCapture
 } from "@nucleum/datafn/resource.type";
-import type { IBlockBody, IMarkdown } from "@nucleum/components/markdown/md.type";
+import type { IBlockBody, IMarkdown } from "@nucleum/features/memory/markdown/md.type";
 import type { IAvatar } from "@21n/types/avatar.type";
 import type { IRecordId, IStore } from "@21n/types/data.type";
-import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
+import { ResourcePanelType } from "@21n/types/resource-panel.type";
 import type {
   ILink,
   ILinkBase,

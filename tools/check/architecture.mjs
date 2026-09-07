@@ -105,8 +105,13 @@ const violations = edges.filter(production).filter(({ from, to }) => {
   if (from.startsWith("client/features/") && to.startsWith("client/products/"))
     return true;
   if (
+    from.startsWith("client/components/") &&
+    /^client\/(features|products|application)\//.test(to)
+  )
+    return true;
+  if (
     /^client\/(datafn|runtime)\//.test(from) &&
-    /^client\/(features|products|components|stores|layout|elements|actions)\//.test(
+    /^client\/(features|products|application|components|stores|layout|elements|actions)\//.test(
       to
     )
   )

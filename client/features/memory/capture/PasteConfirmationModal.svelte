@@ -1,8 +1,8 @@
 <script lang="ts">
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import modalEvent from "@nucleum/components/modal/modal.store";
+  import modalEvent from "@nucleum/application/modal/modal.store";
   import { onMount } from "svelte";
-  import { MAX_FILE_SIZE_MB } from "@nucleum/components/record/record.store";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/application/record/record.store";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { clipboard } from "@nucleum/features/memory/capture/capture.store";

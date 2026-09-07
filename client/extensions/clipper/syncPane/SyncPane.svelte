@@ -10,7 +10,7 @@
   import { appEvents } from "@nucleum/stores/notification.store";
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import { Size } from "@21n/types/size.enum";
-  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";
 

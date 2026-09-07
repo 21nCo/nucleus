@@ -1,5 +1,5 @@
 <script>
-  import Bootstrap from "@nucleum/components/settings/account/Bootstrap.svelte";
+  import Bootstrap from "@nucleum/application/settings/account/Bootstrap.svelte";
 </script>
 
 <Bootstrap />

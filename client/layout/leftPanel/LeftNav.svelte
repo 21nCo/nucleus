@@ -6,7 +6,7 @@
   import LeftNavExpandable from "@21n/layout/leftPanel/LeftNavExpandable.svelte";
   import LeftNavFixed from "@21n/layout/leftPanel/LeftNavFixed.svelte";
   import PortraitBottomNav from "@21n/layout/leftPanel/PortraitBottomNav.svelte";
-  import ProfileLeftPanelSection from "@nucleum/components/settings/account/ProfileLeftPanelSection.svelte";
+  import ProfileLeftPanelSection from "@nucleum/application/settings/account/ProfileLeftPanelSection.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";

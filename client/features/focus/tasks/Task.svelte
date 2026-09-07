@@ -7,7 +7,7 @@
   } from "@nucleum/datafn/resource.type";
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { recentsStore } from "@nucleum/components/record/recent.store";
+  import { recentsStore } from "@nucleum/application/record/recent.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import { Orientation } from "@21n/types/direction.enum";
@@ -31,7 +31,7 @@
   } from "@nucleum/features/focus/session.store";
   import Icon from "@21n/elements/Icon.svelte";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import RecordTrashBanner from "@nucleum/components/record/RecordTrashBanner.svelte";
+  import RecordTrashBanner from "@nucleum/application/record/RecordTrashBanner.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import view from "@nucleum/stores/view.store";
   import { datafn } from "@nucleum/datafn/datafn.store";

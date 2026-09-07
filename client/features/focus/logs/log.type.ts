@@ -1,6 +1,6 @@
 import type { ISessionInterval } from "@21n/types/pointron/session.type";
 import type { IRecordId } from "@21n/types/data.type";
-import type { IMarkdown } from "@nucleum/components/markdown/md.type";
+import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
 import type { TimeScale } from "@21n/types/time.type";
 import type {
   IResource,

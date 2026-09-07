@@ -11,9 +11,9 @@
   import { postDataToParent } from "@21n/utils/embed.utils";
   import context from "@nucleum/stores/context.store";
   import view from "@nucleum/stores/view.store";
-  import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
+  import { InteractionMode } from "@21n/types/interaction-mode.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import CommandModePage from "@nucleum/components/commandBar/CommandModePage.svelte";
+  import CommandModePage from "@nucleum/application/commandBar/CommandModePage.svelte";
   import { Embed } from "@21n/types/context.type";
   import { UIState } from "@nucleum/stores/uiState/uiState.type";
   import LeftNav from "@21n/layout/leftPanel/LeftNav.svelte";
