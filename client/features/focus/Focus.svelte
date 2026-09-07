@@ -48,6 +48,10 @@
   } = $props();
   let mode = $state(0);
   let isInlineEnabled = $state(true);
+  let fullScreenFocusIsEnabled = $derived(
+    $page?.url?.searchParams?.get(AccessMode.FULL) ===
+      PointronAction.FULL_SCREEN_FOCUS
+  );
   const manualLogHotKey = {
     key: "m"
   };
@@ -91,7 +95,7 @@
   {@const parentBgIndex = isMobile ? 1 : 2}
   <main class="relative flex w-full h-full otop:pt-12">
     <div class="flex flex-col h-full w-full">
-      {#if $activeSession.isSessionRunning && !$activeSession.isQuickStartOn && isInlineEnabled}
+      {#if $activeSession.isSessionRunning && !$activeSession.isQuickStartOn && isInlineEnabled && !fullScreenFocusIsEnabled}
         <Zen isInline={true} />
       {:else}
         <div
@@ -135,7 +139,7 @@
   </main>
 {:else}
   <div class="flex w-full h-full">
-    {#if $activeSession.isSessionRunning && !$activeSession.isQuickStartOn}
+    {#if $activeSession.isSessionRunning && !$activeSession.isQuickStartOn && !fullScreenFocusIsEnabled}
       <Zen isInline={true} />
     {:else}
       <Panel

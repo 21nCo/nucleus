@@ -66,6 +66,7 @@ import {
   type IObjective
 } from "@nucleum/features/focus/goals/goal.type";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
+import { toDateValue } from "@21n/utils/time.utils";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import { UIState } from "@nucleum/stores/uiState/uiState.type";
 import { removeDuplicatesFilter } from "@nucleum/datafn/resource.utils";
@@ -143,6 +144,7 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
   timer: any;
   idleTimer: any;
   isInitialized = false;
+  private hasPresentedRunningSessionUi = false;
   private signal = datafn.kv.signal<IActiveSessionStore>(
     Resource.pointSessionSnapshotv2,
     { defaultValue: { ...seedSessionStore } }
@@ -192,6 +194,7 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
 
   shallowReset() {
     this.clearTimers();
+    this.hasPresentedRunningSessionUi = false;
     fullScreen.hide(false);
     player.reset();
     scheduledNotifications.reset();
@@ -362,15 +365,26 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
       this._restorePredefinedSessionState(session);
     }
     let isFirstRun = true;
-    this.timer = setInterval(() => {
+    const tick = () => {
       session = this.get();
+      const sessionStart =
+        resolveSessionDate(session.start) ??
+        resolveSessionDate(session.intervals?.[0]?.start);
+      if (!sessionStart) return;
       const currentTime = new Date().getTime();
-      const totalElapsed =
-        (currentTime - session.start!.getTime()) / 1000 - session.totalIdle;
+      const totalIdle = Number.isFinite(session.totalIdle)
+        ? session.totalIdle
+        : 0;
+      const totalElapsed = Math.max(
+        0,
+        (currentTime - sessionStart.getTime()) / 1000 - totalIdle
+      );
       const currentBlock = session.intervals.find(
         (x) => x.id == session.currentBlockId
       );
-      const timeElapsed = (currentTime - currentBlock?.start!) / 1000;
+      const blockStart =
+        resolveSessionNumber(currentBlock?.start) || sessionStart.getTime();
+      const timeElapsed = Math.max(0, (currentTime - blockStart) / 1000);
       const timeRemainingToTakeBreak = this.refreshNotifications(session);
       if (isFirstRun) this._postNotificationsToEmbed();
       let plannedDuration = session.plannedDuration;
@@ -385,13 +399,13 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
         );
         session.intervals[currentBlockIndex] = {
           ...session.intervals[currentBlockIndex],
-          duration: (currentTime - currentBlock?.start!) / 1000
+          duration: timeElapsed
         };
         plannedDuration = getTotalsFromComposition({
           intervals: session.intervals
         })?.duration;
         end = this.resolveEndTime({
-          start: session.start!,
+          start: sessionStart,
           composition: session.composition,
           plannedDuration
         });
@@ -405,6 +419,7 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
       );
       this.modify(
         {
+          start: sessionStart,
           totalElapsed,
           timeElapsed,
           timeRemainingToTakeBreak,
@@ -416,7 +431,11 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
       );
       isFirstRun = false;
       if (isContinueSession) this._continueSession();
-    }, 1000);
+    };
+    tick();
+    if (this.get().isSessionRunning) {
+      this.timer = setInterval(tick, 1000);
+    }
   }
 
   /**
@@ -429,9 +448,11 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
    */
   private _restorePredefinedSessionState(session: IActiveSessionStore) {
     let currentInterval: ISessionInterval | undefined = undefined;
+    const sessionStart = resolveSessionDate(session.start);
+    if (!sessionStart) return;
     const intervals = refreshPredefinedIntervalsStartTime(
       session.intervals,
-      session.start!
+      sessionStart
     );
     const now = new Date().getTime();
     const bufferTime = 500;
@@ -652,13 +673,15 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
       if (barDuration == totalElapsedRemaining) {
         refreshedProgress = 1;
         totalElapsedRemaining = 0;
-        const currentBlockIndex = session.intervals.findIndex(
-          (x) => x.id == session.currentBlockId
-        );
-        if (currentBlockIndex === session.intervals.length - 1) {
-          this.prefinishSession();
-        } else {
-          isContinueSession = true;
+        if (bar.id === session.currentBlockId) {
+          const currentBlockIndex = session.intervals.findIndex(
+            (x) => x.id == session.currentBlockId
+          );
+          if (currentBlockIndex === session.intervals.length - 1) {
+            this.prefinishSession();
+          } else {
+            isContinueSession = true;
+          }
         }
       } else if (barDuration < totalElapsedRemaining) {
         refreshedProgress = 1;
@@ -794,20 +817,13 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
     this.isInitialized = true;
     logger.log({ context: "session store loader", savedSessionStore });
     savedSessionStore = normalizeSavedSessionStore(savedSessionStore);
-    if (savedSessionStore.start && typeof savedSessionStore.start == "string") {
-      savedSessionStore.start = new Date(savedSessionStore.start);
-    }
-    if (savedSessionStore.end && typeof savedSessionStore.end == "string") {
-      savedSessionStore.end = new Date(savedSessionStore.end);
-    }
     if (
       savedSessionStore.currentSessionId &&
       savedSessionStore.isSessionRunning
     ) {
       const currentValue = this.get();
       modalEvent.hide(PointronEvent.SESSION_FINISHED);
-      const isRestored = fullScreen.restore();
-      if (!isRestored) player.showMini(PointronAction.FOCUS_PLAYER);
+      this.presentRunningSessionUi(savedSessionStore);
       this.modify(
         {
           ...savedSessionStore,
@@ -836,6 +852,24 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
     this.propagateMessageToParent(savedSessionStore);
   }
 
+  /**
+   * Opens zen or the mini player for a restored running session once.
+   */
+  private presentRunningSessionUi(savedSessionStore: IActiveSessionStore) {
+    if (this.hasPresentedRunningSessionUi) return;
+    const isRestored =
+      fullScreen.get()?.path === PointronAction.FULL_SCREEN_FOCUS ||
+      fullScreen.restore();
+    if (!isRestored) {
+      if (savedSessionStore.isQuickStartOn) {
+        player.showMini(PointronAction.FOCUS_PLAYER);
+      } else {
+        fullScreen.show(PointronAction.FULL_SCREEN_FOCUS);
+      }
+    }
+    this.hasPresentedRunningSessionUi = true;
+  }
+
   loadEmptyState() {
     logger.log({ context: "session store loadEmptyState" });
     this.modify(this.reset(), { isPersist: false });
@@ -860,12 +894,14 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
     const session = this.get();
     const rawEnd = new Date(end);
     if (session.type === SessionType.COUNTUP) return rawEnd;
-    if (session.end && rawEnd.getTime() > session.end.getTime()) {
-      return session.end;
+    const sessionEnd = resolveSessionDate(session.end);
+    if (sessionEnd && rawEnd.getTime() > sessionEnd.getTime()) {
+      return sessionEnd;
     }
-    if (session.start && session.plannedDuration) {
+    const sessionStart = resolveSessionDate(session.start);
+    if (sessionStart && session.plannedDuration) {
       const plannedEnd = new Date(
-        session.start.getTime() + session.plannedDuration * 1000
+        sessionStart.getTime() + session.plannedDuration * 1000
       );
       if (rawEnd.getTime() > plannedEnd.getTime()) return plannedEnd;
     }
@@ -874,16 +910,21 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
 
   private resolveFinishedSession(end: Date): IActiveSessionStore {
     const session = this.get();
-    const elapsed = session.start
+    const sessionStart = resolveSessionDate(session.start);
+    const totalIdle = Number.isFinite(session.totalIdle)
+      ? session.totalIdle
+      : 0;
+    const elapsed = sessionStart
       ? Math.max(
           0,
-          (end.getTime() - session.start.getTime()) / 1000 - session.totalIdle
+          (end.getTime() - sessionStart.getTime()) / 1000 - totalIdle
         )
       : session.totalElapsed;
     const intervals = this.resolveFinishedIntervals(session, end, elapsed);
     const currentBlock = intervals.find((x) => x.id === session.currentBlockId);
-    const timeElapsed = currentBlock?.start
-      ? Math.max(0, (end.getTime() - currentBlock.start) / 1000)
+    const blockStart = resolveSessionNumber(currentBlock?.start);
+    const timeElapsed = blockStart
+      ? Math.max(0, (end.getTime() - blockStart) / 1000)
       : session.timeElapsed;
     return {
       ...session,
@@ -1148,6 +1189,7 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
     this.onComposeComplete(false);
     if (isQuickStart) player.showMini(PointronAction.FOCUS_PLAYER);
     else fullScreen.show(PointronAction.FULL_SCREEN_FOCUS);
+    this.hasPresentedRunningSessionUi = true;
     if (get(pointronPreferences).isEnableAutoPiP) {
       player.togglePip(PointronAction.FOCUS_PLAYER);
     }
@@ -1378,10 +1420,52 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
 }
 export const activeSession = new ActiveSessionStore();
 
+function resolveSessionDate(value: unknown): Date | undefined {
+  if (value instanceof Date) {
+    return Number.isFinite(value.getTime()) ? value : undefined;
+  }
+  const fromKnown = toDateValue(
+    value as Date | string | number | undefined | null
+  );
+  if (fromKnown) return fromKnown;
+  if (value && typeof value === "object") {
+    if (typeof (value as { getTime?: unknown }).getTime === "function") {
+      const timestamp = (value as Date).getTime();
+      if (Number.isFinite(timestamp)) return new Date(timestamp);
+    }
+    const record = value as Record<string, unknown>;
+    for (const key of [
+      "value",
+      "date",
+      "iso",
+      "datetime",
+      "$date",
+      "epochMs",
+      "ms"
+    ]) {
+      const nested = toDateValue(
+        record[key] as Date | string | number | undefined | null
+      );
+      if (nested) return nested;
+    }
+    const parsed = new Date(String(value));
+    if (Number.isFinite(parsed.getTime())) return parsed;
+  }
+  return undefined;
+}
+
 function normalizeSavedSessionStore(
   savedSessionStore: IActiveSessionStore
 ): IActiveSessionStore {
   const normalized = { ...savedSessionStore };
+  const start = resolveSessionDate(savedSessionStore.start);
+  if (start) {
+    normalized.start = start;
+  }
+  const end = resolveSessionDate(savedSessionStore.end);
+  if (end) {
+    normalized.end = end;
+  }
   normalized.intervals = Array.isArray(savedSessionStore.intervals)
     ? savedSessionStore.intervals.map((interval) => ({
         ...interval,
@@ -1439,6 +1523,10 @@ function resolveSessionNumber(value: unknown) {
   if (typeof value === "number" && Number.isFinite(value)) {
     return value;
   }
+  if (value instanceof Date) {
+    const timestamp = value.getTime();
+    return Number.isFinite(timestamp) ? timestamp : 0;
+  }
   if (typeof value === "string") {
     const numericValue = Number(value);
     if (Number.isFinite(numericValue)) {
@@ -1447,6 +1535,12 @@ function resolveSessionNumber(value: unknown) {
     const dateValue = new Date(value).getTime();
     if (Number.isFinite(dateValue)) {
       return dateValue;
+    }
+  }
+  if (value && typeof value === "object") {
+    const timestamp = resolveSessionDate(value)?.getTime();
+    if (timestamp && Number.isFinite(timestamp)) {
+      return timestamp;
     }
   }
   return 0;
