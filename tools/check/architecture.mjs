@@ -24,6 +24,7 @@ const files = execFileSync(
   );
 const sourceFiles = new Set(files);
 const edges = [];
+const retiredImports = [];
 
 /** Resolves aliases and relative source imports before applying ownership rules. */
 function resolveImport(specifier, importer) {
@@ -84,12 +85,25 @@ for (const file of files) {
       else if (
         ts.isCallExpression(node) &&
         (node.expression.kind === ts.SyntaxKind.ImportKeyword ||
-          node.expression.getText(source) === "require") &&
+          /^(require|vi\.(mock|doMock|importActual|importMock))$/.test(
+            node.expression.getText(source)
+          )) &&
         node.arguments[0] &&
         ts.isStringLiteral(node.arguments[0])
       )
         specifier = node.arguments[0].text;
       if (specifier) {
+        if (
+          /^@21n\/(types|shared-types)(\/|$)/.test(specifier) ||
+          /(?:^|\/)client\/types(?:\/|$)|(?:^|\/)shared\/types(?:\/|$)/.test(
+            specifier
+          )
+        )
+          retiredImports.push({
+            from: file,
+            to: specifier,
+            reason: "Retired type package"
+          });
         const target = resolveImport(specifier, file);
         if (target) edges.push({ from: file, to: target });
       }
@@ -102,6 +116,14 @@ for (const file of files) {
 const production = ({ from }) =>
   !/\.(test|spec)\./.test(from) && !from.includes("/tests/");
 const violations = edges.filter(production).filter(({ from, to }) => {
+  if (
+    /^(schema|shared|services|server)\//.test(from) &&
+    to.startsWith("client/")
+  )
+    return !(
+      from === "server/common/relay/index.ts" &&
+      to === "client/components/flux/flux.type"
+    );
   if (from.startsWith("client/features/") && to.startsWith("client/products/"))
     return true;
   if (
@@ -123,6 +145,7 @@ const violations = edges.filter(production).filter(({ from, to }) => {
     return true;
   return false;
 });
+violations.push(...retiredImports);
 const contract = JSON.parse(
   fs.readFileSync(
     path.join(root, "tools/check/feature-entrypoints.json"),

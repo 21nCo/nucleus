@@ -72,7 +72,7 @@ Agents MUST prevent exposure of credentials or sensitive data. Environment confi
 - Keep code free of inline comments per repository policy.
 - Add concise JSDoc comments for exported symbols, public APIs, and functions whose purpose or constraints are not immediately obvious from the implementation.
 - Honor accessibility and UX patterns by reusing primitives from `client/elements/` and shared stores such as `preferences` and `appStore`.
-- Follow naming conventions (`camelCase` for functions, `PascalCase` for components, enums from `client/types/`).
+- Follow naming conventions (`camelCase` for functions, `PascalCase` for components, enums colocated with their owning feature, primitive, runtime, or schema).
 
 ### Frontend Guidelines
 - When editing preferences, use `preferences.save` with the correct `Preference` enum and scoped variables to avoid clobbering user settings.
@@ -84,7 +84,7 @@ Agents MUST prevent exposure of credentials or sensitive data. Environment confi
 - Backend modules under `services/account/` own AuthFn, account routing, DataFn sync/search, delivery, rate limits, observability, and local/Worker runtime wiring; reuse helpers in `services/account/src`, `schema`, `shared/utils`, and Superfunctions packages instead of duplicating logic.
 - When debugging account/auth/DataFn behavior, inspect `services/account/src/app.ts`, `services/account/src/auth.ts`, `services/account/src/debug-sink.ts`, `services/account/src/datafn/`, and `schema/` before changing frontend code.
 - Update generated DataFn/Drizzle mappings, schema definitions, and migrations carefully, and coordinate application-side schema expectations with `schema/datafn.ts`.
-- Keep shared types in `shared/types`, `schema`, `client/types`, or `client/datafn`, aligning serialization logic with these definitions before modifying APIs.
+- Keep shared types with their domain owner in `schema`, `client/features`, `client/runtime`, or `client/datafn`, aligning serialization logic with these definitions before modifying APIs.
 - Fix account-service, AuthFn, DataFn, SearchFn, or Superfunctions bugs at their source package rather than masking them in product UI code.
 
 ### Testing & Verification

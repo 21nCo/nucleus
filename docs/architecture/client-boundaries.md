@@ -23,9 +23,9 @@ Tracked in [TIDY-477](https://linear.app/21n/issue/TIDY-477/enforce-architectura
 
 ## Ownership
 
-`schema` owns resource definitions. `client/datafn` owns the client storage and sync runtime. `client/runtime` owns browser infrastructure such as account transport, network authority, connectivity, and diagnostic logging. `client/features` owns capability implementations. `client/products` composes those capabilities into product experiences. Shared product identity types live in `client/types`; declarative navigation metadata lives in `client/config`.
+`schema` owns resource definitions. `client/datafn` owns the client storage and sync runtime. `client/runtime` owns browser infrastructure such as account transport, network authority, connectivity, and diagnostic logging. `client/features` owns capability implementations. `client/products` composes those capabilities into product experiences. Client product identity composition lives in `client/config/product.type.ts`; cross-layer product identity lives in `schema/product.type.ts`; declarative navigation metadata lives in `client/config`.
 
-`client/elements` contains UI primitives. `client/components` contains shared charts, nested-list controls, and the time selector. `client/application` owns account/settings, library/resource rendering, modal orchestration, command UI, and app-specific integrations. Markdown editing and tags belong to memory; combinations belong to spaces. Shared preferences live in `client/stores/preferences`, and cross-layer billing contracts live in `shared/types`. UI-independent shortcut, resource-panel, error, and interaction-mode contracts live in `client/types`.
+`client/elements` contains UI primitives. `client/components` contains shared charts, nested-list controls, and the time selector. `client/application` owns account/settings, library/resource rendering, modal orchestration, command UI, and app-specific integrations. Markdown editing and tags belong to memory; combinations belong to spaces. Shared preferences live in `client/stores/preferences`, and cross-layer billing contracts live in `schema/account`. Keyboard and interaction-mode contracts live in `client/elements/keyboard`; panel and error presentation contracts live in `client/application`. See [type ownership](type-ownership.md) for the complete inventory.
 
 ## Enforced rules
 
