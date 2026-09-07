@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { popover } from "@21n/actions/popover.action";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { createEventPropagator } from "@21n/components/events/event.utils";
-  import view from "@21n/stores/view.store";
+  import { popover } from "@nucleum/actions/popover.action";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { createEventPropagator } from "@nucleum/features/calendar/events/event.utils";
+  import view from "@nucleum/stores/view.store";
   import { Placement } from "@21n/types/direction.enum";
   import {
     type IPopoverRenderBaseParams,

@@ -5,12 +5,12 @@
   import { onMount } from "svelte";
   import "@21n/fonts";
   import "@21n/fonts/styles.css";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { AppSkin } from "@21n/types/appearance.type";
   import { postDataToParent } from "@21n/utils/embed.utils";
   import appearance, {
     fallBackTypefaceString
-  } from "@21n/stores/appearance.store";
+  } from "@nucleum/stores/appearance.store";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
   import GlassSkin from "@21n/layout/layers/themeLayer/GlassSkin.svelte";
   import { cn } from "@21n/utils/ui.utils";
@@ -20,7 +20,7 @@
   import "@fontsource/noto-color-emoji";
   // Do not remove this import as it is required for the global css propagation in case of custom colors are absent - ex: PanelSwitcher
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
   import { generateGoogleFontsUrl } from "@21n/layout/layers/themeLayer/fonts.config";
 

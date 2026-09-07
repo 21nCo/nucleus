@@ -1,6 +1,6 @@
 import type { JsonValue } from "@21n/types/json.type";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { isExtensionEnvironment } from "@21n/utils/browser.utils";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import { parse, stringify } from "@21n/shared-utils/json.utils";

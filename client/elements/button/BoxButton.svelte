@@ -3,9 +3,9 @@
   import { Size } from "@21n/types/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Icon from "../Icon.svelte";
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import { ButtonVariant } from "@21n/types/button.type";
-  import type { IKeyboardShortcut } from "@21n/components/shortcuts/shortcut.type";
+  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import ShortcutText from "../text/ShortcutText.svelte";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";

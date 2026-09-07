@@ -1,9 +1,9 @@
 import { get } from "svelte/store";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-vi.mock("@21n/persistence/persistence.utils", async () => {
-  const actual = await vi.importActual<typeof import("@21n/persistence/persistence.utils")>(
-    "@21n/persistence/persistence.utils"
+vi.mock("@nucleum/persistence/persistence.utils", async () => {
+  const actual = await vi.importActual<typeof import("@nucleum/persistence/persistence.utils")>(
+    "@nucleum/persistence/persistence.utils"
   );
 
   return {
@@ -15,10 +15,10 @@ vi.mock("@21n/persistence/persistence.utils", async () => {
 });
 
 const clientStorage = (
-  await import("@21n/persistence/persistence.utils")
+  await import("@nucleum/persistence/persistence.utils")
 ).clientStorage as unknown as { set: ReturnType<typeof vi.fn> };
 const { default: contextStore } = await import("./context.store");
-const { ClientStorageKey } = await import("@21n/persistence/persistence.type");
+const { ClientStorageKey } = await import("@nucleum/persistence/persistence.type");
 
 describe("context store", () => {
   beforeEach(() => {

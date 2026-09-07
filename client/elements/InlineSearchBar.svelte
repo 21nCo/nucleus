@@ -6,7 +6,7 @@
   import { onMount, tick } from "svelte";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
   import { GlobalEvent } from "@21n/types/event.enum";
-  import { appEvents } from "@21n/stores/notification.store";
+  import { appEvents } from "@nucleum/stores/notification.store";
   import type { IEvent } from "@21n/types/event.type";
   import { cn } from "@21n/utils/ui.utils";
   import { debouncer } from "@21n/utils/utils";

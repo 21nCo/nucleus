@@ -4,13 +4,13 @@ import { resolveRepoFsImportPath } from "../../utils/repo-fs";
 import { readSessionRuntime } from "../focus-test-helpers";
 
 const sessionStorePath = resolveRepoFsImportPath(
-  "client/products/pointron/focus/session.store.ts"
+  "client/features/focus/session.store.ts"
 );
 const datafnStorePath = resolveRepoFsImportPath(
-  "client/stores/datafn.store.ts"
+  "client/datafn/datafn.store.ts"
 );
 const advancedCompositionDraftStorePath = resolveRepoFsImportPath(
-  "client/products/pointron/focus/advanced/composition/advancedCompositionDraft.store.ts"
+  "client/features/focus/advanced/composition/advancedCompositionDraft.store.ts"
 );
 const appStorePath = resolveRepoFsImportPath("client/stores/app.store.ts");
 const pointronStorePath = resolveRepoFsImportPath(

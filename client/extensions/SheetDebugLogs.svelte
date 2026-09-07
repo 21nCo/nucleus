@@ -2,7 +2,7 @@
   import type { Snippet } from "svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { Size } from "@21n/types/size.enum";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
 
   let {
     logs = [],

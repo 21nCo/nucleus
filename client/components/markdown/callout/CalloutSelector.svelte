@@ -4,8 +4,8 @@
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { markdownSettings } from "@21n/components/markdown/markdown.settings";
-  import type { ICalloutSetting } from "@21n/components/markdown/md.type";
+  import { markdownSettings } from "@nucleum/components/markdown/markdown.settings";
+  import type { ICalloutSetting } from "@nucleum/components/markdown/md.type";
   let {
     selected = $bindable(),
     onSelect,

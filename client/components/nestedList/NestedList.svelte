@@ -5,8 +5,8 @@
   import { InputStyle } from "@21n/types/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import { NestedListStyle, type NestedItemContent } from "@21n/components/nestedList/nestedList.type";
-  import NestedListItem from "@21n/components/nestedList/NestedListItem.svelte";
+  import { NestedListStyle, type NestedItemContent } from "@nucleum/components/nestedList/nestedList.type";
+  import NestedListItem from "@nucleum/components/nestedList/NestedListItem.svelte";
   let {
     items = [],
     contentCallback,

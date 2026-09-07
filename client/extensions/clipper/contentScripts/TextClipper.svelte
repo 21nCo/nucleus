@@ -3,30 +3,30 @@
     changeColor,
     highlight,
     removeHighlights
-  } from "@21n/extensions/clipper/contentScripts/highlightV4";
-  import InlineTextToolbar from "@21n/extensions/clipper/InlineTextToolbar.svelte";
+  } from "@nucleum/extensions/clipper/contentScripts/highlightV4";
+  import InlineTextToolbar from "@nucleum/extensions/clipper/InlineTextToolbar.svelte";
   import {
     elementFromQuery,
     getQuery
-  } from "@21n/extensions/clipper/contentScripts/getQuery";
+  } from "@nucleum/extensions/clipper/contentScripts/getQuery";
   import { onMount } from "svelte";
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import {
     NodeType,
     type IClipCapture,
     type ITextClip
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { ExtensionEvent } from "@21n/types/extension.type";
-  import { webpage } from "@21n/extensions/clipper/contentScripts/store";
-  import { appEvents } from "@21n/stores/notification.store";
+  import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
+  import { appEvents } from "@nucleum/stores/notification.store";
   import { AlertType } from "@21n/types/notification.type";
-  import type { IHighlighter } from "@21n/products/memotron/common/highlighters/highlight.type";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { highlightStore } from "@21n/products/memotron/common/highlighters/highlight.store";
+  import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";
   import { relayToSidePanel } from "@21n/utils/extension.utils";
   import { activeResourceFilter } from "@21n/utils/utils";
-  import { isRecordId } from "@21n/data/datafn/resource.utils";
-  import InlineFeedbackText from "@21n/extensions/clipper/InlineFeedbackText.svelte";
+  import { isRecordId } from "@nucleum/datafn/resource.utils";
+  import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
 
   let isShowInlineToolbar: boolean = false;
   let popoverPosition: { top: number; left: number } = { top: 0, left: 0 };

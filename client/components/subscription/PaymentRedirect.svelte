@@ -1,8 +1,8 @@
 <script lang="ts">
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ErrorStatusPane from "@21n/elements/feedback/ErrorStatusPane.svelte";
-  import account from "@21n/stores/account.store";
-  import { appStore } from "@21n/stores/app.store";
+  import account from "@nucleum/stores/account.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@21n/types/action.enum";
   import { onMount } from "svelte";
 

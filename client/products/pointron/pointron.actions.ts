@@ -1,80 +1,80 @@
-import StorageSettings from "@21n/products/pointron/settings/data/StorageSettings.svelte";
-import WidgetSettings from "@21n/products/pointron/settings/WidgetSettings.svelte";
-import TrackingSettings from "@21n/products/pointron/settings/targets/TrackingSettings.svelte";
-import Focus from "@21n/products/pointron/focus/Focus.svelte";
-import Zen from "@21n/products/pointron/focus/zen/Zen.svelte";
-import FocusPlayer from "@21n/products/pointron/focus/player/FocusPlayer.svelte";
+import StorageSettings from "@nucleum/products/pointron/settings/data/StorageSettings.svelte";
+import WidgetSettings from "@nucleum/products/pointron/settings/WidgetSettings.svelte";
+import TrackingSettings from "@nucleum/products/pointron/settings/targets/TrackingSettings.svelte";
+import Focus from "@nucleum/features/focus/Focus.svelte";
+import Zen from "@nucleum/features/focus/zen/Zen.svelte";
+import FocusPlayer from "@nucleum/features/focus/player/FocusPlayer.svelte";
 import {
   ActionType,
   type IAction,
   type IActionFnParams
 } from "@21n/types/action.type";
-import ImportAppData from "@21n/products/pointron/settings/ImportAppData/ImportAppData.svelte";
-import EditPresetView from "@21n/products/pointron/focus/advanced/presets/EditPresetModal.svelte";
-import PointronOnboarding from "@21n/products/pointron/base/PointronOnboarding.svelte";
-import ComposeByEndTimeModal from "@21n/products/pointron/focus/advanced/composition/ComposeByEndTimeModal.svelte";
-import ComposeModal from "@21n/products/pointron/focus/advanced/composition/ComposeModal.svelte";
+import ImportAppData from "@nucleum/products/pointron/settings/ImportAppData/ImportAppData.svelte";
+import EditPresetView from "@nucleum/features/focus/advanced/presets/EditPresetModal.svelte";
+import PointronOnboarding from "@nucleum/products/pointron/base/PointronOnboarding.svelte";
+import ComposeByEndTimeModal from "@nucleum/features/focus/advanced/composition/ComposeByEndTimeModal.svelte";
+import ComposeModal from "@nucleum/features/focus/advanced/composition/ComposeModal.svelte";
 import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
-import PresetSaveConfirmationModal from "@21n/products/pointron/focus/advanced/presets/PresetSaveConfirmationModal.svelte";
-import SessionFinishedModal from "@21n/products/pointron/focus/elements/SessionFinishedModal.svelte";
-import Think from "@21n/products/pointron/focus/Think.svelte";
-import BackgroundMusic from "@21n/products/pointron/focus/backgroundMusic/BackgroundMusic.svelte";
+import PresetSaveConfirmationModal from "@nucleum/features/focus/advanced/presets/PresetSaveConfirmationModal.svelte";
+import SessionFinishedModal from "@nucleum/features/focus/elements/SessionFinishedModal.svelte";
+import Think from "@nucleum/features/focus/Think.svelte";
+import BackgroundMusic from "@nucleum/features/focus/backgroundMusic/BackgroundMusic.svelte";
 import { Size } from "@21n/types/size.enum";
 import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
 import { get } from "svelte/store";
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import {
   toasts,
   confirmationNotification
-} from "@21n/stores/notification.store";
-import FocusItemsModal from "@21n/products/pointron/focus/advanced/FocusItemsModal.svelte";
-import BreakReminderModal from "@21n/products/pointron/focus/elements/BreakReminderModal.svelte";
-import PredefinedIntervalNotifierOverlay from "@21n/products/pointron/focus/elements/PredefinedIntervalNotifierOverlay.svelte";
-import { manualLogStore } from "@21n/products/pointron/logs/log.store";
-import { datafn } from "@21n/stores/datafn.store";
-import ControlPanelLogsPane from "@21n/products/pointron/logs/ControlPanelLogsPane.svelte";
-import SessionLogPage from "@21n/products/pointron/logs/logPage/SessionLogPage.svelte";
-import ManualLogPane from "@21n/products/pointron/logs/manualLog/ManualLogPane.svelte";
-import LogsPane from "@21n/products/pointron/logs/LogsPane.svelte";
-import AnalyticsV2 from "@21n/products/pointron/analytics/AnalyticsV2.svelte";
+} from "@nucleum/stores/notification.store";
+import FocusItemsModal from "@nucleum/features/focus/advanced/FocusItemsModal.svelte";
+import BreakReminderModal from "@nucleum/features/focus/elements/BreakReminderModal.svelte";
+import PredefinedIntervalNotifierOverlay from "@nucleum/features/focus/elements/PredefinedIntervalNotifierOverlay.svelte";
+import { manualLogStore } from "@nucleum/features/focus/logs/log.store";
+import { datafn } from "@nucleum/datafn/datafn.store";
+import ControlPanelLogsPane from "@nucleum/features/focus/logs/ControlPanelLogsPane.svelte";
+import SessionLogPage from "@nucleum/features/focus/logs/logPage/SessionLogPage.svelte";
+import ManualLogPane from "@nucleum/features/focus/logs/manualLog/ManualLogPane.svelte";
+import LogsPane from "@nucleum/features/focus/logs/LogsPane.svelte";
+import AnalyticsV2 from "@nucleum/features/focus/analytics/AnalyticsV2.svelte";
 import { Orientation, Placement } from "@21n/types/direction.enum";
-import PresetSettings from "@21n/products/pointron/focus/advanced/presets/PresetSettings.svelte";
-import { activeSession } from "@21n/products/pointron/focus/session.store";
+import PresetSettings from "@nucleum/features/focus/advanced/presets/PresetSettings.svelte";
+import { activeSession } from "@nucleum/features/focus/session.store";
 import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
 import { PointronEvent } from "@21n/types/pointron/pointronEvent.enum";
-import AnalyticsViewsPageEditMobile from "@21n/products/pointron/analytics/AnalyticsViewsPageEditMobile.svelte";
-import { appStore } from "@21n/stores/app.store";
+import AnalyticsViewsPageEditMobile from "@nucleum/features/focus/analytics/AnalyticsViewsPageEditMobile.svelte";
+import { appStore } from "@nucleum/stores/app.store";
 import { Embed } from "@21n/types/context.type";
-import ImportOnboarding from "@21n/products/pointron/settings/data/ImportOnboarding.svelte";
+import ImportOnboarding from "@nucleum/products/pointron/settings/data/ImportOnboarding.svelte";
 import { Action } from "@21n/types/action.enum";
-import FocusPlayerCommandModeWidget from "@21n/products/pointron/focus/player/FocusPlayerCommandModeWidget.svelte";
-import PointronLibrary from "@21n/products/pointron/library/PointronLibrary.svelte";
-import ObjectiveSearchResultItem from "@21n/components/goals/GoalSearchResultItem.svelte";
+import FocusPlayerCommandModeWidget from "@nucleum/features/focus/player/FocusPlayerCommandModeWidget.svelte";
+import PointronLibrary from "@nucleum/products/pointron/library/PointronLibrary.svelte";
+import ObjectiveSearchResultItem from "@nucleum/features/focus/goals/GoalSearchResultItem.svelte";
 import { SessionState } from "@21n/types/pointron/sessionState.enum";
 import {
   isSameResource,
   resolveResourceIcon,
   resourceAction,
   resourceInList
-} from "@21n/data/datafn/resource.utils";
-import ResourceBrowser from "@21n/components/library/resourceBrowser/ResourceBrowser.svelte";
-import { AccessMode, ResourceActionType } from "@21n/data/datafn/resource.type";
+} from "@nucleum/datafn/resource.utils";
+import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
+import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
 import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
-import { appMenuActionLabelsByAction } from "@21n/products/product-nav.config";
+import { appMenuActionLabelsByAction } from "@nucleum/products/product-nav.config";
 //TODO - use dummy task if this causes any issues - like earlier
-import Task from "@21n/components/tasks/Task.svelte";
-import CreateTask from "@21n/components/tasks/CreateTask.svelte";
-import Objective from "@21n/components/goals/Goal.svelte";
-import ObjectiveTitleLabelPart from "@21n/components/goals/GoalTitleLabelPart.svelte";
+import Task from "@nucleum/features/focus/tasks/Task.svelte";
+import CreateTask from "@nucleum/features/focus/tasks/CreateTask.svelte";
+import Objective from "@nucleum/features/focus/goals/Goal.svelte";
+import ObjectiveTitleLabelPart from "@nucleum/features/focus/goals/GoalTitleLabelPart.svelte";
 import { AppSearchParam } from "@21n/types/appStore.type";
 import {
   ObjectiveStatus,
   ObjectiveType,
   type IObjective
-} from "@21n/components/goals/goal.type";
-import { updateObjectiveParent } from "@21n/components/goals/goal.utils";
-import LibraryPanelContentResolver from "@21n/components/library/LibraryPanelContentResolver.svelte";
-import { generateResourceId } from "@21n/data/datafn/id.utils";
+} from "@nucleum/features/focus/goals/goal.type";
+import { updateObjectiveParent } from "@nucleum/features/focus/goals/goal.utils";
+import LibraryPanelContentResolver from "@nucleum/components/library/LibraryPanelContentResolver.svelte";
+import { generateResourceId } from "@nucleum/datafn/id.utils";
 
 const isSessionRunningPreCondition = () => get(activeSession).isSessionRunning;
 

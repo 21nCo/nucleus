@@ -13,7 +13,7 @@
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import TextWithHoverTooltip from "@21n/elements/text/TextWithHoverTooltip.svelte";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import { tooltip } from "@21n/actions/popover.action";
+  import { tooltip } from "@nucleum/actions/popover.action";
   import { backOut } from "svelte/easing";
   let {
     item,

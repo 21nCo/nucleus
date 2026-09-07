@@ -1,17 +1,17 @@
-import { logger } from "@21n/components/debug/logger.client";
-import type { OmitForCapture } from "@21n/data/datafn/resource.type";
-import { ClipperElementIdentifier } from "@21n/products/memotron/common/clip.type";
+import { logger } from "@nucleum/components/debug/logger.client";
+import type { OmitForCapture } from "@nucleum/datafn/resource.type";
+import { ClipperElementIdentifier } from "@nucleum/features/memory/common/clip.type";
 import {
   NodeType,
   type ITweet,
   type ITwitterProfile
-} from "@21n/products/memotron/node/node.type";
-import { contentTypeMap } from "@21n/products/memotron/node/url.utils";
-import type { ISocialPost } from "@21n/extensions/clipper/clipper.type";
+} from "@nucleum/features/memory/node/node.type";
+import { contentTypeMap } from "@nucleum/features/memory/node/url.utils";
+import type { ISocialPost } from "@nucleum/extensions/clipper/clipper.type";
 import {
   findAncestorOrSelf,
   resolveOgData
-} from "@21n/extensions/clipper/parsers/shared/domUtils";
+} from "@nucleum/extensions/clipper/parsers/shared/domUtils";
 
 /**
  *

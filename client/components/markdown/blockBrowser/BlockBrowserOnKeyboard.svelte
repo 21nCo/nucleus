@@ -3,11 +3,11 @@
     calloutBrowserItem,
     codeBrowserItem,
     quoteBrowserItem
-  } from "@21n/components/markdown/blockBrowser/blockBrowser.utils";
-  import type { IBlockBrowserItem } from "@21n/components/markdown/blockBrowser/blockBrowser.type";
+  } from "@nucleum/components/markdown/blockBrowser/blockBrowser.utils";
+  import type { IBlockBrowserItem } from "@nucleum/components/markdown/blockBrowser/blockBrowser.type";
   import { Size } from "@21n/types/size.enum";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
-  import BlockBrowserKeyboardItem from "@21n/components/markdown/blockBrowser/BlockBrowserKeyboardItem.svelte";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import BlockBrowserKeyboardItem from "@nucleum/components/markdown/blockBrowser/BlockBrowserKeyboardItem.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { fly } from "svelte/transition";
 

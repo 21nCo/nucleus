@@ -1,4 +1,4 @@
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 
 export const e2eProducts = [
   Product.NUCLEUM,

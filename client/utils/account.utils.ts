@@ -1,13 +1,13 @@
-import { logger } from "@21n/components/debug/logger.client";
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { goto, isExtensionEnvironment } from "@21n/utils/browser.utils";
-import { clientStorage } from "@21n/persistence/persistence.utils";
+import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import { postDataToParent } from "@21n/utils/embed.utils";
 import { LicenseType, type IUserPlan } from "@21n/types/account.type";
 import {
   BillingCycle,
   PlanType
-} from "@21n/components/subscription/userPlan.type";
+} from "@nucleum/components/subscription/userPlan.type";
 import { parseAndFormatDate } from "@21n/utils/time.utils";
 import { enumToString } from "@21n/shared-utils/text.utils";
 import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
@@ -96,7 +96,7 @@ export async function signout(
 ) {
   logger.log({ at: "signout", context: ctx, params });
   try {
-    const { authClient } = await import("@21n/components/account/auth");
+    const { authClient } = await import("@nucleum/components/account/auth");
     await (await authClient()).signOut({
       allSessions: false
     });

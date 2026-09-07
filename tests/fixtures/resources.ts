@@ -1,4 +1,4 @@
-import { Resource } from "$lib/client/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 
 export const mockResources = {
   node: {

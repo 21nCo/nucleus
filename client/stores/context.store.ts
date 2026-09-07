@@ -4,8 +4,8 @@ import {
   OperatingSystem,
   type IAppContext
 } from "@21n/types/context.type";
-import { clientStorage } from "@21n/persistence/persistence.utils";
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { clientStorage } from "@nucleum/persistence/persistence.utils";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 
 const context = initContextStore({
   isEmbed: false,

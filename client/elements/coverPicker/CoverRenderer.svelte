@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { imageRepositioner } from "@21n/actions/imageRepositioning.action";
+  import { imageRepositioner } from "@nucleum/actions/imageRepositioning.action";
   import {
     FileType,
     type IImageRepositionerOptions
-  } from "@21n/components/files/file.type";
-  import FileView from "@21n/components/files/FileView.svelte";
+  } from "@nucleum/features/files/file.type";
+  import FileView from "@nucleum/features/files/FileView.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { gradientsList } from "@21n/elements/colorPicker/gradients/gradients";
   import { debouncer } from "@21n/utils/utils";

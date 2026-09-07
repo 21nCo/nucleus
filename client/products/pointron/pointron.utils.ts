@@ -8,8 +8,8 @@ import {
   type ISessionInterval,
   BlockType
 } from "@21n/types/pointron/session.type";
-import { activeSession } from "@21n/products/pointron/focus/session.store";
-import { type ISessionBase, SessionType } from "@21n/products/pointron/logs/log.type";
+import { activeSession } from "@nucleum/features/focus/session.store";
+import { type ISessionBase, SessionType } from "@nucleum/features/focus/logs/log.type";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 
 type ITag = {

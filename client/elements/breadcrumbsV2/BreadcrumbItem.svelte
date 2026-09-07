@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { tooltip } from "@21n/actions/popover.action";
+  import { tooltip } from "@nucleum/actions/popover.action";
   import { cn } from "@21n/utils/ui.utils";
   let {
     label = "",

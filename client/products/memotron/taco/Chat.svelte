@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { tacoWorker } from "@21n/products/memotron/memotron.utils";
+  import { tacoWorker } from "@nucleum/products/memotron/memotron.utils";
 
   import { onMount, onDestroy } from "svelte";
-  import { TacoActions } from "@21n/products/memotron/taco/taco.types";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { TacoActions } from "@nucleum/products/memotron/taco/taco.types";
+  import { datafn } from "@nucleum/datafn/datafn.store";
 
   let isLoading: boolean = false;
   let type = "";

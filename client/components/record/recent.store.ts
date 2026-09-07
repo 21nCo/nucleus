@@ -1,16 +1,16 @@
 import {
   isSameResource,
   resolveProductResources
-} from "@21n/data/datafn/resource.utils";
-import { ObservableStore } from "@21n/stores/client.store";
+} from "@nucleum/datafn/resource.utils";
+import { ObservableStore } from "@nucleum/stores/client.store";
 import type { IRecordId } from "@21n/types/data.type";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { resourceInList } from "@21n/data/datafn/resource.utils";
-import type { IRecentsStore } from "@21n/components/record/record.type";
-import { rootNodeTypeList } from "@21n/products/memotron/node/node.type";
-import { logger } from "@21n/components/debug/logger.client";
-import { appStore } from "@21n/stores/app.store";
-import { datafn } from "@21n/stores/datafn.store";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { resourceInList } from "@nucleum/datafn/resource.utils";
+import type { IRecentsStore } from "@nucleum/components/record/record.type";
+import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { appStore } from "@nucleum/stores/app.store";
+import { datafn } from "@nucleum/datafn/datafn.store";
 import { get } from "svelte/store";
 
 function resolveTimestamp(value: unknown): Date | null {

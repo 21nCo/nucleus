@@ -4,7 +4,7 @@ import {
 } from "@21n/types/embedMessage.enum";
 import { postDataToParent } from "@21n/utils/embed.utils";
 import { wait } from "@21n/utils/time.utils";
-import type { IEmbedChannel } from "@21n/components/embed/embed.type";
+import type { IEmbedChannel } from "@nucleum/components/embed/embed.type";
 import { get, writable } from "svelte/store";
 
 const subject = writable<IEmbedChannel>({});

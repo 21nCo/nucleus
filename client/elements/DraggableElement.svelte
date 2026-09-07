@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { dragAndDropStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import { dragAndDropStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import { DragStatus } from "@21n/types/dragstatus.enum";
   let {
     item,

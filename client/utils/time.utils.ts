@@ -1,5 +1,5 @@
 import type { IUserGlobalPreferences } from "@21n/types/preferences.type";
-import type { DatafnDateValue } from "@21n/data/datafn/resource.type";
+import type { DatafnDateValue } from "@nucleum/datafn/resource.type";
 import {
   TimePeriodType,
   type TimePeriod,

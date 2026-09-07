@@ -1,34 +1,34 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { logger } from "@21n/components/debug/logger.client";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { logger } from "@nucleum/components/debug/logger.client";
 import { get, writable } from "svelte/store";
-import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
-import { appStore } from "@21n/stores/app.store";
-import { ObservableStore } from "@21n/stores/client.store";
-import { datafn } from "@21n/stores/datafn.store";
+import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { appStore } from "@nucleum/stores/app.store";
+import { ObservableStore } from "@nucleum/stores/client.store";
+import { datafn } from "@nucleum/datafn/datafn.store";
 import { Action } from "@21n/types/action.enum";
-import { InteractionMode } from "@21n/components/settings/interactionMode/interactionMode.type";
+import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
 import {
   UIState,
   UIStateScope,
   type IUIStateParams,
   type IUIStateStore
-} from "@21n/stores/uiState/uiState.type";
-import context from "@21n/stores/context.store";
+} from "@nucleum/stores/uiState/uiState.type";
+import context from "@nucleum/stores/context.store";
 import { Embed } from "@21n/types/context.type";
 import type { IRecordId } from "@21n/types/data.type";
-import { toasts } from "@21n/stores/notification.store";
+import { toasts } from "@nucleum/stores/notification.store";
 import {
   resourceInList,
   isSameResource
-} from "@21n/data/datafn/resource.utils";
+} from "@nucleum/datafn/resource.utils";
 import { parse, stringify } from "@21n/shared-utils/json.utils";
-import { migrateLegacyNucleusProductKeys } from "@21n/stores/productKeyMigration.utils";
+import { migrateLegacyNucleusProductKeys } from "@nucleum/stores/productKeyMigration.utils";
 import {
   acknowledgeOptimisticKvEntries,
   addOptimisticKvEntries,
   applyOptimisticKvEntries,
   removeOptimisticKvEntries
-} from "@21n/stores/optimisticKv.utils";
+} from "@nucleum/datafn/optimisticKv.utils";
 import type { OptimisticKvEntries } from "@21n/types/datafn.type";
 
 const uiStateSeed: IUIStateStore = {

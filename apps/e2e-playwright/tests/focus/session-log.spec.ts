@@ -157,7 +157,7 @@ test("opens session log from calendar timeline and delete cascades session logs 
       itemIds: seeded.itemIds,
       modulePaths: {
         datafnStorePath: resolveRepoFsImportPath(
-          "client/stores/datafn.store.ts"
+          "client/datafn/datafn.store.ts"
         )
       }
     }

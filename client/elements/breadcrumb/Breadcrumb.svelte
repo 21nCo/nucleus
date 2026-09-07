@@ -2,11 +2,11 @@
   import BreadcrumbItemView from "@21n/elements/breadcrumb/BreadcrumbItemView.svelte";
   import type { IBreadcrumbItem } from "@21n/elements/breadcrumbsV2/breadcrumbItem.type";
   import { textTruncateMapper } from "@21n/utils/utils";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { Display } from "@21n/types/view.type";
   import { determineTruncateLength } from "@21n/shared-utils/text.utils";
-  import { appStore } from "@21n/stores/app.store";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import { Size } from "@21n/types/size.enum";
   let {
     items = [],

@@ -1,5 +1,5 @@
 import { get, writable } from "svelte/store";
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import {
   AppSkin,
   Theme,
@@ -12,7 +12,7 @@ import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 import {
   persistLocally,
   retrieveLocally
-} from "@21n/persistence/persistence.utils";
+} from "@nucleum/persistence/persistence.utils";
 import type { UserAppearanceSettings } from "@21n/types/preferences.type";
 import { GlobalEvent } from "@21n/types/event.enum";
 import type { JsonValue } from "@21n/types/json.type";

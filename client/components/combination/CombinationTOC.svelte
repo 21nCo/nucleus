@@ -1,16 +1,16 @@
 <script lang="ts">
   import { onDestroy } from "svelte";
-  import type { IRecordId } from "@21n/client/types/data.type";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import type { IRecordId } from "@nucleum/client/types/data.type";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import {
     ActiveNodeStore,
     type IActiveNodeStore
-  } from "@21n/client/products/memotron/node/node.store";
+  } from "@nucleum/features/memory/node/node.store";
   import {
     headingNodeTypes,
     NodeType
-  } from "@21n/client/products/memotron/node/node.type";
-  import { cn } from "@21n/client/utils/ui.utils";
+  } from "@nucleum/features/memory/node/node.type";
+  import { cn } from "@nucleum/client/utils/ui.utils";
 
   let {
     resourceId = undefined,

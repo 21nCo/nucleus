@@ -2,9 +2,9 @@
 
 <script lang="ts">
   import { cn } from "@21n/utils/ui.utils";
-  import AppNameWithVersion from "@21n/components/settings/about/AppNameWithVersion.svelte";
-  import BlankLabsFooter from "@21n/components/settings/about/BlankLabsFooter.svelte";
-  import SystemStatus from "@21n/components/settings/about/SystemStatus.svelte";
+  import AppNameWithVersion from "@nucleum/components/settings/about/AppNameWithVersion.svelte";
+  import BlankLabsFooter from "@nucleum/components/settings/about/BlankLabsFooter.svelte";
+  import SystemStatus from "@nucleum/components/settings/about/SystemStatus.svelte";
   let {
     isHideAppVersion = false,
     isComingSoon = false,

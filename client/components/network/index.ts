@@ -64,8 +64,8 @@ export async function peformAccountApiCall(
   }
 ) {
   const [{ ClientStorageKey }, { clientStorage }] = await Promise.all([
-    import("@21n/persistence/persistence.type"),
-    import("@21n/persistence/persistence.utils")
+    import("@nucleum/persistence/persistence.type"),
+    import("@nucleum/persistence/persistence.utils")
   ]);
   const region =
     params?.region ?? (await clientStorage.get(ClientStorageKey.REGION));

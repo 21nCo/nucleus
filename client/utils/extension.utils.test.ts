@@ -19,7 +19,7 @@ const mockedModules = vi.hoisted(() => ({
   }
 }));
 
-vi.mock("@21n/components/debug/logger.client", () => mockedModules);
+vi.mock("@nucleum/components/debug/logger.client", () => mockedModules);
 
 const sendToBackground = vi.hoisted(() => vi.fn(async () => ({ ok: true })));
 

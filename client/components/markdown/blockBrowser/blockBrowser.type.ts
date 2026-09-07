@@ -1,5 +1,5 @@
-import type { NodeType } from "@21n/products/memotron/node/node.type";
-import type { InlineType } from "@21n/components/markdown/md.type";
+import type { NodeType } from "@nucleum/features/memory/node/node.type";
+import type { InlineType } from "@nucleum/components/markdown/md.type";
 
 export type IBlockBrowserItem = {
   label: string;

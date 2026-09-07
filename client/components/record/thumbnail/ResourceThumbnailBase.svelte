@@ -1,22 +1,22 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import {
     determineResourceType,
     resolveBulkSelectionAccessPointId,
     resourceIdToElementId,
     resourceInList,
     isSameResource
-  } from "@21n/data/datafn/resource.utils";
-  import { bulkEditStore } from "@21n/components/record/bulkedit.store";
+  } from "@nucleum/datafn/resource.utils";
+  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
   import Check from "@21n/icons/Check.svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import type { IRecordId } from "@21n/types/data.type";
   import { Arrangement } from "@21n/types/direction.enum";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import ResourceThumbnailContextMenu from "@21n/components/record/thumbnail/ResourceThumbnailContextMenu.svelte";
+  import ResourceThumbnailContextMenu from "@nucleum/components/record/thumbnail/ResourceThumbnailContextMenu.svelte";
   import { stringify } from "@21n/shared-utils/json.utils";
 
   let {

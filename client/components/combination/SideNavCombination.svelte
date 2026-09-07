@@ -1,14 +1,14 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import type { IRecordId } from "@21n/client/types/data.type";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
-  import { Size } from "@21n/client/types/size.enum";
-  import { cn } from "@21n/client/utils/ui.utils";
-  import Button from "@21n/client/elements/button/Button.svelte";
-  import TextInput from "@21n/client/elements/input/TextInput.svelte";
-  import EmptyStatusView from "@21n/client/elements/feedback/EmptyStatusView.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/client/types/button.type";
+  import type { IRecordId } from "@nucleum/client/types/data.type";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+  import { Size } from "@nucleum/client/types/size.enum";
+  import { cn } from "@nucleum/client/utils/ui.utils";
+  import Button from "@nucleum/client/elements/button/Button.svelte";
+  import TextInput from "@nucleum/client/elements/input/TextInput.svelte";
+  import EmptyStatusView from "@nucleum/client/elements/feedback/EmptyStatusView.svelte";
+  import { ButtonStyle, ButtonVariant } from "@nucleum/client/types/button.type";
   import {
     CombinationNavItemType,
     type ICombinationNavItem
@@ -20,7 +20,7 @@
   import CombinationTOC from "./CombinationTOC.svelte";
   import { findItemPath, getItemByPath } from "./combination.utils";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import { acquireDnDPage, appStore } from "@21n/client/stores/app.store";
+  import { acquireDnDPage, appStore } from "@nucleum/client/stores/app.store";
   let {
     id,
     accessMode = AccessMode.INLINE,

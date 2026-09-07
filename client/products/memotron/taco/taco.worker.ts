@@ -1,12 +1,12 @@
 // import { env, pipeline } from "@xenova/transformers";
 import { env, pipeline } from "@huggingface/transformers";
-import type { INodeCapture } from "@21n/products/memotron/node/node.type";
-import { generateResourceId } from "@21n/data/datafn/id.utils";
-import { Resource } from "@21n/data/datafn/resource.enum";
+import type { INodeCapture } from "@nucleum/features/memory/node/node.type";
+import { generateResourceId } from "@nucleum/datafn/id.utils";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import {
   TacoActions,
   TranscriptionModel
-} from "@21n/products/memotron/taco/taco.types";
+} from "@nucleum/products/memotron/taco/taco.types";
 
 env.allowLocalModels = false;
 // let call = 0;

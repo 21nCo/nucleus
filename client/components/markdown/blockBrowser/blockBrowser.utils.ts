@@ -1,10 +1,10 @@
-import { NodeType } from "@21n/products/memotron/node/node.type";
+import { NodeType } from "@nucleum/features/memory/node/node.type";
 import { Embed } from "@21n/types/context.type";
-import { InlineType } from "@21n/components/markdown/md.type";
+import { InlineType } from "@nucleum/components/markdown/md.type";
 import type {
   IBlockBrowserItem,
   IBlockBrowserSection
-} from "@21n/components/markdown/blockBrowser/blockBrowser.type";
+} from "@nucleum/components/markdown/blockBrowser/blockBrowser.type";
 
 const embedBrowserItem: IBlockBrowserItem = {
   label: "Embed anything",

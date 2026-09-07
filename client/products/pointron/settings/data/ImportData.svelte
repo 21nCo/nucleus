@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { toasts } from "@21n/stores/notification.store";
+  import { toasts } from "@nucleum/stores/notification.store";
   import { ButtonVariant } from "@21n/types/button.type";
   import { Size } from "@21n/types/size.enum";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
@@ -10,13 +10,13 @@
     datafn,
     datafnRuntime,
     refreshNucleumDatafnStatus
-  } from "@21n/stores/datafn.store";
-  import { lastImportTime } from "@21n/products/pointron/pointron.store";
+  } from "@nucleum/datafn/datafn.store";
+  import { lastImportTime } from "@nucleum/products/pointron/pointron.store";
   import {
     isPointronDatafnBackup,
     resolveDatafnImportErrorCount
-  } from "@21n/products/pointron/settings/data/pointronDatafnBackup.utils";
-  import { logger } from "@21n/components/debug/logger.client";
+  } from "@nucleum/products/pointron/settings/data/pointronDatafnBackup.utils";
+  import { logger } from "@nucleum/components/debug/logger.client";
 
   let fileInput: HTMLInputElement;
   let isProcessingImport: boolean = false;

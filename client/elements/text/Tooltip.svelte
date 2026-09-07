@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
-  import view from "@21n/stores/view.store";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import view from "@nucleum/stores/view.store";
   import { Size } from "@21n/types/size.enum";
   import type { FormLabelInfoTooltip } from "@21n/types/text.type";
   import { cn } from "@21n/utils/ui.utils";

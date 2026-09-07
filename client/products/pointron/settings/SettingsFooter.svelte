@@ -1,5 +1,5 @@
 <script>
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
 </script>
 
 <div class="flex flex-col justify-center items-center mt-8">

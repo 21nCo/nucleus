@@ -1,5 +1,5 @@
 <script lang="ts">
-  import modalEvent from "@21n/components/modal/modal.store";
+  import modalEvent from "@nucleum/components/modal/modal.store";
   import { Action } from "@21n/types/action.enum";
   import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
   import { TextStyle } from "@21n/types/text.enum";
@@ -9,22 +9,22 @@
   import Text from "@21n/elements/text/Text.svelte";
   import { onMount } from "svelte";
   import GradientsSelector from "@21n/elements/colorPicker/gradients/GradientsSelector.svelte";
-  import { fileDrop } from "@21n/actions/fileDrop.action";
+  import { fileDrop } from "@nucleum/actions/fileDrop.action";
   import Icon from "@21n/elements/Icon.svelte";
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import type { IRecordId } from "@21n/types/data.type";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import FileView from "@21n/components/files/FileView.svelte";
-  import { FileType } from "@21n/components/files/file.type";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import FileView from "@nucleum/features/files/FileView.svelte";
+  import { FileType } from "@nucleum/features/files/file.type";
   import { cn } from "@21n/utils/ui.utils";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
   import { Orientation } from "@21n/types/direction.enum";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import UnsplashPicker from "@21n/elements/coverPicker/UnsplashPicker.svelte";
   import CoverPickerFromLibrary from "@21n/elements/coverPicker/CoverPickerFromLibrary.svelte";
-  import { isRecordId } from "@21n/data/datafn/resource.utils";
-  import { appStore } from "@21n/stores/app.store";
-  import { resolveProductConfig } from "@21n/products/product.config";
+  import { isRecordId } from "@nucleum/datafn/resource.utils";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
 
   enum Method {
     COLOR = "color",

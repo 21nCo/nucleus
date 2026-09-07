@@ -1,17 +1,17 @@
 <script lang="ts">
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import { InfoTextType } from "@21n/types/text.type";
   import { formatDatetime } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
-  import type { ActiveResourceStore } from "@21n/data/datafn/resource.store";
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
+  import type { ActiveResourceStore } from "@nucleum/datafn/resource.store";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
   import {
     isShowStatusBanner,
     resolveTrashedAtDate
-  } from "@21n/data/datafn/resource.utils";
-  import RecordTrashBanner from "@21n/components/record/RecordTrashBanner.svelte";
+  } from "@nucleum/datafn/resource.utils";
+  import RecordTrashBanner from "@nucleum/components/record/RecordTrashBanner.svelte";
   let { resource }: { resource: ActiveResourceStore<any, any> } = $props();
   const trashedAt = $derived(resolveTrashedAtDate($resource));
 </script>

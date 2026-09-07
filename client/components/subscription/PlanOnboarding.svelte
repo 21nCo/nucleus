@@ -1,6 +1,6 @@
 <script lang="ts">
-  import account from "@21n/stores/account.store";
-  import { PlanType, BillingCycle } from "@21n/components/subscription/userPlan.type";
+  import account from "@nucleum/stores/account.store";
+  import { PlanType, BillingCycle } from "@nucleum/components/subscription/userPlan.type";
   import { Action } from "@21n/types/action.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
@@ -10,12 +10,12 @@
     resolveNextRenewalDate,
     resolvePlanLabel,
     SUBSCRIPTION_PLANS
-  } from "@21n/components/subscription/userPlan.utils";
-  import { appStore } from "@21n/stores/app.store";
+  } from "@nucleum/components/subscription/userPlan.utils";
+  import { appStore } from "@nucleum/stores/app.store";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
-  import PlanIcon from "@21n/components/subscription/elements/PlanIcon.svelte";
-  import modalEvent from "@21n/components/modal/modal.store";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import PlanIcon from "@nucleum/components/subscription/elements/PlanIcon.svelte";
+  import modalEvent from "@nucleum/components/modal/modal.store";
 
   function resolveRenewalDate() {
     return $account.plan?.plan ? resolveNextRenewalDate($account.plan) : undefined;

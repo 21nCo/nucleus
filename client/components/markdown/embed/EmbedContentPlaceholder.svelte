@@ -1,20 +1,20 @@
 <script lang="ts">
-  import { fileDrop } from "@21n/actions/fileDrop.action";
-  import { popover } from "@21n/actions/popover.action";
+  import { fileDrop } from "@nucleum/actions/fileDrop.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import Button from "@21n/elements/button/Button.svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import AudioCapture from "@21n/products/memotron/capture/AudioCapture.svelte";
-  import { MAX_FILE_SIZE_MB } from "@21n/components/record/record.store";
-  import { resolveFileUploadErrorMessage } from "@21n/products/memotron/memotron.utils";
+  import AudioCapture from "@nucleum/features/memory/capture/AudioCapture.svelte";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/components/record/record.store";
+  import { resolveFileUploadErrorMessage } from "@nucleum/products/memotron/memotron.utils";
   import {
     mediaNodeTypeList,
     NodeType,
     webNodeTypeList
-  } from "@21n/products/memotron/node/node.type";
-  import context from "@21n/stores/context.store";
+  } from "@nucleum/features/memory/node/node.type";
+  import context from "@nucleum/stores/context.store";
   import { ColorStrength } from "@21n/types/appearance.type";
   import {
     ButtonStyle,
@@ -25,19 +25,19 @@
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { enumToString } from "@21n/shared-utils/text.utils";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
-  import EmbedLibrarySearch from "@21n/components/markdown/embed/EmbedLibrarySearch.svelte";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+  import EmbedLibrarySearch from "@nucleum/components/markdown/embed/EmbedLibrarySearch.svelte";
   import { getContext } from "svelte";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import {
     ActiveCaptureStore,
     type IActiveCaptureStore
-  } from "@21n/products/memotron/capture/capture.store";
+  } from "@nucleum/features/memory/capture/capture.store";
   import { Context } from "@21n/types/appStore.type";
-  import { datafn } from "@21n/stores/datafn.store";
-  import { generateResourceId } from "@21n/data/datafn/id.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { datafn } from "@nucleum/datafn/datafn.store";
+  import { generateResourceId } from "@nucleum/datafn/id.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   const nodeContext = getContext<any>(Context.NODE);
   const captureContext = getContext<any>(Context.CAPTURE);
   const captureStore = $derived.by<IActiveCaptureStore | undefined>(() => {

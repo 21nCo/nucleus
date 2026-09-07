@@ -10,7 +10,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { Placement } from "@21n/types/direction.enum";
   import { Size } from "@21n/types/size.enum";
-  import { mount } from "@21n/actions/mount.action";
+  import { mount } from "@nucleum/actions/mount.action";
   import Tag from "@21n/elements/text/Tag.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { isExtensionEnvironment } from "@21n/utils/browser.utils";

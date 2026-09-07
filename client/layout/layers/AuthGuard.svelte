@@ -3,23 +3,23 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { page } from "$app/stores";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import account, {
     resolveStoredUserInformation
-  } from "@21n/stores/account.store";
-  import { appStore } from "@21n/stores/app.store";
-  import context from "@21n/stores/context.store";
+  } from "@nucleum/stores/account.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import context from "@nucleum/stores/context.store";
   import { UserDataMode, UserSessionType } from "@21n/types/account.type";
-  import { Product } from "@21n/products/product.type";
-  import { PlanType } from "@21n/components/subscription/userPlan.type";
+  import { Product } from "@nucleum/products/product.type";
+  import { PlanType } from "@nucleum/components/subscription/userPlan.type";
   import { postTokenToExtension } from "@21n/utils/embed.utils";
   import { onMount } from "svelte";
   import {
     resolveAuthSession,
     shouldUseAuthFnBearerSession
-  } from "@21n/components/account/auth";
-  import { logger } from "@21n/components/debug/logger.client";
+  } from "@nucleum/components/account/auth";
+  import { logger } from "@nucleum/components/debug/logger.client";
 
   let { children }: { children?: Snippet<[boolean]> } = $props();
   let isLoggedIn = $state(false);

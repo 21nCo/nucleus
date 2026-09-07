@@ -1,9 +1,9 @@
 <script lang="ts">
-  import TextSearchInput from "@21n/client/elements/input/TextSearchInput.svelte";
-  import LinkSearchResultItem from "@21n/client/products/memotron/common/linkbox/LinkSearchResultItem.svelte";
-  import { datafn } from "@21n/stores/datafn.store";
-  import { resolveProductResources } from "@21n/data/datafn/resource.utils";
-  import { appStore } from "@21n/stores/app.store";
+  import TextSearchInput from "@nucleum/client/elements/input/TextSearchInput.svelte";
+  import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
+  import { datafn } from "@nucleum/datafn/datafn.store";
+  import { resolveProductResources } from "@nucleum/datafn/resource.utils";
+  import { appStore } from "@nucleum/stores/app.store";
 
   let {
     onSelect = undefined

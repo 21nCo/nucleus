@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 import Icon from "@21n/elements/Icon.svelte";
 import { Size } from "@21n/types/size.enum";
 import { IconVariant } from "@21n/types/icon.type";
-import { icons } from "@21n/data/icons";
+import { icons } from "@nucleum/datafn/icons";
 const meta = {
   component: Icon,
   argTypes: {

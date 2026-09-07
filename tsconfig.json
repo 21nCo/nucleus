@@ -14,7 +14,7 @@
     "strict": false,
     "baseUrl": ".",
     "paths": {
-      "@21n/actions": [
+      "@nucleum/actions": [
         "./client/actions/index.ts",
         "./client/actions/index.tsx",
         "./client/actions/index.js",
@@ -31,10 +31,10 @@
         "./client/actions/src/index.d.ts",
         "./client/actions"
       ],
-      "@21n/actions/*": [
+      "@nucleum/actions/*": [
         "./client/actions/*"
       ],
-      "@21n/components": [
+      "@nucleum/components": [
         "./client/components/index.ts",
         "./client/components/index.tsx",
         "./client/components/index.js",
@@ -51,7 +51,7 @@
         "./client/components/src/index.d.ts",
         "./client/components"
       ],
-      "@21n/components/*": [
+      "@nucleum/components/*": [
         "./client/components/*"
       ],
       "@21n/elements": [
@@ -74,7 +74,7 @@
       "@21n/elements/*": [
         "./client/elements/*"
       ],
-      "@21n/stores": [
+      "@nucleum/stores": [
         "./client/stores/index.ts",
         "./client/stores/index.tsx",
         "./client/stores/index.js",
@@ -91,7 +91,7 @@
         "./client/stores/src/index.d.ts",
         "./client/stores"
       ],
-      "@21n/stores/*": [
+      "@nucleum/stores/*": [
         "./client/stores/*"
       ],
       "@21n/utils": [
@@ -134,7 +134,7 @@
       "@21n/types/*": [
         "./client/types/*"
       ],
-      "@21n/products": [
+      "@nucleum/products": [
         "./client/products/index.ts",
         "./client/products/index.tsx",
         "./client/products/index.js",
@@ -151,10 +151,50 @@
         "./client/products/src/index.d.ts",
         "./client/products"
       ],
-      "@21n/products/*": [
+      "@nucleum/products/*": [
         "./client/products/*"
       ],
-      "@21n/static": [
+      "@nucleum/features": [
+        "./client/features/index.ts",
+        "./client/features/index.tsx",
+        "./client/features/index.js",
+        "./client/features/index.mjs",
+        "./client/features/index.cjs",
+        "./client/features/index.svelte",
+        "./client/features/index.d.ts",
+        "./client/features/src/index.ts",
+        "./client/features/src/index.tsx",
+        "./client/features/src/index.js",
+        "./client/features/src/index.mjs",
+        "./client/features/src/index.cjs",
+        "./client/features/src/index.svelte",
+        "./client/features/src/index.d.ts",
+        "./client/features"
+      ],
+      "@nucleum/features/*": [
+        "./client/features/*"
+      ],
+      "@nucleum/datafn": [
+        "./client/datafn/index.ts",
+        "./client/datafn/index.tsx",
+        "./client/datafn/index.js",
+        "./client/datafn/index.mjs",
+        "./client/datafn/index.cjs",
+        "./client/datafn/index.svelte",
+        "./client/datafn/index.d.ts",
+        "./client/datafn/src/index.ts",
+        "./client/datafn/src/index.tsx",
+        "./client/datafn/src/index.js",
+        "./client/datafn/src/index.mjs",
+        "./client/datafn/src/index.cjs",
+        "./client/datafn/src/index.svelte",
+        "./client/datafn/src/index.d.ts",
+        "./client/datafn"
+      ],
+      "@nucleum/datafn/*": [
+        "./client/datafn/*"
+      ],
+      "@nucleum/static": [
         "./client/static/index.ts",
         "./client/static/index.tsx",
         "./client/static/index.js",
@@ -171,7 +211,7 @@
         "./client/static/src/index.d.ts",
         "./client/static"
       ],
-      "@21n/static/*": [
+      "@nucleum/static/*": [
         "./client/static/*"
       ],
       "@21n/layout": [
@@ -194,7 +234,7 @@
       "@21n/layout/*": [
         "./client/layout/*"
       ],
-      "@21n/persistence": [
+      "@nucleum/persistence": [
         "./client/persistence/index.ts",
         "./client/persistence/index.tsx",
         "./client/persistence/index.js",
@@ -211,10 +251,10 @@
         "./client/persistence/src/index.d.ts",
         "./client/persistence"
       ],
-      "@21n/persistence/*": [
+      "@nucleum/persistence/*": [
         "./client/persistence/*"
       ],
-      "@21n/extensions": [
+      "@nucleum/extensions": [
         "./client/extensions/index.ts",
         "./client/extensions/index.tsx",
         "./client/extensions/index.js",
@@ -231,7 +271,7 @@
         "./client/extensions/src/index.d.ts",
         "./client/extensions"
       ],
-      "@21n/extensions/*": [
+      "@nucleum/extensions/*": [
         "./client/extensions/*"
       ],
       "@21n/branding": [
@@ -294,7 +334,7 @@
       "@21n/theme/*": [
         "./client/theme/*"
       ],
-      "@21n/legacy": [
+      "@nucleum/legacy": [
         "./client/legacy/index.ts",
         "./client/legacy/index.tsx",
         "./client/legacy/index.js",
@@ -311,28 +351,8 @@
         "./client/legacy/src/index.d.ts",
         "./client/legacy"
       ],
-      "@21n/legacy/*": [
+      "@nucleum/legacy/*": [
         "./client/legacy/*"
-      ],
-      "@21n/data": [
-        "./client/data/index.ts",
-        "./client/data/index.tsx",
-        "./client/data/index.js",
-        "./client/data/index.mjs",
-        "./client/data/index.cjs",
-        "./client/data/index.svelte",
-        "./client/data/index.d.ts",
-        "./client/data/src/index.ts",
-        "./client/data/src/index.tsx",
-        "./client/data/src/index.js",
-        "./client/data/src/index.mjs",
-        "./client/data/src/index.cjs",
-        "./client/data/src/index.svelte",
-        "./client/data/src/index.d.ts",
-        "./client/data"
-      ],
-      "@21n/data/*": [
-        "./client/data/*"
       ],
       "@21n/illustrations": [
         "./client/illustrations/index.ts",
@@ -374,7 +394,7 @@
       "@21n/icons-v2/*": [
         "./client/iconsV2/*"
       ],
-      "@21n/cx": [
+      "@nucleum/cx": [
         "./client/cx/index.ts",
         "./client/cx/index.tsx",
         "./client/cx/index.js",
@@ -391,10 +411,10 @@
         "./client/cx/src/index.d.ts",
         "./client/cx"
       ],
-      "@21n/cx/*": [
+      "@nucleum/cx/*": [
         "./client/cx/*"
       ],
-      "@21n/client": [
+      "@nucleum/client": [
         "./client/index.ts",
         "./client/index.tsx",
         "./client/index.js",
@@ -411,7 +431,7 @@
         "./client/src/index.d.ts",
         "./client"
       ],
-      "@21n/client/*": [
+      "@nucleum/client/*": [
         "./client/*"
       ],
       "@21n/shared-types": [
@@ -494,7 +514,7 @@
       "@nucleum/schema/*": [
         "./schema/*"
       ],
-      "@21n/next": [
+      "@nucleum/next": [
         "./client/next/noop/index.ts",
         "./client/next/noop/index.tsx",
         "./client/next/noop/index.js",
@@ -511,7 +531,7 @@
         "./client/next/noop/src/index.d.ts",
         "./client/next/noop"
       ],
-      "@21n/next/*": [
+      "@nucleum/next/*": [
         "./client/next/noop/*"
       ]
     }

@@ -2,8 +2,8 @@
   import {
     toasts,
     confirmationNotification
-  } from "@21n/stores/notification.store";
-  import context from "@21n/stores/context.store";
+  } from "@nucleum/stores/notification.store";
+  import context from "@nucleum/stores/context.store";
   import { ButtonVariant } from "@21n/types/button.type";
   import Table2 from "@21n/elements/table/Table2.svelte";
   import { TableCellType, type TableColumn } from "@21n/types/table.type";
@@ -12,17 +12,17 @@
   import { Size } from "@21n/types/size.enum";
   import { InfoTextType } from "@21n/types/text.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import { preferences } from "@21n/stores/preferences/preferences.store";
-  import { type ImportHistoryItem } from "@21n/products/memotron/import/data.type";
+  import { preferences } from "@nucleum/stores/preferences/preferences.store";
+  import { type ImportHistoryItem } from "@nucleum/products/memotron/import/data.type";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
-  import MemotronImportAppList from "@21n/products/memotron/import/MemotronImportAppList.svelte";
-  import { Preference } from "@21n/stores/preferences/preferences.type";
+  import MemotronImportAppList from "@nucleum/products/memotron/import/MemotronImportAppList.svelte";
+  import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import {
     removeDuplicatesFilter,
     resourceInList
-  } from "@21n/data/datafn/resource.utils";
-  import { datafn } from "@21n/stores/datafn.store";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  } from "@nucleum/datafn/resource.utils";
+  import { datafn } from "@nucleum/datafn/datafn.store";
+  import { Resource } from "@nucleum/datafn/resource.enum";
 
   type ImportHistoryRow = Omit<
     ImportHistoryItem,

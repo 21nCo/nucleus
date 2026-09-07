@@ -1,58 +1,58 @@
 <script lang="ts">
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@21n/types/action.enum";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { resolveResourceIcon } from "@21n/data/datafn/resource.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { resolveResourceIcon } from "@nucleum/datafn/resource.utils";
   import {
     AccessMode,
     ResourceActionType
-  } from "@21n/data/datafn/resource.type";
+  } from "@nucleum/datafn/resource.type";
   import Icon from "@21n/elements/Icon.svelte";
-  import Writer from "@21n/products/memotron/capture/Writer.svelte";
-  import { CaptureMethod } from "@21n/products/memotron/capture/capture.type";
+  import Writer from "@nucleum/features/memory/capture/Writer.svelte";
+  import { CaptureMethod } from "@nucleum/features/memory/capture/capture.type";
   import {
     ActiveCaptureStore,
     type IActiveCaptureStore
-  } from "@21n/products/memotron/capture/capture.store";
-  import { generateResourceId } from "@21n/data/datafn/id.utils";
-  import HomeTopNav from "@21n/products/memotron/home/mobile/HomeTopNav.svelte";
+  } from "@nucleum/features/memory/capture/capture.store";
+  import { generateResourceId } from "@nucleum/datafn/id.utils";
+  import HomeTopNav from "@nucleum/products/memotron/home/mobile/HomeTopNav.svelte";
   import { haptic } from "@21n/utils/embed.utils";
-  import TypeSelectorOnMobile from "@21n/products/memotron/capture/typeSelector/TypeSelectorOnMobile.svelte";
+  import TypeSelectorOnMobile from "@nucleum/features/memory/capture/typeSelector/TypeSelectorOnMobile.svelte";
   import { fly } from "svelte/transition";
-  import HomeQuickAccess from "@21n/components/home/mobile/HomeQuickAccess.svelte";
-  import type { IQuickAccessItem } from "@21n/components/home/home.type";
+  import HomeQuickAccess from "@nucleum/components/home/mobile/HomeQuickAccess.svelte";
+  import type { IQuickAccessItem } from "@nucleum/components/home/home.type";
   import type { IRecordId } from "@21n/types/data.type";
-  import CaptureTopBar from "@21n/products/memotron/capture/CaptureTopBar.svelte";
-  import context from "@21n/stores/context.store";
+  import CaptureTopBar from "@nucleum/features/memory/capture/CaptureTopBar.svelte";
+  import context from "@nucleum/stores/context.store";
   import { OperatingSystem } from "@21n/types/context.type";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { AlertType, type InlineToast } from "@21n/types/notification.type";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { inlineToasts } from "@21n/stores/notification.store";
+  import { inlineToasts } from "@nucleum/stores/notification.store";
   import NotificationListener from "@21n/elements/listeners/NotificationListener.svelte";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
-  import FileUploader from "@21n/products/memotron/capture/FileUploader.svelte";
+  import FileUploader from "@nucleum/features/memory/capture/FileUploader.svelte";
   import { GlobalEvent } from "@21n/types/event.enum";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { quintOut } from "svelte/easing";
-  import ResourceSearchBase from "@21n/products/memotron/library/search/ResourceSearchBase.svelte";
-  import account from "@21n/stores/account.store";
+  import ResourceSearchBase from "@nucleum/products/memotron/library/search/ResourceSearchBase.svelte";
+  import account from "@nucleum/stores/account.store";
   import { UserDataMode } from "@21n/types/account.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { InfoTextType } from "@21n/types/text.type";
-  import { resolveProductConfig } from "@21n/products/product.config";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import { searchStore } from "@21n/components/search";
-  import { datafn } from "@21n/stores/datafn.store";
-  import { rootNodeTypeList } from "@21n/products/memotron/node/node.type";
-  import { resolveCollectionResource } from "@21n/components/collection/collection.utils";
+  import { searchStore } from "@nucleum/components/search";
+  import { datafn } from "@nucleum/datafn/datafn.store";
+  import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";
+  import { resolveCollectionResource } from "@nucleum/features/collections/collection.utils";
   import { toSvelteStore } from "@datafn/svelte";
-  import { datafnHeavyComputedSignalOptions } from "@21n/data/datafn/signalCache";
+  import { datafnHeavyComputedSignalOptions } from "@nucleum/datafn/signalCache";
   let {
     captureId = $bindable(generateResourceId(Resource.capture))
   }: {

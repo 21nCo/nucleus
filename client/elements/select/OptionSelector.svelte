@@ -10,7 +10,7 @@
   } from "@21n/types/select.type";
   import { cn } from "@21n/utils/ui.utils";
   import type { InputLabel } from "@21n/types/input.type";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { OperatingSystem } from "@21n/types/context.type";
   let {
     options,

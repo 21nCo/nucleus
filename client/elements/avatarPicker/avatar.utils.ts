@@ -1,4 +1,4 @@
-import { isRecordId } from "@21n/data/datafn/resource.utils";
+import { isRecordId } from "@nucleum/datafn/resource.utils";
 import type { IAvatar } from "@21n/types/avatar.type";
 import { isValidString } from "@21n/shared-utils/text.utils";
 

@@ -2,7 +2,7 @@ import type { PaymentProvider } from "@21n/shared-types/plan.type";
 import type {
   BillingCycle,
   PlanType
-} from "@21n/components/subscription/userPlan.type";
+} from "@nucleum/components/subscription/userPlan.type";
 
 export type UserAccount = {
   dataMode: UserDataMode;

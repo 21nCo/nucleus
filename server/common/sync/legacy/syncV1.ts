@@ -1,4 +1,4 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import { Agent } from "$lib/server/common/account/account.type";
 import { SyncMethod } from "$lib/shared/types/sync.type";
 import {

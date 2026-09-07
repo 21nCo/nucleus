@@ -1,6 +1,6 @@
 <script lang="ts">
-  import account from "@21n/stores/account.store";
-  import { resolveDiscountLabel } from "@21n/components/subscription/userPlan.utils";
+  import account from "@nucleum/stores/account.store";
+  import { resolveDiscountLabel } from "@nucleum/components/subscription/userPlan.utils";
   let {
     isPreventDiscounting = false
   }: {

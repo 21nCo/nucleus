@@ -2,15 +2,15 @@
 
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { appLoadingState } from "@21n/stores/app.store";
-  import context from "@21n/stores/context.store";
-  import MemotronNotifications from "@21n/products/memotron/base/MemotronNotifications.svelte";
+  import { appLoadingState } from "@nucleum/stores/app.store";
+  import context from "@nucleum/stores/context.store";
+  import MemotronNotifications from "@nucleum/products/memotron/base/MemotronNotifications.svelte";
   import UserBaseLayer from "@21n/layout/layers/UserBaseLayer.svelte";
-  import MemoryBase from "@21n/products/memotron/base/MemoryBase.svelte";
+  import MemoryBase from "@nucleum/products/memotron/base/MemoryBase.svelte";
   import TopNavLeftMenuItem from "@21n/layout/topNav/TopNavLeftMenuItem.svelte";
-  import { resourceAction } from "@21n/data/datafn/resource.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { ResourceActionType } from "@21n/data/datafn/resource.type";
+  import { resourceAction } from "@nucleum/datafn/resource.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { ResourceActionType } from "@nucleum/datafn/resource.type";
   let { children }: { children?: Snippet } = $props();
   let isLiteMode = $state($context.isEmbed && $context.isSheet);
 

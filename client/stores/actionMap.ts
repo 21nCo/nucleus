@@ -4,95 +4,95 @@ import {
   ActionType,
   ContentType
 } from "@21n/types/action.type";
-import PageError from "@21n/components/error/PageError.svelte";
-import DebugLogs from "@21n/components/error/DebugLogs.svelte";
-import Offline from "@21n/components/error/Offline.svelte";
-import Signup from "@21n/components/settings/account/Signup.svelte";
+import PageError from "@nucleum/components/error/PageError.svelte";
+import DebugLogs from "@nucleum/components/error/DebugLogs.svelte";
+import Offline from "@nucleum/components/error/Offline.svelte";
+import Signup from "@nucleum/components/settings/account/Signup.svelte";
 import ToastModalPortrait from "@21n/elements/feedback/ToastModalPortrait.svelte";
-import CommandBar from "@21n/components/commandBar/CommandBar.svelte";
+import CommandBar from "@nucleum/components/commandBar/CommandBar.svelte";
 import { Size } from "@21n/types/size.enum";
 import { Orientation, Placement } from "@21n/types/direction.enum";
-import { appStore, intercomId, isInEditMode } from "@21n/stores/app.store";
-import Help from "@21n/components/help/Help.svelte";
-import ExtensionLoginStatusPage from "@21n/components/settings/ExtensionLoginStatusPage.svelte";
+import { appStore, intercomId, isInEditMode } from "@nucleum/stores/app.store";
+import Help from "@nucleum/components/help/Help.svelte";
+import ExtensionLoginStatusPage from "@nucleum/components/settings/ExtensionLoginStatusPage.svelte";
 import DebugPage from "@21n/layout/layers/debug/DebugPage.svelte";
-import modalEvent from "@21n/components/modal/modal.store";
+import modalEvent from "@nucleum/components/modal/modal.store";
 import { Action } from "@21n/types/action.enum";
-import Bootstrap from "@21n/components/settings/account/Bootstrap.svelte";
-import Calendar from "@21n/components/calendar/Calendar.svelte";
+import Bootstrap from "@nucleum/components/settings/account/Bootstrap.svelte";
+import Calendar from "@nucleum/features/calendar/Calendar.svelte";
 import { GlobalEvent } from "@21n/types/event.enum";
-import { uiState } from "@21n/stores/uiState/uiState.store";
-import BookACall from "@21n/components/cx/BookACall.svelte";
-import MdShortcuts from "@21n/components/markdown/shortcuts/MdShortcuts.svelte";
+import { uiState } from "@nucleum/stores/uiState/uiState.store";
+import BookACall from "@nucleum/components/cx/BookACall.svelte";
+import MdShortcuts from "@nucleum/components/markdown/shortcuts/MdShortcuts.svelte";
 import CoverPicker from "@21n/elements/coverPicker/CoverPicker.svelte";
-import SignalDBViewer from "@21n/components/debug/SignalDBViewer.svelte";
-import CalendarSettings from "@21n/components/calendar/settings/CalendarSettings.svelte";
+import SignalDBViewer from "@nucleum/components/debug/SignalDBViewer.svelte";
+import CalendarSettings from "@nucleum/features/calendar/settings/CalendarSettings.svelte";
 import { Embed } from "@21n/types/context.type";
 import {
   AccessMode,
   ResourceActionType,
   type IMultiSelectStore
-} from "@21n/data/datafn/resource.type";
+} from "@nucleum/datafn/resource.type";
 import {
   determineResourceType,
   resolveResourceIcon,
   resourceAction
-} from "@21n/data/datafn/resource.utils";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import CreateCollection from "@21n/components/collection/CreateCollection.svelte";
-import CreateEvent from "@21n/components/events/CreateEvent.svelte";
-import Event from "@21n/components/events/Event.svelte";
-import PropertiesEditor from "@21n/components/collection/properties/PropertiesEditor.svelte";
-import CreateCombination from "@21n/components/combination/CreateCombination.svelte";
-import { ResourceError } from "@21n/components/error/errors";
-import { ResourceErrorCode } from "@21n/components/error/error.type";
-import CollectionTitleLabelPart from "@21n/components/collection/thumbnail/CollectionThumbnailLabel.svelte";
-import PropertyConfig from "@21n/components/collection/properties/propertyConfig/PropertyConfig.svelte";
-import { logger } from "@21n/components/debug/logger.client";
-import { toasts } from "@21n/stores/notification.store";
+} from "@nucleum/datafn/resource.utils";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import CreateCollection from "@nucleum/features/collections/CreateCollection.svelte";
+import CreateEvent from "@nucleum/features/calendar/events/CreateEvent.svelte";
+import Event from "@nucleum/features/calendar/events/Event.svelte";
+import PropertiesEditor from "@nucleum/features/collections/properties/PropertiesEditor.svelte";
+import CreateCombination from "@nucleum/components/combination/CreateCombination.svelte";
+import { ResourceError } from "@nucleum/components/error/errors";
+import { ResourceErrorCode } from "@nucleum/components/error/error.type";
+import CollectionTitleLabelPart from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
+import PropertyConfig from "@nucleum/features/collections/properties/propertyConfig/PropertyConfig.svelte";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { toasts } from "@nucleum/stores/notification.store";
 import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
-import LinkSearchResultItem from "@21n/products/memotron/common/linkbox/LinkSearchResultItemDummy.svelte";
-import { queryLinkingSearchResults } from "@21n/products/memotron/linking/link-search";
-import { recentsStore } from "@21n/components/record/recent.store";
+import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItemDummy.svelte";
+import { queryLinkingSearchResults } from "@nucleum/features/memory/linking/link-search";
+import { recentsStore } from "@nucleum/components/record/recent.store";
 import { isValidString } from "@21n/shared-utils/text.utils";
-import ResourceBrowser from "@21n/components/library/resourceBrowser/ResourceBrowser.svelte";
-import UserPlan from "@21n/components/subscription/UserPlan.svelte";
-import InactivePlan from "@21n/components/subscription/InactivePlan.svelte";
+import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
+import UserPlan from "@nucleum/components/subscription/UserPlan.svelte";
+import InactivePlan from "@nucleum/components/subscription/InactivePlan.svelte";
 import { ButtonVariant } from "@21n/types/button.type";
-import PaymentRedirect from "@21n/components/subscription/PaymentRedirect.svelte";
-import PlanOnboarding from "@21n/components/subscription/PlanOnboarding.svelte";
+import PaymentRedirect from "@nucleum/components/subscription/PaymentRedirect.svelte";
+import PlanOnboarding from "@nucleum/components/subscription/PlanOnboarding.svelte";
 import type { IRecordId } from "@21n/types/data.type";
-import UserBilling from "@21n/components/subscription/UserBilling.svelte";
-import UserPlanCancellation from "@21n/components/subscription/UserPlanCancellation.svelte";
-import DocusaurusEmbed from "@21n/components/cx/docusaurus/DocusaurusEmbed.svelte";
-import ResourceSearchModal from "@21n/products/memotron/library/search/ResourceSearchModal.svelte";
-import Collection from "@21n/components/collection/DummyCollection.svelte";
+import UserBilling from "@nucleum/components/subscription/UserBilling.svelte";
+import UserPlanCancellation from "@nucleum/components/subscription/UserPlanCancellation.svelte";
+import DocusaurusEmbed from "@nucleum/components/cx/docusaurus/DocusaurusEmbed.svelte";
+import ResourceSearchModal from "@nucleum/products/memotron/library/search/ResourceSearchModal.svelte";
+import Collection from "@nucleum/features/collections/DummyCollection.svelte";
 import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
-import SimpleDigitalClock from "@21n/products/pointron/clocks/SimpleDigitalClock.svelte";
-import Test from "@21n/components/Test.svelte";
-import SampleCalendarItemThumbnail from "@21n/components/calendar/column/timeline/SampleCalendarItemThumbnail.svelte";
-import FocusCalendarEntryThumbnail from "@21n/components/calendar/column/timeline/focusEntry/FocusCalendarEntryThumbnail.svelte";
-import CalendarDayModal from "@21n/components/calendar/column/CalendarDayModal.svelte";
-import HotKeys from "@21n/components/markdown/shortcuts/HotKeys.svelte";
-import HistoryModal from "@21n/components/calendar/HistoryModal.svelte";
-import Credits from "@21n/components/help/Credits.svelte";
-import DataSettings from "@21n/components/settings/DataSettings.svelte";
-import DexieConsole from "@21n/components/debug/DexieConsole.svelte";
+import SimpleDigitalClock from "@nucleum/products/pointron/clocks/SimpleDigitalClock.svelte";
+import Test from "@nucleum/components/Test.svelte";
+import SampleCalendarItemThumbnail from "@nucleum/features/calendar/column/timeline/SampleCalendarItemThumbnail.svelte";
+import FocusCalendarEntryThumbnail from "@nucleum/features/calendar/column/timeline/focusEntry/FocusCalendarEntryThumbnail.svelte";
+import CalendarDayModal from "@nucleum/features/calendar/column/CalendarDayModal.svelte";
+import HotKeys from "@nucleum/components/markdown/shortcuts/HotKeys.svelte";
+import HistoryModal from "@nucleum/features/calendar/HistoryModal.svelte";
+import Credits from "@nucleum/components/help/Credits.svelte";
+import DataSettings from "@nucleum/components/settings/DataSettings.svelte";
+import DexieConsole from "@nucleum/components/debug/DexieConsole.svelte";
 import { AppSearchParam } from "@21n/types/appStore.type";
-import OfflineStatusModal from "@21n/components/settings/sync/OfflineStatusModal.svelte";
-import context from "@21n/stores/context.store";
+import OfflineStatusModal from "@nucleum/components/settings/sync/OfflineStatusModal.svelte";
+import context from "@nucleum/stores/context.store";
 import view from "./view.store";
 import Navigator from "@21n/layout/navigator/Navigator.svelte";
 import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
-import Today from "@21n/components/calendar/Today.svelte";
+import Today from "@nucleum/features/calendar/Today.svelte";
 import { activeResourceFilter } from "@21n/utils/utils";
-import DatafnSharePanel from "@21n/components/share/DatafnSharePanel.svelte";
-import { datafn } from "@21n/stores/datafn.store";
-import { appMenuActionLabelsByAction } from "@21n/products/product-nav.config";
+import DatafnSharePanel from "@nucleum/components/share/DatafnSharePanel.svelte";
+import { datafn } from "@nucleum/datafn/datafn.store";
+import { appMenuActionLabelsByAction } from "@nucleum/products/product-nav.config";
 import {
   addDatafnRecordToCollection,
   relateDatafnRecords
-} from "@21n/stores/datafn-linking.store";
+} from "@nucleum/datafn/datafn-linking.store";
 
 function isCollectionItemResource(resource: Resource) {
   return resource === Resource.node || resource === Resource.objective;

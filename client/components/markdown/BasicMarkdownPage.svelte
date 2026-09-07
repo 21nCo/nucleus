@@ -1,9 +1,9 @@
 <script lang="ts">
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import type { IMarkdown } from "@21n/components/markdown/md.type";
+  import { appStore } from "@nucleum/stores/app.store";
+  import type { IMarkdown } from "@nucleum/components/markdown/md.type";
   import { onMount, tick } from "svelte";
-  import MarkdownView from "@21n/components/markdown/Markdown.svelte";
+  import MarkdownView from "@nucleum/components/markdown/Markdown.svelte";
   let {
     md = undefined,
     src = undefined

@@ -1,9 +1,9 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
-import type { NodeType } from "@21n/products/memotron/node/node.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import type { NodeType } from "@nucleum/features/memory/node/node.type";
 
 import { copyToClipboard } from "@21n/utils/utils";
 import { enumToCamelCase } from "@21n/shared-utils/text.utils";
-import { generateResourceId } from "@21n/data/datafn/id.utils";
+import { generateResourceId } from "@nucleum/datafn/id.utils";
 import type { IRecordId } from "@21n/types/data.type";
 
 function resolveLinkForResource(resource: string) {

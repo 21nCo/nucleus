@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import type { IRecordId } from "@21n/types/data.type";
-  import { determineResourceType } from "@21n/data/datafn/resource.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import NodeThumbnail from "@21n/products/memotron/node/thumbnail/NodeThumbnail.svelte";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
-  import type { INodeThumb } from "@21n/products/memotron/node/node.type";
+  import { determineResourceType } from "@nucleum/datafn/resource.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import NodeThumbnail from "@nucleum/features/memory/node/thumbnail/NodeThumbnail.svelte";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+  import type { INodeThumb } from "@nucleum/features/memory/node/node.type";
 
   interface MapItemData {
     id: string;

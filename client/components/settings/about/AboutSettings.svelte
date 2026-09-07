@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Size } from "@21n/types/size.enum";
   import A21nLogo from "@21n/branding/A21nLogo.svelte";
   import { ButtonVariant } from "@21n/types/button.type";

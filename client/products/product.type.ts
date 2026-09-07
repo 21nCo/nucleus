@@ -2,7 +2,7 @@ import {
   BaseOverviewPanel,
   BaseProduct
 } from "@nucleum/schema/product.type";
-import { NextOverviewPanel, NextProduct } from "@21n/next/product.type";
+import { NextOverviewPanel, NextProduct } from "@nucleum/next/product.type";
 
 export { Extension } from "@nucleum/schema/product.type";
 

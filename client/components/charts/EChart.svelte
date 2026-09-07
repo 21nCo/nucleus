@@ -4,7 +4,7 @@
   import type { ECharts, EChartsOption } from "echarts";
   import { ChartType } from "@21n/types/analytics.type";
   import { retrieveCurrentColors } from "@21n/utils/theme.utils";
-  import appearance from "@21n/stores/appearance.store";
+  import appearance from "@nucleum/stores/appearance.store";
   import {
     sortGroupsByTotalValue,
     sortGroupsByLineValue,

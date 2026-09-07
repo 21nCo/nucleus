@@ -1,4 +1,4 @@
-import type { MediaGridType } from "@21n/products/memotron/node/node.type";
+import type { MediaGridType } from "@nucleum/features/memory/node/node.type";
 
 export interface Position {
   auto: number;

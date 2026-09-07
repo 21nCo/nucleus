@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { validatePath, copyAssetsRecursive, scanDirectoryForAssets } from '@21n/static/asset-utils.js';
+import { validatePath, copyAssetsRecursive, scanDirectoryForAssets } from '@nucleum/static/asset-utils.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

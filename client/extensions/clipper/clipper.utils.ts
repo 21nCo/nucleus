@@ -1,16 +1,16 @@
-import { logger } from "@21n/components/debug/logger.client";
-import type { OmitForCapture } from "@21n/data/datafn/resource.type";
-import { NodeType, type INode } from "@21n/products/memotron/node/node.type";
+import { logger } from "@nucleum/components/debug/logger.client";
+import type { OmitForCapture } from "@nucleum/datafn/resource.type";
+import { NodeType, type INode } from "@nucleum/features/memory/node/node.type";
 import {
   contentTypeMap,
   fetchYouTubeMetadata
-} from "@21n/products/memotron/node/url.utils";
+} from "@nucleum/features/memory/node/url.utils";
 import {
   generateHash,
   generateSHA256Hash
 } from "@21n/shared-utils/crypto.utils";
 import { enumToString } from "@21n/shared-utils/text.utils";
-import { extractBrowserDetails } from "@21n/extensions/clipper/parsers/shared/domUtils";
+import { extractBrowserDetails } from "@nucleum/extensions/clipper/parsers/shared/domUtils";
 
 export function isYoutubeVideoUrl(url: string) {
   const regex = /^https?:\/\/(www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/;

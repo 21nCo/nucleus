@@ -1,9 +1,9 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import { UserDataMode } from "@21n/types/account.type";
   import { ButtonStyle } from "@21n/types/button.type";
-  import ProductInfoFooter from "@21n/components/settings/about/ProductInfoFooter.svelte";
+  import ProductInfoFooter from "@nucleum/components/settings/about/ProductInfoFooter.svelte";
   let { parentBgIndex = 1 }: { parentBgIndex?: number } = $props();
   const isSignedIn = $derived(
     $account.dataMode === UserDataMode.CLOUD ||

@@ -1,5 +1,5 @@
-import { Resource } from "$lib/client/data/datafn/resource.enum";
-import { ResourceActionType } from "$lib/client/data/datafn/resource.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { ResourceActionType } from "@nucleum/datafn/resource.type";
 import { IMutation, PersistenceActionType } from "$lib/client/types/data.type";
 
 export function createMutation(overrides = {}): IMutation {

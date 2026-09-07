@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { nucleumDatafnStatus } from "@21n/stores/datafn.store";
-  import type { Resource } from "@21n/data/datafn/resource.enum";
+  import { nucleumDatafnStatus } from "@nucleum/datafn/datafn.store";
+  import type { Resource } from "@nucleum/datafn/resource.enum";
   import InlineSyncingFeedbackBase from "@21n/elements/feedback/InlineSyncingFeedbackBase.svelte";
 
   let {

@@ -2,15 +2,15 @@
   // import { goto } from "$app/navigation";
   import { page } from "$app/stores";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import account from "@21n/stores/account.store";
-  import { handleOAuthRedirection } from "@21n/components/oauth/oauth.utils";
+  import { appStore } from "@nucleum/stores/app.store";
+  import account from "@nucleum/stores/account.store";
+  import { handleOAuthRedirection } from "@nucleum/components/oauth/oauth.utils";
   import { onMount } from "svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { OperatingSystem } from "@21n/types/context.type";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { AppSearchParam } from "@21n/types/appStore.type";
   let debugMessage = "debug";
   onMount(async () => {

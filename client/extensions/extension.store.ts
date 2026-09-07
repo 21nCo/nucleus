@@ -5,7 +5,7 @@ import { ClientStorageKey } from "$lib/client/persistence/persistence.type";
 import { clientStorage } from "$lib/client/persistence/persistence.utils";
 import { getDapId } from "$lib/client/persistence/persistence.utils";
 import { logger } from "$lib/client/components/debug/logger.client";
-import { Resource } from "$lib/client/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import type { Extension } from "$lib/client/products/product.type";
 import { appStore } from "$lib/client/stores/app.store";
 import account from "$lib/client/stores/account.store";
@@ -15,8 +15,8 @@ import {
   initializeNucleumDatafn,
   pullDatafnNow,
   reconcileDatafnNow
-} from "$lib/client/stores/datafn.store";
-import { determineResourceType } from "$lib/client/data/datafn/resource.utils";
+} from "@nucleum/datafn/datafn.store";
+import { determineResourceType } from "@nucleum/datafn/resource.utils";
 import type { IRecordId } from "$lib/client/types/data.type";
 
 type DatafnExtensionSearchParams = {

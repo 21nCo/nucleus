@@ -1,26 +1,26 @@
 <script lang="ts">
-  import Records from "@21n/components/record/Records.svelte";
+  import Records from "@nucleum/components/record/Records.svelte";
   import { Size } from "@21n/types/size.enum";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { Arrangement, Orientation } from "@21n/types/direction.enum";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import {
     AccessMode,
     ResourceAccessPoint,
     ResourceAccessPointState,
     ResourceActionType
-  } from "@21n/data/datafn/resource.type";
-  import { BulkEditor } from "@21n/components/record/record.store";
-  import { bulkEditStore } from "@21n/components/record/bulkedit.store";
+  } from "@nucleum/datafn/resource.type";
+  import { BulkEditor } from "@nucleum/components/record/record.store";
+  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
 
-  import LibrarySearchBox from "@21n/components/library/LibrarySearchBox.svelte";
-  import { CollectionType } from "@21n/components/collection/collection.type";
+  import LibrarySearchBox from "@nucleum/components/library/LibrarySearchBox.svelte";
+  import { CollectionType } from "@nucleum/features/collections/collection.type";
   import {
     NodeType,
     rootNodeTypeList
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
 
   import {
     activeResourceFilter,
@@ -28,23 +28,23 @@
     debouncer
   } from "@21n/utils/utils";
   import { type IRecordId, SearchType } from "@21n/types/data.type";
-  import LibraryLoadingPulse from "@21n/components/library/LibraryLoadingPulse.svelte";
-  import view from "@21n/stores/view.store";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { intersection } from "@21n/actions/intersection.action";
-  import context from "@21n/stores/context.store";
+  import LibraryLoadingPulse from "@nucleum/components/library/LibraryLoadingPulse.svelte";
+  import view from "@nucleum/stores/view.store";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { intersection } from "@nucleum/actions/intersection.action";
+  import context from "@nucleum/stores/context.store";
   import { Embed } from "@21n/types/context.type";
   import Icon from "@21n/elements/Icon.svelte";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import { toasts } from "@21n/stores/notification.store";
+  import { toasts } from "@nucleum/stores/notification.store";
   import { onDestroy, onMount, tick } from "svelte";
   import { page } from "$app/stores";
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
   import { InputStyle } from "@21n/types/input.type";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
-  import { UIState } from "@21n/stores/uiState/uiState.type";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
+  import { UIState } from "@nucleum/stores/uiState/uiState.type";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import { fade, fly } from "svelte/transition";
@@ -52,19 +52,19 @@
     availableResources,
     removeDuplicatesFilter,
     resourceAction
-  } from "@21n/data/datafn/resource.utils";
-  import TaskLibrary from "@21n/components/tasks/TaskLibrary.svelte";
-  import LibrarySubTypeSwitcher from "@21n/components/library/LibrarySubTypeSwitcher.svelte";
-  import type { SubType } from "@21n/components/library/library.type";
-  import { isCustomLibrary } from "@21n/components/library/library.utils";
-  import LinkTagsControlPanel from "@21n/products/memotron/linking/LinkTagsControlPanel.svelte";
+  } from "@nucleum/datafn/resource.utils";
+  import TaskLibrary from "@nucleum/features/focus/tasks/TaskLibrary.svelte";
+  import LibrarySubTypeSwitcher from "@nucleum/components/library/LibrarySubTypeSwitcher.svelte";
+  import type { SubType } from "@nucleum/components/library/library.type";
+  import { isCustomLibrary } from "@nucleum/components/library/library.utils";
+  import LinkTagsControlPanel from "@nucleum/features/memory/linking/LinkTagsControlPanel.svelte";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
-  import { dragSelection } from "@21n/actions/dragSelection.action";
-  import { datafn, datafnRuntime } from "@21n/stores/datafn.store";
+  import { dragSelection } from "@nucleum/actions/dragSelection.action";
+  import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
-  import { datafnHeavyComputedSignalOptions } from "@21n/data/datafn/signalCache";
+  import { datafnHeavyComputedSignalOptions } from "@nucleum/datafn/signalCache";
 
   let {
     resource,

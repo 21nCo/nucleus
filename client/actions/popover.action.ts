@@ -8,7 +8,7 @@ import {
 import { Placement } from "@21n/types/direction.enum";
 import { PopoverTriggerMethod } from "@21n/types/popover.type";
 import { detectTouchDevice, getEventPath } from "@21n/utils/browser.utils";
-import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
+import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
 import { GlobalEvent } from "@21n/types/event.enum";
 
 interface TooltipReturn {

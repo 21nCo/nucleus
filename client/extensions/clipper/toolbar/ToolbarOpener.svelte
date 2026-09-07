@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { hoverable } from "@21n/actions/hover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
   import { Placement } from "@21n/types/direction.enum";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { fly } from "svelte/transition";
-  import { toolbarState } from "@21n/extensions/clipper/contentScripts/store";
+  import { toolbarState } from "@nucleum/extensions/clipper/contentScripts/store";
   let {
     onclick = undefined
   }: {

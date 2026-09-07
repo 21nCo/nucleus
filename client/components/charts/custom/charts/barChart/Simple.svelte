@@ -11,14 +11,14 @@
   } from "d3";
   import { onDestroy, onMount } from "svelte";
   //TODO - import dependency on local
-  import { roundOffToNdigitsAfterDecimal } from "@21n/products/pointron/pointron.utils";
+  import { roundOffToNdigitsAfterDecimal } from "@nucleum/products/pointron/pointron.utils";
   import {
     customColor,
     retrieveCurrentColors
   } from "@21n/utils/theme.utils";
   import type { ChartDataPoint } from "@21n/types/chartDataPoint.type";
   import { generateUID } from "@21n/utils/utils";
-  import appearance from "@21n/stores/appearance.store";
+  import appearance from "@nucleum/stores/appearance.store";
 
   let {
     data = [],

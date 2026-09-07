@@ -1,18 +1,18 @@
 <script lang="ts">
-  import { appConstants, appStore } from "@21n/stores/app.store";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { appConstants, appStore } from "@nucleum/stores/app.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import { onMount } from "svelte";
   import { AppSkin, Theme } from "@21n/types/appearance.type";
   import { Size } from "@21n/types/size.enum";
-  import appearance from "@21n/stores/appearance.store";
-  import ColorSchemeSelector from "@21n/components/settings/appearance/ColorSchemeSelector.svelte";
+  import appearance from "@nucleum/stores/appearance.store";
+  import ColorSchemeSelector from "@nucleum/components/settings/appearance/ColorSchemeSelector.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import ScrollView from "@21n/layout/scrollView/ScrollView.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import { Orientation } from "@21n/types/direction.enum";
-  import view from "@21n/stores/view.store";
-  import TypefaceSelector from "@21n/components/settings/appearance/TypefaceSelector.svelte";
+  import view from "@nucleum/stores/view.store";
+  import TypefaceSelector from "@nucleum/components/settings/appearance/TypefaceSelector.svelte";
   let { parentBackgroundIndex = 1 }: { parentBackgroundIndex?: number } =
     $props();
   void parentBackgroundIndex;

@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { Resource } from "@nucleum/schema/resource.enum";
 import type { EmailParts } from "@21n/types/account.type";
-import type { IMarkdown } from "@21n/components/markdown/md.type";
+import type { IMarkdown } from "@nucleum/components/markdown/md.type";
 import { Display } from "@21n/types/view.type";
 import { Size } from "@21n/types/size.enum";
 

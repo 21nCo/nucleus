@@ -1,38 +1,38 @@
 <script lang="ts">
-  import ToolbarOpener from "@21n/extensions/clipper/toolbar/ToolbarOpener.svelte";
+  import ToolbarOpener from "@nucleum/extensions/clipper/toolbar/ToolbarOpener.svelte";
   import {
     resolveContentTypeForUrl,
     resolveContentTypeString
-  } from "@21n/extensions/clipper/clipper.utils";
+  } from "@nucleum/extensions/clipper/clipper.utils";
   import { ExtensionEvent } from "@21n/types/extension.type";
-  import FeedbackPane from "@21n/extensions/clipper/feedbackPane/FeedbackPane.svelte";
-  import Toolbar from "@21n/extensions/clipper/toolbar/Toolbar.svelte";
-  import TextClipper from "@21n/extensions/clipper/contentScripts/TextClipper.svelte";
+  import FeedbackPane from "@nucleum/extensions/clipper/feedbackPane/FeedbackPane.svelte";
+  import Toolbar from "@nucleum/extensions/clipper/toolbar/Toolbar.svelte";
+  import TextClipper from "@nucleum/extensions/clipper/contentScripts/TextClipper.svelte";
   import {
     webpage,
     toolbarState,
     feedbackPane,
     syncStore
-  } from "@21n/extensions/clipper/contentScripts/store";
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
-  import ExtensionBaseLayer from "@21n/extensions/ExtensionBaseLayer.svelte";
-  import ScreenShot from "@21n/extensions/clipper/contentScripts/ScreenShot.svelte";
-  import { logger } from "@21n/components/debug/logger.client";
-  import SyncPane from "@21n/extensions/clipper/syncPane/SyncPane.svelte";
-  import LoginNotification from "@21n/extensions/clipper/feedbackPane/LoginNotification.svelte";
+  } from "@nucleum/extensions/clipper/contentScripts/store";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import ExtensionBaseLayer from "@nucleum/extensions/ExtensionBaseLayer.svelte";
+  import ScreenShot from "@nucleum/extensions/clipper/contentScripts/ScreenShot.svelte";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import SyncPane from "@nucleum/extensions/clipper/syncPane/SyncPane.svelte";
+  import LoginNotification from "@nucleum/extensions/clipper/feedbackPane/LoginNotification.svelte";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
-  import { resourceInList } from "@21n/data/datafn/resource.utils";
-  import { ResourceError } from "@21n/components/error/errors";
+  import { resourceInList } from "@nucleum/datafn/resource.utils";
+  import { ResourceError } from "@nucleum/components/error/errors";
   import { Placement } from "@21n/types/direction.enum";
-  import ToolbarPlacementHintBlock from "@21n/extensions/clipper/toolbar/ToolbarPlacementHintBlock.svelte";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
+  import ToolbarPlacementHintBlock from "@nucleum/extensions/clipper/toolbar/ToolbarPlacementHintBlock.svelte";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { onDestroy, onMount } from "svelte";
-  import { toolbarUnavailableUrlsList } from "@21n/products/memotron/common/urlMap";
-  import type { IHighlighter } from "@21n/products/memotron/common/highlighters/highlight.type";
-  import { Product } from "@21n/products/product.type";
+  import { toolbarUnavailableUrlsList } from "@nucleum/features/memory/common/urlMap";
+  import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
+  import { Product } from "@nucleum/products/product.type";
   import { parse } from "@21n/shared-utils/json.utils";
-  import ClipModal from "@21n/extensions/clipper/ClipModal.svelte";
+  import ClipModal from "@nucleum/extensions/clipper/ClipModal.svelte";
   let { id }: { id: string } = $props();
   let textClipperRef: TextClipper;
   let extensionBaseRef: ExtensionBaseLayer;

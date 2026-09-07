@@ -3,8 +3,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   generateIntervalsFromComposition,
   getTotalsFromComposition
-} from "@21n/products/pointron/pointron.utils";
-import { activeSession } from "@21n/products/pointron/focus/session.store";
+} from "@nucleum/products/pointron/pointron.utils";
+import { activeSession } from "@nucleum/features/focus/session.store";
 import {
   BreakCompositionType,
   SessionCompositionType,

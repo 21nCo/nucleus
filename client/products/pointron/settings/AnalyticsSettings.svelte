@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pointronPreferences } from "@21n/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import { Orientation } from "@21n/types/direction.enum";
 </script>

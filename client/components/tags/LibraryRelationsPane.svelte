@@ -4,11 +4,11 @@
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import FormLabelTooltip from "@21n/elements/text/formLabel/FormLabelTooltip.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import LinkTagsControlPanel from "@21n/products/memotron/linking/LinkTagsControlPanel.svelte";
+  import LinkTagsControlPanel from "@nucleum/features/memory/linking/LinkTagsControlPanel.svelte";
   import { Size } from "@21n/types/size.enum";
   import { TextStyle } from "@21n/types/text.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
 
   let {
     isLibraryNavContext = false,

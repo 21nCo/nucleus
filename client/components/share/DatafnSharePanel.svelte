@@ -10,7 +10,7 @@
     OptionSelectorStyle,
     type ISelectValue
   } from "@21n/types/select.type";
-  import { toasts } from "@21n/stores/notification.store";
+  import { toasts } from "@nucleum/stores/notification.store";
   import {
     createDatafnPublicLink,
     getDatafnPermissions,
@@ -24,8 +24,8 @@
     type DatafnPermissionGrant,
     type DatafnShareLevel,
     type DatafnShareScope
-  } from "@21n/stores/datafn-sharing.store";
-  import account from "@21n/stores/account.store";
+  } from "@nucleum/datafn/datafn-sharing.store";
+  import account from "@nucleum/stores/account.store";
   import { get } from "svelte/store";
 
   let {

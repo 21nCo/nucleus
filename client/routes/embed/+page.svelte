@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { clientStorage } from "@21n/persistence/persistence.utils";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { onMount } from "svelte";
   import { page } from "$app/stores";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import type { OAuthProviderConfig } from "@21n/types/oauth.type";
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
   import { AppSearchParam } from "@21n/types/appStore.type";

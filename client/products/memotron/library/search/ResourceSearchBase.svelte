@@ -1,39 +1,39 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/types/size.enum";
   import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { recentsStore } from "@21n/components/record/recent.store";
+  import { recentsStore } from "@nucleum/components/record/recent.store";
   import { onMount, onDestroy } from "svelte";
   import { isValidString, properCase } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/types/button.type";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import SearchResultsPopover from "@21n/elements/input/SearchResultsPopover.svelte";
-  import LinkSearchResultItem from "@21n/products/memotron/common/linkbox/LinkSearchResultItem.svelte";
-  import GroupedSearchResults from "@21n/products/memotron/library/search/GroupedSearchResults.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
+  import GroupedSearchResults from "@nucleum/products/memotron/library/search/GroupedSearchResults.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import {
     resolveProductResources,
     resolveResourceIcon
-  } from "@21n/data/datafn/resource.utils";
+  } from "@nucleum/datafn/resource.utils";
   import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { Embed } from "@21n/types/context.type";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import { Action } from "@21n/types/action.enum";
-  import { searchStore } from "@21n/components/search";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { searchStore } from "@nucleum/components/search";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   import {
     highlightSearchQuery,
     searchSort
-  } from "@21n/products/memotron/memotron.utils";
-  import { contentTypeSort } from "@21n/products/memotron/node/node.utils";
+  } from "@nucleum/products/memotron/memotron.utils";
+  import { contentTypeSort } from "@nucleum/features/memory/node/node.utils";
   import { activeResourceFilter, debouncer } from "@21n/utils/utils";
 
   let {

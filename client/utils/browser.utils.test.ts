@@ -33,7 +33,7 @@ const mockedModules = vi.hoisted(() => ({
   }
 }));
 
-vi.mock("@21n/components/debug/logger.client", () => mockedModules);
+vi.mock("@nucleum/components/debug/logger.client", () => mockedModules);
 vi.mock("@21n/shared-utils/obj.utils", () => ({
   deepCopy: (value: any) => value
 }));

@@ -20,7 +20,7 @@ const mockedModules = vi.hoisted(() => ({
   }
 }));
 
-vi.mock("@21n/components/debug/logger.client", () => mockedModules);
+vi.mock("@nucleum/components/debug/logger.client", () => mockedModules);
 
 describe("client/utils/embed.utils", () => {
   let postSpy: ReturnType<typeof vi.fn>;

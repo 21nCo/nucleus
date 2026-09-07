@@ -1,6 +1,6 @@
 <script lang="ts">
   import { TimeScale } from "@21n/types/time.type";
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import { Placement } from "@21n/types/direction.enum";
   import TimeScaleSelector from "@21n/elements/datetime/TimeScaleSelector.svelte";
   import {

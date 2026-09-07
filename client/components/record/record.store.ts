@@ -1,21 +1,21 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import { type IRecordId } from "@21n/types/data.type";
-import { logger } from "@21n/components/debug/logger.client";
-import { toasts } from "@21n/stores/notification.store";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { toasts } from "@nucleum/stores/notification.store";
 import {
   onNodeArchive,
   onNodeTrash,
   onNodeUnarchive
-} from "@21n/products/memotron/node/node.store";
-import type { BulkEditStore } from "@21n/components/record/bulkedit.store";
-import { appStore } from "@21n/stores/app.store";
-import { determineResourceType } from "@21n/data/datafn/resource.utils";
-import { datafn } from "@21n/stores/datafn.store";
+} from "@nucleum/features/memory/node/node.store";
+import type { BulkEditStore } from "@nucleum/components/record/bulkedit.store";
+import { appStore } from "@nucleum/stores/app.store";
+import { determineResourceType } from "@nucleum/datafn/resource.utils";
+import { datafn } from "@nucleum/datafn/datafn.store";
 import type { NucleumDatafnResource } from "@nucleum/schema";
 import { Action } from "@21n/types/action.enum";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
-import { LinkType } from "@21n/products/memotron/linking/link.type";
-import { assertDatafnMutationSucceeded } from "@21n/data/datafn/mutation.utils";
+import { LinkType } from "@nucleum/features/memory/linking/link.type";
+import { assertDatafnMutationSucceeded } from "@nucleum/datafn/mutation.utils";
 
 function normalizeEventRecord<T extends Record<string, any>>(record: T): T {
   const label = record.label ?? record.event ?? "New event";

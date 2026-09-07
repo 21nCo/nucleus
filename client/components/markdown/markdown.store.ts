@@ -2,7 +2,7 @@ import {
   NodeType,
   type StructuralNodeType,
   structuralNodeTypes
-} from "@21n/products/memotron/node/node.type";
+} from "@nucleum/features/memory/node/node.type";
 import { get, writable } from "svelte/store";
 import { tick } from "svelte";
 import {
@@ -15,16 +15,16 @@ import {
   type IListBlockBody,
   type IListBlock,
   type IBlock
-} from "@21n/components/markdown/md.type";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { ObservableStore } from "@21n/stores/client.store";
+} from "@nucleum/components/markdown/md.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { ObservableStore } from "@nucleum/stores/client.store";
 import type { IRecordId } from "@21n/types/data.type";
-import { generateResourceId } from "@21n/data/datafn/id.utils";
+import { generateResourceId } from "@nucleum/datafn/id.utils";
 import {
   isSameResource,
   resourceInList
-} from "@21n/data/datafn/resource.utils";
-import { logger } from "@21n/components/debug/logger.client";
+} from "@nucleum/datafn/resource.utils";
+import { logger } from "@nucleum/components/debug/logger.client";
 
 /**
  * Used to identify if temporary s3 storage should be used or not, If true, temporary s3 storage is used

@@ -1,20 +1,20 @@
 <script lang="ts">
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { ResourceActionType } from "@21n/data/datafn/resource.type";
-  import { resourceAction } from "@21n/data/datafn/resource.utils";
-  import ModalFooter from "@21n/components/modal/ModalFooter.svelte";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { resourceAction } from "@nucleum/datafn/resource.utils";
+  import ModalFooter from "@nucleum/components/modal/ModalFooter.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { toasts } from "@21n/stores/notification.store";
+  import { toasts } from "@nucleum/stores/notification.store";
   import { Orientation } from "@21n/types/direction.enum";
   import {
     OptionSelectorStyle,
     type ISelectItem
   } from "@21n/types/select.type";
-  import ModalContentPadded from "@21n/components/modal/ModalContentPadded.svelte";
-  import { CombinationType } from "@21n/components/combination/combination.type";
-  import { datafn } from "@21n/stores/datafn.store";
-  import { generateResourceId } from "@21n/data/datafn/id.utils";
+  import ModalContentPadded from "@nucleum/components/modal/ModalContentPadded.svelte";
+  import { CombinationType } from "@nucleum/components/combination/combination.type";
+  import { datafn } from "@nucleum/datafn/datafn.store";
+  import { generateResourceId } from "@nucleum/datafn/id.utils";
 
   let label = "";
   let type: CombinationType = CombinationType.NOTEBOOK;

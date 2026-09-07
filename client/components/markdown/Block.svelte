@@ -5,12 +5,12 @@
     type IBlockBody,
     type IListBlockBody,
     type INonSimpleTextBlockBody
-  } from "@21n/components/markdown/md.type";
+  } from "@nucleum/components/markdown/md.type";
   import { getContext, onMount, tick } from "svelte";
   import { get } from "svelte/store";
-  import BlockContent from "@21n/components/markdown/content/BlockContent.svelte";
-  import LeftControls from "@21n/components/markdown/contextMenu/LeftControls.svelte";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
+  import BlockContent from "@nucleum/components/markdown/content/BlockContent.svelte";
+  import LeftControls from "@nucleum/components/markdown/contextMenu/LeftControls.svelte";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
   import {
     embedNodeTypeList,
     headingNodeTypes,
@@ -22,63 +22,63 @@
     webNodeTypeList,
     nonSimpleTextNodeTypeList,
     listNodeTypes
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { cn } from "@21n/utils/ui.utils";
   import { setContext } from "svelte";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { copyToClipboard } from "@21n/utils/utils";
   import {
     confirmationNotification,
     toasts
-  } from "@21n/stores/notification.store";
+  } from "@nucleum/stores/notification.store";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-  import { MemotronEvent } from "@21n/products/memotron/memotron.type";
-  import { hoverable } from "@21n/actions/hover.action";
-  import view from "@21n/stores/view.store";
+  import { MemotronEvent } from "@nucleum/products/memotron/memotron.type";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import view from "@nucleum/stores/view.store";
   import type { IRecordId } from "@21n/types/data.type";
-  import { isSameResource } from "@21n/data/datafn/resource.utils";
+  import { isSameResource } from "@nucleum/datafn/resource.utils";
   import {
     resolveDefaultBodyForBlock,
     resolvePlainOffsetForMdEnd,
     resolvePlainText,
     splitMarkdownAtPlainOffset,
     textToMdBlocks
-  } from "@21n/components/markdown/markdown.utils";
+  } from "@nucleum/components/markdown/markdown.utils";
   import { isValidString, truncateString } from "@21n/shared-utils/text.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { fileDrop } from "@21n/actions/fileDrop.action";
-  import { MAX_FILE_SIZE_MB } from "@21n/components/record/record.store";
-  import { resolveFileUploadErrorMessage } from "@21n/products/memotron/memotron.utils";
-  import { generateResourceId } from "@21n/data/datafn/id.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { fileDrop } from "@nucleum/actions/fileDrop.action";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/components/record/record.store";
+  import { resolveFileUploadErrorMessage } from "@nucleum/products/memotron/memotron.utils";
+  import { generateResourceId } from "@nucleum/datafn/id.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import {
     resolveMultipleFilesData,
     resolvePasteContents
-  } from "@21n/products/memotron/capture/capture.utils";
+  } from "@nucleum/features/memory/capture/capture.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { Size } from "@21n/types/size.enum";
   import { isValidUrl } from "@21n/shared-utils/utils";
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import { UserDataMode } from "@21n/types/account.type";
-  import { Persistence } from "@21n/persistence/persistence";
+  import { Persistence } from "@nucleum/persistence/persistence";
   import { wait } from "@21n/utils/time.utils";
-  import { appStore } from "@21n/stores/app.store";
-  import type { IMultiFileCaptureData } from "@21n/products/memotron/capture/capture.type";
+  import { appStore } from "@nucleum/stores/app.store";
+  import type { IMultiFileCaptureData } from "@nucleum/features/memory/capture/capture.type";
   import { AlertType } from "@21n/types/notification.type";
-  import FocusRing from "@21n/components/markdown/contextMenu/FocusRing.svelte";
-  import { tooltip } from "@21n/actions/popover.action";
+  import FocusRing from "@nucleum/components/markdown/contextMenu/FocusRing.svelte";
+  import { tooltip } from "@nucleum/actions/popover.action";
   import { Placement } from "@21n/types/direction.enum";
-  import { observeAttributes } from "@21n/actions/observe.action";
-  import context from "@21n/stores/context.store";
-  import MarkdownkeyboardToolbar from "@21n/components/markdown/toolbar/MarkdownkeyboardToolbar.svelte";
-  import { rightswipe } from "@21n/actions/gestures.action";
+  import { observeAttributes } from "@nucleum/actions/observe.action";
+  import context from "@nucleum/stores/context.store";
+  import MarkdownkeyboardToolbar from "@nucleum/components/markdown/toolbar/MarkdownkeyboardToolbar.svelte";
+  import { rightswipe } from "@nucleum/actions/gestures.action";
   import {
     ActiveCaptureStore,
     type IActiveCaptureStore
-  } from "@21n/products/memotron/capture/capture.store";
+  } from "@nucleum/features/memory/capture/capture.store";
   import Check from "@21n/icons/Check.svelte";
   import { Context } from "@21n/types/appStore.type";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { datafn } from "@nucleum/datafn/datafn.store";
 
   let {
     block = $bindable(),

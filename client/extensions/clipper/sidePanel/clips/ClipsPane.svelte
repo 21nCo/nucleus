@@ -1,21 +1,21 @@
 <script lang="ts">
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import { ExtensionEvent } from "@21n/types/extension.type";
   import {
     NodeType,
     type IClip,
     type ITextClip,
     type IVideoTimestampClip
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { relayToContentScript } from "@21n/utils/extension.utils";
-  import Clip from "@21n/extensions/clipper/sidePanel/clips/Clip.svelte";
+  import Clip from "@nucleum/extensions/clipper/sidePanel/clips/Clip.svelte";
   import { wait } from "@21n/utils/time.utils";
   import { onMount } from "svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import type { IRecordId } from "@21n/types/data.type";
-  import { isSameResource } from "@21n/data/datafn/resource.utils";
+  import { isSameResource } from "@nucleum/datafn/resource.utils";
 
   let {
     clips = [],

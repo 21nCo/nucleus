@@ -2,15 +2,15 @@
 
 <script lang="ts">
   import { onMount } from "svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import { pointronPreferences } from "@21n/products/pointron/pointron.store";
-  import { appEvents } from "@21n/stores/notification.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { appEvents } from "@nucleum/stores/notification.store";
   import type { IEvent } from "@21n/types/event.type";
   import { PointronEvent } from "@21n/types/pointron/pointronEvent.enum";
   import { postNotificationToParent } from "@21n/utils/embed.utils";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { GlobalEvent } from "@21n/types/event.enum";
 
   let src = $state<string | null>(null);

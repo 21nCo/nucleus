@@ -2,37 +2,37 @@
 
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { onMount } from "svelte";
   import type { IRecordId } from "@21n/types/data.type";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@21n/types/action.enum";
   import Tabs from "@21n/layout/topNav/tabs/Tabs.svelte";
   import { tabs, vTrail } from "@21n/layout/topNav/tabs/tabs.store";
   import TrailLeftIndicator from "@21n/layout/topNav/TrailLeftIndicator.svelte";
   import { fly } from "svelte/transition";
   import { quadIn } from "svelte/easing";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import { page } from "$app/stores";
   import TopBarResourceItem from "@21n/layout/topNav/tabs/TopBarResourceItem.svelte";
   import { cn } from "@21n/utils/ui.utils";
 
   import TopNavLeftMenuItem from "@21n/layout/topNav/TopNavLeftMenuItem.svelte";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import TopNavLeftLogo from "@21n/layout/topNav/TopNavLeftLogo.svelte";
   import { Embed } from "@21n/types/context.type";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import OfflineStatusMessage from "@21n/elements/feedback/OfflineStatusMessage.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import { toasts } from "@21n/stores/notification.store";
+  import { toasts } from "@nucleum/stores/notification.store";
   import ToastNotificationContent from "@21n/elements/feedback/ToastNotificationContent.svelte";
-  import { bulkEditStore } from "@21n/components/record/bulkedit.store";
-  import BulkEditBar from "@21n/components/record/BulkEditBar.svelte";
+  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
+  import BulkEditBar from "@nucleum/components/record/BulkEditBar.svelte";
   import { InputStyle } from "@21n/types/input.type";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import SearchInput from "@21n/components/search/SearchInput.svelte";
-  import { searchStore } from "@21n/components/search/search.store";
+  import SearchInput from "@nucleum/components/search/SearchInput.svelte";
+  import { searchStore } from "@nucleum/components/search/search.store";
   let { topnav }: { topnav?: Snippet } = $props();
   let pinnedItems = $state<IRecordId[]>(tabs.get() ?? []);
   let bulkEditCount = $state(0);

@@ -12,7 +12,7 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import AddNewButton from "@21n/elements/button/AddNewButton.svelte";
-  import { tooltip } from "@21n/actions/popover.action";
+  import { tooltip } from "@nucleum/actions/popover.action";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import Badge from "@21n/elements/text/Badge.svelte";
   let {

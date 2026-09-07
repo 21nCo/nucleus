@@ -1,8 +1,8 @@
 <script lang="ts">
   import Divider from "@21n/elements/Divider.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import { ActionType } from "@21n/types/action.type";
   import { ColorStrength } from "@21n/types/appearance.type";
   import { Orientation } from "@21n/types/direction.enum";

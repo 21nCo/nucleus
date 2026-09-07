@@ -2,7 +2,7 @@
   import Button from "@21n/elements/button/Button.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
-  import HelpItem from "@21n/extensions/shared/HelpItem.svelte";
+  import HelpItem from "@nucleum/extensions/shared/HelpItem.svelte";
 
   let {
     onClose = undefined,

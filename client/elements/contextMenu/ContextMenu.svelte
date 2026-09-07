@@ -10,7 +10,7 @@
   import { TextStyle } from "@21n/types/text.enum";
   import ContextMenuItem from "@21n/elements/contextMenu/ContextMenuItem.svelte";
   import { ColorStrength } from "@21n/types/appearance.type";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   let {
     menuResolver,
     size = Size.md,

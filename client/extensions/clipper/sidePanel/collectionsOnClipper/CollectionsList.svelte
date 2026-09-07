@@ -1,6 +1,6 @@
 <script lang="ts">
-  import CollectionItem from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/CollectionItem.svelte";
-  import type { CollectionData } from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/types";
+  import CollectionItem from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/CollectionItem.svelte";
+  import type { CollectionData } from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/types";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
 

@@ -1,27 +1,27 @@
 <script lang="ts">
-  import type { IHighlighter } from "@21n/products/memotron/common/highlighters/highlight.type";
+  import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
   import { onMount } from "svelte";
-  import HightlightColorItem from "@21n/products/memotron/common/highlighters/HightlightColorItem.svelte";
+  import HightlightColorItem from "@nucleum/features/memory/common/highlighters/HightlightColorItem.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { Placement, Orientation } from "@21n/types/direction.enum";
   import Icon from "@21n/elements/Icon.svelte";
-  import { webpage, toolbarState, syncStore } from "@21n/extensions/clipper/contentScripts/store";
+  import { webpage, toolbarState, syncStore } from "@nucleum/extensions/clipper/contentScripts/store";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/types/size.enum";
   import {
     saveOnlyPages,
     screenShotOnlyPages
-  } from "@21n/products/memotron/common/urlMap";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
-  import { highlightStore } from "@21n/products/memotron/common/highlighters/highlight.store";
+  } from "@nucleum/features/memory/common/urlMap";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";
   import { ExtensionEvent } from "@21n/types/extension.type";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
   import { fly, scale } from "svelte/transition";
-  import { tooltip } from "@21n/actions/popover.action";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { resolveContentTypeString } from "@21n/extensions/clipper/clipper.utils";
+  import { tooltip } from "@nucleum/actions/popover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { resolveContentTypeString } from "@nucleum/extensions/clipper/clipper.utils";
 
   let {
     activeHighlighter = $bindable<string | null>(null),

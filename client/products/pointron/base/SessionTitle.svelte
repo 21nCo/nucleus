@@ -3,9 +3,9 @@
   import { TimeFormat } from "@21n/types/time.type";
 
   import { formatSeconds } from "@21n/utils/time.utils";
-  import { activeSession } from "@21n/products/pointron/focus/session.store";
-  import { Product } from "@21n/products/product.type";
-  import { resolveProductConfig } from "@21n/products/product.config";
+  import { activeSession } from "@nucleum/features/focus/session.store";
+  import { Product } from "@nucleum/products/product.type";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
 
   let { ctx = Product.NUCLEUM }: { ctx?: Product } = $props();
 </script>

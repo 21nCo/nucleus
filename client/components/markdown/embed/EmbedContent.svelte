@@ -1,54 +1,54 @@
 <script lang="ts">
-  import MediaContentResolver from "@21n/products/memotron/node/content/MediaContentResolver.svelte";
+  import MediaContentResolver from "@nucleum/features/memory/node/content/MediaContentResolver.svelte";
   import {
     mediaNodeTypeList,
     NodeType,
     type INode,
     type INodeThumb
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { getContext, onMount, untrack } from "svelte";
   import { get } from "svelte/store";
-  import type { IEmbedBlockBody } from "@21n/components/markdown/md.type";
-  import EmbedContentPlaceholder from "@21n/components/markdown/embed/EmbedContentPlaceholder.svelte";
-  import { logger } from "@21n/components/debug/logger.client";
+  import type { IEmbedBlockBody } from "@nucleum/components/markdown/md.type";
+  import EmbedContentPlaceholder from "@nucleum/components/markdown/embed/EmbedContentPlaceholder.svelte";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import type { IRecordId } from "@21n/types/data.type";
   import {
     AccessMode,
     ResourceAccessPoint
-  } from "@21n/data/datafn/resource.type";
-  import YoutubeVideoPreview from "@21n/products/memotron/node/content/web/YoutubeVideoPreview.svelte";
+  } from "@nucleum/datafn/resource.type";
+  import YoutubeVideoPreview from "@nucleum/features/memory/node/content/web/YoutubeVideoPreview.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import Collection from "@21n/components/collection/Collection.svelte";
-  import { determineResourceType } from "@21n/data/datafn/resource.utils";
-  import { resizable } from "@21n/actions/resize.action";
-  import { appStore } from "@21n/stores/app.store";
-  import NodeTitleLabelPart from "@21n/products/memotron/node/title/NodeTitleLabelPart.svelte";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import Collection from "@nucleum/features/collections/Collection.svelte";
+  import { determineResourceType } from "@nucleum/datafn/resource.utils";
+  import { resizable } from "@nucleum/actions/resize.action";
+  import { appStore } from "@nucleum/stores/app.store";
+  import NodeTitleLabelPart from "@nucleum/features/memory/node/title/NodeTitleLabelPart.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { toasts } from "@21n/stores/notification.store";
+  import { toasts } from "@nucleum/stores/notification.store";
   import { formatBytes } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { fileStore } from "@21n/components/files/file.store";
-  import type { IFile } from "@21n/components/files/file.type";
-  import { ErrorMessage } from "@21n/components/error/error.type";
+  import { fileStore } from "@nucleum/features/files/file.store";
+  import type { IFile } from "@nucleum/features/files/file.type";
+  import { ErrorMessage } from "@nucleum/components/error/error.type";
   import {
     fetchYouTubeMetadata,
     resolveWebpageLabel,
     sanitizeAndResolve
-  } from "@21n/products/memotron/node/url.utils";
+  } from "@nucleum/features/memory/node/url.utils";
   import { debouncer } from "@21n/utils/utils";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { Embed } from "@21n/types/context.type";
-  import view from "@21n/stores/view.store";
-  import Task from "@21n/components/tasks/Task.svelte";
+  import view from "@nucleum/stores/view.store";
+  import Task from "@nucleum/features/focus/tasks/Task.svelte";
   import { Context } from "@21n/types/appStore.type";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
-  import { generateResourceId } from "@21n/data/datafn/id.utils";
+  import { generateResourceId } from "@nucleum/datafn/id.utils";
   const nodeContext = getContext<any>(Context.NODE);
   const contentContext = getContext<any>(Context.CONTENT);
   let {

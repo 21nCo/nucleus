@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 import { ensureInAppOnHome } from "../../utils/helpers";
 import { expectAnyLocatorVisible } from "../../utils/locator-assertions";
 import { resolveRepoFsImportPath } from "../../utils/repo-fs";

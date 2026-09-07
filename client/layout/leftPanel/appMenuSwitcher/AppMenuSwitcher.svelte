@@ -5,23 +5,23 @@
   import { onMount } from "svelte";
   import AppMenuSwitcherItem from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcherItem.svelte";
   import { ActionType, type IAction } from "@21n/types/action.type";
-  import CaptureComponent from "@21n/components/CaptureComponent.svelte";
-  import { appStore, isInEditMode } from "@21n/stores/app.store";
-  import { appMenuStore } from "@21n/stores/appMenu/appMenu.store";
-  import type { IAppMenuStore } from "@21n/stores/appMenu/appMenu.type";
-  import { appEvents, toasts } from "@21n/stores/notification.store";
+  import CaptureComponent from "@nucleum/components/CaptureComponent.svelte";
+  import { appStore, isInEditMode } from "@nucleum/stores/app.store";
+  import { appMenuStore } from "@nucleum/stores/appMenu/appMenu.store";
+  import type { IAppMenuStore } from "@nucleum/stores/appMenu/appMenu.type";
+  import { appEvents, toasts } from "@nucleum/stores/notification.store";
   import Divider from "@21n/elements/Divider.svelte";
   import { ColorStrength } from "@21n/types/appearance.type";
   import { GlobalEvent } from "@21n/types/event.enum";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { cn } from "@21n/utils/ui.utils";
   import AppMenuSwitcherItemGroup from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcherItemGroup.svelte";
-  import { ResourceActionType } from "@21n/data/datafn/resource.type";
-  import { resourceAction } from "@21n/data/datafn/resource.utils";
-  import { resolveProductConfig } from "@21n/products/product.config";
-  import type { Resource } from "@21n/data/datafn/resource.enum";
+  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { resourceAction } from "@nucleum/datafn/resource.utils";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
+  import type { Resource } from "@nucleum/datafn/resource.enum";
   import { hTrail, vTrail } from "@21n/layout/topNav/tabs/tabs.store";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   let {
     layoutContext = LayoutContext.DEFAULT,
     parentBackgroundIndex,

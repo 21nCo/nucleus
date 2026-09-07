@@ -5,7 +5,7 @@
   import { LayoutContext } from "@21n/types/layout.type";
   import AppMenuSwitcherItem from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcherItem.svelte";
   import type { IAction } from "@21n/types/action.type";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   let {
     items,
     layoutContext,

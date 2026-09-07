@@ -1,7 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { cn } from "@21n/utils/ui.utils";
   import { onMount } from "svelte";
   let status: "UP" | "HASISSUES" | "UNDERMAINTENANCE" | undefined =

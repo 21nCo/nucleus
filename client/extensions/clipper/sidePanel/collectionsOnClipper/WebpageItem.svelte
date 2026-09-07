@@ -1,9 +1,9 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import type { CollectionItem } from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/types";
+  import type { CollectionItem } from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/types";
   let {
     item,
     currentUrl

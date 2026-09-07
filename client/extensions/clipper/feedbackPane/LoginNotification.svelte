@@ -3,7 +3,7 @@
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonVariant } from "@21n/types/button.type";
   import { extractProduct } from "@21n/shared-utils/utils";
-  import FeedbackPaneBase from "@21n/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
+  import FeedbackPaneBase from "@nucleum/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
   let {
     code,
     isWithoutToolbarContext = false,

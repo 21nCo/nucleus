@@ -1,8 +1,8 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { hoverable } from "@21n/actions/hover.action";
-  import { popover } from "@21n/actions/popover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { Placement } from "@21n/types/direction.enum";
@@ -13,10 +13,10 @@
   import { page } from "$app/stores";
   import { onMount } from "svelte";
   import type { IAction } from "@21n/types/action.type";
-  import { appStore } from "@21n/stores/app.store";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
-  import { keyboardShortcuts } from "@21n/components/shortcuts/shortcuts.store";
-  import context from "@21n/stores/context.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+  import { keyboardShortcuts } from "@nucleum/components/shortcuts/shortcuts.store";
+  import context from "@nucleum/stores/context.store";
 
   let {
     action,

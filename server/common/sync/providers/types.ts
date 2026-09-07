@@ -1,4 +1,4 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import { IRecordId, IResourceSelectParams } from "$lib/client/types/data.type";
 import { Agent } from "$lib/server/common/account/account.type";
 import {

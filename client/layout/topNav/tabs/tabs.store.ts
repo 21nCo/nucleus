@@ -1,11 +1,11 @@
 import {
   AccessMode,
   ResourceAccessPoint
-} from "@21n/data/datafn/resource.type";
-import { isRecordId, resourceInList } from "@21n/data/datafn/resource.utils";
-import { appStore } from "@21n/stores/app.store";
-import { uiState } from "@21n/stores/uiState/uiState.store";
-import { UIStateScope } from "@21n/stores/uiState/uiState.type";
+} from "@nucleum/datafn/resource.type";
+import { isRecordId, resourceInList } from "@nucleum/datafn/resource.utils";
+import { appStore } from "@nucleum/stores/app.store";
+import { uiState } from "@nucleum/stores/uiState/uiState.store";
+import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
 import type { HorizontalTrail, VerticalTrail } from "./tabs.type";
 import type { IRecordId } from "@21n/types/data.type";
 import { Action } from "@21n/types/action.enum";

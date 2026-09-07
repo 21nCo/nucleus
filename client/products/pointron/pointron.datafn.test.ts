@@ -4,21 +4,21 @@ import { get } from "svelte/store";
 import {
   destroyNucleumDatafn,
   initializeNucleumDatafn
-} from "@21n/stores/datafn.store";
-import { Product } from "@21n/products/product.type";
+} from "@nucleum/datafn/datafn.store";
+import { Product } from "@nucleum/products/product.type";
 import { UserDataMode } from "@21n/types/account.type";
-import { appStore } from "@21n/stores/app.store";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { datafn } from "@21n/stores/datafn.store";
-import { focusAggregates } from "@21n/products/pointron/analytics/analytics.store";
-import { recentsStore } from "@21n/components/record/recent.store";
+import { appStore } from "@nucleum/stores/app.store";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { datafn } from "@nucleum/datafn/datafn.store";
+import { focusAggregates } from "@nucleum/features/focus/analytics/analytics.store";
+import { recentsStore } from "@nucleum/components/record/recent.store";
 import { BlockType } from "@21n/types/pointron/session.type";
-import { SessionType } from "@21n/products/pointron/logs/log.type";
-import { ObjectiveStatus, ObjectiveType } from "@21n/components/goals/goal.type";
+import { SessionType } from "@nucleum/features/focus/logs/log.type";
+import { ObjectiveStatus, ObjectiveType } from "@nucleum/features/focus/goals/goal.type";
 import {
   resolveExpandedSessionItems,
   resolveSessionFocusView
-} from "@21n/products/pointron/logs/session-items.utils";
+} from "@nucleum/features/focus/logs/session-items.utils";
 
 describe("Pointron DataFn resources", () => {
   afterEach(async () => {

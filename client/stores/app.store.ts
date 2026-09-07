@@ -3,40 +3,40 @@ import { AppSkin } from "@21n/types/appearance.type";
 import { AppSearchParam, type IAppStore } from "@21n/types/appStore.type";
 import type { DragAndDrop } from "@21n/types/draganddrop.type";
 import { DragStatus } from "@21n/types/dragstatus.enum";
-import blankJson from "@21n/data/blank.json";
+import blankJson from "@nucleum/datafn/blank.json";
 import colorSchemes from "@21n/theme/colorschemes.json";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { shuffleEmojis } from "@21n/data/avatars";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { shuffleEmojis } from "@nucleum/datafn/avatars";
 import { ActionType, type IAction } from "@21n/types/action.type";
 import { IdentityProvider } from "@21n/types/oauth.type";
 import { dispatchCustomEvent, goto } from "@21n/utils/browser.utils";
-import { persistLocally, getDapId } from "@21n/persistence/persistence.utils";
+import { persistLocally, getDapId } from "@nucleum/persistence/persistence.utils";
 import { postDataToParent } from "@21n/utils/embed.utils";
-import modalEvent from "@21n/components/modal/modal.store";
-import view from "@21n/stores/view.store";
-import context from "@21n/stores/context.store";
+import modalEvent from "@nucleum/components/modal/modal.store";
+import view from "@nucleum/stores/view.store";
+import context from "@nucleum/stores/context.store";
 import {
   appEvents,
   confirmationNotification
-} from "@21n/stores/notification.store";
+} from "@nucleum/stores/notification.store";
 import { Embed, OperatingSystem } from "@21n/types/context.type";
-import { AccessMode, ResourceActionType } from "@21n/data/datafn/resource.type";
-import { InteractionMode } from "@21n/components/settings/interactionMode/interactionMode.type";
+import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
+import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
 import { Action } from "@21n/types/action.enum";
 import { GlobalEvent, type Event } from "@21n/types/event.enum";
-import { logger } from "@21n/components/debug/logger.client";
+import { logger } from "@nucleum/components/debug/logger.client";
 import { Size } from "@21n/types/size.enum";
 import type { IRecordId } from "@21n/types/data.type";
-import account from "@21n/stores/account.store";
+import account from "@nucleum/stores/account.store";
 import { tabs, vTrail } from "@21n/layout/topNav/tabs/tabs.store";
 import {
   determineResourceAccessMode,
   resourceAction
-} from "@21n/data/datafn/resource.utils";
-import { Product } from "@21n/products/product.type";
+} from "@nucleum/datafn/resource.utils";
+import { Product } from "@nucleum/products/product.type";
 import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
-import { datafn, datafnRuntime } from "@21n/stores/datafn.store";
-import { generateResourceId } from "@21n/data/datafn/id.utils";
+import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
+import { generateResourceId } from "@nucleum/datafn/id.utils";
 
 // export const app = writable<{ product: string; env: string }>({
 //   product: "tidy",

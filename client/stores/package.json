@@ -1,14 +1,11 @@
 {
-  "name": "@21n/stores",
+  "name": "@nucleum/stores",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "dependencies": {
-    "@21n/data": "*",
-    "@nucleum/schema": "*",
-    "@datafn/client": "0.1.0",
-    "@searchfn/adapter-indexeddb": "0.1.0",
-    "@searchfn/datafn-provider": "0.4.0"
+    "@nucleum/datafn": "*",
+    "@nucleum/schema": "*"
   },
   "exports": {
     "./app.store": "./app.store.ts",

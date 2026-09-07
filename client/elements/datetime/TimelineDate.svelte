@@ -1,6 +1,6 @@
 <script lang="ts">
   import { parseAndFormatDate } from "@21n/utils/time.utils";
-  import { selectedTimePeriod } from "@21n/stores/app.store";
+  import { selectedTimePeriod } from "@nucleum/stores/app.store";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
   import Popover from "@21n/elements/popover/Popover.svelte";

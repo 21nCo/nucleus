@@ -1,17 +1,17 @@
 import { Action } from "@21n/types/action.enum";
 import { ActionType, type IAction } from "@21n/types/action.type";
-import { memotronActions } from "@21n/products/memotron/memotron.actions";
-import { pointronActions } from "@21n/products/pointron/pointron.actions";
-import NucleusLibrary from "@21n/products/nucleus/NucleusLibrary.svelte";
-import NucleusOverview from "@21n/products/nucleus/overview/NucleusOverview.svelte";
+import { memotronActions } from "@nucleum/products/memotron/memotron.actions";
+import { pointronActions } from "@nucleum/products/pointron/pointron.actions";
+import NucleusLibrary from "@nucleum/products/nucleus/NucleusLibrary.svelte";
+import NucleusOverview from "@nucleum/products/nucleus/overview/NucleusOverview.svelte";
 import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
-import LibraryPanelContentResolver from "@21n/components/library/LibraryPanelContentResolver.svelte";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import NucleusOverviewPanel from "@21n/products/nucleus/overview/NucleusOverviewPanel.svelte";
-import { AccessMode, ResourceActionType } from "@21n/data/datafn/resource.type";
-import { resourceAction } from "@21n/data/datafn/resource.utils";
-import { appMenuActionLabelsByAction } from "@21n/products/product-nav.config";
-import ResourceBrowser from "@21n/components/library/resourceBrowser/ResourceBrowser.svelte";
+import LibraryPanelContentResolver from "@nucleum/components/library/LibraryPanelContentResolver.svelte";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import NucleusOverviewPanel from "@nucleum/products/nucleus/overview/NucleusOverviewPanel.svelte";
+import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
+import { resourceAction } from "@nucleum/datafn/resource.utils";
+import { appMenuActionLabelsByAction } from "@nucleum/products/product-nav.config";
+import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
 
 const actionsToFilterInSub = [Action.LIBRARY, Action.OVERVIEW];
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import MemotronLogo from "./MemotronLogo.svelte";

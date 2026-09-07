@@ -2,8 +2,8 @@
   import Text from "@21n/elements/text/Text.svelte";
   import { Orientation } from "@21n/types/direction.enum";
   import { TextStyle } from "@21n/types/text.enum";
-  import SettingThumbnail from "@21n/components/settings/SettingThumbnail.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import SettingThumbnail from "@nucleum/components/settings/SettingThumbnail.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
   import { ActionType } from "@21n/types/action.type";
   import { AppSearchParam } from "@21n/types/appStore.type";
   let {

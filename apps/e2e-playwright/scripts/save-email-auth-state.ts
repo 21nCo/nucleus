@@ -15,7 +15,7 @@ import { chromium } from "@playwright/test";
 import path from "node:path";
 import fs from "node:fs";
 import net from "node:net";
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 
 const authDir = path.join(__dirname, "..", ".auth");
 const artifactsDir = path.join(__dirname, "..", "artifacts");

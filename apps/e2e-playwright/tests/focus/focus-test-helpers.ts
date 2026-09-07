@@ -10,7 +10,7 @@ import { expectAnyLocatorVisible } from "../utils/locator-assertions";
 import { resolveRepoFsImportPath } from "../utils/repo-fs";
 
 const sessionStorePath = resolveRepoFsImportPath(
-  "client/products/pointron/focus/session.store.ts"
+  "client/features/focus/session.store.ts"
 );
 const pointronStorePath = resolveRepoFsImportPath(
   "client/products/pointron/pointron.store.ts"

@@ -3,9 +3,9 @@
 ## 1. Alias Entity
 | Field | Type | Description |
 |-------|------|-------------|
-| `alias` | string | Canonical workspace import prefix (e.g., `@21n/components`). |
+| `alias` | string | Canonical workspace import prefix (e.g., `@nucleum/components`). |
 | `targetPath` | string | Absolute or workspace-relative path to module root (`client/components`). |
-| `workspacePackage` | string | npm workspace package name providing exports (`@21n/components`). |
+| `workspacePackage` | string | npm workspace package name providing exports (`@nucleum/components`). |
 | `ownerGroup` | string | Responsible team (e.g., Frontend Platform Architecture). |
 | `status` | enum(`stable`, `migrating`, `legacy`, `deprecated`) | Lifecycle state governing enforcement rules. |
 | `enforcementMode` | enum(`warn`, `error`) | Current lint/CI enforcement level. |

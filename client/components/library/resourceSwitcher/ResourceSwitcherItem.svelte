@@ -6,18 +6,18 @@
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import { resourceAction } from "@21n/data/datafn/resource.utils";
-  import { ResourceActionType } from "@21n/data/datafn/resource.type";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { appMenuStore } from "@21n/stores/appMenu/appMenu.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { resourceAction } from "@nucleum/datafn/resource.utils";
+  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { appMenuStore } from "@nucleum/stores/appMenu/appMenu.store";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { popover } from "@21n/actions/popover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import view from "@21n/stores/view.store";
-  import { isHideCreateAction } from "@21n/components/library/library.utils";
+  import view from "@nucleum/stores/view.store";
+  import { isHideCreateAction } from "@nucleum/components/library/library.utils";
 
   let {
     item,

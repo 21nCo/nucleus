@@ -1,4 +1,4 @@
-import type { Resource } from "@21n/data/datafn/resource.enum";
+import type { Resource } from "@nucleum/datafn/resource.enum";
 
 export type IRecentsStore = {
   recents: {

@@ -8,7 +8,7 @@
   import { Size } from "@21n/types/size.enum";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import { objIsEmpty } from "@21n/shared-utils/obj.utils";
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import { Placement } from "@21n/types/direction.enum";
   let {
     avatar = $bindable(),

@@ -5,9 +5,9 @@
   import {
     activeSession,
     todayFocusStore
-  } from "@21n/products/pointron/focus/session.store";
+  } from "@nucleum/features/focus/session.store";
   import LeftNavExpandable from "@21n/layout/leftPanel/LeftNavExpandable.svelte";
-  import ProfileLeftPanelSection from "@21n/components/settings/account/ProfileLeftPanelSection.svelte";
+  import ProfileLeftPanelSection from "@nucleum/components/settings/account/ProfileLeftPanelSection.svelte";
 
   onMount(() => {
     bootup();

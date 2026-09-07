@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { appConstants } from "@21n/stores/app.store";
-  import appearance from "@21n/stores/appearance.store";
+  import { appConstants } from "@nucleum/stores/app.store";
+  import appearance from "@nucleum/stores/appearance.store";
   import {
     resolveIfActiveFgFg,
     resolveSaturationAndLightness,

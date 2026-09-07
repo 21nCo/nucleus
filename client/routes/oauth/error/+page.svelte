@@ -1,7 +1,7 @@
 <script>
   import { page } from "$app/stores";
-  import PageError from "@21n/components/error/PageError.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import PageError from "@nucleum/components/error/PageError.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
   import { ButtonVariant } from "@21n/types/button.type";
 
   function resolveErrorParam() {

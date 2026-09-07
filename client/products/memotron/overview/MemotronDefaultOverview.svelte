@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MemotronOverviewLayout from "@21n/products/memotron/overview/MemotronOverviewLayout.svelte";
+  import MemotronOverviewLayout from "@nucleum/products/memotron/overview/MemotronOverviewLayout.svelte";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
 </script>
 

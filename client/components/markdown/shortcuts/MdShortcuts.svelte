@@ -1,9 +1,9 @@
 <script lang="ts">
   import Table2 from "@21n/elements/table/Table2.svelte";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { TableCellType } from "@21n/types/table.type";
-  import { BlockAction } from "@21n/components/markdown/md.type";
-  import MdShortcutText from "@21n/components/markdown/shortcuts/MdShortcutText.svelte";
+  import { BlockAction } from "@nucleum/components/markdown/md.type";
+  import MdShortcutText from "@nucleum/components/markdown/shortcuts/MdShortcutText.svelte";
   const data = [
     {
       id: BlockAction.INSERT,

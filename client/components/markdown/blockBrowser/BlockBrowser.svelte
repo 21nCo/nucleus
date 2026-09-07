@@ -5,13 +5,13 @@
   import { TextStyle } from "@21n/types/text.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
-  import BlockItem from "@21n/components/markdown/blockBrowser/BlockItem.svelte";
+  import BlockItem from "@nucleum/components/markdown/blockBrowser/BlockItem.svelte";
   import { getContext } from "svelte";
   import { cn } from "@21n/utils/ui.utils";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import context from "@21n/stores/context.store";
-  import type { IBlockBrowserSection } from "@21n/components/markdown/blockBrowser/blockBrowser.type";
-  import { resolveBlockBrowserConfig } from "@21n/components/markdown/blockBrowser/blockBrowser.utils";
+  import context from "@nucleum/stores/context.store";
+  import type { IBlockBrowserSection } from "@nucleum/components/markdown/blockBrowser/blockBrowser.type";
+  import { resolveBlockBrowserConfig } from "@nucleum/components/markdown/blockBrowser/blockBrowser.utils";
   import { Context } from "@21n/types/appStore.type";
   const nodeContext = getContext<any>(Context.NODE);
 

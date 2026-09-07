@@ -1,4 +1,4 @@
-import { LogType } from "@21n/components/debug/debug.type";
+import { LogType } from "@nucleum/components/debug/debug.type";
 
 const LOG_METHODS: Record<LogType, "debug" | "error" | "info" | "warn"> = {
   [LogType.ERROR]: "error",

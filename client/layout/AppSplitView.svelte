@@ -4,9 +4,9 @@
   import type { Snippet } from "svelte";
   import { onMount } from "svelte";
   import { page } from "$app/stores";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import RightSplit from "@21n/layout/RightSplit.svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { cn } from "@21n/utils/ui.utils";
   let {
     children,

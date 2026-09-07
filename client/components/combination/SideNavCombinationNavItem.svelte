@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { hoverable } from "@21n/client/actions/hover.action";
-  import Icon from "@21n/client/elements/Icon.svelte";
-  import TextInput from "@21n/client/elements/input/TextInput.svelte";
-  import AvatarRenderer from "@21n/client/elements/avatarPicker/AvatarRenderer.svelte";
-  import { Size } from "@21n/client/types/size.enum";
-  import { cn } from "@21n/client/utils/ui.utils";
-  import { resolveResourceIcon } from "@21n/data/datafn/resource.utils";
-  import type { IAvatar } from "@21n/client/types/avatar.type";
+  import { hoverable } from "@nucleum/client/actions/hover.action";
+  import Icon from "@nucleum/client/elements/Icon.svelte";
+  import TextInput from "@nucleum/client/elements/input/TextInput.svelte";
+  import AvatarRenderer from "@nucleum/client/elements/avatarPicker/AvatarRenderer.svelte";
+  import { Size } from "@nucleum/client/types/size.enum";
+  import { cn } from "@nucleum/client/utils/ui.utils";
+  import { resolveResourceIcon } from "@nucleum/datafn/resource.utils";
+  import type { IAvatar } from "@nucleum/client/types/avatar.type";
   import SideNavCombinationNavItem from "./SideNavCombinationNavItem.svelte";
   import {
     CombinationNavItemType,

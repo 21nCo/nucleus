@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { logger } from "@21n/components/debug/logger.client";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import {
     determineResourceType,
     isSameResource
-  } from "@21n/data/datafn/resource.utils";
-  import { appStore } from "@21n/stores/app.store";
+  } from "@nucleum/datafn/resource.utils";
+  import { appStore } from "@nucleum/stores/app.store";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import { onMount } from "svelte";
   let {

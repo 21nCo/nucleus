@@ -5,13 +5,13 @@
   import { page } from "$app/stores";
   import type { Page } from "@sveltejs/kit";
   import { GlobalEvent } from "@21n/types/event.enum";
-  import { appStore } from "@21n/stores/app.store";
-  import context from "@21n/stores/context.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import context from "@nucleum/stores/context.store";
   import type { IAction } from "@21n/types/action.type";
   import { onDestroy, onMount } from "svelte";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
-  import { resolveProductConfig } from "@21n/products/product.config";
-  import view from "@21n/stores/view.store";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
+  import view from "@nucleum/stores/view.store";
 
   let {
     prefix = undefined,

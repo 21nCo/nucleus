@@ -2,19 +2,19 @@
   import { ExtensionEvent } from "@21n/types/extension.type";
   import { cn } from "@21n/utils/ui.utils";
   import { onMount, onDestroy } from "svelte";
-  import type { IArea } from "@21n/extensions/clipper/contentScripts/types";
+  import type { IArea } from "@nucleum/extensions/clipper/contentScripts/types";
   import {
     feedbackPane,
     webpage
-  } from "@21n/extensions/clipper/contentScripts/store";
+  } from "@nucleum/extensions/clipper/contentScripts/store";
   import {
     NodeType,
     type IWebScreenshotClip
-  } from "@21n/products/memotron/node/node.type";
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
-  import { logger } from "@21n/components/debug/logger.client";
+  } from "@nucleum/features/memory/node/node.type";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
-  import type { OmitForCapture } from "@21n/data/datafn/resource.type";
+  import type { OmitForCapture } from "@nucleum/datafn/resource.type";
   let {
     onSaved = undefined,
     onClose = undefined

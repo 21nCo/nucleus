@@ -3,16 +3,16 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import AppMenuSwitcher from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcher.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import { LayoutContext } from "@21n/types/layout.type";
   import { Size } from "@21n/types/size.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import LeftBottomBar from "@21n/layout/leftPanel/LeftBottomBar.svelte";
   import { onMount } from "svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
-  import { UIState } from "@21n/stores/uiState/uiState.type";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
+  import { UIState } from "@nucleum/stores/uiState/uiState.type";
   import LeftNavCommandAction from "@21n/layout/leftPanel/LeftNavCommandAction.svelte";
   import LeftNavOfflineStatus from "@21n/layout/leftPanel/LeftNavOfflineStatus.svelte";
   let {

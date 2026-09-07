@@ -8,7 +8,7 @@
   import { Size } from "@21n/types/size.enum";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
   let {
     listContainerStyle = "",

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import {
     OptionSelectorStyle,
     type ISelectItem
@@ -8,25 +8,25 @@
   import { Size } from "@21n/types/size.enum";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import Divider from "@21n/elements/Divider.svelte";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { resolveObjectiveSubTypesForSwitcher } from "@21n/components/goals/goal.utils";
-  import { resolveTaskSubTypesForSwitcher } from "@21n/components/tasks/task.utils";
-  import { resolveNodeSubTypesForSwitcher } from "@21n/products/memotron/node/node.utils";
-  import { resolveCollectionSubTypesForSwitcher } from "@21n/components/collection/collection.utils";
-  import type { NodeType } from "@21n/products/memotron/node/node.type";
-  import type { CollectionType } from "@21n/components/collection/collection.type";
-  import view from "@21n/stores/view.store";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { resolveObjectiveSubTypesForSwitcher } from "@nucleum/features/focus/goals/goal.utils";
+  import { resolveTaskSubTypesForSwitcher } from "@nucleum/features/focus/tasks/task.utils";
+  import { resolveNodeSubTypesForSwitcher } from "@nucleum/features/memory/node/node.utils";
+  import { resolveCollectionSubTypesForSwitcher } from "@nucleum/features/collections/collection.utils";
+  import type { NodeType } from "@nucleum/features/memory/node/node.type";
+  import type { CollectionType } from "@nucleum/features/collections/collection.type";
+  import view from "@nucleum/stores/view.store";
   import { Orientation } from "@21n/types/direction.enum";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import type { SubType } from "@21n/components/library/library.type";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
+  import type { SubType } from "@nucleum/components/library/library.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { cn } from "@21n/utils/ui.utils";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import { page } from "$app/stores";
   import { fade } from "svelte/transition";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   let {
     resource,

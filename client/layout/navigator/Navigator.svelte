@@ -4,7 +4,7 @@
   import { vTrail } from "../topNav/tabs/tabs.store";
   import TopBarResourceItem from "../topNav/tabs/TopBarResourceItem.svelte";
   import type { IRecordId } from "@21n/types/data.type";
-  import { isRecordId } from "@21n/data/datafn/resource.utils";
+  import { isRecordId } from "@nucleum/datafn/resource.utils";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { Size } from "@21n/types/size.enum";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";

@@ -1,5 +1,5 @@
 import { Agent } from "$lib/server/common/account/account.type";
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import {
   ISyncUpBody,
   ISyncDownBody,
@@ -14,7 +14,7 @@ import {
   IResourceSelectParams,
   PersistenceActionType
 } from "$lib/client/types/data.type";
-import { ResourceActionType } from "@21n/data/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/datafn/resource.type";
 import { ISyncProvider, SyncProvider } from "./types";
 import { resolveProviderRegionCode } from "$lib/deployment/deploy.utils";
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";

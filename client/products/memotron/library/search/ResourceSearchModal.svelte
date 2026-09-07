@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import ResourceSearchBase from "@21n/products/memotron/library/search/ResourceSearchBase.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import ResourceSearchBase from "@nucleum/products/memotron/library/search/ResourceSearchBase.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@21n/types/action.enum";
-  import SearchInput from "@21n/components/search/SearchInput.svelte";
+  import SearchInput from "@nucleum/components/search/SearchInput.svelte";
 
   let { isInline = false }: { isInline?: boolean } = $props();
   let searchInputRef: SearchInput;

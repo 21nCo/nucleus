@@ -1,7 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { onMount } from "svelte";
   import { CacheKey } from "@21n/layout/layers/cache/cache.type";
   let components = $state<any[]>([]);

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { ChartType } from "@21n/types/analytics.type";
   import EChart from "./EChart.svelte";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   let type: ChartType;
   let data: any;
   let options: any;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SadIllustration from "@21n/client/routes/ext/uninstall/SadIllustration.svelte";
+  import SadIllustration from "@nucleum/client/routes/ext/uninstall/SadIllustration.svelte";
 </script>
 
 <div class="flex flex-col gap-4 w-full h-full justify-center items-center">

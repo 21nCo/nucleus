@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import { TimeUnit } from "@21n/types/time.type";
   import TimeUnitDropdownPopover from "@21n/elements/input/durationInput/TimeUnitDropdownPopover.svelte";
 

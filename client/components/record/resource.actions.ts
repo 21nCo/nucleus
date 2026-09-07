@@ -1,11 +1,11 @@
-import { appStore } from "@21n/stores/app.store";
+import { appStore } from "@nucleum/stores/app.store";
 import {
   copyActiveResourceContents,
   updateActiveResource
-} from "@21n/data/datafn/resource.store";
-import { bulkEditStore } from "@21n/components/record/bulkedit.store";
-import { copyResourceLinkToClipboard } from "@21n/products/memotron/memotron.utils";
-import { LinkType } from "@21n/products/memotron/linking/link.type";
+} from "@nucleum/datafn/resource.store";
+import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
+import { copyResourceLinkToClipboard } from "@nucleum/products/memotron/memotron.utils";
+import { LinkType } from "@nucleum/features/memory/linking/link.type";
 import {
   ResourceAccessPoint,
   AccessMode,
@@ -15,8 +15,8 @@ import {
   type IResourceArchivable,
   type IResourceLockable,
   type IResourceStarrable
-} from "@21n/data/datafn/resource.type";
-import { uiState } from "@21n/stores/uiState/uiState.store";
+} from "@nucleum/datafn/resource.type";
+import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import {
   determineResourceAccessMode,
   determineResourceType,
@@ -25,18 +25,18 @@ import {
   resolveBulkSelectionAccessPointId,
   resolveResourceActionIcon,
   resourceInList
-} from "@21n/data/datafn/resource.utils";
+} from "@nucleum/datafn/resource.utils";
 import { ContextMenuType, type IContextMenuItem } from "@21n/types/select.type";
 import type { IRecordId } from "@21n/types/data.type";
 import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { toasts } from "@21n/stores/notification.store";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { toasts } from "@nucleum/stores/notification.store";
 import { Action } from "@21n/types/action.enum";
 import { AppSearchParam } from "@21n/types/appStore.type";
-import { UIStateScope } from "@21n/stores/uiState/uiState.type";
-import { BulkEditor } from "@21n/components/record/record.store";
+import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
+import { BulkEditor } from "@nucleum/components/record/record.store";
 import { GlobalEvent } from "@21n/types/event.enum";
-import { datafn } from "@21n/stores/datafn.store";
+import { datafn } from "@nucleum/datafn/datafn.store";
 
 type IActionableResource = IResource &
   Partial<

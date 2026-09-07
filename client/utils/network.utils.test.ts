@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 
 import * as networkUtils from "./network.utils";
 
@@ -37,17 +37,17 @@ const moduleMocks = vi.hoisted(() => ({
   }
 }));
 
-vi.mock("@21n/components/debug/logger.client", () => ({
+vi.mock("@nucleum/components/debug/logger.client", () => ({
   logger: moduleMocks.logger
 }));
 vi.mock("@21n/utils/account.utils", () => moduleMocks.account);
 vi.mock("@21n/utils/browser.utils", () => moduleMocks.browser);
-vi.mock("@21n/persistence/persistence.utils", () => ({
+vi.mock("@nucleum/persistence/persistence.utils", () => ({
   clientStorage: moduleMocks.storage
 }));
 vi.mock("@21n/utils/time.utils", () => moduleMocks.time);
 vi.mock("@21n/utils/extension.utils", () => moduleMocks.extension);
-vi.mock("@21n/components/account/auth", () => moduleMocks.auth);
+vi.mock("@nucleum/components/account/auth", () => moduleMocks.auth);
 vi.mock("@21n/shared-utils/json.utils", async () => {
   return await vi.importActual<any>("@21n/shared-utils/json.utils");
 });

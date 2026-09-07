@@ -1,28 +1,28 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
 
-  import MediaGridOptions from "@21n/components/markdown/mediaGrid/MediaGridOptions.svelte";
-  import type { Config } from "@21n/components/markdown/mediaGrid/mediaGrid.type";
-  import { dragAndDropStore } from "@21n/stores/app.store";
+  import MediaGridOptions from "@nucleum/components/markdown/mediaGrid/MediaGridOptions.svelte";
+  import type { Config } from "@nucleum/components/markdown/mediaGrid/mediaGrid.type";
+  import { dragAndDropStore } from "@nucleum/stores/app.store";
   import { DragStatus } from "@21n/types/dragstatus.enum";
-  import DraggableMediaGridElement from "@21n/components/markdown/mediaGrid/DraggableMediaGridElement.svelte";
+  import DraggableMediaGridElement from "@nucleum/components/markdown/mediaGrid/DraggableMediaGridElement.svelte";
   import type { DragAndDrop } from "@21n/types/draganddrop.type";
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import {
     isReplaceableMd,
     type MdStoreType
-  } from "@21n/components/markdown/markdown.store";
+  } from "@nucleum/components/markdown/markdown.store";
   import {
     MediaGridType,
     type IMediaGridItem,
     type IMediaGridNode
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import type { IFile } from "@21n/components/files/file.type";
-  import { isSameResource } from "@21n/data/datafn/resource.utils";
+  import type { IFile } from "@nucleum/features/files/file.type";
+  import { isSameResource } from "@nucleum/datafn/resource.utils";
   import { cn } from "@21n/utils/ui.utils";
   import { debouncer } from "@21n/utils/utils";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   let {
     block,
     mdStore,

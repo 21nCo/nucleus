@@ -1,5 +1,5 @@
 <script>
-  import ExtensionLoginStatusPage from "@21n/components/settings/ExtensionLoginStatusPage.svelte";
+  import ExtensionLoginStatusPage from "@nucleum/components/settings/ExtensionLoginStatusPage.svelte";
 </script>
 
 <ExtensionLoginStatusPage />

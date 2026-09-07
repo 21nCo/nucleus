@@ -1,18 +1,18 @@
-import type { OmitForCapture } from "@21n/data/datafn/resource.type";
+import type { OmitForCapture } from "@nucleum/datafn/resource.type";
 import {
   NodeType,
   type IBlueskyPost,
   type IBlueskyProfile
-} from "@21n/products/memotron/node/node.type";
+} from "@nucleum/features/memory/node/node.type";
 import type {
   ISocialPost,
   ISocialPostBase
-} from "@21n/extensions/clipper/clipper.type";
+} from "@nucleum/extensions/clipper/clipper.type";
 import {
   findAncestorOrSelf,
   parseFullDateTimeString,
   resolveOgData
-} from "@21n/extensions/clipper/parsers/shared/domUtils";
+} from "@nucleum/extensions/clipper/parsers/shared/domUtils";
 
 const blueSkyPostThreadSelector = '[data-testid^="postThreadItem-"]';
 

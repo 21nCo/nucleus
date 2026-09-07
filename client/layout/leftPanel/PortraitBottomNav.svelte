@@ -3,11 +3,11 @@
 <script lang="ts">
   import AppMenuSwitcher from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcher.svelte";
   import { LayoutContext } from "@21n/types/layout.type";
-  import { player } from "@21n/components/modal/modal.store";
+  import { player } from "@nucleum/components/modal/modal.store";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import { page } from "$app/stores";
   import { cn } from "@21n/utils/ui.utils";
-  import LibrarySearchPortrait from "@21n/products/memotron/library/search/LibrarySearchPortrait.svelte";
+  import LibrarySearchPortrait from "@nucleum/products/memotron/library/search/LibrarySearchPortrait.svelte";
   import { onMount } from "svelte";
 
   let testingInMobileBrowser: boolean = false;

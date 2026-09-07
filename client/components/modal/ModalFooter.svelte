@@ -8,19 +8,19 @@
   import { onMount } from "svelte";
   import modalEvent, {
     isPrimaryActionDisabled
-  } from "@21n/components/modal/modal.store";
-  import { appEvents } from "@21n/stores/notification.store";
+  } from "@nucleum/components/modal/modal.store";
+  import { appEvents } from "@nucleum/stores/notification.store";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";
   import { Size } from "@21n/types/size.enum";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
   import { Orientation } from "@21n/types/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { Action } from "@21n/types/action.enum";
   import ButtonGroup from "@21n/elements/button/ButtonGroup.svelte";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   let {
     action,
     isShowClose = false,

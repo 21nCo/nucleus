@@ -1,15 +1,15 @@
 <script lang="ts">
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import FileView from "@21n/components/files/FileView.svelte";
+  import FileView from "@nucleum/features/files/FileView.svelte";
   import type { IRecordId } from "@21n/types/data.type";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
-  import { appStore } from "@21n/stores/app.store";
-  import { Product } from "@21n/products/product.type";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { Product } from "@nucleum/products/product.type";
   let {
     context = "cp-profile",
     fileId: providedFileId = undefined,

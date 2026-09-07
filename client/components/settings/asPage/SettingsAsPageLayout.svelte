@@ -1,20 +1,20 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import { Orientation } from "@21n/types/direction.enum";
-  import SettingsList from "@21n/components/settings/asPage/SettingsList.svelte";
+  import SettingsList from "@nucleum/components/settings/asPage/SettingsList.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
-  import ProfileCpSection from "@21n/components/settings/account/ProfileCPSection.svelte";
+  import ProfileCpSection from "@nucleum/components/settings/account/ProfileCPSection.svelte";
   import { page } from "$app/stores";
   import { retrieveCurrentColors } from "@21n/utils/theme.utils";
   import Panel from "@21n/layout/paint/Panel.svelte";
-  import view from "@21n/stores/view.store";
-  import appearance from "@21n/stores/appearance.store";
+  import view from "@nucleum/stores/view.store";
+  import appearance from "@nucleum/stores/appearance.store";
   import NavigationHeader from "@21n/elements/NavigationHeader.svelte";
-  import SettingsFooter from "@21n/components/settings/SettingsFooter.svelte";
-  import { resolveProductConfig } from "@21n/products/product.config";
+  import SettingsFooter from "@nucleum/components/settings/SettingsFooter.svelte";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
   import OfflineStatusMessage from "@21n/elements/feedback/OfflineStatusMessage.svelte";
   let {
     isShowBackButton = false,

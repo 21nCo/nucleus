@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CreditSection from "@21n/components/help/CreditSection.svelte";
+  import CreditSection from "@nucleum/components/help/CreditSection.svelte";
 
   interface CreditItem {
     name: string;

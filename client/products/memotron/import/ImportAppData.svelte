@@ -1,33 +1,33 @@
 <script lang="ts">
-  import view from "@21n/stores/view.store";
-  import modalEvent from "@21n/components/modal/modal.store";
+  import view from "@nucleum/stores/view.store";
+  import modalEvent from "@nucleum/components/modal/modal.store";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { Size } from "@21n/types/size.enum";
-  import FileItem from "@21n/products/memotron/import/FileItem.svelte";
+  import FileItem from "@nucleum/products/memotron/import/FileItem.svelte";
   import { UploadStatus } from "@21n/types/uploadStatus.enum";
   import { convertFileSize } from "@21n/utils/utils";
   import { FileSizeMeasurement } from "@21n/types/fileSizeMeasurement.enum";
-  import { toasts } from "@21n/stores/notification.store";
+  import { toasts } from "@nucleum/stores/notification.store";
   import {
     ImportSource,
     StepType,
     type ImportHistoryItem
-  } from "@21n/products/memotron/import/data.type";
+  } from "@nucleum/products/memotron/import/data.type";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import Divider from "@21n/elements/Divider.svelte";
   import { Display } from "@21n/types/view.type";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
-  import { generateResourceId } from "@21n/data/datafn/id.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { preferences } from "@21n/stores/preferences/preferences.store";
-  import { MemotronAction } from "@21n/products/memotron/memotronAction.enum";
-  import { Preference } from "@21n/stores/preferences/preferences.type";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { generateResourceId } from "@nucleum/datafn/id.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { preferences } from "@nucleum/stores/preferences/preferences.store";
+  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import { cn } from "@21n/utils/ui.utils";
-  import FieldMapping from "@21n/products/memotron/import/FieldMapping.svelte";
-  import type { FieldMappingConfig } from "@21n/products/memotron/import/data.type";
-  import { PocketImporter } from "@21n/products/memotron/import/pocket.importer";
+  import FieldMapping from "@nucleum/products/memotron/import/FieldMapping.svelte";
+  import type { FieldMappingConfig } from "@nucleum/products/memotron/import/data.type";
+  import { PocketImporter } from "@nucleum/products/memotron/import/pocket.importer";
   import { Action } from "@21n/types/action.enum";
 
   let {

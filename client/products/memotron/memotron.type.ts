@@ -1,7 +1,7 @@
 import type {
   IResource,
   IResourceShareable
-} from "@21n/data/datafn/resource.type";
+} from "@nucleum/datafn/resource.type";
 
 /**
  * @deprecated - directly extend IResource, IResourceShareable etc instead

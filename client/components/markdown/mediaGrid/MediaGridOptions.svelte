@@ -5,10 +5,10 @@
   import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
   import UploadButton from "@21n/elements/button/UploadButton.svelte";
   import Slider from "@21n/elements/slider/Slider.svelte";
-  import { MediaGridType } from "@21n/products/memotron/node/node.type";
+  import { MediaGridType } from "@nucleum/features/memory/node/node.type";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import Button from "@21n/elements/button/Button.svelte";
-  import InlineFeedbackText from "@21n/extensions/clipper/InlineFeedbackText.svelte";
+  import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType } from "@21n/types/notification.type";
 
   let {

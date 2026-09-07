@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
   import ResourceResolver from "@21n/layout/paint/ResourceResolver.svelte";
   import { page } from "$app/stores";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import RightSplit from "@21n/layout/RightSplit.svelte";
   let {
     children,

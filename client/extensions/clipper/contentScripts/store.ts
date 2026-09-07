@@ -1,31 +1,31 @@
-import { logger } from "@21n/components/debug/logger.client";
+import { logger } from "@nucleum/components/debug/logger.client";
 import type { DfqlRelations } from "@datafn/core";
 import {
   ErrorMessage,
   ResourceErrorCode
-} from "@21n/components/error/error.type";
-import { ResourceError } from "@21n/components/error/errors";
-import { DatafnExtensionMethod } from "@21n/extensions/extension.store";
-import { generateResourceId } from "@21n/data/datafn/id.utils";
-import { extensionDatafn } from "@21n/extensions/extension.store";
-import { Resource } from "@21n/data/datafn/resource.enum";
+} from "@nucleum/components/error/error.type";
+import { ResourceError } from "@nucleum/components/error/errors";
+import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
+import { generateResourceId } from "@nucleum/datafn/id.utils";
+import { extensionDatafn } from "@nucleum/extensions/extension.store";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import type {
   CaptureOmittedFields,
   OmitFields,
   OmitForCapture,
   OmitForCaptureWithId
-} from "@21n/data/datafn/resource.type";
+} from "@nucleum/datafn/resource.type";
 import {
   determineResourceType,
   isSameResource,
   resourceInList
-} from "@21n/data/datafn/resource.utils";
-import { Persistence } from "@21n/persistence/persistence";
-import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
+} from "@nucleum/datafn/resource.utils";
+import { Persistence } from "@nucleum/persistence/persistence";
+import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
 import {
   LinkType,
   type ILinkTag
-} from "@21n/products/memotron/linking/link.type";
+} from "@nucleum/features/memory/linking/link.type";
 import {
   type IClip,
   type IClipCapture,
@@ -44,14 +44,14 @@ import {
   NodeType,
   socialPostNodeTypeList,
   socialProfileNodeTypeList
-} from "@21n/products/memotron/node/node.type";
-import { generateNodeIdPrefixed } from "@21n/products/memotron/node/node.utils";
+} from "@nucleum/features/memory/node/node.type";
+import { generateNodeIdPrefixed } from "@nucleum/features/memory/node/node.utils";
 import {
   isSameAsCurrentUrl,
   resolveUrlData
-} from "@21n/products/memotron/node/url.utils";
-import { ObservableStore } from "@21n/stores/client.store";
-import { appEvents } from "@21n/stores/notification.store";
+} from "@nucleum/features/memory/node/url.utils";
+import { ObservableStore } from "@nucleum/stores/client.store";
+import { appEvents } from "@nucleum/stores/notification.store";
 import type { IRecordId } from "@21n/types/data.type";
 import { Placement } from "@21n/types/direction.enum";
 import { ExtensionEvent } from "@21n/types/extension.type";
@@ -66,26 +66,26 @@ import { activeResourceFilter } from "@21n/utils/utils";
 import { parse, stringify } from "@21n/shared-utils/json.utils";
 import { objIsEmpty, shallowDiff } from "@21n/shared-utils/obj.utils";
 import { enumToString } from "@21n/shared-utils/text.utils";
-import type { ISocialPost } from "@21n/extensions/clipper/clipper.type";
+import type { ISocialPost } from "@nucleum/extensions/clipper/clipper.type";
 import {
   extractFullTabData,
   extractMinimalTabData,
   extractYoutubeVideoData,
   resolveUrl
-} from "@21n/extensions/clipper/clipper.utils";
+} from "@nucleum/extensions/clipper/clipper.utils";
 import {
   resolveInlineSocialPostParser,
   resolveParser,
   resolveVideoBookmarkParser
-} from "@21n/extensions/clipper/parsers";
-import { captureVideoFrame } from "@21n/extensions/clipper/parsers/shared/video.utils";
-import { removeHighlight } from "@21n/extensions/clipper/contentScripts/highlightV4";
+} from "@nucleum/extensions/clipper/parsers";
+import { captureVideoFrame } from "@nucleum/extensions/clipper/parsers/shared/video.utils";
+import { removeHighlight } from "@nucleum/extensions/clipper/contentScripts/highlightV4";
 import {
   type IFeedbackPaneStore,
   type ISyncStore,
   type IWebpageStore,
   SyncStatus
-} from "@21n/extensions/clipper/contentScripts/types";
+} from "@nucleum/extensions/clipper/contentScripts/types";
 
 async function queryOutgoingLinkIdsBySource(sourceIds: IRecordId[]) {
   if (sourceIds.length === 0) return new Map<string, IRecordId[]>();

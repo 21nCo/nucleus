@@ -1,15 +1,15 @@
 <script lang="ts">
   import { tick } from "svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import type { IAction } from "@21n/types/action.type";
   import { ActionType } from "@21n/types/action.type";
   import { Action } from "@21n/types/action.enum";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import CmdResultItem from "@21n/components/commandBar/CmdResultItem.svelte";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
-  import type { ICommandAction } from "@21n/components/commandBar/cmd.type";
+  import CmdResultItem from "@nucleum/components/commandBar/CmdResultItem.svelte";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import type { ICommandAction } from "@nucleum/components/commandBar/cmd.type";
   let {
     search = "",
     onClose = void 0,

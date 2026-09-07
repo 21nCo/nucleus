@@ -1,17 +1,17 @@
 <script lang="ts">
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import { onMount } from "svelte";
-  import Records from "@21n/components/record/Records.svelte";
+  import Records from "@nucleum/components/record/Records.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { InputStyle } from "@21n/types/input.type";
   import { Size } from "@21n/types/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
-  import { recentsStore } from "@21n/components/record/recent.store";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
+  import { recentsStore } from "@nucleum/components/record/recent.store";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { Arrangement } from "@21n/types/direction.enum";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   import { activeResourceFilter } from "@21n/utils/utils";
 
   let {

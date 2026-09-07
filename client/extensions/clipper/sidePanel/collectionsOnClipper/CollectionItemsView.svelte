@@ -2,9 +2,9 @@
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
-  import { CollectionType } from "@21n/components/collection/collection.type";
-  import WebpageItem from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/WebpageItem.svelte";
-  import type { CollectionData, CollectionItem } from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/types";
+  import { CollectionType } from "@nucleum/features/collections/collection.type";
+  import WebpageItem from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/WebpageItem.svelte";
+  import type { CollectionData, CollectionItem } from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/types";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import Button from "@21n/elements/button/Button.svelte";

@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 import {
   convertLegacyLocalDataBackupToDatafnImport,
   hasRecoverableLegacyLocalData,
   resolveLegacyLocalDataRecordCount,
   type LegacyLocalDataBackup,
   type LegacyLocalDataSummary
-} from "@21n/persistence/legacyLocalDataBackup";
+} from "@nucleum/persistence/legacyLocalDataBackup";
 
 const dateMarker = (value: string) => ({
   __legacyIndexedDbType: "Date",

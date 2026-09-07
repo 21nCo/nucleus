@@ -19,7 +19,7 @@
   import { retrieveCurrentColors } from "@21n/utils/theme.utils";
   import { determineCarbonChartTimeInterval } from "@21n/utils/carbon.utils";
   import { pieLabelFormatter } from "@21n/utils/carbon.utils";
-  import appearance from "@21n/stores/appearance.store";
+  import appearance from "@nucleum/stores/appearance.store";
   let type: ChartType;
   let data: any;
   let additionalOptions: any;

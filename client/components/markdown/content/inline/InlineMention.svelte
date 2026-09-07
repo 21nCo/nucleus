@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { hoverable } from "@21n/actions/hover.action";
-  import { tooltip } from "@21n/actions/popover.action";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
-  import { resolveResource } from "@21n/components/record/record.store";
-  import NodeAvatar from "@21n/products/memotron/node/avatar/NodeAvatar.svelte";
-  import { webNodeTypeList } from "@21n/products/memotron/node/node.type";
-  import { resolveNodeLabelString } from "@21n/products/memotron/node/node.utils";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { tooltip } from "@nucleum/actions/popover.action";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+  import { resolveResource } from "@nucleum/components/record/record.store";
+  import NodeAvatar from "@nucleum/features/memory/node/avatar/NodeAvatar.svelte";
+  import { webNodeTypeList } from "@nucleum/features/memory/node/node.type";
+  import { resolveNodeLabelString } from "@nucleum/features/memory/node/node.utils";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
 

@@ -4,19 +4,19 @@
   import type { Snippet } from "svelte";
   import { onDestroy, onMount } from "svelte";
   import { GlobalEvent } from "@21n/types/event.enum";
-  import { Persistence } from "@21n/persistence/persistence";
-  import account from "@21n/stores/account.store";
-  import { appLoadingState, appStore } from "@21n/stores/app.store";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { Persistence } from "@nucleum/persistence/persistence";
+  import account from "@nucleum/stores/account.store";
+  import { appLoadingState, appStore } from "@nucleum/stores/app.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import {
     confirmationNotification,
     toasts
-  } from "@21n/stores/notification.store";
-  import context from "@21n/stores/context.store";
+  } from "@nucleum/stores/notification.store";
+  import context from "@nucleum/stores/context.store";
   import DebugLayer from "@21n/layout/layers/debug/DebugLayer.svelte";
   import ModalLayer from "@21n/layout/layers/ModalLayer.svelte";
   import AnalyticsLayer from "@21n/layout/layers/analytics/AnalyticsLayer.svelte";
-  import ShortcutRunner from "@21n/components/shortcuts/ShortcutRunner.svelte";
+  import ShortcutRunner from "@nucleum/components/shortcuts/ShortcutRunner.svelte";
   import Intercom from "@21n/layout/layers/Intercom.svelte";
   import SyncLayer from "@21n/layout/layers/SyncLayer.svelte";
   import {
@@ -26,31 +26,31 @@
   import { AlertType } from "@21n/types/notification.type";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
   import DynamicMetadataLayer from "@21n/layout/layers/DynamicMetadataLayer.svelte";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { UserDataMode } from "@21n/types/account.type";
-  import { getDapId } from "@21n/persistence/persistence.utils";
-  import PageError from "@21n/components/error/PageError.svelte";
+  import { getDapId } from "@nucleum/persistence/persistence.utils";
+  import PageError from "@nucleum/components/error/PageError.svelte";
   import posthog from "posthog-js";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { Action } from "@21n/types/action.enum";
-  import { BillingCycle } from "@21n/components/subscription/userPlan.type";
-  import { fileEmbedChannel } from "@21n/components/files/fileEmbedChannel.store";
-  import { fileStore } from "@21n/components/files/file.store";
-  import { ErrorMessage } from "@21n/components/error/error.type";
-  import modalEvent from "@21n/components/modal/modal.store";
+  import { BillingCycle } from "@nucleum/components/subscription/userPlan.type";
+  import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";
+  import { fileStore } from "@nucleum/features/files/file.store";
+  import { ErrorMessage } from "@nucleum/components/error/error.type";
+  import modalEvent from "@nucleum/components/modal/modal.store";
   import { PaymentProvider } from "@21n/shared-types/plan.type";
-  import { embedBridge } from "@21n/components/embed/embed.store";
+  import { embedBridge } from "@nucleum/components/embed/embed.store";
   import { postMessageToParent } from "@21n/utils/embed.utils";
   import { EmbedMessage } from "@21n/types/embedMessage.enum";
   import { OperatingSystem } from "@21n/types/context.type";
   import UserLayout from "@21n/layout/layers/UserLayout.svelte";
   import LegacyLocalDataRecoveryGate from "@21n/layout/layers/LegacyLocalDataRecoveryGate.svelte";
   import { compareVersions } from "@21n/shared-utils/utils";
-  import { UIStateScope } from "@21n/stores/uiState/uiState.type";
+  import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { parse, stringify } from "@21n/shared-utils/json.utils";
   import { detectTimeZone, parseAndFormatDate } from "@21n/utils/time.utils";
-  import { recentsStore } from "@21n/components/record/recent.store";
-  import { resolveProductResources } from "@21n/data/datafn/resource.utils";
+  import { recentsStore } from "@nucleum/components/record/recent.store";
+  import { resolveProductResources } from "@nucleum/datafn/resource.utils";
   import {
     datafn,
     nucleumDatafnStatus,
@@ -60,7 +60,7 @@
     reconcileDatafnNow,
     refreshNucleumDatafnStatus,
     type NucleumDatafnRuntime
-  } from "@21n/stores/datafn.store";
+  } from "@nucleum/datafn/datafn.store";
   import {
     convertLegacyLocalDataBackupToDatafnImport,
     completeLegacyLocalDataCloudUpload,
@@ -74,7 +74,7 @@
     saveLegacyLocalDataRecoveryDecision,
     type LegacyLocalDataBackup,
     type LegacyLocalDataSummary
-  } from "@21n/persistence/legacyLocalDataBackup";
+  } from "@nucleum/persistence/legacyLocalDataBackup";
   import type { DatafnImportResult } from "@21n/types/datafn.type";
   let {
     children,

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { performSessionCheck, resolveAuthSession } from "./auth";
 
 const mocks = vi.hoisted(() => {
@@ -25,7 +25,7 @@ vi.mock("@authfn/client", () => ({
   createAuthFnRegionalClient: mocks.createAuthFnRegionalClient
 }));
 
-vi.mock("@21n/persistence/persistence.utils", () => ({
+vi.mock("@nucleum/persistence/persistence.utils", () => ({
   clientStorage: {
     get: vi.fn((key: ClientStorageKey) =>
       Promise.resolve(mocks.storage.get(key) ?? null)
@@ -44,7 +44,7 @@ vi.mock("@21n/persistence/persistence.utils", () => ({
   }
 }));
 
-vi.mock("@21n/components/debug/logger.client", () => ({
+vi.mock("@nucleum/components/debug/logger.client", () => ({
   logger: mocks.logger
 }));
 

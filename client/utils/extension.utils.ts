@@ -1,5 +1,5 @@
-import { logger } from "@21n/components/debug/logger.client";
-import type { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
+import { logger } from "@nucleum/components/debug/logger.client";
+import type { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
 import type { ExtensionEvent } from "@21n/types/extension.type";
 import {
   sendToBackground,

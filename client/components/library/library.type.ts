@@ -1,6 +1,6 @@
-import type { NodeType } from "@21n/products/memotron/node/node.type";
-import type { CollectionType } from "@21n/components/collection/collection.type";
-import type { TaskSubTypeForSwitcher } from "@21n/components/tasks/task.type";
+import type { NodeType } from "@nucleum/features/memory/node/node.type";
+import type { CollectionType } from "@nucleum/features/collections/collection.type";
+import type { TaskSubTypeForSwitcher } from "@nucleum/features/focus/tasks/task.type";
 
 export type SubType =
   | "all"

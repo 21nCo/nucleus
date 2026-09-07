@@ -1,15 +1,15 @@
 <script lang="ts">
-  import EmptyStatusView from "@21n/client/elements/feedback/EmptyStatusView.svelte";
-  import Collection from "@21n/client/components/collection/Collection.svelte";
-  import Node from "@21n/client/products/memotron/node/Node.svelte";
+  import EmptyStatusView from "@nucleum/client/elements/feedback/EmptyStatusView.svelte";
+  import Collection from "@nucleum/features/collections/Collection.svelte";
+  import Node from "@nucleum/features/memory/node/Node.svelte";
   import SideNavCombination from "./SideNavCombination.svelte";
   import {
     AccessMode,
     ResourceAccessPoint
-  } from "@21n/data/datafn/resource.type";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import type { IRecordId } from "@21n/client/types/data.type";
-  import Objective from "../goals/Goal.svelte";
+  } from "@nucleum/datafn/resource.type";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import type { IRecordId } from "@nucleum/client/types/data.type";
+  import Objective from "@nucleum/features/focus/goals/Goal.svelte";
 
   let {
     resourceId = undefined,

@@ -1,11 +1,11 @@
 <script lang="ts">
-  import LinkSearchResultItem from "@21n/products/memotron/common/linkbox/LinkSearchResultItem.svelte";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
+  import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
-  import { queryLinkingSearchResults } from "@21n/products/memotron/linking/link-search";
+  import { queryLinkingSearchResults } from "@nucleum/features/memory/linking/link-search";
 
   let {
     subType,

@@ -1,10 +1,10 @@
 <script lang="ts">
-  import appearance from "@21n/stores/appearance.store";
+  import appearance from "@nucleum/stores/appearance.store";
   import { AppSkin, type ColorScheme } from "@21n/types/appearance.type";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { cn } from "@21n/utils/ui.utils";
   import { Size } from "@21n/types/size.enum";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   let {
     colorScheme,
     isActive,

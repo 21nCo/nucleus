@@ -3,7 +3,7 @@
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { EmbedMessage } from "@21n/types/embedMessage.enum";
   import {
     postMessageToParent,
@@ -11,10 +11,10 @@
   } from "@21n/utils/embed.utils";
   import { isValidEmail } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
-  import OAuthButtons from "@21n/components/oauth/OAuthButtons.svelte";
+  import OAuthButtons from "@nucleum/components/oauth/OAuthButtons.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import account from "@21n/stores/account.store";
-  import view from "@21n/stores/view.store";
+  import account from "@nucleum/stores/account.store";
+  import view from "@nucleum/stores/view.store";
   import { Orientation } from "@21n/types/direction.enum";
   import { Action } from "@21n/types/action.enum";
   import Icon from "@21n/elements/Icon.svelte";
@@ -24,7 +24,7 @@
   import {
     authClient,
     resolveAuthFnSessionMode
-  } from "@21n/components/account/auth";
+  } from "@nucleum/components/account/auth";
   import type { AuthFnSession } from "@authfn/client";
   let {
     isSignup: initialIsSignup = false,

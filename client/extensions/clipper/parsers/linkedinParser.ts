@@ -1,15 +1,15 @@
-import type { OmitForCapture } from "@21n/data/datafn/resource.type";
+import type { OmitForCapture } from "@nucleum/datafn/resource.type";
 import {
   NodeType,
   type ILinkedInPost,
   type ILinkedInProfile
-} from "@21n/products/memotron/node/node.type";
+} from "@nucleum/features/memory/node/node.type";
 import { parseRelativeTimeToISO } from "@21n/utils/time.utils";
-import type { ISocialPost } from "@21n/extensions/clipper/clipper.type";
+import type { ISocialPost } from "@nucleum/extensions/clipper/clipper.type";
 import {
   findAncestorOrSelf,
   resolveOgData
-} from "@21n/extensions/clipper/parsers/shared/domUtils";
+} from "@nucleum/extensions/clipper/parsers/shared/domUtils";
 
 export function extractLinkedInPostFromPage():
   | ISocialPost<ILinkedInPost, ILinkedInProfile>

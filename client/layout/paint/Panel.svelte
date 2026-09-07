@@ -2,7 +2,7 @@
   import type { Snippet } from "svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import type { IButtonParams } from "@21n/types/button.type";
   import { Orientation } from "@21n/types/direction.enum";
   import { TextStyle } from "@21n/types/text.enum";
@@ -10,13 +10,13 @@
   import { Size } from "@21n/types/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import { onMount } from "svelte";
-  import { appEvents } from "@21n/stores/notification.store";
+  import { appEvents } from "@nucleum/stores/notification.store";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { Display } from "@21n/types/view.type";
   import Icon from "@21n/elements/Icon.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import { InteractionMode } from "@21n/components/settings/interactionMode/interactionMode.type";
-  import { tooltip } from "@21n/actions/popover.action";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
+  import { tooltip } from "@nucleum/actions/popover.action";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import type { InputLabelInfoToolTip } from "@21n/types/input.type";
   import FormLabelTooltip from "@21n/elements/text/formLabel/FormLabelTooltip.svelte";

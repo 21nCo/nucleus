@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { pointronPreferences } from "@21n/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
-  import QuickAddDurationsEditor from "@21n/products/pointron/logs/manualLog/QuickAddDurationsEditor.svelte";
+  import QuickAddDurationsEditor from "@nucleum/features/focus/logs/manualLog/QuickAddDurationsEditor.svelte";
   import { Orientation } from "@21n/types/direction.enum";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
 
   if (!$pointronPreferences.manualEntryQuickDurations) {
     pointronPreferences.setSeedManualEntryQuickDurations();

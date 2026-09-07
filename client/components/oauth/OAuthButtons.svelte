@@ -1,10 +1,10 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Size } from "@21n/types/size.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
-  import { authClient } from "@21n/components/account/auth";
+  import { authClient } from "@nucleum/components/account/auth";
   import type { AuthFnSocialProviderId } from "@authfn/client";
   let {
     currentProgress = $bindable()

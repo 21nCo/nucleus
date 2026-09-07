@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import { ColorStrength } from "@21n/types/appearance.type";
@@ -10,9 +10,9 @@
   import { Orientation } from "@21n/types/direction.enum";
   import { SearchType } from "@21n/types/data.type";
   import { InputStyle } from "@21n/types/input.type";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import type { IEvent } from "@21n/types/event.type";
-  import { appEvents } from "@21n/stores/notification.store";
+  import { appEvents } from "@nucleum/stores/notification.store";
   import { GlobalEvent } from "@21n/types/event.enum";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
   let {

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import TimeSelector from "@21n/components/TimeSelector.svelte";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import TimeSelector from "@nucleum/components/TimeSelector.svelte";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import MultiselectDropdown from "@21n/elements/dropdown/MultiselectDropdown.svelte";
   import type { DropdownItem } from "@21n/types/dropdownItem.type";

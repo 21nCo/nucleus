@@ -1,7 +1,7 @@
 import { EmbedDataMessage, EmbedMessage } from "@21n/types/embedMessage.enum";
 import type { HapticFeedback } from "@21n/types/haptic.enum";
 import { stringify } from "@21n/shared-utils/json.utils";
-import { logger } from "@21n/components/debug/logger.client";
+import { logger } from "@nucleum/components/debug/logger.client";
 
 export function pingParent(isExtended: boolean = false) {
   let elapsed = 0;

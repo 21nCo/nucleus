@@ -1,7 +1,7 @@
 import { devices, defineConfig } from "@playwright/test";
 import fs from "node:fs";
 import path from "node:path";
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 
 import { isE2ECloudAuthMode, resolveE2EAuthMode } from "./config/auth-mode";
 import "dotenv/config";

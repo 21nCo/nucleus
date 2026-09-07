@@ -24,7 +24,7 @@
 - [ ] T017 Execute codemod for each product (`/Users/ar/dev/tidigit/apps/memotron/src/**/*`, `.../apps/pointron/src/**/*`, `.../apps/nucleus/src/**/*`, `.../apps/gathery/src/**/*`); reconcile cross-app imports.
 - [ ] T018 [P] Apply codemod to browser extensions (`/Users/ar/dev/tidigit/extensions/memotron-clipper/**/*`, `/Users/ar/dev/tidigit/extensions/memotron-share/**/*`) and validate bundler settings.
 - [ ] T019 Sweep repository via `rg '$lib|\bclient/|\bapps/|\.{2}/' /Users/ar/dev/tidigit` to catch residual legacy imports; ticket any intentional holdouts pointing to `@legacy/*`.
-- [ ] T020 Execute quickstart verification (`npm run lint`, `turbo run lint --filter=@21n/components`, `turbo run lint --filter=memotron-app`, `npm run test`) and record outcomes in plan/quickstart.
+- [ ] T020 Execute quickstart verification (`npm run lint`, `turbo run lint --filter=@nucleum/components`, `turbo run lint --filter=memotron-app`, `npm run test`) and record outcomes in plan/quickstart.
 - [ ] T021 Launch `npm run dev:memotron` (and optionally other products) to validate runtime alias resolution; document manual checks.
 - [ ] T022 Update `AGENTS.md`, `quickstart.md`, and related developer docs with finalized alias guidance, codemod usage, and warning policy.
 - [ ] T023 Draft enforcement escalation workflow: define toggle for elevating lint severity to `error`, update `contracts/alias-governance.md`, and schedule rollout communications once compliance >90%.

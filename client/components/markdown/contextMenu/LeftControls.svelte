@@ -4,16 +4,16 @@
     BlockAction,
     type IBlock,
     type IEmbedBlockBody
-  } from "@21n/components/markdown/md.type";
+  } from "@nucleum/components/markdown/md.type";
   import {
     headingNodeTypes,
     mediaNodeTypeList,
     NodeType,
     structuralNodeTypes,
     webNodeTypeList
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { onMount } from "svelte";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
   import { Size } from "@21n/types/size.enum";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
   import {
@@ -23,23 +23,23 @@
   } from "@21n/types/select.type";
   import { Placement } from "@21n/types/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import FocusRing from "@21n/components/markdown/contextMenu/FocusRing.svelte";
-  import BlockBrowser from "@21n/components/markdown/blockBrowser/BlockBrowser.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import FocusRing from "@nucleum/components/markdown/contextMenu/FocusRing.svelte";
+  import BlockBrowser from "@nucleum/components/markdown/blockBrowser/BlockBrowser.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
   import {
     AccessMode,
     ResourceActionType
-  } from "@21n/data/datafn/resource.type";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
+  } from "@nucleum/datafn/resource.type";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { Action } from "@21n/types/action.enum";
-  import { MemotronEvent } from "@21n/products/memotron/memotron.type";
+  import { MemotronEvent } from "@nucleum/products/memotron/memotron.type";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
   import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
-  import { popover, tooltip } from "@21n/actions/popover.action";
+  import { popover, tooltip } from "@nucleum/actions/popover.action";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { downloadNode } from "@21n/products/memotron/node/node.store";
-  import { resolveResourceActionIcon } from "@21n/data/datafn/resource.utils";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { downloadNode } from "@nucleum/features/memory/node/node.store";
+  import { resolveResourceActionIcon } from "@nucleum/datafn/resource.utils";
   import type { IRecordId } from "@21n/types/data.type";
   let {
     block,

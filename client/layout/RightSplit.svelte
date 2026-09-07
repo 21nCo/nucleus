@@ -2,7 +2,7 @@
   import { cubicOut } from "svelte/easing";
   import { fly } from "svelte/transition";
   import ResourceResolver from "@21n/layout/paint/ResourceResolver.svelte";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   let {
     split,
     accessMode = AccessMode.SPLIT

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { tooltip as tooltipAction } from "@21n/actions/popover.action";
+  import { tooltip as tooltipAction } from "@nucleum/actions/popover.action";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import { Size } from "@21n/types/size.enum";
   import { haptic } from "@21n/utils/embed.utils";

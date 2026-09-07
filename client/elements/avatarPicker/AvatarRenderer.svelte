@@ -1,6 +1,6 @@
 <script lang="ts">
-  import FileView from "@21n/components/files/FileView.svelte";
-  import context from "@21n/stores/context.store";
+  import FileView from "@nucleum/features/files/FileView.svelte";
+  import context from "@nucleum/stores/context.store";
   import { AvatarType, type IAvatar } from "@21n/types/avatar.type";
   import { OperatingSystem } from "@21n/types/context.type";
   import { Size } from "@21n/types/size.enum";

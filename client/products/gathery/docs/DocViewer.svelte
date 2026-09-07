@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import Node from "@21n/products/memotron/node/Node.svelte";
+  import Node from "@nucleum/features/memory/node/Node.svelte";
   import { onMount } from "svelte";
   let { id: initialId = "" }: { id?: string } = $props();
   let id = $state(initialId);

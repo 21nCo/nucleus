@@ -3,7 +3,7 @@ import fs from "node:fs";
 import { spawn, type ChildProcess } from "node:child_process";
 import http from "node:http";
 import https from "node:https";
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 
 import {
   isE2ECloudAuthMode,

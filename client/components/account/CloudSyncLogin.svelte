@@ -2,15 +2,15 @@
   import { page } from "$app/stores";
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { EmbedDataMessage, EmbedMessage } from "@21n/types/embedMessage.enum";
   import { postDataToParent, postMessageToParent } from "@21n/utils/embed.utils";
   import { isValidEmail } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { Orientation } from "@21n/types/direction.enum";
   import OAuthOptions from "./OAuthOptions.svelte";
-  import { resolveProductConfig } from "@21n/products/product.config";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import {
     authClient,
@@ -18,16 +18,16 @@
     shouldUseAuthFnBearerSession
   } from "./auth";
   import { Size } from "@21n/types/size.enum";
-  import InlineFeedbackText from "@21n/extensions/clipper/InlineFeedbackText.svelte";
+  import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType } from "@21n/types/notification.type";
   import Icon from "@21n/elements/Icon.svelte";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import { detectUserRegion } from "@21n/utils/network.utils";
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import { resolveAccountBaseUrl } from "../network";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   let {
     isSignup = $bindable(false),
     currentProgress = undefined,

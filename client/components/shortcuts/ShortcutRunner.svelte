@@ -1,19 +1,19 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { isTextElement } from "@21n/utils/browser.utils";
-  import { keyboardShortcuts } from "@21n/components/shortcuts/shortcuts.store";
-  import { appEvents } from "@21n/stores/notification.store";
+  import { keyboardShortcuts } from "@nucleum/components/shortcuts/shortcuts.store";
+  import { appEvents } from "@nucleum/stores/notification.store";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { KeyboardKey } from "@21n/types/keyboard.type";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { Action } from "@21n/types/action.enum";
-  import { InteractionMode } from "@21n/components/settings/interactionMode/interactionMode.type";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
-  import { UIStateScope } from "@21n/stores/uiState/uiState.type";
-  import context from "@21n/stores/context.store";
+  import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+  import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
+  import context from "@nucleum/stores/context.store";
   import { Embed } from "@21n/types/context.type";
 
   function checkIfSystemShortcut(event: KeyboardEvent) {

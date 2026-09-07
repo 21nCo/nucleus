@@ -2,7 +2,7 @@
   import type { Snippet } from "svelte";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import { DropDownStyle } from "@21n/types/dropdownItem.type";
-  import { appConstants } from "@21n/stores/app.store";
+  import { appConstants } from "@nucleum/stores/app.store";
   let { children }: { children?: Snippet } = $props();
   let items = appConstants.colorSchemes.map((x) => ({
     value: x.tailwindSelector,

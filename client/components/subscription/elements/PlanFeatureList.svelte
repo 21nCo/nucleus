@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
   let {
     features = [],
     moreLink = undefined

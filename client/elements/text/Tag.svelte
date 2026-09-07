@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { hoverable } from "@21n/actions/hover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
   import { cn } from "@21n/utils/ui.utils";
   import { truncateString } from "@21n/shared-utils/text.utils";
   import Icon from "@21n/elements/Icon.svelte";
@@ -9,8 +9,8 @@
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import type { IRecordId } from "@21n/types/data.type";
   import { Placement } from "@21n/types/direction.enum";
-  import context from "@21n/stores/context.store";
-  import type { IKeyboardShortcut } from "@21n/components/shortcuts/shortcut.type";
+  import context from "@nucleum/stores/context.store";
+  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
 
   let {

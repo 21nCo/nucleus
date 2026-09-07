@@ -1,12 +1,12 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import {
     nucleumDatafnStatus,
     pullDatafnNow,
     refreshNucleumDatafnStatus
-  } from "@21n/stores/datafn.store";
+  } from "@nucleum/datafn/datafn.store";
   import { onMount, onDestroy } from "svelte";
   let isSyncing = $state(false);
   let isDestroyed = false;

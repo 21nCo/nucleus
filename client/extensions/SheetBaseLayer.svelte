@@ -1,27 +1,27 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import "@21n/client/app.css";
+  import "@nucleum/client/app.css";
   import ThemeLayer from "@21n/layout/layers/themeLayer/ThemeLayer.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { appearance } from "@21n/stores/appearance.store";
+  import { appearance } from "@nucleum/stores/appearance.store";
   import { onDestroy, onMount } from "svelte";
-  import { logger } from "@21n/components/debug/logger.client";
-  import account from "@21n/stores/account.store";
-  import { getDapId } from "@21n/persistence/persistence.utils";
-  import { appStore } from "@21n/stores/app.store";
-  import { Extension } from "@21n/products/product.type";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import account from "@nucleum/stores/account.store";
+  import { getDapId } from "@nucleum/persistence/persistence.utils";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { Extension } from "@nucleum/products/product.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { pingParent } from "@21n/utils/embed.utils";
-  import SheetDebugLogs from "@21n/extensions/SheetDebugLogs.svelte";
-  import context from "@21n/stores/context.store";
+  import SheetDebugLogs from "@nucleum/extensions/SheetDebugLogs.svelte";
+  import context from "@nucleum/stores/context.store";
   import { Size } from "@21n/types/size.enum";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import {
     initializeNucleumDatafn,
     pullDatafnNow
-  } from "@21n/stores/datafn.store";
+  } from "@nucleum/datafn/datafn.store";
 
   let {
     extension,

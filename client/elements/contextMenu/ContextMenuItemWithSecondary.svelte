@@ -4,7 +4,7 @@
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import ContextMenuItemBase from "@21n/elements/contextMenu/ContextMenuItemBase.svelte";
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
   let {
     item,

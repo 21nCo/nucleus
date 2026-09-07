@@ -3,7 +3,7 @@ import { OperatingSystem } from "@21n/types/context.type";
 import { GlobalEvent, type Event as AppEvent } from "@21n/types/event.enum";
 import type { IPopoverRenderParams } from "@21n/types/popover.type";
 import { deepCopy } from "@21n/shared-utils/obj.utils";
-import { logger } from "@21n/components/debug/logger.client";
+import { logger } from "@nucleum/components/debug/logger.client";
 
 function documentDimensions() {
   const documentWidth = window.innerWidth;

@@ -1,19 +1,19 @@
 import { get, writable } from "svelte/store";
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import {
   AccessMode,
   ResourceAccessPoint
-} from "@21n/data/datafn/resource.type";
+} from "@nucleum/datafn/resource.type";
 import type { IRecordId } from "@21n/types/data.type";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-import { appStore } from "@21n/stores/app.store";
-import { logger } from "@21n/components/debug/logger.client";
+import { appStore } from "@nucleum/stores/app.store";
+import { logger } from "@nucleum/components/debug/logger.client";
 import {
   CombinationNavItemType,
   type IActiveCombination,
   type ICombinationNavItem,
   type ISideNavCombination
-} from "@21n/components/combination/combination.type";
+} from "@nucleum/components/combination/combination.type";
 import {
   cloneNavItems,
   indentItem,
@@ -25,8 +25,8 @@ import {
   removeItemById,
   updateItemLabel
 } from "./combination.utils";
-import { determineResourceType } from "@21n/data/datafn/resource.utils";
-import { datafn } from "@21n/stores/datafn.store";
+import { determineResourceType } from "@nucleum/datafn/resource.utils";
+import { datafn } from "@nucleum/datafn/datafn.store";
 
 const activeCombinationStores = new Map<string, ActiveCombinationStore>();
 

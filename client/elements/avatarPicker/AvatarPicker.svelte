@@ -5,8 +5,8 @@
   import Divider from "@21n/elements/Divider.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { appStoreShuffleEmojis } from "@21n/stores/app.store";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { appStoreShuffleEmojis } from "@nucleum/stores/app.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import { Size } from "@21n/types/size.enum";
   import { onMount, tick } from "svelte";
   import { debouncer } from "@21n/utils/utils";
@@ -23,12 +23,12 @@
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
-  import { emojis, materialSymbols } from "@21n/data/avatars";
+  import { emojis, materialSymbols } from "@nucleum/datafn/avatars";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import UploadButton from "@21n/elements/button/UploadButton.svelte";
   import { abg, cn } from "@21n/utils/ui.utils";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
 
   let {
     mode = AvatarType.ICON,

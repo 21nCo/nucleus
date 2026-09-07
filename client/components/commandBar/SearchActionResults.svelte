@@ -5,11 +5,11 @@
   import type { Component } from "svelte";
   import { Size } from "@21n/types/size.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import ResultItem from "@21n/components/commandBar/ResultItem.svelte";
-  import type { IResource } from "@21n/data/datafn/resource.type";
+  import ResultItem from "@nucleum/components/commandBar/ResultItem.svelte";
+  import type { IResource } from "@nucleum/datafn/resource.type";
   import TextWithHoverTooltip from "@21n/elements/text/TextWithHoverTooltip.svelte";
   import { debouncer } from "@21n/utils/utils";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import BreadcrumbMini from "@21n/elements/breadcrumb/BreadcrumbMini.svelte";
   let {
     action,

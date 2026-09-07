@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { AccessMode } from "@21n/data/datafn/resource.type";
-  import { appStore } from "@21n/stores/app.store";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+  import { appStore } from "@nucleum/stores/app.store";
   import type { IRecordId } from "@21n/types/data.type";
   import BreadcrumbItem from "@21n/elements/breadcrumbsV2/BreadcrumbItem.svelte";
   import type { IBreadcrumbItem } from "@21n/elements/breadcrumbsV2/breadcrumbItem.type";

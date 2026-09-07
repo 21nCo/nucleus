@@ -4,7 +4,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import Badge from "@21n/elements/text/Badge.svelte";
   import type { IContextMenuItem } from "@21n/types/select.type";
-  import { hoverable } from "@21n/actions/hover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
   let {
     item,
     on = $bindable(false),

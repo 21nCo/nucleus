@@ -4,7 +4,7 @@
   import Icon from "../Icon.svelte";
   import { Placement } from "@21n/types/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { hoverable } from "@21n/actions/hover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
 
   let {
     edge = Placement.Bottom,

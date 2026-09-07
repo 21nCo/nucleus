@@ -2,7 +2,7 @@
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { InfoTextType } from "@21n/types/text.type";
   import { formatDatetime } from "@21n/utils/time.utils";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
 
   let {
     deletedAt,

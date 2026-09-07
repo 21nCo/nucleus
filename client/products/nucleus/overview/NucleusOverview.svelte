@@ -2,14 +2,14 @@
 
 <script lang="ts">
   import { onMount } from "svelte";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
-  import { UIState, UIStateScope } from "@21n/stores/uiState/uiState.type";
-  import { OverviewPanel, Product } from "@21n/products/product.type";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
+  import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
+  import { OverviewPanel, Product } from "@nucleum/products/product.type";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
-  import AnalyticsV2 from "@21n/products/pointron/analytics/AnalyticsV2.svelte";
-  import MemotronOverview from "@21n/products/memotron/overview/MemotronOverview.svelte";
+  import AnalyticsV2 from "@nucleum/features/focus/analytics/AnalyticsV2.svelte";
+  import MemotronOverview from "@nucleum/products/memotron/overview/MemotronOverview.svelte";
   import BoxSwitcher from "@21n/elements/switcher/BoxSwitcher.svelte";
-  import { resolveProductConfig } from "@21n/products/product.config";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
 
   let selectedPanel = $state<OverviewPanel>(
     resolveSavedState() ?? OverviewPanel.DASHBOARD

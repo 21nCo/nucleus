@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { appStore } from "@21n/stores/app.store";
-  import context from "@21n/stores/context.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import context from "@nucleum/stores/context.store";
   import { LinkVariant } from "@21n/types/button.type";
   import { cn } from "@21n/utils/ui.utils";
   import { isValidEmail } from "@21n/shared-utils/text.utils";

@@ -345,7 +345,7 @@ async function readAdvancedCompositionDraft(page: Page) {
     },
     {
       modulePath: resolveRepoFsImportPath(
-        "client/products/pointron/focus/advanced/composition/advancedCompositionDraft.store.ts"
+        "client/features/focus/advanced/composition/advancedCompositionDraft.store.ts"
       )
     }
   );

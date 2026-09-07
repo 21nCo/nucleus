@@ -3,29 +3,29 @@
     IBlock,
     IMarkdown,
     IMarkdownParams
-  } from "@21n/components/markdown/md.type";
+  } from "@nucleum/components/markdown/md.type";
   import {
     NodeType,
     headingNodeTypes,
     type IActiveNode,
     type INodeHierarchyV1,
     type INodeStructure
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { onDestroy, onMount } from "svelte";
-  import Markdown from "@21n/components/markdown/Markdown.svelte";
+  import Markdown from "@nucleum/components/markdown/Markdown.svelte";
   import {
     extractRootStructure,
     extractStructureForChildren,
     recursivelyExtractAllChildrenIntoArray
-  } from "@21n/components/markdown/markdown.utils";
-  import { hierarchyFactorLimit } from "@21n/products/memotron/node/node.store";
-  import { isReplaceableMd } from "@21n/components/markdown/markdown.store";
-  import { logger } from "@21n/components/debug/logger.client";
+  } from "@nucleum/components/markdown/markdown.utils";
+  import { hierarchyFactorLimit } from "@nucleum/features/memory/node/node.store";
+  import { isReplaceableMd } from "@nucleum/components/markdown/markdown.store";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import type { IRecordId } from "@21n/types/data.type";
   import {
     isSameResource,
     resourceInList
-  } from "@21n/data/datafn/resource.utils";
+  } from "@nucleum/datafn/resource.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/types/button.type";
 

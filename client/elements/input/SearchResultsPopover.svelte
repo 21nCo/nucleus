@@ -4,13 +4,13 @@
   import SearchResultItem from "@21n/elements/input/SearchResultItem.svelte";
   import { debouncer } from "@21n/utils/utils";
   import { cn } from "@21n/utils/ui.utils";
-  import type { IResource } from "@21n/data/datafn/resource.type";
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
-  import { logger } from "@21n/components/debug/logger.client";
+  import type { IResource } from "@nucleum/datafn/resource.type";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import Icon from "@21n/elements/Icon.svelte";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import { appStore } from "@21n/stores/app.store";
-  import { determineResourceType } from "@21n/data/datafn/resource.utils";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
   type SearchItem = Partial<IResource & Record<string, unknown>>;
 

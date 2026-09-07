@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { reorderList } from "@21n/actions/rearrange.action";
+  import { reorderList } from "@nucleum/actions/rearrange.action";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import { InputStyle } from "@21n/types/input.type";

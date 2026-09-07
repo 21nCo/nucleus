@@ -2,7 +2,7 @@
 
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import appearance from "@21n/stores/appearance.store";
+  import appearance from "@nucleum/stores/appearance.store";
   import {
     resolveIfActiveFgFg,
     retrieveCurrentColors

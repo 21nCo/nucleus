@@ -1,7 +1,7 @@
 import type { IAction } from "@21n/types/action.type";
-import type { InteractionMode } from "@21n/components/settings/interactionMode/interactionMode.type";
+import type { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
 import type { IMetadata } from "@21n/layout/metadata.type";
-import type { Product } from "@21n/products/product.type";
+import type { Product } from "@nucleum/products/product.type";
 import type { OAuthProviderConfig } from "@21n/types/oauth.type";
 export type IAppStore = {
   product: Product;

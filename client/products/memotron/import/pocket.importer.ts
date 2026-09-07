@@ -3,20 +3,20 @@ import {
   CollectionLayout,
   type ICollectionViewCapture,
   type ICollectionCapture
-} from "@21n/components/collection/collection.type";
+} from "@nucleum/features/collections/collection.type";
 import JSZip from "jszip";
-import { sanitizeAndResolve } from "@21n/products/memotron/node/url.utils";
-import { NodeType } from "@21n/products/memotron/node/node.type";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { generateResourceId } from "@21n/data/datafn/id.utils";
+import { sanitizeAndResolve } from "@nucleum/features/memory/node/url.utils";
+import { NodeType } from "@nucleum/features/memory/node/node.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 import { GlobalEvent } from "@21n/types/event.enum";
-import { logger } from "@21n/components/debug/logger.client";
+import { logger } from "@nucleum/components/debug/logger.client";
 import { performApiCall } from "@21n/utils/network.utils";
 import { UserDataMode } from "@21n/types/account.type";
-import account from "@21n/stores/account.store";
+import account from "@nucleum/stores/account.store";
 import { parse } from "@21n/shared-utils/json.utils";
-import { datafn } from "@21n/stores/datafn.store";
+import { datafn } from "@nucleum/datafn/datafn.store";
 import type { IRecordId } from "@21n/types/data.type";
 
 function isYoutubeUrl(url: string) {

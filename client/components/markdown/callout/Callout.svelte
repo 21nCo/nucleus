@@ -1,20 +1,20 @@
 <script lang="ts">
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import Avatar from "@21n/elements/avatarPicker/Avatar.svelte";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
-  import { markdownSettings } from "@21n/components/markdown/markdown.settings";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
+  import { markdownSettings } from "@nucleum/components/markdown/markdown.settings";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
   import type {
     ICalloutBody,
     ICalloutSetting
-  } from "@21n/components/markdown/md.type";
-  import TextContent from "@21n/components/markdown/content/TextContent.svelte";
-  import CalloutSelector from "@21n/components/markdown/callout/CalloutSelector.svelte";
-  import { MemotronAction } from "@21n/products/memotron/memotronAction.enum";
-  import { appStore } from "@21n/stores/app.store";
+  } from "@nucleum/components/markdown/md.type";
+  import TextContent from "@nucleum/components/markdown/content/TextContent.svelte";
+  import CalloutSelector from "@nucleum/components/markdown/callout/CalloutSelector.svelte";
+  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { appStore } from "@nucleum/stores/app.store";
   import { cn } from "@21n/utils/ui.utils";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
   import type { IRecordId } from "@21n/types/data.type";
 
   let {

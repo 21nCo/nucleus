@@ -1,4 +1,4 @@
-import { logger } from "@21n/components/debug/logger.client";
+import { logger } from "@nucleum/components/debug/logger.client";
 
 /**
  * Common video utilities for all video platforms

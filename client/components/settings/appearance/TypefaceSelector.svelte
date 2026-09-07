@@ -2,9 +2,9 @@
   import { Orientation, Placement } from "@21n/types/direction.enum";
   import { Size } from "@21n/types/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
-  import { popover, TriggerMethod } from "@21n/actions/popover.action";
+  import { popover, TriggerMethod } from "@nucleum/actions/popover.action";
   import { cn } from "@21n/utils/ui.utils";
-  import TypefaceDropdown from "@21n/components/settings/appearance/TypefaceDropdown.svelte";
+  import TypefaceDropdown from "@nucleum/components/settings/appearance/TypefaceDropdown.svelte";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
 
   let {

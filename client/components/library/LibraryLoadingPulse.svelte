@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import { Arrangement } from "@21n/types/direction.enum";
   let {
     isTail = false,

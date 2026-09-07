@@ -1,14 +1,14 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { searchStore } from "@21n/components/search/search.store";
+  import { searchStore } from "@nucleum/components/search/search.store";
   import { InputStyle } from "@21n/types/input.type";
   import { cn } from "@21n/utils/ui.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import {
     resolveProductResources,
     resolveResourceIcon
-  } from "@21n/data/datafn/resource.utils";
-  import { appStore } from "@21n/stores/app.store";
+  } from "@nucleum/datafn/resource.utils";
+  import { appStore } from "@nucleum/stores/app.store";
   import { properCase } from "@21n/shared-utils/text.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";

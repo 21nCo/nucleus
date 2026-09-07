@@ -2,23 +2,23 @@
   import type {
     IBlock,
     IMarkdownStore
-  } from "@21n/components/markdown/md.type";
+  } from "@nucleum/components/markdown/md.type";
   import { onMount } from "svelte";
-  import { getMdStore } from "@21n/components/markdown/markdown.store";
+  import { getMdStore } from "@nucleum/components/markdown/markdown.store";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { headingNodeTypes } from "@21n/products/memotron/node/node.type";
+  import { headingNodeTypes } from "@nucleum/features/memory/node/node.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { Size } from "@21n/types/size.enum";
-  import { tooltip } from "@21n/actions/popover.action";
+  import { tooltip } from "@nucleum/actions/popover.action";
   import { Placement } from "@21n/types/direction.enum";
   import {
     isSameResource,
     resourceInList
-  } from "@21n/data/datafn/resource.utils";
-  import TableOfContentsList from "@21n/components/markdown/TableOfContentsList.svelte";
-  import { hoverable } from "@21n/actions/hover.action";
+  } from "@nucleum/datafn/resource.utils";
+  import TableOfContentsList from "@nucleum/components/markdown/TableOfContentsList.svelte";
+  import { hoverable } from "@nucleum/actions/hover.action";
   let {
     mdId,
     isHideEmptyPlaceholder = false,

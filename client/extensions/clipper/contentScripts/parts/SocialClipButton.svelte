@@ -2,9 +2,9 @@
   import { Placement } from "@21n/types/direction.enum";
   import { Size } from "@21n/types/size.enum";
   import HoverableElement from "@21n/elements/HoverableElement.svelte";
-  import type { NodeType } from "@21n/products/memotron/node/node.type";
-  import { webpage } from "@21n/extensions/clipper/contentScripts/store";
-  import { logger } from "@21n/components/debug/logger.client";
+  import type { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { AlertType } from "@21n/types/notification.type";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";

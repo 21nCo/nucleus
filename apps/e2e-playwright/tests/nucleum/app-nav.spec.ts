@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 import { Action } from "@21n/types/action.enum";
 import { ensureInAppOnHome, runCommand } from "../utils/helpers";
 import { expectSurfaceVisible } from "../utils/surface-contracts";

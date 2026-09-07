@@ -3,8 +3,8 @@
   import Button from "@21n/elements/button/Button.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import NodeThumbnail from "@21n/products/memotron/node/thumbnail/NodeThumbnail.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import NodeThumbnail from "@nucleum/features/memory/node/thumbnail/NodeThumbnail.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
   import { ButtonVariant } from "@21n/types/button.type";
   import { Size } from "@21n/types/size.enum";
   import { PanelSwitcherStyle } from "@21n/types/switcher.enum";

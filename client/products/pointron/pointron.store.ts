@@ -1,7 +1,7 @@
 import { get, writable } from "svelte/store";
 import type { PointronConstants } from "@21n/types/pointron/pointronConstants.type";
 
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import { TimerMode } from "@21n/types/pointron/timerMode.enum";
 import {
   SessionCompositionType,
@@ -16,7 +16,7 @@ import type {
   IPointronPreferences
 } from "@21n/types/pointron/pointronPreferences.type";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-import { datafn } from "@21n/stores/datafn.store";
+import { datafn } from "@nucleum/datafn/datafn.store";
 
 /**
  * @deprecated

@@ -1,13 +1,13 @@
 <script lang="ts">
-  import view from "@21n/stores/view.store";
-  import { confirmationNotification } from "@21n/stores/notification.store";
-  import { lastImportTime } from "@21n/products/pointron/pointron.store";
+  import view from "@nucleum/stores/view.store";
+  import { confirmationNotification } from "@nucleum/stores/notification.store";
+  import { lastImportTime } from "@nucleum/products/pointron/pointron.store";
   import {
     StatusMessageType,
     type StatusMessage
   } from "@21n/types/statusMessage.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { TextStyle } from "@21n/types/text.enum";
   import Text from "@21n/elements/text/Text.svelte";
   import type {
@@ -15,7 +15,7 @@
     TableRowItem
   } from "@21n/types/tableCell.type";
   import { onMount } from "svelte";
-  import ExportData from "@21n/products/pointron/settings/data/ExportData.svelte";
+  import ExportData from "@nucleum/products/pointron/settings/data/ExportData.svelte";
   import { ButtonVariant } from "@21n/types/button.type";
   import Table2 from "@21n/elements/table/Table2.svelte";
   import {
@@ -26,7 +26,7 @@
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { Size } from "@21n/types/size.enum";
   import { InfoTextType } from "@21n/types/text.type";
-  import ImportAppListPart from "@21n/products/pointron/settings/data/ImportAppListPart.svelte";
+  import ImportAppListPart from "@nucleum/products/pointron/settings/data/ImportAppListPart.svelte";
 
   let clearMessage: string | undefined = undefined;
   let fileInput: HTMLInputElement;

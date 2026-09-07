@@ -2,8 +2,8 @@
 
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 
 const mocks = vi.hoisted(() => ({
   mutate: vi.fn(),
@@ -11,7 +11,7 @@ const mocks = vi.hoisted(() => ({
   successToast: vi.fn()
 }));
 
-vi.mock("@21n/stores/app.store", () => ({
+vi.mock("@nucleum/stores/app.store", () => ({
   appStore: {
     openResource: vi.fn(),
     closeResource: vi.fn(),
@@ -20,12 +20,12 @@ vi.mock("@21n/stores/app.store", () => ({
   }
 }));
 
-vi.mock("@21n/data/datafn/resource.store", () => ({
+vi.mock("@nucleum/datafn/resource.store", () => ({
   copyActiveResourceContents: vi.fn(),
   updateActiveResource: vi.fn()
 }));
 
-vi.mock("@21n/components/record/bulkedit.store", () => ({
+vi.mock("@nucleum/components/record/bulkedit.store", () => ({
   bulkEditStore: {
     getState: vi.fn().mockReturnValue({ selectedIds: [] }),
     matchesContext: vi.fn().mockReturnValue(false),
@@ -34,17 +34,17 @@ vi.mock("@21n/components/record/bulkedit.store", () => ({
   }
 }));
 
-vi.mock("@21n/components/record/record.store", () => ({
+vi.mock("@nucleum/components/record/record.store", () => ({
   BulkEditor: class {
     run = vi.fn();
   }
 }));
 
-vi.mock("@21n/products/memotron/memotron.utils", () => ({
+vi.mock("@nucleum/products/memotron/memotron.utils", () => ({
   copyResourceLinkToClipboard: vi.fn()
 }));
 
-vi.mock("@21n/stores/uiState/uiState.store", () => ({
+vi.mock("@nucleum/stores/uiState/uiState.store", () => ({
   uiState: {
     getState: vi.fn().mockReturnValue([])
   }
@@ -57,13 +57,13 @@ vi.mock("@21n/layout/topNav/tabs/tabs.store", () => ({
   }
 }));
 
-vi.mock("@21n/stores/notification.store", () => ({
+vi.mock("@nucleum/stores/notification.store", () => ({
   toasts: {
     success: mocks.successToast
   }
 }));
 
-vi.mock("@21n/stores/datafn.store", () => ({
+vi.mock("@nucleum/datafn/datafn.store", () => ({
   datafn: {
     table: mocks.table
   }

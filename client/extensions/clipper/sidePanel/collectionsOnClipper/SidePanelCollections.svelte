@@ -1,29 +1,29 @@
 <script lang="ts">
-  import { extensionDatafn } from "@21n/extensions/extension.store";
-  import { DatafnExtensionMethod } from "@21n/extensions/extension.store";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { extensionDatafn } from "@nucleum/extensions/extension.store";
+  import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import {
     CollectionLayout,
     CollectionType
-  } from "@21n/components/collection/collection.type";
-  import type { ICollection } from "@21n/components/collection/collection.type";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/collections/collection.type";
+  import type { ICollection } from "@nucleum/features/collections/collection.type";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { activeResourceFilter } from "@21n/utils/utils";
-  import CollectionsList from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/CollectionsList.svelte";
-  import CollectionItemsView from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/CollectionItemsView.svelte";
+  import CollectionsList from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/CollectionsList.svelte";
+  import CollectionItemsView from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/CollectionItemsView.svelte";
   import type {
     CollectionData,
     CollectionItem
-  } from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/types";
+  } from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/types";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import Badge from "@21n/elements/text/Badge.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { Size } from "@21n/types/size.enum";
-  import NewCollectionWizard from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/NewCollectionWizard.svelte";
-  import { logger } from "@21n/components/debug/logger.client";
+  import NewCollectionWizard from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/NewCollectionWizard.svelte";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import ErrorStatusPane from "@21n/elements/feedback/ErrorStatusPane.svelte";
-  import { generateResourceId } from "@21n/data/datafn/id.utils";
+  import { generateResourceId } from "@nucleum/datafn/id.utils";
 
   let {
     currentUrl

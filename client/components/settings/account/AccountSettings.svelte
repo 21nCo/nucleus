@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import { onMount } from "svelte";
   import {
     frameEmailFromParts,
@@ -17,41 +17,41 @@
   import { TextStyle } from "@21n/types/text.enum";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { Size } from "@21n/types/size.enum";
-  import ProfilePicture from "@21n/components/settings/account/ProfilePicture.svelte";
+  import ProfilePicture from "@nucleum/components/settings/account/ProfilePicture.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import Icon from "@21n/elements/Icon.svelte";
-  import { fileDrop } from "@21n/actions/fileDrop.action";
-  import { toasts } from "@21n/stores/notification.store";
+  import { fileDrop } from "@nucleum/actions/fileDrop.action";
+  import { toasts } from "@nucleum/stores/notification.store";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import { isRecordId } from "@21n/data/datafn/resource.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { isRecordId } from "@nucleum/datafn/resource.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import type { IRecordId } from "@21n/types/data.type";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@21n/types/action.enum";
   import {
     determineIfPlanIsActive,
     resolveNextRenewalDate,
     resolvePlanLabel
-  } from "@21n/components/subscription/userPlan.utils";
+  } from "@nucleum/components/subscription/userPlan.utils";
   import {
     BillingCycle,
     PlanType
-  } from "@21n/components/subscription/userPlan.type";
+  } from "@nucleum/components/subscription/userPlan.type";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
-  import RestorePurchaseAction from "@21n/components/subscription/RestorePurchaseAction.svelte";
-  import view from "@21n/stores/view.store";
+  import RestorePurchaseAction from "@nucleum/components/subscription/RestorePurchaseAction.svelte";
+  import view from "@nucleum/stores/view.store";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import { Product } from "@21n/products/product.type";
+  import { Product } from "@nucleum/products/product.type";
   import { hasLegacyCloudSession } from "@21n/utils/account.utils";
   import {
     authClient,
     resolveAuthFnSessionMode,
     shouldUseAuthFnBearerSession
-  } from "@21n/components/account/auth";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
+  } from "@nucleum/components/account/auth";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import type {
     AuthFnAccountDetails,
     AuthFnSocialProviderId

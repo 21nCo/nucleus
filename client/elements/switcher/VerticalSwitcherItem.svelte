@@ -7,8 +7,8 @@
   import { bg, cn } from "@21n/utils/ui.utils";
   import type { ISelectItem } from "@21n/types/select.type";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { tooltip } from "@21n/actions/popover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { tooltip } from "@nucleum/actions/popover.action";
   let {
     item,
     style = VerticalSwitcherStyle.BAR,

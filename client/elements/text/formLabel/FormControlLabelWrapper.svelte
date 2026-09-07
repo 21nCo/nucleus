@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { Orientation } from "@21n/types/direction.enum";
   import type { InputLabel } from "@21n/types/input.type";
   import { Size } from "@21n/types/size.enum";

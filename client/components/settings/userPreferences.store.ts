@@ -9,17 +9,17 @@ import {
   detectTimeZoneFallback,
   getTimeZonesWithOffsets
 } from "@21n/utils/time.utils";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { TranscriptionModel } from "@21n/products/memotron/taco/taco.types";
-import { tzStore } from "@21n/components/settings/timezone/tz.store";
-import { datafn } from "@21n/stores/datafn.store";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { TranscriptionModel } from "@nucleum/products/memotron/taco/taco.types";
+import { tzStore } from "@nucleum/components/settings/timezone/tz.store";
+import { datafn } from "@nucleum/datafn/datafn.store";
 import { get, writable } from "svelte/store";
 import {
   acknowledgeOptimisticKvEntries,
   addOptimisticKvEntries,
   applyOptimisticKvEntries,
   removeOptimisticKvEntries
-} from "@21n/stores/optimisticKv.utils";
+} from "@nucleum/datafn/optimisticKv.utils";
 import type { OptimisticKvEntries } from "@21n/types/datafn.type";
 
 const defaultColorSchemeId = "colorscheme:clean_tidyblue_light";

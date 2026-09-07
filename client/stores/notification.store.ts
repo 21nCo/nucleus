@@ -11,10 +11,10 @@ import { EmbedMessage } from "@21n/types/embedMessage.enum";
 import { GlobalEvent } from "@21n/types/event.enum";
 import type { IEvent } from "@21n/types/event.type";
 import type { Event } from "@21n/types/event.enum";
-import { ObservableStore } from "@21n/stores/client.store";
-import { logger } from "@21n/components/debug/logger.client";
+import { ObservableStore } from "@nucleum/stores/client.store";
+import { logger } from "@nucleum/components/debug/logger.client";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-import { ErrorMessage } from "@21n/components/error/error.type";
+import { ErrorMessage } from "@nucleum/components/error/error.type";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 
 export const toastDefaultDuration = 3500;

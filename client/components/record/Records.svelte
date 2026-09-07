@@ -1,43 +1,43 @@
 <script lang="ts">
   import { Arrangement } from "@21n/types/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import CollectionThumbnail from "@21n/components/collection/thumbnail/CollectionThumbnail.svelte";
-  import CombinationThumbnail from "@21n/components/combination/thumbnail/CombinationThumbnail.svelte";
-  import NodeThumbnail from "@21n/products/memotron/node/thumbnail/NodeThumbnail.svelte";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import CollectionThumbnail from "@nucleum/features/collections/thumbnail/CollectionThumbnail.svelte";
+  import CombinationThumbnail from "@nucleum/components/combination/thumbnail/CombinationThumbnail.svelte";
+  import NodeThumbnail from "@nucleum/features/memory/node/thumbnail/NodeThumbnail.svelte";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import { Size } from "@21n/types/size.enum";
   import {
     ResourceAccessPoint,
     AccessMode,
     ResourceAccessPointState
-  } from "@21n/data/datafn/resource.type";
-  import { bulkEditStore } from "@21n/components/record/bulkedit.store";
-  import FileView from "@21n/components/files/FileView.svelte";
-  import type { INodeThumb } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/datafn/resource.type";
+  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
+  import FileView from "@nucleum/features/files/FileView.svelte";
+  import type { INodeThumb } from "@nucleum/features/memory/node/node.type";
   import type {
     ICollection,
     ICollectionThumb
-  } from "@21n/components/collection/collection.type";
-  import type { IProperty } from "@21n/components/collection/properties/property.type";
-  import type { ISideNavCombination } from "@21n/components/combination/combination.type";
-  import type { IFile } from "@21n/components/files/file.type";
-  import { determineResourceType } from "@21n/data/datafn/resource.utils";
-  import NodeItems from "@21n/products/memotron/node/NodeRecords.svelte";
-  import LibraryLoadingPulse from "@21n/components/library/LibraryLoadingPulse.svelte";
-  import ObjectiveThumbnail from "@21n/components/goals/thumbnail/GoalThumbnail.svelte";
-  import TaskThumbnail from "@21n/components/tasks/TaskThumbnail.svelte";
-  import TaskRecords from "@21n/components/tasks/TaskRecords.svelte";
-  import EventThumbnail from "@21n/components/events/EventThumbnail.svelte";
-  import type { IObjectiveThumb } from "@21n/components/goals/goal.type";
-  import type { ITaskThumb } from "@21n/components/tasks/task.type";
-  import type { ICalendarEvent } from "@21n/components/events/event.type";
+  } from "@nucleum/features/collections/collection.type";
+  import type { IProperty } from "@nucleum/features/collections/properties/property.type";
+  import type { ISideNavCombination } from "@nucleum/components/combination/combination.type";
+  import type { IFile } from "@nucleum/features/files/file.type";
+  import { determineResourceType } from "@nucleum/datafn/resource.utils";
+  import NodeItems from "@nucleum/features/memory/node/NodeRecords.svelte";
+  import LibraryLoadingPulse from "@nucleum/components/library/LibraryLoadingPulse.svelte";
+  import ObjectiveThumbnail from "@nucleum/features/focus/goals/thumbnail/GoalThumbnail.svelte";
+  import TaskThumbnail from "@nucleum/features/focus/tasks/TaskThumbnail.svelte";
+  import TaskRecords from "@nucleum/features/focus/tasks/TaskRecords.svelte";
+  import EventThumbnail from "@nucleum/features/calendar/events/EventThumbnail.svelte";
+  import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
+  import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
+  import type { ICalendarEvent } from "@nucleum/features/calendar/events/event.type";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
   import { stringify } from "@21n/shared-utils/json.utils";
-  import { appStore } from "@21n/stores/app.store";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteDataStore } from "@datafn/svelte";
-  import { datafnHeavyComputedSignalOptions } from "@21n/data/datafn/signalCache";
+  import { datafnHeavyComputedSignalOptions } from "@nucleum/datafn/signalCache";
   type RecordItem =
     | INodeThumb
     | ICollection

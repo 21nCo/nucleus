@@ -1,14 +1,14 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import InlineFeedbackText from "@21n/extensions/clipper/InlineFeedbackText.svelte";
+  import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import { Orientation } from "@21n/types/direction.enum";
   import { AlertType } from "@21n/types/notification.type";
   import { Size } from "@21n/types/size.enum";
   import { isValidEmail } from "@21n/shared-utils/text.utils";
-  import { appStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import { authClient } from "./auth";
   import Icon from "@21n/elements/Icon.svelte";
   import { page } from "$app/stores";

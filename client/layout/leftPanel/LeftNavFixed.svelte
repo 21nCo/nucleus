@@ -7,20 +7,20 @@
   import { Size } from "@21n/types/size.enum";
   import LeftBottomBar from "@21n/layout/leftPanel/LeftBottomBar.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { popover, tooltip } from "@21n/actions/popover.action";
+  import { popover, tooltip } from "@nucleum/actions/popover.action";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
   import LeftNavSettingsPopover from "@21n/layout/leftPanel/LeftNavSettingsPopover.svelte";
   import { Placement } from "@21n/types/direction.enum";
   import Icon from "@21n/elements/Icon.svelte";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
-  import { UIState, UIStateScope } from "@21n/stores/uiState/uiState.type";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
+  import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { onMount } from "svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import OfflineStatusMessage from "@21n/elements/feedback/OfflineStatusMessage.svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { Action } from "@21n/types/action.enum";
   import BoxButton from "@21n/elements/button/BoxButton.svelte";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import { page } from "$app/stores";
   import AppMenuSwitcherItem from "./appMenuSwitcher/AppMenuSwitcherItem.svelte";
 

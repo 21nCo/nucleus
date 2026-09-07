@@ -2,7 +2,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import type { IQuickAccessItem } from "@21n/components/home/home.type";
+  import type { IQuickAccessItem } from "@nucleum/components/home/home.type";
   let {
     items = [],
     onItemClick = undefined

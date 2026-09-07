@@ -1,10 +1,11 @@
 {
-  "name": "@21n/products",
+  "name": "@nucleum/products",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "dependencies": {
-    "@21n/data": "*",
+    "@nucleum/datafn": "*",
+    "@nucleum/features": "*",
     "@nucleum/schema": "*",
     "@datafn/client": "0.1.0",
     "@datafn/svelte": "0.1.0"

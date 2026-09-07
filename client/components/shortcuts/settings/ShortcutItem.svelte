@@ -1,14 +1,14 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Size } from "@21n/types/size.enum";
-  import { keyboardShortcuts } from "@21n/components/shortcuts/shortcuts.store";
-  import type { IKeyboardShortcut } from "@21n/components/shortcuts/shortcut.type";
+  import { keyboardShortcuts } from "@nucleum/components/shortcuts/shortcuts.store";
+  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
   import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
   import { OperatingSystem } from "@21n/types/context.type";
-  import context from "@21n/stores/context.store";
-  import { resolveShortcutText, resolveModifiers } from "@21n/components/shortcuts/shortcut.utils";
-  import { tooltip } from "@21n/actions/popover.action";
+  import context from "@nucleum/stores/context.store";
+  import { resolveShortcutText, resolveModifiers } from "@nucleum/components/shortcuts/shortcut.utils";
+  import { tooltip } from "@nucleum/actions/popover.action";
   let {
     action,
     shortcut,

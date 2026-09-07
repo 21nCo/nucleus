@@ -20,7 +20,7 @@ import {
   resolveCloneDownPaginateQuery,
   resolveSyncDownQueryForV3
 } from "./sync.utils";
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 
 /**
  * Syncs the user data from clients to the database

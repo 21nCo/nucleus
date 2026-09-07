@@ -4,8 +4,8 @@
   import TopBarResourceItem from "../topNav/tabs/TopBarResourceItem.svelte";
   import TopNavLeftLogo from "../topNav/TopNavLeftLogo.svelte";
   import type { Action } from "@21n/types/action.enum";
-  import { isRecordId } from "@21n/data/datafn/resource.utils";
-  import context from "@21n/stores/context.store";
+  import { isRecordId } from "@nucleum/datafn/resource.utils";
+  import context from "@nucleum/stores/context.store";
   import { cn } from "@21n/utils/ui.utils";
 
   function handleClick(item: Action | IRecordId) {

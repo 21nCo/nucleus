@@ -3,7 +3,7 @@
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
   import { Size } from "@21n/types/size.enum";
-  import LinkSearchResultItem from "@21n/products/memotron/common/linkbox/LinkSearchResultItem.svelte";
+  import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
   import SearchResultsPopover from "@21n/elements/input/SearchResultsPopover.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import Button from "@21n/elements/button/Button.svelte";
@@ -11,7 +11,7 @@
   import Badge from "@21n/elements/text/Badge.svelte";
   import { isValidNumber } from "@21n/shared-utils/text.utils";
   import { Display } from "@21n/types/view.type";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   let {
     group,
     index,

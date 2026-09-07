@@ -64,7 +64,7 @@ async function queryCollectionState(page: Page, ids: string[]) {
       ids,
       modulePaths: {
         datafnStorePath: resolveRepoFsImportPath(
-          "client/stores/datafn.store.ts"
+          "client/datafn/datafn.store.ts"
         )
       }
     }

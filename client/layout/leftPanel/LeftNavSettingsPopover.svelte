@@ -1,25 +1,25 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { appMenuStore } from "@21n/stores/appMenu/appMenu.store";
-  import { acquireDnDPage, appStore } from "@21n/stores/app.store";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { appMenuStore } from "@nucleum/stores/appMenu/appMenu.store";
+  import { acquireDnDPage, appStore } from "@nucleum/stores/app.store";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
   import {
     reorderList,
     type DragDropEvent
-  } from "@21n/actions/rearrange.action";
+  } from "@nucleum/actions/rearrange.action";
   import {
     resolveProductResources,
     shiftResourceInArray
-  } from "@21n/data/datafn/resource.utils";
+  } from "@nucleum/datafn/resource.utils";
   import { cn } from "@21n/utils/ui.utils";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
-  import { UIState, UIStateScope } from "@21n/stores/uiState/uiState.type";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
+  import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { properCase } from "@21n/shared-utils/text.utils";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { InfoTextType } from "@21n/types/text.type";

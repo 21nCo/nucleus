@@ -1,4 +1,4 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 
 export function isCustomLibrary(resource: Resource) {
   return [Resource.relation, Resource.task].includes(resource);

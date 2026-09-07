@@ -3,8 +3,8 @@
   import { page } from "$app/stores";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ResourceResolver from "@21n/layout/paint/ResourceResolver.svelte";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
-  import { initializeNucleumPublicLinkDatafn } from "@21n/stores/datafn.store";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+  import { initializeNucleumPublicLinkDatafn } from "@nucleum/datafn/datafn.store";
 
   let isReady = $state(false);
   let errorMessage = $state("");

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { InputStyle, type InputLabel } from "@21n/types/input.type";
   import InputBaseElement from "@21n/elements/InputBaseElement.svelte";
   import { cn } from "@21n/utils/ui.utils";

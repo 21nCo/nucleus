@@ -2,8 +2,8 @@
   import { Placement } from "@21n/types/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
-  import { CollectionType } from "@21n/components/collection/collection.type";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
+  import { CollectionType } from "@nucleum/features/collections/collection.type";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
   let {
     contentType = undefined,
     placement = Placement.TopLeft

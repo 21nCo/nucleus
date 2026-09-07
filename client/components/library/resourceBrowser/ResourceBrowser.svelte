@@ -4,32 +4,32 @@
   import { ButtonStyle } from "@21n/types/button.type";
   import { Arrangement } from "@21n/types/direction.enum";
   import { Size } from "@21n/types/size.enum";
-  import { appStore } from "@21n/stores/app.store";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import { page } from "$app/stores";
   import ResourceResolver from "@21n/layout/paint/ResourceResolver.svelte";
-  import { resourceAction } from "@21n/data/datafn/resource.utils";
+  import { resourceAction } from "@nucleum/datafn/resource.utils";
   import {
     ResourceAccessPoint,
     ResourceActionType,
     AccessMode,
     ResourceAccessPointState
-  } from "@21n/data/datafn/resource.type";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
+  } from "@nucleum/datafn/resource.type";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { UIState } from "@21n/stores/uiState/uiState.type";
-  import LibraryRecordsPane from "@21n/components/library/LibraryRecordsPane.svelte";
+  import { UIState } from "@nucleum/stores/uiState/uiState.type";
+  import LibraryRecordsPane from "@nucleum/components/library/LibraryRecordsPane.svelte";
   import {
     isHideCreateAction,
     resolveResourceTooltip
-  } from "@21n/components/library/library.utils";
-  import ComponentShortcutListener from "@21n/components/shortcuts/ComponentShortcutListener.svelte";
+  } from "@nucleum/components/library/library.utils";
+  import ComponentShortcutListener from "@nucleum/components/shortcuts/ComponentShortcutListener.svelte";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { Display } from "@21n/types/view.type";
-  import { bulkEditStore } from "@21n/components/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
   import { Action } from "@21n/types/action.enum";
   let {

@@ -2,10 +2,10 @@
 
 <script lang="ts">
   import { onMount } from "svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import { MemotronAction } from "@21n/products/memotron/memotronAction.enum";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+  import { logger } from "@nucleum/components/debug/logger.client";
 
   function handlePaste(event: ClipboardEvent) {
     try {

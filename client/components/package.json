@@ -1,5 +1,5 @@
 {
-  "name": "@21n/components",
+  "name": "@nucleum/components",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,6 +10,8 @@
     "@authfn/client": "0.2.0",
     "@datafn/client": "0.1.0",
     "@datafn/svelte": "0.1.0",
+    "@nucleum/datafn": "*",
+    "@nucleum/features": "*",
     "@nucleum/schema": "*",
     "@superfunctions/http": "0.2.0",
     "echarts": "^5.5.0"

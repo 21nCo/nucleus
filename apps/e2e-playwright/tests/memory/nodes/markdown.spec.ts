@@ -12,7 +12,7 @@ import {
 let e2eSeed: E2ESeed;
 
 const datafnStorePath = resolveRepoFsImportPath(
-  "client/stores/datafn.store.ts"
+  "client/datafn/datafn.store.ts"
 );
 
 const imageFixturePath = path.resolve(

@@ -2,10 +2,10 @@ import {
   performApiCall,
   performStaticDataOperation
 } from "@21n/utils/network.utils";
-import { logger } from "@21n/components/debug/logger.client";
-import { clientStorage } from "@21n/persistence/persistence.utils";
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
-import { extractFullTabData } from "@21n/extensions/clipper/clipper.utils";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { clientStorage } from "@nucleum/persistence/persistence.utils";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
+import { extractFullTabData } from "@nucleum/extensions/clipper/clipper.utils";
 import {
   isContentScript,
   isExtensionEnvironment

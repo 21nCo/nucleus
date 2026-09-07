@@ -1,5 +1,5 @@
-import { logger } from "@21n/components/debug/logger.client";
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { GlobalEvent } from "@21n/types/event.enum";
 import {
   resolveLegacyToken,
@@ -12,7 +12,7 @@ import {
   isContentScript,
   isExtensionEnvironment
 } from "@21n/utils/browser.utils";
-import { clientStorage } from "@21n/persistence/persistence.utils";
+import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import { detectTimeZone } from "@21n/utils/time.utils";
 import {
   relayToBackgroundScript,
@@ -478,7 +478,7 @@ export async function performHttpNetworkOperation(params: {
     });
     try {
       const { performSessionCheck } =
-        await import("@21n/components/account/auth");
+        await import("@nucleum/components/account/auth");
       return await performSessionCheck();
     } catch (error) {
       logger.error({

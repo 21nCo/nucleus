@@ -1,5 +1,5 @@
 <script>
-  import Login from "@21n/components/account/Login.svelte";
+  import Login from "@nucleum/components/account/Login.svelte";
 </script>
 
 <Login />

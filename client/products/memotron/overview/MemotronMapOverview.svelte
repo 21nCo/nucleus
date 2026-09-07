@@ -1,11 +1,11 @@
 <script lang="ts">
-  import MemotronOverviewLayout from "@21n/products/memotron/overview/MemotronOverviewLayout.svelte";
-  import MapOverview from "@21n/components/overview/MapOverview.svelte";
+  import MemotronOverviewLayout from "@nucleum/products/memotron/overview/MemotronOverviewLayout.svelte";
+  import MapOverview from "@nucleum/components/overview/MapOverview.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import type { INode } from "@21n/products/memotron/node/node.type";
+  import type { INode } from "@nucleum/features/memory/node/node.type";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import { Size } from "@21n/types/size.enum";
-  import { datafn } from "@21n/stores/datafn.store";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
 
   interface MapDataPoint {

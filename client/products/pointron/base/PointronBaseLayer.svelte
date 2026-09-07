@@ -2,25 +2,25 @@
 
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import Notifications from "@21n/products/pointron/base/Notifications.svelte";
+  import Notifications from "@nucleum/products/pointron/base/Notifications.svelte";
   import { onMount } from "svelte";
   import {
     activeSession,
     focusItemsStore
-  } from "@21n/products/pointron/focus/session.store";
-  import { appLoadingState, appStore } from "@21n/stores/app.store";
-  import BackgroundSoundPlayer from "@21n/products/pointron/focus/backgroundMusic/BackgroundSoundPlayer.svelte";
+  } from "@nucleum/features/focus/session.store";
+  import { appLoadingState, appStore } from "@nucleum/stores/app.store";
+  import BackgroundSoundPlayer from "@nucleum/features/focus/backgroundMusic/BackgroundSoundPlayer.svelte";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import UserBaseLayer from "@21n/layout/layers/UserBaseLayer.svelte";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
-  import { fullScreen } from "@21n/components/modal/modal.store";
-  import { UIState } from "@21n/stores/uiState/uiState.type";
-  import SessionTitle from "@21n/products/pointron/base/SessionTitle.svelte";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
+  import { fullScreen } from "@nucleum/components/modal/modal.store";
+  import { UIState } from "@nucleum/stores/uiState/uiState.type";
+  import SessionTitle from "@nucleum/products/pointron/base/SessionTitle.svelte";
   import { SessionState } from "@21n/types/pointron/sessionState.enum";
   import { PointronEvent } from "@21n/types/pointron/pointronEvent.enum";
-  import FocusTopNavWidget from "@21n/products/pointron/focus/player/FocusTopNavWidget.svelte";
-  import { Product } from "@21n/products/product.type";
+  import FocusTopNavWidget from "@nucleum/features/focus/player/FocusTopNavWidget.svelte";
+  import { Product } from "@nucleum/products/product.type";
   let { children }: { children?: Snippet } = $props();
   let isLiteMode = $state($context.isEmbed && $context.isSheet);
   const isDebug = import.meta.env?.DEV;

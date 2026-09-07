@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import { page } from "$app/stores";
-  import view from "@21n/stores/view.store";
-  import LibraryRecordsPane from "@21n/components/library/LibraryRecordsPane.svelte";
+  import view from "@nucleum/stores/view.store";
+  import LibraryRecordsPane from "@nucleum/components/library/LibraryRecordsPane.svelte";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import { isValidEnumValue } from "@21n/shared-utils/text.utils";
   import { GlobalEvent } from "@21n/types/event.enum";

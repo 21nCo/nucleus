@@ -1,13 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { type IAction } from "@21n/types/action.type";
-  import ModalLayout from "@21n/components/modal/ModalLayout.svelte";
-  import context from "@21n/stores/context.store";
+  import ModalLayout from "@nucleum/components/modal/ModalLayout.svelte";
+  import context from "@nucleum/stores/context.store";
   import { postMessageToParent } from "@21n/utils/embed.utils";
   import { EmbedMessage } from "@21n/types/embedMessage.enum";
-  import { appStore } from "@21n/stores/app.store";
-  import PageError from "@21n/components/error/PageError.svelte";
-  import { resizeListener } from "@21n/actions/resize.action";
+  import { appStore } from "@nucleum/stores/app.store";
+  import PageError from "@nucleum/components/error/PageError.svelte";
+  import { resizeListener } from "@nucleum/actions/resize.action";
   import { setContext } from "svelte";
   import { writable, type Writable } from "svelte/store";
   import { Context } from "@21n/types/appStore.type";

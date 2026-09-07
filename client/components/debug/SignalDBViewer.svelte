@@ -4,7 +4,7 @@
     nucleumDatafnStatus,
     pullDatafnNow,
     reconcileDatafnNow
-  } from "@21n/stores/datafn.store";
+  } from "@nucleum/datafn/datafn.store";
   import { stringify } from "@21n/shared-utils/json.utils";
 
   let isBusy = false;

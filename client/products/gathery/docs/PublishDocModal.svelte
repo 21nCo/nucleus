@@ -1,7 +1,7 @@
 <script lang="ts">
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import CopyableText from "@21n/elements/text/CopyableText.svelte";
-  import { spaceInContext } from "@21n/products/gathery/space.store";
+  import { spaceInContext } from "@nucleum/features/spaces/space.store";
   import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
   import { stripTablePrefix } from "@21n/shared-utils/text.utils";
   let { id }: { id: string } = $props();

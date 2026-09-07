@@ -1,6 +1,6 @@
 import type { Locator, Page } from "@playwright/test";
 import { expect, test, type E2ESeed } from "../../fixtures/e2e-test";
-import { ResourceActionType } from "@21n/data/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/datafn/resource.type";
 import { ensureInAppOnHome } from "../../utils/helpers";
 import {
   getResourceContextMenuTrigger,

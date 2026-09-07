@@ -1,39 +1,39 @@
 <script lang="ts">
-  import Records from "@21n/components/record/Records.svelte";
+  import Records from "@nucleum/components/record/Records.svelte";
   import { onMount } from "svelte";
   import { Size } from "@21n/types/size.enum";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import ResourceSwitcher from "@21n/components/library/resourceSwitcher/ResourceSwitcher.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import ResourceSwitcher from "@nucleum/components/library/resourceSwitcher/ResourceSwitcher.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
   import {
     resourceAction,
     availableResources,
     resolveResourceIcon
-  } from "@21n/data/datafn/resource.utils";
+  } from "@nucleum/datafn/resource.utils";
   import {
     ResourceAccessPoint,
     ResourceActionType
-  } from "@21n/data/datafn/resource.type";
-  import { recentsStore } from "@21n/components/record/recent.store";
+  } from "@nucleum/datafn/resource.type";
+  import { recentsStore } from "@nucleum/components/record/recent.store";
   import { page } from "$app/stores";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import Panel from "@21n/layout/paint/Panel.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
-  import LibraryRecordsPane from "@21n/components/library/LibraryRecordsPane.svelte";
+  import LibraryRecordsPane from "@nucleum/components/library/LibraryRecordsPane.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import LibraryLoadingPulse from "@21n/components/library/LibraryLoadingPulse.svelte";
+  import LibraryLoadingPulse from "@nucleum/components/library/LibraryLoadingPulse.svelte";
   import { Arrangement, Placement } from "@21n/types/direction.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { Action } from "@21n/types/action.enum";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
-  import ResourceBrowser from "@21n/components/library/resourceBrowser/ResourceBrowser.svelte";
-  import { Product } from "@21n/products/product.type";
-  import { isHideCreateAction } from "@21n/components/library/library.utils";
+  import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
+  import { Product } from "@nucleum/products/product.type";
+  import { isHideCreateAction } from "@nucleum/components/library/library.utils";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import ComponentShortcutListener from "@21n/components/shortcuts/ComponentShortcutListener.svelte";
+  import ComponentShortcutListener from "@nucleum/components/shortcuts/ComponentShortcutListener.svelte";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { isValidEnumValue } from "@21n/shared-utils/text.utils";
 

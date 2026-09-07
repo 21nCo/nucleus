@@ -1,4 +1,4 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import type { IMutation } from "@21n/types/data.type";
 
 export enum SyncMethod {

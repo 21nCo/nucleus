@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { NodeType } from "@21n/products/memotron/node/node.type";
+  import type { NodeType } from "@nucleum/features/memory/node/node.type";
   import type { IRecordId } from "@21n/types/data.type";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
-  import TextContent from "@21n/components/markdown/content/TextContent.svelte";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
+  import TextContent from "@nucleum/components/markdown/content/TextContent.svelte";
   let {
     id,
     text = $bindable(""),

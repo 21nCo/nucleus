@@ -1,5 +1,5 @@
 import type { Size } from "@21n/types/size.enum";
-import type { IKeyboardShortcut } from "@21n/components/shortcuts/shortcut.type";
+import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
 export enum ButtonStyle {
   DEFAULT = "default",
   PLAIN = "plain",

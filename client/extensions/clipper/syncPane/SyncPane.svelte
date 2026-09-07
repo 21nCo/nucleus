@@ -1,16 +1,16 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { syncStore } from "@21n/extensions/clipper/contentScripts/store";
-  import FeedbackPaneBase from "@21n/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
+  import { syncStore } from "@nucleum/extensions/clipper/contentScripts/store";
+  import FeedbackPaneBase from "@nucleum/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
   import Button from "@21n/elements/button/Button.svelte";
-  import { SyncStatus } from "@21n/extensions/clipper/contentScripts/types";
+  import { SyncStatus } from "@nucleum/extensions/clipper/contentScripts/types";
   import { ButtonVariant } from "@21n/types/button.type";
-  import { appEvents } from "@21n/stores/notification.store";
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
+  import { appEvents } from "@nucleum/stores/notification.store";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import { Size } from "@21n/types/size.enum";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";
 

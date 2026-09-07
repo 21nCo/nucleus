@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { NodeType } from "@21n/products/memotron/node/node.type";
-  import context from "@21n/stores/context.store";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import context from "@nucleum/stores/context.store";
   import { ModifierKey } from "@21n/types/keyboard.type";
-  import { resolveShortcutText } from "@21n/components/shortcuts/shortcut.utils";
-  import { BlockAction, InlineType } from "@21n/components/markdown/md.type";
+  import { resolveShortcutText } from "@nucleum/components/shortcuts/shortcut.utils";
+  import { BlockAction, InlineType } from "@nucleum/components/markdown/md.type";
 
   let {
     row = undefined,

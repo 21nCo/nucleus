@@ -4,7 +4,7 @@
   import type { Snippet } from "svelte";
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
   import { properCase } from "@21n/shared-utils/text.utils";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import { page } from "$app/stores";
 

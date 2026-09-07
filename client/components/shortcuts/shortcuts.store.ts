@@ -1,17 +1,17 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import { get, writable } from "svelte/store";
 import type {
   IKeyboardShortcut,
   IKeyboardShortcutsStore
-} from "@21n/components/shortcuts/shortcut.type";
-import { logger } from "@21n/components/debug/logger.client";
-import { resolveModifiers } from "@21n/components/shortcuts/shortcut.utils";
-import context from "@21n/stores/context.store";
+} from "@nucleum/components/shortcuts/shortcut.type";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { resolveModifiers } from "@nucleum/components/shortcuts/shortcut.utils";
+import context from "@nucleum/stores/context.store";
 import { OperatingSystem } from "@21n/types/context.type";
-import { shortcutsConfig } from "@21n/components/shortcuts/shortcuts.config";
+import { shortcutsConfig } from "@nucleum/components/shortcuts/shortcuts.config";
 import { replacer } from "@21n/shared-utils/json.utils";
-import { resolveProductConfig } from "@21n/products/product.config";
-import { datafn } from "@21n/stores/datafn.store";
+import { resolveProductConfig } from "@nucleum/products/product.config";
+import { datafn } from "@nucleum/datafn/datafn.store";
 
 const keyboardShortcutsSignal = datafn.kv.signal<IKeyboardShortcutsStore>(
   Resource.keyboardShortcuts,

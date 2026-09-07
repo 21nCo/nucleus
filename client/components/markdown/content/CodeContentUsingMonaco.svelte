@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import type { ICodeBlockBody } from "@21n/components/markdown/md.type";
+  import type { ICodeBlockBody } from "@nucleum/components/markdown/md.type";
   import * as monaco from "monaco-editor";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import { InputStyle } from "@21n/types/input.type";
@@ -8,8 +8,8 @@
   import Button from "@21n/elements/button/Button.svelte";
   import { copyToClipboard } from "@21n/utils/utils";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
-  import { hoverable } from "@21n/actions/hover.action";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
+  import { hoverable } from "@nucleum/actions/hover.action";
   let {
     mdStore,
     body,

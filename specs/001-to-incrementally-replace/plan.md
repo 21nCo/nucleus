@@ -35,14 +35,14 @@
 **IMPORTANT**: The /plan command stops at step 7. Later phases are handled by `/tasks` and implementation workflows.
 
 ## Summary
-Normalize Tidigit frontend imports to workspace aliases (e.g., `@21n/components`) across products and extensions, filling gaps in workspace packages and tooling so developers stop relying on `$lib`, `apps/`, `client/`, or relative paths while keeping builds stable during incremental rollout.
+Normalize Tidigit frontend imports to workspace aliases (e.g., `@nucleum/components`) across products and extensions, filling gaps in workspace packages and tooling so developers stop relying on `$lib`, `apps/`, `client/`, or relative paths while keeping builds stable during incremental rollout.
 
 ## Technical Context
 **Active Product**: Cross-product (Memotron, Pointron, Nucleus, Gathery, browser extensions)  
 **Surfaces**: `client/components`, `client/elements`, `client/stores`, `client/utils`, `client/products`, `client/persistence`, `client/layout`, `apps/*`, `extensions/*`, `shared/*`, root `tsconfig.json`, per-product `apps/*/tsconfig.json`, Vite configs  
 **Data Flow**: TypeScript and bundler resolution via shared workspace alias map; runtime execution unchanged  
 **Languages/Frameworks**: TypeScript, SvelteKit, Vite, Turbo, ESLint  
-**Shared Modules to reuse**: Existing workspace packages (`@21n/components`, `@21n/elements`, `@21n/stores`, `@21n/utils`), lint/cofig tooling, any existing codemods for imports  
+**Shared Modules to reuse**: Existing workspace packages (`@nucleum/components`, `@21n/elements`, `@nucleum/stores`, `@21n/utils`), lint/cofig tooling, any existing codemods for imports  
 **Backend Integrations**: None (no server/DynamoDB touchpoints)  
 **Testing/Linting**: `npm run lint`, `npm run test`, targeted `turbo run lint --filter=...`, IDE TypeScript server reload  
 **Performance & UX Targets**: Maintain IDE/build performance parity; ensure alias resolution remains fast  

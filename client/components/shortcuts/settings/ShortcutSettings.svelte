@@ -2,12 +2,12 @@
   import Button from "@21n/elements/button/Button.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import context from "@21n/stores/context.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import context from "@nucleum/stores/context.store";
   import { Action } from "@21n/types/action.enum";
   import { Embed } from "@21n/types/context.type";
-  import { keyboardShortcuts } from "@21n/components/shortcuts/shortcuts.store";
-  import ShortcutItem from "@21n/components/shortcuts/settings/ShortcutItem.svelte";
+  import { keyboardShortcuts } from "@nucleum/components/shortcuts/shortcuts.store";
+  import ShortcutItem from "@nucleum/components/shortcuts/settings/ShortcutItem.svelte";
   let error: string | undefined = undefined;
   let keyMap = keyboardShortcuts.fetchConfiguratbleShortcuts();
 </script>

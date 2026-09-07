@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { hoverable } from "@21n/actions/hover.action";
-  import { popover } from "@21n/actions/popover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { Placement } from "@21n/types/direction.enum";

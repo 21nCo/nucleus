@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import type { IButtonParams } from "@21n/types/button.type";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";

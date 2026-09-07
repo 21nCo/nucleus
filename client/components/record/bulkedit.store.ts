@@ -2,11 +2,11 @@ import type { IRecordId } from "@21n/types/data.type";
 import {
   ResourceAccessPoint,
   type IMultiSelectContext
-} from "@21n/data/datafn/resource.type";
+} from "@nucleum/datafn/resource.type";
 import {
   isSameResource,
   resourceInList
-} from "@21n/data/datafn/resource.utils";
+} from "@nucleum/datafn/resource.utils";
 import { stringify } from "@21n/shared-utils/json.utils";
 import { writable, derived, get } from "svelte/store";
 

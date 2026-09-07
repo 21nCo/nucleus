@@ -2,12 +2,12 @@
   import maplibregl from "maplibre-gl";
   import "maplibre-gl/dist/maplibre-gl.css";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import { Persistence } from "@21n/persistence/persistence";
-  import account from "@21n/stores/account.store";
+  import { Persistence } from "@nucleum/persistence/persistence";
+  import account from "@nucleum/stores/account.store";
   import { UserDataMode } from "@21n/types/account.type";
-  import context from "@21n/stores/context.store";
-  import { mapTileStyles } from "@21n/components/maps/map.styles";
-  import { mount } from "@21n/actions/mount.action";
+  import context from "@nucleum/stores/context.store";
+  import { mapTileStyles } from "@nucleum/components/maps/map.styles";
+  import { mount } from "@nucleum/actions/mount.action";
   let {
     location = undefined
   }: {

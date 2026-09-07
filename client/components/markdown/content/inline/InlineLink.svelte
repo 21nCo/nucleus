@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
 
   let {
     href,

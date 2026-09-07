@@ -1,11 +1,11 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { BlockAction, InlineType } from "@21n/components/markdown/md.type";
+  import { BlockAction, InlineType } from "@nucleum/components/markdown/md.type";
   import {
     mdContentChangeEvent,
     type MdStoreType
-  } from "@21n/components/markdown/markdown.store";
-  import BlockBrowser from "@21n/components/markdown/blockBrowser/BlockBrowser.svelte";
+  } from "@nucleum/components/markdown/markdown.store";
+  import BlockBrowser from "@nucleum/components/markdown/blockBrowser/BlockBrowser.svelte";
   import EmojiPicker from "./EmojiPicker.svelte";
 
   import {
@@ -14,31 +14,31 @@
     NodeType,
     type ListNodeType,
     type SimpleTextNodeType
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { cn } from "@21n/utils/ui.utils";
   import Popover from "@21n/elements/popover/Popover.svelte";
-  import InlineMarkdownTextInput from "@21n/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
   import SearchResultsPopover from "@21n/elements/input/SearchResultsPopover.svelte";
-  import LinkSearchResultItem from "@21n/products/memotron/common/linkbox/LinkSearchResultItem.svelte";
+  import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
   import { getContext } from "svelte";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { queryLinkingSearchResults } from "@21n/products/memotron/linking/link-search";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { queryLinkingSearchResults } from "@nucleum/features/memory/linking/link-search";
   import type { IRecordId } from "@21n/types/data.type";
   import {
     inlineLinkPatterns,
     performEscShortcuts,
     renderMdAsHtml
-  } from "@21n/components/markdown/markdown.utils";
-  import view from "@21n/stores/view.store";
-  import context from "@21n/stores/context.store";
-  import { popover } from "@21n/actions/popover.action";
+  } from "@nucleum/components/markdown/markdown.utils";
+  import view from "@nucleum/stores/view.store";
+  import context from "@nucleum/stores/context.store";
+  import { popover } from "@nucleum/actions/popover.action";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { Context } from "@21n/types/appStore.type";
-  import { isSameResource } from "@21n/data/datafn/resource.utils";
+  import { isSameResource } from "@nucleum/datafn/resource.utils";
 
   const nodeContentContext = getContext<any>(Context.CONTENT);
   const blockContext = getContext<any>(Context.BLOCK);

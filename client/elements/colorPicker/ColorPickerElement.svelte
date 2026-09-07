@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { debouncer } from "@21n/utils/utils";
   import { onMount } from "svelte";
   let {

@@ -1,0 +1,20 @@
+{
+  "name": "@nucleum/datafn",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@nucleum/schema": "*",
+    "@21n/shared-utils": "*",
+    "@21n/utils": "*",
+    "@datafn/client": "0.1.0",
+    "@searchfn/adapter-indexeddb": "0.1.0",
+    "@searchfn/datafn-provider": "0.4.0"
+  },
+  "peerDependencies": {
+    "svelte": "^5.55.0"
+  },
+  "exports": {
+    "./*": "./*"
+  }
+}

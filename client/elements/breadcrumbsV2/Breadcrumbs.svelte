@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { IBreadcrumbItem } from "@21n/elements/breadcrumbsV2/breadcrumbItem.type";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import BreadcrumbItem from "@21n/elements/breadcrumbsV2/BreadcrumbItem.svelte";
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import BreadcrumbsOverflowPopover from "@21n/elements/breadcrumbsV2/BreadcrumbsOverflowPopover.svelte";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
   import { cn } from "@21n/utils/ui.utils";

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SizeFactorItem from "@21n/components/settings/appearance/accessibility/sizeFactor/SizeFactorItem.svelte";
+  import SizeFactorItem from "@nucleum/components/settings/appearance/accessibility/sizeFactor/SizeFactorItem.svelte";
   let {
     selectedFactor = 1,
     parentBackgroundIndex = 1,

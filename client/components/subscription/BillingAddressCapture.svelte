@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { IBillingAddress } from "@21n/components/subscription/userPlan.type";
+  import type { IBillingAddress } from "@nucleum/components/subscription/userPlan.type";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import Dropdown from "@21n/elements/dropdown/DropDown.svelte";
   import type { InputLabel } from "@21n/types/input.type";

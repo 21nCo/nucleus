@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { tooltip } from "@21n/actions/popover.action";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
-  import modalEvent from "@21n/components/modal/modal.store";
-  import { appStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import { tooltip } from "@nucleum/actions/popover.action";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+  import modalEvent from "@nucleum/components/modal/modal.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import { ButtonVariant } from "@21n/types/button.type";
   import { Placement } from "@21n/types/direction.enum";
   import { cn } from "@21n/utils/ui.utils";

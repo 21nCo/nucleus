@@ -1,12 +1,12 @@
 <script lang="ts">
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import SettingsAsPageLayout from "@21n/components/settings/asPage/SettingsAsPageLayout.svelte";
+  import SettingsAsPageLayout from "@nucleum/components/settings/asPage/SettingsAsPageLayout.svelte";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import { page } from "$app/stores";
-  import view from "@21n/stores/view.store";
-  import SettingsAsModal from "@21n/components/settings/SettingsAsModal.svelte";
+  import view from "@nucleum/stores/view.store";
+  import SettingsAsModal from "@nucleum/components/settings/SettingsAsModal.svelte";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
   const route = $derived($page.url.searchParams.get(AppSearchParam.SETTING));
   const backPath = $derived(

@@ -2,8 +2,8 @@ import { expect, test, type Page } from "@playwright/test";
 import {
   getAppMenuNavLabels,
   getProductNavConfig
-} from "@21n/products/product-nav.config";
-import { Product } from "@21n/products/product.type";
+} from "@nucleum/products/product-nav.config";
+import { Product } from "@nucleum/products/product.type";
 import { requireE2EProduct, type SurfaceKey } from "../../config/e2e.config";
 import {
   isE2ECloudAuthMode,

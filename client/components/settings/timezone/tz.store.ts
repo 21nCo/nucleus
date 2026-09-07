@@ -1,11 +1,11 @@
 import type {
   ITimezone,
   ITimezoneCapture
-} from "@21n/components/settings/timezone/tz.type";
+} from "@nucleum/components/settings/timezone/tz.type";
 import { TimeScale, TimeScaleUnit, type TimePeriod } from "@21n/types/time.type";
 import { determineTimePeriodv2 } from "@21n/utils/time.utils";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
-import { datafn, datafnRuntime } from "@21n/stores/datafn.store";
+import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
 import {
   createTimezoneResolver,
   resolveTemporalDateParts,

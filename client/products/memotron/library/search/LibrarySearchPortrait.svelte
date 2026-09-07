@@ -3,17 +3,17 @@
   import { InputStyle } from "@21n/types/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import { fly } from "svelte/transition";
-  import { recentsStore } from "@21n/components/record/recent.store";
-  import Records from "@21n/components/record/Records.svelte";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
+  import { recentsStore } from "@nucleum/components/record/recent.store";
+  import Records from "@nucleum/components/record/Records.svelte";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/types/size.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { onMount, onDestroy } from "svelte";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import Button from "@21n/elements/button/Button.svelte";
-  import { datafn } from "@21n/stores/datafn.store";
-  import { appStore } from "@21n/stores/app.store";
-  import { resolveProductResources } from "@21n/data/datafn/resource.utils";
+  import { datafn } from "@nucleum/datafn/datafn.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { resolveProductResources } from "@nucleum/datafn/resource.utils";
 
   let {
     isActive = false,

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Resource } from "@21n/data/datafn/resource.enum";
-  import context from "@21n/stores/context.store";
+  import type { Resource } from "@nucleum/datafn/resource.enum";
+  import context from "@nucleum/stores/context.store";
   import { Embed } from "@21n/types/context.type";
   import { KeyboardKey } from "@21n/types/keyboard.type";
-  import GroupItem from "@21n/products/memotron/library/search/GroupItem.svelte";
+  import GroupItem from "@nucleum/products/memotron/library/search/GroupItem.svelte";
 
   let {
     searchCallback,

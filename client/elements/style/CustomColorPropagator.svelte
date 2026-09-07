@@ -1,5 +1,5 @@
 <script lang="ts">
-  import appearance from "@21n/stores/appearance.store";
+  import appearance from "@nucleum/stores/appearance.store";
   import {
     generateCustomColorShades,
     resolveIfActiveFgFg,

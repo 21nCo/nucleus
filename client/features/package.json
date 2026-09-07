@@ -1,0 +1,15 @@
+{
+  "name": "@nucleum/features",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  },
+  "dependencies": {
+    "@datafn/client": "0.1.0",
+    "@datafn/svelte": "0.1.0",
+    "@nucleum/datafn": "*",
+    "@nucleum/schema": "*"
+  }
+}

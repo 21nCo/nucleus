@@ -1,22 +1,22 @@
 <script lang="ts">
-  import Header from "@21n/products/pointron/onboarding/OnboardingHeader.svelte";
-  import Footer from "@21n/products/pointron/onboarding/OnboardingFooter.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
-  import view from "@21n/stores/view.store";
+  import Header from "@nucleum/products/pointron/onboarding/OnboardingHeader.svelte";
+  import Footer from "@nucleum/products/pointron/onboarding/OnboardingFooter.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import view from "@nucleum/stores/view.store";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/types/button.type";
   import { onMount } from "svelte";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
   import { postMessageToParent } from "@21n/utils/embed.utils";
   import { EmbedMessage } from "@21n/types/embedMessage.enum";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import {
     UIState,
     UIStateScope
-  } from "@21n/stores/uiState/uiState.type";
+  } from "@nucleum/stores/uiState/uiState.type";
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
 
   let currentStep = 0;
 

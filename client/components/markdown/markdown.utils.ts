@@ -6,7 +6,7 @@ import {
   type IListBlockBody,
   type IBlockBody,
   InlineType
-} from "@21n/components/markdown/md.type";
+} from "@nucleum/components/markdown/md.type";
 import {
   type INode,
   type IActiveNode,
@@ -16,7 +16,7 @@ import {
   type INodeStructure,
   type ListNodeType,
   type SimpleTextNodeType
-} from "@21n/products/memotron/node/node.type";
+} from "@nucleum/features/memory/node/node.type";
 import { generateRandomIdv2 } from "@21n/shared-utils/crypto.utils";
 
 type NestedActiveNode = Omit<IActiveNode, "children"> & {

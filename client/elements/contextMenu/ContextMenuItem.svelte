@@ -7,7 +7,7 @@
   } from "@21n/types/select.type";
   import ContextMenuItemBase from "@21n/elements/contextMenu/ContextMenuItemBase.svelte";
   import ContextMenuItemWithSecondary from "@21n/elements/contextMenu/ContextMenuItemWithSecondary.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import ContextMenuToggleItem from "@21n/elements/contextMenu/ContextMenuToggleItem.svelte";
   let {
     item,

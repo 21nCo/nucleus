@@ -1,16 +1,16 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { createClipPointer } from "@21n/extensions/clipper/clipper.utils";
+  import { createClipPointer } from "@nucleum/extensions/clipper/clipper.utils";
   import { ExtensionEvent } from "@21n/types/extension.type";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
-  import { webpage } from "@21n/extensions/clipper/contentScripts/store";
-  import { appEvents } from "@21n/stores/notification.store";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
+  import { appEvents } from "@nucleum/stores/notification.store";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { checkIfAdPlaying } from "@21n/extensions/clipper/parsers/shared/video.utils";
+  import { checkIfAdPlaying } from "@nucleum/extensions/clipper/parsers/shared/video.utils";
   let {
     isRenderedAsOverlay = false
   }: {

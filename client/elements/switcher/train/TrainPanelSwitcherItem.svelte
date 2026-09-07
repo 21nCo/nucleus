@@ -1,5 +1,5 @@
 <script lang="ts">
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { Size } from "@21n/types/size.enum";
   import {
     PanelSwitcherActiveItemStrength,

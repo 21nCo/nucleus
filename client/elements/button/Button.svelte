@@ -8,13 +8,13 @@
   import { bg, cn } from "@21n/utils/ui.utils";
   import type { IPopoverRenderBaseParams } from "@21n/types/popover.type";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { popover } from "@21n/actions/popover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
-  import type { IKeyboardShortcut } from "@21n/components/shortcuts/shortcut.type";
+  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
 
   let {
     parentBgIndex = 1,

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pointronPreferences } from "@21n/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
   import type { TimeScale } from "@21n/types/time.type";
   import { getCorrespoingHorizonFrequencyLabel } from "@21n/utils/time.utils";

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 
 import { FallbackTracker } from "./fallbackTracker.utils";
 
@@ -16,11 +16,11 @@ const mockedModules = vi.hoisted(() => ({
   }
 }));
 
-vi.mock("@21n/persistence/persistence.utils", () => ({
+vi.mock("@nucleum/persistence/persistence.utils", () => ({
   clientStorage: mockedModules.storage
 }));
 
-vi.mock("@21n/components/debug/logger.client", () => ({
+vi.mock("@nucleum/components/debug/logger.client", () => ({
   logger: mockedModules.logger
 }));
 

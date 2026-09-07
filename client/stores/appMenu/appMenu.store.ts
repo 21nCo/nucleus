@@ -1,16 +1,16 @@
-import type { IAppMenuStore } from "@21n/stores/appMenu/appMenu.type";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { appStore } from "@21n/stores/app.store";
+import type { IAppMenuStore } from "@nucleum/stores/appMenu/appMenu.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { appStore } from "@nucleum/stores/app.store";
 import { get, writable } from "svelte/store";
-import { logger } from "@21n/components/debug/logger.client";
-import { Product } from "@21n/products/product.type";
-import { datafn } from "@21n/stores/datafn.store";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { Product } from "@nucleum/products/product.type";
+import { datafn } from "@nucleum/datafn/datafn.store";
 import {
   acknowledgeOptimisticKvEntries,
   addOptimisticKvEntries,
   applyOptimisticKvEntries,
   removeOptimisticKvEntries
-} from "@21n/stores/optimisticKv.utils";
+} from "@nucleum/datafn/optimisticKv.utils";
 import type { OptimisticKvEntries } from "@21n/types/datafn.type";
 
 const appMenuSignal = datafn.kv.signal<IAppMenuStore>(Resource.appMenu, {

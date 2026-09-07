@@ -1,9 +1,9 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import Library from "@21n/components/library/Library.svelte";
-  import { Product } from "@21n/products/product.type";
-  import { resolveProductConfig } from "@21n/products/product.config";
+  import Library from "@nucleum/components/library/Library.svelte";
+  import { Product } from "@nucleum/products/product.type";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
 
   const libraryResources = resolveProductConfig(Product.POINTRON).resources
     .browse;

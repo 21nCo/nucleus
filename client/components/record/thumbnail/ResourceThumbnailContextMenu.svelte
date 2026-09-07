@@ -3,18 +3,18 @@
   import ContextMenuAction from "@21n/elements/contextMenu/ContextMenuAction.svelte";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/types/size.enum";
-  import { resolveCollectionContextMenu } from "@21n/components/collection/collection.store";
-  import { resolveNodeContextMenu } from "@21n/products/memotron/node/node.store";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
+  import { resolveCollectionContextMenu } from "@nucleum/features/collections/collection.store";
+  import { resolveNodeContextMenu } from "@nucleum/features/memory/node/node.store";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import type { IRecordId } from "@21n/types/data.type";
-  import { determineResourceType } from "@21n/data/datafn/resource.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { determineResourceType } from "@nucleum/datafn/resource.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import { Arrangement, Placement } from "@21n/types/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { resolveObjectiveContextMenu } from "@21n/components/goals/goal.store";
-  import { resolveTaskContextMenu } from "@21n/components/tasks/task.store";
-  import context from "@21n/stores/context.store";
-  import view from "@21n/stores/view.store";
+  import { resolveObjectiveContextMenu } from "@nucleum/features/focus/goals/goal.store";
+  import { resolveTaskContextMenu } from "@nucleum/features/focus/tasks/task.store";
+  import context from "@nucleum/stores/context.store";
+  import view from "@nucleum/stores/view.store";
   let {
     item = $bindable(),
     accessPoint = ResourceAccessPoint.BROWSER,

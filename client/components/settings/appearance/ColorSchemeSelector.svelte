@@ -1,14 +1,14 @@
 <script lang="ts">
   import { Theme, type ColorScheme } from "@21n/types/appearance.type";
-  import { appConstants } from "@21n/stores/app.store";
-  import appearance from "@21n/stores/appearance.store";
+  import { appConstants } from "@nucleum/stores/app.store";
+  import appearance from "@nucleum/stores/appearance.store";
   import { sortArrayByOrder } from "@21n/shared-utils/obj.utils";
-  import ColorSchemeSelectorItem from "@21n/components/settings/appearance/ColorSchemeSelectorItem.svelte";
+  import ColorSchemeSelectorItem from "@nucleum/components/settings/appearance/ColorSchemeSelectorItem.svelte";
   import FormControlLabelWrapper from "@21n/elements/text/formLabel/FormControlLabelWrapper.svelte";
   import { Orientation } from "@21n/types/direction.enum";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
 
   let {
     theme = Theme.LIGHT,

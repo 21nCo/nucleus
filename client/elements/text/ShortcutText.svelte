@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { resolveShortcutText } from "@21n/components/shortcuts/shortcut.utils";
-  import { keyboardShortcuts } from "@21n/components/shortcuts/shortcuts.store";
-  import context from "@21n/stores/context.store";
+  import { resolveShortcutText } from "@nucleum/components/shortcuts/shortcut.utils";
+  import { keyboardShortcuts } from "@nucleum/components/shortcuts/shortcuts.store";
+  import context from "@nucleum/stores/context.store";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { Size } from "@21n/types/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import type { IKeyboardShortcut } from "@21n/components/shortcuts/shortcut.type";
+  import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
   import { KeyboardKey } from "@21n/types/keyboard.type";
   import { Embed } from "@21n/types/context.type";
-  import { uiStateDerived } from "@21n/stores/uiState/uiState.store";
+  import { uiStateDerived } from "@nucleum/stores/uiState/uiState.store";
 
   let {
     shortcut,

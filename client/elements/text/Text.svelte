@@ -1,6 +1,6 @@
 <script lang="ts">
-  import appearance from "@21n/stores/appearance.store";
-  import view from "@21n/stores/view.store";
+  import appearance from "@nucleum/stores/appearance.store";
+  import view from "@nucleum/stores/view.store";
   import { TextStyle } from "@21n/types/text.enum";
   import { properCase } from "@21n/shared-utils/text.utils";
   import MarkdownRenderer from "@21n/elements/text/MarkdownRenderer.svelte";

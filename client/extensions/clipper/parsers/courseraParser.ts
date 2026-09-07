@@ -1,13 +1,13 @@
-import { logger } from "@21n/components/debug/logger.client";
-import { NodeType } from "@21n/products/memotron/node/node.type";
-import type { IVideoBookmarkCapture } from "@21n/products/memotron/node/node.type";
+import { logger } from "@nucleum/components/debug/logger.client";
+import { NodeType } from "@nucleum/features/memory/node/node.type";
+import type { IVideoBookmarkCapture } from "@nucleum/features/memory/node/node.type";
 import {
   getVideoMetadata,
   getCurrentVideoTimestamp,
   captureVideoFrame,
   extractTranscriptAtTimestamp,
   extractCourseraVideoId
-} from "@21n/extensions/clipper/parsers/shared/video.utils";
+} from "@nucleum/extensions/clipper/parsers/shared/video.utils";
 
 export function extractCourseraBookmark(): IVideoBookmarkCapture | null {
   try {

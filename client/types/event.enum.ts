@@ -1,6 +1,6 @@
-import type { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
+import type { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
 import type { PointronEvent } from "@21n/types/pointron/pointronEvent.enum";
-import type { MemotronEvent } from "@21n/products/memotron/memotron.type";
+import type { MemotronEvent } from "@nucleum/products/memotron/memotron.type";
 export type Event =
   | GlobalEvent
   | PointronEvent

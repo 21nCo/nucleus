@@ -10,8 +10,8 @@
     NodeType,
     structuralNodeTypes,
     webNodeTypeList
-  } from "@21n/products/memotron/node/node.type";
-  import context from "@21n/stores/context.store";
+  } from "@nucleum/features/memory/node/node.type";
+  import context from "@nucleum/stores/context.store";
   import { ColorStrength } from "@21n/types/appearance.type";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import { Orientation } from "@21n/types/direction.enum";
@@ -23,10 +23,10 @@
   import { cn } from "@21n/utils/ui.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { fly } from "svelte/transition";
-  import { resolveBlockBrowserConfigOnKeyboard } from "@21n/components/markdown/blockBrowser/blockBrowser.utils";
-  import BlockBrowserOnKeyboard from "@21n/components/markdown/blockBrowser/BlockBrowserOnKeyboard.svelte";
-  import { BlockAction } from "@21n/components/markdown/md.type";
-  import MdKeyboardKeysRow from "@21n/components/markdown/toolbar/MdKeyboardKeysRow.svelte";
+  import { resolveBlockBrowserConfigOnKeyboard } from "@nucleum/components/markdown/blockBrowser/blockBrowser.utils";
+  import BlockBrowserOnKeyboard from "@nucleum/components/markdown/blockBrowser/BlockBrowserOnKeyboard.svelte";
+  import { BlockAction } from "@nucleum/components/markdown/md.type";
+  import MdKeyboardKeysRow from "@nucleum/components/markdown/toolbar/MdKeyboardKeysRow.svelte";
   import { getContext } from "svelte";
   import type { IRecordId } from "@21n/types/data.type";
   import { Context } from "@21n/types/appStore.type";

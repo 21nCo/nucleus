@@ -2,15 +2,15 @@
   import { page } from "$app/stores";
   import Button from "@21n/elements/button/Button.svelte";
   import PageNotFoundIllustration from "@21n/illustrations/PageNotFoundIllustration.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import {
     ButtonStyle,
     ButtonVariant,
     type IButtonParams
   } from "@21n/types/button.type";
   import { Size } from "@21n/types/size.enum";
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
-  import SystemStatus from "@21n/components/settings/about/SystemStatus.svelte";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import SystemStatus from "@nucleum/components/settings/about/SystemStatus.svelte";
   let {
     message = undefined,
     actions = [],

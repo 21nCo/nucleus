@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import { Size } from "@21n/types/size.enum";
   let {

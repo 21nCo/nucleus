@@ -3,7 +3,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { Size } from "@21n/types/size.enum";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   let {
     text = "Add new",
     size = Size.md,

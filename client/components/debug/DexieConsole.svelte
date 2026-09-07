@@ -3,7 +3,7 @@
   import {
     nucleumDatafnStatus,
     refreshNucleumDatafnStatus
-  } from "@21n/stores/datafn.store";
+  } from "@nucleum/datafn/datafn.store";
   import { stringify } from "@21n/shared-utils/json.utils";
 
   let isRefreshing = false;

@@ -1,7 +1,7 @@
 import type { IRecordId } from "@21n/types/data.type";
-import type { IClip } from "@21n/products/memotron/node/node.type";
+import type { IClip } from "@nucleum/features/memory/node/node.type";
 import type { AlertType } from "@21n/types/notification.type";
-import type { ICollectionItemPropertyValue } from "@21n/components/collection/collection.type";
+import type { ICollectionItemPropertyValue } from "@nucleum/features/collections/collection.type";
 export interface IWebpageStore {
   url: string;
   title: string;

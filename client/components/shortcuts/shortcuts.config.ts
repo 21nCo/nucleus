@@ -1,8 +1,8 @@
 import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
-import type { IKeyboardShortcut } from "@21n/components/shortcuts/shortcut.type";
+import type { IKeyboardShortcut } from "@nucleum/components/shortcuts/shortcut.type";
 import { Action } from "@21n/types/action.enum";
 import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-import { MemotronAction } from "@21n/products/memotron/memotronAction.enum";
+import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
 import { GlobalEvent } from "@21n/types/event.enum";
 
 export const shortcutsConfig: Record<string, IKeyboardShortcut> = {

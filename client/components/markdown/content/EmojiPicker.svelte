@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { emojis } from "$lib/client/data/avatars";
+  import { emojis } from "@nucleum/datafn/avatars";
   import { userPreferences } from "$lib/client/components/settings/userPreferences.store";
   import { onMount } from "svelte";
   import { cn } from "$lib/client/utils/ui.utils";

@@ -1,6 +1,6 @@
 import type { Resource } from "@nucleum/schema/resource.enum";
 import type { EmailParts } from "@21n/types/account.type";
-import type { IMarkdown } from "@21n/components/markdown/md.type";
+import type { IMarkdown } from "@nucleum/components/markdown/md.type";
 
 import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
 import { Display } from "@21n/types/view.type";

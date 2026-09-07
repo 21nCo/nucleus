@@ -1,21 +1,21 @@
 <script lang="ts">
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { Size } from "@21n/types/size.enum";
-  import SyncStatus from "@21n/components/settings/sync/SyncStatus.svelte";
-  import account from "@21n/stores/account.store";
-  import { PlanType } from "@21n/components/subscription/userPlan.type";
-  import { appStore } from "@21n/stores/app.store";
+  import SyncStatus from "@nucleum/components/settings/sync/SyncStatus.svelte";
+  import account from "@nucleum/stores/account.store";
+  import { PlanType } from "@nucleum/components/subscription/userPlan.type";
+  import { appStore } from "@nucleum/stores/app.store";
   import {
     nucleumDatafnStatus,
     initializeNucleumDatafn,
     resolveDatafnOfflinabilityPreference,
     setDatafnOfflinabilityPreference,
     updateNucleumDatafnConnectivity
-  } from "@21n/stores/datafn.store";
-  import { datafnE2eeState } from "@21n/stores/datafnE2ee.store";
-  import { getDapId } from "@21n/persistence/persistence.utils";
+  } from "@nucleum/datafn/datafn.store";
+  import { datafnE2eeState } from "@nucleum/datafn/datafnE2ee.store";
+  import { getDapId } from "@nucleum/persistence/persistence.utils";
   import { UserDataMode } from "@21n/types/account.type";
   import { onMount } from "svelte";
   let isInOfflineMode = $state(false);

@@ -4,16 +4,16 @@
   import Text from "@21n/elements/text/Text.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
-  import { UIState, UIStateScope } from "@21n/stores/uiState/uiState.type";
-  import view from "@21n/stores/view.store";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
+  import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
+  import view from "@nucleum/stores/view.store";
   import { Action } from "@21n/types/action.enum";
   import { Orientation } from "@21n/types/direction.enum";
   import { OptionSelectorStyle } from "@21n/types/select.type";
   import { Size } from "@21n/types/size.enum";
   import { TextStyle } from "@21n/types/text.enum";
-  import ShortcutSettings from "@21n/components/shortcuts/settings/ShortcutSettings.svelte";
-  import { InteractionMode } from "@21n/components/settings/interactionMode/interactionMode.type";
+  import ShortcutSettings from "@nucleum/components/shortcuts/settings/ShortcutSettings.svelte";
+  import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
   const persistedMode = uiState.getState(Action.MODE_OF_INTERACTION, {
     scope: UIStateScope.PRODUCT
   });

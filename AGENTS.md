@@ -10,20 +10,22 @@ Agents MUST confirm the active product context before touching UI or workflow co
 Agents MUST reuse existing primitives, stores, and utilities when delivering changes. Prefer components in `client/elements/`, helpers such as `generateResourceId` and `generateSimpleRandomId`, and shared logic in `client/stores` or `shared/utils` instead of duplicating behavior. Rationale: reuse keeps the monorepo coherent and avoids parallel implementations that drift over time.
 
 ### III. Safe State & Data Handling
-Agents MUST persist preferences with the correct `Preference` enums, sub-variable scopes, and helper APIs. Frontend persistence MUST use the current DataFn runtime and shared resource stores (`client/stores/datafn.store.ts`, `client/data/datafn`, and `schema/`) while respecting legacy local persistence, Dexie, and backup/recovery boundaries under `client/persistence`. Remote synchronization MUST align with the account-service DataFn routes, schemas, generated Drizzle mappings, and lookup helpers under `services/account/src/datafn`, `services/account/src/db`, and `services/account/src/lookup`. Rationale: disciplined state management keeps local stores, DataFn sync state, and account-service records consistent across clients and services.
+Agents MUST persist preferences with the correct `Preference` enums, sub-variable scopes, and helper APIs. Frontend persistence MUST use the current DataFn runtime and shared resource stores (`client/datafn/`, `client/features/`, and `schema/`) while respecting legacy local persistence, Dexie, and backup/recovery boundaries under `client/persistence`. Remote synchronization MUST align with the account-service DataFn routes, schemas, generated Drizzle mappings, and lookup helpers under `services/account/src/datafn`, `services/account/src/db`, and `services/account/src/lookup`. Rationale: disciplined state management keeps local stores, DataFn sync state, and account-service records consistent across clients and services.
 
 ### IV. Verified Delivery via Repo Workflows
 Agents MUST run repository scripts (`npm run dev`, targeted Turbo commands, lint, and tests) that correspond to touched surfaces, and document verification steps alongside changes. Code MUST remain free of inline comments while using JSDoc comments for exported symbols, public APIs, and non-obvious functions. Svelte components MUST follow established structure (script, markup, style). Rationale: shared workflows and TDD discipline keep quality high and reproducible.
 
 ### V. Security & Secrets Discipline
-Agents MUST prevent exposure of credentials or sensitive data. Environment configuration MUST rely on documented variables such as `VITE_PRODUCT`, `VITE_STATIC_URL`, `VITE_ACCOUNT_BASE_URL`, `VITE_ACCOUNT_BASE_URL_TEMPLATE`, `ACCOUNT_*`, `AUTHFN_*`, `DATAFN_*`, `DEBUG_SINK_URL`, `DEBUG_SINK_WRITE_TOKEN`, and cloud credentials required by deployment or lookup integrations. Storage, auth, sync, and observability integrations MUST use vetted helpers in `services/account`, `schema`, `client/data`, and Superfunctions packages instead of ad-hoc secret handling. Rationale: consistent security practices safeguard users and hosting environments.
+Agents MUST prevent exposure of credentials or sensitive data. Environment configuration MUST rely on documented variables such as `VITE_PRODUCT`, `VITE_STATIC_URL`, `VITE_ACCOUNT_BASE_URL`, `VITE_ACCOUNT_BASE_URL_TEMPLATE`, `ACCOUNT_*`, `AUTHFN_*`, `DATAFN_*`, `DEBUG_SINK_URL`, `DEBUG_SINK_WRITE_TOKEN`, and cloud credentials required by deployment or lookup integrations. Storage, auth, sync, and observability integrations MUST use vetted helpers in `services/account`, `schema`, `client/datafn`, and Superfunctions packages instead of ad-hoc secret handling. Rationale: consistent security practices safeguard users and hosting environments.
 
 ## Onboarding Checklist
 
 ### Orientation
 - Review `README.md`, `CONTRIBUTING.md`, and `WARP.md` before making changes.
 - Recognize the monorepo layout:
-  - `client/`: SvelteKit frontends, shared UI primitives, product-specific code.
+  - `client/`: SvelteKit frontends, shared UI primitives, features, and product composition.
+  - `client/features/`: Multi-product capabilities (`@nucleum/features`).
+  - `client/datafn/`: Client DataFn runtime (`@nucleum/datafn`).
   - `services/account/`: account-service AuthFn, DataFn, SearchFn, debug-sink, local Node, and Cloudflare Worker integrations.
   - `schema/`: Product and DataFn schema (`@nucleum/schema`).
   - `shared/`: Cross-layer types and utilities.
@@ -82,7 +84,7 @@ Agents MUST prevent exposure of credentials or sensitive data. Environment confi
 - Backend modules under `services/account/` own AuthFn, account routing, DataFn sync/search, delivery, rate limits, observability, and local/Worker runtime wiring; reuse helpers in `services/account/src`, `schema`, `shared/utils`, and Superfunctions packages instead of duplicating logic.
 - When debugging account/auth/DataFn behavior, inspect `services/account/src/app.ts`, `services/account/src/auth.ts`, `services/account/src/debug-sink.ts`, `services/account/src/datafn/`, and `schema/` before changing frontend code.
 - Update generated DataFn/Drizzle mappings, schema definitions, and migrations carefully, and coordinate application-side schema expectations with `schema/datafn.ts`.
-- Keep shared types in `shared/types`, `schema`, `client/types`, or `client/data`, aligning serialization logic with these definitions before modifying APIs.
+- Keep shared types in `shared/types`, `schema`, `client/types`, or `client/datafn`, aligning serialization logic with these definitions before modifying APIs.
 - Fix account-service, AuthFn, DataFn, SearchFn, or Superfunctions bugs at their source package rather than masking them in product UI code.
 
 ### Testing & Verification
@@ -133,7 +135,7 @@ Agents MUST prevent exposure of credentials or sensitive data. Environment confi
 
 ## Workflow Expectations
 
-- Perform code discovery before changes to avoid reimplementing behavior and to understand adjacent systems, especially `client/stores/datafn.store.ts`, `client/data/datafn`, `schema/`, `client/persistence`, and `services/account/src/datafn`.
+- Perform code discovery before changes to avoid reimplementing behavior and to understand adjacent systems, especially `client/datafn/`, `client/features/`, `schema/`, `client/persistence`, and `services/account/src/datafn`.
 - Align UI updates with accessibility and interaction patterns established in shared components.
 - When introducing infrastructure or backend changes, review `deployment/README.md` and coordinate account-service, DataFn, lookup-store, and Cloud deployments with application expectations.
 - Record manual verification steps whenever automated coverage is insufficient, ensuring reviewers can reproduce validation.

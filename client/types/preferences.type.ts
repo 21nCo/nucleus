@@ -2,7 +2,7 @@ import type { AppSkin, Theme } from "@21n/types/appearance.type";
 import type { TimeScale } from "@21n/types/time.type";
 import type { IAvatar } from "@21n/types/avatar.type";
 import type { IRecordId } from "@21n/types/data.type";
-import type { TranscriptionModel } from "@21n/products/memotron/taco/taco.types";
+import type { TranscriptionModel } from "@nucleum/products/memotron/taco/taco.types";
 
 export type IUserGlobalPreferences = {
   name: string;

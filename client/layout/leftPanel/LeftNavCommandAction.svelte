@@ -3,7 +3,7 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@21n/types/action.enum";
   import { Size } from "@21n/types/size.enum";
   let {

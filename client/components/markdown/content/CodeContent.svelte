@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { ICodeBlockBody } from "@21n/components/markdown/md.type";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
-  // import CodeContentUsingMonaco from "@21n/components/markdown/content/CodeContentUsingMonaco.svelte";
-  import CodeContentUsingHighlight from "@21n/components/markdown/content/CodeContentUsingHighlight.svelte";
+  import type { ICodeBlockBody } from "@nucleum/components/markdown/md.type";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
+  // import CodeContentUsingMonaco from "@nucleum/components/markdown/content/CodeContentUsingMonaco.svelte";
+  import CodeContentUsingHighlight from "@nucleum/components/markdown/content/CodeContentUsingHighlight.svelte";
 
   let {
     mdStore,

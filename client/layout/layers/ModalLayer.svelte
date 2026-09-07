@@ -1,19 +1,19 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import Modal from "@21n/components/modal/Modal.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import Modal from "@nucleum/components/modal/Modal.svelte";
+  import { appStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import modalEvent, {
     fullScreen,
     player
-  } from "@21n/components/modal/modal.store";
+  } from "@nucleum/components/modal/modal.store";
   import {
     toasts,
     confirmationNotification,
     fullPageLoadingScreen,
     appEvents
-  } from "@21n/stores/notification.store";
+  } from "@nucleum/stores/notification.store";
   import { Size } from "@21n/types/size.enum";
   import { fly, slide } from "svelte/transition";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
@@ -24,19 +24,19 @@
   import { postDataToParent } from "@21n/utils/embed.utils";
   import ToastNotification from "@21n/elements/feedback/ToastNotification.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import ModalLayout from "@21n/components/modal/ModalLayout.svelte";
+  import ModalLayout from "@nucleum/components/modal/ModalLayout.svelte";
   import PageLoadingAnimation from "@21n/elements/feedback/animations/PageLoadingAnimation.svelte";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { Embed } from "@21n/types/context.type";
   import { page } from "$app/stores";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import SplitView from "@21n/layout/SplitView.svelte";
   import { Orientation } from "@21n/types/direction.enum";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
   import { Action } from "@21n/types/action.enum";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { cn } from "@21n/utils/ui.utils";
-  import ConfirmationNotification from "@21n/components/notifications/ConfirmationNotification.svelte";
+  import ConfirmationNotification from "@nucleum/components/notifications/ConfirmationNotification.svelte";
   import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
   let modals = $state<ModalEvent[]>([]);
   let isShowAppearancePreview = $state(false);

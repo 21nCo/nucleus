@@ -27,8 +27,8 @@
     "vite": "^5.4.21"
   },
   "dependencies": {
-    "@21n/components": "*",
-    "@21n/stores": "*",
+    "@nucleum/components": "*",
+    "@nucleum/stores": "*",
     "@21n/types": "*",
     "@21n/utils": "*",
     "clsx": "^2.1.0"

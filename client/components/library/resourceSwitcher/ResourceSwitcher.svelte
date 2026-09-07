@@ -3,22 +3,22 @@
     IResourceSwitchItem,
     ISelectValue
   } from "@21n/types/select.type";
-  import ResourceSwitcherItem from "@21n/components/library/resourceSwitcher/ResourceSwitcherItem.svelte";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { appStore } from "@21n/stores/app.store";
-  import { Product } from "@21n/products/product.type";
-  import { resolveProductConfig } from "@21n/products/product.config";
-  import { resolveResourceSwitcher } from "@21n/data/datafn/resource.utils";
+  import ResourceSwitcherItem from "@nucleum/components/library/resourceSwitcher/ResourceSwitcherItem.svelte";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { Product } from "@nucleum/products/product.type";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
+  import { resolveResourceSwitcher } from "@nucleum/datafn/resource.utils";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { properCase } from "@21n/shared-utils/text.utils";
   import {
     nextProductSectionsPre,
     nextProductSectionsPost
-  } from "@21n/next/product.config";
-  import { rootNodeTypeList } from "@21n/products/memotron/node/node.type";
-  import { datafn } from "@21n/stores/datafn.store";
+  } from "@nucleum/next/product.config";
+  import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteDataStore } from "@datafn/svelte";
-  import { datafnHeavyComputedSignalOptions } from "@21n/data/datafn/signalCache";
+  import { datafnHeavyComputedSignalOptions } from "@nucleum/datafn/signalCache";
   let {
     resources = [],
     selected = undefined,

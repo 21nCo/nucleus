@@ -1,7 +1,7 @@
 import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig } from "vite";
 import fetchJsonPlugin from "../fetch-json-data.js";
-import { staticPlugin } from "@21n/static/vite-plugin.js";
+import { staticPlugin } from "@nucleum/static/vite-plugin.js";
 import { buildViteAliases, loadAliasMap } from "../../tools/alias-utils.mjs";
 
 const aliasConfig = buildViteAliases(loadAliasMap());

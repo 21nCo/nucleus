@@ -1,7 +1,7 @@
 import { AvatarType } from "@21n/types/avatar.type";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import type { IMarkdownSettings } from "@21n/components/markdown/md.type";
-import { datafn } from "@21n/stores/datafn.store";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import type { IMarkdownSettings } from "@nucleum/components/markdown/md.type";
+import { datafn } from "@nucleum/datafn/datafn.store";
 import { get, writable } from "svelte/store";
 
 const markdownSettingsSeed: IMarkdownSettings = {

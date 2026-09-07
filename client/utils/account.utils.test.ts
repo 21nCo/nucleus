@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 
 import {
   getBucketNameandKey,
@@ -44,7 +44,7 @@ vi.mock("@21n/utils/browser.utils", () => ({
   isExtensionEnvironment: mocks.isExtensionEnvironmentMock
 }));
 
-vi.mock("@21n/persistence/persistence.utils", () => ({
+vi.mock("@nucleum/persistence/persistence.utils", () => ({
   clientStorage: mocks.clientStorageMock,
   retrieveLocally: mocks.retrieveLocallyMock
 }));
@@ -53,7 +53,7 @@ vi.mock("@21n/utils/embed.utils", () => ({
   postDataToParent: mocks.postDataToParentMock
 }));
 
-vi.mock("@21n/components/debug/logger.client", () => ({
+vi.mock("@nucleum/components/debug/logger.client", () => ({
   logger: {
     log: mocks.loggerLogMock,
     error: vi.fn()
@@ -64,7 +64,7 @@ vi.mock("@21n/shared-utils/json.utils", () => ({
   parse: mocks.parseMock
 }));
 
-vi.mock("@21n/components/account/auth", () => ({
+vi.mock("@nucleum/components/account/auth", () => ({
   authClient: async () => ({
     signOut: mocks.authSignOutMock
   })

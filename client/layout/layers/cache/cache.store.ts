@@ -1,4 +1,4 @@
-import { ObservableStore } from "@21n/stores/client.store";
+import { ObservableStore } from "@nucleum/stores/client.store";
 import { GlobalEvent } from "@21n/types/event.enum";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 

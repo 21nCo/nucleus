@@ -1,20 +1,20 @@
-import type { OmitForCapture } from "@21n/data/datafn/resource.type";
+import type { OmitForCapture } from "@nucleum/datafn/resource.type";
 import {
   NodeType,
   type IThreadsPost,
   type IThreadsProfile
-} from "@21n/products/memotron/node/node.type";
-import { createUrlFilter } from "@21n/products/memotron/node/url.utils";
+} from "@nucleum/features/memory/node/node.type";
+import { createUrlFilter } from "@nucleum/features/memory/node/url.utils";
 import { generateRandomIdv2 } from "@21n/shared-utils/crypto.utils";
-import { csuiSelector } from "@21n/extensions/clipper/clipper.constants";
+import { csuiSelector } from "@nucleum/extensions/clipper/clipper.constants";
 import type {
   ISocialPost,
   ISocialPostBase
-} from "@21n/extensions/clipper/clipper.type";
+} from "@nucleum/extensions/clipper/clipper.type";
 import {
   findAncestorOrSelf,
   resolveParentNLevel
-} from "@21n/extensions/clipper/parsers/shared/domUtils";
+} from "@nucleum/extensions/clipper/parsers/shared/domUtils";
 
 export function extractThreadsPostFromPage():
   | ISocialPost<IThreadsPost, IThreadsProfile>

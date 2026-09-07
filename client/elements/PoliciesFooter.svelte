@@ -1,5 +1,5 @@
 <script lang="ts">
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { Action } from "@21n/types/action.enum";
   import { OperatingSystem } from "@21n/types/context.type";
   import Link from "@21n/elements/text/Link.svelte";

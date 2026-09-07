@@ -8,7 +8,7 @@
     type Component,
     type ComponentType
   } from "svelte";
-  import { type IBlock, InlineType } from "@21n/components/markdown/md.type";
+  import { type IBlock, InlineType } from "@nucleum/components/markdown/md.type";
   import { debouncer, generateUID } from "@21n/utils/utils";
   import {
     extractInlineMarkdownFromHtml,
@@ -17,18 +17,18 @@
     inlineLinkPatterns,
     replaceInlineStylePatterns,
     replaceSymbolPatterns
-  } from "@21n/components/markdown/markdown.utils";
-  import InlineMention from "@21n/components/markdown/content/inline/InlineMention.svelte";
+  } from "@nucleum/components/markdown/markdown.utils";
+  import InlineMention from "@nucleum/components/markdown/content/inline/InlineMention.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { scrollIntoViewOnFocus } from "@21n/actions/scroll.action";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { scrollIntoViewOnFocus } from "@nucleum/actions/scroll.action";
   import { isValidString, truncateString } from "@21n/shared-utils/text.utils";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import InlineLink from "@21n/components/markdown/content/inline/InlineLink.svelte";
-  import { resolvePasteContents } from "@21n/products/memotron/capture/capture.utils";
-  import { MAX_FILE_SIZE_MB } from "@21n/components/record/record.store";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
-  import view from "@21n/stores/view.store";
+  import InlineLink from "@nucleum/components/markdown/content/inline/InlineLink.svelte";
+  import { resolvePasteContents } from "@nucleum/features/memory/capture/capture.utils";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/components/record/record.store";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import view from "@nucleum/stores/view.store";
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import type { IRecordId } from "@21n/types/data.type";

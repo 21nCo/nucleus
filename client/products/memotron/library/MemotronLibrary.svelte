@@ -1,8 +1,8 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import Library from "@21n/components/library/Library.svelte";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import Library from "@nucleum/components/library/Library.svelte";
 
   const libraryResources = [
     Resource.node,

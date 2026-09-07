@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { popover } from "@21n/actions/popover.action";
+  import { popover } from "@nucleum/actions/popover.action";
   import { InputStyle } from "@21n/types/input.type";
   import type { TimePeriod } from "@21n/types/time.type";
   import { timePeriodLabel } from "@21n/utils/time.utils";

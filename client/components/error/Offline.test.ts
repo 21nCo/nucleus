@@ -10,7 +10,7 @@ const mockAppStore = vi.hoisted(() => {
   return writable({ currentPath: "/focus" });
 });
 
-vi.mock("@21n/stores/app.store", () => ({
+vi.mock("@nucleum/stores/app.store", () => ({
   appStore: {
     subscribe: mockAppStore.subscribe,
     gotoPath: mockGotoPath

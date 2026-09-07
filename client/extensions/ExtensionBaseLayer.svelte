@@ -1,11 +1,11 @@
 <script lang="ts">
   import { onDestroy, onMount as onComponentMount, type Snippet } from "svelte";
   import { resolveToken } from "@21n/utils/account.utils";
-  import account from "@21n/stores/account.store";
-  import ExtensionThemeBase from "@21n/extensions/ExtensionThemeBase.svelte";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
+  import account from "@nucleum/stores/account.store";
+  import ExtensionThemeBase from "@nucleum/extensions/ExtensionThemeBase.svelte";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { extractProduct } from "@21n/shared-utils/utils";
   import {
     cleanExtensionSprites,
@@ -16,15 +16,15 @@
   // import spritePhBase from "data-text:/assets/icons/sprite-ph-base.svg";
   // import spritePhFill from "data-text:/assets/icons/sprite-ph-fill.svg";
   // import spritePhLight from "data-text:/assets/icons/sprite-ph-light.svg";
-  import { resolveIconSvgSheetText } from "@21n/extensions/iconSvgSheetTextResolver";
-  import { appStore } from "@21n/stores/app.store";
+  import { resolveIconSvgSheetText } from "@nucleum/extensions/iconSvgSheetTextResolver";
+  import { appStore } from "@nucleum/stores/app.store";
   import {
     isRecordId,
     removeDuplicatesFilter
-  } from "@21n/data/datafn/resource.utils";
+  } from "@nucleum/datafn/resource.utils";
   import { parse } from "@21n/shared-utils/json.utils";
-  import { ExtensionStore } from "@21n/extensions/extension.store";
-  import { Extension } from "@21n/products/product.type";
+  import { ExtensionStore } from "@nucleum/extensions/extension.store";
+  import { Extension } from "@nucleum/products/product.type";
   let {
     id,
     extention,

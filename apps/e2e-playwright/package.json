@@ -19,11 +19,11 @@
     "e2e:save-email-auth:pointron": "PRODUCT=pointron APP_BASE_URL=https://local.pointron.app npx tsx scripts/save-email-auth-state.ts"
   },
   "dependencies": {
-    "@21n/products": "*"
+    "@nucleum/products": "*"
   },
   "devDependencies": {
-    "@21n/components": "*",
-    "@21n/data": "*",
+    "@nucleum/components": "*",
+    "@nucleum/datafn": "*",
     "@21n/types": "*",
     "@playwright/test": "^1.49.0",
     "@types/node": "^22.0.0",

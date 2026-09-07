@@ -6,10 +6,10 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { authClient } from "./auth";
   import { resolveAccountBaseUrl } from "../network";
-  import context from "@21n/stores/context.store";
-  import { appStore } from "@21n/stores/app.store";
+  import context from "@nucleum/stores/context.store";
+  import { appStore } from "@nucleum/stores/app.store";
   import { OperatingSystem } from "@21n/types/context.type";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
   import { postDataToParent } from "@21n/utils/embed.utils";
   let {

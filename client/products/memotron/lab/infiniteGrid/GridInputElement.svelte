@@ -1,5 +1,5 @@
 <script lang="ts">
-  import GridInputElement from "@21n/products/memotron/lab/infiniteGrid/GridInputElement.svelte";
+  import GridInputElement from "@nucleum/products/memotron/lab/infiniteGrid/GridInputElement.svelte";
   import { generateUID } from "@21n/utils/utils";
   let {
     size = $bindable(0),

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/svelte";
-import GridInputElement from "@21n/products/memotron/lab/infiniteGrid/GridInputElement.svelte";
+import GridInputElement from "@nucleum/products/memotron/lab/infiniteGrid/GridInputElement.svelte";
 import GridInputElementBoundStory from "./GridInputElementBoundStory.svelte";
 
 const meta = {

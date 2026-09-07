@@ -5,7 +5,7 @@ import {
 } from "@21n/types/account.type";
 import { parseAndFormatDate } from "@21n/utils/time.utils";
 import { enumToString } from "@21n/shared-utils/text.utils";
-import { BillingCycle, PlanType, type IPlan } from "@21n/components/subscription/userPlan.type";
+import { BillingCycle, PlanType, type IPlan } from "@nucleum/components/subscription/userPlan.type";
 
 const plans = import.meta?.env?.VITE_PLANS;
 let rates: number[] = [7, 60, 200, 15, 144, 450];

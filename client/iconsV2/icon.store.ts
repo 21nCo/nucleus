@@ -2,7 +2,7 @@ import { isExtensionEnvironment } from "@21n/utils/browser.utils";
 import { bundleNumber } from "@21n/icons-v2/icons-list";
 import { iconMappings, type IconSet } from "@21n/icons-v2/icons.map";
 //TODO - temp for landing
-import { assetPath } from "@21n/static";
+import { assetPath } from "@nucleum/static";
 
 export const spriteVersion = bundleNumber;
 export const extensionSprites = new Map<string, string>();

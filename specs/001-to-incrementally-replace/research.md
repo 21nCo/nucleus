@@ -1,7 +1,7 @@
 # Research: Workspace Alias Migration
 
 ## 1. Alias Inventory (Post-Migration)
-- Centralized registry lives at `/tools/alias-map.json` covering **28 workspace aliases** (new additions: `@21n/data`, `@21n/illustrations`, `@21n/icons-v2`, `@21n/cx`, `@21n/client`).
+- Centralized registry lives at `/tools/alias-map.json` covering **28 workspace aliases** (new additions: `@nucleum/datafn`, `@21n/illustrations`, `@21n/icons-v2`, `@nucleum/cx`, `@nucleum/client`).
 - `tools/alias-utils.(mjs|cjs)` load the registry and emit TS/Vite mappings; `tools/sync-aliases.mjs` keeps all `tsconfig` files in sync.
 - All apps/extensions now consume aliases through shared utilities; Vite configs import `buildViteAliases` rather than embedding path literals.
 
@@ -24,7 +24,7 @@
 - Outstanding mappings are documented in `/tools/codemods/alias-migration/README (todo)` and tracked for manual follow-up; none block runtime.
 
 ## 5. Verification & Test Runs
-- `npm run lint` → ✅ passes (Turbo warns about `@21n/static#build` outputs as before).
+- `npm run lint` → ✅ passes (Turbo warns about `@nucleum/static#build` outputs as before).
 - Targeted Vitest suites:
   - `npx vitest run tests/unit/eslint/alias-imports.spec.ts tests/integration/codemods/alias-migration.spec.ts` → ✅
 - `npm run test` → ❌ fails for `memotron-app` & `nucleus-app` (no test files). Captured logs include SvelteKit warnings about `config.kit.files.*` and missing exports; failure reason unchanged from baseline.

@@ -2,7 +2,7 @@
 
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import AccountLayout from "@21n/components/account/AccountLayout.svelte";
+  import AccountLayout from "@nucleum/components/account/AccountLayout.svelte";
 
   let { children }: { children?: Snippet } = $props();
 </script>

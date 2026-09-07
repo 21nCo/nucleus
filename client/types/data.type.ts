@@ -1,6 +1,6 @@
 import type { Writable } from "svelte/store";
-import type { ResourceActionType } from "@21n/data/datafn/resource.type";
-import type { Resource } from "@21n/data/datafn/resource.enum";
+import type { ResourceActionType } from "@nucleum/datafn/resource.type";
+import type { Resource } from "@nucleum/datafn/resource.enum";
 
 /**
  * The operations which can be performed on a cacheable store

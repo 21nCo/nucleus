@@ -1,5 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 import {
   ensureInAppOnHome,
   LibraryTab,

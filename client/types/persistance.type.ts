@@ -1,4 +1,4 @@
-import type { IResource } from "@21n/data/datafn/resource.type";
+import type { IResource } from "@nucleum/datafn/resource.type";
 
 export type QueryParams =
   | string

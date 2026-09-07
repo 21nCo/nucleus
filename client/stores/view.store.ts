@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 import { Display, type IViewStore } from "@21n/types/view.type";
-import { ObservableStore } from "@21n/stores/client.store";
+import { ObservableStore } from "@nucleum/stores/client.store";
 
 /**
  * Programmatically set the screen size - Refer tidigit.tailwind.cjs for more details

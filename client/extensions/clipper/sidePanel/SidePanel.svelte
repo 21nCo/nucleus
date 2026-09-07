@@ -1,31 +1,31 @@
 <script lang="ts">
-  import "@21n/client/app.css";
-  import ClipsPane from "@21n/extensions/clipper/sidePanel/clips/ClipsPane.svelte";
+  import "@nucleum/client/app.css";
+  import ClipsPane from "@nucleum/extensions/clipper/sidePanel/clips/ClipsPane.svelte";
   import { ExtensionEvent } from "@21n/types/extension.type";
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import { onDestroy, onMount } from "svelte";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import {
     openAppPath,
     relayToContentScript
   } from "@21n/utils/extension.utils";
-  import type { IClip } from "@21n/products/memotron/node/node.type";
-  import ExtensionBaseLayer from "@21n/extensions/ExtensionBaseLayer.svelte";
+  import type { IClip } from "@nucleum/features/memory/node/node.type";
+  import ExtensionBaseLayer from "@nucleum/extensions/ExtensionBaseLayer.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { Size } from "@21n/types/size.enum";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import account from "@21n/stores/account.store";
+  import account from "@nucleum/stores/account.store";
   import { resolveToken } from "@21n/utils/account.utils";
   import { getPort } from "@plasmohq/messaging/port";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import InlineMarkdownTextInput from "@21n/components/markdown/content/InlineMarkdownTextInput.svelte";
-  import { extensionDatafn } from "@21n/extensions/extension.store";
+  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import { extensionDatafn } from "@nucleum/extensions/extension.store";
   import {
     blankUrls,
     memotronUrlsList,
     sidePanelUnavailableUrlsList
-  } from "@21n/products/memotron/common/urlMap";
+  } from "@nucleum/features/memory/common/urlMap";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
@@ -34,25 +34,25 @@
     OptionSelectorStyle,
     type ISelectItem
   } from "@21n/types/select.type";
-  import InlineFeedbackText from "@21n/extensions/clipper/InlineFeedbackText.svelte";
+  import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType, type IInlineStatus } from "@21n/types/notification.type";
   import { cn } from "@21n/utils/ui.utils";
   import { fly } from "svelte/transition";
-  import { Extension, Product } from "@21n/products/product.type";
-  import ExtensionHelp from "@21n/extensions/shared/ExtensionHelp.svelte";
-  import { DatafnExtensionMethod } from "@21n/extensions/extension.store";
-  import SidePanelCollections from "@21n/extensions/clipper/sidePanel/collectionsOnClipper/SidePanelCollections.svelte";
+  import { Extension, Product } from "@nucleum/products/product.type";
+  import ExtensionHelp from "@nucleum/extensions/shared/ExtensionHelp.svelte";
+  import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
+  import SidePanelCollections from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/SidePanelCollections.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { clientStorage } from "@21n/persistence/persistence.utils";
-  import { ClientStorageKey } from "@21n/persistence/persistence.type";
+  import { clientStorage } from "@nucleum/persistence/persistence.utils";
+  import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import InlineSyncingFeedbackBase from "@21n/elements/feedback/InlineSyncingFeedbackBase.svelte";
-  import { SidePanelPageType } from "@21n/extensions/clipper/sidePanel/sidePanel.type";
+  import { SidePanelPageType } from "@nucleum/extensions/clipper/sidePanel/sidePanel.type";
   import {
     resolveContentTypeForUrl,
     resolveContentTypeString
-  } from "@21n/extensions/clipper/clipper.utils";
+  } from "@nucleum/extensions/clipper/clipper.utils";
   import { parse } from "@21n/shared-utils/json.utils";
-  import { ExtensionStore } from "@21n/extensions/extension.store";
+  import { ExtensionStore } from "@nucleum/extensions/extension.store";
 
   let mainPanel: "page" | "collections" = "page";
   let mode: "clips" | "notes" | "history" = "clips";

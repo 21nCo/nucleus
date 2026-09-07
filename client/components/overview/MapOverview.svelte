@@ -2,8 +2,8 @@
   import { mount, onMount, onDestroy } from "svelte";
   import maplibregl from "maplibre-gl";
   import "maplibre-gl/dist/maplibre-gl.css";
-  import MapItem from "@21n/components/overview/MapItem.svelte";
-  import { mapTileStyles } from "@21n/components/maps/map.styles";
+  import MapItem from "@nucleum/components/overview/MapItem.svelte";
+  import { mapTileStyles } from "@nucleum/components/maps/map.styles";
 
   interface MapDataPoint {
     id: string;

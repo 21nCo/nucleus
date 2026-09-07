@@ -1,21 +1,21 @@
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { logger } from "@21n/components/debug/logger.client";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { logger } from "@nucleum/components/debug/logger.client";
 import { get, writable } from "svelte/store";
-import { appStore } from "@21n/stores/app.store";
-import { datafn } from "@21n/stores/datafn.store";
+import { appStore } from "@nucleum/stores/app.store";
+import { datafn } from "@nucleum/datafn/datafn.store";
 import {
   Preference,
   PreferencesScope,
   type IPreferencesParams,
   type IPreferencesStore
-} from "@21n/stores/preferences/preferences.type";
-import { migrateLegacyNucleusProductKeys } from "@21n/stores/productKeyMigration.utils";
+} from "@nucleum/stores/preferences/preferences.type";
+import { migrateLegacyNucleusProductKeys } from "@nucleum/stores/productKeyMigration.utils";
 import {
   acknowledgeOptimisticKvEntries,
   addOptimisticKvEntries,
   applyOptimisticKvEntries,
   removeOptimisticKvEntries
-} from "@21n/stores/optimisticKv.utils";
+} from "@nucleum/datafn/optimisticKv.utils";
 import type { OptimisticKvEntries } from "@21n/types/datafn.type";
 
 const preferencesSignal = datafn.kv.signal<IPreferencesStore>(

@@ -1,13 +1,13 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import {
     feedbackPane,
     webpage
-  } from "@21n/extensions/clipper/contentScripts/store";
+  } from "@nucleum/extensions/clipper/contentScripts/store";
   import { AlertType } from "@21n/types/notification.type";
-  import type { NodeType } from "@21n/products/memotron/node/node.type";
+  import type { NodeType } from "@nucleum/features/memory/node/node.type";
   import { enumToString } from "@21n/shared-utils/text.utils";
   let {
     contentType,

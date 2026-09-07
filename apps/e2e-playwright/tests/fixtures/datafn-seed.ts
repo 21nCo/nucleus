@@ -4,7 +4,7 @@ import { expect, type Page, type TestInfo } from "@playwright/test";
 import { resolveRepoFsImportPath } from "../utils/repo-fs";
 
 const datafnStorePath = resolveRepoFsImportPath(
-  "client/stores/datafn.store.ts"
+  "client/datafn/datafn.store.ts"
 );
 
 export type DatafnSeedResource =

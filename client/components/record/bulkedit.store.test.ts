@@ -2,8 +2,8 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 
 import { bulkEditStore } from "./bulkedit.store";
 

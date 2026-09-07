@@ -1,13 +1,13 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import type { MouseEventHandler } from "svelte/elements";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/types/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import view from "@21n/stores/view.store";
-  import { appStore } from "@21n/stores/app.store";
-  import modalEvent from "@21n/components/modal/modal.store";
+  import view from "@nucleum/stores/view.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import modalEvent from "@nucleum/components/modal/modal.store";
   import { haptic } from "@21n/utils/embed.utils";
 
   let {

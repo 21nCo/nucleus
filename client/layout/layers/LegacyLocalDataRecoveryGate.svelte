@@ -4,8 +4,8 @@
   import Button from "@21n/elements/button/Button.svelte";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import type { LegacyLocalDataSummary } from "@21n/persistence/legacyLocalDataBackup";
-  import { resolveLegacyLocalDataRecordCount } from "@21n/persistence/legacyLocalDataBackup";
+  import type { LegacyLocalDataSummary } from "@nucleum/persistence/legacyLocalDataBackup";
+  import { resolveLegacyLocalDataRecordCount } from "@nucleum/persistence/legacyLocalDataBackup";
   import { ButtonVariant } from "@21n/types/button.type";
   import { Size } from "@21n/types/size.enum";
   import { TextStyle } from "@21n/types/text.enum";

@@ -6,7 +6,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { appEvents } from "@21n/stores/notification.store";
+  import { appEvents } from "@nucleum/stores/notification.store";
   import type { IEvent } from "@21n/types/event.type";
   import { GlobalEvent } from "@21n/types/event.enum";
   let {

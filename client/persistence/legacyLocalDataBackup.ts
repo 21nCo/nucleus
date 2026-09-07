@@ -1,9 +1,9 @@
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 import { productRegistry } from "@nucleum/schema/product.config";
 import { nucleumDatafnSchema } from "@nucleum/schema/datafn";
 import { parse } from "@21n/shared-utils/json.utils";
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
-import { clientStorage } from "@21n/persistence/persistence.utils";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
+import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import {
   TIMEZONE_CHANGE_RESOURCE_NAME,
   timezoneChangeId

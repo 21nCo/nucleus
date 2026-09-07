@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { appStore } from "@21n/stores/app.store";
-import { AccessMode } from "@21n/data/datafn/resource.type";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { appStore } from "@nucleum/stores/app.store";
+import { AccessMode } from "@nucleum/datafn/resource.type";
 
 export interface SearchState {
   /**

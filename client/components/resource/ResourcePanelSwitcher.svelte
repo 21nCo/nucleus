@@ -8,11 +8,11 @@
   import {
     AccessMode,
     type IResourcePageWithPanels
-  } from "@21n/data/datafn/resource.type";
+  } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/types/size.enum";
   import { ButtonVariant } from "@21n/types/button.type";
-  import { appStore } from "@21n/stores/app.store";
-  import view from "@21n/stores/view.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import view from "@nucleum/stores/view.store";
   import ContextMenuAction from "@21n/elements/contextMenu/ContextMenuAction.svelte";
   import type { IContextMenuItem } from "@21n/types/select.type";
   import { page } from "$app/stores";

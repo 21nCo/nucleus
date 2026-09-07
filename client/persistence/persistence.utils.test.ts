@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { clientStorage, getDapId } from "./persistence.utils";
 
 describe("persistence.utils", () => {

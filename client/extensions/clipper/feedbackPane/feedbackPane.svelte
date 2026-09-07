@@ -1,36 +1,36 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
-  import LinkBoxOnClipper from "@21n/products/memotron/common/linkbox/LinkBoxOnClipper.svelte";
+  import LinkBoxOnClipper from "@nucleum/features/memory/common/linkbox/LinkBoxOnClipper.svelte";
   import { onMount } from "svelte";
   import {
     feedbackPane,
     webpage
-  } from "@21n/extensions/clipper/contentScripts/store";
-  import LinkItems from "@21n/products/memotron/common/linkbox/LinkItems.svelte";
-  import InlineFeedbackText from "@21n/extensions/clipper/InlineFeedbackText.svelte";
+  } from "@nucleum/extensions/clipper/contentScripts/store";
+  import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
+  import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType } from "@21n/types/notification.type";
-  import InlineMarkdownTextInput from "@21n/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
   import {
     NodeType,
     socialPostNodeTypeList
-  } from "@21n/products/memotron/node/node.type";
-  import { resolveContentTypeString } from "@21n/extensions/clipper/clipper.utils";
-  import FeedbackPaneBase from "@21n/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
-  import FileView from "@21n/components/files/FileView.svelte";
+  } from "@nucleum/features/memory/node/node.type";
+  import { resolveContentTypeString } from "@nucleum/extensions/clipper/clipper.utils";
+  import FeedbackPaneBase from "@nucleum/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
+  import FileView from "@nucleum/features/files/FileView.svelte";
   import type { IRecordId } from "@21n/types/data.type";
   import {
     determineResourceType,
     resourceInList
-  } from "@21n/data/datafn/resource.utils";
-  import NodeThumbnailTweetPreview from "@21n/products/memotron/node/thumbnail/NodeThumbnailTweetPreview.svelte";
+  } from "@nucleum/datafn/resource.utils";
+  import NodeThumbnailTweetPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailTweetPreview.svelte";
   import { Placement } from "@21n/types/direction.enum";
-  import type { IWebpageStore } from "@21n/extensions/clipper/contentScripts/types";
-  import { logger } from "@21n/components/debug/logger.client";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { ResourceError } from "@21n/components/error/errors";
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
-  import NodeThumbnailSocialPostPreview from "@21n/products/memotron/node/thumbnail/NodeThumbnailSocialPostPreview.svelte";
+  import type { IWebpageStore } from "@nucleum/extensions/clipper/contentScripts/types";
+  import { logger } from "@nucleum/components/debug/logger.client";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { ResourceError } from "@nucleum/components/error/errors";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+  import NodeThumbnailSocialPostPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailSocialPostPreview.svelte";
   let {
     pageContentType = undefined
   }: {

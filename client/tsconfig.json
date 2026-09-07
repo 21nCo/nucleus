@@ -25,7 +25,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@21n/actions": [
+      "@nucleum/actions": [
         "./actions/index.ts",
         "./actions/index.tsx",
         "./actions/index.js",
@@ -42,10 +42,10 @@
         "./actions/src/index.d.ts",
         "./actions"
       ],
-      "@21n/actions/*": [
+      "@nucleum/actions/*": [
         "./actions/*"
       ],
-      "@21n/components": [
+      "@nucleum/components": [
         "./components/index.ts",
         "./components/index.tsx",
         "./components/index.js",
@@ -62,7 +62,7 @@
         "./components/src/index.d.ts",
         "./components"
       ],
-      "@21n/components/*": [
+      "@nucleum/components/*": [
         "./components/*"
       ],
       "@21n/elements": [
@@ -85,7 +85,7 @@
       "@21n/elements/*": [
         "./elements/*"
       ],
-      "@21n/stores": [
+      "@nucleum/stores": [
         "./stores/index.ts",
         "./stores/index.tsx",
         "./stores/index.js",
@@ -102,7 +102,7 @@
         "./stores/src/index.d.ts",
         "./stores"
       ],
-      "@21n/stores/*": [
+      "@nucleum/stores/*": [
         "./stores/*"
       ],
       "@21n/utils": [
@@ -145,7 +145,7 @@
       "@21n/types/*": [
         "./types/*"
       ],
-      "@21n/products": [
+      "@nucleum/products": [
         "./products/index.ts",
         "./products/index.tsx",
         "./products/index.js",
@@ -162,10 +162,50 @@
         "./products/src/index.d.ts",
         "./products"
       ],
-      "@21n/products/*": [
+      "@nucleum/products/*": [
         "./products/*"
       ],
-      "@21n/static": [
+      "@nucleum/features": [
+        "./features/index.ts",
+        "./features/index.tsx",
+        "./features/index.js",
+        "./features/index.mjs",
+        "./features/index.cjs",
+        "./features/index.svelte",
+        "./features/index.d.ts",
+        "./features/src/index.ts",
+        "./features/src/index.tsx",
+        "./features/src/index.js",
+        "./features/src/index.mjs",
+        "./features/src/index.cjs",
+        "./features/src/index.svelte",
+        "./features/src/index.d.ts",
+        "./features"
+      ],
+      "@nucleum/features/*": [
+        "./features/*"
+      ],
+      "@nucleum/datafn": [
+        "./datafn/index.ts",
+        "./datafn/index.tsx",
+        "./datafn/index.js",
+        "./datafn/index.mjs",
+        "./datafn/index.cjs",
+        "./datafn/index.svelte",
+        "./datafn/index.d.ts",
+        "./datafn/src/index.ts",
+        "./datafn/src/index.tsx",
+        "./datafn/src/index.js",
+        "./datafn/src/index.mjs",
+        "./datafn/src/index.cjs",
+        "./datafn/src/index.svelte",
+        "./datafn/src/index.d.ts",
+        "./datafn"
+      ],
+      "@nucleum/datafn/*": [
+        "./datafn/*"
+      ],
+      "@nucleum/static": [
         "./static/index.ts",
         "./static/index.tsx",
         "./static/index.js",
@@ -182,7 +222,7 @@
         "./static/src/index.d.ts",
         "./static"
       ],
-      "@21n/static/*": [
+      "@nucleum/static/*": [
         "./static/*"
       ],
       "@21n/layout": [
@@ -205,7 +245,7 @@
       "@21n/layout/*": [
         "./layout/*"
       ],
-      "@21n/persistence": [
+      "@nucleum/persistence": [
         "./persistence/index.ts",
         "./persistence/index.tsx",
         "./persistence/index.js",
@@ -222,10 +262,10 @@
         "./persistence/src/index.d.ts",
         "./persistence"
       ],
-      "@21n/persistence/*": [
+      "@nucleum/persistence/*": [
         "./persistence/*"
       ],
-      "@21n/extensions": [
+      "@nucleum/extensions": [
         "./extensions/index.ts",
         "./extensions/index.tsx",
         "./extensions/index.js",
@@ -242,7 +282,7 @@
         "./extensions/src/index.d.ts",
         "./extensions"
       ],
-      "@21n/extensions/*": [
+      "@nucleum/extensions/*": [
         "./extensions/*"
       ],
       "@21n/branding": [
@@ -305,7 +345,7 @@
       "@21n/theme/*": [
         "./theme/*"
       ],
-      "@21n/legacy": [
+      "@nucleum/legacy": [
         "./legacy/index.ts",
         "./legacy/index.tsx",
         "./legacy/index.js",
@@ -322,28 +362,8 @@
         "./legacy/src/index.d.ts",
         "./legacy"
       ],
-      "@21n/legacy/*": [
+      "@nucleum/legacy/*": [
         "./legacy/*"
-      ],
-      "@21n/data": [
-        "./data/index.ts",
-        "./data/index.tsx",
-        "./data/index.js",
-        "./data/index.mjs",
-        "./data/index.cjs",
-        "./data/index.svelte",
-        "./data/index.d.ts",
-        "./data/src/index.ts",
-        "./data/src/index.tsx",
-        "./data/src/index.js",
-        "./data/src/index.mjs",
-        "./data/src/index.cjs",
-        "./data/src/index.svelte",
-        "./data/src/index.d.ts",
-        "./data"
-      ],
-      "@21n/data/*": [
-        "./data/*"
       ],
       "@21n/illustrations": [
         "./illustrations/index.ts",
@@ -385,7 +405,7 @@
       "@21n/icons-v2/*": [
         "./iconsV2/*"
       ],
-      "@21n/cx": [
+      "@nucleum/cx": [
         "./cx/index.ts",
         "./cx/index.tsx",
         "./cx/index.js",
@@ -402,10 +422,10 @@
         "./cx/src/index.d.ts",
         "./cx"
       ],
-      "@21n/cx/*": [
+      "@nucleum/cx/*": [
         "./cx/*"
       ],
-      "@21n/client": [
+      "@nucleum/client": [
         "./index.ts",
         "./index.tsx",
         "./index.js",
@@ -422,7 +442,7 @@
         "./src/index.d.ts",
         "."
       ],
-      "@21n/client/*": [
+      "@nucleum/client/*": [
         "./*"
       ],
       "@21n/shared-types": [
@@ -505,7 +525,7 @@
       "@nucleum/schema/*": [
         "../schema/*"
       ],
-      "@21n/next": [
+      "@nucleum/next": [
         "./next/noop/index.ts",
         "./next/noop/index.tsx",
         "./next/noop/index.js",
@@ -522,7 +542,7 @@
         "./next/noop/src/index.d.ts",
         "./next/noop"
       ],
-      "@21n/next/*": [
+      "@nucleum/next/*": [
         "./next/noop/*"
       ]
     }

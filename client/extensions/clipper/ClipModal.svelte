@@ -1,19 +1,19 @@
 <script lang="ts">
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
-  import InlineMarkdownTextInput from "@21n/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { feedbackPane } from "@21n/extensions/clipper/contentScripts/store";
-  import LinkBoxOnClipper from "@21n/products/memotron/common/linkbox/LinkBoxOnClipper.svelte";
-  import LinkItems from "@21n/products/memotron/common/linkbox/LinkItems.svelte";
-  import { NodeType, type IClip } from "@21n/products/memotron/node/node.type";
-  import NodeTitle from "@21n/products/memotron/node/title/NodeTitle.svelte";
+  import { feedbackPane } from "@nucleum/extensions/clipper/contentScripts/store";
+  import LinkBoxOnClipper from "@nucleum/features/memory/common/linkbox/LinkBoxOnClipper.svelte";
+  import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
+  import { NodeType, type IClip } from "@nucleum/features/memory/node/node.type";
+  import NodeTitle from "@nucleum/features/memory/node/title/NodeTitle.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import { fly } from "svelte/transition";
-  import { resumeVideo } from "@21n/extensions/clipper/parsers/shared/video.utils";
-  import InlineFeedbackText from "@21n/extensions/clipper/InlineFeedbackText.svelte";
+  import { resumeVideo } from "@nucleum/extensions/clipper/parsers/shared/video.utils";
+  import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType } from "@21n/types/notification.type";
-  import { determineResourceType } from "@21n/data/datafn/resource.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { determineResourceType } from "@nucleum/datafn/resource.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
 
   let {
     clip,

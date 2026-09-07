@@ -1,7 +1,7 @@
 <script>
   // import PropertiesEditor from "$lib/client/products/memotron/curation/collection/properties/PropertiesEditor.svelte";
   import RiveAnimatedIcon from "@21n/icons/RiveAnimatedIcon.svelte";
-  import CaretPlay from "@21n/client/routes/play/CaretPlay.svelte";
+  import CaretPlay from "@nucleum/client/routes/play/CaretPlay.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonVariant } from "@21n/types/button.type";
 </script>

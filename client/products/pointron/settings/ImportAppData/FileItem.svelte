@@ -2,7 +2,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
   import { UploadStatus } from "@21n/types/uploadStatus.enum";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import { cn } from "@21n/utils/ui.utils";
 
   let {

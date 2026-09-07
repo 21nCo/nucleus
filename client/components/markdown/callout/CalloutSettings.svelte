@@ -4,7 +4,7 @@
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import Table2 from "@21n/elements/table/Table2.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { MemotronAction } from "@21n/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
   import {
     AvatarPickerContext,
     AvatarType,
@@ -17,9 +17,9 @@
   } from "@21n/types/table.type";
   import { TextStyle } from "@21n/types/text.enum";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import ModalFooter from "@21n/components/modal/ModalFooter.svelte";
-  import { markdownSettings } from "@21n/components/markdown/markdown.settings";
-  import ModalContentPadded from "@21n/components/modal/ModalContentPadded.svelte";
+  import ModalFooter from "@nucleum/components/modal/ModalFooter.svelte";
+  import { markdownSettings } from "@nucleum/components/markdown/markdown.settings";
+  import ModalContentPadded from "@nucleum/components/modal/ModalContentPadded.svelte";
   let callouts = $state([...$markdownSettings.callout]);
   let previewId: string | undefined = callouts[0]?.id;
   let error: string | undefined = undefined;

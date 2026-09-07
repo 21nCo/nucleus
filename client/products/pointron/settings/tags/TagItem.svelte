@@ -1,6 +1,6 @@
 <script lang="ts">
   import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { appStore } from "@21n/stores/app.store";
+  import { appStore } from "@nucleum/stores/app.store";
 
   let {
     label = undefined,

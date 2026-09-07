@@ -3,8 +3,8 @@
   import {
     isSameResource,
     resourceInList
-  } from "@21n/data/datafn/resource.utils";
-  import { tooltip } from "@21n/actions/popover.action";
+  } from "@nucleum/datafn/resource.utils";
+  import { tooltip } from "@nucleum/actions/popover.action";
 
   let {
     headingBlocks,

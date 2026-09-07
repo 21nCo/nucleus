@@ -11,7 +11,7 @@
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
   import { OptionSelectorStyle } from "@21n/types/select.type";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import AbsoluteTimeRangePopoverV2 from "@21n/elements/datetime/absolute/AbsoluteTimeRangePopoverV2.svelte";
   import { Orientation } from "@21n/types/direction.enum";
   let { period, onChange }: any = $props();

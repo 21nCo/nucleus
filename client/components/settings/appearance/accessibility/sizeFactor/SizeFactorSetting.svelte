@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import { onMount } from "svelte";
-  import SizeFactorSelector from "@21n/components/settings/appearance/accessibility/sizeFactor/SizeFactorSelector.svelte";
+  import SizeFactorSelector from "@nucleum/components/settings/appearance/accessibility/sizeFactor/SizeFactorSelector.svelte";
   let { parentBackgroundIndex = 1 }: { parentBackgroundIndex?: number } =
     $props();
   let selectedFactor = $state(1);

@@ -1,19 +1,19 @@
 import "fake-indexeddb/auto";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { Product } from "@21n/products/product.type";
-import { appStore } from "@21n/stores/app.store";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { Product } from "@nucleum/products/product.type";
+import { appStore } from "@nucleum/stores/app.store";
 import {
   datafn,
   destroyNucleumDatafn,
   initializeNucleumDatafn
-} from "@21n/stores/datafn.store";
+} from "@nucleum/datafn/datafn.store";
 import { UserDataMode } from "@21n/types/account.type";
 import {
   Preference,
   PreferencesScope
-} from "@21n/stores/preferences/preferences.type";
-import { preferences } from "@21n/stores/preferences/preferences.store";
+} from "@nucleum/stores/preferences/preferences.type";
+import { preferences } from "@nucleum/stores/preferences/preferences.store";
 
 describe("DataFn preferences KV store", () => {
   afterEach(async () => {

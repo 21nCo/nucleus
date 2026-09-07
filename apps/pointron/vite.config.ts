@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import fetchJsonPlugin from "../fetch-json-data.js";
-import { staticPlugin } from "@21n/static/vite-plugin.js";
+import { staticPlugin } from "@nucleum/static/vite-plugin.js";
 import { buildViteAliases, loadAliasMap } from "../../tools/alias-utils.mjs";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 

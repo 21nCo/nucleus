@@ -22,7 +22,7 @@ const lint = async (code: string) => {
 describe("alias-imports lint rule", () => {
   it("allows workspace alias imports", async () => {
     const [result] = await lint(
-      "import Button from \"@21n/components/Button.svelte\";"
+      "import Button from \"@nucleum/components/Button.svelte\";"
     );
 
     expect(result.messages).toHaveLength(0);

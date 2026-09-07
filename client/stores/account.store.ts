@@ -8,14 +8,14 @@ import {
   type UserInformation
 } from "@21n/types/account.type";
 import { postDataToParent } from "@21n/utils/embed.utils";
-import { Persistence } from "@21n/persistence/persistence";
+import { Persistence } from "@nucleum/persistence/persistence";
 import { determineIfOffline, performApiCall } from "@21n/utils/network.utils";
 import {
   confirmationNotification,
   toasts
-} from "@21n/stores/notification.store";
+} from "@nucleum/stores/notification.store";
 import { ButtonVariant } from "@21n/types/button.type";
-import { appStore } from "@21n/stores/app.store";
+import { appStore } from "@nucleum/stores/app.store";
 import {
   getBucketNameandKey,
   hasLegacyCloudSession,
@@ -24,27 +24,27 @@ import {
 import {
   determineIfPlanIsActive,
   determineIfSubscriptionExpired
-} from "@21n/components/subscription/userPlan.utils";
-import { PlanType } from "@21n/components/subscription/userPlan.type";
-import { ObservableStore } from "@21n/stores/client.store";
+} from "@nucleum/components/subscription/userPlan.utils";
+import { PlanType } from "@nucleum/components/subscription/userPlan.type";
+import { ObservableStore } from "@nucleum/stores/client.store";
 import { StoreDataType, type IRecordId } from "@21n/types/data.type";
 import {
   clientStorage,
   deleteIndexedDbDatabase
-} from "@21n/persistence/persistence.utils";
-import { ClientStorageKey } from "@21n/persistence/persistence.type";
-import { logger } from "@21n/components/debug/logger.client";
+} from "@nucleum/persistence/persistence.utils";
+import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
+import { logger } from "@nucleum/components/debug/logger.client";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import {
   clearDatafnLocalData,
   datafn,
   destroyNucleumDatafn
-} from "@21n/stores/datafn.store";
-import { generateResourceId } from "@21n/data/datafn/id.utils";
-import { Resource } from "@21n/data/datafn/resource.enum";
+} from "@nucleum/datafn/datafn.store";
+import { generateResourceId } from "@nucleum/datafn/id.utils";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 import { GlobalEvent } from "@21n/types/event.enum";
-import context from "@21n/stores/context.store";
+import context from "@nucleum/stores/context.store";
 import { compressImageToTargetSize } from "@21n/utils/ui.utils";
 import { convertHeicToPng } from "@21n/utils/ui.utils";
 import { generateImagePreviewFromPdf } from "@21n/utils/pdf.utils";
@@ -55,10 +55,10 @@ import {
   bootstrapNucleusAccount,
   resolveAuthSession,
   shouldUseAuthFnBearerSession
-} from "@21n/components/account/auth";
-import { resolveAccountBaseUrl } from "@21n/components/network";
-import { clearCachedDatafnE2eeState } from "@21n/stores/datafnE2ee.store";
-import { clearLegacySurrealLocalData } from "@21n/persistence/legacyLocalDataBackup";
+} from "@nucleum/components/account/auth";
+import { resolveAccountBaseUrl } from "@nucleum/components/network";
+import { clearCachedDatafnE2eeState } from "@nucleum/datafn/datafnE2ee.store";
+import { clearLegacySurrealLocalData } from "@nucleum/persistence/legacyLocalDataBackup";
 
 export const isRefreshingToken = writable(false);
 
@@ -287,7 +287,7 @@ class AccountStore extends ObservableStore<UserAccount> {
 
     let authSession = params?.session;
     if (!authSession) {
-      const { authClient } = await import("@21n/components/account/auth");
+      const { authClient } = await import("@nucleum/components/account/auth");
       const response = await (
         await authClient({ isPreventCachedInstance: true })
       ).getSession();
@@ -361,7 +361,7 @@ class AccountStore extends ObservableStore<UserAccount> {
   private async resolveAuthFnSessionUserInfo(): Promise<{
     userInfo: UserInformation;
   } | null> {
-    const { authClient } = await import("@21n/components/account/auth");
+    const { authClient } = await import("@nucleum/components/account/auth");
     const response = await (await authClient()).getSession();
     if (!response.ok || !response.data.session) {
       return null;
@@ -541,7 +541,7 @@ class AccountStore extends ObservableStore<UserAccount> {
     "deleted" | "not-authfn" | "failed"
   > {
     try {
-      const { authClient } = await import("@21n/components/account/auth");
+      const { authClient } = await import("@nucleum/components/account/auth");
       const response = await (
         await authClient({
           isPreventCachedInstance: true

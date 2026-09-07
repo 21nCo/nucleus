@@ -3,19 +3,19 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { onMount } from "svelte";
-  import { appLoadingState, appStore } from "@21n/stores/app.store";
+  import { appLoadingState, appStore } from "@nucleum/stores/app.store";
   import {
     appEvents,
     scheduledNotifications
-  } from "@21n/stores/notification.store";
+  } from "@nucleum/stores/notification.store";
   import { postDataToParent } from "@21n/utils/embed.utils";
-  import context from "@21n/stores/context.store";
-  import view from "@21n/stores/view.store";
-  import { InteractionMode } from "@21n/components/settings/interactionMode/interactionMode.type";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
-  import CommandModePage from "@21n/components/commandBar/CommandModePage.svelte";
+  import context from "@nucleum/stores/context.store";
+  import view from "@nucleum/stores/view.store";
+  import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
+  import CommandModePage from "@nucleum/components/commandBar/CommandModePage.svelte";
   import { Embed } from "@21n/types/context.type";
-  import { UIState } from "@21n/stores/uiState/uiState.type";
+  import { UIState } from "@nucleum/stores/uiState/uiState.type";
   import LeftNav from "@21n/layout/leftPanel/LeftNav.svelte";
   import AppSplitView from "@21n/layout/AppSplitView.svelte";
   import TopNav from "@21n/layout/topNav/TopNav.svelte";
@@ -27,7 +27,7 @@
   import { hTrail } from "../topNav/tabs/tabs.store";
   import Trail from "../trail/Trail.svelte";
   import type { IAction } from "@21n/types/action.type";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
   import type { IRecordId } from "@21n/types/data.type";
   import ResourceResolver from "../paint/ResourceResolver.svelte";
   import { GlobalEvent } from "@21n/types/event.enum";

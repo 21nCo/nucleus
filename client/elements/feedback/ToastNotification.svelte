@@ -4,12 +4,12 @@
   import {
     toastDefaultDuration,
     toasts
-  } from "@21n/stores/notification.store";
+  } from "@nucleum/stores/notification.store";
   import { AlertType, type Toast } from "@21n/types/notification.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { linear } from "svelte/easing";
   import { onMount } from "svelte";
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
     let {
     notification,
     isShownAsModal = false,

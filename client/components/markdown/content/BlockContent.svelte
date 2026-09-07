@@ -1,20 +1,20 @@
 <script lang="ts">
-  import type { IBlock } from "@21n/components/markdown/md.type";
+  import type { IBlock } from "@nucleum/components/markdown/md.type";
   import {
     headingNodeTypes,
     listNodeTypes,
     NodeType,
     simpleTextNodeTypeList,
     type IMediaGridNode
-  } from "@21n/products/memotron/node/node.type";
-  import EmbedContent from "@21n/components/markdown/embed/EmbedContent.svelte";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
-  import MediaGrid from "@21n/components/markdown/mediaGrid/MediaGrid.svelte";
-  import Callout from "@21n/components/markdown/callout/Callout.svelte";
-  import TextContent from "@21n/components/markdown/content/TextContent.svelte";
-  import CodeContent from "@21n/components/markdown/content/CodeContent.svelte";
-  import ListContent from "@21n/components/markdown/lists/ListContent.svelte";
-  import HeadingContent from "@21n/components/markdown/content/HeadingContent.svelte";
+  } from "@nucleum/features/memory/node/node.type";
+  import EmbedContent from "@nucleum/components/markdown/embed/EmbedContent.svelte";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
+  import MediaGrid from "@nucleum/components/markdown/mediaGrid/MediaGrid.svelte";
+  import Callout from "@nucleum/components/markdown/callout/Callout.svelte";
+  import TextContent from "@nucleum/components/markdown/content/TextContent.svelte";
+  import CodeContent from "@nucleum/components/markdown/content/CodeContent.svelte";
+  import ListContent from "@nucleum/components/markdown/lists/ListContent.svelte";
+  import HeadingContent from "@nucleum/components/markdown/content/HeadingContent.svelte";
   import { cn } from "@21n/utils/ui.utils";
   let {
     mdStore,

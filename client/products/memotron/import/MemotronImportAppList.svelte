@@ -4,10 +4,10 @@
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
-  import view from "@21n/stores/view.store";
-  import { appStore } from "@21n/stores/app.store";
-  import { ImportSource } from "@21n/products/memotron/import/data.type";
-  import { MemotronAction } from "@21n/products/memotron/memotronAction.enum";
+  import view from "@nucleum/stores/view.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { ImportSource } from "@nucleum/products/memotron/import/data.type";
+  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
   import ExternalLogo from "@21n/branding/external/ExternalLogo.svelte";
 
   const availableImports = [

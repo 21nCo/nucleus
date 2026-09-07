@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { ListType, NodeType } from "@21n/products/memotron/node/node.type";
-  import TextContent from "@21n/components/markdown/content/TextContent.svelte";
-  import type { MdStoreType } from "@21n/components/markdown/markdown.store";
-  import type { IListBlockBody } from "@21n/components/markdown/md.type";
+  import { ListType, NodeType } from "@nucleum/features/memory/node/node.type";
+  import TextContent from "@nucleum/components/markdown/content/TextContent.svelte";
+  import type { MdStoreType } from "@nucleum/components/markdown/markdown.store";
+  import type { IListBlockBody } from "@nucleum/components/markdown/md.type";
   import type { IRecordId } from "@21n/types/data.type";
   import Check from "@21n/icons/Check.svelte";
   import { cn } from "@21n/utils/ui.utils";

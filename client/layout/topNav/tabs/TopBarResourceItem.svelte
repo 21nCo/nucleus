@@ -2,21 +2,21 @@
 
 <script lang="ts">
   import { page } from "$app/stores";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { popover, tooltip } from "@21n/actions/popover.action";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { popover, tooltip } from "@nucleum/actions/popover.action";
   import {
     AccessMode,
     ResourceAccessPoint
-  } from "@21n/data/datafn/resource.type";
+  } from "@nucleum/datafn/resource.type";
   import {
     determineResourceAccessMode,
     determineResourceType,
     isRecordId
-  } from "@21n/data/datafn/resource.utils";
+  } from "@nucleum/datafn/resource.utils";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
-  import { resolveResource } from "@21n/components/record/record.store";
-  import { appStore } from "@21n/stores/app.store";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
+  import { resolveResource } from "@nucleum/components/record/record.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import type { IRecordId } from "@21n/types/data.type";
   import { Placement } from "@21n/types/direction.enum";
   import { PopoverTriggerMethod } from "@21n/types/popover.type";
@@ -26,13 +26,13 @@
   import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
-  import { Resource } from "@21n/data/datafn/resource.enum";
-  import { rearrangeOnAxis } from "@21n/actions/rearrange.action";
+  import { Resource } from "@nucleum/datafn/resource.enum";
+  import { rearrangeOnAxis } from "@nucleum/actions/rearrange.action";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import context from "@21n/stores/context.store";
-  import { datafn } from "@21n/stores/datafn.store";
+  import context from "@nucleum/stores/context.store";
+  import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   let {
     item,

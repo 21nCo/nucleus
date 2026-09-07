@@ -1,9 +1,9 @@
-import type { OmitForCapture } from "@21n/data/datafn/resource.type";
+import type { OmitForCapture } from "@nucleum/datafn/resource.type";
 import type {
   INode,
   IVideoBookmarkCapture,
   IWebPage
-} from "@21n/products/memotron/node/node.type";
+} from "@nucleum/features/memory/node/node.type";
 
 export type ISocialPostParser = (
   target: HTMLElement

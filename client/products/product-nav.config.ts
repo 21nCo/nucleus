@@ -3,7 +3,7 @@
  * Used by both the app (product.config.ts) and E2E tests so menu changes
  * are made in one place only.
  */
-import { Product } from "@21n/products/product.type";
+import { Product } from "@nucleum/products/product.type";
 import { Action } from "@21n/types/action.enum";
 import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
 

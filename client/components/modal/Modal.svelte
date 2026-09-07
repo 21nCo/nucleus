@@ -1,22 +1,22 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import modalEvent from "@21n/components/modal/modal.store";
-  import { confirmationNotification } from "@21n/stores/notification.store";
+  import modalEvent from "@nucleum/components/modal/modal.store";
+  import { confirmationNotification } from "@nucleum/stores/notification.store";
   import { fade } from "svelte/transition";
-  import ModalHeader from "@21n/components/modal/ModalHeader.svelte";
+  import ModalHeader from "@nucleum/components/modal/ModalHeader.svelte";
   import { generateUID } from "@21n/utils/utils";
   import { Size } from "@21n/types/size.enum";
   import { Orientation, Placement } from "@21n/types/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import appearance from "@21n/stores/appearance.store";
+  import appearance from "@nucleum/stores/appearance.store";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";
-  import { AccessMode } from "@21n/data/datafn/resource.type";
-  import view from "@21n/stores/view.store";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
-  import context from "@21n/stores/context.store";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+  import view from "@nucleum/stores/view.store";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import context from "@nucleum/stores/context.store";
   import { OperatingSystem } from "@21n/types/context.type";
   let {
     index = 0,

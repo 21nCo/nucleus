@@ -1,7 +1,7 @@
 <script lang="ts">
   import { tick, type Snippet } from "svelte";
   import { Size } from "@21n/types/size.enum";
-  import InlineMarkdownTextInput from "@21n/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { InputStyle, type InputLabel } from "@21n/types/input.type";
   import InputBaseElement from "@21n/elements/InputBaseElement.svelte";
@@ -12,9 +12,9 @@
   import { debouncer } from "@21n/utils/utils";
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";
   import { ButtonStyle } from "@21n/types/button.type";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { OperatingSystem } from "@21n/types/context.type";
-  import { mount } from "@21n/actions/mount.action";
+  import { mount } from "@nucleum/actions/mount.action";
 
   type KeyboardEventDetail = KeyboardEvent & { event: KeyboardEvent };
 

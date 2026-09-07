@@ -6,15 +6,15 @@ import {
   destroyNucleumDatafn,
   initializeNucleumDatafn,
   resolveDatafnBootResources
-} from "@21n/stores/datafn.store";
-import { Product } from "@21n/products/product.type";
+} from "@nucleum/datafn/datafn.store";
+import { Product } from "@nucleum/products/product.type";
 import { UserDataMode } from "@21n/types/account.type";
-import { appStore } from "@21n/stores/app.store";
-import { Resource } from "@21n/data/datafn/resource.enum";
-import { NodeType } from "@21n/products/memotron/node/node.type";
-import { CollectionType } from "@21n/components/collection/collection.type";
-import { resolveProductResources } from "@21n/data/datafn/resource.utils";
-import { ObjectiveStatus, ObjectiveType } from "@21n/components/goals/goal.type";
+import { appStore } from "@nucleum/stores/app.store";
+import { Resource } from "@nucleum/datafn/resource.enum";
+import { NodeType } from "@nucleum/features/memory/node/node.type";
+import { CollectionType } from "@nucleum/features/collections/collection.type";
+import { resolveProductResources } from "@nucleum/datafn/resource.utils";
+import { ObjectiveStatus, ObjectiveType } from "@nucleum/features/focus/goals/goal.type";
 
 describe("Nucleum DataFn superset resources", () => {
   afterEach(async () => {

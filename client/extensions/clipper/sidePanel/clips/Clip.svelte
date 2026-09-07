@@ -4,38 +4,38 @@
     type ITextClip,
     type IVideoTimestampClip,
     type IWebScreenshotClip
-  } from "@21n/products/memotron/node/node.type";
+  } from "@nucleum/features/memory/node/node.type";
   import { TimeFormat } from "@21n/types/time.type";
   import { formatDatetime, formatSeconds } from "@21n/utils/time.utils";
-  import InlineMarkdownTextInput from "@21n/components/markdown/content/InlineMarkdownTextInput.svelte";
+  import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
   import { AlertType } from "@21n/types/notification.type";
-  import LinkBoxOnClipper from "@21n/products/memotron/common/linkbox/LinkBoxOnClipper.svelte";
-  import LinkItems from "@21n/products/memotron/common/linkbox/LinkItems.svelte";
-  import LinkActionOnClipper from "@21n/products/memotron/common/linkbox/LinkActionOnClipper.svelte";
+  import LinkBoxOnClipper from "@nucleum/features/memory/common/linkbox/LinkBoxOnClipper.svelte";
+  import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
+  import LinkActionOnClipper from "@nucleum/features/memory/common/linkbox/LinkActionOnClipper.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import {
     openAppPath,
     relayToContentScript
   } from "@21n/utils/extension.utils";
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
-  import InlineFeedbackText from "@21n/extensions/clipper/InlineFeedbackText.svelte";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { onMount, onDestroy } from "svelte";
-  import FileView from "@21n/components/files/FileView.svelte";
-  import TextClip from "@21n/extensions/clipper/sidePanel/clips/TextClip.svelte";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { userPreferences } from "@21n/components/settings/userPreferences.store";
-  import { determineResourceType } from "@21n/data/datafn/resource.utils";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import FileView from "@nucleum/features/files/FileView.svelte";
+  import TextClip from "@nucleum/extensions/clipper/sidePanel/clips/TextClip.svelte";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
+  import { determineResourceType } from "@nucleum/datafn/resource.utils";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/types/size.enum";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import ResourceThumbnailContextMenu from "@21n/components/record/thumbnail/ResourceThumbnailContextMenu.svelte";
+  import ResourceThumbnailContextMenu from "@nucleum/components/record/thumbnail/ResourceThumbnailContextMenu.svelte";
   import { Arrangement } from "@21n/types/direction.enum";
   import {
     ResourceAccessPoint,
     ResourceActionType
-  } from "@21n/data/datafn/resource.type";
-  import NodeTitle from "@21n/products/memotron/node/title/NodeTitle.svelte";
+  } from "@nucleum/datafn/resource.type";
+  import NodeTitle from "@nucleum/features/memory/node/title/NodeTitle.svelte";
   import { fly } from "svelte/transition";
 
   let {

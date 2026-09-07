@@ -1,9 +1,9 @@
 <script lang="ts">
   import { ActionType } from "@21n/types/action.type";
   import { generateCmdType } from "@21n/utils/utils";
-  import { renderMdAsHtml } from "@21n/components/markdown/markdown.utils";
-  import type { ICommandAction } from "@21n/components/commandBar/cmd.type";
-  import ResultItem from "@21n/components/commandBar/ResultItem.svelte";
+  import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
+  import type { ICommandAction } from "@nucleum/components/commandBar/cmd.type";
+  import ResultItem from "@nucleum/components/commandBar/ResultItem.svelte";
   let {
     search = "",
     action,

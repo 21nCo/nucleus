@@ -1,51 +1,51 @@
-import { NodeType } from "@21n/products/memotron/node/node.type";
+import { NodeType } from "@nucleum/features/memory/node/node.type";
 import type {
   IWebpageParser,
   ISocialPostParser,
   IVideoBookmarkParser
-} from "@21n/extensions/clipper/clipper.type";
+} from "@nucleum/extensions/clipper/clipper.type";
 import {
   extractBskyPostFromPage,
   extractBskyPostFromInlineClip,
   extractBlueskyProfile
-} from "@21n/extensions/clipper/parsers/blueskyParser";
-import { extractCourseraBookmark } from "@21n/extensions/clipper/parsers/courseraParser";
+} from "@nucleum/extensions/clipper/parsers/blueskyParser";
+import { extractCourseraBookmark } from "@nucleum/extensions/clipper/parsers/courseraParser";
 import {
   extractFacebookPostFromPage,
   extractFacebookPostFromInlineClip,
   extractFacebookProfile
-} from "@21n/extensions/clipper/parsers/facebookParser";
+} from "@nucleum/extensions/clipper/parsers/facebookParser";
 import {
   extractInstagramPostFromPage,
   extractInstagramPostFromInlineClip,
   extractInstagramProfileFromPage
-} from "@21n/extensions/clipper/parsers/instagramParser";
+} from "@nucleum/extensions/clipper/parsers/instagramParser";
 import {
   extractLinkedInPostFromPage,
   extractLinkedInPostFromInlineClip,
   extractLinkedInProfile
-} from "@21n/extensions/clipper/parsers/linkedinParser";
+} from "@nucleum/extensions/clipper/parsers/linkedinParser";
 import {
   extractMastodonPostFromPage,
   extractMastodonPostFromInlineClip,
   extractMastodonProfile
-} from "@21n/extensions/clipper/parsers/mastodonParser";
+} from "@nucleum/extensions/clipper/parsers/mastodonParser";
 import {
   extractRedditPostFromPage,
   extractRedditPostFromInlineClip
-} from "@21n/extensions/clipper/parsers/redditParser";
+} from "@nucleum/extensions/clipper/parsers/redditParser";
 import {
   extractThreadsPostFromPage,
   extractThreadsPostFromInlineClip,
   extractThreadsProfile
-} from "@21n/extensions/clipper/parsers/threadsParser";
+} from "@nucleum/extensions/clipper/parsers/threadsParser";
 import {
   extractTweetFromTweetPage,
   extractTweetFromInlineClip,
   extractTwitterProfile
-} from "@21n/extensions/clipper/parsers/twitterParser";
-import { extractUdemyBookmark } from "@21n/extensions/clipper/parsers/udemyParser";
-import { extractYoutubeBookmark } from "@21n/extensions/clipper/parsers/youtubeParser";
+} from "@nucleum/extensions/clipper/parsers/twitterParser";
+import { extractUdemyBookmark } from "@nucleum/extensions/clipper/parsers/udemyParser";
+import { extractYoutubeBookmark } from "@nucleum/extensions/clipper/parsers/youtubeParser";
 
 const parserMap = new Map<NodeType, IWebpageParser>([
   [NodeType.TWEET, extractTweetFromTweetPage],

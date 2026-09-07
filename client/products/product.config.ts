@@ -1,14 +1,14 @@
-import { Extension, OverviewPanel, Product } from "@21n/products/product.type";
+import { Extension, OverviewPanel, Product } from "@nucleum/products/product.type";
 import { getProductNavConfig } from "./product-nav.config";
-import { Resource } from "@21n/data/datafn/resource.enum";
+import { Resource } from "@nucleum/datafn/resource.enum";
 import { Action } from "@21n/types/action.enum";
-import { MemotronAction } from "@21n/products/memotron/memotronAction.enum";
+import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
 import type { ISelectItem } from "@21n/types/select.type";
 import {
   nextProducts,
   nextResourceTableMap,
   nextNucleusOverviewPanelSwitcherItems
-} from "@21n/next/product.config";
+} from "@nucleum/next/product.config";
 import {
   resolveProductResourceConfig,
   sharedExtensions,

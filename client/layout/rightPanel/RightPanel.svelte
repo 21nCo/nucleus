@@ -3,7 +3,7 @@
   import ComponentResolver from "../paint/ComponentResolver.svelte";
   import type { IAction } from "@21n/types/action.type";
   import { Size } from "@21n/types/size.enum";
-  import context from "@21n/stores/context.store";
+  import context from "@nucleum/stores/context.store";
   import { fly } from "svelte/transition";
   import { quadInOut } from "svelte/easing";
   let { action }: { action: IAction } = $props();

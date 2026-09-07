@@ -1,5 +1,5 @@
 import packageJson from "../package.json";
-import config from "@21n/products/nucleus/nucleus.config";
+import config from "@nucleum/products/nucleus/nucleus.config";
 
 const { version, build } = packageJson;
 

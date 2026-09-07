@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SizeFactorSetting from "@21n/components/settings/appearance/accessibility/sizeFactor/SizeFactorSetting.svelte";
+  import SizeFactorSetting from "@nucleum/components/settings/appearance/accessibility/sizeFactor/SizeFactorSetting.svelte";
   let { parentBackgroundIndex = 1 }: { parentBackgroundIndex?: number } =
     $props();
 </script>

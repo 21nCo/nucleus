@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { ResourceAccessPoint } from "@21n/data/datafn/resource.type";
-  import WebClipPreview from "@21n/products/memotron/node/content/web/WebClipPreview.svelte";
-  import type { ITextClip } from "@21n/products/memotron/node/node.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+  import WebClipPreview from "@nucleum/features/memory/node/content/web/WebClipPreview.svelte";
+  import type { ITextClip } from "@nucleum/features/memory/node/node.type";
   let {
     clip,
     id = "",

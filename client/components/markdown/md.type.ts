@@ -7,8 +7,8 @@ import type {
   ListNodeType,
   INodeStructure,
   INodeMetadata
-} from "@21n/products/memotron/node/node.type";
-import type { IResourceBase } from "@21n/data/datafn/resource.type";
+} from "@nucleum/features/memory/node/node.type";
+import type { IResourceBase } from "@nucleum/datafn/resource.type";
 
 export type IMarkdownStore = IMarkdown & {
   /**

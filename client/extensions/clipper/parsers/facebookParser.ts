@@ -1,22 +1,22 @@
-import type { OmitForCapture } from "@21n/data/datafn/resource.type";
+import type { OmitForCapture } from "@nucleum/datafn/resource.type";
 import {
   NodeType,
   type IFacebookPost,
   type IFacebookProfile
-} from "@21n/products/memotron/node/node.type";
+} from "@nucleum/features/memory/node/node.type";
 import {
   createUrlFilter,
   isHostnameMatch
-} from "@21n/products/memotron/node/url.utils";
-import { csuiSelector } from "@21n/extensions/clipper/clipper.constants";
+} from "@nucleum/features/memory/node/url.utils";
+import { csuiSelector } from "@nucleum/extensions/clipper/clipper.constants";
 import type {
   ISocialPost,
   ISocialPostBase
-} from "@21n/extensions/clipper/clipper.type";
+} from "@nucleum/extensions/clipper/clipper.type";
 import {
   findAncestorOrSelf,
   resolveParentNLevel
-} from "@21n/extensions/clipper/parsers/shared/domUtils";
+} from "@nucleum/extensions/clipper/parsers/shared/domUtils";
 
 export function extractFacebookPostFromPage():
   | ISocialPost<IFacebookPost, IFacebookProfile>

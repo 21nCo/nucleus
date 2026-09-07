@@ -1,18 +1,18 @@
 <script lang="ts">
   import VerticalSwitcher from "@21n/elements/switcher/VerticalSwitcher.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import { uiState } from "@21n/stores/uiState/uiState.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import {
     UIState,
     UIStateScope
-  } from "@21n/stores/uiState/uiState.type";
+  } from "@nucleum/stores/uiState/uiState.type";
   import { Placement } from "@21n/types/direction.enum";
   import { Size } from "@21n/types/size.enum";
   import { VerticalSwitcherStyle } from "@21n/types/switcher.enum";
   import type { ISelectValue } from "@21n/types/select.type";
-  import { OverviewPanel } from "@21n/products/product.type";
-  import { Product } from "@21n/products/product.type";
-  import { resolveProductConfig } from "@21n/products/product.config";
+  import { OverviewPanel } from "@nucleum/products/product.type";
+  import { Product } from "@nucleum/products/product.type";
+  import { resolveProductConfig } from "@nucleum/products/product.config";
 
   const items =
     resolveProductConfig(Product.NUCLEUM).overviewPanelSwitcherItems ?? [];

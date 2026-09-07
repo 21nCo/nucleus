@@ -1,15 +1,15 @@
 <script lang="ts">
-  import type { IVideoTimestampClip } from "@21n/products/memotron/node/node.type";
+  import type { IVideoTimestampClip } from "@nucleum/features/memory/node/node.type";
   import { cn } from "@21n/utils/ui.utils";
-  import FileView from "@21n/components/files/FileView.svelte";
+  import FileView from "@nucleum/features/files/FileView.svelte";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { TimeFormat } from "@21n/types/time.type";
-  import { webpage } from "@21n/extensions/clipper/contentScripts/store";
-  import { checkIfVideoPaused } from "@21n/extensions/clipper/parsers/shared/video.utils";
-  import { pauseVideo } from "@21n/extensions/clipper/parsers/shared/video.utils";
+  import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
+  import { checkIfVideoPaused } from "@nucleum/extensions/clipper/parsers/shared/video.utils";
+  import { pauseVideo } from "@nucleum/extensions/clipper/parsers/shared/video.utils";
   import { onMount } from "svelte";
-  import { appEvents } from "@21n/stores/notification.store";
-  import { ClipperExtensionEvent } from "@21n/products/memotron/common/clip.type";
+  import { appEvents } from "@nucleum/stores/notification.store";
+  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
 

@@ -5,7 +5,7 @@
     FieldMappingConfig,
     FieldMappingValue,
     FieldMappingField
-  } from "@21n/products/memotron/import/data.type";
+  } from "@nucleum/products/memotron/import/data.type";
   import { Size } from "@21n/types/size.enum";
 
   let {

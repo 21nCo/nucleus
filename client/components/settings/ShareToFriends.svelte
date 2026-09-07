@@ -1,7 +1,7 @@
 <script>
   import CopyableText from "@21n/elements/text/CopyableText.svelte";
-  import { appStore } from "@21n/stores/app.store";
-  import account from "@21n/stores/account.store";
+  import { appStore } from "@nucleum/stores/app.store";
+  import account from "@nucleum/stores/account.store";
 </script>
 
 <div class="w-full h-full flex justify-center">

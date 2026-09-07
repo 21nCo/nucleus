@@ -4,13 +4,13 @@
     type IBlock,
     type IMarkdown,
     type IMarkdownParams
-  } from "@21n/components/markdown/md.type";
+  } from "@nucleum/components/markdown/md.type";
   import { onDestroy, onMount, type Snippet } from "svelte";
-  import Block from "@21n/components/markdown/Block.svelte";
+  import Block from "@nucleum/components/markdown/Block.svelte";
   import {
     getMdStore,
     mdContentChangeEvent
-  } from "@21n/components/markdown/markdown.store";
+  } from "@nucleum/components/markdown/markdown.store";
   import Button from "@21n/elements/button/Button.svelte";
   import { TextStyle } from "@21n/types/text.enum";
   import Text from "@21n/elements/text/Text.svelte";
@@ -18,8 +18,8 @@
   import { isValidAndUniqueArray } from "@21n/shared-utils/obj.utils";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { setContext } from "svelte";
-  import { generateMarkdownText } from "@21n/products/memotron/node/node.utils";
-  import { logger } from "@21n/components/debug/logger.client";
+  import { generateMarkdownText } from "@nucleum/features/memory/node/node.utils";
+  import { logger } from "@nucleum/components/debug/logger.client";
   import { get } from "svelte/store";
   import { KeyboardKey } from "@21n/types/keyboard.type";
   import type { IRecordId } from "@21n/types/data.type";
@@ -27,27 +27,27 @@
   import {
     reorderList,
     type DragDropEvent
-  } from "@21n/actions/rearrange.action";
+  } from "@nucleum/actions/rearrange.action";
   import {
     isSameResource,
     resourceInList,
     shiftResourceInArray
-  } from "@21n/data/datafn/resource.utils";
-  import { NodeType } from "@21n/products/memotron/node/node.type";
-  import context from "@21n/stores/context.store";
-  import MarkdownkeyboardToolbar from "@21n/components/markdown/toolbar/MarkdownkeyboardToolbar.svelte";
+  } from "@nucleum/datafn/resource.utils";
+  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import context from "@nucleum/stores/context.store";
+  import MarkdownkeyboardToolbar from "@nucleum/components/markdown/toolbar/MarkdownkeyboardToolbar.svelte";
   import { debouncer } from "@21n/utils/utils";
-  import { toasts } from "@21n/stores/notification.store";
-  import { dragSelection } from "@21n/actions/dragSelection.action";
-  import { Resource } from "@21n/data/datafn/resource.enum";
+  import { toasts } from "@nucleum/stores/notification.store";
+  import { dragSelection } from "@nucleum/actions/dragSelection.action";
+  import { Resource } from "@nucleum/datafn/resource.enum";
   import {
     ResourceAccessPoint,
     ResourceActionType
-  } from "@21n/data/datafn/resource.type";
-  import { bulkEditStore as globalBulkEditStore } from "@21n/components/record/bulkedit.store";
-  import { generateResourceId } from "@21n/data/datafn/id.utils";
-  import { ErrorMessage } from "@21n/components/error/error.type";
-  import { resizeListener } from "@21n/actions/resize.action";
+  } from "@nucleum/datafn/resource.type";
+  import { bulkEditStore as globalBulkEditStore } from "@nucleum/components/record/bulkedit.store";
+  import { generateResourceId } from "@nucleum/datafn/id.utils";
+  import { ErrorMessage } from "@nucleum/components/error/error.type";
+  import { resizeListener } from "@nucleum/actions/resize.action";
   import { stringify } from "@21n/shared-utils/json.utils";
   import { Context } from "@21n/types/appStore.type";
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import type { IBlockBrowserItem } from "@21n/components/markdown/blockBrowser/blockBrowser.type";
+  import type { IBlockBrowserItem } from "@nucleum/components/markdown/blockBrowser/blockBrowser.type";
   let {
     item,
     onSelect = undefined

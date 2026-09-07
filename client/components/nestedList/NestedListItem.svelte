@@ -1,19 +1,19 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import view from "@21n/stores/view.store";
+  import view from "@nucleum/stores/view.store";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import {
     NestedListStyle,
     type NestedItemContent
-  } from "@21n/components/nestedList/nestedList.type";
+  } from "@nucleum/components/nestedList/nestedList.type";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { InputStyle } from "@21n/types/input.type";
-  import { isSameResource } from "@21n/data/datafn/resource.utils";
+  import { isSameResource } from "@nucleum/datafn/resource.utils";
   import type { IRecordId } from "@21n/types/data.type";
-  import { hoverable } from "@21n/actions/hover.action";
-  import { tooltip } from "@21n/actions/popover.action";
-  import NestedListItem from "@21n/components/nestedList/NestedListItem.svelte";
+  import { hoverable } from "@nucleum/actions/hover.action";
+  import { tooltip } from "@nucleum/actions/popover.action";
+  import NestedListItem from "@nucleum/components/nestedList/NestedListItem.svelte";
   let {
     id,
     index,
