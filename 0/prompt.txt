@@ -1,0 +1,370 @@
+commit local changes
+
+---
+
+the current client/ sub folders feels a little unorganized... how can the orgranization be improved?
+
+like features logic lies in components and also in products/
+
+data/datafn feels unecessarily nested
+
+datafn stores are present in stores/ as well etc
+
+---
+
+memotron/           # node, capture, pdf, linking
+    pointron/           # focus, logs, analytics
+
+
+Why to put these features into products/?
+
+why not just in features?
+
+---
+
+this split sounds good... proceed and refactor such way
+
+Also rename packages to @nucleum/features etc.. only elements and any other primitive packages should be @21n/ prefixed
+
+
+Ask me any questions before starting
+
+---
+
+9:49:57 pm [vite] Pre-transform error: Failed to resolve import "$lib/client/products/memotron/linking/link.type" from "../../client/features/memory/node/links/LinkTypeIndicator.svelte". Does the file exist?
+
+
+
+happening when I run npm --workspace nucleus-app run debug -- --force
+
+run it yourself and resolve any regressions
+
+---
+
+Using E2E_AUTH_MODE=offline
+Using APP_BASE_URL: https://local.nucleum.app
+
+——————————————————————————————————————————————————————————————————  [9:59:24 PM]
+Running 7 tests using 1 worker
+
+     1 [nucleum] › tests/focus/quick-focus.spec.ts:68:5 › open quick focus from 
+  ✓  1 [nucleum] › tests/focus/quick-focus.spec.ts:68:5 › open quick focus from top nav without page errors (8.6s)
+     2 [nucleum] › tests/focus/quick-focus.spec.ts:75:5 › pin objective to quick
+  ✘  2 [nucleum] › tests/focus/quick-focus.spec.ts:75:5 › pin objective to quick focus via command bar @smoke (3.9s)
+     3 [nucleum] › tests/focus/quick-focus.spec.ts:100:5 › pin objective to quic
+  ✘  3 …] › tests/focus/quick-focus.spec.ts:100:5 › pin objective to quick focus via empty-state Pin existing @smoke (5.5s)
+     4 [nucleum] › tests/focus/quick-focus.spec.ts:136:5 › pin another objective
+  ✘  4 [nucleum] › tests/focus/quick-focus.spec.ts:136:5 › pin another objective via Quick Focus editor @smoke (3.8s)
+     5 [nucleum] › tests/focus/quick-focus.spec.ts:200:5 › remove a pinned objec
+  ✘  5 …] › tests/focus/quick-focus.spec.ts:200:5 › remove a pinned objective via the top-nav quick-focus entrypoint (4.9s)
+     6 [nucleum] › tests/focus/quick-focus.spec.ts:244:5 › finished quick focus 
+  ✘  6 …cleum] › tests/focus/quick-focus.spec.ts:244:5 › finished quick focus up     7 …s/quick-focus.spec.ts:340:5 › start quick focus from pinned objective an
+  ✘  7 …-focus.spec.ts:340:5 › start quick focus from pinned objective and persist across reload without page errors (4.3s)
+
+  1) [nucleum] › tests/focus/quick-focus.spec.ts:75:5 › pin objective to quick focus via command bar @smoke 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: https://local.nucleum.app/@fs/Users/serro/Documents/dev/n/nucleus/client/stores/datafn.store.ts
+
+       at fixtures/datafn-seed.ts:158
+
+      156 |       .poll(
+      157 |         () =>
+    > 158 |           this.page.evaluate(
+          |                     ^
+      159 |             async ({ modulePath }) => {
+      160 |               const { datafnRuntime } = await import(modulePath);
+      161 |               let product: string | undefined;
+        at _test.expect.poll.message (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:158:21)
+        at DatafnSeedTransport.waitUntilReady (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:155:5)
+        at DatafnSeedTransport.mutate (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:105:5)
+        at FocusSeed.objectives (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:74:5)
+        at FocusSeed.objective (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:58:25)
+        at /Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/quick-focus.spec.ts:81:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-obje-825a3-focus-via-command-bar-smoke-nucleum/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-obje-825a3-focus-via-command-bar-smoke-nucleum/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/focus-quick-focus-pin-obje-825a3-focus-via-command-bar-smoke-nucleum/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-obje-825a3-focus-via-command-bar-smoke-nucleum/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/focus-quick-focus-pin-obje-825a3-focus-via-command-bar-smoke-nucleum/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [nucleum] › tests/focus/quick-focus.spec.ts:100:5 › pin objective to quick focus via empty-state Pin existing @smoke 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: https://local.nucleum.app/@fs/Users/serro/Documents/dev/n/nucleus/client/stores/datafn.store.ts
+
+       at fixtures/datafn-seed.ts:158
+
+      156 |       .poll(
+      157 |         () =>
+    > 158 |           this.page.evaluate(
+          |                     ^
+      159 |             async ({ modulePath }) => {
+      160 |               const { datafnRuntime } = await import(modulePath);
+      161 |               let product: string | undefined;
+        at _test.expect.poll.message (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:158:21)
+        at DatafnSeedTransport.waitUntilReady (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:155:5)
+        at DatafnSeedTransport.mutate (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:105:5)
+        at FocusSeed.objectives (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:74:5)
+        at FocusSeed.objective (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:58:25)
+        at /Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/quick-focus.spec.ts:106:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-obje-0f982-ty-state-Pin-existing-smoke-nucleum/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-obje-0f982-ty-state-Pin-existing-smoke-nucleum/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/focus-quick-focus-pin-obje-0f982-ty-state-Pin-existing-smoke-nucleum/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-obje-0f982-ty-state-Pin-existing-smoke-nucleum/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/focus-quick-focus-pin-obje-0f982-ty-state-Pin-existing-smoke-nucleum/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [nucleum] › tests/focus/quick-focus.spec.ts:136:5 › pin another objective via Quick Focus editor @smoke 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: https://local.nucleum.app/@fs/Users/serro/Documents/dev/n/nucleus/client/stores/datafn.store.ts
+
+       at fixtures/datafn-seed.ts:158
+
+      156 |       .poll(
+      157 |         () =>
+    > 158 |           this.page.evaluate(
+          |                     ^
+      159 |             async ({ modulePath }) => {
+      160 |               const { datafnRuntime } = await import(modulePath);
+      161 |               let product: string | undefined;
+        at _test.expect.poll.message (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:158:21)
+        at DatafnSeedTransport.waitUntilReady (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:155:5)
+        at DatafnSeedTransport.mutate (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:105:5)
+        at FocusSeed.objectives (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:74:5)
+        at FocusSeed.objective (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:58:25)
+        at /Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/quick-focus.spec.ts:143:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-anot-2eb89-ia-Quick-Focus-editor-smoke-nucleum/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-anot-2eb89-ia-Quick-Focus-editor-smoke-nucleum/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/focus-quick-focus-pin-anot-2eb89-ia-Quick-Focus-editor-smoke-nucleum/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-pin-anot-2eb89-ia-Quick-Focus-editor-smoke-nucleum/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/focus-quick-focus-pin-anot-2eb89-ia-Quick-Focus-editor-smoke-nucleum/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [nucleum] › tests/focus/quick-focus.spec.ts:200:5 › remove a pinned objective via the top-nav quick-focus entrypoint 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: https://local.nucleum.app/@fs/Users/serro/Documents/dev/n/nucleus/client/stores/datafn.store.ts
+
+       at fixtures/datafn-seed.ts:158
+
+      156 |       .poll(
+      157 |         () =>
+    > 158 |           this.page.evaluate(
+          |                     ^
+      159 |             async ({ modulePath }) => {
+      160 |               const { datafnRuntime } = await import(modulePath);
+      161 |               let product: string | undefined;
+        at _test.expect.poll.message (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:158:21)
+        at DatafnSeedTransport.waitUntilReady (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:155:5)
+        at DatafnSeedTransport.mutate (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:105:5)
+        at FocusSeed.objectives (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:74:5)
+        at FocusSeed.objective (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:58:25)
+        at /Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/quick-focus.spec.ts:205:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-remove-a-fc18b--nav-quick-focus-entrypoint-nucleum/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-remove-a-fc18b--nav-quick-focus-entrypoint-nucleum/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/focus-quick-focus-remove-a-fc18b--nav-quick-focus-entrypoint-nucleum/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-remove-a-fc18b--nav-quick-focus-entrypoint-nucleum/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/focus-quick-focus-remove-a-fc18b--nav-quick-focus-entrypoint-nucleum/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [nucleum] › tests/focus/quick-focus.spec.ts:244:5 › finished quick focus updates today's pinned objective total 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: https://local.nucleum.app/@fs/Users/serro/Documents/dev/n/nucleus/client/stores/datafn.store.ts
+
+       at fixtures/datafn-seed.ts:158
+
+      156 |       .poll(
+      157 |         () =>
+    > 158 |           this.page.evaluate(
+          |                     ^
+      159 |             async ({ modulePath }) => {
+      160 |               const { datafnRuntime } = await import(modulePath);
+      161 |               let product: string | undefined;
+        at _test.expect.poll.message (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:158:21)
+        at DatafnSeedTransport.waitUntilReady (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:155:5)
+        at DatafnSeedTransport.mutate (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:105:5)
+        at FocusSeed.objectives (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:74:5)
+        at FocusSeed.objective (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:58:25)
+        at /Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/quick-focus.spec.ts:251:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-finished-05c28-ay-s-pinned-objective-total-nucleum/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-finished-05c28-ay-s-pinned-objective-total-nucleum/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/focus-quick-focus-finished-05c28-ay-s-pinned-objective-total-nucleum/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-finished-05c28-ay-s-pinned-objective-total-nucleum/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/focus-quick-focus-finished-05c28-ay-s-pinned-objective-total-nucleum/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [nucleum] › tests/focus/quick-focus.spec.ts:340:5 › start quick focus from pinned objective and persist across reload without page errors 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: https://local.nucleum.app/@fs/Users/serro/Documents/dev/n/nucleus/client/stores/datafn.store.ts
+
+       at fixtures/datafn-seed.ts:158
+
+      156 |       .poll(
+      157 |         () =>
+    > 158 |           this.page.evaluate(
+          |                     ^
+      159 |             async ({ modulePath }) => {
+      160 |               const { datafnRuntime } = await import(modulePath);
+      161 |               let product: string | undefined;
+        at _test.expect.poll.message (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:158:21)
+        at DatafnSeedTransport.waitUntilReady (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:155:5)
+        at DatafnSeedTransport.mutate (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/fixtures/datafn-seed.ts:105:5)
+        at FocusSeed.objectives (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:74:5)
+        at FocusSeed.objective (/Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/focus-seed.ts:58:25)
+        at /Users/serro/Documents/dev/n/nucleus/apps/e2e-playwright/tests/focus/quick-focus.spec.ts:346:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-start-qu-34e5d--reload-without-page-errors-nucleum/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-start-qu-34e5d--reload-without-page-errors-nucleum/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/focus-quick-focus-start-qu-34e5d--reload-without-page-errors-nucleum/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/focus-quick-focus-start-qu-34e5d--reload-without-page-errors-nucleum/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/focus-quick-focus-start-qu-34e5d--reload-without-page-errors-nucleum/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    [nucleum] › tests/focus/quick-focus.spec.ts:75:5 › pin objective to quick focus via command bar @smoke 
+    [nucleum] › tests/focus/quick-focus.spec.ts:100:5 › pin objective to quick focus via empty-state Pin existing @smoke 
+    [nucleum] › tests/focus/quick-focus.spec.ts:136:5 › pin another objective via Quick Focus editor @smoke 
+    [nucleum] › tests/focus/quick-focus.spec.ts:200:5 › remove a pinned objective via the top-nav quick-focus entrypoint 
+    [nucleum] › tests/focus/quick-focus.spec.ts:244:5 › finished quick focus updates today's pinned objective total 
+    [nucleum] › tests/focus/quick-focus.spec.ts:340:5 › start quick focus from pinned objective and persist across reload without page errors 
+  1 passed (48.7s)
+
+
+
+
+
+quick-focus.spec.ts is failing check why
+
+---
+
+now all quick focus tests worked except 1 - check what happened
+
+---
+
+audit any similar slips and fix
+
+---
+
+all session-composition.spec tests are failing
+
+---
+
+resume
+
+Also why is this happening only now? the test was working fine earlier... what changed?
+
+---
+
+when running session-items.spec test - some tests failed - check why
+
+Dont fix anything yet
+
+---
+
+all of these were working fine earlier - why failing now?
+
+Just answer
+
+---
+
+point me to the file that got changed and why
+
+---
+
+what should we fix now? just answer
+
+---
+
+proceed
+
+---
+
+what do you think of this code review? just answer
+
+
+Found **6 actionable issues** in `1205e61b..b598ae69` and the staged, unstaged, and untracked changes.
+
+::code-comment{title="[P1] Immediate timer tick recursively repeats interval transitions" body="At a boundary in a session with at least three intervals, tick() calls _continueSession(), which synchronously calls _resumeTimer() again. The new immediate tick still sees the same rounded elapsed time and repeats the transition. A bounded probe using the actual methods reproduced repeated recursion where the previous implementation transitioned once. This can overflow the stack, repeat notifications, and leave multiple timers scheduled. Avoid synchronously re-entering the transition through the initial tick." file="/Users/serro/Documents/dev/n/nucleus/client/features/focus/session.store.ts" start=434 end=437 priority=1}
+
+::code-comment{title="[P1] Schema composition erases resource and record types" body="The broad composition types and Parameters<typeof defineSchema>[0] assertion discard the literal schema information used by DataFn's typed client. Compiler inspection confirms NucleumDatafnResource changes from the 15-name resource union to string. Query results consequently lose their resource-specific fields, causing errors across task, collection, node, and focus consumers. Preserve the concrete resource definitions through composition and defineSchema rather than casting the completed schema to its generic input type." file="/Users/serro/Documents/dev/n/nucleus/schema/datafn.ts" start=18 end=20 priority=1}
+
+::code-comment{title="[P2] Extracted vector definition fails the account-service typecheck" body="Moving vector into an unannotated mutable object widens defaultPermissions: false to boolean. DataFn permits the literal false here, so the feature declaration and resources.push(resource) now fail with TS2322 and TS2345. Reproduced with npm --workspace @21n/account-service run typecheck. Give this definition contextual typing or preserve the false literal; the surrounding satisfies expression does not narrow an already inferred variable." file="/Users/serro/Documents/dev/n/nucleus/schema/features.ts" start=347 end=353 priority=2}
+
+::code-comment{title="[P2] Running sessions ignore legitimate remote abandon snapshots" body="This guard rejects every incoming idle/reset snapshot whenever the local session is running. Abandon session calls activeSession.close(), which persists exactly such a reset. Another client receiving it therefore retains its running session and timer. A probe through the actual loader confirmed the previous implementation stopped the session while the current implementation kept it running. Distinguish an initial placeholder snapshot from an authoritative reset instead of rejecting both." file="/Users/serro/Documents/dev/n/nucleus/client/features/focus/session.store.ts" start=845 end=850 priority=2}
+
+::code-comment{title="[P2] Fullscreen restoration skips initializing the fullscreen store" body="After reloading Nucleum with the focus fullscreen URL parameter, isFocusFullscreenOpen() returns true even though fullScreen.path is still undefined. This return skips fullScreen.restore(). ModalLayer renders the fullscreen view from the URL, but fullScreen.hide() returns early without a stored path, breaking Exit full screen and session-reset cleanup. The loader probe reproduced the missing store path. Restore the store state before suppressing duplicate presentation." file="/Users/serro/Documents/dev/n/nucleus/client/features/focus/session.store.ts" start=877 end=882 priority=2}
+
+::code-comment{title="[P2] Date fallback introduces another client compilation error" body="Inside this branch TypeScript has narrowed value to object, so asserting it directly as string produces TS2352. This is independently reported by the Nucleus typecheck and remains after fixing the schema typing issues. Use an explicit supported conversion or narrow the object to a supported date representation before constructing the Date." file="/Users/serro/Documents/dev/n/nucleus/client/features/focus/session.store.ts" start=1471 end=1472 priority=2}
+
+Verification: **7 schema tests and 3 alias tests passed**; runtime schema equality passed ignoring array order. Account typecheck failed; Nucleus typecheck reported **24 errors and 379 warnings**. Popover tests were blocked by a `.svelte` loading error in test setup. Session findings used isolated method probes, not browser E2E.
+
+No source files, tests, or Git staging were changed. The comparison used the saved `origin/dev` reference; no remote fetch was performed.
