@@ -14,7 +14,7 @@ const advancedCompositionDraftStorePath = resolveRepoFsImportPath(
 );
 const appStorePath = resolveRepoFsImportPath("client/stores/app.store.ts");
 const pointronStorePath = resolveRepoFsImportPath(
-  "client/products/pointron/pointron.store.ts"
+  "client/features/focus/preferences.store.ts"
 );
 const focusSessionItemTestId = /^focus-session-item:/;
 

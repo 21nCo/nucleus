@@ -12,7 +12,7 @@
     type IWebScreenshotClip
   } from "@nucleum/features/memory/node/node.type";
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
   import type { OmitForCapture } from "@nucleum/datafn/resource.type";
   let {

@@ -1,4 +1,4 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { embedBridge } from "@nucleum/components/embed/embed.store";
 import { EmbedMessage } from "@21n/types/embedMessage.enum";
 import { generateMiniRandomId } from "@21n/shared-utils/crypto.utils";

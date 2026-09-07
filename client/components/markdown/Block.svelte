@@ -25,7 +25,7 @@
   } from "@nucleum/features/memory/node/node.type";
   import { cn } from "@21n/utils/ui.utils";
   import { setContext } from "svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { copyToClipboard } from "@21n/utils/utils";
   import {
     confirmationNotification,
@@ -48,7 +48,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { fileDrop } from "@nucleum/actions/fileDrop.action";
   import { MAX_FILE_SIZE_MB } from "@nucleum/components/record/record.store";
-  import { resolveFileUploadErrorMessage } from "@nucleum/products/memotron/memotron.utils";
+  import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import {

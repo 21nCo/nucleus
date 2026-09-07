@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fileDrop } from "$lib/client/actions/fileDrop.action";
-  import { logger } from "$lib/client/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import Button from "$lib/client/elements/button/Button.svelte";
   import EmptyStatusView from "$lib/client/elements/feedback/EmptyStatusView.svelte";
   import Icon from "$lib/client/elements/Icon.svelte";
@@ -9,7 +9,7 @@
   import { ButtonVariant } from "$lib/client/types/button.type";
   import type { IRecordId } from "$lib/client/types/data.type";
   import { MAX_FILE_SIZE_MB } from "$lib/client/components/record/record.store";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import modalStore from "$lib/client/components/modal/modal.store";
   import { Size } from "$lib/client/types/size.enum";
   import { toasts } from "$lib/client/stores/notification.store";

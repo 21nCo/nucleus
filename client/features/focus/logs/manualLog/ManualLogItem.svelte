@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
   import { formatTime } from "@21n/utils/time.utils";

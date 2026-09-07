@@ -4,7 +4,7 @@ import type {
   IKeyboardShortcut,
   IKeyboardShortcutsStore
 } from "@nucleum/components/shortcuts/shortcut.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { resolveModifiers } from "@nucleum/components/shortcuts/shortcut.utils";
 import context from "@nucleum/stores/context.store";
 import { OperatingSystem } from "@21n/types/context.type";

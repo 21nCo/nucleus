@@ -1,4 +1,4 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
 import { NodeType, type INode } from "@nucleum/features/memory/node/node.type";
 import {

@@ -53,7 +53,7 @@ vi.mock("@21n/utils/embed.utils", () => ({
   postDataToParent: mocks.postDataToParentMock
 }));
 
-vi.mock("@nucleum/components/debug/logger.client", () => ({
+vi.mock("@nucleum/client/runtime/logging/logger", () => ({
   logger: {
     log: mocks.loggerLogMock,
     error: vi.fn()
@@ -64,7 +64,7 @@ vi.mock("@21n/shared-utils/json.utils", () => ({
   parse: mocks.parseMock
 }));
 
-vi.mock("@nucleum/components/account/auth", () => ({
+vi.mock("@nucleum/client/runtime/account/auth", () => ({
   authClient: async () => ({
     signOut: mocks.authSignOutMock
   })

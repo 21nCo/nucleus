@@ -1,4 +1,4 @@
-import { LogType } from "@nucleum/components/debug/debug.type";
+import { LogType } from "@nucleum/client/runtime/logging/log.type";
 
 const LOG_METHODS: Record<LogType, "debug" | "error" | "info" | "warn"> = {
   [LogType.ERROR]: "error",
@@ -64,7 +64,9 @@ class Logger {
       } else {
         const defaultLevel =
           import.meta.env?.VITE_LOG_LEVEL ??
-          (typeof process !== "undefined" ? process.env?.PLASMO_PUBLIC_LOG_LEVEL : undefined) ??
+          (typeof process !== "undefined"
+            ? process.env?.PLASMO_PUBLIC_LOG_LEVEL
+            : undefined) ??
           LogType.INFO;
         this.level = Number(defaultLevel) as LogType;
       }
@@ -77,7 +79,10 @@ class Logger {
   private _console(message: unknown, type: LogType) {
     const payload =
       typeof message === "object" && message !== null
-        ? { ...(message as Record<string, unknown>), t: new Date().toISOString() }
+        ? {
+            ...(message as Record<string, unknown>),
+            t: new Date().toISOString()
+          }
         : { message, t: new Date().toISOString() };
     console[LOG_METHODS[type]](payload);
     this.sendToDebugSink(payload, type);
@@ -194,8 +199,8 @@ function resolveDebugSinkUrl() {
   const value =
     DEBUG_SINK_URL ??
     (typeof window !== "undefined"
-      ? window.localStorage?.getItem("debugSinkUrl") ??
-        window.__NUCLEUM_NATIVE_CONFIG__?.debugSinkUrl
+      ? (window.localStorage?.getItem("debugSinkUrl") ??
+        window.__NUCLEUM_NATIVE_CONFIG__?.debugSinkUrl)
       : undefined);
   return value?.trim().replace(/\/$/, "");
 }
@@ -217,14 +222,19 @@ function resolveNativeConfig() {
 
 function redact(value: unknown, depth = 0): unknown {
   if (depth > 8) return "<max-depth>";
-  if (Array.isArray(value)) return value.map((entry) => redact(entry, depth + 1));
+  if (Array.isArray(value))
+    return value.map((entry) => redact(entry, depth + 1));
   if (value instanceof Error) return serializeError(value);
   if (typeof value === "string") return redactSensitiveString(value);
   if (typeof value !== "object" || value === null) return value;
 
   const result: Record<string, unknown> = {};
   for (const [key, entry] of Object.entries(value)) {
-    if (SENSITIVE_KEYS.some((sensitive) => key.toLowerCase().includes(sensitive.toLowerCase()))) {
+    if (
+      SENSITIVE_KEYS.some((sensitive) =>
+        key.toLowerCase().includes(sensitive.toLowerCase())
+      )
+    ) {
       result[key] = REDACTED;
     } else {
       result[key] = redact(entry, depth + 1);
@@ -237,7 +247,10 @@ function redactSensitiveString(value: string) {
   return value
     .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, REDACTED)
     .replace(/\b(chal|otp|state|code|token)_[A-Za-z0-9._~-]+\b/g, REDACTED)
-    .replace(/([?&](?:code|state|id_token|access_token|refresh_token)=)[^&\s]+/gi, `$1${REDACTED}`);
+    .replace(
+      /([?&](?:code|state|id_token|access_token|refresh_token)=)[^&\s]+/gi,
+      `$1${REDACTED}`
+    );
 }
 
 function serializeError(error: unknown) {

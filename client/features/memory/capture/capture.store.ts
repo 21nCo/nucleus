@@ -33,7 +33,7 @@ import {
   resolveHeadingParent
 } from "@nucleum/features/memory/node/node.utils";
 import { hierarchyFactorLimit } from "@nucleum/features/memory/node/node.store";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { resolveContentTypeForFile } from "@nucleum/features/memory/capture/capture.utils";
 import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
 import type { IRecordId } from "@21n/types/data.type";
@@ -59,7 +59,7 @@ import { appStore } from "@nucleum/stores/app.store";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
 import { UserDataMode } from "@21n/types/account.type";
-import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
 import { Persistence } from "@nucleum/persistence/persistence";
 import view from "@nucleum/stores/view.store";
 import context from "@nucleum/stores/context.store";
@@ -82,7 +82,7 @@ import {
   textToMdBlocks
 } from "@nucleum/components/markdown/markdown.utils";
 import type { IBlock } from "@nucleum/components/markdown/md.type";
-import { ActiveResourceStore } from "@nucleum/datafn/resource.store";
+import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
 import { embedBridge } from "@nucleum/components/embed/embed.store";
 import { EmbedMessage } from "@21n/types/embedMessage.enum";
 import { convertWebMToWav } from "@21n/utils/audio.utils";

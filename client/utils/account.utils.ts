@@ -1,4 +1,4 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { goto, isExtensionEnvironment } from "@21n/utils/browser.utils";
 import { clientStorage } from "@nucleum/persistence/persistence.utils";
@@ -96,7 +96,7 @@ export async function signout(
 ) {
   logger.log({ at: "signout", context: ctx, params });
   try {
-    const { authClient } = await import("@nucleum/components/account/auth");
+    const { authClient } = await import("@nucleum/client/runtime/account/auth");
     await (await authClient()).signOut({
       allSessions: false
     });

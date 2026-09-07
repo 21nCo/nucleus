@@ -1,4 +1,4 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { parse } from "@21n/shared-utils/json.utils";
 import { textIsCode } from "@21n/shared-utils/text.utils";
 import { NodeType } from "@nucleum/features/memory/node/node.type";

@@ -1,6 +1,6 @@
 import type { IPlayer, ModalEvent } from "@21n/types/popup.type";
 import { writable } from "svelte/store";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { appStore } from "@nucleum/stores/app.store";
 import { AccessMode } from "@nucleum/datafn/resource.type";

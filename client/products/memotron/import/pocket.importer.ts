@@ -11,7 +11,7 @@ import { Resource } from "@nucleum/datafn/resource.enum";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 import { GlobalEvent } from "@21n/types/event.enum";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { performApiCall } from "@21n/utils/network.utils";
 import { UserDataMode } from "@21n/types/account.type";
 import account from "@nucleum/stores/account.store";

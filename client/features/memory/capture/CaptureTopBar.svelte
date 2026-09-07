@@ -19,7 +19,7 @@
   import { tick } from "svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { haptic } from "@21n/utils/embed.utils";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
 
   let {
     captureStore,

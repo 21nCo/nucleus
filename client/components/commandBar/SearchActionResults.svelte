@@ -9,7 +9,7 @@
   import type { IResource } from "@nucleum/datafn/resource.type";
   import TextWithHoverTooltip from "@21n/elements/text/TextWithHoverTooltip.svelte";
   import { debouncer } from "@21n/utils/utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import BreadcrumbMini from "@21n/elements/breadcrumb/BreadcrumbMini.svelte";
   let {
     action,

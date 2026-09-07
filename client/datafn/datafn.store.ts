@@ -20,9 +20,9 @@ import {
 import { createSearchProvider } from "@searchfn/datafn-provider";
 import { IndexedDbAdapter } from "@searchfn/adapter-indexeddb";
 import { resolveProductResourceConfig } from "@nucleum/schema/product.config";
-import { resolveAccountBaseUrl } from "@nucleum/components/network";
-import { createNucleumAuthFnTransportAuth } from "@nucleum/components/account/auth";
-import type { Product } from "@nucleum/products/product.type";
+import { resolveAccountBaseUrl } from "@nucleum/client/runtime/account/network";
+import { createNucleumAuthFnTransportAuth } from "@nucleum/client/runtime/account/auth";
+import type { Product } from "@21n/types/product.type";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import {
   clientStorage,
@@ -33,7 +33,7 @@ import type { UserAccount } from "@21n/types/account.type";
 import type { NucleumDatafnE2eeSettings } from "@21n/types/datafn.type";
 import { UserDataMode } from "@21n/types/account.type";
 import { get, writable } from "svelte/store";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { compareObjects } from "@21n/shared-utils/obj.utils";
 import {
   DATAFN_E2EE_KV_KEY,

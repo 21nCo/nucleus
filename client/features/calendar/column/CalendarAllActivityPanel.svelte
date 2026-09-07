@@ -8,7 +8,7 @@
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import {
     determineResourceType,
     resolveProductResources

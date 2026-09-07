@@ -24,7 +24,7 @@ import {
   isSameResource,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 
 /**
  * Used to identify if temporary s3 storage should be used or not, If true, temporary s3 storage is used

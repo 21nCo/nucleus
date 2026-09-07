@@ -8,7 +8,7 @@
   import { bg, cn } from "@21n/utils/ui.utils";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
   import { SessionCompositionType } from "@21n/types/pointron/sessionComposition.type";
-  import { resolveSessionSplitFromIntervals } from "@nucleum/products/pointron/pointron.utils";
+  import { resolveSessionSplitFromIntervals } from "@nucleum/features/focus/composition.utils";
   let {
     parentBackgroundIndex = 1,
     size = Size.md

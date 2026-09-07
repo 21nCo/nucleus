@@ -43,13 +43,13 @@
   import RestorePurchaseAction from "@nucleum/components/subscription/RestorePurchaseAction.svelte";
   import view from "@nucleum/stores/view.store";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { hasLegacyCloudSession } from "@21n/utils/account.utils";
   import {
     authClient,
     resolveAuthFnSessionMode,
     shouldUseAuthFnBearerSession
-  } from "@nucleum/components/account/auth";
+  } from "@nucleum/client/runtime/account/auth";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import type {

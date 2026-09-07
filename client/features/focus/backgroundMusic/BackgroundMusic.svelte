@@ -1,5 +1,5 @@
 <script>
-  import { backgroundSoundStore } from "@nucleum/products/pointron/pointron.store";
+  import { backgroundSoundStore } from "@nucleum/features/focus/backgroundMusic/background-sound.store";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";

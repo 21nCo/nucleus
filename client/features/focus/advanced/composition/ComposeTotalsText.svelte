@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { activeSession } from "@nucleum/features/focus/session.store";
   import {
     BreakCompositionType,
     SessionCompositionType,
     type SessionComposition
   } from "@21n/types/pointron/sessionComposition.type";
-  import { getTotalsFromComposition } from "@nucleum/products/pointron/pointron.utils";
+  import { getTotalsFromComposition } from "@nucleum/features/focus/composition.utils";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { bg, cn } from "@21n/utils/ui.utils";
   let {
@@ -15,7 +16,7 @@
     parentBgIndex?: number;
   } = $props();
   let totals = $derived(getTotalsFromComposition({
-    composition
+    composition, endTime: $activeSession.end
   }));
 </script>
 

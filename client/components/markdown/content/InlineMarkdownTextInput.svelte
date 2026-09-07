@@ -20,7 +20,7 @@
   } from "@nucleum/components/markdown/markdown.utils";
   import InlineMention from "@nucleum/components/markdown/content/inline/InlineMention.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { scrollIntoViewOnFocus } from "@nucleum/actions/scroll.action";
   import { isValidString, truncateString } from "@21n/shared-utils/text.utils";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";

@@ -16,7 +16,7 @@
     authClient,
     resolveAuthFnSessionMode,
     shouldUseAuthFnBearerSession
-  } from "./auth";
+  } from "@nucleum/client/runtime/account/auth";
   import { Size } from "@21n/types/size.enum";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType } from "@21n/types/notification.type";
@@ -26,8 +26,8 @@
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import { detectUserRegion } from "@21n/utils/network.utils";
   import account from "@nucleum/stores/account.store";
-  import { resolveAccountBaseUrl } from "../network";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { resolveAccountBaseUrl } from "@nucleum/client/runtime/account/network";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   let {
     isSignup = $bindable(false),
     currentProgress = undefined,

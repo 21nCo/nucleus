@@ -1,5 +1,11 @@
 <script lang="ts">
-  import { flushSync, mount, unmount } from "svelte";
+  import {
+    flushSync,
+    mount,
+    unmount,
+    type Component,
+    type Snippet
+  } from "svelte";
   import GlobalGraphUsingG6 from "@nucleum/features/memory/graph/GlobalGraphUsingG6.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";
@@ -13,19 +19,30 @@
   import Divider from "@21n/elements/Divider.svelte";
   import { Orientation } from "@21n/types/direction.enum";
   import { ColorStrength } from "@21n/types/appearance.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import type { IRecordId } from "@21n/types/data.type";
-  import MemotronOverviewLayout from "@nucleum/products/memotron/overview/MemotronOverviewLayout.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   import { browser } from "$app/environment";
+
+  let {
+    layout: Layout
+  }: {
+    layout: Component<{
+      isConstrainedWidth?: boolean;
+      right?: Snippet;
+      children?: Snippet;
+    }>;
+  } = $props();
 
   let isRendered = $state(false);
   let isHideOrphans = $state(false);
   let graphRef = $state<GlobalGraphUsingG6>();
   let splitResource = $state<IRecordId | undefined>(undefined);
   let isConstrainedWidth = $state(false);
-  const relationRowsStore = toSvelteStore<Array<{ links?: Record<string, any>[] }>>(
+  const relationRowsStore = toSvelteStore<
+    Array<{ links?: Record<string, any>[] }>
+  >(
     datafn.node.signal({
       select: ["id", "links.#"],
       metadata: {
@@ -88,7 +105,9 @@
   });
   const data = $derived(resolveFilteredData(unfilteredData, isHideOrphans));
   const isLoading = $derived(
-    $relationRowsStore.loading || $rootNodesStore.loading || $linkedNodesStore.loading
+    $relationRowsStore.loading ||
+      $rootNodesStore.loading ||
+      $linkedNodesStore.loading
   );
 
   $effect(() => {
@@ -193,7 +212,7 @@
   }
 </script>
 
-<MemotronOverviewLayout bind:isConstrainedWidth>
+<Layout bind:isConstrainedWidth>
   {#snippet right()}
     <span class="flex items-center gap-3 text-fgs3 text-b3 h-full">
       {#if !isConstrainedWidth && data.nodes.length > 0}
@@ -237,4 +256,4 @@
       layout="d3-force"
     />
   {/if}
-</MemotronOverviewLayout>
+</Layout>

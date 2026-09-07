@@ -21,7 +21,7 @@
   import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
   import { BulkEditor } from "@nucleum/components/record/record.store";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { resolveFilePreview } from "@nucleum/features/memory/node/node.utils";
 
   let {

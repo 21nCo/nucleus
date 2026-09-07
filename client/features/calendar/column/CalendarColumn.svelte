@@ -5,7 +5,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { TextStyle } from "@21n/types/text.enum";
   import { TimeScaleUnit } from "@21n/types/time.type";
   import { cn } from "@21n/utils/ui.utils";

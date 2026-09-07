@@ -24,7 +24,7 @@
   import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import {
     activeSession,
     currentFocusItem

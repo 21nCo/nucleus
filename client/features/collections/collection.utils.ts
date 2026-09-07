@@ -16,7 +16,7 @@ import {
 } from "@nucleum/datafn/resource.utils";
 import type { ISelectItem } from "@21n/types/select.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 import type { IAvatar } from "@21n/types/avatar.type";
 import { datafn } from "@nucleum/datafn/datafn.store";
 

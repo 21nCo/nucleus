@@ -11,7 +11,7 @@
   } from "d3";
   import { onDestroy, onMount } from "svelte";
   //TODO - import dependency on local
-  import { roundOffToNdigitsAfterDecimal } from "@nucleum/products/pointron/pointron.utils";
+  import { roundOffToNdigitsAfterDecimal } from "@21n/shared-utils/number.utils";
   import {
     customColor,
     retrieveCurrentColors

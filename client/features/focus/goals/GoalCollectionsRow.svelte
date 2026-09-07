@@ -12,7 +12,7 @@
   import LinkSearch from "@nucleum/features/memory/common/linkbox/LinkSearch.svelte";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceError } from "@nucleum/components/error/errors";
   import { ResourceErrorCode } from "@nucleum/components/error/error.type";
   import type { IActiveObjectiveStore } from "@nucleum/features/focus/goals/goal.store";

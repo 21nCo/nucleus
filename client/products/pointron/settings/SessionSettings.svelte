@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
   import QuickAddDurationsEditor from "@nucleum/features/focus/logs/manualLog/QuickAddDurationsEditor.svelte";
   import { Orientation } from "@21n/types/direction.enum";

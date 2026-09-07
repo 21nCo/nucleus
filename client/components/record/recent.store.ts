@@ -8,7 +8,7 @@ import { Resource } from "@nucleum/datafn/resource.enum";
 import { resourceInList } from "@nucleum/datafn/resource.utils";
 import type { IRecentsStore } from "@nucleum/components/record/record.type";
 import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { appStore } from "@nucleum/stores/app.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { get } from "svelte/store";

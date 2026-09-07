@@ -24,7 +24,7 @@
   import {
     authClient,
     resolveAuthFnSessionMode
-  } from "@nucleum/components/account/auth";
+  } from "@nucleum/client/runtime/account/auth";
   import type { AuthFnSession } from "@authfn/client";
   let {
     isSignup: initialIsSignup = false,

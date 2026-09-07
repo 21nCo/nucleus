@@ -9,7 +9,7 @@
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import {
     relayToBackgroundScript,
     relayToSidePanel

@@ -6,15 +6,26 @@
   "dependencies": {
     "@nucleum/schema": "*",
     "@21n/shared-utils": "*",
-    "@21n/utils": "*",
     "@datafn/client": "0.1.0",
     "@searchfn/adapter-indexeddb": "0.1.0",
-    "@searchfn/datafn-provider": "0.4.0"
+    "@searchfn/datafn-provider": "0.4.0",
+    "@21n/types": "*",
+    "@nucleum/persistence": "*"
   },
   "peerDependencies": {
     "svelte": "^5.55.0"
   },
   "exports": {
-    "./*": "./*"
+    "./datafn-linking.store": "./datafn-linking.store.ts",
+    "./datafn-sharing.store": "./datafn-sharing.store.ts",
+    "./datafn.store": "./datafn.store.ts",
+    "./datafnE2ee.store": "./datafnE2ee.store.ts",
+    "./id.utils": "./id.utils.ts",
+    "./mutation.utils": "./mutation.utils.ts",
+    "./optimisticKv.utils": "./optimisticKv.utils.ts",
+    "./resource.enum": "./resource.enum.ts",
+    "./resource.type": "./resource.type.ts",
+    "./resource.utils": "./resource.utils.ts",
+    "./signalCache": "./signalCache.ts"
   }
 }

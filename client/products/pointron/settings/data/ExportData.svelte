@@ -7,7 +7,7 @@
   import { toasts } from "@nucleum/stores/notification.store";
   import { ButtonVariant } from "@21n/types/button.type";
   import { pointronDatafnBackupResources } from "@nucleum/products/pointron/settings/data/pointronDatafnBackup.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
 
   let isExporting = false;
 

@@ -21,7 +21,7 @@
   import Button from "@21n/elements/button/Button.svelte";
   import { Size } from "@21n/types/size.enum";
   import NewCollectionWizard from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/NewCollectionWizard.svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import ErrorStatusPane from "@21n/elements/feedback/ErrorStatusPane.svelte";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
 

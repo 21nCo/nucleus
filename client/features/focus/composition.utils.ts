@@ -1,4 +1,3 @@
-import { get } from "svelte/store";
 import {
   SessionCompositionType,
   type SessionComposition,
@@ -8,26 +7,26 @@ import {
   type ISessionInterval,
   BlockType
 } from "@21n/types/pointron/session.type";
-import { activeSession } from "@nucleum/features/focus/session.store";
-import { type ISessionBase, SessionType } from "@nucleum/features/focus/logs/log.type";
+import {
+  type ISessionBase,
+  SessionType
+} from "@nucleum/features/focus/logs/log.type";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 
-type ITag = {
-  label: string;
-};
-
+/** Calculates focus, break, and total durations without reading session state. */
 export function getTotalsFromComposition(
   params: {
     composition?: SessionComposition | undefined;
     intervals?: ISessionInterval[] | undefined;
+    endTime?: Date;
   } = {
     composition: undefined,
     intervals: undefined
   }
 ) {
-  let { intervals, composition } = params;
+  let { intervals, composition, endTime } = params;
   if (!intervals && composition)
-    intervals = generateIntervalsFromComposition(composition);
+    intervals = generateIntervalsFromComposition(composition, endTime);
   if (!intervals) return { duration: 0, focus: 0, brek: 0 };
   let duration = intervals.reduce((sum, item) => sum + (item.duration ?? 0), 0);
   let focus = intervals.reduce(
@@ -42,8 +41,10 @@ export function getTotalsFromComposition(
   );
   return { duration, focus, brek };
 }
+/** Builds intervals using an explicit end time for fixed-end compositions. */
 export function generateIntervalsFromComposition(
-  composition: SessionComposition
+  composition: SessionComposition,
+  endTime?: Date
 ) {
   let bars: Omit<ISessionInterval, "start">[] = [];
   let intervals: ISessionInterval[] = [];
@@ -55,14 +56,14 @@ export function generateIntervalsFromComposition(
   ) {
     return intervals;
   }
-  bars = generateIntervals(composition);
+  bars = generateIntervals(composition, endTime);
   if (
     composition.type === SessionCompositionType.POMODORO &&
     composition.additional &&
     composition.additional.length > 0
   ) {
     composition.additional.forEach((p) => {
-      bars = [...bars, ...generateIntervals(p)];
+      bars = [...bars, ...generateIntervals(p, endTime)];
     });
   }
   if (bars.length > 0) {
@@ -71,10 +72,11 @@ export function generateIntervalsFromComposition(
   return intervals;
 }
 
+/** Assigns consecutive start times to the supplied intervals. */
 export function refreshPredefinedIntervalsStartTime(
   intervals: Omit<ISessionInterval, "start">[],
   start: Date
-) : ISessionInterval[] {
+): ISessionInterval[] {
   let resolvedIntervals: ISessionInterval[] = [];
   intervals.forEach((interval, index) => {
     if (index == 0) {
@@ -98,7 +100,7 @@ export function refreshPredefinedIntervalsStartTime(
   return resolvedIntervals;
 }
 
-function generateIntervals(composition: SessionComposition) {
+function generateIntervals(composition: SessionComposition, endTime?: Date) {
   if (!composition) return [];
   let focusDuration;
   let numberOfFocusRounds;
@@ -139,7 +141,6 @@ function generateIntervals(composition: SessionComposition) {
       numberOfFocusRounds = 1;
     }
   } else if (composition.type === SessionCompositionType.END_TIME_FIXED) {
-    const endTime = get(activeSession).end;
     if (!endTime) return [];
     if (
       composition.breakType === BreakCompositionType.PREDEFINED &&
@@ -214,6 +215,7 @@ function generateIntervals(composition: SessionComposition) {
   return bars;
 }
 
+/** Totals the completed portions of focus and break intervals. */
 export function resolveSessionSplitFromIntervals(
   intervals: ISessionInterval[]
 ) {
@@ -227,6 +229,7 @@ export function resolveSessionSplitFromIntervals(
   return { focus, brek };
 }
 
+/** Resolves recorded focus and break time across session formats. */
 export function resolveSessionTimeSplit(x: ISessionBase) {
   let sessionTime = { focus: 0, brek: 0 };
   if (
@@ -241,6 +244,7 @@ export function resolveSessionTimeSplit(x: ISessionBase) {
   return sessionTime;
 }
 
+/** Resolves duration totals for legacy session records. */
 export function resolveSessionTimeLegacy(session: ISessionBase) {
   if (
     (session.type === SessionType.COUNTUP && session.blocks.length === 1) ||
@@ -260,17 +264,7 @@ export function resolveSessionTimeLegacy(session: ISessionBase) {
   }
 }
 
-export function roundOffToNdigitsAfterDecimal(number: number, n: number) {
-  return Math.round(number * Math.pow(10, n)) / Math.pow(10, n);
-}
-
-export function addHashToTagLabel(tag: ITag) {
-  return {
-    ...tag,
-    label: `#${tag.label}`
-  };
-}
-
+/** Updates a composition duration from its explicit end time. */
 export function refreshFocusDurationForFixedEndTime(
   composition: SessionComposition,
   endTime: Date

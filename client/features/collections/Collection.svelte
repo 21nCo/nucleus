@@ -41,7 +41,7 @@
     Orientation,
     Placement
   } from "@21n/types/direction.enum";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import CoverPicker from "@21n/elements/coverPicker/CoverPicker.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
@@ -71,8 +71,8 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
-  import { Product } from "@nucleum/products/product.type";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { Product } from "@21n/types/product.type";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
 

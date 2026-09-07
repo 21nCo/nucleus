@@ -19,7 +19,7 @@
   } from "@nucleum/features/focus/goals/goal.type";
   import modalEvent from "@nucleum/components/modal/modal.store";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
   import { appEvents, toasts } from "@nucleum/stores/notification.store";

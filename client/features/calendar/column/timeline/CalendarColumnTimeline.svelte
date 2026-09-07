@@ -1,7 +1,7 @@
 <script lang="ts">
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
   import { cn } from "@21n/utils/ui.utils";
   import CalendarColumnTasksPanel from "@nucleum/features/calendar/column/CalendarColumnTasksPanel.svelte";

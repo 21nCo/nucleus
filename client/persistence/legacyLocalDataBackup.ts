@@ -1,4 +1,4 @@
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 import { productRegistry } from "@nucleum/schema/product.config";
 import { nucleumDatafnSchema } from "@nucleum/schema/datafn";
 import { parse } from "@21n/shared-utils/json.utils";

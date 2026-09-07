@@ -2,8 +2,8 @@ import type { IAppMenuStore } from "@nucleum/stores/appMenu/appMenu.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { appStore } from "@nucleum/stores/app.store";
 import { get, writable } from "svelte/store";
-import { logger } from "@nucleum/components/debug/logger.client";
-import { Product } from "@nucleum/products/product.type";
+import { logger } from "@nucleum/client/runtime/logging/logger";
+import { Product } from "@21n/types/product.type";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import {
   acknowledgeOptimisticKvEntries,

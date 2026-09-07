@@ -8,7 +8,7 @@
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { Action } from "@21n/types/action.enum";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import { page } from "$app/stores";

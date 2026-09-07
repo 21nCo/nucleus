@@ -14,7 +14,7 @@ import {
 } from "@nucleum/features/memory/node/node.type";
 import type { CollectionType } from "@nucleum/features/collections/collection.type";
 import type { IRecordId } from "@21n/types/data.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { isValidArray, isValidArrayWithData } from "@21n/shared-utils/obj.utils";
 import { extensionDatafn } from "@nucleum/extensions/extension.store";
 import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
@@ -29,7 +29,7 @@ import { parse } from "@21n/shared-utils/json.utils";
 import {
   highlightSearchQuery,
   searchSort
-} from "@nucleum/products/memotron/memotron.utils";
+} from "@nucleum/features/memory/linking/search-results.utils";
 import { contentTypeSort } from "@nucleum/features/memory/node/node.utils";
 
 type LinkingSearchParams = {

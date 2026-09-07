@@ -6,7 +6,7 @@
   import ResourceSwitcherItem from "@nucleum/components/library/resourceSwitcher/ResourceSwitcherItem.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
   import { resolveResourceSwitcher } from "@nucleum/datafn/resource.utils";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";

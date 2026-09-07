@@ -3,9 +3,9 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
 
   function handlePaste(event: ClipboardEvent) {
     try {

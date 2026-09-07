@@ -5,8 +5,8 @@
   import view from "@nucleum/stores/view.store";
   import DebugInfoItem from "@21n/layout/layers/debug/DebugInfoItem.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
-  import { LogType } from "@nucleum/components/debug/debug.type";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
+  import { LogType } from "@nucleum/client/runtime/logging/log.type";
   import appearance from "@nucleum/stores/appearance.store";
   import Divider from "@21n/elements/Divider.svelte";
   import { ColorStrength } from "@21n/types/appearance.type";

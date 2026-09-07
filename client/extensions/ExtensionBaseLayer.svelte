@@ -4,7 +4,7 @@
   import account from "@nucleum/stores/account.store";
   import ExtensionThemeBase from "@nucleum/extensions/ExtensionThemeBase.svelte";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { extractProduct } from "@21n/shared-utils/utils";
   import {
@@ -24,7 +24,7 @@
   } from "@nucleum/datafn/resource.utils";
   import { parse } from "@21n/shared-utils/json.utils";
   import { ExtensionStore } from "@nucleum/extensions/extension.store";
-  import { Extension } from "@nucleum/products/product.type";
+  import { Extension } from "@21n/types/product.type";
   let {
     id,
     extention,

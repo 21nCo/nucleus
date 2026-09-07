@@ -3,8 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   generateIntervalsFromComposition,
   getTotalsFromComposition
-} from "@nucleum/products/pointron/pointron.utils";
-import { activeSession } from "@nucleum/features/focus/session.store";
+} from "@nucleum/features/focus/composition.utils";
 import {
   BreakCompositionType,
   SessionCompositionType,
@@ -28,11 +27,16 @@ function createComposition(
   };
 }
 
-function resolveDurationsByType(composition: SessionComposition) {
-  return generateIntervalsFromComposition(composition).map((interval) => ({
-    duration: interval.duration,
-    type: interval.type
-  }));
+function resolveDurationsByType(
+  composition: SessionComposition,
+  endTime?: Date
+) {
+  return generateIntervalsFromComposition(composition, endTime).map(
+    (interval) => ({
+      duration: interval.duration,
+      type: interval.type
+    })
+  );
 }
 
 describe("Pointron composition interval generation", () => {
@@ -41,8 +45,7 @@ describe("Pointron composition interval generation", () => {
     vi.setSystemTime(new Date("2026-06-27T10:00:00.000Z"));
   });
 
-  afterEach(async () => {
-    await activeSession.modify({ end: undefined }, { isPersist: false });
+  afterEach(() => {
     vi.useRealTimers();
   });
 
@@ -150,13 +153,8 @@ describe("Pointron composition interval generation", () => {
     });
   });
 
-  it("generates fixed end-time predefined bars from the active session end", async () => {
-    await activeSession.modify(
-      {
-        end: new Date("2026-06-27T11:00:00.000Z")
-      },
-      { isPersist: false }
-    );
+  it("generates fixed end-time predefined bars from the supplied end time", () => {
+    const endTime = new Date("2026-06-27T11:00:00.000Z");
     const composition = createComposition({
       type: SessionCompositionType.END_TIME_FIXED,
       breakDuration: 5 * 60,
@@ -164,7 +162,7 @@ describe("Pointron composition interval generation", () => {
       breakType: BreakCompositionType.PREDEFINED
     });
 
-    expect(resolveDurationsByType(composition)).toEqual([
+    expect(resolveDurationsByType(composition, endTime)).toEqual([
       { type: BlockType.FOCUS, duration: 27.5 * 60 },
       { type: BlockType.BREAK, duration: 5 * 60 },
       { type: BlockType.FOCUS, duration: 27.5 * 60 }

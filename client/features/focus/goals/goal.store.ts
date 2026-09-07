@@ -1,9 +1,9 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { ActiveResourceStore } from "@nucleum/datafn/resource.store";
+import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
 import { PanelSwitcherMixin } from "@nucleum/components/resource/panelSwitcher.mixin";
 import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
 import { type IRecordId } from "@21n/types/data.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import type {
   IActiveObjective,
   IObjective,

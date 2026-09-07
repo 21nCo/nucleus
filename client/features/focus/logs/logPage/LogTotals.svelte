@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { resolveSessionTimeSplit } from "@nucleum/products/pointron/pointron.utils";
+  import { resolveSessionTimeSplit } from "@nucleum/features/focus/composition.utils";
   import LogTotalCard from "@nucleum/features/focus/logs/logPage/LogTotalCard.svelte";
 
   let { log }: { log: any } = $props();

@@ -7,7 +7,7 @@
   import { appEvents } from "@nucleum/stores/notification.store";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { KeyboardKey } from "@21n/types/keyboard.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { Action } from "@21n/types/action.enum";
   import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";

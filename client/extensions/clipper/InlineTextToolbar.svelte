@@ -9,7 +9,7 @@
   import { AlertType } from "@21n/types/notification.type";
   import InlineMarkdownTextInput from "@nucleum/components/markdown/content/InlineMarkdownTextInput.svelte";
   import LinkActionOnClipper from "@nucleum/features/memory/common/linkbox/LinkActionOnClipper.svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import HighlightColors from "@nucleum/features/memory/common/highlighters/HighlightColors.svelte";
   import { debouncer } from "@21n/utils/utils";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";

@@ -5,7 +5,7 @@
   import { formatDatetime } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/types/size.enum";
-  import type { ActiveResourceStore } from "@nucleum/datafn/resource.store";
+  import type { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
   import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
   import {
     isShowStatusBanner,

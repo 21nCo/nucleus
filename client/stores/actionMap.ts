@@ -48,7 +48,7 @@ import { ResourceError } from "@nucleum/components/error/errors";
 import { ResourceErrorCode } from "@nucleum/components/error/error.type";
 import CollectionTitleLabelPart from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
 import PropertyConfig from "@nucleum/features/collections/properties/propertyConfig/PropertyConfig.svelte";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { toasts } from "@nucleum/stores/notification.store";
 import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
 import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItemDummy.svelte";
@@ -88,7 +88,7 @@ import Today from "@nucleum/features/calendar/Today.svelte";
 import { activeResourceFilter } from "@21n/utils/utils";
 import DatafnSharePanel from "@nucleum/components/share/DatafnSharePanel.svelte";
 import { datafn } from "@nucleum/datafn/datafn.store";
-import { appMenuActionLabelsByAction } from "@nucleum/products/product-nav.config";
+import { appMenuActionLabelsByAction } from "@nucleum/client/config/product-nav.config";
 import {
   addDatafnRecordToCollection,
   relateDatafnRecords

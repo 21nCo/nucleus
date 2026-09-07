@@ -20,7 +20,7 @@
   import { SessionState } from "@21n/types/pointron/sessionState.enum";
   import { PointronEvent } from "@21n/types/pointron/pointronEvent.enum";
   import FocusTopNavWidget from "@nucleum/features/focus/player/FocusTopNavWidget.svelte";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   let { children }: { children?: Snippet } = $props();
   let isLiteMode = $state($context.isEmbed && $context.isSheet);
   const isDebug = import.meta.env?.DEV;

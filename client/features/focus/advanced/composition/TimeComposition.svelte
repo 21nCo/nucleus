@@ -27,7 +27,7 @@
   } from "@nucleum/stores/uiState/uiState.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
   import { advancedCompositionDraft } from "@nucleum/features/focus/advanced/composition/advancedCompositionDraft.store";
 

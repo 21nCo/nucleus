@@ -9,10 +9,13 @@ import {
 import type { HttpTransportAuthProvider } from "@superfunctions/http";
 import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
-import { resolveAccountBaseUrl, resolveAccountCookiePrefix } from "../network";
-import { logger } from "@nucleum/components/debug/logger.client";
+import {
+  resolveAccountBaseUrl,
+  resolveAccountCookiePrefix
+} from "@nucleum/client/runtime/account/network";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { isExtensionEnvironment } from "@21n/utils/browser.utils";
-import { determineIfOffline } from "@21n/utils/network.utils";
+import { determineIfOffline } from "@nucleum/client/runtime/connectivity";
 import type {
   AuthSessionResolution,
   StoredAuthSessionState

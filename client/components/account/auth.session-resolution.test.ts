@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
-import { performSessionCheck, resolveAuthSession } from "./auth";
+import { performSessionCheck, resolveAuthSession } from "@nucleum/client/runtime/account/auth";
 
 const mocks = vi.hoisted(() => {
   const storage = new Map<string, string>();
@@ -44,7 +44,7 @@ vi.mock("@nucleum/persistence/persistence.utils", () => ({
   }
 }));
 
-vi.mock("@nucleum/components/debug/logger.client", () => ({
+vi.mock("@nucleum/client/runtime/logging/logger", () => ({
   logger: mocks.logger
 }));
 
@@ -52,11 +52,11 @@ vi.mock("@21n/utils/browser.utils", () => ({
   isExtensionEnvironment: mocks.isExtensionEnvironment
 }));
 
-vi.mock("@21n/utils/network.utils", () => ({
+vi.mock("@nucleum/client/runtime/connectivity", () => ({
   determineIfOffline: mocks.determineIfOffline
 }));
 
-vi.mock("../network", () => ({
+vi.mock("@nucleum/client/runtime/account/network", () => ({
   resolveAccountBaseUrl: () => "https://account.example",
   resolveAccountCookiePrefix: () => "nucleus"
 }));

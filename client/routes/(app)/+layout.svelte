@@ -3,7 +3,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { page } from "$app/stores";
-  import { resolveAuthSession } from "@nucleum/components/account/auth";
+  import { resolveAuthSession } from "@nucleum/client/runtime/account/auth";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { appStore } from "../../stores/app.store";

@@ -24,7 +24,7 @@
     headingNodeTypes,
     NodeType
   } from "@nucleum/features/memory/node/node.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceError } from "@nucleum/components/error/errors";
   import { ResourceErrorCode } from "@nucleum/components/error/error.type";
   import {
@@ -34,7 +34,12 @@
   } from "@nucleum/datafn/resource.type";
   import view from "@nucleum/stores/view.store";
   import { AppSearchParam } from "@21n/types/appStore.type";
-  import { resolveProductConfig } from "@nucleum/products/product.config";
+  import { getContext } from "svelte";
+  import {
+    PRODUCT_NAV_CONTEXT,
+    getProductNavConfig,
+    type IProductNavConfig
+  } from "@nucleum/client/config/product-nav.config";
   import { Action } from "@21n/types/action.enum";
 
   let {
@@ -45,6 +50,7 @@
     isReadOnlyMode?: boolean;
   } = $props();
   let popoverRef: any;
+  const navigation = getContext<IProductNavConfig>(PRODUCT_NAV_CONTEXT);
   let isPreventContentTypeRender = $derived(
     headingNodeTypes.includes($node.contentType)
   );
@@ -132,7 +138,9 @@
           queryParams: {
             resource: Resource.node,
             type: $node.contentType.toLowerCase(),
-            [AppSearchParam.RETURN_TO]: resolveProductConfig().homePathPt
+            [AppSearchParam.RETURN_TO]:
+              navigation?.homePathPt ??
+              getProductNavConfig($appStore.product).homePathPt
           }
         });
       }}

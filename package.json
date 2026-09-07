@@ -72,7 +72,7 @@
     "dev:memotron-share": "turbo run dev --filter=memotron-share",
     "dev:memotron-clipper": "turbo run dev --filter=memotron-clipper",
     "codemod:alias": "tsx tools/codemods/alias-migration/index.ts",
-    "lint": "npm run check:no-fixed-test-waits && turbo run lint",
+    "lint": "npm run check:architecture && npm run check:no-fixed-test-waits && turbo run lint",
     "test": "turbo run test --filter=tidigit-tests",
     "build:packages": "turbo run build --filter='./packages/*'",
     "build:products": "turbo run build --filter='./apps/*'",
@@ -101,7 +101,8 @@
     "build:ios:pointron:live": "node tools/ios/build-web-bundle.mjs pointron -- --mode live",
     "setup:ios:whisper": "node tools/ios/setup-whisper.mjs",
     "build:memotron-share": "turbo run build --filter=memotron-share",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean",
+    "check:architecture": "node tools/check/architecture.mjs"
   },
   "packageManager": "npm@10.0.0",
   "overrides": {

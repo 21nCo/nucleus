@@ -9,7 +9,7 @@
   import { isValidEmail } from "@21n/shared-utils/text.utils";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { authClient } from "./auth";
+  import { authClient } from "@nucleum/client/runtime/account/auth";
   import Icon from "@21n/elements/Icon.svelte";
   import { page } from "$app/stores";
 

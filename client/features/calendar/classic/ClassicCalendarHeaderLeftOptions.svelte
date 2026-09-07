@@ -8,7 +8,7 @@
   import { OptionSelectorStyle } from "@21n/types/select.type";
   import view from "@nucleum/stores/view.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import Button from "@21n/elements/button/Button.svelte";
 
   let {

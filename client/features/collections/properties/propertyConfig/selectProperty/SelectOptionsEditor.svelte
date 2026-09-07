@@ -3,7 +3,7 @@
     reorderList,
     type DragDropEvent
   } from "@nucleum/actions/rearrange.action";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import Icon from "@21n/elements/Icon.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import Badge from "@21n/elements/text/Badge.svelte";

@@ -3,10 +3,10 @@ import { AppSkin } from "@21n/types/appearance.type";
 import { AppSearchParam, type IAppStore } from "@21n/types/appStore.type";
 import type { DragAndDrop } from "@21n/types/draganddrop.type";
 import { DragStatus } from "@21n/types/dragstatus.enum";
-import blankJson from "@nucleum/datafn/blank.json";
+import blankJson from "@nucleum/client/config/blank.json";
 import colorSchemes from "@21n/theme/colorschemes.json";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { shuffleEmojis } from "@nucleum/datafn/avatars";
+import { shuffleEmojis } from "@21n/elements/avatarPicker/avatars";
 import { ActionType, type IAction } from "@21n/types/action.type";
 import { IdentityProvider } from "@21n/types/oauth.type";
 import { dispatchCustomEvent, goto } from "@21n/utils/browser.utils";
@@ -24,7 +24,7 @@ import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
 import { InteractionMode } from "@nucleum/components/settings/interactionMode/interactionMode.type";
 import { Action } from "@21n/types/action.enum";
 import { GlobalEvent, type Event } from "@21n/types/event.enum";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { Size } from "@21n/types/size.enum";
 import type { IRecordId } from "@21n/types/data.type";
 import account from "@nucleum/stores/account.store";
@@ -33,7 +33,7 @@ import {
   determineResourceAccessMode,
   resourceAction
 } from "@nucleum/datafn/resource.utils";
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
 import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";

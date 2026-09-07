@@ -4,7 +4,7 @@
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import Table2 from "@21n/elements/table/Table2.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import {
     AvatarPickerContext,
     AvatarType,

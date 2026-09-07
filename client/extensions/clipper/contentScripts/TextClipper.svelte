@@ -21,7 +21,7 @@
   import { appEvents } from "@nucleum/stores/notification.store";
   import { AlertType } from "@21n/types/notification.type";
   import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";
   import { relayToSidePanel } from "@21n/utils/extension.utils";
   import { activeResourceFilter } from "@21n/utils/utils";

@@ -26,7 +26,7 @@
   import NodeThumbnailTweetPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailTweetPreview.svelte";
   import { Placement } from "@21n/types/direction.enum";
   import type { IWebpageStore } from "@nucleum/extensions/clipper/contentScripts/types";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceError } from "@nucleum/components/error/errors";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";

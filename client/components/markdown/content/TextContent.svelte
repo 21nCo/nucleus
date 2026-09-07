@@ -22,7 +22,7 @@
   import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
   import { getContext } from "svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { queryLinkingSearchResults } from "@nucleum/features/memory/linking/link-search";
   import type { IRecordId } from "@21n/types/data.type";
   import {

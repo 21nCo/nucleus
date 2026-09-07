@@ -2,14 +2,14 @@
   import account from "@nucleum/stores/account.store";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import FileView from "@nucleum/features/files/FileView.svelte";
   import type { IRecordId } from "@21n/types/data.type";
   import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   let {
     context = "cp-profile",
     fileId: providedFileId = undefined,

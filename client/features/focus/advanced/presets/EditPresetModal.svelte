@@ -1,6 +1,6 @@
 <script lang="ts">
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import {
     SessionCompositionType,
     type SessionComposition,

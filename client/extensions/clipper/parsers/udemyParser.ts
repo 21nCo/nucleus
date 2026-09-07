@@ -1,4 +1,4 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { NodeType } from "@nucleum/features/memory/node/node.type";
 import type { IVideoBookmarkCapture } from "@nucleum/features/memory/node/node.type";
 import {

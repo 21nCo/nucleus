@@ -17,7 +17,7 @@
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import ExtensionBaseLayer from "@nucleum/extensions/ExtensionBaseLayer.svelte";
   import ScreenShot from "@nucleum/extensions/clipper/contentScripts/ScreenShot.svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import SyncPane from "@nucleum/extensions/clipper/syncPane/SyncPane.svelte";
   import LoginNotification from "@nucleum/extensions/clipper/feedbackPane/LoginNotification.svelte";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
@@ -30,7 +30,7 @@
   import { onDestroy, onMount } from "svelte";
   import { toolbarUnavailableUrlsList } from "@nucleum/features/memory/common/urlMap";
   import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { parse } from "@21n/shared-utils/json.utils";
   import ClipModal from "@nucleum/extensions/clipper/ClipModal.svelte";
   let { id }: { id: string } = $props();

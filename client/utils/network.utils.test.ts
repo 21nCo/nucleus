@@ -1,3 +1,4 @@
+import { determineIfOffline } from "@nucleum/client/runtime/connectivity";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
@@ -37,7 +38,7 @@ const moduleMocks = vi.hoisted(() => ({
   }
 }));
 
-vi.mock("@nucleum/components/debug/logger.client", () => ({
+vi.mock("@nucleum/client/runtime/logging/logger", () => ({
   logger: moduleMocks.logger
 }));
 vi.mock("@21n/utils/account.utils", () => moduleMocks.account);
@@ -47,13 +48,12 @@ vi.mock("@nucleum/persistence/persistence.utils", () => ({
 }));
 vi.mock("@21n/utils/time.utils", () => moduleMocks.time);
 vi.mock("@21n/utils/extension.utils", () => moduleMocks.extension);
-vi.mock("@nucleum/components/account/auth", () => moduleMocks.auth);
+vi.mock("@nucleum/client/runtime/account/auth", () => moduleMocks.auth);
 vi.mock("@21n/shared-utils/json.utils", async () => {
   return await vi.importActual<any>("@21n/shared-utils/json.utils");
 });
 
 const {
-  determineIfOffline,
   performApiCall,
   performHttpNetworkOperation,
   performStaticDataOperation,

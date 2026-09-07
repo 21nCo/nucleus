@@ -20,7 +20,7 @@
   } from "@nucleum/components/markdown/markdown.utils";
   import { hierarchyFactorLimit } from "@nucleum/features/memory/node/node.store";
   import { isReplaceableMd } from "@nucleum/components/markdown/markdown.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import type { IRecordId } from "@21n/types/data.type";
   import {
     isSameResource,

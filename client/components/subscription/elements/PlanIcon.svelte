@@ -1,6 +1,6 @@
 <script lang="ts">
   import view from "@nucleum/stores/view.store";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { PlanType } from "@nucleum/components/subscription/userPlan.type";
   let {
     type,

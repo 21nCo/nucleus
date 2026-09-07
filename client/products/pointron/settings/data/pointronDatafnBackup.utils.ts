@@ -1,4 +1,4 @@
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 import { resolveDatafnProductResources } from "@nucleum/datafn/datafn.store";
 
 type DatafnBackupRecord = Record<string, unknown>;

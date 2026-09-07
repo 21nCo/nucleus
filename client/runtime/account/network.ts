@@ -98,11 +98,16 @@ function resolveNativeConfigUrl(key: "webOrigin" | "accountUrl") {
 }
 
 function resolveNativeAccountBaseUrl(region: string) {
-  const nativeConfig = typeof window === "undefined" ? null : window.__NUCLEUM_NATIVE_CONFIG__;
+  const nativeConfig =
+    typeof window === "undefined" ? null : window.__NUCLEUM_NATIVE_CONFIG__;
   if (nativeConfig?.environment) {
     const environment = nativeConfig.environment.trim().toLowerCase();
-    const normalizedRegion = normalizeAccountRegion(region || nativeConfig.defaultRegion);
-    const accountDomain = nativeConfig.accountDomain?.trim() || resolveAccountDomainFromProduct(nativeConfig.product);
+    const normalizedRegion = normalizeAccountRegion(
+      region || nativeConfig.defaultRegion
+    );
+    const accountDomain =
+      nativeConfig.accountDomain?.trim() ||
+      resolveAccountDomainFromProduct(nativeConfig.product);
     const suffix = environment === "live" ? "" : `-${environment}`;
     return `https://account-${normalizedRegion}${suffix}.${accountDomain}`;
   }
@@ -127,7 +132,9 @@ function renderAccountBaseUrlTemplate(template: string, region: string) {
     .replace(/\/$/, "");
 }
 
-function resolveAccountEnvironmentFromAccountBaseUrl(baseUrl: string): AccountEnvironment {
+function resolveAccountEnvironmentFromAccountBaseUrl(
+  baseUrl: string
+): AccountEnvironment {
   try {
     const hostname = new URL(baseUrl).hostname.toLowerCase();
     if (hostname.startsWith("account-") || hostname.includes(".account-")) {
@@ -144,9 +151,12 @@ function resolveAccountEnvironmentFromAccountBaseUrl(baseUrl: string): AccountEn
 
 export type AccountEnvironment = "local" | "dev" | "pre" | "live";
 
-export function resolveAccountEnvironment(host = resolveHost()): AccountEnvironment {
+export function resolveAccountEnvironment(
+  host = resolveHost()
+): AccountEnvironment {
   const normalizedHost = host.toLowerCase();
-  const subdomain = normalizedHost.split(".")[0] ?? "";
+  const subdomain =
+    normalizedHost.split(".")[0] ?? "";
   if (subdomain === "local" || normalizedHost.endsWith(".localhost")) {
     return "local";
   }
@@ -181,7 +191,9 @@ function resolveProductDomainFromHost(host: string): string | null {
   const normalized = host.toLowerCase().replace(/:\d+$/, "");
   if (isLoopbackHost(normalized)) return null;
 
-  const labels = normalized.split(".").filter(Boolean);
+  const labels = normalized
+    .split(".")
+    .filter(Boolean);
   if (labels.length < 2) return null;
 
   const first = labels[0];

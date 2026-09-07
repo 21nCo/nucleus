@@ -1,7 +1,7 @@
 import "fake-indexeddb/auto";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 import { appStore } from "@nucleum/stores/app.store";
 import {
   datafn,

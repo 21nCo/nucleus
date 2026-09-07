@@ -1,5 +1,5 @@
 import { resolveToken } from "$lib/client/utils/account.utils";
-import { logger } from "$lib/client/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import type {
   WebArtifactCategory,
   WebArtifactSearchResult

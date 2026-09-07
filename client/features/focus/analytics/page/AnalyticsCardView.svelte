@@ -35,7 +35,7 @@
     type ITimePeriodResolved
   } from "@21n/types/time.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { ErrorMessage } from "@nucleum/components/error/error.type";
   import { untrack } from "svelte";

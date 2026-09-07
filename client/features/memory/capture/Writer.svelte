@@ -2,7 +2,7 @@
   import { CaptureMethod } from "@nucleum/features/memory/capture/capture.type";
   import AudioCapture from "@nucleum/features/memory/capture/AudioCapture.svelte";
   import NodularMarkdown from "@nucleum/components/markdown/NodularMarkdown.svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
 
   import { setContext } from "svelte";
   import type { IRecordId } from "@21n/types/data.type";

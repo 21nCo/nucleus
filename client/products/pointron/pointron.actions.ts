@@ -60,7 +60,7 @@ import {
 import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
 import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
 import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
-import { appMenuActionLabelsByAction } from "@nucleum/products/product-nav.config";
+import { appMenuActionLabelsByAction } from "@nucleum/client/config/product-nav.config";
 //TODO - use dummy task if this causes any issues - like earlier
 import Task from "@nucleum/features/focus/tasks/Task.svelte";
 import CreateTask from "@nucleum/features/focus/tasks/CreateTask.svelte";

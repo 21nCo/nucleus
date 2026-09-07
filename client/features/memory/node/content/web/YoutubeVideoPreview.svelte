@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { onMount } from "svelte";
   type YouTubeWindow = Window & {
     YT?: {

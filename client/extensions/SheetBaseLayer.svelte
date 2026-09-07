@@ -5,11 +5,11 @@
   import { cn } from "@21n/utils/ui.utils";
   import { appearance } from "@nucleum/stores/appearance.store";
   import { onDestroy, onMount } from "svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import account from "@nucleum/stores/account.store";
   import { getDapId } from "@nucleum/persistence/persistence.utils";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Extension } from "@nucleum/products/product.type";
+  import { Extension } from "@21n/types/product.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";

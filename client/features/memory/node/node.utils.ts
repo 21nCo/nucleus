@@ -1,4 +1,4 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { IFile } from "@nucleum/features/files/file.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { Resource } from "@nucleum/datafn/resource.enum";

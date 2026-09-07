@@ -1,4 +1,4 @@
-import type { ObservableStore } from "@nucleum/stores/client.store";
+import type { IObservableStore } from "@21n/types/data.type";
 import type {
   IMutationAdditionalParams,
   IRecordId
@@ -311,7 +311,7 @@ export interface IMultiSelectContext {
   accessPointId?: IRecordId;
 }
 
-export interface IMultiSelectStore extends ObservableStore<IRecordId[]> {
+export interface IMultiSelectStore extends IObservableStore<IRecordId[]> {
   context: IMultiSelectContext;
 }
 

@@ -119,7 +119,7 @@
   import Strikethrough from "@21n/icons/Strikethrough.svelte";
   import Highlight from "@21n/icons/Highlight.svelte";
   // import IconifyIcon from "@iconify/svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { isExtensionEnvironment } from "@21n/utils/browser.utils";
   import Crop from "@21n/icons/Crop.svelte";
   import PencilSimpleLine from "@21n/icons/PencilSimpleLine.svelte";

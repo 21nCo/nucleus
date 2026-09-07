@@ -7,7 +7,7 @@
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import { TimeScaleUnit } from "@21n/types/time.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import {
     buildResolvedIndicatorDataByDayMap,
     resolveIndicatorDayKey

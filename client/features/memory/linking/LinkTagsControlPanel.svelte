@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import Button from "@21n/elements/button/Button.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";

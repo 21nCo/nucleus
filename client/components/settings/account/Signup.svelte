@@ -19,7 +19,7 @@
   import { ButtonStyle } from "@21n/types/button.type";
   import { Size } from "@21n/types/size.enum";
   import view from "@nucleum/stores/view.store";
-  import { authClient } from "@nucleum/components/account/auth";
+  import { authClient } from "@nucleum/client/runtime/account/auth";
   let isSignup = $state(true);
   let authMode = $state("Sign up");
   let currentProgress = $state<string | undefined>(undefined);

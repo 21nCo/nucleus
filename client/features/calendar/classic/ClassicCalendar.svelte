@@ -14,7 +14,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import { MetaResource, Resource } from "@nucleum/datafn/resource.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import MemotronTempCalendarColumn from "@nucleum/features/calendar/column/MemotronTempCalendarColumn.svelte";
   import ClassicCalendarHeaderLeftOptions from "@nucleum/features/calendar/classic/ClassicCalendarHeaderLeftOptions.svelte";
   import { Display } from "@21n/types/view.type";

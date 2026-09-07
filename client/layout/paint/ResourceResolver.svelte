@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import {

@@ -5,13 +5,13 @@ import {
   type IActiveResource,
   type IResource,
   type IResourceStarrable
-} from "./resource.type";
+} from "@nucleum/datafn/resource.type";
 import {
   determineResourceAccessMode,
   determineResourceType
-} from "./resource.utils";
+} from "@nucleum/datafn/resource.utils";
 import { resolveCurrentUserId } from "@21n/utils/account.utils";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { toasts } from "@nucleum/stores/notification.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 

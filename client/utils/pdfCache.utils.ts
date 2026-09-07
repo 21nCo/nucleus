@@ -1,4 +1,4 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 
 const CACHE_NAME = "pdf-cache-v1";
 const CACHE_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000;

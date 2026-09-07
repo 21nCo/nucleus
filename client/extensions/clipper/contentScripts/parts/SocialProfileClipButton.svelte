@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import {
     feedbackPane,
     webpage

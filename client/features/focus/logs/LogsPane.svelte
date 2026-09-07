@@ -20,7 +20,7 @@
   } from "@nucleum/features/focus/logs/log.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
-  import { resolveSessionTimeSplit } from "@nucleum/products/pointron/pointron.utils";
+  import { resolveSessionTimeSplit } from "@nucleum/features/focus/composition.utils";
   import { generateSummary } from "@nucleum/features/focus/session.utils";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { time } from "@datafn/client";

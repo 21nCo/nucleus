@@ -4,12 +4,12 @@
   import { properCase } from "@21n/shared-utils/text.utils";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { authClient } from "./auth";
-  import { resolveAccountBaseUrl } from "../network";
+  import { authClient } from "@nucleum/client/runtime/account/auth";
+  import { resolveAccountBaseUrl } from "@nucleum/client/runtime/account/network";
   import context from "@nucleum/stores/context.store";
   import { appStore } from "@nucleum/stores/app.store";
   import { OperatingSystem } from "@21n/types/context.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
   import { postDataToParent } from "@21n/utils/embed.utils";
   let {

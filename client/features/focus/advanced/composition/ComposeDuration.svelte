@@ -5,7 +5,7 @@
     type SessionComposition,
     BreakCompositionType
   } from "@21n/types/pointron/sessionComposition.type";
-  import { getTotalsFromComposition } from "@nucleum/products/pointron/pointron.utils";
+  import { getTotalsFromComposition } from "@nucleum/features/focus/composition.utils";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
   import { Orientation } from "@21n/types/direction.enum";
   import PomodoroUnitView from "@nucleum/features/focus/advanced/presets/PomodoroUnitView.svelte";
@@ -121,7 +121,7 @@
   }
 
   let totals = $derived(
-    getTotalsFromComposition({ composition: compositionDraft })
+    getTotalsFromComposition({ composition: compositionDraft, endTime: $activeSession.end })
   );
 
   function resolveUsableDuration(duration?: number) {

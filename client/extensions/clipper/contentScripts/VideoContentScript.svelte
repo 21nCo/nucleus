@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { onMount } from "svelte";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";

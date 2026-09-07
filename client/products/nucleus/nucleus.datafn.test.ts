@@ -7,7 +7,7 @@ import {
   initializeNucleumDatafn,
   resolveDatafnBootResources
 } from "@nucleum/datafn/datafn.store";
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 import { UserDataMode } from "@21n/types/account.type";
 import { appStore } from "@nucleum/stores/app.store";
 import { Resource } from "@nucleum/datafn/resource.enum";

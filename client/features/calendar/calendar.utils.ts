@@ -2,7 +2,7 @@ import { TimeScaleUnit } from "@21n/types/time.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { CalendarColumnLayout, CalendarColumnPanel } from "./calendar.type";
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 
 type CalendarEventRange = {
   start: number;

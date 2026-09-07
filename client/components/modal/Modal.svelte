@@ -11,7 +11,7 @@
   import appearance from "@nucleum/stores/appearance.store";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import view from "@nucleum/stores/view.store";

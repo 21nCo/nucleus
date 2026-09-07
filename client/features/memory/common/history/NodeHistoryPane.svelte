@@ -7,7 +7,7 @@
   import type { IAccessLog } from "@nucleum/features/system/accessLogging/accessLog.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

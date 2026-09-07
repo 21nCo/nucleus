@@ -1,15 +1,16 @@
 <script lang="ts">
+  import { activeSession } from "@nucleum/features/focus/session.store";
   import {
     SessionCompositionType,
     type SessionComposition
   } from "@21n/types/pointron/sessionComposition.type";
   import { Size } from "@21n/types/size.enum";
   import { SelectionItemActiveStyle } from "@21n/types/switcher.enum";
-  import { getTotalsFromComposition } from "@nucleum/products/pointron/pointron.utils";
+  import { getTotalsFromComposition } from "@nucleum/features/focus/composition.utils";
   import { formatSeconds } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import PresetDurationText from "@nucleum/features/focus/advanced/presets/PresetDurationText.svelte";
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import { abg, cn } from "@21n/utils/ui.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import TextWithHoverTooltip from "@21n/elements/text/TextWithHoverTooltip.svelte";
@@ -34,7 +35,7 @@
   } = $props();
 
   // let isHovering: boolean = false;
-  let totals = $derived(getTotalsFromComposition({ composition: preset }));
+  let totals = $derived(getTotalsFromComposition({ composition: preset, endTime: $activeSession.end }));
   function handleClick() {
     const clickEvent = new CustomEvent<{ preset: SessionComposition }>("click", {
       detail: { preset }

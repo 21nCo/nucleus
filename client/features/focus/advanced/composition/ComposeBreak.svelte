@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import {
     BreakCompositionType,
     type SessionComposition

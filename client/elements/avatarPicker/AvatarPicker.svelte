@@ -23,7 +23,7 @@
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
-  import { emojis, materialSymbols } from "@nucleum/datafn/avatars";
+  import { emojis, materialSymbols } from "@21n/elements/avatarPicker/avatars";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import account from "@nucleum/stores/account.store";
   import UploadButton from "@21n/elements/button/UploadButton.svelte";

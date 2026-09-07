@@ -1,7 +1,7 @@
 import type { ICalendarIndicatorData } from "@nucleum/features/calendar/calendar.type";
 import { MetaResource, Resource } from "@nucleum/datafn/resource.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
-import { resolveSessionTimeSplit } from "@nucleum/products/pointron/pointron.utils";
+import { resolveSessionTimeSplit } from "@nucleum/features/focus/composition.utils";
 import { generateSummary } from "@nucleum/features/focus/session.utils";
 import type {
   DaySummary,

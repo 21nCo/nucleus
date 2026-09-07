@@ -20,7 +20,7 @@
   import modalEvent from "@nucleum/components/modal/modal.store";
   import ModalFooter from "@nucleum/components/modal/ModalFooter.svelte";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";

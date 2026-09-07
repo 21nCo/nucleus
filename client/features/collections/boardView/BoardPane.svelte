@@ -16,7 +16,7 @@
   } from "@nucleum/features/collections/collection.utils";
   import TabCountBadge from "@nucleum/features/collections/counts/TabCountBadge.svelte";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { dropzone } from "@nucleum/actions/dragAndDrop.action";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";

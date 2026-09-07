@@ -10,8 +10,8 @@
   import { Size } from "@21n/types/size.enum";
   import { VerticalSwitcherStyle } from "@21n/types/switcher.enum";
   import type { ISelectValue } from "@21n/types/select.type";
-  import { OverviewPanel } from "@nucleum/products/product.type";
-  import { Product } from "@nucleum/products/product.type";
+  import { OverviewPanel } from "@21n/types/product.type";
+  import { Product } from "@21n/types/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
 
   const items =

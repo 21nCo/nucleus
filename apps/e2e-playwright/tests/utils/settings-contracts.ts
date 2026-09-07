@@ -1,5 +1,5 @@
 import { expect, type Page } from "@playwright/test";
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 import { expectAnyLocatorVisible } from "./locator-assertions";
 import { openSettings } from "./settings";
 

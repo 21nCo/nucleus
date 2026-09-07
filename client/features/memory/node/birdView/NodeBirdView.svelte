@@ -38,7 +38,7 @@
     resolveNodeGraphFill,
     resolveNodeLabelString
   } from "@nucleum/features/memory/node/node.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import NodeRightPaneContent from "@nucleum/features/memory/node/rightPanel/NodeRightPaneContent.svelte";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import NodeTimelineView from "@nucleum/features/memory/node/timeline/NodeTimelineView.svelte";

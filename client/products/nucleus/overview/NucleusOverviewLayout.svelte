@@ -13,8 +13,8 @@
     UIState,
     UIStateScope
   } from "@nucleum/stores/uiState/uiState.type";
-  import { OverviewPanel } from "@nucleum/products/product.type";
-  import { Product } from "@nucleum/products/product.type";
+  import { OverviewPanel } from "@21n/types/product.type";
+  import { Product } from "@21n/types/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
 
   const overviewPanelSwitcherItems =

@@ -10,7 +10,7 @@ import { Resource } from "@nucleum/datafn/resource.enum";
 import NucleusOverviewPanel from "@nucleum/products/nucleus/overview/NucleusOverviewPanel.svelte";
 import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
 import { resourceAction } from "@nucleum/datafn/resource.utils";
-import { appMenuActionLabelsByAction } from "@nucleum/products/product-nav.config";
+import { appMenuActionLabelsByAction } from "@nucleum/client/config/product-nav.config";
 import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
 
 const actionsToFilterInSub = [Action.LIBRARY, Action.OVERVIEW];

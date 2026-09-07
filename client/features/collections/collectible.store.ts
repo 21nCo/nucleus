@@ -1,4 +1,4 @@
-import { ActiveResourceStore } from "@nucleum/datafn/resource.store";
+import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
 import type { IRecordId } from "@21n/types/data.type";
 import {
   determineResourceType,
@@ -9,7 +9,7 @@ import type {
   ICollectionExpanded,
   ICollectionItemPropertyValue
 } from "@nucleum/features/collections/collection.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
 import {
   resolveAvatar,

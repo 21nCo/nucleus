@@ -6,7 +6,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import type { IResource } from "@nucleum/datafn/resource.type";
   import { renderMdAsHtml } from "@nucleum/components/markdown/markdown.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import Icon from "@21n/elements/Icon.svelte";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { appStore } from "@nucleum/stores/app.store";

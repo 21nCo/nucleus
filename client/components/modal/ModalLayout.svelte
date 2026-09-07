@@ -18,7 +18,7 @@
   import { onMount } from "svelte";
   import { GlobalEvent } from "@21n/types/event.enum";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { popover, tooltip } from "@nucleum/actions/popover.action";

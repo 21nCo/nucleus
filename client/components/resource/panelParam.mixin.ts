@@ -2,7 +2,7 @@ import { get } from "svelte/store";
 import { page } from "$app/stores";
 import { appStore } from "@nucleum/stores/app.store";
 import { AppSearchParam } from "@21n/types/appStore.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { IRecordId } from "@21n/types/data.type";
 
 export function resolvePanelParam(

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { SessionComposition } from "@21n/types/pointron/sessionComposition.type";
   import PresetItem from "@nucleum/features/focus/advanced/presets/PresetItem.svelte";
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import { onMount } from "svelte";
   import { activeSession } from "@nucleum/features/focus/session.store";
   import { compareObjects, deepCopy } from "@21n/shared-utils/obj.utils";

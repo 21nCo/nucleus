@@ -33,7 +33,7 @@
   import { onDestroy, onMount } from "svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/types/text.enum";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import { Orientation } from "@21n/types/direction.enum";
   import SearchSingleSelect from "@21n/elements/select/SearchSingleSelect.svelte";
@@ -56,7 +56,7 @@
   import { resolvePropertyDefaultConfig } from "@nucleum/features/collections/properties/property.utils";
   import { objIsEmpty } from "@21n/shared-utils/obj.utils";
   import CollectionTitleLabelPart from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import Table3 from "@21n/elements/table/Table3.svelte";
   import ModalContentPadded from "@nucleum/components/modal/ModalContentPadded.svelte";
 

@@ -1,6 +1,6 @@
 import { generateRandomId } from "@21n/shared-utils/crypto.utils";
 import { isValidString } from "@21n/shared-utils/text.utils";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { getImageColors } from "@21n/utils/ui.utils";
 
 /**

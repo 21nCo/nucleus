@@ -1,7 +1,7 @@
 <script lang="ts">
   import { hoverable } from "@nucleum/actions/hover.action";
   import { tooltip } from "@nucleum/actions/popover.action";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { resolveResource } from "@nucleum/components/record/record.store";
   import NodeAvatar from "@nucleum/features/memory/node/avatar/NodeAvatar.svelte";

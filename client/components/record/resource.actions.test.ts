@@ -20,7 +20,7 @@ vi.mock("@nucleum/stores/app.store", () => ({
   }
 }));
 
-vi.mock("@nucleum/datafn/resource.store", () => ({
+vi.mock("@nucleum/components/record/active-resource.store", () => ({
   copyActiveResourceContents: vi.fn(),
   updateActiveResource: vi.fn()
 }));
@@ -40,7 +40,7 @@ vi.mock("@nucleum/components/record/record.store", () => ({
   }
 }));
 
-vi.mock("@nucleum/products/memotron/memotron.utils", () => ({
+vi.mock("@nucleum/components/record/resource-link.utils", () => ({
   copyResourceLinkToClipboard: vi.fn()
 }));
 

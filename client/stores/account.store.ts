@@ -9,7 +9,8 @@ import {
 } from "@21n/types/account.type";
 import { postDataToParent } from "@21n/utils/embed.utils";
 import { Persistence } from "@nucleum/persistence/persistence";
-import { determineIfOffline, performApiCall } from "@21n/utils/network.utils";
+import { performApiCall } from "@21n/utils/network.utils";
+import { determineIfOffline } from "@nucleum/client/runtime/connectivity";
 import {
   confirmationNotification,
   toasts
@@ -33,7 +34,7 @@ import {
   deleteIndexedDbDatabase
 } from "@nucleum/persistence/persistence.utils";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import {
   clearDatafnLocalData,
@@ -55,8 +56,8 @@ import {
   bootstrapNucleusAccount,
   resolveAuthSession,
   shouldUseAuthFnBearerSession
-} from "@nucleum/components/account/auth";
-import { resolveAccountBaseUrl } from "@nucleum/components/network";
+} from "@nucleum/client/runtime/account/auth";
+import { resolveAccountBaseUrl } from "@nucleum/client/runtime/account/network";
 import { clearCachedDatafnE2eeState } from "@nucleum/datafn/datafnE2ee.store";
 import { clearLegacySurrealLocalData } from "@nucleum/persistence/legacyLocalDataBackup";
 
@@ -287,7 +288,7 @@ class AccountStore extends ObservableStore<UserAccount> {
 
     let authSession = params?.session;
     if (!authSession) {
-      const { authClient } = await import("@nucleum/components/account/auth");
+      const { authClient } = await import("@nucleum/client/runtime/account/auth");
       const response = await (
         await authClient({ isPreventCachedInstance: true })
       ).getSession();
@@ -361,7 +362,7 @@ class AccountStore extends ObservableStore<UserAccount> {
   private async resolveAuthFnSessionUserInfo(): Promise<{
     userInfo: UserInformation;
   } | null> {
-    const { authClient } = await import("@nucleum/components/account/auth");
+    const { authClient } = await import("@nucleum/client/runtime/account/auth");
     const response = await (await authClient()).getSession();
     if (!response.ok || !response.data.session) {
       return null;
@@ -541,7 +542,7 @@ class AccountStore extends ObservableStore<UserAccount> {
     "deleted" | "not-authfn" | "failed"
   > {
     try {
-      const { authClient } = await import("@nucleum/components/account/auth");
+      const { authClient } = await import("@nucleum/client/runtime/account/auth");
       const response = await (
         await authClient({
           isPreventCachedInstance: true

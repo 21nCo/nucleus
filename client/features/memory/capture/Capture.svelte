@@ -41,7 +41,7 @@
   import { fly } from "svelte/transition";
   import { Placement } from "@21n/types/direction.enum";
   import ComponentShortcutListener from "@nucleum/components/shortcuts/ComponentShortcutListener.svelte";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import { Action } from "@21n/types/action.enum";
   import { Context } from "@21n/types/appStore.type";
   import EdgeButton from "@21n/elements/button/EdgeButton.svelte";

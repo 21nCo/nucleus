@@ -1,5 +1,5 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { ActiveResourceStore } from "@nucleum/datafn/resource.store";
+import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
 import {
   CollectionLayout,
   CollectionType,
@@ -17,7 +17,7 @@ import {
   ResourceActionType
 } from "@nucleum/datafn/resource.type";
 import { ResourceActions } from "@nucleum/components/record/resource.actions";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { IRecordId } from "@21n/types/data.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import {

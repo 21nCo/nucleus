@@ -13,7 +13,7 @@ const sessionStorePath = resolveRepoFsImportPath(
   "client/features/focus/session.store.ts"
 );
 const pointronStorePath = resolveRepoFsImportPath(
-  "client/products/pointron/pointron.store.ts"
+  "client/features/focus/preferences.store.ts"
 );
 const modalStorePath = resolveRepoFsImportPath(
   "client/components/modal/modal.store.ts"

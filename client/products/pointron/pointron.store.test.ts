@@ -12,7 +12,7 @@ vi.mock("@21n/utils/browser.utils", async () => {
 });
 
 const { pointronPreferences, defaultHorizonChartConfiguration } = await import(
-  "./pointron.store"
+  "@nucleum/features/focus/preferences.store"
 );
 
 describe("pointron preferences store", () => {

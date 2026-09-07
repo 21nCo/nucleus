@@ -8,7 +8,7 @@
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import AudioCapture from "@nucleum/features/memory/capture/AudioCapture.svelte";
   import { MAX_FILE_SIZE_MB } from "@nucleum/components/record/record.store";
-  import { resolveFileUploadErrorMessage } from "@nucleum/products/memotron/memotron.utils";
+  import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
   import {
     mediaNodeTypeList,
     NodeType,
@@ -25,7 +25,7 @@
   import { Size } from "@21n/types/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { enumToString } from "@21n/shared-utils/text.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import EmbedLibrarySearch from "@nucleum/components/markdown/embed/EmbedLibrarySearch.svelte";
   import { getContext } from "svelte";

@@ -10,7 +10,7 @@
   import { isValidString, properCase } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/types/button.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import SearchResultsPopover from "@21n/elements/input/SearchResultsPopover.svelte";
   import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
   import GroupedSearchResults from "@nucleum/products/memotron/library/search/GroupedSearchResults.svelte";
@@ -32,7 +32,7 @@
   import {
     highlightSearchQuery,
     searchSort
-  } from "@nucleum/products/memotron/memotron.utils";
+  } from "@nucleum/features/memory/linking/search-results.utils";
   import { contentTypeSort } from "@nucleum/features/memory/node/node.utils";
   import { activeResourceFilter, debouncer } from "@21n/utils/utils";
 

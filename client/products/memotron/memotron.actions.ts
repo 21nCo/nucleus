@@ -8,7 +8,7 @@ import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
 import SideNavCombination from "@nucleum/components/combination/SideNavCombination.svelte";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import MemotronLibrary from "@nucleum/products/memotron/library/MemotronLibrary.svelte";
-import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
 import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
 import { resourceAction } from "@nucleum/datafn/resource.utils";
 import PasteConfirmationModal from "@nucleum/features/memory/capture/PasteConfirmationModal.svelte";
@@ -30,7 +30,7 @@ import LinkTagsControlPanel from "@nucleum/features/memory/linking/LinkTagsContr
 import LibraryPanelContentResolver from "@nucleum/components/library/LibraryPanelContentResolver.svelte";
 import PreviewImageUploader from "@nucleum/features/memory/node/PreviewImageUploader.svelte";
 import NodeSettings from "@nucleum/features/memory/node/NodeSettings.svelte";
-import { appMenuActionLabelsByAction } from "@nucleum/products/product-nav.config";
+import { appMenuActionLabelsByAction } from "@nucleum/client/config/product-nav.config";
 
 export const memotronActions: IAction[] = [
   {

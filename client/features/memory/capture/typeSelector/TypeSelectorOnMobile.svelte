@@ -9,7 +9,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import {
     CollectionObjectKey,
     type ICollectionThumb

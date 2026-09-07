@@ -1,7 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { backgroundSoundStore } from "@nucleum/products/pointron/pointron.store";
+  import { backgroundSoundStore } from "@nucleum/features/focus/backgroundMusic/background-sound.store";
   import { activeSession } from "@nucleum/features/focus/session.store";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";

@@ -34,7 +34,7 @@
   import { Orientation } from "@21n/types/direction.enum";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
   import { Action } from "@21n/types/action.enum";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
   import ConfirmationNotification from "@nucleum/components/notifications/ConfirmationNotification.svelte";
   import { EmbedDataMessage } from "@21n/types/embedMessage.enum";

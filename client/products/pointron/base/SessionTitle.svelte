@@ -4,7 +4,7 @@
 
   import { formatSeconds } from "@21n/utils/time.utils";
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
 
   let { ctx = Product.NUCLEUM }: { ctx?: Product } = $props();

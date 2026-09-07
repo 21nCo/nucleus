@@ -13,7 +13,7 @@
   import { onMount } from "svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import type { IRecordId } from "@21n/types/data.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
 

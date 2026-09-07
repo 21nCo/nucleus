@@ -12,7 +12,7 @@ import { GlobalEvent } from "@21n/types/event.enum";
 import type { IEvent } from "@21n/types/event.type";
 import type { Event } from "@21n/types/event.enum";
 import { ObservableStore } from "@nucleum/stores/client.store";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import { ErrorMessage } from "@nucleum/components/error/error.type";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";

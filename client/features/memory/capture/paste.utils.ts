@@ -1,7 +1,7 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { toasts } from "@nucleum/stores/notification.store";
 import { appStore } from "@nucleum/stores/app.store";
-import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
 
 type ClipboardItemEntry = {
   type: string;

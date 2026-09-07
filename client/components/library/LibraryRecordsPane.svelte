@@ -30,7 +30,7 @@
   import { type IRecordId, SearchType } from "@21n/types/data.type";
   import LibraryLoadingPulse from "@nucleum/components/library/LibraryLoadingPulse.svelte";
   import view from "@nucleum/stores/view.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { intersection } from "@nucleum/actions/intersection.action";
   import context from "@nucleum/stores/context.store";
   import { Embed } from "@21n/types/context.type";

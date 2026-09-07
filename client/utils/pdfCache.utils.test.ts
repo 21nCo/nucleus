@@ -9,7 +9,7 @@ const loggerModule = vi.hoisted(() => ({
   }
 }));
 
-vi.mock("@nucleum/components/debug/logger.client", () => loggerModule);
+vi.mock("@nucleum/client/runtime/logging/logger", () => loggerModule);
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 

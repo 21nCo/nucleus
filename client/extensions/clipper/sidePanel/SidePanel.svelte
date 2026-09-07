@@ -4,7 +4,7 @@
   import { ExtensionEvent } from "@21n/types/extension.type";
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import { onDestroy, onMount } from "svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import {
     openAppPath,
     relayToContentScript
@@ -38,7 +38,7 @@
   import { AlertType, type IInlineStatus } from "@21n/types/notification.type";
   import { cn } from "@21n/utils/ui.utils";
   import { fly } from "svelte/transition";
-  import { Extension, Product } from "@nucleum/products/product.type";
+  import { Extension, Product } from "@21n/types/product.type";
   import ExtensionHelp from "@nucleum/extensions/shared/ExtensionHelp.svelte";
   import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
   import SidePanelCollections from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/SidePanelCollections.svelte";

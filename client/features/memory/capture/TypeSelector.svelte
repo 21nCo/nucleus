@@ -1,6 +1,6 @@
 <script lang="ts">
   import { CaptureMethod } from "@nucleum/features/memory/capture/capture.type";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import type { ISelectItem } from "@21n/types/select.type";
   import { Size } from "@21n/types/size.enum";

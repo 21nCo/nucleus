@@ -1,5 +1,5 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { get, writable } from "svelte/store";
 import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 import { appStore } from "@nucleum/stores/app.store";

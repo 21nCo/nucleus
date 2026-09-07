@@ -6,7 +6,7 @@
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";

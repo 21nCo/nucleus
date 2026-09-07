@@ -2,7 +2,7 @@
 
 <script lang="ts">
   import Library from "@nucleum/components/library/Library.svelte";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
 
   const libraryResources = resolveProductConfig(Product.POINTRON).resources

@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
-import { resolveAccountBaseUrl, resolveAccountCookiePrefix, resolveAccountDomain, resolveAccountEnvironment } from ".";
+import { resolveAccountBaseUrl, resolveAccountCookiePrefix, resolveAccountDomain, resolveAccountEnvironment } from "@nucleum/client/runtime/account/network";
 
 describe("client/components/network account URL resolution", () => {
   const originalEnv = { ...import.meta.env };

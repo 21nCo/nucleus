@@ -20,7 +20,7 @@ vi.mock("@nucleum/persistence/persistence.utils", () => ({
   clientStorage: mockedModules.storage
 }));
 
-vi.mock("@nucleum/components/debug/logger.client", () => ({
+vi.mock("@nucleum/client/runtime/logging/logger", () => ({
   logger: mockedModules.logger
 }));
 

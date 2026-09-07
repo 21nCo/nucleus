@@ -4,7 +4,7 @@
   import { Size } from "@21n/types/size.enum";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
   import view from "@nucleum/stores/view.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
   import { ErrorMessage } from "@nucleum/components/error/error.type";
   import { appStore } from "@nucleum/stores/app.store";

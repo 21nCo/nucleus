@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fileDrop } from "@nucleum/actions/fileDrop.action";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import Button from "@21n/elements/button/Button.svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
@@ -14,8 +14,8 @@
   import { Embed } from "@21n/types/context.type";
   import { wait } from "@21n/utils/time.utils";
   import { MAX_FILE_SIZE_MB } from "@nucleum/components/record/record.store";
-  import { resolveFileUploadErrorMessage } from "@nucleum/products/memotron/memotron.utils";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import type { NodeType } from "@nucleum/features/memory/node/node.type";
   import type { IMultiFileCaptureData } from "@nucleum/features/memory/capture/capture.type";
   import { resolveMultipleFilesData } from "@nucleum/features/memory/capture/capture.utils";

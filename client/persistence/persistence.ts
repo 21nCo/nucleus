@@ -2,7 +2,7 @@ import {
   performApiCall,
   performStaticDataOperation
 } from "@21n/utils/network.utils";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { extractFullTabData } from "@nucleum/extensions/clipper/clipper.utils";

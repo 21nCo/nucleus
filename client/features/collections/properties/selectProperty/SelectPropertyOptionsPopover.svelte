@@ -12,7 +12,7 @@
   } from "@nucleum/features/collections/properties/property.type";
   import SelectOptionsEditor from "@nucleum/features/collections/properties/propertyConfig/selectProperty/SelectOptionsEditor.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import SelectPropertyOptionList from "@nucleum/features/collections/properties/selectProperty/SelectPropertyOptionList.svelte";
   import type { IRecordId } from "@21n/types/data.type";
   import {

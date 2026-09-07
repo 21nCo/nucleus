@@ -16,7 +16,7 @@
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import type { IRecordId } from "@21n/types/data.type";
   import LinkTagFilter from "@nucleum/features/memory/node/links/LinkTagFilter.svelte";
   import {

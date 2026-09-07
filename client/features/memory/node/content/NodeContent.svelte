@@ -24,7 +24,7 @@
   import { onDestroy, onMount } from "svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { setContext, getContext } from "svelte";
   import { BlockAction } from "@nucleum/components/markdown/md.type";
   import { wordCounter } from "@nucleum/actions/counter.action";

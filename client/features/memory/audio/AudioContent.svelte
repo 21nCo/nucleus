@@ -10,7 +10,7 @@
   import WaveSurfer from "wavesurfer.js";
   import TimelinePlugin from "wavesurfer.js/dist/plugins/timeline";
   import { Audio2MD } from "@nucleum/features/memory/audio/AudioToMarkdown.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import view from "@nucleum/stores/view.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";

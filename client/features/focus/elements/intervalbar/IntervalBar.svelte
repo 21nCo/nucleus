@@ -5,7 +5,7 @@
   import {
     generateIntervalsFromComposition,
     getTotalsFromComposition
-  } from "@nucleum/products/pointron/pointron.utils";
+  } from "@nucleum/features/focus/composition.utils";
   import {
     SessionCompositionType,
     type SessionComposition
@@ -49,7 +49,7 @@
     if (composition.type === SessionCompositionType.COUNTUP) {
       return resolveCountupIntervalBarState(composition);
     }
-    const intervals = generateIntervalsFromComposition(composition);
+    const intervals = generateIntervalsFromComposition(composition, $activeSession.end);
     if (intervals.length === 0) return resolveCountupIntervalBarState(composition);
     return {
       composition,

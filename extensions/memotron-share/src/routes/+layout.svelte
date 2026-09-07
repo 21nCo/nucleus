@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import SheetBaseLayer from "@nucleum/extensions/SheetBaseLayer.svelte";
-  import { Extension } from "@nucleum/products/product.type";
+  import { Extension } from "@21n/types/product.type";
   let { children }: { children?: Snippet } = $props();
 </script>
 

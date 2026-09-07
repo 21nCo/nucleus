@@ -2,9 +2,9 @@ import { appStore } from "@nucleum/stores/app.store";
 import {
   copyActiveResourceContents,
   updateActiveResource
-} from "@nucleum/datafn/resource.store";
+} from "@nucleum/components/record/active-resource.store";
 import { bulkEditStore } from "@nucleum/components/record/bulkedit.store";
-import { copyResourceLinkToClipboard } from "@nucleum/products/memotron/memotron.utils";
+import { copyResourceLinkToClipboard } from "@nucleum/components/record/resource-link.utils";
 import { LinkType } from "@nucleum/features/memory/linking/link.type";
 import {
   ResourceAccessPoint,

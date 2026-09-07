@@ -1,6 +1,6 @@
 <script lang="ts">
   import { hoverable } from "@nucleum/actions/hover.action";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import Popover from "@21n/elements/popover/Popover.svelte";

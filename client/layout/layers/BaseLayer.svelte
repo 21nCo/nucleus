@@ -2,7 +2,8 @@
 
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { onMount, onDestroy } from "svelte";
+  import { onMount, onDestroy, setContext } from "svelte";
+  import { PRODUCT_NAV_CONTEXT } from "@nucleum/client/config/product-nav.config";
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import { browser } from "$app/environment";
@@ -21,8 +22,8 @@
   import { detectSystemOS, detectTouchDevice } from "@21n/utils/browser.utils";
   import { extractProduct } from "@21n/shared-utils/utils";
   import { AlertType } from "@21n/types/notification.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
-  import { LogType } from "@nucleum/components/debug/debug.type";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
+  import { LogType } from "@nucleum/client/runtime/logging/log.type";
   import { clientStorage, getDapId } from "@nucleum/persistence/persistence.utils";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { cn } from "@21n/utils/ui.utils";
@@ -45,6 +46,7 @@
   let isMounted = $state(false);
   let lastOrientation: "portrait" | "landscape" | null = null;
   const productConfig = resolveProductConfig();
+  setContext(PRODUCT_NAV_CONTEXT, productConfig);
 
   onMount(async () => {
     if (browser) {

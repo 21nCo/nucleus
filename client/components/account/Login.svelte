@@ -15,7 +15,7 @@
   import { toasts } from "@nucleum/stores/notification.store";
   import { page } from "$app/stores";
   import account from "@nucleum/stores/account.store";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   let selectedMode = $state<"signup" | "signin" | "offline">("signup");

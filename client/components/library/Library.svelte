@@ -30,7 +30,7 @@
   import { Action } from "@21n/types/action.enum";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
   import ResourceBrowser from "@nucleum/components/library/resourceBrowser/ResourceBrowser.svelte";
-  import { Product } from "@nucleum/products/product.type";
+  import { Product } from "@21n/types/product.type";
   import { isHideCreateAction } from "@nucleum/components/library/library.utils";
   import { AppSearchParam } from "@21n/types/appStore.type";
   import ComponentShortcutListener from "@nucleum/components/shortcuts/ComponentShortcutListener.svelte";

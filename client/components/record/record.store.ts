@@ -1,6 +1,6 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { type IRecordId } from "@21n/types/data.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { toasts } from "@nucleum/stores/notification.store";
 import {
   onNodeArchive,

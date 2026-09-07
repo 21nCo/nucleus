@@ -12,7 +12,7 @@ import {
   socialPostNodeTypeList
 } from "@nucleum/features/memory/node/node.type";
 import { ResourcePanelType } from "@nucleum/components/resource/resourcePanel.type";
-import { ActiveResourceStore } from "@nucleum/datafn/resource.store";
+import { ActiveResourceStore } from "@nucleum/components/record/active-resource.store";
 import { PanelSwitcherMixin } from "@nucleum/components/resource/panelSwitcher.mixin";
 import {
   activeResourceFilterIgnoreAncestorInactive
@@ -30,7 +30,7 @@ import {
   type IContextMenu,
   type IContextMenuItem
 } from "@21n/types/select.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { resolveCollectionTypes } from "@nucleum/features/collections/collection.utils";
 import type { IRecordId } from "@21n/types/data.type";
 import type { IToggleItem } from "@21n/elements/toggle/toggle.type";

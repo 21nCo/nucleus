@@ -6,7 +6,7 @@
     parseAndFormatDate,
     formatSeconds
   } from "@21n/utils/time.utils";
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { Size } from "@21n/types/size.enum";
   import { TimeScale } from "@21n/types/time.type";

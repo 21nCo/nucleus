@@ -10,10 +10,10 @@
   } from "@nucleum/components/markdown/md.type";
   import TextContent from "@nucleum/components/markdown/content/TextContent.svelte";
   import CalloutSelector from "@nucleum/components/markdown/callout/CalloutSelector.svelte";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { cn } from "@21n/utils/ui.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import type { IRecordId } from "@21n/types/data.type";
 

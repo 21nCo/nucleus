@@ -4,7 +4,7 @@
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import type { IPasteCaptureData } from "@nucleum/features/memory/capture/capture.type";
   import { sanitizeAndResolve } from "@nucleum/features/memory/node/url.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import SheetDebugLogs from "@nucleum/extensions/SheetDebugLogs.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { resolveContentTypeForFile } from "@nucleum/features/memory/capture/capture.utils";

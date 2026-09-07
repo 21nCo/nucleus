@@ -16,7 +16,7 @@
     INodeLinkThumb
   } from "@nucleum/features/memory/node/node.type";
   import { LinkType } from "@nucleum/features/memory/linking/link.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { Size } from "@21n/types/size.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
 

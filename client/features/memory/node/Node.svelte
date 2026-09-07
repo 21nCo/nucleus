@@ -19,7 +19,7 @@
   import { onDestroy, onMount, setContext, untrack } from "svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { debouncer } from "@21n/utils/utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { acquireDnDPage, appStore } from "@nucleum/stores/app.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { page } from "$app/stores";

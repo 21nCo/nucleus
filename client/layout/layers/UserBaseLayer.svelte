@@ -26,7 +26,7 @@
   import { AlertType } from "@21n/types/notification.type";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
   import DynamicMetadataLayer from "@21n/layout/layers/DynamicMetadataLayer.svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { UserDataMode } from "@21n/types/account.type";
   import { getDapId } from "@nucleum/persistence/persistence.utils";
   import PageError from "@nucleum/components/error/PageError.svelte";

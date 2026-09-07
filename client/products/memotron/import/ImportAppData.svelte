@@ -22,7 +22,7 @@
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
-  import { MemotronAction } from "@nucleum/products/memotron/memotronAction.enum";
+  import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import { cn } from "@21n/utils/ui.utils";
   import FieldMapping from "@nucleum/products/memotron/import/FieldMapping.svelte";

@@ -1,4 +1,4 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { DfqlRelations } from "@datafn/core";
 import {
   ErrorMessage,

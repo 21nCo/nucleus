@@ -14,7 +14,7 @@ import {
 } from "@nucleum/features/memory/pdfAnnotator/pdfAnnotator.type";
 import { PDFDocument, rgb } from "pdf-lib";
 import type { IRecordId } from "@21n/types/data.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";

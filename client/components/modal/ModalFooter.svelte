@@ -13,7 +13,7 @@
   import { GlobalEvent } from "@21n/types/event.enum";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";
   import { Size } from "@21n/types/size.enum";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
   import { Orientation } from "@21n/types/direction.enum";

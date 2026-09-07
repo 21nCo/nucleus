@@ -18,7 +18,7 @@
   import { Size } from "@21n/types/size.enum";
   import { formatBytes } from "@21n/shared-utils/text.utils";
   import { resolveFileIcon } from "@nucleum/features/memory/node/node.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   let {
     node,
     accessPoint = ResourceAccessPoint.SELF,

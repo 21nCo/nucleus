@@ -4,7 +4,7 @@ import { toasts } from "@nucleum/stores/notification.store";
 import type { IRecordId } from "@21n/types/data.type";
 import { getBucketNameandKey, isUrlExpired } from "@21n/utils/account.utils";
 import { get } from "svelte/store";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { isRecordId } from "@nucleum/datafn/resource.utils";
 import type { IFile } from "@nucleum/features/files/file.type";
 import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";

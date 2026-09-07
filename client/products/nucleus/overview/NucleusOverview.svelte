@@ -4,7 +4,7 @@
   import { onMount } from "svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
-  import { OverviewPanel, Product } from "@nucleum/products/product.type";
+  import { OverviewPanel, Product } from "@21n/types/product.type";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
   import AnalyticsV2 from "@nucleum/features/focus/analytics/AnalyticsV2.svelte";
   import MemotronOverview from "@nucleum/products/memotron/overview/MemotronOverview.svelte";

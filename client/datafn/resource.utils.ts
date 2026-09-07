@@ -6,7 +6,7 @@ import {
   ResourceAccessPoint
 } from "@nucleum/datafn/resource.type";
 import type { IRecordId } from "@21n/types/data.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { properCase } from "@21n/shared-utils/text.utils";
 import type { IResourceSwitchItem } from "@21n/types/select.type";
 import { Product } from "@nucleum/schema/product.type";

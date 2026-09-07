@@ -27,7 +27,7 @@
   import CaptureTopBar from "@nucleum/features/memory/capture/CaptureTopBar.svelte";
   import context from "@nucleum/stores/context.store";
   import { OperatingSystem } from "@21n/types/context.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { AlertType, type InlineToast } from "@21n/types/notification.type";
   import Button from "@21n/elements/button/Button.svelte";

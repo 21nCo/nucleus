@@ -10,7 +10,7 @@
   import { get } from "svelte/store";
   import type { IEmbedBlockBody } from "@nucleum/components/markdown/md.type";
   import EmbedContentPlaceholder from "@nucleum/components/markdown/embed/EmbedContentPlaceholder.svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import type { IRecordId } from "@21n/types/data.type";
   import {
     AccessMode,

@@ -16,7 +16,7 @@
     isPointronDatafnBackup,
     resolveDatafnImportErrorCount
   } from "@nucleum/products/pointron/settings/data/pointronDatafnBackup.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
 
   let fileInput: HTMLInputElement;
   let isProcessingImport: boolean = false;

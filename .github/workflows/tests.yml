@@ -30,6 +30,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+      - name: Check architecture boundaries
+        run: npm run check:architecture
       - name: Run app checks
         run: npm run check:apps
 

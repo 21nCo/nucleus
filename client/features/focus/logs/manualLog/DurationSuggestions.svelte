@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { onMount } from "svelte";

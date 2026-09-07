@@ -19,7 +19,7 @@
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { setContext } from "svelte";
   import { generateMarkdownText } from "@nucleum/features/memory/node/node.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { get } from "svelte/store";
   import { KeyboardKey } from "@21n/types/keyboard.type";
   import type { IRecordId } from "@21n/types/data.type";

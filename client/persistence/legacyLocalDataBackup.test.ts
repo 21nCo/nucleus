@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 import {
   convertLegacyLocalDataBackupToDatafnImport,
   hasRecoverableLegacyLocalData,

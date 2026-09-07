@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import { Placement } from "@21n/types/direction.enum";
   import { GlobalEvent } from "@21n/types/event.enum";
   import {

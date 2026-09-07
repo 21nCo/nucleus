@@ -12,7 +12,7 @@ import "dotenv/config";
 import { chromium } from "@playwright/test";
 import path from "node:path";
 import fs from "node:fs";
-import { Product } from "@nucleum/products/product.type";
+import { Product } from "@21n/types/product.type";
 
 const authDir = path.join(__dirname, "..", ".auth");
 const product = (process.env.PRODUCT ?? Product.NUCLEUM).toLowerCase();

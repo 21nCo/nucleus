@@ -12,10 +12,10 @@ import {
   getTotalsFromComposition,
   refreshPredefinedIntervalsStartTime,
   resolveSessionTimeSplit
-} from "@nucleum/products/pointron/pointron.utils";
+} from "@nucleum/features/focus/composition.utils";
 import { get, writable } from "svelte/store";
 import { SessionState } from "@21n/types/pointron/sessionState.enum";
-import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
 import {
   SessionCompositionType,
   type SessionComposition,
@@ -36,7 +36,7 @@ import { deepCopy, isValidArrayWithData } from "@21n/shared-utils/obj.utils";
 import { AlertType } from "@21n/types/notification.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import type { IRecordId } from "@21n/types/data.type";
-import { logger } from "@nucleum/components/debug/logger.client";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import {
   type ISession,
   SessionType,
@@ -543,7 +543,7 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
         });
         return;
       }
-      intervals = generateIntervalsFromComposition(composition);
+      intervals = generateIntervalsFromComposition(composition, session.end);
       if (intervals.length > 1) sessionType = SessionType.PREDEFINED_INTERVALS;
       else if (intervals.length === 1) sessionType = SessionType.COUNTDOWN;
       plannedDuration = getTotalsFromComposition({

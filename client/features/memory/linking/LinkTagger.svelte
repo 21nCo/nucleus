@@ -3,7 +3,7 @@
   import { InputStyle } from "@21n/types/input.type";
   import type { INodeLinkThumb } from "@nucleum/features/memory/node/node.type";
   import type { IRecordId } from "@21n/types/data.type";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
   import {
     LinkType,
     type ILinkTag

@@ -3,7 +3,7 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { InputStyle } from "@21n/types/input.type";
   import { cn } from "@21n/utils/ui.utils";
-  import { logger } from "@nucleum/components/debug/logger.client";
+  import { logger } from "@nucleum/client/runtime/logging/logger";
 
   let {
     captureStore,

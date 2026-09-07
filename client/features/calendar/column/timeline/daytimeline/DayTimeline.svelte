@@ -6,7 +6,7 @@
     CalendarTimelineEntry
   } from "@nucleum/features/calendar/calendar.type";
   import type { ISessionThumb } from "@nucleum/features/focus/logs/log.type";
-  import { resolveSessionTimeSplit } from "@nucleum/products/pointron/pointron.utils";
+  import { resolveSessionTimeSplit } from "@nucleum/features/focus/composition.utils";
   import type { ICalendarEvent } from "@nucleum/features/calendar/events/event.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { time } from "@datafn/client";

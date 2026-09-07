@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pointronPreferences } from "@nucleum/products/pointron/pointron.store";
+  import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import MultiselectDropdown from "@21n/elements/dropdown/MultiselectDropdown.svelte";
   import { userPreferences } from "@nucleum/components/settings/userPreferences.store";
   import { TimeScale } from "@21n/types/time.type";

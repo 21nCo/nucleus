@@ -1,4 +1,5 @@
-import { logger } from "@nucleum/components/debug/logger.client";
+import { determineIfOffline } from "@nucleum/client/runtime/connectivity";
+import { logger } from "@nucleum/client/runtime/logging/logger";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { GlobalEvent } from "@21n/types/event.enum";
 import {
@@ -478,7 +479,7 @@ export async function performHttpNetworkOperation(params: {
     });
     try {
       const { performSessionCheck } =
-        await import("@nucleum/components/account/auth");
+        await import("@nucleum/client/runtime/account/auth");
       return await performSessionCheck();
     } catch (error) {
       logger.error({
@@ -639,12 +640,4 @@ function serializeInventoryError(error: unknown) {
     };
   }
   return { message: String(error) };
-}
-
-export async function determineIfOffline() {
-  const isOfflineMode = await clientStorage.get(ClientStorageKey.OFFLINE_MODE);
-  const isNetworkInducedOfflineMode = !navigator.onLine;
-  return (
-    (isOfflineMode && isOfflineMode === "true") || isNetworkInducedOfflineMode
-  );
 }

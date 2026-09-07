@@ -4,7 +4,7 @@
   import { Size } from "@21n/types/size.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
-  import { authClient } from "@nucleum/components/account/auth";
+  import { authClient } from "@nucleum/client/runtime/account/auth";
   import type { AuthFnSocialProviderId } from "@authfn/client";
   let {
     currentProgress = $bindable()

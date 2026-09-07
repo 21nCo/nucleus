@@ -18,7 +18,7 @@
   import CalendarNotesTemplateCard from "@nucleum/features/calendar/settings/CalendarNotesTemplateCard.svelte";
   import { generateMarkdownText } from "@nucleum/features/memory/node/node.utils";
   import Switch from "@21n/elements/toggle/Switch.svelte";
-  import { Product } from "@nucleum/products/product.type.js";
+  import { Product } from "@21n/types/product.type";
   import { appStore } from "@nucleum/stores/app.store";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   let editingTemplate: TimeScaleUnit | null = null;
