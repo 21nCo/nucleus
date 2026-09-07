@@ -23,8 +23,8 @@ type DatafnRelationDefinition = NonNullable<
 type DatafnRelationEndpoint = DatafnRelationDefinition["from"];
 
 export type FeatureDefinition = {
-  resources: DatafnResourceDefinition[];
-  relations: DatafnRelationDefinition[];
+  resources: readonly DatafnResourceDefinition[];
+  relations: readonly DatafnRelationDefinition[];
 };
 
 const accessLog = {
@@ -43,7 +43,7 @@ const accessLog = {
     jsonField("value")
   ],
   indices: { base: ["resourceId", "resource", "action", "event"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const capture = {
   name: "capture",
@@ -67,7 +67,7 @@ const capture = {
     jsonField("clipboard")
   ],
   indices: { base: ["method"], search: ["label"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const collection = {
   name: "collection",
@@ -93,7 +93,7 @@ const collection = {
     base: ["type", "resource", "typeToExtend"],
     search: ["label"]
   }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const space = {
   name: "space",
@@ -110,7 +110,7 @@ const space = {
     arrayField("items", true, [])
   ],
   indices: { base: ["type"], search: ["label"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const event = {
   name: "event",
@@ -129,7 +129,7 @@ const event = {
     base: ["event", "startUnix", "endUnix"],
     search: ["event", "label"]
   }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const file = {
   name: "file",
@@ -151,7 +151,7 @@ const file = {
     jsonField("metadata")
   ],
   indices: { base: ["type"], search: ["label"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const objective = {
   name: "objective",
@@ -187,7 +187,7 @@ const objective = {
     base: ["type", "status", "parentId", "parentPath"],
     search: ["label"]
   }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const linkTag = {
   name: "linkTag",
@@ -202,7 +202,7 @@ const linkTag = {
     objectField("avatar")
   ],
   indices: { search: ["label"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const node = {
   name: "node",
@@ -240,7 +240,7 @@ const node = {
     base: ["contentType", "metaType", "parent"],
     search: ["label", "text", "notes"]
   }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const property = {
   name: "property",
@@ -266,7 +266,7 @@ const property = {
     stringField("importId")
   ],
   indices: { base: ["type", "resource", "propertyType"], search: ["label"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const session = {
   name: "session",
@@ -297,7 +297,7 @@ const session = {
     jsonField("notes")
   ],
   indices: { base: ["startUnix", "type"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const sessionLog = {
   name: "sessionLog",
@@ -321,7 +321,7 @@ const sessionLog = {
     arrayField("targets")
   ],
   indices: { base: ["startUnix", "objectiveId", "sessionId", "taskId"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const task = {
   name: "task",
@@ -342,7 +342,7 @@ const task = {
     booleanField("isAncestorInactive", false, false)
   ],
   indices: { base: ["dateUnix", "objectiveId"], search: ["label"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const vector = {
   name: "vector",
@@ -359,7 +359,7 @@ const vector = {
     jsonField("metadata")
   ],
   indices: { base: ["resourceId", "resource"], vector: ["embedding"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 const view = {
   name: "view",
@@ -382,7 +382,7 @@ const view = {
     stringField("importId")
   ],
   indices: { base: ["layout", "tabBy", "groupBy"], search: ["label"] }
-};
+} as const satisfies DatafnResourceDefinition;
 
 export const features = {
   system: {
@@ -636,9 +636,26 @@ function relationKey(relation: DatafnRelationDefinition) {
   return `${joinTable || fkField}:${relationName}:${inverse}`;
 }
 
+type FeatureResource = (typeof features)[FeatureId]["resources"][number];
+type FeatureRelation = (typeof features)[FeatureId]["relations"][number];
+
+/** Preserves relation literals while allowing filtered polymorphic endpoint arrays. */
+type FilteredRelation<Relation = FeatureRelation> =
+  Relation extends DatafnRelationDefinition
+    ? Omit<Relation, "from" | "to"> & {
+        from: Relation["from"] extends readonly string[]
+          ? Relation["from"][number][]
+          : Relation["from"];
+        to: Relation["to"] extends readonly string[]
+          ? Relation["to"][number][]
+          : Relation["to"];
+      }
+    : never;
+
+/** Composed resources and relations retain their declared names and field types. */
 export type ComposedDefinition = {
-  resources: DatafnResourceDefinition[];
-  relations: DatafnRelationDefinition[];
+  resources: FeatureResource[];
+  relations: FilteredRelation[];
 };
 
 /**
@@ -648,7 +665,7 @@ export type ComposedDefinition = {
 export function composeDefinition(
   featureIds: readonly FeatureId[]
 ): ComposedDefinition {
-  const resources: DatafnResourceDefinition[] = [];
+  const resources: FeatureResource[] = [];
   const seen = new Set<string>();
   for (const featureId of uniqueFeatureIds(featureIds)) {
     for (const resource of features[featureId].resources) {
@@ -659,14 +676,14 @@ export function composeDefinition(
   }
 
   const names = new Set(resources.map((resource) => resource.name));
-  const relations: DatafnRelationDefinition[] = [];
+  const relations: FilteredRelation[] = [];
   const seenRelations = new Set<string>();
   for (const featureId of uniqueFeatureIds(featureIds)) {
     for (const relation of features[featureId].relations) {
       const from = filterRelationEndpoint(relation.from, names);
       const to = filterRelationEndpoint(relation.to, names);
       if (!from || !to) continue;
-      const next = { ...relation, from, to };
+      const next = { ...relation, from, to } as FilteredRelation;
       const key = `${relationKey(next)}:${JSON.stringify(from)}:${JSON.stringify(to)}`;
       if (seenRelations.has(key)) continue;
       seenRelations.add(key);

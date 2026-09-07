@@ -17,7 +17,7 @@ export const nucleumDatafnSchema = defineSchema({
   },
   resources: composed.resources,
   relations: composed.relations
-} as Parameters<typeof defineSchema>[0]);
+});
 
 export type NucleumDatafnSchema = typeof nucleumDatafnSchema;
 export type NucleumDatafnResource =
