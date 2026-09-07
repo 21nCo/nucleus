@@ -3,7 +3,7 @@
     NodeType,
     webNodeTypeList
   } from "@nucleum/features/memory/node/node.type";
-  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import { type IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { cn } from "@21n/utils/ui.utils";

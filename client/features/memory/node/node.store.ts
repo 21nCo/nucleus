@@ -11,9 +11,9 @@ import {
   mediaNodeTypeList,
   socialPostNodeTypeList
 } from "@nucleum/features/memory/node/node.type";
-import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
 import { ActiveResourceStore } from "@nucleum/stores/resources/active-resource.store";
-import { PanelSwitcherMixin } from "@nucleum/application/resource/panelSwitcher.mixin";
+import { PanelSwitcherMixin } from "@nucleum/stores/resources/panelSwitcher.mixin";
 import {
   activeResourceFilterIgnoreAncestorInactive
 } from "@21n/utils/utils";

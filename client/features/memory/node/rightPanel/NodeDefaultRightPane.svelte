@@ -10,7 +10,7 @@
     canHaveTraces,
     socialPostNodeTypeList
   } from "@nucleum/features/memory/node/node.type";
-  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { focusById } from "@nucleum/actions/focusById.action";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";

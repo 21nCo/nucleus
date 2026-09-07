@@ -11,7 +11,7 @@
   } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/elements/size.enum";
   import { ButtonVariant } from "@21n/elements/button/button.type";
-  import { appStore } from "@nucleum/stores/app.store";
+  import { requireResourcePanelHost } from "@nucleum/stores/resources/resource-panel-host";
   import view from "@nucleum/stores/view.store";
   import ContextMenuAction from "@21n/elements/contextMenu/ContextMenuAction.svelte";
   import type { IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
@@ -56,12 +56,7 @@
   }
 </script>
 
-<div
-  class={cn("absolute bottom-0 inset-x-0 mx-auto w-fit z-10", {
-    // "mb-3": $resourceStore.isInFocusMode,
-    // "mb-4": !$resourceStore.isInFocusMode
-  })}
->
+<div class="absolute bottom-0 inset-x-0 mx-auto w-fit z-10">
   <div
     class={cn(
       "flex flex-col border- border-t border-x border-brs2 border-t--bgs1 shadow-sm rounded-t-md overflow-hidden"
@@ -102,7 +97,7 @@
             type={ButtonVariant.DANGER}
             parentBgIndex={2}
             onclick={() => {
-              appStore.closeResource({ id: $resourceStore.id });
+              requireResourcePanelHost().close($resourceStore.id);
             }}
           />
         </div>
@@ -128,9 +123,12 @@
               parentBgIndex={2}
               onclick={() => {
                 if (accessMode === AccessMode.FULL) {
-                  appStore.toggleFullScreen(accessMode, $resourceStore.id);
+                  requireResourcePanelHost().maximize(
+                    accessMode,
+                    $resourceStore.id
+                  );
                 } else {
-                  appStore.goBack();
+                  requireResourcePanelHost().goBack();
                 }
               }}
             />
@@ -144,7 +142,10 @@
                 width="px-3"
                 parentBgIndex={2}
                 onclick={() => {
-                  appStore.toggleFullScreen(accessMode, $resourceStore.id);
+                  requireResourcePanelHost().maximize(
+                    accessMode,
+                    $resourceStore.id
+                  );
                 }}
               />
               {#if contextMenuResolver !== undefined}

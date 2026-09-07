@@ -1090,7 +1090,7 @@
       "path": "client/application/resource/ResourcePanelSwitcher.svelte",
       "disposition": "retained",
       "destinations": [
-        "client/application/resource/ResourcePanelSwitcher.svelte"
+        "client/components/records/ResourcePanelSwitcher.svelte"
       ],
       "ownership": "implementation-private",
       "rationale": "Implementation-local or cohesive frontend owner; no independent domain abstraction is needed.",
@@ -8526,7 +8526,7 @@
       "path": "client/types/resource-panel.type.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/application/resource/resource-panel.type.ts"
+        "client/stores/resources/resource-panel.type.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",

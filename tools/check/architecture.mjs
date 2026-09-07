@@ -170,6 +170,14 @@ const violations = edges.filter(production).filter(({ from, to }) => {
   )
     return true;
   if (
+    /^client\/(stores\/resources\/(resource-panel[^/]*|panelParam\.mixin|panelSwitcher\.mixin)\.ts|components\/records\/ResourcePanelSwitcher\.svelte)$/.test(
+      from
+    ) &&
+    (/^client\/(application|features|products)\//.test(to) ||
+      to === "client/stores/app.store.ts")
+  )
+    return true;
+  if (
     from === "client/features/focus/composition.utils.ts" &&
     to === "client/features/focus/session.store.ts"
   )

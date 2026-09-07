@@ -7,7 +7,7 @@
   import ObjectiveAnalytics from "./GoalAnalytics.svelte";
   import PropertiesPane from "@nucleum/features/collections/properties/PropertiesPane.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import type { IInlineStatus } from "@nucleum/stores/notifications/notification.type";
 
   let {

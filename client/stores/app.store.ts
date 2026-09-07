@@ -1,3 +1,4 @@
+import { configureResourcePanelHost } from "@nucleum/stores/resources/resource-panel-host";
 import { get, writable } from "svelte/store";
 import { AppSkin } from "@21n/theme/appearance.type";
 import { AppSearchParam, type IAppStore } from "@nucleum/stores/appStore.type";
@@ -1033,6 +1034,21 @@ configureOverlayHost({
   closeFullscreen: () => appStore.toggleSearchParam([AccessMode.FULL]),
   resolvePlayer: (path) =>
     appStore.resolveComponentFromPath(path)?.associatedPlayer
+});
+
+configureResourcePanelHost({
+  readPanel: (id, url) => {
+    return url.searchParams.get(
+      appStore.resolveRecordSpecificSearchParam(id, AppSearchParam.PANEL)
+    );
+  },
+  writePanel: (id, panel) =>
+    appStore.toggleSearchParamRecordSpecific(id, {
+      [AppSearchParam.PANEL]: panel
+    }),
+  close: (id) => appStore.closeResource({ id }),
+  goBack: () => appStore.goBack(),
+  maximize: (mode, id) => appStore.toggleFullScreen(mode, id)
 });
 
 configureResourceActionHost({

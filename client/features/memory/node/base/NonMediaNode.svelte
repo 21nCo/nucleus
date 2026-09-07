@@ -18,7 +18,7 @@
     headingNodeTypes,
     NodeView
   } from "@nucleum/features/memory/node/node.type";
-  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import PropertiesPane from "@nucleum/features/collections/properties/PropertiesPane.svelte";
   import NodeRightPaneContent from "@nucleum/features/memory/node/rightPanel/NodeRightPaneContent.svelte";
   import NodeBirdView from "@nucleum/features/memory/node/birdView/NodeBirdView.svelte";

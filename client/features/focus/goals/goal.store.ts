@@ -1,7 +1,7 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { ActiveResourceStore } from "@nucleum/stores/resources/active-resource.store";
-import { PanelSwitcherMixin } from "@nucleum/application/resource/panelSwitcher.mixin";
-import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+import { PanelSwitcherMixin } from "@nucleum/stores/resources/panelSwitcher.mixin";
+import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
 import { type IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type {

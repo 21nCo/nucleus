@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ResourcePanelSwitcher from "@nucleum/application/resource/ResourcePanelSwitcher.svelte";
+  import ResourcePanelSwitcher from "@nucleum/components/records/ResourcePanelSwitcher.svelte";
   import {
     resolveObjectiveContextMenu,
     type IActiveObjectiveStore
@@ -11,7 +11,7 @@
     type IResourcePageWithPanels,
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
-  import type { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import type { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
 

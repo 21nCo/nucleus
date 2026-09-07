@@ -20,17 +20,17 @@
   import { Size } from "@21n/elements/size.enum";
   import ResourceInlineCloseButton from "@21n/elements/button/ResourceInlineCloseButton.svelte";
   import ObjectivePanelSwitcher from "./GoalPanelSwitcher.svelte";
-  import { resolvePanelParam } from "@nucleum/application/resource/panelParam.mixin";
+  import { resolvePanelParam } from "@nucleum/stores/resources/panelParam.mixin";
   import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import ObjectivePanelContentResolver from "./GoalPanelContentResolver.svelte";
   import ObjectiveLeftPanel from "./GoalLeftPanel.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import { getContext } from "svelte";
-  import { readable, type Writable } from "svelte/store";
+  import { get, readable, type Writable } from "svelte/store";
   import { Context } from "@nucleum/stores/appStore.type";
   import type { IContainer } from "@21n/layout/layout.type";
   import { resolveMinWidth } from "@21n/layout/layout.utils";
@@ -101,7 +101,7 @@
   async function initialize() {
     const editSearchParam = $page.url.searchParams.get(AppSearchParam.EDIT);
     const linkSearchParam = $page.url.searchParams.get(AppSearchParam.LINK);
-    const panel = resolvePanelParam(id, "Goal.svelte");
+    const panel = resolvePanelParam(id, get(page)?.url, "Goal.svelte");
     await objective.init(accessMode, {
       isInEditMode: editSearchParam === "true",
       linkSearchParam: linkSearchParam ?? undefined,

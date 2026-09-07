@@ -28,11 +28,11 @@
   import context from "@nucleum/stores/context.store";
   import NodePanelSwitcher from "./floatingBar/NodePanelSwitcher.svelte";
   import { fly } from "svelte/transition";
-  import { resolvePanelParam } from "@nucleum/application/resource/panelParam.mixin";
-  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import { resolvePanelParam } from "@nucleum/stores/resources/panelParam.mixin";
+  import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import { Context } from "@nucleum/stores/appStore.type";
   import { getContext } from "svelte";
-  import { readable, type Writable } from "svelte/store";
+  import { get, readable, type Writable } from "svelte/store";
   import type { IContainer } from "@21n/layout/layout.type";
   import { resolveMinWidth } from "@21n/layout/layout.utils";
   import { datafn } from "@nucleum/datafn/datafn.store";
@@ -86,7 +86,7 @@
   async function initialize(ctx?: string) {
     logger.log({ at: "Node.initialize", id, ctx });
     isLoading = true;
-    const panel = resolvePanelParam(id, "Node.svelte");
+    const panel = resolvePanelParam(id, get(page)?.url, "Node.svelte");
     const result = await node.init({
       accessMode,
       accessPoint: ResourceAccessPoint.SELF,

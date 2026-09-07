@@ -14,5 +14,9 @@
   "client/application/record/resource.actions.ts",
   "client/application/record/thumbnail/ResourceGridThumbnail.svelte",
   "client/application/record/thumbnail/ResourceThumbnailBase.svelte",
-  "client/application/record/thumbnail/ResourceThumbnailContextMenu.svelte"
+  "client/application/record/thumbnail/ResourceThumbnailContextMenu.svelte",
+  "client/application/resource/ResourcePanelSwitcher.svelte",
+  "client/application/resource/panelParam.mixin.ts",
+  "client/application/resource/panelSwitcher.mixin.ts",
+  "client/application/resource/resource-panel.type.ts"
 ]

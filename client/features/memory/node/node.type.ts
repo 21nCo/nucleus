@@ -23,7 +23,7 @@ import type { IBlockBody, IMarkdown } from "@nucleum/features/memory/markdown/md
 import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import type { IStore } from "@nucleum/datafn/observable-store.type";
-import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
 import type {
   ILink,
   ILinkBase,

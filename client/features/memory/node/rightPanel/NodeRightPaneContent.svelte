@@ -6,7 +6,7 @@
   import NodeHistoryPane from "@nucleum/features/memory/common/history/NodeHistoryPane.svelte";
   import NodeLinksPane from "@nucleum/features/memory/node/links/NodeLinksPane.svelte";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
-  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import NodeTracesPane from "@nucleum/features/memory/node/traces/NodeTracesPane.svelte";
   import NodeSidenotesPane from "@nucleum/features/memory/node/rightPanel/NodeSidenotesPane.svelte";
   import PropertiesPane from "@nucleum/features/collections/properties/PropertiesPane.svelte";

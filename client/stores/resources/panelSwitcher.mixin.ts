@@ -1,9 +1,9 @@
-import { appStore } from "@nucleum/stores/app.store";
-import { AppSearchParam } from "@nucleum/stores/appStore.type";
+import { requireResourcePanelHost } from "./resource-panel-host";
 import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
 
+/** Updates panel state and matching shell navigation before layout events. */
 export const PanelSwitcherMixin = {
   switchPanel(
     this: {
@@ -29,9 +29,7 @@ export const PanelSwitcherMixin = {
     }
 
     if (panel) {
-      appStore.toggleSearchParamRecordSpecific(state.id, {
-        [AppSearchParam.PANEL]: panel
-      });
+      requireResourcePanelHost().writePanel(state.id, panel);
     }
 
     this.update((x: any) => ({
