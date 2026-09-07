@@ -10,7 +10,7 @@
   import {
     TacoActions,
     TacoLocalAIOptions
-  } from "@nucleum/application/taco/worker.type";
+  } from "@nucleum/client/runtime/inference/worker.type";
   import { runVectorGeneration } from "@nucleum/products/memotron/taco/taco.store";
   import { appStore } from "@nucleum/stores/app.store";
   import { deleteItemsFromCache } from "@nucleum/products/memotron/taco/taco.utils";
@@ -21,7 +21,7 @@
   import context from "@nucleum/stores/context.store";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
-  import { Taco } from "@nucleum/application/taco/taco";
+  import { Taco } from "@nucleum/client/runtime/inference/taco";
   import { embedBridge } from "@nucleum/client/runtime/embed/embed.store";
   import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import Icon from "@21n/elements/Icon.svelte";

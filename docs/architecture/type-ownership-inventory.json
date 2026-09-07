@@ -1192,12 +1192,12 @@
     },
     {
       "path": "client/application/taco/taco.type.ts",
-      "disposition": "retained",
+      "disposition": "colocated",
       "destinations": [
-        "client/application/taco/taco.type.ts"
+        "client/runtime/inference/taco.type.ts"
       ],
       "ownership": "implementation-private",
-      "rationale": "Implementation-local or cohesive frontend owner; no independent domain abstraction is needed.",
+      "rationale": "Native inference protocol retains its own model identifiers and job status beside the runtime service.",
       "declarations": [
         "TranscriptionModel",
         "IJobStatus"
@@ -5412,10 +5412,10 @@
       "path": "client/products/memotron/taco/taco.types.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/application/taco/worker.type.ts"
+        "client/runtime/inference/worker.type.ts"
       ],
       "ownership": "implementation-private",
-      "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",
+      "rationale": "Worker command and model contracts are shared runtime protocols; serialized members remain unchanged and distinct from native model identifiers.",
       "declarations": [
         "TranscriptionModel",
         "TacoActions",
@@ -9564,12 +9564,12 @@
     },
     {
       "path": "client/utils/audio.utils.ts",
-      "disposition": "retained",
+      "disposition": "colocated",
       "destinations": [
-        "client/utils/audio.utils.ts"
+        "shared/utils/audio.utils.ts"
       ],
       "ownership": "implementation-private",
-      "rationale": "Implementation-local or cohesive frontend owner; no independent domain abstraction is needed.",
+      "rationale": "WAV serialization and WavConfig are portable shared utilities; browser decoding is owned separately by runtime/audio.",
       "declarations": [
         "WavConfig"
       ],

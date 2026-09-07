@@ -1,7 +1,7 @@
 import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
 import { get } from "svelte/store";
 import { NodeType } from "@nucleum/features/memory/node/node.type";
-import { TacoActions } from "@nucleum/application/taco/worker.type";
+import { TacoActions } from "@nucleum/client/runtime/inference/worker.type";
 import { tacoWorker } from "@nucleum/products/memotron/memotron.utils";
 import { Embed, OperatingSystem } from "@nucleum/client/runtime/context.type";
 import context from "@nucleum/stores/context.store";

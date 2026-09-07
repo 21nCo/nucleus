@@ -2,7 +2,7 @@ import type { AppSkin, Theme } from "@21n/theme/appearance.type";
 import type { TimeScale } from "@21n/utils/time.type";
 import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-import type { TranscriptionModel } from "@nucleum/application/taco/worker.type";
+import type { TranscriptionModel } from "@nucleum/client/runtime/inference/worker.type";
 
 export type IUserGlobalPreferences = {
   name: string;

@@ -10,7 +10,7 @@ import {
   getTimeZonesWithOffsets
 } from "@21n/utils/time.utils";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { TranscriptionModel } from "@nucleum/application/taco/worker.type";
+import { TranscriptionModel } from "@nucleum/client/runtime/inference/worker.type";
 import { tzStore } from "@nucleum/stores/preferences/timezone.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { get, writable } from "svelte/store";

@@ -2,12 +2,11 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import {
   clampAndConvertSample,
-  convertAudioBufferToWav,
   convertFloat32ArrayToWav,
-  convertWebMToWav,
   writeString,
   writeWavHeader
-} from "./audio.utils";
+} from "@21n/shared-utils/audio.utils";
+import { convertAudioBufferToWav, convertWebMToWav } from "@nucleum/client/runtime/audio/audio.utils";
 
 describe("client/utils/audio.utils", () => {
   let originalAudioContext: typeof AudioContext | undefined;

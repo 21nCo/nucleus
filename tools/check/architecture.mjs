@@ -191,8 +191,10 @@ for (const { from, to } of edges.filter(production)) {
   productionGraph.get(from).push(to);
 }
 for (const root of productionGraph.keys()) {
-  const isEmbedTransport = root.startsWith("client/runtime/embed/");
-  if (!isEmbedTransport && !root.startsWith("client/stores/overlays/"))
+  const isIsolatedRuntime = /^client\/runtime\/(embed|inference|audio)\//.test(
+    root
+  );
+  if (!isIsolatedRuntime && !root.startsWith("client/stores/overlays/"))
     continue;
   const pending = [...productionGraph.get(root)];
   const visited = new Set();
@@ -201,15 +203,15 @@ for (const root of productionGraph.keys()) {
     if (visited.has(target)) continue;
     visited.add(target);
     if (
-      isEmbedTransport
+      isIsolatedRuntime
         ? target.startsWith("client/") && !target.startsWith("client/runtime/")
         : /^client\/(application|features|products)\//.test(target)
     )
       violations.push({
         from: root,
         to: target,
-        reason: isEmbedTransport
-          ? "Embed transport transitively depends on frontend implementation"
+        reason: isIsolatedRuntime
+          ? "Runtime transport transitively depends on frontend implementation"
           : "Overlay state transitively depends on composition"
       });
     pending.push(...(productionGraph.get(target) ?? []));

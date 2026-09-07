@@ -2,9 +2,9 @@ import { logger } from "@nucleum/client/runtime/logging/logger";
 import { embedBridge } from "@nucleum/client/runtime/embed/embed.store";
 import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { generateMiniRandomId } from "@21n/shared-utils/crypto.utils";
-import { convertFloat32ArrayToWav } from "@21n/utils/audio.utils";
-import { TranscriptionModel } from "@nucleum/application/taco/worker.type";
-import type { IJobStatus } from "@nucleum/application/taco/taco.type";
+import { convertFloat32ArrayToWav } from "@21n/shared-utils/audio.utils";
+import { TranscriptionModel } from "@nucleum/client/runtime/inference/worker.type";
+import type { IJobStatus } from "@nucleum/client/runtime/inference/taco.type";
 
 export class Taco {
   private static instance: Taco;

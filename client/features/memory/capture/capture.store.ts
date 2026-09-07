@@ -86,7 +86,7 @@ import type { IBlock } from "@nucleum/features/memory/markdown/md.type";
 import { ActiveResourceStore } from "@nucleum/stores/resources/active-resource.store";
 import { embedBridge } from "@nucleum/client/runtime/embed/embed.store";
 import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
-import { convertWebMToWav } from "@21n/utils/audio.utils";
+import { convertWebMToWav } from "@nucleum/client/runtime/audio/audio.utils";
 import { TimeScaleUnit } from "@21n/utils/time.type";
 import { resolveCalendarNotesId } from "@nucleum/features/calendar/calendar.utils";
 import { getUtcSafeDay } from "@21n/elements/datetime/datetime.utils";

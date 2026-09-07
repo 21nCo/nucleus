@@ -6,7 +6,7 @@ import { Resource } from "@nucleum/datafn/resource.enum";
 import {
   TacoActions,
   TranscriptionModel
-} from "@nucleum/application/taco/worker.type";
+} from "@nucleum/client/runtime/inference/worker.type";
 
 env.allowLocalModels = false;
 // let call = 0;

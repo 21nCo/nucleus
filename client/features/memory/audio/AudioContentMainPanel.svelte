@@ -5,7 +5,7 @@
   import view from "@nucleum/stores/view.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { type IJobStatus } from "@nucleum/application/taco/taco.type";
+  import { type IJobStatus } from "@nucleum/client/runtime/inference/taco.type";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import TranscriptionWithTimestamps from "@nucleum/features/memory/audio/TranscriptionWithTimestamps.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
