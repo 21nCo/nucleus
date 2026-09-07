@@ -1071,7 +1071,7 @@
       "path": "client/application/record/resource.actions.ts",
       "disposition": "retained",
       "destinations": [
-        "client/application/record/resource.actions.ts"
+        "client/stores/resources/resource.actions.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Implementation-local or cohesive frontend owner; no independent domain abstraction is needed.",

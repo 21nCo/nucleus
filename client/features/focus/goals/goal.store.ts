@@ -13,7 +13,7 @@ import { ObjectiveStatus, ObjectiveType } from "@nucleum/features/focus/goals/go
 import { updateObjectiveParent } from "@nucleum/features/focus/goals/goal.utils";
 import { AccessMode, ResourceAccessPoint, type IResourceMutationParams } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
-import { ResourceActions } from "@nucleum/application/record/resource.actions";
+import { ResourceActions } from "@nucleum/stores/resources/resource.actions";
 import { ContextMenuType, type IContextMenu, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
 import { CollectibleStore } from "@nucleum/features/collections/collectible.store";
 import { activeSession } from "@nucleum/features/focus/session.store";

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolveTaskContextMenu } from "@nucleum/features/focus/tasks/task.store";
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { Size } from "@21n/elements/size.enum";
@@ -6,7 +7,7 @@
     AccessMode,
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
-  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceThumbnailBase from "@nucleum/components/records/ResourceThumbnailBase.svelte";
   import { compareDates, parseAndFormatDate } from "@21n/utils/time.utils";
   import TaskCheckbox from "@nucleum/features/focus/tasks/TaskCheckbox.svelte";
   import { hoverable } from "@nucleum/actions/hover.action";
@@ -18,7 +19,7 @@
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import ResourceThumbnailContextMenu from "@nucleum/application/record/thumbnail/ResourceThumbnailContextMenu.svelte";
+  import ResourceThumbnailContextMenu from "@nucleum/components/records/ResourceThumbnailContextMenu.svelte";
   import view from "@nucleum/stores/view.store";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
   import AbsoluteTimeRangePopoverV2 from "@21n/elements/datetime/absolute/AbsoluteTimeRangePopoverV2.svelte";
@@ -189,7 +190,9 @@
       isInlineContext ? AccessMode.INLINE : AccessMode.POP,
       {
         origin:
-          accessPoint === ResourceAccessPoint.OBJECTIVE ? accessPointId : undefined
+          accessPoint === ResourceAccessPoint.OBJECTIVE
+            ? accessPointId
+            : undefined
       }
     );
   }
@@ -211,6 +214,10 @@
 </script>
 
 <ResourceThumbnailBase
+  menuResolver={(record, point, params) =>
+    resolveTaskContextMenu(record, point, {
+      accessPointId: params.accessPointId
+    })}
   {item}
   {arrangement}
   {accessPoint}
@@ -260,7 +267,8 @@
   >
     <div
       class={cn("flex", {
-        "self-start": item.objective && accessPoint !== ResourceAccessPoint.OBJECTIVE,
+        "self-start":
+          item.objective && accessPoint !== ResourceAccessPoint.OBJECTIVE,
         "opacity-0": hasBulkSelection
       })}
     >
@@ -406,6 +414,10 @@
         />
       {/if}
       <ResourceThumbnailContextMenu
+        menuResolver={(record, point, params) =>
+          resolveTaskContextMenu(record, point, {
+            accessPointId: params.accessPointId
+          })}
         bind:item
         {accessPoint}
         {accessPointId}

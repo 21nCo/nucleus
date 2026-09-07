@@ -21,7 +21,7 @@ import {
 import { activeSession } from "@nucleum/features/focus/session.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
-import { BulkEditor } from "@nucleum/application/record/record.store";
+import { BulkEditor } from "@nucleum/stores/resources/bulk-editor";
 import { Product } from "@nucleum/client/config/product.type";
 
 class TaskActions {

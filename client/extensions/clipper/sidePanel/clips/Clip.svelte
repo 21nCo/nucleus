@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolveNodeContextMenu } from "@nucleum/features/memory/node/node.store";
   import {
     NodeType,
     type ITextClip,
@@ -29,10 +30,10 @@
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/elements/size.enum";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
-  import ResourceThumbnailContextMenu from "@nucleum/application/record/thumbnail/ResourceThumbnailContextMenu.svelte";
+  import ResourceThumbnailContextMenu from "@nucleum/components/records/ResourceThumbnailContextMenu.svelte";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import NodeTitle from "@nucleum/features/memory/node/title/NodeTitle.svelte";
   import { fly } from "svelte/transition";
 
@@ -208,7 +209,8 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
       message: "Synced!",
       type: AlertType.SUCCESS
     };
-    if (result.clip.propertyValues) clip.propertyValues = result.clip.propertyValues;
+    if (result.clip.propertyValues)
+      clip.propertyValues = result.clip.propertyValues;
   }
 
   async function onLabelChanges(label: string) {
@@ -323,6 +325,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
             {/if}
           {/if}
           <ResourceThumbnailContextMenu
+            menuResolver={resolveNodeContextMenu}
             item={clip}
             arrangement={Arrangement.GRID}
             isInline={true}

@@ -1,12 +1,19 @@
-import { appStore } from "@nucleum/stores/app.store";
+import { requireResourceActionHost } from "./resource-action-host";
 import {
   copyActiveResourceContents,
   updateActiveResource
 } from "@nucleum/stores/resources/active-resource.store";
 import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
-import { copyResourceLinkToClipboard } from "@nucleum/application/record/resource-link.utils";
 import { LinkType } from "@nucleum/features/memory/linking/link.type";
-import { ResourceAccessPoint, AccessMode, type IActiveResource, type IResource, type IResourceArchivable, type IResourceLockable, type IResourceStarrable } from "@nucleum/datafn/resource.type";
+import {
+  ResourceAccessPoint,
+  AccessMode,
+  type IActiveResource,
+  type IResource,
+  type IResourceArchivable,
+  type IResourceLockable,
+  type IResourceStarrable
+} from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import {
@@ -18,15 +25,16 @@ import {
   resolveResourceActionIcon,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import { ContextMenuType, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
+import {
+  ContextMenuType,
+  type IContextMenuItem
+} from "@21n/elements/contextMenu/context-menu.type";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { toasts } from "@nucleum/stores/notification.store";
-import { Action } from "@nucleum/application/commandBar/action.enum";
 import { AppSearchParam } from "@nucleum/stores/appStore.type";
 import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
-import { BulkEditor } from "@nucleum/application/record/record.store";
+import { BulkEditor } from "@nucleum/stores/resources/bulk-editor";
 import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
 
@@ -91,7 +99,7 @@ export class ResourceActions<T extends IActionableResource> {
       value: ResourceActionType.COPY_LINK,
       icon: resolveResourceActionIcon(ResourceActionType.COPY_LINK),
       callback: async () => {
-        copyResourceLinkToClipboard(this.resource.id);
+        requireResourceActionHost().copyLink(this.resource.id);
         toasts.success("Link copied to clipboard");
       }
     };
@@ -268,7 +276,7 @@ export class ResourceActions<T extends IActionableResource> {
       icon: this.resource.isInEditMode ? "exit-edit" : "edit",
       callback: async () => {
         if (context != ResourceAccessPoint.SELF) {
-          appStore.openResource(
+          requireResourceActionHost().open(
             this.resource.id,
             context === ResourceAccessPoint.BROWSER
               ? AccessMode.INLINE
@@ -342,9 +350,9 @@ export class ResourceActions<T extends IActionableResource> {
       icon: isAlreadyPinned ? "minus-circle" : "tabs",
       callback: async () => {
         if (isAlreadyPinned) {
-          tabs.remove(this.resource.id);
+          requireResourceActionHost().removeTab(this.resource.id);
         } else {
-          tabs.open(this.resource.id);
+          requireResourceActionHost().openTab(this.resource.id);
         }
       }
     };
@@ -357,7 +365,7 @@ export class ResourceActions<T extends IActionableResource> {
       value: "open-as-split",
       icon: "split-screen",
       callback: async () => {
-        appStore.openResource(this.resource.id, AccessMode.SPLIT);
+        requireResourceActionHost().open(this.resource.id, AccessMode.SPLIT);
       }
     };
   }
@@ -372,12 +380,12 @@ export class ResourceActions<T extends IActionableResource> {
       icon: currentMode === AccessMode.SPLIT ? "minus-circle" : "split-screen",
       callback: async () => {
         if (currentMode === AccessMode.SPLIT) {
-          appStore.closeResource({
+          requireResourceActionHost().close({
             id: this.resource.id,
             accessMode: AccessMode.SPLIT
           });
         } else {
-          appStore.openResource(this.resource.id, AccessMode.SPLIT);
+          requireResourceActionHost().open(this.resource.id, AccessMode.SPLIT);
         }
       }
     };
@@ -392,7 +400,7 @@ export class ResourceActions<T extends IActionableResource> {
       label: maxSearchParam ? "Minimize" : "Maximize",
       icon: maxSearchParam ? "exitfullscreen" : "fullscreen",
       callback: async () => {
-        appStore.toggleFullScreen(currentMode, this.resource.id);
+        requireResourceActionHost().maximize(currentMode, this.resource.id);
       }
     };
   }
@@ -455,10 +463,8 @@ export class ResourceActions<T extends IActionableResource> {
       value: ResourceActionType.LINK,
       icon: resolveResourceActionIcon(ResourceActionType.LINK),
       callback: async () => {
-        appStore.runAction(Action.BULK_LINK, {
-          componentParams: {
-            items: [this.resource.id]
-          }
+        requireResourceActionHost().requestLink({
+          items: [this.resource.id]
         });
       }
     };
@@ -469,12 +475,10 @@ export class ResourceActions<T extends IActionableResource> {
       value: "addToCollection",
       icon: resolveResourceActionIcon(ResourceActionType.ADD_TO),
       callback: async () => {
-        appStore.runAction(Action.BULK_LINK, {
-          componentParams: {
-            label: "Add to collection",
-            resource: Resource.collection,
-            items: [this.resource.id]
-          }
+        requireResourceActionHost().requestLink({
+          label: "Add to collection",
+          resource: Resource.collection,
+          items: [this.resource.id]
         });
       }
     };

@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { resolveObjectiveContextMenu } from "@nucleum/features/focus/goals/goal.store";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { Size } from "@21n/elements/size.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import ResourceGridThumbnail from "@nucleum/components/records/ResourceGridThumbnail.svelte";
-  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceThumbnailBase from "@nucleum/components/records/ResourceThumbnailBase.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { type IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
@@ -59,6 +60,7 @@
 </script>
 
 <ResourceThumbnailBase
+  menuResolver={(record, point) => resolveObjectiveContextMenu(record, point)}
   bind:item
   {accessPoint}
   {accessPointId}
@@ -123,7 +125,11 @@
           <div class="flex flex-col w-full min-h-12">
             <div class="flex flex-col gap-2">
               <ObjectiveThumbnailTitle {item} {isCurrentlyFocusing} {color} />
-              <ObjectiveThumbnailSub {item} {isCurrentlyFocusing} {accessPoint} />
+              <ObjectiveThumbnailSub
+                {item}
+                {isCurrentlyFocusing}
+                {accessPoint}
+              />
               {#if visibleProps.length > 0}
                 <CollectionItemThumbnailProperties
                   values={item.propertyValues}

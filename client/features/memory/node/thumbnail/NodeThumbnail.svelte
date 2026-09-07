@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolveNodeContextMenu } from "@nucleum/features/memory/node/node.store";
   import type { Snippet } from "svelte";
   import { Arrangement } from "@21n/elements/direction.enum";
   import {
@@ -17,7 +18,7 @@
     resolveUrlPreview
   } from "@nucleum/features/memory/node/node.utils";
   import ResourceGridThumbnail from "@nucleum/components/records/ResourceGridThumbnail.svelte";
-  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceThumbnailBase from "@nucleum/components/records/ResourceThumbnailBase.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
@@ -200,6 +201,7 @@
 </script>
 
 <ResourceThumbnailBase
+  menuResolver={resolveNodeContextMenu}
   {item}
   {accessPoint}
   {accessPointId}

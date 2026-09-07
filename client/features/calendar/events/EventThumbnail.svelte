@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceThumbnailBase from "@nucleum/components/records/ResourceThumbnailBase.svelte";
   import type { ICalendarEvent } from "@nucleum/features/calendar/events/event.type";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Arrangement } from "@21n/elements/direction.enum";
@@ -31,7 +31,13 @@
   );
 </script>
 
-<ResourceThumbnailBase {item} {accessPoint} {arrangement} {onClick}>
+<ResourceThumbnailBase
+  menuResolver={() => []}
+  {item}
+  {accessPoint}
+  {arrangement}
+  {onClick}
+>
   <div class="flex flex-col gap-1 min-w-0 w-full">
     <div class="text-b2 text-fgs1 truncate">
       {item.label ?? item.event ?? "Untitled event"}

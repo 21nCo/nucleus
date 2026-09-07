@@ -4,7 +4,7 @@
   import TaskRecords from "@nucleum/features/focus/tasks/TaskRecords.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { BulkEditor } from "@nucleum/application/record/record.store";
+  import { BulkEditor } from "@nucleum/stores/resources/bulk-editor";
   import { appStore } from "@nucleum/stores/app.store";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { toasts } from "@nucleum/stores/notification.store";

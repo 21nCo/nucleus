@@ -1,14 +1,12 @@
+import { requireResourceActionHost } from "./resource-action-host";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { type IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { toasts } from "@nucleum/stores/notification.store";
-import { onNodeArchive, onNodeTrash, onNodeUnarchive } from "@nucleum/features/memory/node/node.store";
 import type { BulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
-import { appStore } from "@nucleum/stores/app.store";
 import { determineResourceType } from "@nucleum/datafn/resource.utils";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import type { NucleumDatafnResource } from "@nucleum/schema";
-import { Action } from "@nucleum/application/commandBar/action.enum";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
 import { LinkType } from "@nucleum/features/memory/linking/link.type";
 import { assertDatafnMutationSucceeded } from "@nucleum/datafn/mutation.utils";
@@ -117,29 +115,23 @@ export class BulkEditor {
             onSuccess(action, items.length, Resource.node);
             break;
           case "link":
-            appStore.runAction(Action.BULK_LINK, {
-              componentParams: {
-                label: "Link to a node",
-                resource: Resource.node,
-                multiSelectStore: this.multiSelectStore
-              }
+            requireResourceActionHost().requestLink({
+              label: "Link to a node",
+              resource: Resource.node,
+              multiSelectStore: this.multiSelectStore
             });
             break;
           case "linkbox":
-            appStore.runAction(Action.BULK_LINK, {
-              componentParams: {
-                label: "Link to a node or add to a collection",
-                multiSelectStore: this.multiSelectStore
-              }
+            requireResourceActionHost().requestLink({
+              label: "Link to a node or add to a collection",
+              multiSelectStore: this.multiSelectStore
             });
             break;
           case "collect":
-            appStore.runAction(Action.BULK_LINK, {
-              componentParams: {
-                label: "Add to collection",
-                resource: Resource.collection,
-                multiSelectStore: this.multiSelectStore
-              }
+            requireResourceActionHost().requestLink({
+              label: "Add to collection",
+              resource: Resource.collection,
+              multiSelectStore: this.multiSelectStore
             });
             break;
           case "star":
@@ -152,17 +144,23 @@ export class BulkEditor {
             break;
           case "archive":
             await bulkMerge(Resource.node, { isArchived: true });
-            await onNodeArchive(items);
+            await requireResourceActionHost().afterNodeMutation(
+              "archive",
+              items
+            );
             onSuccess(action, items.length, Resource.node);
             break;
           case "unarchive":
             await bulkMerge(Resource.node, { isArchived: false });
-            await onNodeUnarchive(items);
+            await requireResourceActionHost().afterNodeMutation(
+              "unarchive",
+              items
+            );
             onSuccess(action, items.length, Resource.node);
             break;
           case "delete":
             await bulkTrash(Resource.node);
-            await onNodeTrash(items);
+            await requireResourceActionHost().afterNodeMutation("trash", items);
             onSuccess(action, items.length, Resource.node);
             break;
         }

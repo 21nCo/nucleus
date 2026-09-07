@@ -110,3 +110,21 @@ Reusable modal header/footer/padding and popup props live in `client/elements/mo
 Phase validation: all four product compilers passed with zero errors (379/302/308/0 warnings); 285 unit tests passed, 3 skipped, including eight new overlay/resource-query tests. Existing test modifications are import/mock/filesystem-path updates only. Focus start, reload/fullscreen, interval-boundary and delivered-reset probes passed; Markdown visible edit, persisted content and post-reload verification passed. The share extension production build passed. Architecture checks, transitive/retired-path negative controls, unchanged-enum comparison (199 enums), no-fixed-waits, Turbo build graph and Playwright discovery (549 tests, 55 files) passed. Full cross-product Playwright and cloud integration were not run.
 
 Direct feature-to-application imports decreased from 165 to 84. The public feature registry has 156 entries after exposing the shared file limit. Remaining imports include application-composed records/thumbnails, mutation/action dispatch, panel navigation, shortcuts and transcription integration; broader helper/store cycles and public-API reduction remain parent-issue work. This phase does not claim completion of TIDY-477.
+
+
+## Resource action host phase
+
+- [x] Remove application navigation and node-store imports from shared resource menu/bulk actions through an explicit host contract.
+- [x] Preserve mutations, lifecycle hook ordering, menu labels and selection context.
+- [x] Update callers and authorized mock/import paths without compatibility exports.
+- [x] Add host/lifecycle tests, enforce the boundary, and validate product/browser workflows.
+
+- [x] Move reusable thumbnail presentation to shared components and supply menus from the owning capability.
+
+ResourceActions and BulkEditor now live in `client/stores/resources`. The composing appStore supplies ResourceActionHost for navigation, tabs, link dialogs, clipboard links and awaited node lifecycle hooks. This removes the ResourceActions -> BulkEditor -> node.store -> ResourceActions dependency cycle. Thumbnail presentation no longer imports resource stores to choose menus: node, collection, objective and task callers supply their resolver with the same access-point parameters. Unsupported event and combination menus remain empty.
+
+The architecture check rejects application/product dependencies and feature implementations in these resource action modules; the existing pure LinkType contract remains explicitly permitted. Shared thumbnail components use the generic-component boundary. Four retired application paths are blocked. This enforces direct dependencies for resource actions, not transitive isolation of all existing shared utilities and stores.
+
+Validation: all four product compilers passed with zero errors (379/302/308/0 warnings). The repository unit suite passed 293 tests, with 3 skipped; eight new host-contract tests cover edit navigation, dialog payloads, awaited mutation/lifecycle ordering, failure retention and bulk selection. The existing resource-action test changed only two import/mock paths. Focus start, reload/fullscreen, interval-boundary and delivered-reset probes passed, as did Markdown edit/persistence/reload and a fresh-context thumbnail star/immediate-menu/reload-menu probe; no page errors. The share-extension build passed. Architecture (2,005 files, 10,632 imports), negative controls, all 383 type dispositions and 199 unchanged enum invariants, fixed-wait check, Turbo build graph and Playwright discovery (549 tests in 55 files) passed. Full cross-product Playwright and cloud integration were not run.
+
+Direct feature-to-application imports decreased from 84 to 69. Public feature entries remain 156. Application-composed record lists, panel navigation, modal composition, action enums, shortcuts, transcription and broader helper/store cycles remain, along with package dependency alignment, public-API reduction and broader regression coverage. TIDY-477 remains In Progress.

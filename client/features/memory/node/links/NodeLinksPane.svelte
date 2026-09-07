@@ -24,12 +24,12 @@
     resourceInList,
     isSameResource
   } from "@nucleum/datafn/resource.utils";
-  import { BulkEditor } from "@nucleum/application/record/record.store";
-import { resolveResource } from "@nucleum/datafn/resource-query.utils";
+  import { BulkEditor } from "@nucleum/stores/resources/bulk-editor";
+  import { resolveResource } from "@nucleum/datafn/resource-query.utils";
   import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import { toasts } from "@nucleum/stores/notification.store";
   import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
-import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
+  import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
   import { ResourceError } from "@nucleum/datafn/resource-error";
   import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import Tag from "@21n/elements/text/Tag.svelte";
@@ -324,7 +324,9 @@ import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
         links: [
           {
             linkType: LinkType.DIRECT,
-            id: result ? `${linkSource}|${e.detail.item.id}|${LinkType.DIRECT}` : ""
+            id: result
+              ? `${linkSource}|${e.detail.item.id}|${LinkType.DIRECT}`
+              : ""
           }
         ]
       };

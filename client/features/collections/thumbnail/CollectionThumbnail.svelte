@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolveCollectionContextMenu } from "@nucleum/features/collections/collection.store";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { type ICollectionThumb } from "@nucleum/features/collections/collection.type";
   import ResourceGridThumbnail from "@nucleum/components/records/ResourceGridThumbnail.svelte";
@@ -8,7 +9,7 @@
     ResourceAccessPoint,
     ResourceAccessPointState
   } from "@nucleum/datafn/resource.type";
-  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceThumbnailBase from "@nucleum/components/records/ResourceThumbnailBase.svelte";
   import CollectionThumbnailLabelRow from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabelRow.svelte";
   import ResourceThumbnailContentTypeOverlay from "@nucleum/application/record/thumbnail/ResourceThumbnailContentTypeOverlay.svelte";
   import CollectionPropertyCount from "@nucleum/features/collections/counts/CollectionPropertyCount.svelte";
@@ -40,7 +41,12 @@
 </script>
 
 {#if item}
-  <ResourceThumbnailBase {item} {accessPoint} {arrangement}>
+  <ResourceThumbnailBase
+    menuResolver={resolveCollectionContextMenu}
+    {item}
+    {accessPoint}
+    {arrangement}
+  >
     {#if arrangement === Arrangement.LIST}
       <button
         class="flex items-center h-16 gap-3 w-full rounded-md bg-bgs2 border border-transparent hover:border-bgs2 p-3"

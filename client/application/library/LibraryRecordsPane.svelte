@@ -6,9 +6,13 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { AccessMode, ResourceAccessPoint, ResourceAccessPointState } from "@nucleum/datafn/resource.type";
-import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
-  import { BulkEditor } from "@nucleum/application/record/record.store";
+  import {
+    AccessMode,
+    ResourceAccessPoint,
+    ResourceAccessPointState
+  } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+  import { BulkEditor } from "@nucleum/stores/resources/bulk-editor";
   import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
 
   import LibrarySearchBox from "@nucleum/application/library/LibrarySearchBox.svelte";

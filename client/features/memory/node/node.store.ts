@@ -19,7 +19,7 @@ import {
 } from "@21n/utils/utils";
 import { AccessMode, ResourceAccessPoint, type IResourceMutationParams } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
-import { ResourceActions } from "@nucleum/application/record/resource.actions";
+import { ResourceActions } from "@nucleum/stores/resources/resource.actions";
 import { get, writable } from "svelte/store";
 import { ContextMenuType, type IContextMenu, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";

@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { onDestroy, onMount } from "svelte";
-  import { BulkEditor } from "@nucleum/application/record/record.store";
+  import { BulkEditor } from "@nucleum/stores/resources/bulk-editor";
   import {
     TaskDueDateFilter,
     TaskSubTypeForSwitcher,

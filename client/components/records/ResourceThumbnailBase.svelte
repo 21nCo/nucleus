@@ -16,10 +16,12 @@
   import { Arrangement } from "@21n/elements/direction.enum";
   import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import ResourceThumbnailContextMenu from "@nucleum/application/record/thumbnail/ResourceThumbnailContextMenu.svelte";
+  import ResourceThumbnailContextMenu from "@nucleum/components/records/ResourceThumbnailContextMenu.svelte";
   import { stringify } from "@21n/shared-utils/json.utils";
 
+  import type { ResourceContextMenuResolver } from "./context-menu.type";
   let {
+    menuResolver,
     isHovering = $bindable(false),
     item: itemProp = $bindable(),
     isDraggable = false,
@@ -38,6 +40,7 @@
   }: {
     isHovering?: boolean;
     item: any;
+    menuResolver: ResourceContextMenuResolver;
     isDraggable?: boolean;
     accessPoint?: ResourceAccessPoint;
     accessPointContext?: string | undefined;
@@ -173,6 +176,7 @@
   {/if}
   {#if shouldRenderContextMenu}
     <ResourceThumbnailContextMenu
+      {menuResolver}
       bind:item
       bind:isPopoverVisible={isContextMenuVisible}
       {accessPoint}

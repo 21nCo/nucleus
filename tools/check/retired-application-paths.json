@@ -10,5 +10,9 @@
   "client/application/record/RecordTrashBanner.svelte",
   "client/application/record/active-resource.store.ts",
   "client/application/record/bulkedit.store.ts",
-  "client/application/record/thumbnail/ResourceGridThumbnail.svelte"
+  "client/application/record/record.store.ts",
+  "client/application/record/resource.actions.ts",
+  "client/application/record/thumbnail/ResourceGridThumbnail.svelte",
+  "client/application/record/thumbnail/ResourceThumbnailBase.svelte",
+  "client/application/record/thumbnail/ResourceThumbnailContextMenu.svelte"
 ]

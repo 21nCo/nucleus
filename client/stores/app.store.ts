@@ -7,10 +7,16 @@ import blankJson from "@nucleum/client/config/blank.json";
 import colorSchemes from "@21n/theme/colorschemes.json";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { shuffleEmojis } from "@21n/elements/avatarPicker/avatars";
-import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
+import {
+  ActionType,
+  type IAction
+} from "@nucleum/application/commandBar/action.type";
 import { IdentityProvider } from "@nucleum/client/runtime/account/oauth.type";
 import { dispatchCustomEvent, goto } from "@21n/utils/browser.utils";
-import { persistLocally, getDapId } from "@nucleum/persistence/persistence.utils";
+import {
+  persistLocally,
+  getDapId
+} from "@nucleum/persistence/persistence.utils";
 import { postDataToParent } from "@21n/utils/embed.utils";
 import modalEvent, {
   configureOverlayHost
@@ -26,7 +32,10 @@ import { AccessMode } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
 import { Action } from "@nucleum/application/commandBar/action.enum";
-import { GlobalEvent, type Event } from "@nucleum/stores/notifications/event.enum";
+import {
+  GlobalEvent,
+  type Event
+} from "@nucleum/stores/notifications/event.enum";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { Size } from "@21n/elements/size.enum";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
@@ -40,6 +49,8 @@ import { Product } from "@nucleum/client/config/product.type";
 import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
 import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
+import { configureResourceActionHost } from "@nucleum/stores/resources/resource-action-host";
+import { copyResourceLinkToClipboard } from "@nucleum/application/record/resource-link.utils";
 
 // export const app = writable<{ product: string; env: string }>({
 //   product: "tidy",
@@ -1022,6 +1033,23 @@ configureOverlayHost({
   closeFullscreen: () => appStore.toggleSearchParam([AccessMode.FULL]),
   resolvePlayer: (path) =>
     appStore.resolveComponentFromPath(path)?.associatedPlayer
+});
+
+configureResourceActionHost({
+  copyLink: copyResourceLinkToClipboard,
+  open: (id, mode, options) => appStore.openResource(id, mode, options),
+  close: (options) => appStore.closeResource(options),
+  maximize: (mode, id) => appStore.toggleFullScreen(mode, id),
+  openTab: (id) => tabs.open(id),
+  removeTab: (id) => tabs.remove(id),
+  requestLink: (options) =>
+    appStore.runAction(Action.BULK_LINK, { componentParams: options }),
+  afterNodeMutation: async (action, ids) => {
+    const lifecycle = await import("@nucleum/features/memory/node/node.store");
+    if (action === "archive") return lifecycle.onNodeArchive(ids);
+    if (action === "unarchive") return lifecycle.onNodeUnarchive(ids);
+    return lifecycle.onNodeTrash(ids);
+  }
 });
 
 export const isInEditMode = initEditModeStore();

@@ -2,7 +2,7 @@
   import AvatarRenderer from "@nucleum/client/elements/avatarPicker/AvatarRenderer.svelte";
   import Icon from "@nucleum/client/elements/Icon.svelte";
   import ResourceGridThumbnail from "@nucleum/components/records/ResourceGridThumbnail.svelte";
-  import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
+  import ResourceThumbnailBase from "@nucleum/components/records/ResourceThumbnailBase.svelte";
   import {
     ResourceAccessPoint,
     ResourceAccessPointState
@@ -36,7 +36,12 @@
     `${count} ${noun}${count === 1 ? "" : "s"}`;
 </script>
 
-<ResourceThumbnailBase {item} {accessPoint} {arrangement}>
+<ResourceThumbnailBase
+  menuResolver={() => []}
+  {item}
+  {accessPoint}
+  {arrangement}
+>
   {#if arrangement === Arrangement.LIST}
     <button
       class="flex items-center gap-3 w-full h-20 rounded-md bg-bgs2 border border-transparent hover:border-bgs3 p-3 text-left"

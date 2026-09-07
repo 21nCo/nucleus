@@ -34,7 +34,7 @@ vi.mock("@nucleum/stores/resources/bulkedit.store", () => ({
   }
 }));
 
-vi.mock("@nucleum/application/record/record.store", () => ({
+vi.mock("@nucleum/stores/resources/bulk-editor", () => ({
   BulkEditor: class {
     run = vi.fn();
   }
@@ -69,7 +69,7 @@ vi.mock("@nucleum/datafn/datafn.store", () => ({
   }
 }));
 
-import { ResourceActions } from "@nucleum/application/record/resource.actions";
+import { ResourceActions } from "@nucleum/stores/resources/resource.actions";
 
 describe("ResourceActions", () => {
   beforeEach(() => {

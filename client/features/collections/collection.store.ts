@@ -13,7 +13,7 @@ import {
 import { propertyEditorStore } from "@nucleum/features/collections/properties/property.store";
 import { AccessMode, ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
-import { ResourceActions } from "@nucleum/application/record/resource.actions";
+import { ResourceActions } from "@nucleum/stores/resources/resource.actions";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";

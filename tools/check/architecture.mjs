@@ -161,6 +161,15 @@ const violations = edges.filter(production).filter(({ from, to }) => {
   )
     return true;
   if (
+    /^client\/stores\/resources\/(resource\.actions|bulk-editor|resource-action-host)\.ts$/.test(
+      from
+    ) &&
+    (/^client\/(application|products)\//.test(to) ||
+      (to.startsWith("client/features/") &&
+        to !== "client/features/memory/linking/link.type.ts"))
+  )
+    return true;
+  if (
     from === "client/features/focus/composition.utils.ts" &&
     to === "client/features/focus/session.store.ts"
   )

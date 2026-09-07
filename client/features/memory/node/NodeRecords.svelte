@@ -19,7 +19,7 @@
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
-  import { BulkEditor } from "@nucleum/application/record/record.store";
+  import { BulkEditor } from "@nucleum/stores/resources/bulk-editor";
   import { toasts } from "@nucleum/stores/notification.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { resolveFilePreview } from "@nucleum/features/memory/node/node.utils";
