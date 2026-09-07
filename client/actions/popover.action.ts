@@ -411,6 +411,20 @@ export function popover(node: HTMLElement, params: PopoverParams) {
     }
   }
 
+  function isHoverOnlyTrigger() {
+    return (
+      triggerMethod.includes(PopoverTriggerMethod.HOVER) &&
+      !triggerMethod.includes(PopoverTriggerMethod.CLICK) &&
+      !triggerMethod.includes(PopoverTriggerMethod.RIGHT_CLICK)
+    );
+  }
+
+  function hideHoverOnlyPopoverOnTriggerClick() {
+    if (isHoverOnlyTrigger() && (isShown || popoverElement)) {
+      hidePopover("trigger click");
+    }
+  }
+
   async function createPopover(): Promise<void> {
     popoverElement = document.createElement("div");
     if (isRenderAsModalForCW && window.innerWidth < 800) {
@@ -419,6 +433,9 @@ export function popover(node: HTMLElement, params: PopoverParams) {
     } else {
       popoverElement.className =
         "fixed shadow-lg rounded-md overflow-hidden popover";
+    }
+    if (isHoverOnlyTrigger()) {
+      popoverElement.classList.add("pointer-events-none");
     }
     popoverElement.style.zIndex = "50";
     popoverElement.id = id;
@@ -913,6 +930,9 @@ export function popover(node: HTMLElement, params: PopoverParams) {
     if (triggerMethod.includes(PopoverTriggerMethod.RIGHT_CLICK)) {
       node.addEventListener("contextmenu", handleTrigger);
     }
+    if (isHoverOnlyTrigger()) {
+      node.addEventListener("click", hideHoverOnlyPopoverOnTriggerClick);
+    }
     node.addEventListener("hide", hidePopover);
     node.addEventListener("show", showPopover);
 
@@ -945,6 +965,7 @@ export function popover(node: HTMLElement, params: PopoverParams) {
     if (triggerMethod.includes(PopoverTriggerMethod.RIGHT_CLICK)) {
       node.removeEventListener("contextmenu", handleTrigger);
     }
+    node.removeEventListener("click", hideHoverOnlyPopoverOnTriggerClick);
     node.removeEventListener("hide", hidePopover);
     node.removeEventListener("show", showPopover);
 

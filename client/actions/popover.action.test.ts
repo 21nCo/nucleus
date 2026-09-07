@@ -53,4 +53,53 @@ describe("client/actions/popover.action", () => {
     first.destroy();
     second.destroy();
   });
+
+  it("lets hover-only tooltips ignore pointer events and hide on trigger click", async () => {
+    const trigger = document.createElement("button");
+    document.body.append(trigger);
+
+    const action = popover(trigger, {
+      id: "hover-only-tooltip",
+      content: "Open focus",
+      triggerMethod: [PopoverTriggerMethod.HOVER]
+    });
+
+    trigger.dispatchEvent(new MouseEvent("mouseenter", { bubbles: true }));
+    const tooltip = await vi.waitFor(() => {
+      const el = document.querySelector(".popover");
+      expect(el).toBeTruthy();
+      return el;
+    });
+    expect(tooltip?.classList.contains("pointer-events-none")).toBe(true);
+    await Promise.resolve();
+    await Promise.resolve();
+
+    trigger.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    await vi.waitFor(() => {
+      expect(document.querySelector(".popover")).toBeNull();
+    });
+
+    action.destroy();
+  });
+
+  it("keeps pointer events on click-triggered popovers", async () => {
+    const trigger = document.createElement("button");
+    document.body.append(trigger);
+
+    const action = popover(trigger, {
+      id: "click-popover",
+      content: "menu",
+      triggerMethod: [PopoverTriggerMethod.CLICK]
+    });
+
+    trigger.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    await vi.waitFor(() => {
+      expect(document.querySelector(".popover")).toBeTruthy();
+    });
+    expect(
+      document.querySelector(".popover")?.classList.contains("pointer-events-none")
+    ).toBe(false);
+
+    action.destroy();
+  });
 });
