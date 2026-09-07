@@ -21,7 +21,7 @@
   import type { ModalEvent, ModalParams } from "@21n/elements/modal/popup.type";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import type { IEvent } from "@21n/elements/input/event.type";
-  import { postDataToParent } from "@21n/utils/embed.utils";
+  import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import ToastNotification from "@21n/elements/feedback/ToastNotification.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import ModalLayout from "@nucleum/application/modal/ModalLayout.svelte";
@@ -37,7 +37,7 @@
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
   import ConfirmationNotification from "@nucleum/application/notifications/ConfirmationNotification.svelte";
-  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   let modals = $state<ModalEvent[]>([]);
   let isShowAppearancePreview = $state(false);
   let fullscreen = $state<string | undefined>(undefined);

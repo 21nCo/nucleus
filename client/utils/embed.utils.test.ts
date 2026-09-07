@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { EmbedDataMessage, EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+import { EmbedDataMessage, EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 
 import {
   haptic,
@@ -11,7 +11,7 @@ import {
   postNotificationToParent,
   postTokenToExtension,
   setEmbedBg
-} from "./embed.utils";
+} from "@nucleum/client/runtime/embed/embed.utils";
 
 const mockedModules = vi.hoisted(() => ({
   logger: {

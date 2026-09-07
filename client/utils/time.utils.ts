@@ -571,10 +571,6 @@ export function formatDateRelativeToToday(date: UserDate | Date | number) {
   }
 }
 
-export function wait(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 //generate doc string
 /**
  * Increments a date time by a number of hours

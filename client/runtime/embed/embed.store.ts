@@ -1,10 +1,10 @@
 import {
   EmbedDataMessage,
   type EmbedMessage
-} from "@nucleum/application/embed/embedMessage.enum";
-import { postDataToParent } from "@21n/utils/embed.utils";
-import { wait } from "@21n/utils/time.utils";
-import type { IEmbedChannel } from "@nucleum/application/embed/embed.type";
+} from "@nucleum/client/runtime/embed/embedMessage.enum";
+import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
+import { wait } from "@21n/shared-utils/wait";
+import type { IEmbedChannel } from "@nucleum/client/runtime/embed/embed.type";
 import { get, writable } from "svelte/store";
 
 const subject = writable<IEmbedChannel>({});

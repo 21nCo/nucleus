@@ -6,8 +6,8 @@
   import view from "@nucleum/stores/view.store";
   import SessionLogPage from "@nucleum/features/focus/logs/logPage/SessionLogPage.svelte";
   import BackButton from "@21n/elements/button/BackButton.svelte";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import LogThumbnailItem from "@nucleum/features/focus/logs/LogThumbnailItem.svelte";

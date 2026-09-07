@@ -1,8 +1,8 @@
 <script lang="ts">
   import NotificationListener from "@21n/elements/listeners/NotificationListener.svelte";
-  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
-  import { postDataToParent } from "@21n/utils/embed.utils";
+  import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import { onMount } from "svelte";
   let {
     bg = undefined,

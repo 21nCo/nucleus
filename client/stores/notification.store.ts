@@ -6,8 +6,8 @@ import {
   type Toast,
   type InlineToast
 } from "@nucleum/stores/notifications/notification.type";
-import { postMessageToParent } from "@21n/utils/embed.utils";
-import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import type { IEvent } from "@21n/elements/input/event.type";
 import type { Event } from "@nucleum/stores/notifications/event.enum";

@@ -18,7 +18,7 @@
   import { CollectionType } from "@nucleum/features/collections/collection.type";
   import { tick } from "svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { haptic } from "@21n/utils/embed.utils";
+  import { haptic } from "@nucleum/client/runtime/embed/embed.utils";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
 
   let {

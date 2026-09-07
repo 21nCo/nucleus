@@ -12,7 +12,7 @@
   import view from "@nucleum/stores/view.store";
   import { ButtonVariant } from "@21n/elements/button/button.type";
   import { Embed } from "@nucleum/client/runtime/context.type";
-  import { wait } from "@21n/utils/time.utils";
+  import { wait } from "@21n/shared-utils/wait";
   import { MAX_FILE_SIZE_MB } from "@nucleum/features/files/file.constants";
   import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";

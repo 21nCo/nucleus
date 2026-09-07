@@ -13,7 +13,7 @@
     OperatingSystem,
     type IAppContext
   } from "@nucleum/client/runtime/context.type";
-  import { pingParent, postDataToParent } from "@21n/utils/embed.utils";
+  import { pingParent, postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import account from "@nucleum/stores/account.store";
   import { appStore, currentTime } from "@nucleum/stores/app.store";
   import { toasts } from "@nucleum/stores/notification.store";
@@ -33,7 +33,7 @@
   import dynamicProductData from "$lib/product.json";
   import { getSettingsAsModal } from "@21n/layout/settingsActionMap";
   import { globalActions } from "@nucleum/stores/actionMap";
-  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { updateNucleumDatafnConnectivity } from "@nucleum/datafn/datafn.store";
   import { parse } from "@21n/shared-utils/json.utils";
   import { productData } from "@nucleum/products/product.resolver";

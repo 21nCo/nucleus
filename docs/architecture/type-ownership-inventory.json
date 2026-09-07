@@ -874,7 +874,7 @@
       "path": "client/application/embed/embed.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/application/embed/embed.type.ts"
+        "client/runtime/embed/embed.type.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Implementation-local or cohesive frontend owner; no independent domain abstraction is needed.",
@@ -7142,7 +7142,7 @@
       "path": "client/types/embedMessage.enum.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/application/embed/embedMessage.enum.ts"
+        "client/runtime/embed/embedMessage.enum.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",
@@ -7433,7 +7433,7 @@
       "path": "client/types/haptic.enum.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/application/embed/haptic.enum.ts"
+        "client/runtime/embed/haptic.enum.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",

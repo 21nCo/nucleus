@@ -3,8 +3,8 @@
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { EmbedDataMessage, EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
-  import { postDataToParent, postMessageToParent } from "@21n/utils/embed.utils";
+  import { EmbedDataMessage, EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
+  import { postDataToParent, postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import { isValidEmail } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
   import view from "@nucleum/stores/view.store";

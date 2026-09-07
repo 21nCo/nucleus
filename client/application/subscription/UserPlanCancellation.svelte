@@ -9,8 +9,8 @@
   import PlanFeatureList from "@nucleum/application/subscription/elements/PlanFeatureList.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
   import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { BillingCycle } from "@nucleum/schema/account/subscription";
 
   let isCancelInProgress = false;

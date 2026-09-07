@@ -49,7 +49,7 @@ vi.mock("@nucleum/persistence/persistence.utils", () => ({
   retrieveLocally: mocks.retrieveLocallyMock
 }));
 
-vi.mock("@21n/utils/embed.utils", () => ({
+vi.mock("@nucleum/client/runtime/embed/embed.utils", () => ({
   postDataToParent: mocks.postDataToParentMock
 }));
 

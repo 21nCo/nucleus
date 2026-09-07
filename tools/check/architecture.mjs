@@ -191,18 +191,26 @@ for (const { from, to } of edges.filter(production)) {
   productionGraph.get(from).push(to);
 }
 for (const root of productionGraph.keys()) {
-  if (!root.startsWith("client/stores/overlays/")) continue;
+  const isEmbedTransport = root.startsWith("client/runtime/embed/");
+  if (!isEmbedTransport && !root.startsWith("client/stores/overlays/"))
+    continue;
   const pending = [...productionGraph.get(root)];
   const visited = new Set();
   while (pending.length) {
     const target = pending.pop();
     if (visited.has(target)) continue;
     visited.add(target);
-    if (/^client\/(application|features|products)\//.test(target))
+    if (
+      isEmbedTransport
+        ? target.startsWith("client/") && !target.startsWith("client/runtime/")
+        : /^client\/(application|features|products)\//.test(target)
+    )
       violations.push({
         from: root,
         to: target,
-        reason: "Overlay state transitively depends on composition"
+        reason: isEmbedTransport
+          ? "Embed transport transitively depends on frontend implementation"
+          : "Overlay state transitively depends on composition"
       });
     pending.push(...(productionGraph.get(target) ?? []));
   }

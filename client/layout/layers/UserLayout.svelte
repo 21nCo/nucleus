@@ -8,7 +8,7 @@
     appEvents,
     scheduledNotifications
   } from "@nucleum/stores/notification.store";
-  import { postDataToParent } from "@21n/utils/embed.utils";
+  import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import context from "@nucleum/stores/context.store";
   import view from "@nucleum/stores/view.store";
   import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
@@ -19,7 +19,7 @@
   import LeftNav from "@21n/layout/leftPanel/LeftNav.svelte";
   import AppSplitView from "@21n/layout/AppSplitView.svelte";
   import TopNav from "@21n/layout/topNav/TopNav.svelte";
-  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import RightPanel from "../rightPanel/RightPanel.svelte";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { page } from "$app/stores";

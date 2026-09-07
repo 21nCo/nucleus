@@ -6,8 +6,8 @@
   import { toasts } from "@nucleum/stores/notification.store";
   import context from "@nucleum/stores/context.store";
   import { OperatingSystem } from "@nucleum/client/runtime/context.type";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
   const isAppleContext = $derived(
     $context.isEmbed &&
     ($context.os === OperatingSystem.IOS ||

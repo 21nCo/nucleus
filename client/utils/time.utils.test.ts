@@ -35,11 +35,11 @@ import {
   resolveUpperRelativeTimePeriodTitle,
   timePeriodLabel,
   toLocalISOString,
-  wait,
   determinePreviousTimePeriod,
   determineTimePeriod,
   determineTimePeriodv2
 } from "./time.utils";
+import { wait } from "@21n/shared-utils/wait";
 
 vi.mock("moment-timezone", () => {
   const offsets: Record<string, number> = {

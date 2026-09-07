@@ -15,13 +15,13 @@ import type { IBillingAddress } from "@nucleum/schema/account/subscription";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import context from "@nucleum/stores/context.store";
   import { OperatingSystem } from "@nucleum/client/runtime/context.type";
-  import { postDataToParent } from "@21n/utils/embed.utils";
+  import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import { toasts } from "@nucleum/stores/notification.store";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 
   let selectedCycle: BillingCycle = BillingCycle.YEARLY;
   let isBillingAddressCapture = false;

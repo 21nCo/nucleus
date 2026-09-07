@@ -9,7 +9,7 @@
   } from "@nucleum/features/memory/node/node.type";
   import { relayToContentScript } from "@21n/utils/extension.utils";
   import Clip from "@nucleum/extensions/clipper/sidePanel/clips/Clip.svelte";
-  import { wait } from "@21n/utils/time.utils";
+  import { wait } from "@21n/shared-utils/wait";
   import { onMount } from "svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";

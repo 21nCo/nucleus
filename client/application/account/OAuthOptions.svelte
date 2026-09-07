@@ -10,8 +10,8 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
-  import { postDataToParent } from "@21n/utils/embed.utils";
+  import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
+  import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
   let {
     providers,
     isExpanded = false,

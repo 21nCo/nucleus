@@ -18,7 +18,7 @@ import {
   persistLocally,
   getDapId
 } from "@nucleum/persistence/persistence.utils";
-import { postDataToParent } from "@21n/utils/embed.utils";
+import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
 import modalEvent, {
   configureOverlayHost
 } from "@nucleum/stores/overlays/modal.store";
@@ -47,7 +47,7 @@ import {
   resourceAction
 } from "@nucleum/datafn/resource.utils";
 import { Product } from "@nucleum/client/config/product.type";
-import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { configureResourceActionHost } from "@nucleum/stores/resources/resource-action-host";

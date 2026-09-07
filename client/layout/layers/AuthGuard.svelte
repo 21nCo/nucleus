@@ -13,7 +13,7 @@
   import { UserDataMode, UserSessionType } from "@nucleum/client/runtime/account/account.type";
   import { Product } from "@nucleum/client/config/product.type";
   import { PlanType } from "@nucleum/schema/account/subscription";
-  import { postTokenToExtension } from "@21n/utils/embed.utils";
+  import { postTokenToExtension } from "@nucleum/client/runtime/embed/embed.utils";
   import { onMount } from "svelte";
   import {
     resolveAuthSession,

@@ -39,9 +39,9 @@
   import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
-  import { embedBridge } from "@nucleum/application/embed/embed.store";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { embedBridge } from "@nucleum/client/runtime/embed/embed.store";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import UserLayout from "@21n/layout/layers/UserLayout.svelte";
   import LegacyLocalDataRecoveryGate from "@21n/layout/layers/LegacyLocalDataRecoveryGate.svelte";

@@ -4,11 +4,11 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import {
     postMessageToParent,
     postTokenToExtension
-  } from "@21n/utils/embed.utils";
+  } from "@nucleum/client/runtime/embed/embed.utils";
   import { isValidEmail } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
   import OAuthButtons from "@nucleum/application/oauth/OAuthButtons.svelte";

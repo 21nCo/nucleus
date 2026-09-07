@@ -59,7 +59,7 @@ import {
   resolveTaskFocus,
   resolveTotalTaskTime
 } from "@nucleum/features/focus/session.utils";
-import { postDataToParent } from "@21n/utils/embed.utils";
+import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import {
   ObjectiveStatus,
@@ -70,7 +70,7 @@ import { toDateValue } from "@21n/utils/time.utils";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import { UIState } from "@nucleum/stores/uiState/uiState.type";
 import { removeDuplicatesFilter } from "@nucleum/datafn/resource.utils";
-import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { getUtcSafeDay } from "@21n/elements/datetime/datetime.utils";
 import type { ITaskCapture } from "@nucleum/features/focus/tasks/task.type";
 import { StoreDataType } from "@nucleum/schema/legacy/store-data-type.enum";

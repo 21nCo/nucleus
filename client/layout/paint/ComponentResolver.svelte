@@ -3,8 +3,8 @@
   import { type IAction } from "@nucleum/application/commandBar/action.type";
   import ModalLayout from "@nucleum/application/modal/ModalLayout.svelte";
   import context from "@nucleum/stores/context.store";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import PageError from "@nucleum/application/error/PageError.svelte";
   import { resizeListener } from "@nucleum/actions/resize.action";

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { TextStyle } from "@21n/elements/text/text.enum";
-  import { haptic } from "@21n/utils/embed.utils";
+  import { haptic } from "@nucleum/client/runtime/embed/embed.utils";
   import BackButton from "@21n/elements/button/BackButton.svelte";
   import Text from "@21n/elements/text/Text.svelte";
     let {

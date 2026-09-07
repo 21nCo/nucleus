@@ -22,8 +22,8 @@
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import { Taco } from "@nucleum/application/taco/taco";
-  import { embedBridge } from "@nucleum/application/embed/embed.store";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { embedBridge } from "@nucleum/client/runtime/embed/embed.store";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import Icon from "@21n/elements/Icon.svelte";
 
   let progress = 0;

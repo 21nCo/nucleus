@@ -8,10 +8,10 @@
   import view from "@nucleum/stores/view.store";
   import type { IAction } from "@nucleum/application/commandBar/action.type";
   import { Size } from "@21n/elements/size.enum";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import { Placement } from "@21n/elements/direction.enum";
   import { abg, cn } from "@21n/utils/ui.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { uiState, uiStateDerived } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";

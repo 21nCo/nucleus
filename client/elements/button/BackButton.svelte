@@ -8,7 +8,7 @@
   import view from "@nucleum/stores/view.store";
   import { appStore } from "@nucleum/stores/app.store";
   import modalEvent from "@nucleum/stores/overlays/modal.store";
-  import { haptic } from "@21n/utils/embed.utils";
+  import { haptic } from "@nucleum/client/runtime/embed/embed.utils";
 
   let {
     text = undefined,

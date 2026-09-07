@@ -61,7 +61,7 @@
   import account from "@nucleum/stores/account.store";
   import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import { Persistence } from "@nucleum/persistence/persistence";
-  import { wait } from "@21n/utils/time.utils";
+  import { wait } from "@21n/shared-utils/wait";
   import { appStore } from "@nucleum/stores/app.store";
   import type { IMultiFileCaptureData } from "@nucleum/features/memory/capture/capture.type";
   import { AlertType } from "@nucleum/stores/notifications/notification.type";

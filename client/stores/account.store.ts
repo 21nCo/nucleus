@@ -1,7 +1,7 @@
 import { get, writable } from "svelte/store";
 import { PlanStatus, type IUserPlan } from "@nucleum/schema/account/subscription";
 import { UserDataMode, UserSessionType, type UserAccount, type UserInformation } from "@nucleum/client/runtime/account/account.type";
-import { postDataToParent } from "@21n/utils/embed.utils";
+import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
 import { Persistence } from "@nucleum/persistence/persistence";
 import { performApiCall } from "@21n/utils/network.utils";
 import { determineIfOffline } from "@nucleum/client/runtime/connectivity";
@@ -45,7 +45,7 @@ import { compressImageToTargetSize } from "@21n/utils/ui.utils";
 import { convertHeicToPng } from "@21n/utils/ui.utils";
 import { generateImagePreviewFromPdf } from "@21n/utils/pdf.utils";
 import { Action } from "@nucleum/application/commandBar/action.enum";
-import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { parse } from "@21n/shared-utils/json.utils";
 import {
   bootstrapNucleusAccount,

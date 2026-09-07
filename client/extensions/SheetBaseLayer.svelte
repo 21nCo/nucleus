@@ -13,7 +13,7 @@
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
-  import { pingParent } from "@21n/utils/embed.utils";
+  import { pingParent } from "@nucleum/client/runtime/embed/embed.utils";
   import SheetDebugLogs from "@nucleum/extensions/SheetDebugLogs.svelte";
   import context from "@nucleum/stores/context.store";
   import { Size } from "@21n/elements/size.enum";

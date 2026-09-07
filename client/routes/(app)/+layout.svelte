@@ -9,8 +9,8 @@
   import { appStore } from "../../stores/app.store";
   import { productData } from "@nucleum/products/product.resolver";
   import AuthGuard from "@21n/layout/layers/AuthGuard.svelte";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { onMount } from "svelte";
   import AccountDebugInfo from "./AccountDebugInfo.svelte";
   let { children: pageChildren }: { children?: Snippet } = $props();

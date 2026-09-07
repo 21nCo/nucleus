@@ -1,4 +1,8 @@
 [
+  "client/application/embed/embed.store.ts",
+  "client/application/embed/embed.type.ts",
+  "client/application/embed/embedMessage.enum.ts",
+  "client/application/embed/haptic.enum.ts",
   "client/application/error/errors.ts",
   "client/application/error/resource-error.type.ts",
   "client/application/modal/ModalContentPadded.svelte",
@@ -18,5 +22,6 @@
   "client/application/resource/ResourcePanelSwitcher.svelte",
   "client/application/resource/panelParam.mixin.ts",
   "client/application/resource/panelSwitcher.mixin.ts",
-  "client/application/resource/resource-panel.type.ts"
+  "client/application/resource/resource-panel.type.ts",
+  "client/utils/embed.utils.ts"
 ]

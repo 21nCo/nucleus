@@ -22,8 +22,8 @@
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { appEvents } from "@nucleum/stores/notification.store";
   import type { IEvent } from "@21n/elements/input/event.type";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";

@@ -8,8 +8,8 @@
   import { ButtonStyle } from "@21n/elements/button/button.type";
   import { onMount } from "svelte";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import {
     UIState,

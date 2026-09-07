@@ -16,7 +16,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   } from "@nucleum/features/memory/capture/capture.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import HomeTopNav from "@nucleum/products/memotron/home/mobile/HomeTopNav.svelte";
-  import { haptic } from "@21n/utils/embed.utils";
+  import { haptic } from "@nucleum/client/runtime/embed/embed.utils";
   import TypeSelectorOnMobile from "@nucleum/features/memory/capture/typeSelector/TypeSelectorOnMobile.svelte";
   import { fly } from "svelte/transition";
   import HomeQuickAccess from "@nucleum/application/home/mobile/HomeQuickAccess.svelte";

@@ -2,7 +2,7 @@ import { logger } from "@nucleum/client/runtime/logging/logger";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { goto, isExtensionEnvironment } from "@21n/utils/browser.utils";
 import { clientStorage } from "@nucleum/persistence/persistence.utils";
-import { postDataToParent } from "@21n/utils/embed.utils";
+import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
 import { LicenseType } from "@nucleum/client/runtime/account/account.type";
 import { type IUserPlan } from "@nucleum/schema/account/subscription";
 import {
@@ -11,7 +11,7 @@ import {
 } from "@nucleum/schema/account/subscription";
 import { parseAndFormatDate } from "@21n/utils/time.utils";
 import { enumToString } from "@21n/shared-utils/text.utils";
-import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { parse } from "@21n/shared-utils/json.utils";
 
 export function getBucketNameandKey(url: string) {

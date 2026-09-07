@@ -7,7 +7,7 @@
   import "@21n/fonts/styles.css";
   import view from "@nucleum/stores/view.store";
   import { AppSkin } from "@21n/theme/appearance.type";
-  import { postDataToParent } from "@21n/utils/embed.utils";
+  import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import appearance, {
     fallBackTypefaceString
   } from "@nucleum/stores/appearance.store";
@@ -21,7 +21,7 @@
   // Do not remove this import as it is required for the global css propagation in case of custom colors are absent - ex: PanelSwitcher
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
-  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { generateGoogleFontsUrl } from "@21n/layout/layers/themeLayer/fonts.config";
 
   let {

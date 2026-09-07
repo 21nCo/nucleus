@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import ManualLogItem from "@nucleum/features/focus/logs/manualLog/ManualLogItem.svelte";
-  import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
+  import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import { manualLogStore } from "@nucleum/features/focus/logs/log.store";
 
