@@ -12,7 +12,7 @@
   import { Size } from "@21n/elements/size.enum";
   import { ButtonStyle } from "@21n/elements/button/button.type";
   import { cn } from "@21n/utils/ui.utils";
-  import { player } from "@nucleum/application/modal/modal.store";
+  import { player } from "@nucleum/stores/overlays/modal.store";
   import RefreshingOverlayFeedback from "@21n/elements/feedback/RefreshingOverlayFeedback.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";

@@ -34,7 +34,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import { resolveBulkSelectionAccessPointId } from "@nucleum/datafn/resource.utils";
   import Task from "@nucleum/features/focus/tasks/Task.svelte";
   import context from "@nucleum/stores/context.store";

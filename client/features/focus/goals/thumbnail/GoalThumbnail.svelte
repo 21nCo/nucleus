@@ -2,7 +2,7 @@
   import { Arrangement } from "@21n/elements/direction.enum";
   import { Size } from "@21n/elements/size.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import ResourceGridThumbnail from "@nucleum/application/record/thumbnail/ResourceGridThumbnail.svelte";
+  import ResourceGridThumbnail from "@nucleum/components/records/ResourceGridThumbnail.svelte";
   import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { type IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";

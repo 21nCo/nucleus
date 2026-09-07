@@ -11,7 +11,7 @@
     AccessMode,
     ResourceAccessPointState
   } from "@nucleum/datafn/resource.type";
-  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import FileView from "@nucleum/features/files/FileView.svelte";
   import type { INodeThumb } from "@nucleum/features/memory/node/node.type";
   import type {

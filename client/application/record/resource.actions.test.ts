@@ -20,12 +20,12 @@ vi.mock("@nucleum/stores/app.store", () => ({
   }
 }));
 
-vi.mock("@nucleum/application/record/active-resource.store", () => ({
+vi.mock("@nucleum/stores/resources/active-resource.store", () => ({
   copyActiveResourceContents: vi.fn(),
   updateActiveResource: vi.fn()
 }));
 
-vi.mock("@nucleum/application/record/bulkedit.store", () => ({
+vi.mock("@nucleum/stores/resources/bulkedit.store", () => ({
   bulkEditStore: {
     getState: vi.fn().mockReturnValue({ selectedIds: [] }),
     matchesContext: vi.fn().mockReturnValue(false),

@@ -17,9 +17,9 @@
   } from "@21n/elements/table/table.type";
   import { TextStyle } from "@21n/elements/text/text.enum";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { markdownSettings } from "@nucleum/features/memory/markdown/markdown.settings";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   let callouts = $state([...$markdownSettings.callout]);
   let previewId: string | undefined = callouts[0]?.id;
   let error: string | undefined = undefined;

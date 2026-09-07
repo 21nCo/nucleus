@@ -20,7 +20,7 @@ import {
 } from "@nucleum/datafn/resource.utils";
 import { activeSession } from "@nucleum/features/focus/session.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
-import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
 import { BulkEditor } from "@nucleum/application/record/record.store";
 import { Product } from "@nucleum/client/config/product.type";
 

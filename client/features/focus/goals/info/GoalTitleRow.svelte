@@ -5,7 +5,7 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import RecordStarStatusFeedback from "@nucleum/application/record/RecordStarStatusFeedback.svelte";
+  import RecordStarStatusFeedback from "@nucleum/components/records/RecordStarStatusFeedback.svelte";
   import { AlertType, type IInlineStatus } from "@nucleum/stores/notifications/notification.type";
   import ResourceInlineCloseButton from "@21n/elements/button/ResourceInlineCloseButton.svelte";
 

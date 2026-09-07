@@ -47,7 +47,7 @@
   import { isValidString, truncateString } from "@21n/shared-utils/text.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { fileDrop } from "@nucleum/actions/fileDrop.action";
-  import { MAX_FILE_SIZE_MB } from "@nucleum/application/record/record.store";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/features/files/file.constants";
   import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";

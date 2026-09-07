@@ -12,7 +12,7 @@ import {
   socialPostNodeTypeList
 } from "@nucleum/features/memory/node/node.type";
 import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
-import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
+import { ActiveResourceStore } from "@nucleum/stores/resources/active-resource.store";
 import { PanelSwitcherMixin } from "@nucleum/application/resource/panelSwitcher.mixin";
 import {
   activeResourceFilterIgnoreAncestorInactive

@@ -31,7 +31,7 @@
   } from "@nucleum/features/focus/session.store";
   import Icon from "@21n/elements/Icon.svelte";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
-  import RecordTrashBanner from "@nucleum/application/record/RecordTrashBanner.svelte";
+  import RecordTrashBanner from "@nucleum/components/records/RecordTrashBanner.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import view from "@nucleum/stores/view.store";
   import { datafn } from "@nucleum/datafn/datafn.store";

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { Action } from "@nucleum/application/commandBar/action.enum";
   import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import { TextStyle } from "@21n/elements/text/text.enum";

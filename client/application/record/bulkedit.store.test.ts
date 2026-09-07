@@ -5,7 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 
-import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
 
 describe("bulkEditStore", () => {
   const originalGetClientRects = HTMLElement.prototype.getClientRects;

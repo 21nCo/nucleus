@@ -29,7 +29,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import CollectionDescriptionEditPopover from "@nucleum/features/collections/CollectionDescriptionEditPopover.svelte";
-  import RecordStarStatusFeedback from "@nucleum/application/record/RecordStarStatusFeedback.svelte";
+  import RecordStarStatusFeedback from "@nucleum/components/records/RecordStarStatusFeedback.svelte";
   import BackButton from "@21n/elements/button/BackButton.svelte";
   import ResourceInlineCloseButton from "@21n/elements/button/ResourceInlineCloseButton.svelte";
   import type { ICollection } from "@nucleum/features/collections/collection.type";

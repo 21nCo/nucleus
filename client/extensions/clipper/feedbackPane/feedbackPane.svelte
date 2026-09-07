@@ -28,7 +28,7 @@
   import type { IWebpageStore } from "@nucleum/extensions/clipper/contentScripts/types";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceError } from "@nucleum/application/error/errors";
+  import { ResourceError } from "@nucleum/datafn/resource-error";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import NodeThumbnailSocialPostPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailSocialPostPreview.svelte";
   let {

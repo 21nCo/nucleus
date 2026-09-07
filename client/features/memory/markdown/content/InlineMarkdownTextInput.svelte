@@ -26,7 +26,7 @@
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import InlineLink from "@nucleum/features/memory/markdown/content/inline/InlineLink.svelte";
   import { resolvePasteContents } from "@nucleum/features/memory/capture/capture.utils";
-  import { MAX_FILE_SIZE_MB } from "@nucleum/application/record/record.store";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/features/files/file.constants";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import view from "@nucleum/stores/view.store";
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";

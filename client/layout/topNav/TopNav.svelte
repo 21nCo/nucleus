@@ -27,7 +27,7 @@
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { toasts } from "@nucleum/stores/notification.store";
   import ToastNotificationContent from "@21n/elements/feedback/ToastNotificationContent.svelte";
-  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import BulkEditBar from "@nucleum/application/record/BulkEditBar.svelte";
   import { InputStyle } from "@21n/elements/input/input.type";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";

@@ -14,7 +14,7 @@ import type { Event } from "@nucleum/stores/notifications/event.enum";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 
 export const toastDefaultDuration = 3500;

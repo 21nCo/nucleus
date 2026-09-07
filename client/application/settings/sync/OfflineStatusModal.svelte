@@ -5,7 +5,7 @@
   import { Size } from "@21n/elements/size.enum";
   import { Action } from "@nucleum/application/commandBar/action.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { Orientation } from "@21n/elements/direction.enum";
   import context from "@nucleum/stores/context.store";
   import { ButtonStyle } from "@21n/elements/button/button.type";

@@ -2,8 +2,8 @@ import { appStore } from "@nucleum/stores/app.store";
 import {
   copyActiveResourceContents,
   updateActiveResource
-} from "@nucleum/application/record/active-resource.store";
-import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+} from "@nucleum/stores/resources/active-resource.store";
+import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
 import { copyResourceLinkToClipboard } from "@nucleum/application/record/resource-link.utils";
 import { LinkType } from "@nucleum/features/memory/linking/link.type";
 import { ResourceAccessPoint, AccessMode, type IActiveResource, type IResource, type IResourceArchivable, type IResourceLockable, type IResourceStarrable } from "@nucleum/datafn/resource.type";

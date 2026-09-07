@@ -9,7 +9,7 @@
     resourceInList,
     isSameResource
   } from "@nucleum/datafn/resource.utils";
-  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import Check from "@21n/icons/Check.svelte";
   import context from "@nucleum/stores/context.store";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";

@@ -7,7 +7,7 @@
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+  import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
 
   let {

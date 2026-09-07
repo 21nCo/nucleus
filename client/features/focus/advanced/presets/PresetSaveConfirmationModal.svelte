@@ -10,10 +10,10 @@
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import { onMount } from "svelte";
   import type { IFocusItem } from "@nucleum/features/focus/session.type";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { Size } from "@21n/elements/size.enum";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { advancedCompositionDraft } from "@nucleum/features/focus/advanced/composition/advancedCompositionDraft.store";
   let selectedObjectives = $state<IObjectiveThumb[]>([]);

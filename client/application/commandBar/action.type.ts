@@ -7,7 +7,7 @@ import {
   type IAppContext
 } from "@nucleum/client/runtime/context.type";
 import type { ConfirmationNotification } from "@nucleum/stores/notifications/notification.type";
-import type { ModalParams } from "@nucleum/application/modal/popup.type";
+import type { ModalParams } from "@21n/elements/modal/popup.type";
 import type { IViewStore } from "@nucleum/stores/view.type";
 import type { Size } from "@21n/elements/size.enum";
 

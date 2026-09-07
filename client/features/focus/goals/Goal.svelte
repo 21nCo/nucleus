@@ -28,7 +28,7 @@
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+  import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";
   import { Context } from "@nucleum/stores/appStore.type";

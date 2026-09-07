@@ -37,7 +37,7 @@
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+  import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import { untrack } from "svelte";
   let {
     card,

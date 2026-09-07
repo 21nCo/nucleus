@@ -17,7 +17,7 @@
   import Avatar from "@21n/elements/avatarPicker/Avatar.svelte";
   import { propertyEditorStore } from "@nucleum/features/collections/properties/property.store";
   import { onMount } from "svelte";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import {
     resolveResourceIcon,
     resourceAction
@@ -36,7 +36,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import TextArea from "@21n/elements/input/TextArea.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
   import { tooltip } from "@nucleum/actions/popover.action";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   import { createDatafnCollection } from "@nucleum/features/collections/collection.store";
 
   let {

@@ -1,11 +1,29 @@
-import type { IPlayer, ModalEvent } from "@nucleum/application/modal/popup.type";
+import type { IPlayer, ModalEvent } from "@21n/elements/modal/popup.type";
 import { writable } from "svelte/store";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { ObservableStore } from "@nucleum/stores/client.store";
-import { appStore } from "@nucleum/stores/app.store";
 import { AccessMode } from "@nucleum/datafn/resource.type";
-import { appEvents } from "@nucleum/stores/notification.store";
-import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
+
+/** Shell operations required by reusable overlay state. */
+export interface OverlayHost {
+  onDismiss(action: string): void;
+  openFullscreen(path: string): void;
+  closeFullscreen(): void;
+  resolvePlayer(path: string): string | undefined;
+}
+
+let overlayHost: OverlayHost | undefined;
+
+/** Supplies navigation from the composing shell before overlays are used. */
+export function configureOverlayHost(host: OverlayHost) {
+  overlayHost = host;
+}
+
+/** Fails explicitly when an overlay is used without a composing shell. */
+function requireOverlayHost(): OverlayHost {
+  if (!overlayHost) throw new Error("Overlay host has not been configured");
+  return overlayHost;
+}
 
 const defaultModal = {
   path: "",
@@ -32,7 +50,7 @@ function initModalStore(seed: ModalEvent) {
       update((n: ModalEvent) => {
         return { path: action, isShow: false };
       });
-      appEvents.nav(action);
+      requireOverlayHost().onDismiss(action);
     },
     notify: (event: ModalEvent) => {
       update((n: ModalEvent) => {
@@ -96,11 +114,7 @@ class FullScreenStore extends ObservableStore<{ path?: string }> {
   show(path: string) {
     logger.log({ at: "fullscreen.show", path });
     this.set({ path });
-    // appStore.runAction(path);
-    appStore.toggleSearchParam({
-      [AccessMode.FULL]: path,
-      [AccessMode.POP]: null
-    });
+    requireOverlayHost().openFullscreen(path);
   }
 
   /**
@@ -111,15 +125,13 @@ class FullScreenStore extends ObservableStore<{ path?: string }> {
     let fullScreenAction = this.get().path;
     if (!fullScreenAction) return;
     if (fullScreenAction && isShowMiniIfNoPip) {
-      let miniAction =
-        appStore.resolveComponentFromPath(fullScreenAction)?.associatedPlayer;
+      let miniAction = requireOverlayHost().resolvePlayer(fullScreenAction);
       if (miniAction) {
         player.showMini(miniAction, true);
       }
     }
     this.set({ path: undefined });
-    // modalEvent.hide(fullScreenAction ?? "", "app.store");
-    appStore.toggleSearchParam([AccessMode.FULL]);
+    requireOverlayHost().closeFullscreen();
   }
 
   restore() {

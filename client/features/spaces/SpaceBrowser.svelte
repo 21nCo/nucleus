@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import {
     spaceInContext,

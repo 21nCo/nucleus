@@ -1,8 +1,8 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { DfqlRelations } from "@datafn/core";
-import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
 import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
-import { ResourceError } from "@nucleum/application/error/errors";
+import { ResourceError } from "@nucleum/datafn/resource-error";
 import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { extensionDatafn } from "@nucleum/extensions/extension.store";

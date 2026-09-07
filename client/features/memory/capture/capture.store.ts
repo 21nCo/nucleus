@@ -50,7 +50,7 @@ import {
   resourceAction,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import { resolveResource } from "@nucleum/application/record/record.store";
+import { resolveResource } from "@nucleum/datafn/resource-query.utils";
 import type { IFile } from "@nucleum/features/files/file.type";
 import {
   generateMiniRandomId,
@@ -83,7 +83,7 @@ import {
   textToMdBlocks
 } from "@nucleum/features/memory/markdown/markdown.utils";
 import type { IBlock } from "@nucleum/features/memory/markdown/md.type";
-import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
+import { ActiveResourceStore } from "@nucleum/stores/resources/active-resource.store";
 import { embedBridge } from "@nucleum/application/embed/embed.store";
 import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
 import { convertWebMToWav } from "@21n/utils/audio.utils";

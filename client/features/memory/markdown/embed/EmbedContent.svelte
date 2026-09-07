@@ -34,7 +34,7 @@
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { fileStore } from "@nucleum/features/files/file.store";
   import type { IFile } from "@nucleum/features/files/file.type";
-  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+  import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import {
     fetchYouTubeMetadata,
     resolveWebpageLabel,

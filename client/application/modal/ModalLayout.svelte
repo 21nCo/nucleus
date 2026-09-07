@@ -1,14 +1,14 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import {
     appEvents,
     confirmationNotification
   } from "@nucleum/stores/notification.store";
   import { Size } from "@21n/elements/size.enum";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
-  import ModalHeader from "@nucleum/application/modal/ModalHeader.svelte";
-  import type { ModalParams } from "@nucleum/application/modal/popup.type";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
+  import ModalHeader from "@21n/elements/modal/ModalHeader.svelte";
+  import type { ModalParams } from "@21n/elements/modal/popup.type";
   import { fly } from "svelte/transition";
   import { quintOut } from "svelte/easing";
   import context from "@nucleum/stores/context.store";
@@ -27,7 +27,7 @@
   import view from "@nucleum/stores/view.store";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   import { KeyboardKey } from "@21n/elements/keyboard/keyboard.type";
 
   let {

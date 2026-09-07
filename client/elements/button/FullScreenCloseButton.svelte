@@ -1,7 +1,7 @@
 <script lang="ts">
   import { tooltip } from "@nucleum/actions/popover.action";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
   import { ButtonVariant } from "@21n/elements/button/button.type";

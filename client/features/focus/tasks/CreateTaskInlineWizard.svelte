@@ -15,7 +15,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
     type IObjective,
     type IObjectiveThumb
   } from "@nucleum/features/focus/goals/goal.type";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
   import { Product } from "@nucleum/client/config/product.type";
   import { appStore } from "@nucleum/stores/app.store";

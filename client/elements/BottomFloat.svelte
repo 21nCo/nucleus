@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { onMount, onDestroy } from "svelte";
-  import { player } from "@nucleum/application/modal/modal.store";
+  import { player } from "@nucleum/stores/overlays/modal.store";
   import view from "@nucleum/stores/view.store";
   import { cn } from "@21n/utils/ui.utils";
   import { generateRandomId } from "@21n/shared-utils/crypto.utils";

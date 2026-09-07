@@ -5,7 +5,7 @@
   import CmdResults from "@nucleum/application/commandBar/CmdResults.svelte";
   import { Size } from "@21n/elements/size.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { Action } from "@nucleum/application/commandBar/action.enum";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";

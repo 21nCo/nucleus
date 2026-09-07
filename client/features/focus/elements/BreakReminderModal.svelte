@@ -5,7 +5,7 @@
   import { onMount } from "svelte";
   import SessionTimeText from "@nucleum/features/focus/elements/sessionTimeText/SessionTimeText.svelte";
   import { SessionState } from "@nucleum/features/focus/sessionState.enum";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { PointronEvent } from "@nucleum/features/focus/pointronEvent.enum";
   onMount(() => {
     const sub = activeSession.subscribe((x) => {

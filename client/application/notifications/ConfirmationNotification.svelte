@@ -2,12 +2,12 @@
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { confirmationNotification } from "@nucleum/stores/notification.store";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { Action } from "@nucleum/application/commandBar/action.enum";
   import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import { Orientation } from "@21n/elements/direction.enum";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   import { Size } from "@21n/elements/size.enum";
   let confirmationTextInput: string | undefined;
   let error: string | undefined;

@@ -8,7 +8,7 @@
   import { onMount } from "svelte";
   import modalEvent, {
     isPrimaryActionDisabled
-  } from "@nucleum/application/modal/modal.store";
+  } from "@nucleum/stores/overlays/modal.store";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";

@@ -23,7 +23,7 @@
     ActiveCollectionStore,
     type IActiveCollectionStore
   } from "@nucleum/features/collections/collection.store";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { AccessMode, type OmitForCaptureWithId } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
@@ -43,7 +43,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/elements/button/button.type";
   import { acquireDnDPage, appStore } from "@nucleum/stores/app.store";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import PropertyTypeSelector from "@nucleum/features/collections/properties/propertyTypeSelector/PropertyTypeSelector.svelte";
   import {
     isSameResource,
@@ -55,7 +55,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import CollectionTitleLabelPart from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
   import { Product } from "@nucleum/client/config/product.type";
   import Table3 from "@21n/elements/table/Table3.svelte";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
 
   let { id = undefined }: { id?: IRecordId | undefined } = $props();
   const collection = $derived<IActiveCollectionStore | undefined>(

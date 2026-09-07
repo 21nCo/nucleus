@@ -12,7 +12,7 @@
   import { tooltip } from "@nucleum/actions/popover.action";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import view from "@nucleum/stores/view.store";
-  import RecordStarStatusFeedback from "@nucleum/application/record/RecordStarStatusFeedback.svelte";
+  import RecordStarStatusFeedback from "@nucleum/components/records/RecordStarStatusFeedback.svelte";
   let {
     node,
     accessPoint = ResourceAccessPoint.BROWSER,

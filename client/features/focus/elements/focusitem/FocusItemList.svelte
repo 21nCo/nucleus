@@ -23,7 +23,7 @@
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+  import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";

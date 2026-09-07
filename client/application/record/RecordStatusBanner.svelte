@@ -5,13 +5,13 @@
   import { formatDatetime } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/elements/size.enum";
-  import type { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
+  import type { ActiveResourceStore } from "@nucleum/stores/resources/active-resource.store";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import {
     isShowStatusBanner,
     resolveTrashedAtDate
   } from "@nucleum/datafn/resource.utils";
-  import RecordTrashBanner from "@nucleum/application/record/RecordTrashBanner.svelte";
+  import RecordTrashBanner from "@nucleum/components/records/RecordTrashBanner.svelte";
   let { resource }: { resource: ActiveResourceStore<any, any> } = $props();
   const trashedAt = $derived(resolveTrashedAtDate($resource));
 </script>

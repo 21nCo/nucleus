@@ -47,7 +47,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import { ButtonVariant, ButtonStyle } from "@21n/elements/button/button.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { generateMiniRandomId } from "@21n/shared-utils/crypto.utils";
-  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import view from "@nucleum/stores/view.store";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import { fly } from "svelte/transition";

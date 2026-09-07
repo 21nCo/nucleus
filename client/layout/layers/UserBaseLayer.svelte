@@ -36,8 +36,8 @@
   import { BillingCycle } from "@nucleum/schema/account/subscription";
   import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";
   import { fileStore } from "@nucleum/features/files/file.store";
-  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
   import { embedBridge } from "@nucleum/application/embed/embed.store";
   import { postMessageToParent } from "@21n/utils/embed.utils";

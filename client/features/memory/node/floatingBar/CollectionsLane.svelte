@@ -25,7 +25,7 @@
     NodeType
   } from "@nucleum/features/memory/node/node.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { ResourceError } from "@nucleum/application/error/errors";
+  import { ResourceError } from "@nucleum/datafn/resource-error";
   import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
   import { AccessMode, ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";

@@ -1024,7 +1024,7 @@
       "path": "client/application/record/bulkedit.store.ts",
       "disposition": "retained",
       "destinations": [
-        "client/application/record/bulkedit.store.ts"
+        "client/stores/resources/bulkedit.store.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Implementation-local or cohesive frontend owner; no independent domain abstraction is needed.",
@@ -8367,7 +8367,7 @@
       "path": "client/types/popup.type.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/application/modal/popup.type.ts"
+        "client/elements/modal/popup.type.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",
@@ -8496,7 +8496,7 @@
       "disposition": "split",
       "destinations": [
         "schema/resource-error.enum.ts",
-        "client/application/error/resource-error.type.ts"
+        "client/stores/notifications/error.enum.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",
@@ -15911,7 +15911,9 @@
         "./datafn.type": "./datafn.type.ts",
         "./observable-store.type": "./observable-store.type.ts",
         "./e2ee.type": "./e2ee.type.ts",
-        "./optimisticKv.type": "./optimisticKv.type.ts"
+        "./optimisticKv.type": "./optimisticKv.type.ts",
+        "./resource-query.utils": "./resource-query.utils.ts",
+        "./resource-error": "./resource-error.ts"
       }
     },
     {
@@ -15979,6 +15981,7 @@
         "./collections/thumbnail/CollectionThumbnail.svelte": "./collections/thumbnail/CollectionThumbnail.svelte",
         "./collections/thumbnail/CollectionThumbnailLabel.svelte": "./collections/thumbnail/CollectionThumbnailLabel.svelte",
         "./files/FileView.svelte": "./files/FileView.svelte",
+        "./files/file.constants": "./files/file.constants.ts",
         "./files/file.store": "./files/file.store.ts",
         "./files/file.type": "./files/file.type.ts",
         "./files/fileEmbedChannel.store": "./files/fileEmbedChannel.store.ts",

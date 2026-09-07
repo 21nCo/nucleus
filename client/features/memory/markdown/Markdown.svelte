@@ -42,9 +42,9 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
-  import { bulkEditStore as globalBulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore as globalBulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
-  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+  import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import { resizeListener } from "@nucleum/actions/resize.action";
   import { stringify } from "@21n/shared-utils/json.utils";
   import { Context } from "@nucleum/stores/appStore.type";

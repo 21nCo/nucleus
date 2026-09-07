@@ -1,6 +1,6 @@
 <script lang="ts">
   import view from "@nucleum/stores/view.store";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";

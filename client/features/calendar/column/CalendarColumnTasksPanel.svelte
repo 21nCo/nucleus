@@ -9,7 +9,7 @@
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { toasts } from "@nucleum/stores/notification.store";
   import { dragSelection } from "@nucleum/actions/dragSelection.action";
-  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

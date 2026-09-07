@@ -1,0 +1,14 @@
+[
+  "client/application/error/errors.ts",
+  "client/application/error/resource-error.type.ts",
+  "client/application/modal/ModalContentPadded.svelte",
+  "client/application/modal/ModalFooter.svelte",
+  "client/application/modal/ModalHeader.svelte",
+  "client/application/modal/modal.store.ts",
+  "client/application/modal/popup.type.ts",
+  "client/application/record/RecordStarStatusFeedback.svelte",
+  "client/application/record/RecordTrashBanner.svelte",
+  "client/application/record/active-resource.store.ts",
+  "client/application/record/bulkedit.store.ts",
+  "client/application/record/thumbnail/ResourceGridThumbnail.svelte"
+]

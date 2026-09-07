@@ -7,7 +7,7 @@
   import modalEvent, {
     fullScreen,
     player
-  } from "@nucleum/application/modal/modal.store";
+  } from "@nucleum/stores/overlays/modal.store";
   import {
     toasts,
     confirmationNotification,
@@ -18,7 +18,7 @@
   import { fly, slide } from "svelte/transition";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import { onMount } from "svelte";
-  import type { ModalEvent, ModalParams } from "@nucleum/application/modal/popup.type";
+  import type { ModalEvent, ModalParams } from "@21n/elements/modal/popup.type";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import type { IEvent } from "@21n/elements/input/event.type";
   import { postDataToParent } from "@21n/utils/embed.utils";

@@ -3,7 +3,7 @@
   import { tooltip } from "@nucleum/actions/popover.action";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { resolveResource } from "@nucleum/application/record/record.store";
+  import { resolveResource } from "@nucleum/datafn/resource-query.utils";
   import NodeAvatar from "@nucleum/features/memory/node/avatar/NodeAvatar.svelte";
   import { webNodeTypeList } from "@nucleum/features/memory/node/node.type";
   import { resolveNodeLabelString } from "@nucleum/features/memory/node/node.utils";

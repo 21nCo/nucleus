@@ -13,7 +13,7 @@
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { ResourceError } from "@nucleum/application/error/errors";
+  import { ResourceError } from "@nucleum/datafn/resource-error";
   import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
   import type { IActiveObjectiveStore } from "@nucleum/features/focus/goals/goal.store";
   import { resolveObjectiveTypeIcon } from "@nucleum/features/focus/goals/goal.utils";

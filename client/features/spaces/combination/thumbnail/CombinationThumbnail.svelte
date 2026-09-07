@@ -1,7 +1,7 @@
 <script lang="ts">
   import AvatarRenderer from "@nucleum/client/elements/avatarPicker/AvatarRenderer.svelte";
   import Icon from "@nucleum/client/elements/Icon.svelte";
-  import ResourceGridThumbnail from "@nucleum/application/record/thumbnail/ResourceGridThumbnail.svelte";
+  import ResourceGridThumbnail from "@nucleum/components/records/ResourceGridThumbnail.svelte";
   import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
   import {
     ResourceAccessPoint,

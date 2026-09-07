@@ -15,8 +15,8 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
     type IObjective,
     type IObjectiveThumb
   } from "@nucleum/features/focus/goals/goal.type";
-  import modalEvent from "@nucleum/application/modal/modal.store";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
   import { Product } from "@nucleum/client/config/product.type";
   import { appStore } from "@nucleum/stores/app.store";
@@ -27,7 +27,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import context from "@nucleum/stores/context.store";
   import { Embed } from "@nucleum/client/runtime/context.type";
   import ObjectiveSearchResultItem from "@nucleum/features/focus/goals/GoalSearchResultItem.svelte";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { assertDatafnMutationSucceeded } from "@nucleum/datafn/mutation.utils";

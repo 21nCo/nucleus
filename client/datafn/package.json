@@ -29,6 +29,8 @@
     "./datafn.type": "./datafn.type.ts",
     "./observable-store.type": "./observable-store.type.ts",
     "./e2ee.type": "./e2ee.type.ts",
-    "./optimisticKv.type": "./optimisticKv.type.ts"
+    "./optimisticKv.type": "./optimisticKv.type.ts",
+    "./resource-query.utils": "./resource-query.utils.ts",
+    "./resource-error": "./resource-error.ts"
   }
 }

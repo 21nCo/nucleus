@@ -6,7 +6,7 @@
   import view from "@nucleum/stores/view.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
-  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+  import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";

@@ -14,7 +14,7 @@
   import { Size } from "@21n/elements/size.enum";
   import { Display } from "@21n/elements/display.enum";
   import { formatDatetime } from "@21n/utils/time.utils";
-  import { player } from "@nucleum/application/modal/modal.store";
+  import { player } from "@nucleum/stores/overlays/modal.store";
   import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
   import CommandBar from "@nucleum/application/commandBar/CommandBar.svelte";

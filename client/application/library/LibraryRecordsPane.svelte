@@ -9,7 +9,7 @@
   import { AccessMode, ResourceAccessPoint, ResourceAccessPointState } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { BulkEditor } from "@nucleum/application/record/record.store";
-  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
 
   import LibrarySearchBox from "@nucleum/application/library/LibrarySearchBox.svelte";
   import { CollectionType } from "@nucleum/features/collections/collection.type";

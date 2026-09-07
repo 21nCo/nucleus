@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { confirmationNotification } from "@nucleum/stores/notification.store";
   import { fade } from "svelte/transition";
-  import ModalHeader from "@nucleum/application/modal/ModalHeader.svelte";
+  import ModalHeader from "@21n/elements/modal/ModalHeader.svelte";
   import { generateUID } from "@21n/utils/utils";
   import { Size } from "@21n/elements/size.enum";
   import { Orientation, Placement } from "@21n/elements/direction.enum";

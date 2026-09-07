@@ -25,6 +25,14 @@ const files = execFileSync(
 const sourceFiles = new Set(files);
 const edges = [];
 const retiredImports = [];
+const retiredApplicationPaths = new Set(
+  JSON.parse(
+    fs.readFileSync(
+      path.join(root, "tools/check/retired-application-paths.json"),
+      "utf8"
+    )
+  ).map((file) => file.replace(/\.(ts|svelte)$/, ""))
+);
 
 /** Resolves aliases and relative source imports before applying ownership rules. */
 function resolveImport(specifier, importer) {
@@ -105,6 +113,15 @@ for (const file of files) {
             reason: "Retired type package"
           });
         const target = resolveImport(specifier, file);
+        if (
+          target &&
+          retiredApplicationPaths.has(target.replace(/\.(ts|svelte)$/, ""))
+        )
+          retiredImports.push({
+            from: file,
+            to: target,
+            reason: "Relocated reusable application module"
+          });
         if (target) edges.push({ from: file, to: target });
       }
       ts.forEachChild(node, visit);
@@ -116,6 +133,11 @@ for (const file of files) {
 const production = ({ from }) =>
   !/\.(test|spec)\./.test(from) && !from.includes("/tests/");
 const violations = edges.filter(production).filter(({ from, to }) => {
+  if (
+    from.startsWith("client/stores/overlays/") &&
+    /^client\/(application|features|products)\//.test(to)
+  )
+    return true;
   if (
     /^(schema|shared|services|server)\//.test(from) &&
     to.startsWith("client/")
@@ -146,6 +168,28 @@ const violations = edges.filter(production).filter(({ from, to }) => {
   return false;
 });
 violations.push(...retiredImports);
+const productionGraph = new Map();
+for (const { from, to } of edges.filter(production)) {
+  if (!productionGraph.has(from)) productionGraph.set(from, []);
+  productionGraph.get(from).push(to);
+}
+for (const root of productionGraph.keys()) {
+  if (!root.startsWith("client/stores/overlays/")) continue;
+  const pending = [...productionGraph.get(root)];
+  const visited = new Set();
+  while (pending.length) {
+    const target = pending.pop();
+    if (visited.has(target)) continue;
+    visited.add(target);
+    if (/^client\/(application|features|products)\//.test(target))
+      violations.push({
+        from: root,
+        to: target,
+        reason: "Overlay state transitively depends on composition"
+      });
+    pending.push(...(productionGraph.get(target) ?? []));
+  }
+}
 const contract = JSON.parse(
   fs.readFileSync(
     path.join(root, "tools/check/feature-entrypoints.json"),

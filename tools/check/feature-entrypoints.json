@@ -31,6 +31,7 @@
   "client/features/collections/thumbnail/CollectionThumbnail.svelte",
   "client/features/collections/thumbnail/CollectionThumbnailLabel.svelte",
   "client/features/files/FileView.svelte",
+  "client/features/files/file.constants.ts",
   "client/features/files/file.store.ts",
   "client/features/files/file.type.ts",
   "client/features/files/fileEmbedChannel.store.ts",

@@ -2,7 +2,7 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
@@ -11,7 +11,7 @@
     OptionSelectorStyle,
     type ISelectItem
   } from "@21n/elements/select/select.type";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   import { CombinationType } from "@nucleum/features/spaces/combination/combination.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";

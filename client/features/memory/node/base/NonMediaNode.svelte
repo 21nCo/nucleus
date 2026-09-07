@@ -1,7 +1,7 @@
 <script lang="ts">
   import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
-  import { updateActiveResource } from "@nucleum/application/record/active-resource.store";
+  import { updateActiveResource } from "@nucleum/stores/resources/active-resource.store";
   import NodeRightPane from "@nucleum/features/memory/node/rightPanel/NodeRightPane.svelte";
   import BottomFloat from "@21n/elements/BottomFloat.svelte";
   import NodeTitleBreadcrumbs from "@nucleum/features/memory/node/title/NodeTitleBreadcrumbs.svelte";

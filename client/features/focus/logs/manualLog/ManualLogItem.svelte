@@ -22,7 +22,7 @@
   import { Orientation } from "@21n/elements/direction.enum";
   import FocusNotes from "@nucleum/features/focus/notes/FocusNotes.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import { isPrimaryActionDisabled } from "@nucleum/application/modal/modal.store";
+  import { isPrimaryActionDisabled } from "@nucleum/stores/overlays/modal.store";
   import ObjectiveSearchResultItem from "@nucleum/features/focus/goals/GoalSearchResultItem.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";

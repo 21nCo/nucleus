@@ -36,6 +36,7 @@
     "./collections/thumbnail/CollectionThumbnail.svelte": "./collections/thumbnail/CollectionThumbnail.svelte",
     "./collections/thumbnail/CollectionThumbnailLabel.svelte": "./collections/thumbnail/CollectionThumbnailLabel.svelte",
     "./files/FileView.svelte": "./files/FileView.svelte",
+    "./files/file.constants": "./files/file.constants.ts",
     "./files/file.store": "./files/file.store.ts",
     "./files/file.type": "./files/file.type.ts",
     "./files/fileEmbedChannel.store": "./files/fileEmbedChannel.store.ts",

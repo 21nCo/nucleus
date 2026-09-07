@@ -11,7 +11,7 @@
   import view from "@nucleum/stores/view.store";
   import { Display } from "@21n/elements/display.enum";
   import { dispatchFocusPlayerPipRequest } from "@nucleum/features/focus/player/focusPlayer.events";
-  import modalEvent, { fullScreen } from "@nucleum/application/modal/modal.store";
+  import modalEvent, { fullScreen } from "@nucleum/stores/overlays/modal.store";
   let {
     isInFullScreen = false,
     parentBgIndex = 1

@@ -25,7 +25,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import view from "@nucleum/stores/view.store";
   import { Display } from "@21n/elements/display.enum";
-  import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
+  import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { Action } from "@nucleum/application/commandBar/action.enum";
   let {

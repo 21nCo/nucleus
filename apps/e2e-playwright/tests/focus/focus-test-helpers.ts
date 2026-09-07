@@ -16,7 +16,7 @@ const pointronStorePath = resolveRepoFsImportPath(
   "client/features/focus/preferences.store.ts"
 );
 const modalStorePath = resolveRepoFsImportPath(
-  "client/application/modal/modal.store.ts"
+  "client/stores/overlays/modal.store.ts"
 );
 
 export interface CreateFocusResourceOptions {

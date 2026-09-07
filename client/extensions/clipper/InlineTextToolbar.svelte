@@ -14,7 +14,7 @@
   import { debouncer } from "@21n/utils/utils";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceError } from "@nucleum/application/error/errors";
+  import { ResourceError } from "@nucleum/datafn/resource-error";
   import { ButtonVariant } from "@21n/elements/button/button.type";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/elements/size.enum";

@@ -12,7 +12,7 @@
   } from "@21n/elements/switcher/switcher.enum";
   import Text from "@21n/elements/text/Text.svelte";
   import { TextStyle } from "@21n/elements/text/text.enum";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import FocusItem from "@nucleum/features/focus/elements/focusitem/FocusItem.svelte";
@@ -32,7 +32,7 @@
   } from "@nucleum/features/focus/logs/log.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import Button from "@21n/elements/button/Button.svelte";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";

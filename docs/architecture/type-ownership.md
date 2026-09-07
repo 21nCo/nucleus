@@ -52,3 +52,8 @@ The share extension production build passes. Its check now reports two pre-exist
 `node tools/check/type-ownership.mjs` checks all recorded destinations and compares 199 runtime enum declarations to the baseline. `npm run check:architecture`, `npm run check:no-fixed-test-waits`, `npm run check:no-legacy-runtime`, `npm run lint` and the Turbo build graph dry-run pass. Lint has no package lint scripts and runs the configured static build prerequisite; it is not a claim of repository-wide formatting or ESLint coverage. Existing source aliases remain build-time dependencies; they are not indiscriminately added as workspace dependencies, which would create Turbo cycles. Contract consumers use the schema dependency and the existing frontend package/alias model.
 
 Reproduce the browser checks with `node apps/e2e-playwright/scripts/probe-review-session.mjs` and `node apps/e2e-playwright/scripts/probe-markdown-ownership.mjs` while the local product server is running. Neither requires existing user data; each runs in a fresh offline browser context. Full cross-product Playwright, live auth/sync, native app packaging and production deployment were not exercised.
+
+
+## Subsequent overlay/resource ownership refinement
+
+TIDY-477 moves reusable popup contracts to `client/elements/modal`, overlay state to `client/stores/overlays`, active-resource/selection state to `client/stores/resources`, and generic ResourceError to DataFn. The default error message belongs to notification state. The inventory destinations follow these moves so baseline enum validation stays reproducible. See client-boundaries.md for the permanent overlay host contract and the remaining application-specific dependencies.

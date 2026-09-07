@@ -2,9 +2,9 @@
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import TextArea from "@21n/elements/input/TextArea.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";

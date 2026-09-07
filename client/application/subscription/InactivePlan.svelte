@@ -10,7 +10,7 @@
   import { Size } from "@21n/elements/size.enum";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import RestorePurchaseAction from "@nucleum/application/subscription/RestorePurchaseAction.svelte";
   import { PlanType } from "@nucleum/schema/account/subscription";
 

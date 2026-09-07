@@ -1,5 +1,5 @@
 <script>
-  import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
+  import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { Orientation } from "@21n/elements/direction.enum";
   import { GatheryEvent } from "@nucleum/features/spaces/gatheryEvent.enum";

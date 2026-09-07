@@ -1,7 +1,7 @@
 <script lang="ts">
   import { tooltip } from "@nucleum/actions/popover.action";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
-  import RecordStarStatusFeedback from "@nucleum/application/record/RecordStarStatusFeedback.svelte";
+  import RecordStarStatusFeedback from "@nucleum/components/records/RecordStarStatusFeedback.svelte";
   import type { ICollectionThumb } from "@nucleum/features/collections/collection.type";
   import CollectionThumbnailAvatar from "@nucleum/features/collections/thumbnail/CollectionThumbnailAvatar.svelte";
   let {

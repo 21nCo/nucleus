@@ -14,7 +14,7 @@
     isRecordId
   } from "@nucleum/datafn/resource.utils";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
-  import { resolveResource } from "@nucleum/application/record/record.store";
+  import { resolveResource } from "@nucleum/datafn/resource-query.utils";
   import { appStore } from "@nucleum/stores/app.store";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Arrangement } from "@21n/elements/direction.enum";
   import { type ICollectionThumb } from "@nucleum/features/collections/collection.type";
-  import ResourceGridThumbnail from "@nucleum/application/record/thumbnail/ResourceGridThumbnail.svelte";
+  import ResourceGridThumbnail from "@nucleum/components/records/ResourceGridThumbnail.svelte";
   import Cover from "@nucleum/features/collections/thumbnail/Cover.svelte";
   import { Size } from "@21n/elements/size.enum";
   import {

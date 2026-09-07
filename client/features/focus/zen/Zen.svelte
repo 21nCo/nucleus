@@ -18,7 +18,7 @@
   import Extras from "@nucleum/features/focus/elements/controls/Extras.svelte";
   import SessionNotes from "@nucleum/features/focus/notes/SessionNotes.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { fullScreen } from "@nucleum/application/modal/modal.store";
+  import { fullScreen } from "@nucleum/stores/overlays/modal.store";
   import { page } from "$app/stores";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";

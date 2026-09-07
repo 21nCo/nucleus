@@ -12,7 +12,9 @@ import { IdentityProvider } from "@nucleum/client/runtime/account/oauth.type";
 import { dispatchCustomEvent, goto } from "@21n/utils/browser.utils";
 import { persistLocally, getDapId } from "@nucleum/persistence/persistence.utils";
 import { postDataToParent } from "@21n/utils/embed.utils";
-import modalEvent from "@nucleum/application/modal/modal.store";
+import modalEvent, {
+  configureOverlayHost
+} from "@nucleum/stores/overlays/modal.store";
 import view from "@nucleum/stores/view.store";
 import context from "@nucleum/stores/context.store";
 import {
@@ -1009,6 +1011,18 @@ export const appStore = {
     dispatchCustomEvent(GlobalEvent.ADD_TO_RECENTS, data);
   }
 };
+
+configureOverlayHost({
+  onDismiss: (action) => appEvents.nav(action),
+  openFullscreen: (path) =>
+    appStore.toggleSearchParam({
+      [AccessMode.FULL]: path,
+      [AccessMode.POP]: null
+    }),
+  closeFullscreen: () => appStore.toggleSearchParam([AccessMode.FULL]),
+  resolvePlayer: (path) =>
+    appStore.resolveComponentFromPath(path)?.associatedPlayer
+});
 
 export const isInEditMode = initEditModeStore();
 

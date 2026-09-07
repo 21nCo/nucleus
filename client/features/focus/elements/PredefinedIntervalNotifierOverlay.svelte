@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { activeSession } from "@nucleum/features/focus/session.store";
   import { SessionState } from "@nucleum/features/focus/sessionState.enum";

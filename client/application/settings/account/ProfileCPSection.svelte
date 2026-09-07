@@ -10,7 +10,7 @@
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import { bg, cn } from "@21n/utils/ui.utils";
   import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { Action } from "@nucleum/application/commandBar/action.enum";
   import {
     determineIfPlanIsActive,

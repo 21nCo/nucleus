@@ -15,7 +15,7 @@
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import PlanIcon from "@nucleum/application/subscription/elements/PlanIcon.svelte";
-  import modalEvent from "@nucleum/application/modal/modal.store";
+  import modalEvent from "@nucleum/stores/overlays/modal.store";
 
   function resolveRenewalDate() {
     return $account.plan?.plan ? resolveNextRenewalDate($account.plan) : undefined;
