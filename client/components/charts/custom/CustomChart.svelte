@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import "@carbon/charts/styles.css";
-  import { ChartType } from "@21n/types/analytics.type";
+  import { ChartType } from "@nucleum/components/charts/analytics.type";
   import {
     ChartTheme,
     ScaleTypes,

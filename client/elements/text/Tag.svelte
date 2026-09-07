@@ -3,14 +3,14 @@
   import { cn } from "@21n/utils/ui.utils";
   import { truncateString } from "@21n/shared-utils/text.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import type { IAvatar } from "@21n/types/avatar.type";
+  import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { Placement } from "@21n/types/direction.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { Placement } from "@21n/elements/direction.enum";
   import context from "@nucleum/stores/context.store";
-  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
+  import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
 
   let {

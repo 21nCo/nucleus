@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { ResourcePanelType } from "@21n/types/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
   import { cn } from "@21n/utils/ui.utils";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import NodeRightPanelContent from "@nucleum/features/memory/node/rightPanel/NodeRightPaneContent.svelte";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import view from "@nucleum/stores/view.store";
-  import { Display } from "@21n/types/view.type";
+  import { Display } from "@21n/elements/display.enum";
   let {
     node,
     mdId,

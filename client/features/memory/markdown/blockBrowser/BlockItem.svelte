@@ -4,7 +4,7 @@
   import Badge from "@21n/elements/text/Badge.svelte";
   import type { IBlockBrowserItem } from "@nucleum/features/memory/markdown/blockBrowser/blockBrowser.type";
   import { tooltip } from "@nucleum/actions/popover.action";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import MdShortcutText from "@nucleum/features/memory/markdown/shortcuts/MdShortcutText.svelte";
 
   let {

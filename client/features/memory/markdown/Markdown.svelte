@@ -12,17 +12,17 @@
     mdContentChangeEvent
   } from "@nucleum/features/memory/markdown/markdown.store";
   import Button from "@21n/elements/button/Button.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import Text from "@21n/elements/text/Text.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { isValidAndUniqueArray } from "@21n/shared-utils/obj.utils";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { setContext } from "svelte";
   import { generateMarkdownText } from "@nucleum/features/memory/node/node.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { get } from "svelte/store";
-  import { KeyboardKey } from "@21n/types/keyboard.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { KeyboardKey } from "@21n/elements/keyboard/keyboard.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import {
     reorderList,
@@ -40,16 +40,14 @@
   import { toasts } from "@nucleum/stores/notification.store";
   import { dragSelection } from "@nucleum/actions/dragSelection.action";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import {
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { bulkEditStore as globalBulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
-  import { ErrorMessage } from "@21n/types/resource-error.type";
+  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
   import { resizeListener } from "@nucleum/actions/resize.action";
   import { stringify } from "@21n/shared-utils/json.utils";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
 
   interface $$Events {
     action: CustomEvent<any>;

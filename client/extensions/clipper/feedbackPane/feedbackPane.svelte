@@ -9,7 +9,7 @@
   } from "@nucleum/extensions/clipper/contentScripts/store";
   import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import {
     NodeType,
@@ -18,13 +18,13 @@
   import { resolveContentTypeString } from "@nucleum/extensions/clipper/clipper.utils";
   import FeedbackPaneBase from "@nucleum/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
   import FileView from "@nucleum/features/files/FileView.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     determineResourceType,
     resourceInList
   } from "@nucleum/datafn/resource.utils";
   import NodeThumbnailTweetPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailTweetPreview.svelte";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import type { IWebpageStore } from "@nucleum/extensions/clipper/contentScripts/types";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { Resource } from "@nucleum/datafn/resource.enum";

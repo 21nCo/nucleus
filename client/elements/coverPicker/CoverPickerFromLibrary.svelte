@@ -4,12 +4,12 @@
   import Records from "@nucleum/application/record/Records.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { recentsStore } from "@nucleum/application/record/recent.store";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { activeResourceFilter } from "@21n/utils/utils";

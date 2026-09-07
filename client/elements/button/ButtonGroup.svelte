@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { ButtonStyle, type IButtonParams } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle, type IButtonParams } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import BoxButton from "./BoxButton.svelte";

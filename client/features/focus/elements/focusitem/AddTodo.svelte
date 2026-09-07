@@ -1,13 +1,13 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { Placement } from "@21n/types/direction.enum";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { ErrorMessage } from "@21n/types/resource-error.type";
+  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
 
   let {

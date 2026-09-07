@@ -1,14 +1,12 @@
 <script lang="ts">
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@21n/types/action.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { resolveResourceIcon } from "@nucleum/datafn/resource.utils";
-  import {
-    AccessMode,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import Writer from "@nucleum/features/memory/capture/Writer.svelte";
   import { CaptureMethod } from "@nucleum/features/memory/capture/capture.type";
@@ -23,30 +21,30 @@
   import { fly } from "svelte/transition";
   import HomeQuickAccess from "@nucleum/application/home/mobile/HomeQuickAccess.svelte";
   import type { IQuickAccessItem } from "@nucleum/application/home/home.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import CaptureTopBar from "@nucleum/features/memory/capture/CaptureTopBar.svelte";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { AlertType, type InlineToast } from "@21n/types/notification.type";
+  import { AlertType, type InlineToast } from "@nucleum/stores/notifications/notification.type";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { inlineToasts } from "@nucleum/stores/notification.store";
   import NotificationListener from "@21n/elements/listeners/NotificationListener.svelte";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import FileUploader from "@nucleum/features/memory/capture/FileUploader.svelte";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { quintOut } from "svelte/easing";
   import ResourceSearchBase from "@nucleum/products/memotron/library/search/ResourceSearchBase.svelte";
   import account from "@nucleum/stores/account.store";
-  import { UserDataMode } from "@21n/types/account.type";
+  import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { searchStore } from "@nucleum/application/search/index";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";

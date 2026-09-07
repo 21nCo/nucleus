@@ -1,11 +1,11 @@
 <script lang="ts">
   import { onDestroy } from "svelte";
   import LinkThumbnailItems from "@nucleum/features/memory/node/links/LinkThumbnailItems.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import InlineTimeoutMessage from "@21n/elements/text/InlineTimeoutMessage.svelte";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import { type IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import {
     type INode,
@@ -17,7 +17,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import LinkTagFilter from "@nucleum/features/memory/node/links/LinkTagFilter.svelte";
   import {
     determineResourceType,
@@ -30,12 +30,10 @@
   } from "@nucleum/application/record/record.store";
   import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import { toasts } from "@nucleum/stores/notification.store";
-  import {
-    ErrorMessage,
-    ResourceErrorCode
-  } from "@21n/types/resource-error.type";
+  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
   import { ResourceError } from "@nucleum/application/error/errors";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import Tag from "@21n/elements/text/Tag.svelte";
   import { resolveLinkTypeConfig } from "@nucleum/features/memory/linking/link.utils";
   import { datafn } from "@nucleum/datafn/datafn.store";

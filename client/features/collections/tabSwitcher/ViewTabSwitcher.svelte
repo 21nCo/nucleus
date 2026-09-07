@@ -11,7 +11,7 @@
     ICollectionItem,
     ICollectionView
   } from "@nucleum/features/collections/collection.type";
-  import type { ISelectItem, ISelectValue } from "@21n/types/select.type";
+  import type { ISelectItem, ISelectValue } from "@21n/elements/select/select.type";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
   import ViewTabs from "@nucleum/features/collections/tabSwitcher/ViewTabs.svelte";
 

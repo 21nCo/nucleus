@@ -7,11 +7,11 @@
   import { onMount } from "svelte";
   import AddTodo from "@nucleum/features/focus/elements/focusitem/AddTodo.svelte";
   import { formatSeconds } from "@21n/utils/time.utils";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Embed } from "@21n/types/context.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import context from "@nucleum/stores/context.store";
   import BreadcrumbMini from "@21n/elements/breadcrumb/BreadcrumbMini.svelte";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
@@ -20,7 +20,7 @@
   import type {
     IFocusItem,
     ISessionInterval
-  } from "@21n/types/pointron/session.type";
+  } from "@nucleum/features/focus/session.type";
   import { resolveTaskFocus } from "@nucleum/features/focus/session.utils";
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import {

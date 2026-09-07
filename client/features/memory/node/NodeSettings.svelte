@@ -1,7 +1,7 @@
 <script lang="ts">
   import SwitchInput from "$lib/client/elements/toggle/SwitchInput.svelte";
-  import { Size } from "$lib/client/types/size.enum";
-  import { InputStyle } from "$lib/client/types/input.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { preferences } from "$lib/client/stores/preferences/preferences.store";
   import { Preference, PreferencesScope } from "$lib/client/stores/preferences/preferences.type";
   import { appStore } from "$lib/client/stores/app.store";

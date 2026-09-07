@@ -3,9 +3,9 @@
   import {
     SessionCompositionType,
     type SessionComposition
-  } from "@21n/types/pointron/sessionComposition.type";
+  } from "@nucleum/features/focus/sessionComposition.type";
   import TimeSelector from "@nucleum/components/TimeSelector.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import { incrementTime } from "@21n/utils/time.utils";
   import ComposeBreak from "@nucleum/features/focus/advanced/composition/ComposeBreak.svelte";
   import ComposeTotalsText from "@nucleum/features/focus/advanced/composition/ComposeTotalsText.svelte";

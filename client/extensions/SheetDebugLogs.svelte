@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
 
   let {

@@ -1,4 +1,4 @@
-import { ResourceErrorCode } from "@21n/types/resource-error.type";
+import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
 
 export class ResourceError extends Error {
   constructor(

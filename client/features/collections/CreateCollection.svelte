@@ -2,11 +2,11 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import {
     CollectionLayout,
@@ -22,10 +22,8 @@
     resolveResourceIcon,
     resourceAction
   } from "@nucleum/datafn/resource.utils";
-  import {
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import {
     resolveCollectionResource,

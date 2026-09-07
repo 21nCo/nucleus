@@ -1,19 +1,19 @@
 import { get, writable } from "svelte/store";
 
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { TimerMode } from "@21n/types/pointron/timerMode.enum";
+import { TimerMode } from "@nucleum/features/focus/timerMode.enum";
 import {
   SessionCompositionType,
   type SessionComposition,
   BreakCompositionType
-} from "@21n/types/pointron/sessionComposition.type";
-import { ChartType } from "@21n/types/analytics.type";
-import { TimePeriodType, TimeScale } from "@21n/types/time.type";
-import { Layout } from "@21n/types/layout.type";
+} from "@nucleum/features/focus/sessionComposition.type";
+import { ChartType } from "@nucleum/components/charts/analytics.type";
+import { TimePeriodType, TimeScale } from "@21n/utils/time.type";
+import { Layout } from "@21n/layout/layout-mode.type";
 import type {
   HorizonChart,
   IPointronPreferences
-} from "@21n/types/pointron/pointronPreferences.type";
+} from "@nucleum/features/focus/preferences.type";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import { datafn } from "@nucleum/datafn/datafn.store";
 

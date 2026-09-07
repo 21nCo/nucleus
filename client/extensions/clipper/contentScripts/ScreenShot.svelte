@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ExtensionEvent } from "@21n/types/extension.type";
+  import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import { cn } from "@21n/utils/ui.utils";
   import { onMount, onDestroy } from "svelte";
   import type { IArea } from "@nucleum/extensions/clipper/contentScripts/types";

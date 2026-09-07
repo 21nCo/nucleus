@@ -1,15 +1,15 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import UploadButton from "@21n/elements/button/UploadButton.svelte";
   import Slider from "@21n/elements/slider/Slider.svelte";
   import { MediaGridType } from "@nucleum/features/memory/node/node.type";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import Button from "@21n/elements/button/Button.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
 
   let {
     config = $bindable(),

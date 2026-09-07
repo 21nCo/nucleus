@@ -1,7 +1,7 @@
 import {
   EmbedDataMessage,
   type EmbedMessage
-} from "@21n/types/embedMessage.enum";
+} from "@nucleum/application/embed/embedMessage.enum";
 import { postDataToParent } from "@21n/utils/embed.utils";
 import { wait } from "@21n/utils/time.utils";
 import type { IEmbedChannel } from "@nucleum/application/embed/embed.type";

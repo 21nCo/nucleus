@@ -3,21 +3,21 @@
   import LinkSearch from "@nucleum/features/memory/common/linkbox/LinkSearch.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { AlertType, type IInlineStatus } from "@21n/types/notification.type";
+  import { AlertType, type IInlineStatus } from "@nucleum/stores/notifications/notification.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import {
     determineResourceType,
     isSameResource
   } from "@nucleum/datafn/resource.utils";
   import type { ICollectionItemPropertyValue } from "@nucleum/features/collections/collection.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import type {
     INodeThumb,
     INodeLinkThumb
   } from "@nucleum/features/memory/node/node.type";
   import { LinkType } from "@nucleum/features/memory/linking/link.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
 
   let {

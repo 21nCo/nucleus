@@ -1,13 +1,13 @@
 <script lang="ts">
   import { reorderList } from "@nucleum/actions/rearrange.action";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { InputStyle } from "@21n/types/input.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import {
     TableCellDefaultAction,
     TableCellType,
     type TableColumn
-  } from "@21n/types/table.type";
+  } from "@21n/elements/table/table.type";
   import { cn } from "@21n/utils/ui.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";

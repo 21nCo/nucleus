@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { BellIconVariant, IconVariant } from "@21n/types/icon.type";
+  import { BellIconVariant, IconVariant } from "@21n/elements/icon.type";
 
   let {
     variant = IconVariant.Outline,

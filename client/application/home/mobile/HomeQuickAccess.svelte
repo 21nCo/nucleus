@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Badge from "@21n/elements/text/Badge.svelte";
   import type { IQuickAccessItem } from "@nucleum/application/home/home.type";
   let {

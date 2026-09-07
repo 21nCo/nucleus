@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import type { ExtensionEvent } from "@21n/types/extension.type";
+import type { ExtensionEvent } from "@nucleum/extensions/extension.type";
 
 import {
   openAppPath,

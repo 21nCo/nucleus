@@ -1,8 +1,8 @@
 import { appStore } from "@nucleum/stores/app.store";
-import { AppSearchParam } from "@21n/types/appStore.type";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { AppSearchParam } from "@nucleum/stores/appStore.type";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-import { ResourcePanelType } from "@21n/types/resource-panel.type";
+import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
 
 export const PanelSwitcherMixin = {
   switchPanel(

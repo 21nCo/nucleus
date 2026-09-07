@@ -1,5 +1,5 @@
-import { Resource } from "@nucleum/datafn/resource.enum";
-import { IRecordId, IResourceSelectParams } from "$lib/client/types/data.type";
+import { Resource } from "@nucleum/schema/resource.enum";
+import { IRecordId, IResourceSelectParams } from "@nucleum/schema/legacy/data.type";
 import { Agent } from "$lib/server/common/account/account.type";
 import {
   ISyncUpBody,
@@ -9,7 +9,7 @@ import {
   ICloneDownPaginateBody,
   IReconcileBody,
   ICloneDownPaginatev2Body
-} from "$lib/shared/types/sync.type";
+} from "@nucleum/schema/legacy/sync.type";
 
 export enum SyncProvider {
   SURREAL = "surreal",

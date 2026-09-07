@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { Orientation } from "@21n/types/direction.enum";
-  import { TimeUnit } from "@21n/types/time.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { TimeUnit } from "@21n/utils/time.type";
   import FormControlLabelWrapper from "@21n/elements/text/formLabel/FormControlLabelWrapper.svelte";
   import TimeInputWithSuggestions from "@21n/elements/input/durationInput/TimeInputWithSuggestions.svelte";
   import TimeUnitDropdown from "@21n/elements/input/durationInput/TimeUnitDropdown.svelte";
-  import type { InputLabel } from "@21n/types/input.type";
+  import type { InputLabel } from "@21n/elements/input/input.type";
   import { debouncer } from "@21n/utils/utils";
 
   let {

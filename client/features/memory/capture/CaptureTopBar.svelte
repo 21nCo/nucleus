@@ -1,17 +1,17 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import LinkboxOnCapture from "@nucleum/features/memory/common/linkbox/LinkboxOnCapture.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { CaptureMethod, type ICaptureLink } from "@nucleum/features/memory/capture/capture.type";
   import view from "@nucleum/stores/view.store";
   import Tag from "@21n/elements/text/Tag.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import Divider from "@21n/elements/Divider.svelte";
-  import { ColorStrength } from "@21n/types/appearance.type";
+  import { ColorStrength } from "@21n/theme/appearance.type";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
+  import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import CaptureTitle from "@nucleum/features/memory/capture/CaptureTitle.svelte";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
   import { LinkType } from "@nucleum/features/memory/linking/link.type";

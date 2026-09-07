@@ -5,11 +5,11 @@ import {
   type Component,
   type ComponentType
 } from "svelte";
-import { Placement } from "@21n/types/direction.enum";
-import { PopoverTriggerMethod } from "@21n/types/popover.type";
+import { Placement } from "@21n/elements/direction.enum";
+import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
 import { detectTouchDevice, getEventPath } from "@21n/utils/browser.utils";
 import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 
 interface TooltipReturn {
   update: (newParams: TooltipParams) => void;

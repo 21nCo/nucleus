@@ -1,4 +1,4 @@
-import { ICloneDownPaginateBody } from "$lib/shared/types/sync.type";
+import { ICloneDownPaginateBody } from "@nucleum/schema/legacy/sync.type";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { paginate as cloneDownPaginate } from "./index";
 import { performQueryOnBehalfOfUser } from "../../user/user";

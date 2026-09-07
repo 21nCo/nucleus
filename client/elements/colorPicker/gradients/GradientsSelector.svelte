@@ -2,7 +2,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import { gradientsList } from "@21n/elements/colorPicker/gradients/gradients";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let {
     value = "",
     onChange = undefined

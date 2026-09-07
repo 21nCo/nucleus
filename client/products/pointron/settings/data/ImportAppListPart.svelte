@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { ImportSource } from "@nucleum/products/pointron/settings/data/data.type";
 

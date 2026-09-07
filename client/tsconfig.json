@@ -125,26 +125,6 @@
       "@21n/utils/*": [
         "./utils/*"
       ],
-      "@21n/types": [
-        "./types/index.ts",
-        "./types/index.tsx",
-        "./types/index.js",
-        "./types/index.mjs",
-        "./types/index.cjs",
-        "./types/index.svelte",
-        "./types/index.d.ts",
-        "./types/src/index.ts",
-        "./types/src/index.tsx",
-        "./types/src/index.js",
-        "./types/src/index.mjs",
-        "./types/src/index.cjs",
-        "./types/src/index.svelte",
-        "./types/src/index.d.ts",
-        "./types"
-      ],
-      "@21n/types/*": [
-        "./types/*"
-      ],
       "@nucleum/products": [
         "./products/index.ts",
         "./products/index.tsx",
@@ -444,26 +424,6 @@
       ],
       "@nucleum/client/*": [
         "./*"
-      ],
-      "@21n/shared-types": [
-        "../shared/types/index.ts",
-        "../shared/types/index.tsx",
-        "../shared/types/index.js",
-        "../shared/types/index.mjs",
-        "../shared/types/index.cjs",
-        "../shared/types/index.svelte",
-        "../shared/types/index.d.ts",
-        "../shared/types/src/index.ts",
-        "../shared/types/src/index.tsx",
-        "../shared/types/src/index.js",
-        "../shared/types/src/index.mjs",
-        "../shared/types/src/index.cjs",
-        "../shared/types/src/index.svelte",
-        "../shared/types/src/index.d.ts",
-        "../shared/types"
-      ],
-      "@21n/shared-types/*": [
-        "../shared/types/*"
       ],
       "@21n/shared-utils": [
         "../shared/utils/index.ts",

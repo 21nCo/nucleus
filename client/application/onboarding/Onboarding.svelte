@@ -6,9 +6,9 @@
   import { appStore } from "@nucleum/stores/app.store";
   import appearance from "@nucleum/stores/appearance.store";
   import view from "@nucleum/stores/view.store";
-  import { Theme } from "@21n/types/appearance.type";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Theme } from "@21n/theme/appearance.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import type { IOnboardingConfig } from "@nucleum/application/onboarding/onboarding.type";
 

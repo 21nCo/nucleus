@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import type { ITaskThumb } from "./task.type";
-  import type { Arrangement } from "@21n/types/direction.enum";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { Arrangement } from "@21n/elements/direction.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import TaskThumbnail from "./TaskThumbnail.svelte";
   import TaskThumbnailObjectiveLabel from "./TaskThumbnailGoalLabel.svelte";

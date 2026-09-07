@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount } from "svelte";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { lazyLoad } from "@nucleum/actions/lazyload.action";

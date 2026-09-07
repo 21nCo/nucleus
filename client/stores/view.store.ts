@@ -1,5 +1,6 @@
 import { writable } from "svelte/store";
-import { Display, type IViewStore } from "@21n/types/view.type";
+import { Display } from "@21n/elements/display.enum";
+import { type IViewStore } from "@nucleum/stores/view.type";
 import { ObservableStore } from "@nucleum/stores/client.store";
 
 /**

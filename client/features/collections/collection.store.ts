@@ -11,31 +11,24 @@ import {
   type ICollectionViewCapture
 } from "@nucleum/features/collections/collection.type";
 import { propertyEditorStore } from "@nucleum/features/collections/properties/property.store";
-import {
-  AccessMode,
-  ResourceAccessPoint,
-  ResourceActionType
-} from "@nucleum/datafn/resource.type";
+import { AccessMode, ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { ResourceActions } from "@nucleum/application/record/resource.actions";
 import { logger } from "@nucleum/client/runtime/logging/logger";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import {
   assignDefaultLabelAsFallback,
   serializePropertyForDatafn
 } from "@nucleum/features/collections/properties/property.utils";
-import {
-  ContextMenuType,
-  type IContextMenu,
-  type IContextMenuItem
-} from "@21n/types/select.type";
+import { ContextMenuType, type IContextMenu, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
 import context from "@nucleum/stores/context.store";
 import { get } from "svelte/store";
 import { resourceAction } from "@nucleum/datafn/resource.utils";
 import { toasts } from "@nucleum/stores/notification.store";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-import { GlobalEvent } from "@21n/types/event.enum";
-import { Embed } from "@21n/types/context.type";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
+import { Embed } from "@nucleum/client/runtime/context.type";
 import { appStore } from "@nucleum/stores/app.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import view from "@nucleum/stores/view.store";

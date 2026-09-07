@@ -5,7 +5,7 @@
   import { activeSession } from "@nucleum/features/focus/session.store";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
   let audioRef: HTMLAudioElement;
   let src = $state<string | undefined>(undefined);
   onMount(() => {

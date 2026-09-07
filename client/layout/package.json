@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@datafn/svelte": "0.1.0"
+    "@datafn/svelte": "0.1.0",
+    "@nucleum/schema": "*"
   },
   "exports": {
     "./*": "./*"

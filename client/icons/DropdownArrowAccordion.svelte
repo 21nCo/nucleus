@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { AccordionState } from "@21n/types/accordionState.enum";
+  import { AccordionState } from "@21n/elements/accordion/accordionState.enum";
 
   let {
     width = 10,

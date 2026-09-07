@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import type { PointronConstants } from "@21n/types/pointron/pointronConstants.type";
+import type { PointronConstants } from "@nucleum/features/focus/pointronConstants.type";
 
 /**
  * @deprecated

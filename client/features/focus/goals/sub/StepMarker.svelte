@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { ObjectiveStatus, type IObjective } from "@nucleum/features/focus/goals/goal.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { hoverable } from "@nucleum/actions/hover.action";

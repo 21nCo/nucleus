@@ -2,11 +2,11 @@ import {
   SessionCompositionType,
   type SessionComposition,
   BreakCompositionType
-} from "@21n/types/pointron/sessionComposition.type";
+} from "@nucleum/features/focus/sessionComposition.type";
 import {
   type ISessionInterval,
   BlockType
-} from "@21n/types/pointron/session.type";
+} from "@nucleum/features/focus/session.type";
 import {
   type ISessionBase,
   SessionType

@@ -2,7 +2,7 @@
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import { hexToRGBA } from "@nucleum/features/memory/pdfAnnotator/pdfAnnotator.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import { getContext } from "svelte";
   import {
@@ -27,7 +27,7 @@
   import { derived } from "svelte/store";
   import Icon from "@21n/elements/Icon.svelte";
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   const contentContext = getContext<any>("content");
 
   let {

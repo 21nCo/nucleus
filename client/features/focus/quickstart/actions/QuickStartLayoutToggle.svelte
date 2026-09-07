@@ -5,8 +5,8 @@
     UIState,
     UIStateScope
   } from "@nucleum/stores/uiState/uiState.type";
-  import { Layout } from "@21n/types/layout.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Layout } from "@21n/layout/layout-mode.type";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount } from "svelte";
   let layout = refreshLayoutState();
   onMount(() => {

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { tooltip as tooltipAction } from "@nucleum/actions/popover.action";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { haptic } from "@21n/utils/embed.utils";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";

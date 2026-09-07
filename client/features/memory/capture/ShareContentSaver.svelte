@@ -2,11 +2,11 @@
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import NodeThumbnail from "@nucleum/features/memory/node/thumbnail/NodeThumbnail.svelte";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import FileView from "@nucleum/features/files/FileView.svelte";
   import {
     NodeType,
@@ -34,15 +34,15 @@
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import ButtonGroup from "@21n/elements/button/ButtonGroup.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType, type IInlineStatus } from "@21n/types/notification.type";
+  import { AlertType, type IInlineStatus } from "@nucleum/stores/notifications/notification.type";
   import LinkBoxOnSaver from "@nucleum/features/memory/capture/LinkBoxOnSaver.svelte";
   import {
     getSheetNodeByUrl,
     saveSheetNode
   } from "@nucleum/persistence/dexie/sheetStorage";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Action } from "@21n/types/action.enum";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { tick } from "svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { datafn } from "@nucleum/datafn/datafn.store";

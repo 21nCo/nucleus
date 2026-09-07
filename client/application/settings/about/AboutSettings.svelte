@@ -1,9 +1,9 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import A21nLogo from "@21n/branding/A21nLogo.svelte";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   let size = Size.md;
 </script>
 

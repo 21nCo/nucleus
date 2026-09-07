@@ -4,11 +4,11 @@
   import type { ICapture } from "@nucleum/features/memory/capture/capture.type";
   import { onMount } from "svelte";
   import DraftsPopover from "@nucleum/features/memory/capture/draftSelector/DraftsPopover.svelte";
-  import { Placement } from "@21n/types/direction.enum";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { datafn } from "@nucleum/datafn/datafn.store";

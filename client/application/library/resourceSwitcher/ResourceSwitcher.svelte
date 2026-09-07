@@ -2,13 +2,13 @@
   import type {
     IResourceSwitchItem,
     ISelectValue
-  } from "@21n/types/select.type";
+  } from "@21n/elements/select/select.type";
   import ResourceSwitcherItem from "@nucleum/application/library/resourceSwitcher/ResourceSwitcherItem.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
-  import { resolveResourceSwitcher } from "@nucleum/datafn/resource.utils";
+  import { resolveResourceSwitcher } from "@nucleum/application/library/resource-switcher.utils";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { properCase } from "@21n/shared-utils/text.utils";
   import {

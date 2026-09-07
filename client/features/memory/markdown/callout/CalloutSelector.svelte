@@ -2,7 +2,7 @@
   import Avatar from "@21n/elements/avatarPicker/Avatar.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { markdownSettings } from "@nucleum/features/memory/markdown/markdown.settings";
   import type { ICalloutSetting } from "@nucleum/features/memory/markdown/md.type";

@@ -1,7 +1,7 @@
 <script lang="ts">
   import view from "@nucleum/stores/view.store";
-  import { Product } from "@21n/types/product.type";
-  import { PlanType } from "@21n/shared-types/subscription.type";
+  import { Product } from "@nucleum/client/config/product.type";
+  import { PlanType } from "@nucleum/schema/account/subscription";
   let {
     type,
     product

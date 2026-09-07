@@ -1,15 +1,15 @@
 <script lang="ts">
   import { generateUID } from "@21n/utils/utils";
   import type { Snippet } from "svelte";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Check from "@21n/icons/Check.svelte";
-  import { InputStyle, type InputLabel } from "@21n/types/input.type";
+  import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
   import InputBaseElement from "@21n/elements/InputBaseElement.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Orientation } from "@21n/types/direction.enum";
-  import type { ISelectValue } from "@21n/types/select.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import type { ISelectValue } from "@21n/elements/select/select.type";
   let {
     options,
     selected = $bindable<ISelectValue[]>([]),

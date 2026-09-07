@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import type { IButtonParams } from "@21n/types/button.type";
+  import type { IButtonParams } from "@21n/elements/button/button.type";
   import BottomFloat from "@21n/elements/BottomFloat.svelte";
   import FloatingButtonItem from "@21n/elements/button/floating/FloatingButtonItem.svelte";
   let {

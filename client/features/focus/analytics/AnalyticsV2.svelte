@@ -4,9 +4,9 @@
   import Text from "@21n/elements/text/Text.svelte";
   import { appStore, isInEditMode } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { Size } from "@21n/types/size.enum";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { onMount } from "svelte";
   import {
     analyticsConfigStore,
@@ -15,7 +15,7 @@
   import AnalyticsPageView from "@nucleum/features/focus/analytics/page/AnalyticsPageView.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import {
     onAddPageClicked,
     onPagelabelChange,
@@ -23,11 +23,11 @@
     onPageRearrange
   } from "@nucleum/features/focus/analytics/analytics.utils";
   import { confirmationNotification } from "@nucleum/stores/notification.store";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { bg, cn } from "@21n/utils/ui.utils";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import Switch from "@21n/elements/toggle/Switch.svelte";
 
   const bgIndex = 2;

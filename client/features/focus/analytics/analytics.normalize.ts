@@ -10,7 +10,7 @@ import {
   TimePeriodType,
   TimeScale,
   type TimePeriod
-} from "@21n/types/time.type";
+} from "@21n/utils/time.type";
 
 type LegacyAnalyticsCard = Omit<Partial<IAnalyticsCard>, "grouping"> & {
   grouping?: AnalyticsCardGrouping | "TOP_LEVEL_GOALS";

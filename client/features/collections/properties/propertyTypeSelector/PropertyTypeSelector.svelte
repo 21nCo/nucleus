@@ -1,14 +1,14 @@
 <script lang="ts">
   import { popover } from "@nucleum/actions/popover.action";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Placement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import type { IProperty, PropertyType } from "@nucleum/features/collections/properties/property.type";
   import PropertyTypeSelectorPopover from "@nucleum/features/collections/properties/propertyTypeSelector/PropertyTypeSelectorPopover.svelte";
   import { autoPropertyOptions, propertyOptions } from "@nucleum/features/collections/properties/property.store";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     PropertyTypeGroup,
     PropertyTypeMode,

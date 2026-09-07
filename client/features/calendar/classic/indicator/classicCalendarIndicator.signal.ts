@@ -13,7 +13,7 @@ import {
   rootNodeTypeList
 } from "@nucleum/features/memory/node/node.type";
 import { datafnHeavyComputedSignalOptions } from "@nucleum/datafn/signalCache";
-import { TimeScaleUnit } from "@21n/types/time.type";
+import { TimeScaleUnit } from "@21n/utils/time.type";
 import { resolveIndicatorColor } from "@nucleum/features/calendar/classic/indicator/classicCalendarIndicator.utils";
 
 type ClassicCalendarIndicatorSignalInput = {

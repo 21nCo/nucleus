@@ -4,7 +4,7 @@
     resolveContentTypeForUrl,
     resolveContentTypeString
   } from "@nucleum/extensions/clipper/clipper.utils";
-  import { ExtensionEvent } from "@21n/types/extension.type";
+  import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import FeedbackPane from "@nucleum/extensions/clipper/feedbackPane/FeedbackPane.svelte";
   import Toolbar from "@nucleum/extensions/clipper/toolbar/Toolbar.svelte";
   import TextClipper from "@nucleum/extensions/clipper/contentScripts/TextClipper.svelte";
@@ -23,14 +23,14 @@
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import { ResourceError } from "@nucleum/application/error/errors";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import ToolbarPlacementHintBlock from "@nucleum/extensions/clipper/toolbar/ToolbarPlacementHintBlock.svelte";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { onDestroy, onMount } from "svelte";
   import { toolbarUnavailableUrlsList } from "@nucleum/features/memory/common/urlMap";
   import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { parse } from "@21n/shared-utils/json.utils";
   import ClipModal from "@nucleum/extensions/clipper/ClipModal.svelte";
   let { id }: { id: string } = $props();

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ChartType } from "@21n/types/analytics.type";
+  import { ChartType } from "@nucleum/components/charts/analytics.type";
   import Chart from "@nucleum/components/charts/Chart.svelte";
   import {
     determineTimePeriodv2,
@@ -8,14 +8,14 @@
   } from "@21n/utils/time.utils";
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { TimeScale } from "@21n/types/time.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TimeScale } from "@21n/utils/time.type";
   import { getCorrespoingHorizonFrequencyLabel } from "@21n/utils/time.utils";
   import {
     resolveSaturationAndLightness,
     retrieveCurrentColors
   } from "@21n/utils/theme.utils";
-  import { ChartVariant } from "@21n/types/chartVariant.enum";
+  import { ChartVariant } from "@nucleum/features/focus/analytics/chartVariant.enum";
   import appearance from "@nucleum/stores/appearance.store";
   import {
     AnalyticsCardGrouping,

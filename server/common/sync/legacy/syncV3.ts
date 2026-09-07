@@ -12,7 +12,7 @@ import {
   ISyncDownBody,
   ISyncUpBody,
   SyncMethod
-} from "$lib/shared/types/sync.type";
+} from "@nucleum/schema/legacy/sync.type";
 import { performQueryOnBehalfOfUser } from "../../user/user";
 import {
   resolveCountQuery,
@@ -20,7 +20,7 @@ import {
   resolveCloneDownPaginateQuery,
   resolveSyncDownQueryForV3
 } from "./sync.utils";
-import { Resource } from "@nucleum/datafn/resource.enum";
+import { Resource } from "@nucleum/schema/resource.enum";
 
 /**
  * Syncs the user data from clients to the database

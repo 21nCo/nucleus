@@ -1,6 +1,6 @@
 <script lang="ts">
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { enumToString, formatBytes } from "@21n/shared-utils/text.utils";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
@@ -12,7 +12,7 @@
   import BasicInfoItem from "@nucleum/features/memory/node/metadata/BasicInfoItem.svelte";
   import InfoCard from "@nucleum/features/memory/node/metadata/InfoCard.svelte";
 
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import type { DatafnDateValue } from "@nucleum/datafn/resource.type";
   import type { IAccessLog } from "@nucleum/features/system/accessLogging/accessLog.type";
   import { page } from "$app/stores";

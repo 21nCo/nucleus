@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { IBreadcrumbItem } from "@21n/elements/breadcrumbsV2/breadcrumbItem.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import Breadcrumbs from "@21n/elements/breadcrumbsV2/Breadcrumbs.svelte";
   import {
     headingNodeTypes,

@@ -12,14 +12,14 @@
     webNodeTypeList
   } from "@nucleum/features/memory/node/node.type";
   import context from "@nucleum/stores/context.store";
-  import { ColorStrength } from "@21n/types/appearance.type";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     BarStyle,
     PanelSwitcherStyle
-  } from "@21n/types/switcher.enum";
+  } from "@21n/elements/switcher/switcher.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { fly } from "svelte/transition";
@@ -28,8 +28,8 @@
   import { BlockAction } from "@nucleum/features/memory/markdown/md.type";
   import MdKeyboardKeysRow from "@nucleum/features/memory/markdown/toolbar/MdKeyboardKeysRow.svelte";
   import { getContext } from "svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { Context } from "@21n/types/appStore.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   const nodeContext = getContext<any>(Context.NODE);
 
   let {

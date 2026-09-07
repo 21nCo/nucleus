@@ -2,7 +2,7 @@
   import { onDestroy } from "svelte";
   import { fade } from "svelte/transition";
   import Icon from "$lib/client/elements/Icon.svelte";
-  import { Size } from "$lib/client/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "$lib/client/utils/ui.utils";
   import { browser } from "$app/environment";
   import {

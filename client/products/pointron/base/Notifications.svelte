@@ -5,13 +5,13 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import type { IEvent } from "@21n/types/event.type";
-  import { PointronEvent } from "@21n/types/pointron/pointronEvent.enum";
+  import type { IEvent } from "@21n/elements/input/event.type";
+  import { PointronEvent } from "@nucleum/features/focus/pointronEvent.enum";
   import { postNotificationToParent } from "@21n/utils/embed.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import context from "@nucleum/stores/context.store";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 
   let src = $state<string | null>(null);
   let body: string = "";

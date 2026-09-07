@@ -13,7 +13,7 @@ import {
   type WIDTH_HEIGHT
 } from "@nucleum/features/memory/pdfAnnotator/pdfAnnotator.type";
 import { PDFDocument, rgb } from "pdf-lib";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
 import { datafn } from "@nucleum/datafn/datafn.store";

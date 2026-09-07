@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/svelte";
 import VerticalSwitcher from "@21n/elements/switcher/VerticalSwitcher.svelte";
 import VerticalSwitcherBoundStory from "@21n/elements/switcher/VerticalSwitcherBoundStory.svelte";
-import { VerticalSwitcherStyle } from "@21n/types/switcher.enum";
-import { Size } from "@21n/types/size.enum";
-import { Placement } from "@21n/types/direction.enum";
+import { VerticalSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+import { Size } from "@21n/elements/size.enum";
+import { Placement } from "@21n/elements/direction.enum";
 
 const meta = {
   title: "Elements/Switcher/VerticalSwitcher",

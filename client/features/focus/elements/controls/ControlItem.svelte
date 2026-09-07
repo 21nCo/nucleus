@@ -1,13 +1,13 @@
 <script lang="ts">
   import Extend from "@21n/icons/Extend.svelte";
-  import { Control } from "@21n/types/pointron/control.enum";
+  import { Control } from "@nucleum/features/focus/elements/controls/control.enum";
   import { onMount } from "svelte";
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import ControlIcon from "@nucleum/features/focus/elements/controls/ControlIcon.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
   let {
     control,
     isProminent = false,

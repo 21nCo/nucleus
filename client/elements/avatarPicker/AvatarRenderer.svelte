@@ -1,9 +1,9 @@
 <script lang="ts">
   import FileView from "@nucleum/features/files/FileView.svelte";
   import context from "@nucleum/stores/context.store";
-  import { AvatarType, type IAvatar } from "@21n/types/avatar.type";
-  import { OperatingSystem } from "@21n/types/context.type";
-  import { Size } from "@21n/types/size.enum";
+  import { AvatarType, type IAvatar } from "@21n/elements/avatarPicker/avatar.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import "@fontsource/noto-color-emoji";
   import Icon from "@21n/elements/Icon.svelte";

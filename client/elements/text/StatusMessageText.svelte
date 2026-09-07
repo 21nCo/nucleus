@@ -2,7 +2,7 @@
   import {
     StatusMessageType,
     type StatusMessage
-  } from "@21n/types/statusMessage.type";
+  } from "@21n/elements/feedback/statusMessage.type";
   let {
     message,
   }: {

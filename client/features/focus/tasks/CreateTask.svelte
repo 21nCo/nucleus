@@ -2,15 +2,13 @@
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount } from "svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import {
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import {
     ObjectiveStatus,
@@ -20,14 +18,14 @@
   import modalEvent from "@nucleum/application/modal/modal.store";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
-  import { ModifierKey } from "@21n/types/keyboard.type";
+  import { ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import { toasts } from "@nucleum/stores/notification.store";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import ObjectiveSearchResultItem from "@nucleum/features/focus/goals/GoalSearchResultItem.svelte";
   import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";

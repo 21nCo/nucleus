@@ -4,7 +4,7 @@ import {
   CONTEXT,
   IActivity
 } from "$lib/server/common/account/account.type";
-import { IUserProfileInfo } from "$lib/shared/types/account.type";
+import { IUserProfileInfo } from "@nucleum/schema/account/profile.type";
 
 export enum DatabaseProvider {
   SURREAL = "surreal",

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { IconVariant } from "@21n/types/icon.type";
+  import { IconVariant } from "@21n/elements/icon.type";
 </script>
 
 <path d="M12 8L12 16" stroke-linecap="round" />

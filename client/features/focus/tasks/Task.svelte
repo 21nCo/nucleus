@@ -1,6 +1,6 @@
 <script lang="ts">
   import { untrack } from "svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     AccessMode,
     ResourceAccessPoint
@@ -10,27 +10,27 @@
   import { recentsStore } from "@nucleum/application/record/recent.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { InputStyle } from "@21n/types/input.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import Button from "@21n/elements/button/Button.svelte";
   import TaskCheckbox from "@nucleum/features/focus/tasks/TaskCheckbox.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { appStore } from "@nucleum/stores/app.store";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType, type IInlineStatus } from "@21n/types/notification.type";
+  import { AlertType, type IInlineStatus } from "@nucleum/stores/notifications/notification.type";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
   import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import {
     activeSession,
     currentFocusItem
   } from "@nucleum/features/focus/session.store";
   import Icon from "@21n/elements/Icon.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import RecordTrashBanner from "@nucleum/application/record/RecordTrashBanner.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import view from "@nucleum/stores/view.store";

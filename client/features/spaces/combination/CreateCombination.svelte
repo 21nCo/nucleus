@@ -1,16 +1,16 @@
 <script lang="ts">
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import {
     OptionSelectorStyle,
     type ISelectItem
-  } from "@21n/types/select.type";
+  } from "@21n/elements/select/select.type";
   import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
   import { CombinationType } from "@nucleum/features/spaces/combination/combination.type";
   import { datafn } from "@nucleum/datafn/datafn.store";

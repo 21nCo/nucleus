@@ -7,11 +7,11 @@
   import modalEvent from "@nucleum/application/modal/modal.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { toasts } from "@nucleum/stores/notification.store";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { assertDatafnMutationSucceeded } from "@nucleum/datafn/mutation.utils";

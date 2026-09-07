@@ -3,9 +3,9 @@
  * Used by both the app (product.config.ts) and E2E tests so menu changes
  * are made in one place only.
  */
-import { Product } from "@21n/types/product.type";
-import { Action } from "@21n/types/action.enum";
-import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+import { Product } from "@nucleum/client/config/product.type";
+import { Action } from "@nucleum/application/commandBar/action.enum";
+import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 
 /** Product navigation supplied by the application shell to capability components. */
 export const PRODUCT_NAV_CONTEXT = Symbol("product-navigation");

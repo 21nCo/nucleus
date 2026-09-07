@@ -1,12 +1,12 @@
 <script lang="ts">
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
   import type {
     FieldMappingConfig,
     FieldMappingValue,
     FieldMappingField
   } from "@nucleum/products/memotron/import/data.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
 
   let {
     fieldMappingConfig,

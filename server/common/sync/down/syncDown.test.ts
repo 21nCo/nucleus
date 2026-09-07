@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { syncDown } from "./index";
 import { Resource } from "$lib/client/components/flux/resourceStores/resource.enum";
-import { ISyncDownBody } from "$lib/shared/types/sync.type";
+import { ISyncDownBody } from "@nucleum/schema/legacy/sync.type";
 
 describe("syncDown", () => {
   it("should sync down records for given resources", async () => {

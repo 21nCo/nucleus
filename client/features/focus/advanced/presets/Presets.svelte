@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { SessionComposition } from "@21n/types/pointron/sessionComposition.type";
+  import type { SessionComposition } from "@nucleum/features/focus/sessionComposition.type";
   import PresetItem from "@nucleum/features/focus/advanced/presets/PresetItem.svelte";
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import { onMount } from "svelte";

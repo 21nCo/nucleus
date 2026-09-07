@@ -12,9 +12,9 @@ import { cloneUp } from "../cloneup";
 import { cloneDown } from "../clonedown";
 import { Resource } from "$lib/client/components/flux/resourceStores/resource.enum";
 import { SyncProviderFactory, SyncProvider } from "../providers";
-import { ISyncUpBody, ICloneUpBody } from "$lib/shared/types/sync.type";
+import { ISyncUpBody, ICloneUpBody } from "@nucleum/schema/legacy/sync.type";
 import { ResourceActionType } from "$lib/client/components/flux/resourceStores/resource.type";
-import { PersistenceActionType } from "$lib/client/types/data.type";
+import { PersistenceActionType } from "@nucleum/schema/legacy/data.type";
 import { createMutation } from "$lib/tests/fixtures";
 
 async function waitForClonedRecords(

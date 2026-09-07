@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/svelte";
 
 import MultiselectDropdown from "@21n/elements/dropdown/MultiselectDropdown.svelte";
-import { InputStyle } from "@21n/types/input.type";
+import { InputStyle } from "@21n/elements/input/input.type";
 
 const meta = {
   title: "Elements/Dropdown/MultiselectDropdown",

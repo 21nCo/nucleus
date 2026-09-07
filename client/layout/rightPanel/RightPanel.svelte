@@ -1,8 +1,8 @@
 <script lang="ts">
   import { cn } from "@21n/utils/ui.utils";
   import ComponentResolver from "../paint/ComponentResolver.svelte";
-  import type { IAction } from "@21n/types/action.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IAction } from "@nucleum/application/commandBar/action.type";
+  import { Size } from "@21n/elements/size.enum";
   import context from "@nucleum/stores/context.store";
   import { fly } from "svelte/transition";
   import { quadInOut } from "svelte/easing";

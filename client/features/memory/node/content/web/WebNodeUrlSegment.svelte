@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { IContextMenu } from "@21n/types/select.type";
+  import type { IContextMenu } from "@21n/elements/contextMenu/context-menu.type";
   import { appStore } from "@nucleum/stores/app.store";
   let { url }: { url: string } = $props();
   let copyLabel = $state("Copy link");

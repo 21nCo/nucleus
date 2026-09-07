@@ -1,15 +1,15 @@
 <script lang="ts">
   import AutocompleteResultItem from "@21n/elements/autocomplete/AutocompleteResultItem.svelte";
-  import type { AutocompleteListItemType } from "@21n/types/autocompleteListItem.type";
+  import type { AutocompleteListItemType } from "@21n/elements/autocomplete/autocompleteListItem.type";
   import { generateUID } from "@21n/utils/utils";
-  import { TextInputStyle } from "@21n/types/textinput.enum";
+  import { TextInputStyle } from "@21n/elements/autocomplete/textinput.enum";
   import Chip from "@21n/elements/autocomplete/Chip.svelte";
-  import { ChipVariant } from "@21n/types/chipVariant.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { ChipVariant } from "@21n/elements/autocomplete/chipVariant.enum";
+  import { Size } from "@21n/elements/size.enum";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   let {
     listContainerStyle = "",
     listItemStyle = "",

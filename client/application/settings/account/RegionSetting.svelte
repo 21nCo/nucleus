@@ -1,8 +1,8 @@
 <script lang="ts">
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import view from "@nucleum/stores/view.store";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import regions from "$lib/deployment/regions.json";
   let {
     region = $bindable(""),

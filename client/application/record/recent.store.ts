@@ -3,7 +3,7 @@ import {
   resolveProductResources
 } from "@nucleum/datafn/resource.utils";
 import { ObservableStore } from "@nucleum/stores/client.store";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { resourceInList } from "@nucleum/datafn/resource.utils";
 import type { IRecentsStore } from "@nucleum/application/record/record.type";

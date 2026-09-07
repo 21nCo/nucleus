@@ -1,8 +1,8 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
-  import { InputStyle, type InputLabel } from "@21n/types/input.type";
+  import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
   import FormElement from "@21n/elements/FormElement.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { popover } from "@nucleum/actions/popover.action";

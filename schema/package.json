@@ -15,6 +15,15 @@
     "./resource.enum": "./resource.enum.ts",
     "./product.config": "./product.config.ts",
     "./product.type": "./product.type.ts",
-    "./*": "./*"
+    "./*": "./*",
+    "./resource-error.enum": "./resource-error.enum.ts",
+    "./index": "./index.ts",
+    "./legacy/data.type": "./legacy/data.type.ts",
+    "./legacy/sync.type": "./legacy/sync.type.ts",
+    "./legacy/resource-action.enum": "./legacy/resource-action.enum.ts",
+    "./account/profile.type": "./account/profile.type.ts",
+    "./account/payment-provider": "./account/payment-provider.ts",
+    "./account/subscription": "./account/subscription.ts",
+    "./legacy/store-data-type.enum": "./legacy/store-data-type.enum.ts"
   }
 }

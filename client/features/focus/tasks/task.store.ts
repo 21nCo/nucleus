@@ -1,13 +1,11 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { type IRecordId } from "@21n/types/data.type";
+import { type IRecordId } from "@nucleum/schema/legacy/data.type";
 import type { ITask } from "@nucleum/features/focus/tasks/task.type";
-import {
-  ResourceAccessPoint,
-  ResourceActionType
-} from "@nucleum/datafn/resource.type";
-import type { IContextMenu, IContextMenuItem } from "@21n/types/select.type";
+import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+import type { IContextMenu, IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
 import { appStore } from "@nucleum/stores/app.store";
-import { Action } from "@21n/types/action.enum";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import { get } from "svelte/store";
 import view from "@nucleum/stores/view.store";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
@@ -24,7 +22,7 @@ import { activeSession } from "@nucleum/features/focus/session.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
 import { BulkEditor } from "@nucleum/application/record/record.store";
-import { Product } from "@21n/types/product.type";
+import { Product } from "@nucleum/client/config/product.type";
 
 class TaskActions {
   constructor(

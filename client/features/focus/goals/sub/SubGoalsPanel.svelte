@@ -7,10 +7,10 @@
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { cn } from "@21n/utils/ui.utils";
   import {
     activeResourceFilterIgnoreAncestorInactive,

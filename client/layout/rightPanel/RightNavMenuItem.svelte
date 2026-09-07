@@ -3,10 +3,10 @@
   import { popover } from "@nucleum/actions/popover.action";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Placement } from "@21n/types/direction.enum";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let {
     icon,
     tooltip,

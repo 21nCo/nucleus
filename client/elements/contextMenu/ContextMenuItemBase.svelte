@@ -2,11 +2,8 @@
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import {
-    ContextMenuType,
-    type IContextMenuItem
-  } from "@21n/types/select.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ContextMenuType, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
   import Badge from "@21n/elements/text/Badge.svelte";
   import Switch from "@21n/elements/toggle/Switch.svelte";
   let {

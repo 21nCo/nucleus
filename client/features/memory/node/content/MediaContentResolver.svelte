@@ -15,7 +15,7 @@
   import { fileStore } from "@nucleum/features/files/file.store";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { formatBytes } from "@21n/shared-utils/text.utils";
   import { resolveFileIcon } from "@nucleum/features/memory/node/node.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";

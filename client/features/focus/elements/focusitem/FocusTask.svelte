@@ -8,16 +8,16 @@
     ISessionInterval,
     IFocusItem,
     ICurrentFocusItem
-  } from "@21n/types/pointron/session.type";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
+  } from "@nucleum/features/focus/session.type";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import view from "@nucleum/stores/view.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { onMount } from "svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
   import { resolveTaskFocus } from "@nucleum/features/focus/session.utils";

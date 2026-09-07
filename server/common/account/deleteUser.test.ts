@@ -9,7 +9,7 @@ import { ValidationError } from "../errors";
 import { generateRandomIdv2 } from "$lib/shared/utils/crypto.utils";
 import { Resource } from "$lib/client/components/flux/resourceStores/resource.enum";
 import { ResourceActionType } from "$lib/client/components/flux/resourceStores/resource.type";
-import { PersistenceActionType } from "$lib/client/types/data.type";
+import { PersistenceActionType } from "@nucleum/schema/legacy/data.type";
 import { createMutation } from "$lib/tests/fixtures/mutations";
 
 describe("deleteUserAccount integration tests", () => {

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import context from "@nucleum/stores/context.store";
-  import { ModifierKey } from "@21n/types/keyboard.type";
+  import { ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import { resolveShortcutText } from "@nucleum/application/shortcuts/shortcut.utils";
   import { BlockAction, InlineType } from "@nucleum/features/memory/markdown/md.type";
 

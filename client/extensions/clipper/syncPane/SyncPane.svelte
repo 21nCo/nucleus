@@ -6,10 +6,10 @@
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import Button from "@21n/elements/button/Button.svelte";
   import { SyncStatus } from "@nucleum/extensions/clipper/contentScripts/types";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";

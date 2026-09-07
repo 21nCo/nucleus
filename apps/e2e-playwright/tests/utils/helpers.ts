@@ -3,7 +3,7 @@ import {
   getAppMenuNavLabels,
   getProductNavConfig
 } from "@nucleum/client/config/product-nav.config";
-import { Product } from "@21n/types/product.type";
+import { Product } from "@nucleum/client/config/product.type";
 import { requireE2EProduct, type SurfaceKey } from "../../config/e2e.config";
 import {
   isE2ECloudAuthMode,

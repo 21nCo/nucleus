@@ -1,18 +1,18 @@
 <script lang="ts">
   import { cn } from "@21n/utils/ui.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import PlanFeatureList from "@nucleum/application/subscription/elements/PlanFeatureList.svelte";
-  import type { IPlan } from "@21n/shared-types/subscription.type";
+  import type { IPlan } from "@nucleum/application/subscription/plan-presentation.type";
   import {
     BillingCycle,
     PlanType
-  } from "@21n/shared-types/subscription.type";
+  } from "@nucleum/schema/account/subscription";
   import account from "@nucleum/stores/account.store";
   import PlanIcon from "@nucleum/application/subscription/elements/PlanIcon.svelte";
   import Divider from "@21n/elements/Divider.svelte";
-  import { PlanStatus, type IUserPlan } from "@21n/types/account.type";
+  import { PlanStatus, type IUserPlan } from "@nucleum/schema/account/subscription";
   import { appStore } from "@nucleum/stores/app.store";
   import { properCase } from "@21n/shared-utils/text.utils";
   import view from "@nucleum/stores/view.store";

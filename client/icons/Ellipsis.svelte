@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Orientation } from "@21n/types/direction.enum";
-  import { IconVariant } from "@21n/types/icon.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { IconVariant } from "@21n/elements/icon.type";
 
   let {
     orientation = Orientation.Horizontal,

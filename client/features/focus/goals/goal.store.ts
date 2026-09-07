@@ -1,8 +1,8 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
 import { PanelSwitcherMixin } from "@nucleum/application/resource/panelSwitcher.mixin";
-import { ResourcePanelType } from "@21n/types/resource-panel.type";
-import { type IRecordId } from "@21n/types/data.type";
+import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+import { type IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type {
   IActiveObjective,
@@ -11,29 +11,21 @@ import type {
 } from "@nucleum/features/focus/goals/goal.type";
 import { ObjectiveStatus, ObjectiveType } from "@nucleum/features/focus/goals/goal.type";
 import { updateObjectiveParent } from "@nucleum/features/focus/goals/goal.utils";
-import {
-  AccessMode,
-  ResourceAccessPoint,
-  ResourceActionType,
-  type IResourceMutationParams
-} from "@nucleum/datafn/resource.type";
+import { AccessMode, ResourceAccessPoint, type IResourceMutationParams } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { ResourceActions } from "@nucleum/application/record/resource.actions";
-import {
-  ContextMenuType,
-  type IContextMenu,
-  type IContextMenuItem
-} from "@21n/types/select.type";
+import { ContextMenuType, type IContextMenu, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
 import { CollectibleStore } from "@nucleum/features/collections/collectible.store";
 import { activeSession } from "@nucleum/features/focus/session.store";
 import { get } from "svelte/store";
 import { appStore } from "@nucleum/stores/app.store";
 import context from "@nucleum/stores/context.store";
-import { Embed } from "@21n/types/context.type";
+import { Embed } from "@nucleum/client/runtime/context.type";
 import view from "@nucleum/stores/view.store";
 import { resolveCollectionTypes } from "@nucleum/features/collections/collection.utils";
 import type { ICollectionExpanded } from "@nucleum/features/collections/collection.type";
 import { resolveResourceIcon } from "@nucleum/datafn/resource.utils";
-import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
 
 function pruneUndefined(input: Record<string, unknown>) {

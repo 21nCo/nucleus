@@ -1,7 +1,7 @@
 <script>
   import { fullScreen } from "@nucleum/application/modal/modal.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
   import IntervalBar from "@nucleum/features/focus/elements/intervalbar/IntervalBar.svelte";
   import FocusPlayerTimeText from "@nucleum/features/focus/player/FocusPlayerTimeText.svelte";
 </script>

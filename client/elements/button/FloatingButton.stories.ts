@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/svelte";
 
 import FloatingButton from "@21n/elements/button/FloatingButton.svelte";
-import { Size } from "@21n/types/size.enum";
-import { ButtonVariant } from "@21n/types/button.type";
+import { Size } from "@21n/elements/size.enum";
+import { ButtonVariant } from "@21n/elements/button/button.type";
 
 const meta: Meta<FloatingButton> = {
   component: FloatingButton,

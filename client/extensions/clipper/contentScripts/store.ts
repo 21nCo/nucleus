@@ -1,9 +1,7 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { DfqlRelations } from "@datafn/core";
-import {
-  ErrorMessage,
-  ResourceErrorCode
-} from "@21n/types/resource-error.type";
+import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
 import { ResourceError } from "@nucleum/application/error/errors";
 import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
@@ -52,10 +50,10 @@ import {
 } from "@nucleum/features/memory/node/url.utils";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { appEvents } from "@nucleum/stores/notification.store";
-import type { IRecordId } from "@21n/types/data.type";
-import { Placement } from "@21n/types/direction.enum";
-import { ExtensionEvent } from "@21n/types/extension.type";
-import { AlertType } from "@21n/types/notification.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+import { Placement } from "@21n/elements/direction.enum";
+import { ExtensionEvent } from "@nucleum/extensions/extension.type";
+import { AlertType } from "@nucleum/stores/notifications/notification.type";
 import { get, writable } from "svelte/store";
 
 import {

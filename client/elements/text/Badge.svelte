@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { abg, bg, cn } from "@21n/utils/ui.utils";
   let {
     size = Size.md,

@@ -4,8 +4,8 @@
   import {
     OptionSelectorStyle,
     type ISelectItem
-  } from "@21n/types/select.type";
-  import { Size } from "@21n/types/size.enum";
+  } from "@21n/elements/select/select.type";
+  import { Size } from "@21n/elements/size.enum";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
@@ -16,14 +16,14 @@
   import type { NodeType } from "@nucleum/features/memory/node/node.type";
   import type { CollectionType } from "@nucleum/features/collections/collection.type";
   import view from "@nucleum/stores/view.store";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import type { SubType } from "@nucleum/application/library/library.type";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { cn } from "@21n/utils/ui.utils";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { page } from "$app/stores";
   import { fade } from "svelte/transition";
   import { datafn } from "@nucleum/datafn/datafn.store";

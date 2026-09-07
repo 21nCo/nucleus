@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/svelte";
 
 import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-import { InputStyle } from "@21n/types/input.type";
+import { InputStyle } from "@21n/elements/input/input.type";
 
 const meta = {
   title: "Elements/Dropdown/DropDown",

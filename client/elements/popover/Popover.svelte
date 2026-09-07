@@ -1,13 +1,13 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { Placement } from "@21n/types/direction.enum";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import {
     type IPopoverOptions,
     type IPopoverRenderParams,
     PopoverTriggerMethod
-  } from "@21n/types/popover.type";
+  } from "@nucleum/actions/popover.type";
   import {
     dispatchCustomEvent,
     renderPopover

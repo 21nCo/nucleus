@@ -5,16 +5,16 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { ColorStrength } from "@21n/types/appearance.type";
-  import { Orientation, Placement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
+  import { Orientation, Placement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
   import LinkSearch from "@nucleum/features/memory/common/linkbox/LinkSearch.svelte";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceError } from "@nucleum/application/error/errors";
-  import { ResourceErrorCode } from "@21n/types/resource-error.type";
+  import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
   import type { IActiveObjectiveStore } from "@nucleum/features/focus/goals/goal.store";
   import { resolveObjectiveTypeIcon } from "@nucleum/features/focus/goals/goal.utils";
   import { enumToString } from "@21n/shared-utils/text.utils";
@@ -22,7 +22,7 @@
     AccessMode,
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
 
   let {
     objective,

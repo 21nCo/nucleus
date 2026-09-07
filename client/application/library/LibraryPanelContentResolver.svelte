@@ -4,9 +4,9 @@
   import { page } from "$app/stores";
   import view from "@nucleum/stores/view.store";
   import LibraryRecordsPane from "@nucleum/application/library/LibraryRecordsPane.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { isValidEnumValue } from "@21n/shared-utils/text.utils";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 
   let { defaultResource = Resource.node }: { defaultResource?: Resource } =
     $props();

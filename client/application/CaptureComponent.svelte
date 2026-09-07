@@ -1,11 +1,11 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { HapticFeedback } from "@21n/types/haptic.enum";
-  import { IconVariant } from "@21n/types/icon.type";
-  import { Size } from "@21n/types/size.enum";
+  import { HapticFeedback } from "@nucleum/application/embed/haptic.enum";
+  import { IconVariant } from "@21n/elements/icon.type";
+  import { Size } from "@21n/elements/size.enum";
   import { hapticFeedback, postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   type restrictedlengthArray = [string, string, string, string];
   let {
     IconsList = ["play", "camera", "video-camera", "music"]

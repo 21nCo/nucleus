@@ -4,10 +4,10 @@
   import { afterNavigate } from "$app/navigation";
   import { page } from "$app/stores";
   import type { Page } from "@sveltejs/kit";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import context from "@nucleum/stores/context.store";
-  import type { IAction } from "@21n/types/action.type";
+  import type { IAction } from "@nucleum/application/commandBar/action.type";
   import { onDestroy, onMount } from "svelte";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import { resolveProductConfig } from "@nucleum/products/product.config";

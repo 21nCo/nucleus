@@ -10,7 +10,7 @@ import {
   ISyncDownBody,
   ISyncUpBody,
   SyncMethod
-} from "$lib/shared/types/sync.type";
+} from "@nucleum/schema/legacy/sync.type";
 import { performQueryOnBehalfOfUser } from "../../user/user";
 import {
   resolveCountQuery,

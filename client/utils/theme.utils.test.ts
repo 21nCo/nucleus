@@ -1,10 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-import {
-  ColorStrength,
-  Theme,
-  type AppearanceStore
-} from "@21n/types/appearance.type";
+import { ColorStrength, Theme } from "@21n/theme/appearance.type";
+import { type AppearanceStore } from "@nucleum/stores/appearance.type";
 
 import {
   customColor,

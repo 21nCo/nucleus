@@ -1,8 +1,8 @@
 <script lang="ts">
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import type { IAvatar } from "@21n/types/avatar.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
+  import { Size } from "@21n/elements/size.enum";
   import {
     type IActiveNode,
     type INode,
@@ -21,7 +21,7 @@
     type ICollectionExpanded
   } from "@nucleum/features/collections/collection.type";
   import { isValidAvatar } from "@21n/elements/avatarPicker/avatar.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 
   type NodeCollectionReference = IRecordId | ICollectionExpanded;
   type NodeAvatarNode =

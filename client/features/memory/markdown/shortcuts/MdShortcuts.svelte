@@ -1,7 +1,7 @@
 <script lang="ts">
   import Table2 from "@21n/elements/table/Table2.svelte";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
-  import { TableCellType } from "@21n/types/table.type";
+  import { TableCellType } from "@21n/elements/table/table.type";
   import { BlockAction } from "@nucleum/features/memory/markdown/md.type";
   import MdShortcutText from "@nucleum/features/memory/markdown/shortcuts/MdShortcutText.svelte";
   const data = [

@@ -1,4 +1,4 @@
-import { TimeScale } from "@21n/types/time.type";
+import { TimeScale } from "@21n/utils/time.type";
 import CustomDatePicker from "@21n/elements/datetime/absolute/AbsoluteTimeRangePopover.svelte";
 
 export default {

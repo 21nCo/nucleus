@@ -1,7 +1,7 @@
 <script lang="ts">
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import type { INodeThumb } from "@nucleum/features/memory/node/node.type";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import Records from "@nucleum/application/record/Records.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";

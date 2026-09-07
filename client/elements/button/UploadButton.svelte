@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { EventHandler } from "svelte/elements";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import Button from "@21n/elements/button/Button.svelte";
 
   let {

@@ -1,4 +1,4 @@
-import { Product } from "@21n/types/product.type";
+import { Product } from "@nucleum/client/config/product.type";
 import { expect, type Locator, type Page } from "@playwright/test";
 import type { E2EProduct, SurfaceKey } from "../../config/e2e.config";
 import {

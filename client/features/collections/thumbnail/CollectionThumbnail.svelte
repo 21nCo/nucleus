@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { type ICollectionThumb } from "@nucleum/features/collections/collection.type";
   import ResourceGridThumbnail from "@nucleum/application/record/thumbnail/ResourceGridThumbnail.svelte";
   import Cover from "@nucleum/features/collections/thumbnail/Cover.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     ResourceAccessPoint,
     ResourceAccessPointState

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { popover } from "@nucleum/actions/popover.action";
-  import type { IButtonParams } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IButtonParams } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
     let {

@@ -1,7 +1,7 @@
 <script lang="ts">
   import "@nucleum/client/app.css";
   import ClipsPane from "@nucleum/extensions/clipper/sidePanel/clips/ClipsPane.svelte";
-  import { ExtensionEvent } from "@21n/types/extension.type";
+  import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import { onDestroy, onMount } from "svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
@@ -12,13 +12,13 @@
   import type { IClip } from "@nucleum/features/memory/node/node.type";
   import ExtensionBaseLayer from "@nucleum/extensions/ExtensionBaseLayer.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import account from "@nucleum/stores/account.store";
   import { resolveToken } from "@21n/utils/account.utils";
   import { getPort } from "@plasmohq/messaging/port";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import { extensionDatafn } from "@nucleum/extensions/extension.store";
   import {
@@ -29,16 +29,16 @@
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import {
     OptionSelectorStyle,
     type ISelectItem
-  } from "@21n/types/select.type";
+  } from "@21n/elements/select/select.type";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType, type IInlineStatus } from "@21n/types/notification.type";
+  import { AlertType, type IInlineStatus } from "@nucleum/stores/notifications/notification.type";
   import { cn } from "@21n/utils/ui.utils";
   import { fly } from "svelte/transition";
-  import { Extension, Product } from "@21n/types/product.type";
+  import { Extension, Product } from "@nucleum/client/config/product.type";
   import ExtensionHelp from "@nucleum/extensions/shared/ExtensionHelp.svelte";
   import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
   import SidePanelCollections from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/SidePanelCollections.svelte";

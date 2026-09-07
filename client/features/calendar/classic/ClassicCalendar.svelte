@@ -5,7 +5,7 @@
   import CalendarLayoutView from "@nucleum/features/calendar/CalendarLayout.svelte";
   import view from "@nucleum/stores/view.store";
   import CalendarColumn from "@nucleum/features/calendar/column/CalendarColumn.svelte";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { CalendarLayout } from "@nucleum/features/calendar/calendar.type";
@@ -14,10 +14,10 @@
   import { cn } from "@21n/utils/ui.utils";
   import { MetaResource, Resource } from "@nucleum/datafn/resource.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import MemotronTempCalendarColumn from "@nucleum/features/calendar/column/MemotronTempCalendarColumn.svelte";
   import ClassicCalendarHeaderLeftOptions from "@nucleum/features/calendar/classic/ClassicCalendarHeaderLeftOptions.svelte";
-  import { Display } from "@21n/types/view.type";
+  import { Display } from "@21n/elements/display.enum";
   import YearViewV2 from "@nucleum/features/calendar/classic/YearViewV2.svelte";
   import { toSvelteStore } from "@datafn/svelte";
   import {

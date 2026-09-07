@@ -3,12 +3,12 @@
   import modalEvent from "@nucleum/application/modal/modal.store";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import FileItem from "@nucleum/products/pointron/settings/ImportAppData/FileItem.svelte";
-  import { UploadStatus } from "@21n/types/uploadStatus.enum";
+  import { UploadStatus } from "@nucleum/application/settings/import/uploadStatus.enum";
   import { convertFileSize } from "@21n/utils/utils";
-  import { FileSizeMeasurement } from "@21n/types/fileSizeMeasurement.enum";
+  import { FileSizeMeasurement } from "@21n/utils/fileSizeMeasurement.enum";
   import { get } from "svelte/store";
   import account from "@nucleum/stores/account.store";
   import { detectTimeZone } from "@21n/utils/time.utils";
@@ -20,10 +20,10 @@
     ImportSource,
     StepType
   } from "@nucleum/products/pointron/settings/data/data.type";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import Divider from "@21n/elements/Divider.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Display } from "@21n/types/view.type";
+  import { Display } from "@21n/elements/display.enum";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { parse } from "@21n/shared-utils/json.utils";

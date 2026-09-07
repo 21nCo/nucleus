@@ -1,5 +1,5 @@
 import type { IToolTipOptions } from "@21n/elements/text/text.type";
-import { Placement } from "@21n/types/direction.enum";
+import { Placement } from "@21n/elements/direction.enum";
 import { renderPopover, resolveHoverState } from "@21n/utils/browser.utils";
 
 interface HoverableParams {

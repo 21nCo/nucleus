@@ -1,7 +1,7 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import NodularMarkdown from "@nucleum/features/memory/markdown/NodularMarkdown.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import view from "@nucleum/stores/view.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import Icon from "@21n/elements/Icon.svelte";
@@ -9,7 +9,7 @@
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import TranscriptionWithTimestamps from "@nucleum/features/memory/audio/TranscriptionWithTimestamps.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { copyToClipboard } from "@21n/utils/utils";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { toasts } from "@nucleum/stores/notification.store";
@@ -17,10 +17,10 @@
   import {
     PanelSwitcherActiveItemStrength,
     PanelSwitcherStyle
-  } from "@21n/types/switcher.enum";
+  } from "@21n/elements/switcher/switcher.enum";
   import { AudioView } from "@nucleum/features/memory/audio/audio.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { generateMarkdownText } from "@nucleum/features/memory/node/node.utils";
   import type { IAudioBody, IAudioMetadata } from "@nucleum/features/memory/node/node.type";

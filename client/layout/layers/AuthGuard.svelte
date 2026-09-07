@@ -10,9 +10,9 @@
   } from "@nucleum/stores/account.store";
   import { appStore } from "@nucleum/stores/app.store";
   import context from "@nucleum/stores/context.store";
-  import { UserDataMode, UserSessionType } from "@21n/types/account.type";
-  import { Product } from "@21n/types/product.type";
-  import { PlanType } from "@21n/shared-types/subscription.type";
+  import { UserDataMode, UserSessionType } from "@nucleum/client/runtime/account/account.type";
+  import { Product } from "@nucleum/client/config/product.type";
+  import { PlanType } from "@nucleum/schema/account/subscription";
   import { postTokenToExtension } from "@21n/utils/embed.utils";
   import { onMount } from "svelte";
   import {

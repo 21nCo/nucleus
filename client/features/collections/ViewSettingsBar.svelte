@@ -1,13 +1,13 @@
 <script lang="ts">
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
-  import type { InputLabel } from "@21n/types/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
+  import type { InputLabel } from "@21n/elements/input/input.type";
   import {
     CollectionLayout,
     type ICollectionView
   } from "@nucleum/features/collections/collection.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { collectionLayoutOptions } from "@nucleum/features/collections/collection.store";
   import Badge from "@21n/elements/text/Badge.svelte";
   import MultiselectDropdown from "@21n/elements/dropdown/MultiselectDropdown.svelte";

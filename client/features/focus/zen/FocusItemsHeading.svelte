@@ -1,10 +1,10 @@
 <script lang="ts">
   import EditToggleButton from "@21n/elements/toggle/EditModeToggle.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { isInEditMode } from "@nucleum/stores/app.store";
   import { focusItemsStore } from "@nucleum/features/focus/session.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
 </script>
 

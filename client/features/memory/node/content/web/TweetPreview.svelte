@@ -10,9 +10,9 @@
   import { Persistence } from "@nucleum/persistence/persistence";
   import TweetPreviewUsingWidget from "@nucleum/features/memory/node/content/web/social/TweetPreviewUsingWidget.svelte";
   import account from "@nucleum/stores/account.store";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import { parse } from "@21n/shared-utils/json.utils";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   let {
     node,
     accessPoint = ResourceAccessPoint.SELF

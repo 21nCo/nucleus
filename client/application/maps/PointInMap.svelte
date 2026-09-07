@@ -4,7 +4,7 @@
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { Persistence } from "@nucleum/persistence/persistence";
   import account from "@nucleum/stores/account.store";
-  import { UserDataMode } from "@21n/types/account.type";
+  import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import context from "@nucleum/stores/context.store";
   import { mapTileStyles } from "@nucleum/application/maps/map.styles";
   import { mount } from "@nucleum/actions/mount.action";

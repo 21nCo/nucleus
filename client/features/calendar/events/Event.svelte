@@ -12,10 +12,10 @@
   } from "@nucleum/datafn/resource.type";
   import { resolveTrashedAtDate } from "@nucleum/datafn/resource.utils";
   import { datafn } from "@nucleum/datafn/datafn.store";
-  import { InputStyle } from "@21n/types/input.type";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { toSvelteStore } from "@datafn/svelte";
 
   let {

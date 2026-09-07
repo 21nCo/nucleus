@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { deepCopy, isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import Button from "@21n/elements/button/Button.svelte";
@@ -11,10 +11,10 @@
     UniversalPropertyType
   } from "@nucleum/features/collections/properties/property.type";
   import SelectOptionsEditor from "@nucleum/features/collections/properties/propertyConfig/selectProperty/SelectOptionsEditor.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import SelectPropertyOptionList from "@nucleum/features/collections/properties/selectProperty/SelectPropertyOptionList.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     resolveSelectPropertySelection,
     isHighVolumeUniversalType,

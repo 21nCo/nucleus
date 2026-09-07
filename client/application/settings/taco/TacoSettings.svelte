@@ -2,28 +2,28 @@
   import ProgressBar from "@21n/elements/ProgressBar.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import { tacoWorker } from "@nucleum/products/memotron/memotron.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import Button from "@21n/elements/button/Button.svelte";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import {
     TacoActions,
     TacoLocalAIOptions
-  } from "@nucleum/products/memotron/taco/taco.types";
+  } from "@nucleum/application/taco/worker.type";
   import { runVectorGeneration } from "@nucleum/products/memotron/taco/taco.store";
   import { appStore } from "@nucleum/stores/app.store";
   import { deleteItemsFromCache } from "@nucleum/products/memotron/taco/taco.utils";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import context from "@nucleum/stores/context.store";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import { Taco } from "@nucleum/application/taco/taco";
   import { embedBridge } from "@nucleum/application/embed/embed.store";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   import Icon from "@21n/elements/Icon.svelte";
 
   let progress = 0;

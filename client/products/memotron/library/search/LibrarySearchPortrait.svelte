@@ -1,12 +1,12 @@
 <script lang="ts">
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import { fly } from "svelte/transition";
   import { recentsStore } from "@nucleum/application/record/recent.store";
   import Records from "@nucleum/application/record/Records.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { onMount, onDestroy } from "svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";

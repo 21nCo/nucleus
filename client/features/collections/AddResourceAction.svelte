@@ -2,8 +2,8 @@
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import Popover from "@21n/elements/popover/Popover.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   let {
     variant = "default",
     onAdd = undefined

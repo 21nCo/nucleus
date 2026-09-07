@@ -5,9 +5,9 @@
   } from "@nucleum/features/collections/properties/property.type";
   import Divider from "@21n/elements/Divider.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { ColorStrength } from "@21n/types/appearance.type";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import RatingPropertyPreview from "@nucleum/features/collections/properties/ratingProperty/config/RatingPropertyPreview.svelte";
   import { resolvePropertyDefaultConfig } from "@nucleum/features/collections/properties/property.utils";
   import RatingAvatarPicker from "@nucleum/features/collections/properties/ratingProperty/config/RatingAvatarPicker.svelte";

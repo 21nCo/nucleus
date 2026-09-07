@@ -1,8 +1,6 @@
-import type { IRecordId } from "@21n/types/data.type";
-import type {
-  IMetaResource,
-  ResourceActionType
-} from "@nucleum/datafn/resource.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+import type { IMetaResource } from "@nucleum/datafn/resource.type";
+import type { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 
 export interface IAccessLog extends IMetaResource {
   action: ResourceActionType;

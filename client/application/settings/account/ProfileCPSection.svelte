@@ -1,8 +1,8 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import account from "@nucleum/stores/account.store";
-  import { LicenseType, UserDataMode } from "@21n/types/account.type";
-  import { Size } from "@21n/types/size.enum";
+  import { LicenseType, UserDataMode } from "@nucleum/client/runtime/account/account.type";
+  import { Size } from "@21n/elements/size.enum";
   import {
     frameEmailFromParts,
     isValidString
@@ -11,14 +11,14 @@
   import { bg, cn } from "@21n/utils/ui.utils";
   import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import modalEvent from "@nucleum/application/modal/modal.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import {
     determineIfPlanIsActive,
     resolveLicenseString,
     resolvePlanLabel
   } from "@nucleum/application/subscription/userPlan.utils";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
-  import { PlanType } from "@21n/shared-types/subscription.type";
+  import { PlanType } from "@nucleum/schema/account/subscription";
   import Icon from "@21n/elements/Icon.svelte";
   let {
     context = "page",

@@ -11,7 +11,7 @@
   import type { IEmbedBlockBody } from "@nucleum/features/memory/markdown/md.type";
   import EmbedContentPlaceholder from "@nucleum/features/memory/markdown/embed/EmbedContentPlaceholder.svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     AccessMode,
     ResourceAccessPoint
@@ -25,16 +25,16 @@
   import { appStore } from "@nucleum/stores/app.store";
   import NodeTitleLabelPart from "@nucleum/features/memory/node/title/NodeTitleLabelPart.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
   import { formatBytes } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { fileStore } from "@nucleum/features/files/file.store";
   import type { IFile } from "@nucleum/features/files/file.type";
-  import { ErrorMessage } from "@21n/types/resource-error.type";
+  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
   import {
     fetchYouTubeMetadata,
     resolveWebpageLabel,
@@ -42,10 +42,10 @@
   } from "@nucleum/features/memory/node/url.utils";
   import { debouncer } from "@21n/utils/utils";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import view from "@nucleum/stores/view.store";
   import Task from "@nucleum/features/focus/tasks/Task.svelte";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   import { generateResourceId } from "@nucleum/datafn/id.utils";

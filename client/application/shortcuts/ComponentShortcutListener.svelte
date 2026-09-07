@@ -2,7 +2,7 @@
 
 <script lang="ts">
   import { isTextElement } from "@21n/utils/browser.utils";
-  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
+  import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
   import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
   let {
     isAllowFromTextInput = false,

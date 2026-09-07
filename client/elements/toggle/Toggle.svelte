@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import type { IToolTipOptions } from "@21n/elements/text/text.type";
   import Badge from "@21n/elements/text/Badge.svelte";
   import { tooltip as tooltipAction } from "@nucleum/actions/popover.action";
-  import { Placement } from "@21n/types/direction.enum";
-  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
   let {
     icon,

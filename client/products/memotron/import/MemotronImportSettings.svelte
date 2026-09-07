@@ -4,13 +4,13 @@
     confirmationNotification
   } from "@nucleum/stores/notification.store";
   import context from "@nucleum/stores/context.store";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import Table2 from "@21n/elements/table/Table2.svelte";
-  import { TableCellType, type TableColumn } from "@21n/types/table.type";
+  import { TableCellType, type TableColumn } from "@21n/elements/table/table.type";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { type ImportHistoryItem } from "@nucleum/products/memotron/import/data.type";

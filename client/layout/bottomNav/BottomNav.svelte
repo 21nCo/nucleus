@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { hTrail } from "../topNav/tabs/tabs.store";
   import TopBarResourceItem from "../topNav/tabs/TopBarResourceItem.svelte";
   import TopNavLeftLogo from "../topNav/TopNavLeftLogo.svelte";
-  import type { Action } from "@21n/types/action.enum";
+  import type { Action } from "@nucleum/application/commandBar/action.enum";
   import { isRecordId } from "@nucleum/datafn/resource.utils";
   import context from "@nucleum/stores/context.store";
   import { cn } from "@21n/utils/ui.utils";

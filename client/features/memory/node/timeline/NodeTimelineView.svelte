@@ -11,7 +11,7 @@
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import { resolveNodeLabelString } from "@nucleum/features/memory/node/node.utils";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { linkTagLabelMapper } from "@nucleum/features/memory/linking/link.utils";

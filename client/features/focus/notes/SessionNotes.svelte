@@ -4,8 +4,8 @@
   import {
     AlertType,
     type IInlineStatus
-  } from "@21n/types/notification.type";
-  import { TextStyle } from "@21n/types/text.enum";
+  } from "@nucleum/stores/notifications/notification.type";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { activeSession } from "@nucleum/features/focus/session.store";
   import FocusNotes from "@nucleum/features/focus/notes/FocusNotes.svelte";
   import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";

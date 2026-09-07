@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Arrangement } from "@21n/types/direction.enum";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { Arrangement } from "@21n/elements/direction.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
   import NodeRecords from "@nucleum/features/memory/node/NodeRecords.svelte";

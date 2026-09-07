@@ -1,8 +1,6 @@
 <script lang="ts">
-  import {
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import {
     resolveNodeContextMenu,
     resolvePanelOptions,
@@ -10,9 +8,9 @@
   } from "../node.store";
   import ResourcePanelSwitcher from "@nucleum/application/resource/ResourcePanelSwitcher.svelte";
   import { derived } from "svelte/store";
-  import { ResourcePanelType } from "@21n/types/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
   import type { IResourcePageWithPanels } from "@nucleum/datafn/resource.type";
-  import type { ISelectValue } from "@21n/types/select.type";
+  import type { ISelectValue } from "@21n/elements/select/select.type";
   let {
     node,
     isConstrainedWidth = false

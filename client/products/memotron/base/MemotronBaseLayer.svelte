@@ -10,7 +10,7 @@
   import TopNavLeftMenuItem from "@21n/layout/topNav/TopNavLeftMenuItem.svelte";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   let { children }: { children?: Snippet } = $props();
   let isLiteMode = $state($context.isEmbed && $context.isSheet);
 

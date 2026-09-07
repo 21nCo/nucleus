@@ -1,7 +1,7 @@
 <script lang="ts">
   import account from "@nucleum/stores/account.store";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import {
     resolveNextRenewalDate,
     resolvePlanLabel,
@@ -10,22 +10,19 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import PlanFeatureList from "@nucleum/application/subscription/elements/PlanFeatureList.svelte";
-  import { Action } from "@21n/types/action.enum";
-  import { BillingCycle, PlanType } from "@21n/shared-types/subscription.type";
-  import {
-    PlanStatus,
-    UserDataMode,
-    type IUserPlan
-  } from "@21n/types/account.type";
-  import { PaymentProvider } from "@21n/shared-types/plan.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { BillingCycle, PlanType } from "@nucleum/schema/account/subscription";
+  import { PlanStatus, type IUserPlan } from "@nucleum/schema/account/subscription";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
+  import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
   import RestorePurchaseAction from "@nucleum/application/subscription/RestorePurchaseAction.svelte";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import DiscountBanner from "@nucleum/application/subscription/elements/DiscountBanner.svelte";
   import PoliciesFooter from "@21n/elements/PoliciesFooter.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
 
   let currentPlanFeatures = $state<Array<{ icon: string; label: string }>>([]);
   const renewalDate = $derived(

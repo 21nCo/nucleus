@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { type IButtonParams } from "@21n/types/button.type";
+  import { type IButtonParams } from "@21n/elements/button/button.type";
   import ButtonGroup from "@21n/elements/button/ButtonGroup.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { NodeType, type INode } from "@nucleum/features/memory/node/node.type";
   import { resolveContentPreview } from "@nucleum/features/memory/node/node.utils";

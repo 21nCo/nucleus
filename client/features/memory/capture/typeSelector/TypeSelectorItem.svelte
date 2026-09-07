@@ -2,9 +2,9 @@
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
-  import type { ISelectItem } from "@21n/types/select.type";
-  import { Size } from "@21n/types/size.enum";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
+  import type { ISelectItem } from "@21n/elements/select/select.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import { fade } from "svelte/transition";

@@ -1,7 +1,7 @@
 <script lang="ts">
   import LinkItem from "@nucleum/features/memory/common/linkbox/LinkItem.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     determineResourceType,
     isSameResource,
@@ -15,7 +15,7 @@
   import type { INodeLinkThumb } from "@nucleum/features/memory/node/node.type";
   import LinkTags from "@nucleum/features/memory/linking/LinkTags.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import context from "@nucleum/stores/context.store";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";

@@ -7,8 +7,8 @@
     ButtonStyle,
     ButtonVariant,
     type IButtonParams
-  } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import SystemStatus from "@nucleum/application/settings/about/SystemStatus.svelte";
   let {

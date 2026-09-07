@@ -1,7 +1,7 @@
-import { Placement } from "@21n/types/direction.enum";
-import { OperatingSystem } from "@21n/types/context.type";
-import { GlobalEvent, type Event as AppEvent } from "@21n/types/event.enum";
-import type { IPopoverRenderParams } from "@21n/types/popover.type";
+import { Placement } from "@21n/elements/direction.enum";
+import { OperatingSystem } from "@nucleum/client/runtime/context.type";
+import { GlobalEvent, type Event as AppEvent } from "@nucleum/stores/notifications/event.enum";
+import type { IPopoverRenderParams } from "@nucleum/actions/popover.type";
 import { deepCopy } from "@21n/shared-utils/obj.utils";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 

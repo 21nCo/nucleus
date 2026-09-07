@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import type { BarChartOptions } from "@carbon/charts-svelte";
   import {
     select,
@@ -16,7 +16,7 @@
     customColor,
     retrieveCurrentColors
   } from "@21n/utils/theme.utils";
-  import type { ChartDataPoint } from "@21n/types/chartDataPoint.type";
+  import type { ChartDataPoint } from "@nucleum/components/charts/chartDataPoint.type";
   import { generateUID } from "@21n/utils/utils";
   import appearance from "@nucleum/stores/appearance.store";
 

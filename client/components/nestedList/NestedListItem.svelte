@@ -8,9 +8,9 @@
     type NestedItemContent
   } from "@nucleum/components/nestedList/nestedList.type";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { hoverable } from "@nucleum/actions/hover.action";
   import { tooltip } from "@nucleum/actions/popover.action";
   import NestedListItem from "@nucleum/components/nestedList/NestedListItem.svelte";

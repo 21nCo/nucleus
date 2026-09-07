@@ -1,7 +1,7 @@
 <script lang="ts">
   import NotificationListener from "@21n/elements/listeners/NotificationListener.svelte";
-  import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { postDataToParent } from "@21n/utils/embed.utils";
   import { onMount } from "svelte";
   let {

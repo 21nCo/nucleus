@@ -1,10 +1,10 @@
 <script lang="ts">
   import modalEvent from "@nucleum/application/modal/modal.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { Size } from "@21n/types/size.enum";
-  import type { Toast } from "@21n/types/notification.type";
+  import { Size } from "@21n/elements/size.enum";
+  import type { Toast } from "@nucleum/stores/notifications/notification.type";
   import ToastNotification from "@21n/elements/feedback/ToastNotification.svelte";
     let {
     id,

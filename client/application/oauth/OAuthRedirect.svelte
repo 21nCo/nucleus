@@ -7,11 +7,11 @@
   import { handleOAuthRedirection } from "@nucleum/application/oauth/oauth.utils";
   import { onMount } from "svelte";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   let debugMessage = "debug";
   onMount(async () => {
     try {

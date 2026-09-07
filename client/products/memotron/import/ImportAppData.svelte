@@ -3,20 +3,20 @@
   import modalEvent from "@nucleum/application/modal/modal.store";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import FileItem from "@nucleum/products/memotron/import/FileItem.svelte";
-  import { UploadStatus } from "@21n/types/uploadStatus.enum";
+  import { UploadStatus } from "@nucleum/application/settings/import/uploadStatus.enum";
   import { convertFileSize } from "@21n/utils/utils";
-  import { FileSizeMeasurement } from "@21n/types/fileSizeMeasurement.enum";
+  import { FileSizeMeasurement } from "@21n/utils/fileSizeMeasurement.enum";
   import { toasts } from "@nucleum/stores/notification.store";
   import {
     ImportSource,
     StepType,
     type ImportHistoryItem
   } from "@nucleum/products/memotron/import/data.type";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import Divider from "@21n/elements/Divider.svelte";
-  import { Display } from "@21n/types/view.type";
+  import { Display } from "@21n/elements/display.enum";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
@@ -28,7 +28,7 @@
   import FieldMapping from "@nucleum/products/memotron/import/FieldMapping.svelte";
   import type { FieldMappingConfig } from "@nucleum/products/memotron/import/data.type";
   import { PocketImporter } from "@nucleum/products/memotron/import/pocket.importer";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
 
   let {
     importSource = ImportSource.POCKET

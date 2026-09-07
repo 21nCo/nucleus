@@ -1,6 +1,6 @@
 import { describe, it, beforeAll } from "vitest";
 import { paginate } from "./index";
-import { ICloneDownPaginateBody } from "$lib/shared/types/sync.type";
+import { ICloneDownPaginateBody } from "@nucleum/schema/legacy/sync.type";
 import { Resource } from "$lib/client/components/flux/resourceStores/resource.enum";
 import { SyncProvider, SyncProviderFactory } from "../providers";
 

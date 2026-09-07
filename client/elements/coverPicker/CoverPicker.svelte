@@ -1,8 +1,8 @@
 <script lang="ts">
   import modalEvent from "@nucleum/application/modal/modal.store";
-  import { Action } from "@21n/types/action.enum";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import ColorPicker from "@21n/elements/colorPicker/ColorPicker.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
@@ -12,13 +12,13 @@
   import { fileDrop } from "@nucleum/actions/fileDrop.action";
   import Icon from "@21n/elements/Icon.svelte";
   import account from "@nucleum/stores/account.store";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import FileView from "@nucleum/features/files/FileView.svelte";
   import { FileType } from "@nucleum/features/files/file.type";
   import { cn } from "@21n/utils/ui.utils";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import view from "@nucleum/stores/view.store";
   import UnsplashPicker from "@21n/elements/coverPicker/UnsplashPicker.svelte";
   import CoverPickerFromLibrary from "@21n/elements/coverPicker/CoverPickerFromLibrary.svelte";

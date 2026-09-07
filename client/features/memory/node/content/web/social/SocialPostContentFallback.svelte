@@ -13,13 +13,13 @@
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Persistence } from "@nucleum/persistence/persistence";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import { parse } from "@21n/shared-utils/json.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
 
   let {
     node,

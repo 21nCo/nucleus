@@ -1,4 +1,4 @@
-import { ISyncUpBody } from "$lib/shared/types/sync.type";
+import { ISyncUpBody } from "@nucleum/schema/legacy/sync.type";
 import { Agent } from "$lib/server/common/account/account.type";
 import { SyncProvider, SyncProviderFactory } from "../providers";
 

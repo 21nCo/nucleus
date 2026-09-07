@@ -10,11 +10,11 @@
     TimeScale,
     type TimePeriod,
     type TimePeriodValue
-  } from "@21n/types/time.type";
+  } from "@21n/utils/time.type";
   import CardSelector from "@nucleum/features/focus/analytics/page/CardSelector.svelte";
   import { resolveRelativeTimePeriodOptions } from "@21n/elements/datetime/datetime.utils";
   import type { ISessionLog } from "@nucleum/features/focus/logs/log.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     removeDuplicatesFilter,
     resourceInList
@@ -25,21 +25,21 @@
   import { cn } from "@21n/utils/ui.utils";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import {
     determineTimePeriodv2,
     resolveUpperRelativeTimePeriodTitle
   } from "@21n/utils/time.utils";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { fly } from "svelte/transition";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import view from "@nucleum/stores/view.store";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { datafn } from "@nucleum/datafn/datafn.store";

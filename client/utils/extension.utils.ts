@@ -1,6 +1,6 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
-import type { ExtensionEvent } from "@21n/types/extension.type";
+import type { ExtensionEvent } from "@nucleum/extensions/extension.type";
 import {
   sendToBackground,
   type PlasmoMessaging

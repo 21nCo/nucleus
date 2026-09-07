@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import Divider from "@21n/elements/Divider.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import view from "@nucleum/stores/view.store";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { TextStyle } from "@21n/types/text.enum";
-  import { ColorStrength } from "@21n/types/appearance.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
   import { resolveHoverState } from "@21n/utils/browser.utils";
   import { formatSeconds, formatTime } from "@21n/utils/time.utils";
   import type { ISessionThumb } from "@nucleum/features/focus/logs/log.type";

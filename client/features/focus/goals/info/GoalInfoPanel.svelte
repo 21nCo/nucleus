@@ -18,20 +18,20 @@
   import { isEmptyMd } from "@nucleum/features/memory/markdown/markdown.utils";
   import ObjectiveInfoEditControl from "@nucleum/features/focus/goals/info/GoalInfoEditControl.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { formatDatetime } from "@21n/utils/time.utils";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import PropertiesPane from "@nucleum/features/collections/properties/PropertiesPane.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { debouncer } from "@21n/utils/utils";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
   import ControlBar from "@nucleum/features/focus/elements/controls/ControlBar.svelte";
   import FocusPlayerTimeText from "@nucleum/features/focus/player/FocusPlayerTimeText.svelte";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType, type IInlineStatus } from "@21n/types/notification.type";
+  import { AlertType, type IInlineStatus } from "@nucleum/stores/notifications/notification.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 
   let {
     objective,

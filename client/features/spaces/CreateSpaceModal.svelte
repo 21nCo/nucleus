@@ -1,8 +1,8 @@
 <script>
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { GatheryEvent } from "@21n/types/gathery/gatheryEvent.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { GatheryEvent } from "@nucleum/features/spaces/gatheryEvent.enum";
   import { spaceStore } from "@nucleum/features/spaces/space.store";
   let spaceName = "";
 </script>

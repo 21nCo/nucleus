@@ -2,9 +2,9 @@
   import type { IMediaGridItem } from "@nucleum/features/memory/node/node.type";
   import { dragAndDropStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { DragStatus } from "@21n/types/dragstatus.enum";
+  import { DragStatus } from "@nucleum/actions/dragstatus.enum";
   import type { IFile } from "@nucleum/features/files/file.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { fileStore } from "@nucleum/features/files/file.store";
   import FileView from "@nucleum/features/files/FileView.svelte";
   import { cn } from "@21n/utils/ui.utils";

@@ -1,13 +1,13 @@
 <script lang="ts">
   import { getCorrespoingHorizonFrequencyLabel } from "@21n/utils/time.utils";
   import Guage from "@nucleum/features/focus/analytics/charts/Guage.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { TimeScale } from "@21n/types/time.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TimeScale } from "@21n/utils/time.type";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 
   let {
     size = Size.sm,

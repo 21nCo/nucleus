@@ -5,15 +5,15 @@
     SessionCompositionType,
     type SessionComposition,
     BreakCompositionType
-  } from "@21n/types/pointron/sessionComposition.type";
+  } from "@nucleum/features/focus/sessionComposition.type";
   import ComposeDuration from "@nucleum/features/focus/advanced/composition/ComposeDuration.svelte";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
   import { onMount } from "svelte";
   import ComposeTotalsText from "@nucleum/features/focus/advanced/composition/ComposeTotalsText.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import FullScreenCloseButton from "@21n/elements/button/FullScreenCloseButton.svelte";
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";

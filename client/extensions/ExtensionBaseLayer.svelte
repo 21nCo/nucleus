@@ -24,7 +24,7 @@
   } from "@nucleum/datafn/resource.utils";
   import { parse } from "@21n/shared-utils/json.utils";
   import { ExtensionStore } from "@nucleum/extensions/extension.store";
-  import { Extension } from "@21n/types/product.type";
+  import { Extension } from "@nucleum/client/config/product.type";
   let {
     id,
     extention,

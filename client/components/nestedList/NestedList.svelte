@@ -1,8 +1,8 @@
 <script lang="ts">
   import Divider from "@21n/elements/Divider.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { InputStyle } from "@21n/types/input.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { NestedListStyle, type NestedItemContent } from "@nucleum/components/nestedList/nestedList.type";

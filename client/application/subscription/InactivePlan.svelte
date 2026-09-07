@@ -5,14 +5,14 @@
   import PlanExpired from "@21n/illustrations/PlanExpired.svelte";
   import account from "@nucleum/stores/account.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@21n/types/action.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
   import modalEvent from "@nucleum/application/modal/modal.store";
   import RestorePurchaseAction from "@nucleum/application/subscription/RestorePurchaseAction.svelte";
-  import { PlanType } from "@21n/shared-types/subscription.type";
+  import { PlanType } from "@nucleum/schema/account/subscription";
 
   function resolveTrialExpiry() {
     return $account.plan?.plan === PlanType.TRIAL &&

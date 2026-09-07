@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
-  import { ExtensionEvent } from "@21n/types/extension.type";
+  import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import {
     NodeType,
     type IClip,
@@ -14,7 +14,7 @@
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
 
   let {

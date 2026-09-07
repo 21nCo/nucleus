@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { trackPosition } from "@nucleum/actions/observe.action";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import Tooltip from "@21n/elements/text/Tooltip.svelte";
-  import type { InputLabelInfoToolTip } from "@21n/types/input.type";
+  import type { InputLabelInfoToolTip } from "@21n/elements/input/input.type";
   import { popover } from "@nucleum/actions/popover.action";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import view from "@nucleum/stores/view.store";
     let {
     info,

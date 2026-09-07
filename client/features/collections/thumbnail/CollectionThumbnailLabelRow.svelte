@@ -4,7 +4,7 @@
     ResourceAccessPointState
   } from "@nucleum/datafn/resource.type";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { type ICollectionThumb } from "@nucleum/features/collections/collection.type";
   import CollectionThumbnailLabel from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";

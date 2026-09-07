@@ -2,7 +2,7 @@
   import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
   import type { ICalendarEvent } from "@nucleum/features/calendar/events/event.type";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { formatTime, parseAndFormatDate } from "@21n/utils/time.utils";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
 

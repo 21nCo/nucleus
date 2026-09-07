@@ -13,10 +13,10 @@ import {
 } from "@nucleum/features/focus/logs/log.type";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { sessionStore } from "@nucleum/features/focus/session.store";
-import { BlockType } from "@21n/types/pointron/session.type";
+import { BlockType } from "@nucleum/features/focus/session.type";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
-import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
 import { deepCopy } from "@21n/shared-utils/obj.utils";
 import { datafn } from "@nucleum/datafn/datafn.store";

@@ -1,5 +1,5 @@
 import { copyToClipboard } from "@21n/utils/utils";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 
 function resolveLinkForResource(resource: string) {
   return (

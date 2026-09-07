@@ -8,7 +8,7 @@ import {
   ActionType,
   type IAction,
   type IActionFnParams
-} from "@21n/types/action.type";
+} from "@nucleum/application/commandBar/action.type";
 import ImportAppData from "@nucleum/products/pointron/settings/ImportAppData/ImportAppData.svelte";
 import EditPresetView from "@nucleum/features/focus/advanced/presets/EditPresetModal.svelte";
 import PointronOnboarding from "@nucleum/products/pointron/base/PointronOnboarding.svelte";
@@ -19,8 +19,8 @@ import PresetSaveConfirmationModal from "@nucleum/features/focus/advanced/preset
 import SessionFinishedModal from "@nucleum/features/focus/elements/SessionFinishedModal.svelte";
 import Think from "@nucleum/features/focus/Think.svelte";
 import BackgroundMusic from "@nucleum/features/focus/backgroundMusic/BackgroundMusic.svelte";
-import { Size } from "@21n/types/size.enum";
-import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+import { Size } from "@21n/elements/size.enum";
+import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
 import { get } from "svelte/store";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import {
@@ -37,20 +37,20 @@ import SessionLogPage from "@nucleum/features/focus/logs/logPage/SessionLogPage.
 import ManualLogPane from "@nucleum/features/focus/logs/manualLog/ManualLogPane.svelte";
 import LogsPane from "@nucleum/features/focus/logs/LogsPane.svelte";
 import AnalyticsV2 from "@nucleum/features/focus/analytics/AnalyticsV2.svelte";
-import { Orientation, Placement } from "@21n/types/direction.enum";
+import { Orientation, Placement } from "@21n/elements/direction.enum";
 import PresetSettings from "@nucleum/features/focus/advanced/presets/PresetSettings.svelte";
 import { activeSession } from "@nucleum/features/focus/session.store";
-import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-import { PointronEvent } from "@21n/types/pointron/pointronEvent.enum";
+import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+import { PointronEvent } from "@nucleum/features/focus/pointronEvent.enum";
 import AnalyticsViewsPageEditMobile from "@nucleum/features/focus/analytics/AnalyticsViewsPageEditMobile.svelte";
 import { appStore } from "@nucleum/stores/app.store";
-import { Embed } from "@21n/types/context.type";
+import { Embed } from "@nucleum/client/runtime/context.type";
 import ImportOnboarding from "@nucleum/products/pointron/settings/data/ImportOnboarding.svelte";
-import { Action } from "@21n/types/action.enum";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import FocusPlayerCommandModeWidget from "@nucleum/features/focus/player/FocusPlayerCommandModeWidget.svelte";
 import PointronLibrary from "@nucleum/products/pointron/library/PointronLibrary.svelte";
 import ObjectiveSearchResultItem from "@nucleum/features/focus/goals/GoalSearchResultItem.svelte";
-import { SessionState } from "@21n/types/pointron/sessionState.enum";
+import { SessionState } from "@nucleum/features/focus/sessionState.enum";
 import {
   isSameResource,
   resolveResourceIcon,
@@ -58,7 +58,8 @@ import {
   resourceInList
 } from "@nucleum/datafn/resource.utils";
 import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
-import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
+import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
 import { appMenuActionLabelsByAction } from "@nucleum/client/config/product-nav.config";
 //TODO - use dummy task if this causes any issues - like earlier
@@ -66,7 +67,7 @@ import Task from "@nucleum/features/focus/tasks/Task.svelte";
 import CreateTask from "@nucleum/features/focus/tasks/CreateTask.svelte";
 import Objective from "@nucleum/features/focus/goals/Goal.svelte";
 import ObjectiveTitleLabelPart from "@nucleum/features/focus/goals/GoalTitleLabelPart.svelte";
-import { AppSearchParam } from "@21n/types/appStore.type";
+import { AppSearchParam } from "@nucleum/stores/appStore.type";
 import {
   ObjectiveStatus,
   ObjectiveType,

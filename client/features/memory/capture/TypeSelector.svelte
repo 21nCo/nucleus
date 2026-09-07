@@ -2,14 +2,14 @@
   import { CaptureMethod } from "@nucleum/features/memory/capture/capture.type";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import Button from "@21n/elements/button/Button.svelte";
-  import type { ISelectItem } from "@21n/types/select.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { ISelectItem } from "@21n/elements/select/select.type";
+  import { Size } from "@21n/elements/size.enum";
   import { appStore } from "@nucleum/stores/app.store";
 
   import TypeSelectorItem from "@nucleum/features/memory/capture/typeSelector/TypeSelectorItem.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { TextStyle } from "@21n/elements/text/text.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import {
@@ -22,7 +22,7 @@
   import { toSvelteStore } from "@datafn/svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState } from "@nucleum/stores/uiState/uiState.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 
   let {
     selected,

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import { CalendarColumnPanel } from "@nucleum/features/calendar/calendar.type";
   import CalendarHistoryPanel from "@nucleum/features/calendar/column/CalendarHistoryPanel.svelte";
   import CalendarNotesPanel from "@nucleum/features/calendar/column/CalendarNotesPanel.svelte";

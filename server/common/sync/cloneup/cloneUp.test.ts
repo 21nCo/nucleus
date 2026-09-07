@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from "vitest";
 import { cloneUp } from "./index";
 import { resolveInsertQuery } from "$lib/shared/utils/surreal.utils";
 import { performQueryOnBehalfOfUser } from "../../user/user";
-import { ICloneUpBody } from "$lib/shared/types/sync.type";
+import { ICloneUpBody } from "@nucleum/schema/legacy/sync.type";
 import { Resource } from "$lib/client/components/flux/resourceStores/resource.enum";
 
 vi.mock("$lib/shared/utils/surreal.utils", () => ({

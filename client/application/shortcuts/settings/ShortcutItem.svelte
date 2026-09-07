@@ -1,11 +1,11 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
-  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
-  import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
+  import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import context from "@nucleum/stores/context.store";
   import { resolveShortcutText, resolveModifiers } from "@nucleum/application/shortcuts/shortcut.utils";
   import { tooltip } from "@nucleum/actions/popover.action";

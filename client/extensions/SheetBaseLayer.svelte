@@ -9,14 +9,14 @@
   import account from "@nucleum/stores/account.store";
   import { getDapId } from "@nucleum/persistence/persistence.utils";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Extension } from "@21n/types/product.type";
+  import { Extension } from "@nucleum/client/config/product.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { pingParent } from "@21n/utils/embed.utils";
   import SheetDebugLogs from "@nucleum/extensions/SheetDebugLogs.svelte";
   import context from "@nucleum/stores/context.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
   import {
     initializeNucleumDatafn,

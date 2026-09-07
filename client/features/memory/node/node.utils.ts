@@ -18,8 +18,8 @@ import {
   socialProfileNodeTypeList,
   socialProfileWithImageUnavailable
 } from "@nucleum/features/memory/node/node.type";
-import type { IRecordId } from "@21n/types/data.type";
-import { TimeFormat } from "@21n/types/time.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+import { TimeFormat } from "@21n/utils/time.type";
 import { getGeoLocation } from "@21n/utils/browser.utils";
 import { formatSeconds } from "@21n/utils/time.utils";
 import {

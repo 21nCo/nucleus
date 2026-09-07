@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { EmbedDataMessage, EmbedMessage } from "@21n/types/embedMessage.enum";
+import { EmbedDataMessage, EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
 
 import {
   haptic,

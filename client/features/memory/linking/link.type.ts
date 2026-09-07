@@ -3,7 +3,7 @@ import type {
   IResourceLabeled,
   IResourceShareable
 } from "@nucleum/datafn/resource.type";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 
 export interface ILinkTag
   extends IResource, IResourceLabeled, IResourceShareable {

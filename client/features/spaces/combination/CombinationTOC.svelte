@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy } from "svelte";
-  import type { IRecordId } from "@nucleum/client/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import {
     ActiveNodeStore,

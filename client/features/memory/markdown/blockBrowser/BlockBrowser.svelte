@@ -1,8 +1,8 @@
 <script lang="ts">
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
   import BlockItem from "@nucleum/features/memory/markdown/blockBrowser/BlockItem.svelte";
@@ -12,7 +12,7 @@
   import context from "@nucleum/stores/context.store";
   import type { IBlockBrowserSection } from "@nucleum/features/memory/markdown/blockBrowser/blockBrowser.type";
   import { resolveBlockBrowserConfig } from "@nucleum/features/memory/markdown/blockBrowser/blockBrowser.utils";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   const nodeContext = getContext<any>(Context.NODE);
 
   let {

@@ -3,14 +3,14 @@
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { type IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import {
     canHaveTraces,
     socialPostNodeTypeList
   } from "@nucleum/features/memory/node/node.type";
-  import { ResourcePanelType } from "@21n/types/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { focusById } from "@nucleum/actions/focusById.action";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";

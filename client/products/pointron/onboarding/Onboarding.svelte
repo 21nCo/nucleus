@@ -5,17 +5,17 @@
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import view from "@nucleum/stores/view.store";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import { onMount } from "svelte";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
   import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import {
     UIState,
     UIStateScope
   } from "@nucleum/stores/uiState/uiState.type";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import context from "@nucleum/stores/context.store";
 
   let currentStep = 0;

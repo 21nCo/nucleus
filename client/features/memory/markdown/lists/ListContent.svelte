@@ -3,10 +3,10 @@
   import TextContent from "@nucleum/features/memory/markdown/content/TextContent.svelte";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
   import type { IListBlockBody } from "@nucleum/features/memory/markdown/md.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import Check from "@21n/icons/Check.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let {
     id,
     body,

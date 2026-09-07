@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Orientation } from "@21n/types/direction.enum";
-  import { ColorStrength } from "@21n/types/appearance.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
   import { cn } from "@21n/utils/ui.utils";
 
   let {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { DragStatus } from "@21n/types/dragstatus.enum";
+import { DragStatus } from "@nucleum/actions/dragstatus.enum";
 
 import { handleDragNDrop, handleFocusItemsDND } from "./dragDrop";
 

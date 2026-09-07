@@ -3,8 +3,8 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { toasts } from "@nucleum/stores/notification.store";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Placement } from "@21n/types/direction.enum";
-  import { InputStyle } from "@21n/types/input.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
   import {
     determineResourceType,

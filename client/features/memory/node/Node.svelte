@@ -23,14 +23,14 @@
   import { acquireDnDPage, appStore } from "@nucleum/stores/app.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { page } from "$app/stores";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
   import context from "@nucleum/stores/context.store";
   import NodePanelSwitcher from "./floatingBar/NodePanelSwitcher.svelte";
   import { fly } from "svelte/transition";
   import { resolvePanelParam } from "@nucleum/application/resource/panelParam.mixin";
-  import { ResourcePanelType } from "@21n/types/resource-panel.type";
-  import { Context } from "@21n/types/appStore.type";
+  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";
   import type { IContainer } from "@21n/layout/layout.type";

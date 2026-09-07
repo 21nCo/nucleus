@@ -5,7 +5,7 @@
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import Icon from "@21n/elements/Icon.svelte";
   import { formatSeconds } from "@21n/utils/time.utils";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
@@ -17,8 +17,8 @@
     relayToBackgroundScript,
     resolveAppPath
   } from "@21n/utils/extension.utils";
-  import { ExtensionEvent } from "@21n/types/extension.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ExtensionEvent } from "@nucleum/extensions/extension.type";
+  import { Size } from "@21n/elements/size.enum";
   import VideoTimelineClipItem from "@nucleum/extensions/clipper/contentScripts/parts/VideoTimelineClipItem.svelte";
 
   let { contentType }: { contentType: NodeType } = $props();

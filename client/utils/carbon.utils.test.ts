@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { TimeScale } from "@21n/types/time.type";
+import { TimeScale } from "@21n/utils/time.type";
 
 import {
   determineCarbonChartTimeInterval,

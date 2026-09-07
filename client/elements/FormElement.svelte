@@ -1,10 +1,10 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { InputStyle, type InputLabel } from "@21n/types/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
   import { bg, cn } from "@21n/utils/ui.utils";
   import FormControlLabelWrapper from "@21n/elements/text/formLabel/FormControlLabelWrapper.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let {
     style = InputStyle.BORDERED,
     size = Size.md,

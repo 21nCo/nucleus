@@ -4,11 +4,11 @@
   import {
     OptionSelectorStyle,
     type ISelectItem
-  } from "@21n/types/select.type";
+  } from "@21n/elements/select/select.type";
   import { CalendarColumnPanel } from "@nucleum/features/calendar/calendar.type";
   import BoxSwitcher from "@21n/elements/switcher/BoxSwitcher.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
 
   let {
     panels,

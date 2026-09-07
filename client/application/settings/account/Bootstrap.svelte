@@ -4,12 +4,12 @@
   import Button from "@21n/elements/button/Button.svelte";
   import account from "@nucleum/stores/account.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { properCase } from "@21n/shared-utils/text.utils";
   import RegionSetting from "@nucleum/application/settings/account/RegionSetting.svelte";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
 
   let region = $state("useast");
   let isBootstrapInProgress = $state(false);

@@ -5,16 +5,16 @@ import {
   type ScheduledNotification,
   type Toast,
   type InlineToast
-} from "@21n/types/notification.type";
+} from "@nucleum/stores/notifications/notification.type";
 import { postMessageToParent } from "@21n/utils/embed.utils";
-import { EmbedMessage } from "@21n/types/embedMessage.enum";
-import { GlobalEvent } from "@21n/types/event.enum";
-import type { IEvent } from "@21n/types/event.type";
-import type { Event } from "@21n/types/event.enum";
+import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
+import type { IEvent } from "@21n/elements/input/event.type";
+import type { Event } from "@nucleum/stores/notifications/event.enum";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-import { ErrorMessage } from "@21n/types/resource-error.type";
+import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 
 export const toastDefaultDuration = 3500;

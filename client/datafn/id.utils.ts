@@ -1,4 +1,4 @@
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { generateRandomIdv2 } from "@21n/shared-utils/crypto.utils";
 import { Resource } from "@nucleum/datafn/resource.enum";
 

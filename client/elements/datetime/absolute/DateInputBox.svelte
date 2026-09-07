@@ -1,7 +1,7 @@
 <script lang="ts">
   import { cn, bg } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import type { Dayjs } from "dayjs";
 
   let {

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { GlobalEvent, type Event as AppEvent } from "@21n/types/event.enum";
-  import type { InlineToast } from "@21n/types/notification.type";
+  import { GlobalEvent, type Event as AppEvent } from "@nucleum/stores/notifications/event.enum";
+  import type { InlineToast } from "@nucleum/stores/notifications/notification.type";
   import { onMount } from "svelte";
   let {
     event,

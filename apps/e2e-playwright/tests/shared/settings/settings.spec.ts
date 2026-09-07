@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { Product } from "@21n/types/product.type";
+import { Product } from "@nucleum/client/config/product.type";
 import { ensureInAppOnHome } from "../../utils/helpers";
 import { expectAnyLocatorVisible } from "../../utils/locator-assertions";
 import { resolveRepoFsImportPath } from "../../utils/repo-fs";
@@ -15,9 +15,9 @@ import {
 
 const appStorePath = resolveRepoFsImportPath("client/stores/app.store.ts");
 const interactionModePath = resolveRepoFsImportPath(
-  "client/types/interaction-mode.type.ts"
+  "client/elements/keyboard/interaction-mode.type.ts"
 );
-const actionEnumPath = resolveRepoFsImportPath("client/types/action.enum.ts");
+const actionEnumPath = resolveRepoFsImportPath("client/application/commandBar/action.enum.ts");
 const uiStateStorePath = resolveRepoFsImportPath(
   "client/stores/uiState/uiState.store.ts"
 );

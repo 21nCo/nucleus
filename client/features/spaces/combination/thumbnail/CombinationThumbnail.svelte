@@ -7,8 +7,8 @@
     ResourceAccessPoint,
     ResourceAccessPointState
   } from "@nucleum/datafn/resource.type";
-  import { Arrangement } from "@nucleum/client/types/direction.enum";
-  import { Size } from "@nucleum/client/types/size.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@nucleum/client/utils/ui.utils";
   import { countNavItems } from "@nucleum/features/spaces/combination/combination.utils";
   import type { ISideNavCombination } from "@nucleum/features/spaces/combination/combination.type";

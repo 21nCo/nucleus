@@ -1,20 +1,16 @@
 <script lang="ts">
   import { onDestroy, onMount, type Snippet } from "svelte";
   import Panel from "@21n/layout/paint/Panel.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Arrangement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Arrangement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { page } from "$app/stores";
   import ResourceResolver from "@21n/layout/paint/ResourceResolver.svelte";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
-  import {
-    ResourceAccessPoint,
-    ResourceActionType,
-    AccessMode,
-    ResourceAccessPointState
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint, AccessMode, ResourceAccessPointState } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
@@ -26,12 +22,12 @@
   } from "@nucleum/application/library/library.utils";
   import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import view from "@nucleum/stores/view.store";
-  import { Display } from "@21n/types/view.type";
+  import { Display } from "@21n/elements/display.enum";
   import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { Action } from "@21n/types/action.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   let {
     resource,
     onBack = undefined,

@@ -16,7 +16,7 @@
   } from "@nucleum/features/calendar/birdView/Birdview.utils";
   import { onMount as onLifecycleMount } from "svelte";
   import { debouncer } from "@21n/utils/utils";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
 
   type SelectedDateChange =
     | string

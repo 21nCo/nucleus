@@ -10,14 +10,14 @@ import { NodeType } from "@nucleum/features/memory/node/node.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { performApiCall } from "@21n/utils/network.utils";
-import { UserDataMode } from "@21n/types/account.type";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import account from "@nucleum/stores/account.store";
 import { parse } from "@21n/shared-utils/json.utils";
 import { datafn } from "@nucleum/datafn/datafn.store";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 
 function isYoutubeUrl(url: string) {
   try {

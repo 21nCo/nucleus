@@ -6,8 +6,8 @@ import {
   isSameResource,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import type { IRecordId } from "@21n/types/data.type";
-import type { IFocusItem } from "@21n/types/pointron/session.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+import type { IFocusItem } from "@nucleum/features/focus/session.type";
 
 export type SessionItemRelationMetadata = {
   from?: string;

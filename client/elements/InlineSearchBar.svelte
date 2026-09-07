@@ -1,13 +1,13 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount, tick } from "svelte";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import type { IEvent } from "@21n/types/event.type";
+  import type { IEvent } from "@21n/elements/input/event.type";
   import { cn } from "@21n/utils/ui.utils";
   import { debouncer } from "@21n/utils/utils";
   let {

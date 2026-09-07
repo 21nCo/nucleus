@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { FormLabelInfoTooltip } from "@21n/types/text.type";
+  import type { FormLabelInfoTooltip } from "@21n/elements/text/info.type";
   import { copyToClipboard } from "@21n/utils/utils";
   import Icon from "@21n/elements/Icon.svelte";
   import FormControlLabelWrapper from "@21n/elements/text/formLabel/FormControlLabelWrapper.svelte";

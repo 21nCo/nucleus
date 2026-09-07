@@ -3,23 +3,23 @@
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { EmbedDataMessage, EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedDataMessage, EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   import { postDataToParent, postMessageToParent } from "@21n/utils/embed.utils";
   import { isValidEmail } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
   import view from "@nucleum/stores/view.store";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import OAuthOptions from "@nucleum/application/account/OAuthOptions.svelte";
   import { resolveProductConfig } from "@nucleum/products/product.config";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import {
     authClient,
     resolveAuthFnSessionMode,
     shouldUseAuthFnBearerSession
   } from "@nucleum/client/runtime/account/auth";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";

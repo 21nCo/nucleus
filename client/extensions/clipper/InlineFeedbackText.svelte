@@ -3,8 +3,8 @@
   import {
     AlertType,
     type IInlineStatus
-  } from "@21n/types/notification.type";
-  import { Size } from "@21n/types/size.enum";
+  } from "@nucleum/stores/notifications/notification.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   let {
     feedback = $bindable(),

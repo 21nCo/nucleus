@@ -6,7 +6,7 @@
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import AnalyticsCardView from "@nucleum/features/focus/analytics/page/AnalyticsCardView.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import Icon from "@21n/elements/Icon.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
@@ -14,7 +14,7 @@
     AnalyticsCardType,
     type AnalyticsPage
   } from "@nucleum/features/focus/analytics/analytics.types";
-  import type { ITimePeriodResolved } from "@21n/types/time.type";
+  import type { ITimePeriodResolved } from "@21n/utils/time.type";
   import {
     determinePreviousTimePeriod,
     determineTimePeriodv2

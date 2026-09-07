@@ -1,20 +1,20 @@
 <script lang="ts">
   import Markdown from "@nucleum/features/memory/markdown/Markdown.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { isValidMarkdown } from "@21n/shared-utils/text.utils";
+  import { Size } from "@21n/elements/size.enum";
+  import { isValidMarkdown } from "@nucleum/features/memory/markdown/validation.utils";
   import LogIntervalBar from "@nucleum/features/focus/logs/logPage/LogIntervalBar.svelte";
   import LogTotals from "@nucleum/features/focus/logs/logPage/LogTotals.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import {
     PanelSwitcherActiveItemStrength,
     PanelSwitcherStyle
-  } from "@21n/types/switcher.enum";
+  } from "@21n/elements/switcher/switcher.enum";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import FocusItem from "@nucleum/features/focus/elements/focusitem/FocusItem.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";

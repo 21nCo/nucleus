@@ -34,7 +34,6 @@
     "@nucleum/products": "*",
     "@nucleum/static": "*",
     "@nucleum/stores": "*",
-    "@21n/types": "*",
     "@21n/utils": "*",
     "@iconify-json/ph": "^1.2.0",
     "@iconify/tailwind": "^1.1.3",

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { Product } from "@21n/types/product.type";
-import { Action } from "@21n/types/action.enum";
+import { Product } from "@nucleum/client/config/product.type";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import { ensureInAppOnHome, runCommand } from "../utils/helpers";
 import { expectSurfaceVisible } from "../utils/surface-contracts";
 import { openFocusViaTopNav } from "../focus/focus-test-helpers";

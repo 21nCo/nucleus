@@ -1,5 +1,5 @@
 import { Agent } from "$lib/server/common/account/account.type";
-import { ICloneDownBody } from "$lib/shared/types/sync.type";
+import { ICloneDownBody } from "@nucleum/schema/legacy/sync.type";
 import { SyncProvider, SyncProviderFactory } from "../providers";
 
 export async function cloneDown(body: ICloneDownBody, agent: Agent) {

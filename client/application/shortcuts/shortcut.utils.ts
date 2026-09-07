@@ -1,5 +1,5 @@
-import { ModifierKey } from "@21n/types/keyboard.type";
-import { OperatingSystem } from "@21n/types/context.type";
+import { ModifierKey } from "@21n/elements/keyboard/keyboard.type";
+import { OperatingSystem } from "@nucleum/client/runtime/context.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 
 export function resolveShortcutText(params: {

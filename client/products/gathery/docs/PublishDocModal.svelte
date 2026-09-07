@@ -2,7 +2,7 @@
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import CopyableText from "@21n/elements/text/CopyableText.svelte";
   import { spaceInContext } from "@nucleum/features/spaces/space.store";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import { stripTablePrefix } from "@21n/shared-utils/text.utils";
   let { id }: { id: string } = $props();
   let docSlug = stripTablePrefix(id);

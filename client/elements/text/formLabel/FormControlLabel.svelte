@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { InputLabel } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { InputLabel } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import Badge from "@21n/elements/text/Badge.svelte";
   import FormLabelTooltip from "@21n/elements/text/formLabel/FormLabelTooltip.svelte";

@@ -2,10 +2,10 @@
   import type { Snippet } from "svelte";
   import EmptyStatus from "@21n/illustrations/EmptyStatus.svelte";
   import EmptyStatusInbox from "@21n/illustrations/EmptyStatusInbox.svelte";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
-  import { Size } from "@21n/types/size.enum";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
+  import { Size } from "@21n/elements/size.enum";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import PageLoadingPulse from "@21n/elements/feedback/animations/PageLoadingPulse.svelte";
   import LogsLoadingPulse from "@21n/elements/feedback/animations/LogsPulse/LogsLoadingPulse.svelte";
   import DashboardLoadingPulse from "@21n/elements/feedback/animations/DashboardPulse/DashboardLoadingPulse.svelte";
@@ -16,7 +16,7 @@
   import QuickFocusItemsGridPulse from "@21n/elements/feedback/animations/thumbnailPulse/QuickFocusItemsGridPulse.svelte";
   import QuickFocusItemPulse from "@21n/elements/feedback/animations/thumbnailPulse/QuickFocusItemPulse.svelte";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
-  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
+  import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
   import InboxZero from "@21n/illustrations/InboxZero.svelte";
   import Travel from "@21n/illustrations/Travel.svelte";
   import Check from "@21n/illustrations/Check.svelte";

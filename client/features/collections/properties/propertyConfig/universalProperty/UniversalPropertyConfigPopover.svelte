@@ -2,7 +2,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import type { IUniversalPropertyConfig } from "@nucleum/features/collections/properties/property.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { universalPropertyOptions } from "@nucleum/features/collections/properties/property.store";
   let {

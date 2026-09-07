@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { MouseEventHandler } from "svelte/elements";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Icon from "../Icon.svelte";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { hoverable } from "@nucleum/actions/hover.action";
 

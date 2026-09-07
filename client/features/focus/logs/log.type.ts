@@ -1,7 +1,7 @@
-import type { ISessionInterval } from "@21n/types/pointron/session.type";
-import type { IRecordId } from "@21n/types/data.type";
+import type { ISessionInterval } from "@nucleum/features/focus/session.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
-import type { TimeScale } from "@21n/types/time.type";
+import type { TimeScale } from "@21n/utils/time.type";
 import type {
   IResource,
   IResourceShareable

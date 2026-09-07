@@ -2,27 +2,27 @@
 
 <script lang="ts">
   import { page } from "$app/stores";
-  import { LayoutContext } from "@21n/types/layout.type";
+  import { LayoutContext } from "@21n/layout/layout-mode.type";
   import { onMount } from "svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import view from "@nucleum/stores/view.store";
-  import type { IAction } from "@21n/types/action.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IAction } from "@nucleum/application/commandBar/action.type";
+  import { Size } from "@21n/elements/size.enum";
   import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { abg, cn } from "@21n/utils/ui.utils";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   import { uiState, uiStateDerived } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
   import { popover } from "@nucleum/actions/popover.action";
   import { hoverable } from "@nucleum/actions/hover.action";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import { appMenuStore } from "@nucleum/stores/appMenu/appMenu.store";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { appStore } from "@nucleum/stores/app.store";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { isHideCreateAction } from "@nucleum/application/library/library.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";

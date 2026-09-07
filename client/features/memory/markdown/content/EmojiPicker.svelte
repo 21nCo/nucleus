@@ -8,7 +8,7 @@
     type AvatarWithCode,
     type EmojiAvatar,
     type IAvatar
-  } from "$lib/client/types/avatar.type";
+  } from "@21n/elements/avatarPicker/avatar.type";
 
   let {
     searchQuery = $bindable(""),

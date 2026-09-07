@@ -2,21 +2,21 @@
   import { activeSession } from "@nucleum/features/focus/session.store";
   import Slider from "@nucleum/features/focus/advanced/slider/Slider.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import AdvancedFocusModeSwitcher from "@nucleum/features/focus/advanced/modeSwitcher/AdvancedFocusModeSwitcher.svelte";
   import ComposeDuration from "@nucleum/features/focus/advanced/composition/ComposeDuration.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import {
     PanelSwitcherActiveItemStrength,
     PanelSwitcherStyle
-  } from "@21n/types/switcher.enum";
+  } from "@21n/elements/switcher/switcher.enum";
   import PresetPicker from "@nucleum/features/focus/advanced/composition/PresetPicker.svelte";
   import { onMount } from "svelte";
   import {
     SessionCompositionType,
     type SessionComposition
-  } from "@21n/types/pointron/sessionComposition.type";
+  } from "@nucleum/features/focus/sessionComposition.type";
   import Icon from "@21n/elements/Icon.svelte";
   import ComposeTotalsText from "@nucleum/features/focus/advanced/composition/ComposeTotalsText.svelte";
   import { appStore } from "@nucleum/stores/app.store";

@@ -3,7 +3,7 @@ import {
   Embed,
   OperatingSystem,
   type IAppContext
-} from "@21n/types/context.type";
+} from "@nucleum/client/runtime/context.type";
 import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 

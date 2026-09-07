@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, type Snippet } from "svelte";
   import { renderPopover, resolveHoverState } from "@21n/utils/browser.utils";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import Tooltip from "@21n/elements/text/Tooltip.svelte";
   import type { IToolTipOptions } from "@21n/elements/text/text.type";
   let {

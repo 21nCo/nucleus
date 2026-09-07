@@ -1,5 +1,5 @@
 import { Agent } from "$lib/server/common/account/account.type";
-import { ISyncDownBody } from "$lib/shared/types/sync.type";
+import { ISyncDownBody } from "@nucleum/schema/legacy/sync.type";
 import { SyncProvider, SyncProviderFactory } from "../providers";
 
 export async function syncDown(body: ISyncDownBody, agent: Agent) {

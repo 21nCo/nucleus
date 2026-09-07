@@ -4,7 +4,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import appearance from "@nucleum/stores/appearance.store";
   import FormControlLabelWrapper from "@21n/elements/text/formLabel/FormControlLabelWrapper.svelte";
-  import type { InputLabel } from "@21n/types/input.type";
+  import type { InputLabel } from "@21n/elements/input/input.type";
   import ColorPickerElement from "@21n/elements/colorPicker/ColorPickerElement.svelte";
   let {
     hue = $bindable(0),

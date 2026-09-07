@@ -2,18 +2,18 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import Divider from "@21n/elements/Divider.svelte";
-  import { ColorStrength } from "@21n/types/appearance.type";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount } from "svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { SearchType } from "@21n/types/data.type";
-  import { InputStyle } from "@21n/types/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { SearchType } from "@nucleum/schema/legacy/data.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
-  import type { IEvent } from "@21n/types/event.type";
+  import type { IEvent } from "@21n/elements/input/event.type";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
   let {
     resource,

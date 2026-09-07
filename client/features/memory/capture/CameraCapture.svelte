@@ -1,21 +1,19 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import view from "@nucleum/stores/view.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
-  import { ErrorMessage } from "@21n/types/resource-error.type";
+  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import {
-    AccessMode,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import PlayerControl from "@21n/elements/player/controls/PlayerControl.svelte";
 
   let {

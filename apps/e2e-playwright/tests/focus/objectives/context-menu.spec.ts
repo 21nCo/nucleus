@@ -1,7 +1,7 @@
 import type { Page } from "@playwright/test";
 import { expect, test, type E2ESeed } from "../../fixtures/e2e-test";
-import { ResourceActionType } from "@nucleum/datafn/resource.type";
-import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 import { ensureInAppOnHome, runCommand } from "../../utils/helpers";
 import {
   getResourceContextMenuTrigger,

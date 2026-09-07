@@ -1,19 +1,12 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import {
-  AccessMode,
-  type DatafnDateValue,
-  ResourceActionType,
-  ResourceAccessPoint
-} from "@nucleum/datafn/resource.type";
-import type { IRecordId } from "@21n/types/data.type";
+import { AccessMode, type DatafnDateValue, ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { properCase } from "@21n/shared-utils/text.utils";
-import type { IResourceSwitchItem } from "@21n/types/select.type";
+
 import { Product } from "@nucleum/schema/product.type";
-import {
-  nextResourceIcons,
-  nextUncountableResources
-} from "@nucleum/next/resource.utils";
+import { nextResourceIcons, nextUncountableResources } from "@nucleum/next/resource.utils";
 import { nucleumDatafnSchema } from "@nucleum/schema/datafn";
 
 export function resourceAction(resource: Resource, action: ResourceActionType) {
@@ -257,16 +250,6 @@ export function resolveResourceLabel(resource: Resource) {
   if (resource === Resource.objective) return "Objectives";
   if (nextUncountableResources.has(resource)) return properCase(resource);
   return properCase(resource) + "s";
-}
-
-export function resolveResourceSwitcher(): IResourceSwitchItem[] {
-  return Object.values(Resource).map((resource) => ({
-    label: resolveResourceLabel(resource),
-    value: resource,
-    icon: resolveResourceIcon(resource),
-    isDisabled: !availableResources.has(resource),
-    badge: !availableResources.has(resource) ? "Planned" : undefined
-  }));
 }
 
 export function isTrashedResource(

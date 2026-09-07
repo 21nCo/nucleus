@@ -6,7 +6,7 @@
   import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import LinkActionOnClipper from "@nucleum/features/memory/common/linkbox/LinkActionOnClipper.svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
@@ -15,10 +15,10 @@
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceError } from "@nucleum/application/error/errors";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   let {
     id = null,

@@ -1,5 +1,5 @@
 import { Agent } from "$lib/server/common/account/account.type";
-import { Resource } from "@nucleum/datafn/resource.enum";
+import { Resource } from "@nucleum/schema/resource.enum";
 import {
   ISyncUpBody,
   ISyncDownBody,
@@ -8,12 +8,12 @@ import {
   ICloneDownPaginateBody,
   IReconcileBody,
   ICloneDownPaginatev2Body
-} from "$lib/shared/types/sync.type";
+} from "@nucleum/schema/legacy/sync.type";
 import {
   IMutation,
   IRecordId,
   IResourceSelectParams
-} from "$lib/client/types/data.type";
+} from "@nucleum/schema/legacy/data.type";
 import { ISyncProvider, SyncProvider } from "./types";
 import { performQueryOnBehalfOfUser } from "../../user/user";
 import {

@@ -1,5 +1,5 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { type IRecordId } from "@21n/types/data.type";
+import { type IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { toasts } from "@nucleum/stores/notification.store";
 import {
@@ -12,7 +12,7 @@ import { appStore } from "@nucleum/stores/app.store";
 import { determineResourceType } from "@nucleum/datafn/resource.utils";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import type { NucleumDatafnResource } from "@nucleum/schema";
-import { Action } from "@21n/types/action.enum";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
 import { LinkType } from "@nucleum/features/memory/linking/link.type";
 import { assertDatafnMutationSucceeded } from "@nucleum/datafn/mutation.utils";

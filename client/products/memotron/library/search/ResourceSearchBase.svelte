@@ -3,13 +3,13 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import { recentsStore } from "@nucleum/application/record/recent.store";
   import { onMount, onDestroy } from "svelte";
   import { isValidString, properCase } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import SearchResultsPopover from "@21n/elements/input/SearchResultsPopover.svelte";
   import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
@@ -20,13 +20,13 @@
     resolveProductResources,
     resolveResourceIcon
   } from "@nucleum/datafn/resource.utils";
-  import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
+  import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { searchStore } from "@nucleum/application/search/index";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import {

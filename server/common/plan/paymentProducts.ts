@@ -1,7 +1,7 @@
 import {
   BillingCycle,
   PlanType
-} from "@21n/shared-types/subscription.type";
+} from "@nucleum/schema/account/subscription";
 
 export const paymentProductsList = [
   {

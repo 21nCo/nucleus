@@ -5,11 +5,11 @@
   import Switch from "@21n/elements/toggle/Switch.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import CollectionThumbnailLabel from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
 

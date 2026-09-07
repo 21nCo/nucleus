@@ -4,7 +4,7 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { isInEditMode } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { determinePreviousTimePeriod } from "@21n/utils/time.utils";
   import { cn } from "@21n/utils/ui.utils";
   import {
@@ -15,11 +15,11 @@
   } from "@nucleum/features/focus/analytics/analytics.types";
   import { analyticsConfigStore } from "@nucleum/features/focus/analytics/analytics.store";
   import CardSelector from "@nucleum/features/focus/analytics/page/CardSelector.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import GroupingAndFilters from "@nucleum/features/focus/analytics/page/GroupingAndFilters.svelte";
   import CardResolver from "@nucleum/features/focus/analytics/page/CardResolver.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import type { ISessionLog } from "@nucleum/features/focus/logs/log.type";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import type {
@@ -33,11 +33,11 @@
     TimePeriodType,
     TimeScale,
     type ITimePeriodResolved
-  } from "@21n/types/time.type";
+  } from "@21n/utils/time.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { ErrorMessage } from "@21n/types/resource-error.type";
+  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
   import { untrack } from "svelte";
   let {
     card,

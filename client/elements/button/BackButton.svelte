@@ -2,7 +2,7 @@
   import type { Snippet } from "svelte";
   import type { MouseEventHandler } from "svelte/elements";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import view from "@nucleum/stores/view.store";

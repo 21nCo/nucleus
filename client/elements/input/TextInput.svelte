@@ -1,9 +1,9 @@
 <script lang="ts">
   import { tick, type Snippet } from "svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { InputStyle, type InputLabel } from "@21n/types/input.type";
+  import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
   import InputBaseElement from "@21n/elements/InputBaseElement.svelte";
   import { isValidHyperlink } from "@21n/shared-utils/utils";
   import Link from "@21n/elements/text/Link.svelte";
@@ -11,9 +11,9 @@
   import { cn } from "@21n/utils/ui.utils";
   import { debouncer } from "@21n/utils/utils";
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import { mount } from "@nucleum/actions/mount.action";
 
   type KeyboardEventDetail = KeyboardEvent & { event: KeyboardEvent };

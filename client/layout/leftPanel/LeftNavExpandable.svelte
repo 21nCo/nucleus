@@ -5,8 +5,8 @@
   import AppMenuSwitcher from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcher.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { LayoutContext } from "@21n/types/layout.type";
-  import { Size } from "@21n/types/size.enum";
+  import { LayoutContext } from "@21n/layout/layout-mode.type";
+  import { Size } from "@21n/elements/size.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import LeftBottomBar from "@21n/layout/leftPanel/LeftBottomBar.svelte";
   import { onMount } from "svelte";

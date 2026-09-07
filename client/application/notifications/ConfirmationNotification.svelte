@@ -3,12 +3,12 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { confirmationNotification } from "@nucleum/stores/notification.store";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
-  import { Action } from "@21n/types/action.enum";
-  import { AlertType } from "@21n/types/notification.type";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
+  import { Orientation } from "@21n/elements/direction.enum";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let confirmationTextInput: string | undefined;
   let error: string | undefined;
   function resolvePrimaryAction() {

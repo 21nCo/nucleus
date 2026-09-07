@@ -4,7 +4,7 @@
   import PropertiesListView from "@nucleum/features/collections/properties/PropertiesListView.svelte";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     removeDuplicatesFilter,
     resourceAction,
@@ -17,10 +17,10 @@
   } from "@nucleum/features/collections/collection.type";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import ResourceStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { cn } from "@21n/utils/ui.utils";
   import type { IActiveObjectiveStore } from "@nucleum/features/focus/goals/goal.store";
   import type { IActiveObjective } from "@nucleum/features/focus/goals/goal.type";

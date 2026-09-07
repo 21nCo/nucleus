@@ -1,9 +1,9 @@
 <script lang="ts">
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { BlockType } from "@21n/types/pointron/session.type";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
+  import { BlockType } from "@nucleum/features/focus/session.type";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { formatSeconds } from "@21n/utils/time.utils";
   let {
     size = Size.md,

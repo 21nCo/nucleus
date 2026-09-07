@@ -1,6 +1,6 @@
 <!-- source: https://illustrationkit.com/illustrations/halo -->
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
 
   let {
     size = Size.md

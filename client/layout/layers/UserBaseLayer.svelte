@@ -3,7 +3,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { onDestroy, onMount } from "svelte";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { Persistence } from "@nucleum/persistence/persistence";
   import account from "@nucleum/stores/account.store";
   import { appLoadingState, appStore } from "@nucleum/stores/app.store";
@@ -23,26 +23,26 @@
     isExtensionEnvironment,
     safeRequestIdleCallback
   } from "@21n/utils/browser.utils";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
   import DynamicMetadataLayer from "@21n/layout/layers/DynamicMetadataLayer.svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { UserDataMode } from "@21n/types/account.type";
+  import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import { getDapId } from "@nucleum/persistence/persistence.utils";
   import PageError from "@nucleum/application/error/PageError.svelte";
   import posthog from "posthog-js";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import { Action } from "@21n/types/action.enum";
-  import { BillingCycle } from "@21n/shared-types/subscription.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { BillingCycle } from "@nucleum/schema/account/subscription";
   import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";
   import { fileStore } from "@nucleum/features/files/file.store";
-  import { ErrorMessage } from "@21n/types/resource-error.type";
+  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
   import modalEvent from "@nucleum/application/modal/modal.store";
-  import { PaymentProvider } from "@21n/shared-types/plan.type";
+  import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
   import { embedBridge } from "@nucleum/application/embed/embed.store";
   import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import UserLayout from "@21n/layout/layers/UserLayout.svelte";
   import LegacyLocalDataRecoveryGate from "@21n/layout/layers/LegacyLocalDataRecoveryGate.svelte";
   import { compareVersions } from "@21n/shared-utils/utils";
@@ -75,7 +75,7 @@
     type LegacyLocalDataBackup,
     type LegacyLocalDataSummary
   } from "@nucleum/persistence/legacyLocalDataBackup";
-  import type { DatafnImportResult } from "@21n/types/datafn.type";
+  import type { DatafnImportResult } from "@nucleum/datafn/datafn.type";
   let {
     children,
     topnav: topnavContent,

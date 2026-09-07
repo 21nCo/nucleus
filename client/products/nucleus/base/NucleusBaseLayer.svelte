@@ -8,10 +8,10 @@
   import context from "@nucleum/stores/context.store";
   import UserBaseLayer from "@21n/layout/layers/UserBaseLayer.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import FocusTopNavWidget from "@nucleum/features/focus/player/FocusTopNavWidget.svelte";
   import PointronNotifications from "@nucleum/products/pointron/base/Notifications.svelte";
   import MemotronNotifications from "@nucleum/products/memotron/base/MemotronNotifications.svelte";
@@ -19,7 +19,7 @@
   import SessionTitle from "@nucleum/products/pointron/base/SessionTitle.svelte";
   import MemoryBase from "@nucleum/products/memotron/base/MemoryBase.svelte";
   import TopNavLeftMenuItem from "@21n/layout/topNav/TopNavLeftMenuItem.svelte";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   let { children }: { children?: Snippet } = $props();
   let isLiteMode = $state($context.isEmbed && $context.isSheet);
 

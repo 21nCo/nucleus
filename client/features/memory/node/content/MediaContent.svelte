@@ -3,7 +3,7 @@
     NodeType,
     webNodeTypeList
   } from "@nucleum/features/memory/node/node.type";
-  import { ResourcePanelType } from "@21n/types/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
   import { type IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { cn } from "@21n/utils/ui.utils";
@@ -14,8 +14,8 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { isRecordId } from "@nucleum/datafn/resource.utils";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
-  import { Context } from "@21n/types/appStore.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   let {
     node,
     isConstrainedWidth = false

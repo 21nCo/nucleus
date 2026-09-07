@@ -2,9 +2,9 @@
 
 <script lang="ts">
   import { cn } from "@21n/utils/ui.utils";
-  import { LayoutContext } from "@21n/types/layout.type";
+  import { LayoutContext } from "@21n/layout/layout-mode.type";
   import AppMenuSwitcherItem from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcherItem.svelte";
-  import type { IAction } from "@21n/types/action.type";
+  import type { IAction } from "@nucleum/application/commandBar/action.type";
   import { appStore } from "@nucleum/stores/app.store";
   let {
     items,

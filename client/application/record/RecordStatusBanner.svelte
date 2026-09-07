@@ -1,10 +1,10 @@
 <script lang="ts">
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import { formatDatetime } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import type { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
   import {

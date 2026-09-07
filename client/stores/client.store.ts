@@ -1,9 +1,6 @@
 import { get, writable } from "svelte/store";
-import {
-  StoreDataType,
-  type IObservableStore,
-  type IStore
-} from "@21n/types/data.type";
+import { StoreDataType } from "@nucleum/schema/legacy/store-data-type.enum";
+import { type IObservableStore, type IStore } from "@nucleum/datafn/observable-store.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 
 export class ObservableStore<T> implements IObservableStore<T> {

@@ -75,7 +75,6 @@
     "@nucleum/products": "*",
     "@nucleum/static": "*",
     "@nucleum/stores": "*",
-    "@21n/types": "*",
     "@21n/utils": "*",
     "@antv/g6": "^5.0.26",
     "@carbon/charts-svelte": "1.22.18",

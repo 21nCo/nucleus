@@ -5,11 +5,11 @@
     UIStateScope
   } from "@nucleum/stores/uiState/uiState.type";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { InputStyle } from "@21n/types/input.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import EditCaptureShortcuts from "@nucleum/features/memory/capture/EditCaptureShortcuts.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
 
   let openNodesUponSave =
     uiState.getState(UIState.openNodesUponSave, {

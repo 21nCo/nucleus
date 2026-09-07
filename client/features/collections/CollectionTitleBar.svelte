@@ -2,15 +2,12 @@
   import type { Snippet } from "svelte";
   import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { InputStyle } from "@21n/types/input.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import ContextMenuAction from "@21n/elements/contextMenu/ContextMenuAction.svelte";
   import { resolveCollectionContextMenu } from "@nucleum/features/collections/collection.store";
-  import {
-    AccessMode,
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { AccessMode, ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
@@ -20,13 +17,13 @@
   import { objIsEmpty } from "@21n/shared-utils/obj.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { resizeListener } from "@nucleum/actions/resize.action";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
   import view from "@nucleum/stores/view.store";
   import Tooltip from "@21n/elements/text/Tooltip.svelte";
   import TextArea from "@21n/elements/input/TextArea.svelte";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import FormLabelTooltip from "@21n/elements/text/formLabel/FormLabelTooltip.svelte";
   import { isValidAvatar } from "@21n/elements/avatarPicker/avatar.utils";
   import { resourceAction } from "@nucleum/datafn/resource.utils";

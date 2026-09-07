@@ -3,8 +3,8 @@
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import Icon from "@21n/elements/Icon.svelte";
   import type { DaySummary } from "@nucleum/features/focus/logs/log.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { cn } from "@21n/utils/ui.utils";
   import TinyPieChart from "@nucleum/features/calendar/classic/indicator/TinyPieChart.svelte";

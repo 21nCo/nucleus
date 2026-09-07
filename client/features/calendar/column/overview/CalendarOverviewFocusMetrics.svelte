@@ -1,9 +1,9 @@
 <script lang="ts">
   import AnalyticsChartStandalone from "@nucleum/features/focus/analytics/page/AnalyticsChartStandalone.svelte";
   import type { ISessionLog } from "@nucleum/features/focus/logs/log.type";
-  import { TimeScale } from "@21n/types/time.type";
+  import { TimeScale } from "@21n/utils/time.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import FocusMetricCards from "@nucleum/features/calendar/column/overview/FocusMetricCards.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

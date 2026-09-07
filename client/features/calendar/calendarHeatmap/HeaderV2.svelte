@@ -4,9 +4,9 @@
   import { isTouchDevice } from "@nucleum/stores/app.store";
   import { moveTouch } from "@21n/utils/touchGesture";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   let {
     orientation,
     onPrev = undefined,

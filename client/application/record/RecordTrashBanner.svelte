@@ -1,6 +1,6 @@
 <script lang="ts">
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import { formatDatetime } from "@21n/utils/time.utils";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
 

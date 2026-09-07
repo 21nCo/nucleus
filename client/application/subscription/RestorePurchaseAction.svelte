@@ -1,12 +1,12 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import account from "@nucleum/stores/account.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { toasts } from "@nucleum/stores/notification.store";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   import { postMessageToParent } from "@21n/utils/embed.utils";
   const isAppleContext = $derived(
     $context.isEmbed &&

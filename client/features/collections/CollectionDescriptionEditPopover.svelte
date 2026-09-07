@@ -1,9 +1,9 @@
 <script lang="ts">
   import TextArea from "@21n/elements/input/TextArea.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { InputStyle } from "@21n/types/input.type";
-  import { AlertType } from "@21n/types/notification.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
   let {
     collection

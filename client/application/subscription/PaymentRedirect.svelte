@@ -3,7 +3,7 @@
   import ErrorStatusPane from "@21n/elements/feedback/ErrorStatusPane.svelte";
   import account from "@nucleum/stores/account.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { onMount } from "svelte";
 
   let nonce: string | null;

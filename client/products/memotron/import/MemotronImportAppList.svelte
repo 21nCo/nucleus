@@ -1,9 +1,9 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import view from "@nucleum/stores/view.store";
   import { appStore } from "@nucleum/stores/app.store";
   import { ImportSource } from "@nucleum/products/memotron/import/data.type";

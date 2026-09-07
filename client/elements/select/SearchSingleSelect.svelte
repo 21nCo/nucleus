@@ -1,9 +1,9 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
-  import { type InputLabel, InputStyle } from "@21n/types/input.type";
+  import { type InputLabel, InputStyle } from "@21n/elements/input/input.type";
   import FormControlLabelWrapper from "@21n/elements/text/formLabel/FormControlLabelWrapper.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let {
     selected = $bindable(),
     placeholder = "Start typing to select",

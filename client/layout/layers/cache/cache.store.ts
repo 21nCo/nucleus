@@ -1,5 +1,5 @@
 import { ObservableStore } from "@nucleum/stores/client.store";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 
 class CacheStore extends ObservableStore<{ [key: string]: any }> {

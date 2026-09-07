@@ -22,7 +22,7 @@
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     type IPropertyValue,
     PropertyType

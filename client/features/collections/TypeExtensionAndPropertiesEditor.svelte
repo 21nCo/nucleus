@@ -1,7 +1,7 @@
 <script lang="ts">
   import { appStore } from "@nucleum/stores/app.store";
-  import { Size } from "@21n/types/size.enum";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import { propertyEditorStore } from "@nucleum/features/collections/properties/property.store";
   import Icon from "@21n/elements/Icon.svelte";
@@ -9,7 +9,7 @@
   import { type IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   let {
     isCaptureShortcutEnabled = $bindable(false),
     collection = undefined,

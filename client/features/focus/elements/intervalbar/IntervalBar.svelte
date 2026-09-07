@@ -9,16 +9,16 @@
   import {
     SessionCompositionType,
     type SessionComposition
-  } from "@21n/types/pointron/sessionComposition.type";
+  } from "@nucleum/features/focus/sessionComposition.type";
   import {
     BlockType,
     SessionUIContext,
     type ISessionInterval
-  } from "@21n/types/pointron/session.type";
+  } from "@nucleum/features/focus/session.type";
   import TimeLabel from "@nucleum/features/focus/elements/intervalbar/TimeLabel.svelte";
   import view from "@nucleum/stores/view.store";
   import MoreBarsInfo from "@nucleum/features/focus/elements/intervalbar/MoreBarsInfo.svelte";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
   let {
     context = SessionUIContext.DEFAULT,
     composition = undefined

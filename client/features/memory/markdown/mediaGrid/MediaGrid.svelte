@@ -4,9 +4,9 @@
   import MediaGridOptions from "@nucleum/features/memory/markdown/mediaGrid/MediaGridOptions.svelte";
   import type { Config } from "@nucleum/features/memory/markdown/mediaGrid/mediaGrid.type";
   import { dragAndDropStore } from "@nucleum/stores/app.store";
-  import { DragStatus } from "@21n/types/dragstatus.enum";
+  import { DragStatus } from "@nucleum/actions/dragstatus.enum";
   import DraggableMediaGridElement from "@nucleum/features/memory/markdown/mediaGrid/DraggableMediaGridElement.svelte";
-  import type { DragAndDrop } from "@21n/types/draganddrop.type";
+  import type { DragAndDrop } from "@nucleum/actions/draganddrop.type";
   import account from "@nucleum/stores/account.store";
   import {
     isReplaceableMd,

@@ -2,10 +2,10 @@
   import { tick } from "svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import type { IAction } from "@21n/types/action.type";
-  import { ActionType } from "@21n/types/action.type";
-  import { Action } from "@21n/types/action.enum";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import type { IAction } from "@nucleum/application/commandBar/action.type";
+  import { ActionType } from "@nucleum/application/commandBar/action.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import CmdResultItem from "@nucleum/application/commandBar/CmdResultItem.svelte";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";

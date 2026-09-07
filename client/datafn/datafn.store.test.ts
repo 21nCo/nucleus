@@ -1,8 +1,8 @@
 import "fake-indexeddb/auto";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { get } from "svelte/store";
-import { Product } from "@21n/types/product.type";
-import { UserDataMode } from "@21n/types/account.type";
+import { Product } from "@nucleum/client/config/product.type";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import {
   createDatafnStorage,
   createNucleumDatafnHttpOptions,

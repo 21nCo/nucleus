@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ClassListProp } from "@21n/types/classListProp.type";
+  import type { ClassListProp } from "@21n/elements/autocomplete/classListProp.type";
   let {
     style,
     label,

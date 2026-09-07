@@ -4,7 +4,7 @@
     isSameResource,
     resourceInList
   } from "@nucleum/datafn/resource.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
   import PropertyItem from "@nucleum/features/collections/properties/PropertyItem.svelte";
   import { ActiveNodeStore } from "@nucleum/features/memory/node/node.store";

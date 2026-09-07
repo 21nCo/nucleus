@@ -1,4 +1,4 @@
-import { Product } from "@21n/types/product.type";
+import { Product } from "@nucleum/client/config/product.type";
 
 import type { DatafnSeedTransport } from "../../fixtures/datafn-seed";
 

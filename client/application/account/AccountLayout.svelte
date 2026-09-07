@@ -5,7 +5,7 @@
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { appStore } from "@nucleum/stores/app.store";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { page } from "$app/stores";
 
   let { children }: { children?: Snippet } = $props();

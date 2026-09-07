@@ -2,17 +2,17 @@
 
 <script lang="ts">
   import Text from "@21n/elements/text/Text.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import SettingThumbnail from "@nucleum/application/settings/SettingThumbnail.svelte";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
-  import type { IAction } from "@21n/types/action.type";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import type { IAction } from "@nucleum/application/commandBar/action.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { appStore } from "@nucleum/stores/app.store";
   import ProfileCpSection from "@nucleum/application/settings/account/ProfileCPSection.svelte";
   import SettingsFooter from "@nucleum/application/settings/SettingsFooter.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { page } from "$app/stores";
   import { resolveProductConfig } from "@nucleum/products/product.config";
   import BackButton from "@21n/elements/button/BackButton.svelte";

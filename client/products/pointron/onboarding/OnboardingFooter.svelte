@@ -1,7 +1,7 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import view from "@nucleum/stores/view.store";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
 
   let {
     activeStep,

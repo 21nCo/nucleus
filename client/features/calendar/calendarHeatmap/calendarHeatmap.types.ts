@@ -1,4 +1,4 @@
-import type { TimeScale } from "@21n/types/time.type";
+import type { TimeScale } from "@21n/utils/time.type";
 
 export enum TileAppearance {
   DEFAULT,

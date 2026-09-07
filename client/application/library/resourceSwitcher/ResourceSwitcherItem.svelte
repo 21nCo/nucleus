@@ -1,17 +1,17 @@
 <script lang="ts">
-  import { Placement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { properCase } from "@21n/shared-utils/text.utils";
-  import type { IResourceSwitchItem } from "@21n/types/select.type";
+  import type { IResourceSwitchItem } from "@21n/elements/select/select.type";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { appMenuStore } from "@nucleum/stores/appMenu/appMenu.store";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import { hoverable } from "@nucleum/actions/hover.action";
   import { popover } from "@nucleum/actions/popover.action";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";

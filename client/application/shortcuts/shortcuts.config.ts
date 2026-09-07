@@ -1,9 +1,9 @@
-import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
-import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
-import { Action } from "@21n/types/action.enum";
-import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
+import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
+import { Action } from "@nucleum/application/commandBar/action.enum";
+import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 
 export const shortcutsConfig: Record<string, IKeyboardShortcut> = {
   [Action.CALENDAR]: {

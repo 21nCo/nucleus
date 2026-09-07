@@ -1,14 +1,14 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import type { IUserGlobalPreferences } from "@21n/types/preferences.type";
+import type { IUserGlobalPreferences } from "@nucleum/stores/preferences/user-preferences.type";
 import {
   TimeFormat,
   TimePeriodType,
   TimeScale,
   TimeUnit
-} from "@21n/types/time.type";
-import type { TimePeriod } from "@21n/types/time.type";
-import type { UserDate } from "@21n/types/userDate.type";
+} from "@21n/utils/time.type";
+import type { TimePeriod } from "@21n/utils/time.type";
+import type { UserDate } from "@21n/utils/userDate.type";
 
 import {
   attachTimeToDate,

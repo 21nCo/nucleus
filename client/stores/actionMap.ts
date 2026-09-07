@@ -3,36 +3,33 @@ import {
   type IActionFnParams,
   ActionType,
   ContentType
-} from "@21n/types/action.type";
+} from "@nucleum/application/commandBar/action.type";
 import PageError from "@nucleum/application/error/PageError.svelte";
 import DebugLogs from "@nucleum/application/error/DebugLogs.svelte";
 import Offline from "@nucleum/application/error/Offline.svelte";
 import Signup from "@nucleum/application/settings/account/Signup.svelte";
 import ToastModalPortrait from "@21n/elements/feedback/ToastModalPortrait.svelte";
 import CommandBar from "@nucleum/application/commandBar/CommandBar.svelte";
-import { Size } from "@21n/types/size.enum";
-import { Orientation, Placement } from "@21n/types/direction.enum";
+import { Size } from "@21n/elements/size.enum";
+import { Orientation, Placement } from "@21n/elements/direction.enum";
 import { appStore, intercomId, isInEditMode } from "@nucleum/stores/app.store";
 import Help from "@nucleum/application/help/Help.svelte";
 import ExtensionLoginStatusPage from "@nucleum/application/settings/ExtensionLoginStatusPage.svelte";
 import DebugPage from "@21n/layout/layers/debug/DebugPage.svelte";
 import modalEvent from "@nucleum/application/modal/modal.store";
-import { Action } from "@21n/types/action.enum";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import Bootstrap from "@nucleum/application/settings/account/Bootstrap.svelte";
 import Calendar from "@nucleum/features/calendar/Calendar.svelte";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import BookACall from "@nucleum/application/cx/BookACall.svelte";
 import MdShortcuts from "@nucleum/features/memory/markdown/shortcuts/MdShortcuts.svelte";
 import CoverPicker from "@21n/elements/coverPicker/CoverPicker.svelte";
 import SignalDBViewer from "@nucleum/application/debug/SignalDBViewer.svelte";
 import CalendarSettings from "@nucleum/features/calendar/settings/CalendarSettings.svelte";
-import { Embed } from "@21n/types/context.type";
-import {
-  AccessMode,
-  ResourceActionType,
-  type IMultiSelectStore
-} from "@nucleum/datafn/resource.type";
+import { Embed } from "@nucleum/client/runtime/context.type";
+import { AccessMode, type IMultiSelectStore } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import {
   determineResourceType,
   resolveResourceIcon,
@@ -45,7 +42,7 @@ import Event from "@nucleum/features/calendar/events/Event.svelte";
 import PropertiesEditor from "@nucleum/features/collections/properties/PropertiesEditor.svelte";
 import CreateCombination from "@nucleum/features/spaces/combination/CreateCombination.svelte";
 import { ResourceError } from "@nucleum/application/error/errors";
-import { ResourceErrorCode } from "@21n/types/resource-error.type";
+import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";
 import CollectionTitleLabelPart from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
 import PropertyConfig from "@nucleum/features/collections/properties/propertyConfig/PropertyConfig.svelte";
 import { logger } from "@nucleum/client/runtime/logging/logger";
@@ -58,10 +55,10 @@ import { isValidString } from "@21n/shared-utils/text.utils";
 import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
 import UserPlan from "@nucleum/application/subscription/UserPlan.svelte";
 import InactivePlan from "@nucleum/application/subscription/InactivePlan.svelte";
-import { ButtonVariant } from "@21n/types/button.type";
+import { ButtonVariant } from "@21n/elements/button/button.type";
 import PaymentRedirect from "@nucleum/application/subscription/PaymentRedirect.svelte";
 import PlanOnboarding from "@nucleum/application/subscription/PlanOnboarding.svelte";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import UserBilling from "@nucleum/application/subscription/UserBilling.svelte";
 import UserPlanCancellation from "@nucleum/application/subscription/UserPlanCancellation.svelte";
 import DocusaurusEmbed from "@nucleum/application/cx/docusaurus/DocusaurusEmbed.svelte";
@@ -78,7 +75,7 @@ import HistoryModal from "@nucleum/features/calendar/HistoryModal.svelte";
 import Credits from "@nucleum/application/help/Credits.svelte";
 import DataSettings from "@nucleum/application/settings/DataSettings.svelte";
 import DexieConsole from "@nucleum/application/debug/DexieConsole.svelte";
-import { AppSearchParam } from "@21n/types/appStore.type";
+import { AppSearchParam } from "@nucleum/stores/appStore.type";
 import OfflineStatusModal from "@nucleum/application/settings/sync/OfflineStatusModal.svelte";
 import context from "@nucleum/stores/context.store";
 import view from "./view.store";

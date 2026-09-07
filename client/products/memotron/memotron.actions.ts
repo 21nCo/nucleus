@@ -1,6 +1,6 @@
-import { ActionType, type IAction } from "@21n/types/action.type";
-import { Orientation, Placement } from "@21n/types/direction.enum";
-import { Size } from "@21n/types/size.enum";
+import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
+import { Orientation, Placement } from "@21n/elements/direction.enum";
+import { Size } from "@21n/elements/size.enum";
 import Capture from "@nucleum/features/memory/capture/Capture.svelte";
 import Node from "@nucleum/features/memory/node/Node.svelte";
 import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
@@ -9,7 +9,8 @@ import SideNavCombination from "@nucleum/features/spaces/combination/SideNavComb
 import { Resource } from "@nucleum/datafn/resource.enum";
 import MemotronLibrary from "@nucleum/products/memotron/library/MemotronLibrary.svelte";
 import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
-import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
+import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { resourceAction } from "@nucleum/datafn/resource.utils";
 import PasteConfirmationModal from "@nucleum/features/memory/capture/PasteConfirmationModal.svelte";
 import Chat from "@nucleum/products/memotron/taco/Chat.svelte";
@@ -20,7 +21,7 @@ import MemotronGreenUse from "@nucleum/products/memotron/base/MemotronGreenUse.s
 import CalloutSettings from "@nucleum/features/memory/markdown/callout/CalloutSettings.svelte";
 import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
 import MemotronOverview from "@nucleum/products/memotron/overview/MemotronOverview.svelte";
-import { Action } from "@21n/types/action.enum";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import ImportAppData from "@nucleum/products/memotron/import/ImportAppData.svelte";
 import MemotronImportSettings from "@nucleum/products/memotron/import/MemotronImportSettings.svelte";
 import MemotronHomeOnMobile from "@nucleum/products/memotron/home/MemotronHomeOnMobile.svelte";

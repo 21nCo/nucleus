@@ -1,8 +1,8 @@
 <script lang="ts">
   import CalendarColumn from "@nucleum/features/calendar/column/CalendarColumn.svelte";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import view from "@nucleum/stores/view.store";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { page } from "$app/stores";
 
   let {

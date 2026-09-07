@@ -5,16 +5,16 @@
   import { isTextElement } from "@21n/utils/browser.utils";
   import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import { GlobalEvent } from "@21n/types/event.enum";
-  import { KeyboardKey } from "@21n/types/keyboard.type";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
+  import { KeyboardKey } from "@21n/elements/keyboard/keyboard.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import { Action } from "@21n/types/action.enum";
-  import { InteractionMode } from "@21n/types/interaction-mode.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
 
   function checkIfSystemShortcut(event: KeyboardEvent) {
     return (

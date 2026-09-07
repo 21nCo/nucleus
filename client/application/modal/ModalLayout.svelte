@@ -5,30 +5,30 @@
     appEvents,
     confirmationNotification
   } from "@nucleum/stores/notification.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import ModalHeader from "@nucleum/application/modal/ModalHeader.svelte";
-  import type { ModalParams } from "@21n/types/popup.type";
+  import type { ModalParams } from "@nucleum/application/modal/popup.type";
   import { fly } from "svelte/transition";
   import { quintOut } from "svelte/easing";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import { cn } from "@21n/utils/ui.utils";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { onMount } from "svelte";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import view from "@nucleum/stores/view.store";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
-  import { KeyboardKey } from "@21n/types/keyboard.type";
+  import { KeyboardKey } from "@21n/elements/keyboard/keyboard.type";
 
   let {
     path,

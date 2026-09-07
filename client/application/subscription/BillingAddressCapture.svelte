@@ -1,14 +1,14 @@
 <script lang="ts">
-  import type { IBillingAddress } from "@21n/shared-types/subscription.type";
+  import type { IBillingAddress } from "@nucleum/schema/account/subscription";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import Dropdown from "@21n/elements/dropdown/DropDown.svelte";
-  import type { InputLabel } from "@21n/types/input.type";
-  import { Orientation } from "@21n/types/direction.enum";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
+  import type { InputLabel } from "@21n/elements/input/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { isValidEmail } from "@21n/shared-utils/text.utils";

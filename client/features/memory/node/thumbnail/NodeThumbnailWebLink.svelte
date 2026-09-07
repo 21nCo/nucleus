@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { internalUrlNodeTypeList, type INode } from "@nucleum/features/memory/node/node.type";
   let { item }: { item: INode } = $props();
   function extractDomain(url: string) {

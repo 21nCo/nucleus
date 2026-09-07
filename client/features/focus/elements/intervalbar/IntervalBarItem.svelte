@@ -3,7 +3,7 @@
   import {
     BlockType,
     SessionUIContext
-  } from "@21n/types/pointron/session.type";
+  } from "@nucleum/features/focus/session.type";
   import { currentTime } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import view from "@nucleum/stores/view.store";

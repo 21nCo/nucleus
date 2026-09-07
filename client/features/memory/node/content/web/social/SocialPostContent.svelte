@@ -15,8 +15,8 @@
   import SocialPostContentFallback from "@nucleum/features/memory/node/content/web/social/SocialPostContentFallback.svelte";
   import context from "@nucleum/stores/context.store";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { Context } from "@21n/types/appStore.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { Context } from "@nucleum/stores/appStore.type";
 
   let {
     node,

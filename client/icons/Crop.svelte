@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { SVGAttributes } from "svelte/elements";
-  import { IconVariant } from "@21n/types/icon.type";
+  import { IconVariant } from "@21n/elements/icon.type";
 
   let {
     variant = IconVariant.Outline,

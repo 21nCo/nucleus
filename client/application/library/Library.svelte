@@ -1,8 +1,8 @@
 <script lang="ts">
   import Records from "@nucleum/application/record/Records.svelte";
   import { onMount } from "svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import ResourceSwitcher from "@nucleum/application/library/resourceSwitcher/ResourceSwitcher.svelte";
   import { appStore } from "@nucleum/stores/app.store";
@@ -11,30 +11,28 @@
     availableResources,
     resolveResourceIcon
   } from "@nucleum/datafn/resource.utils";
-  import {
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { recentsStore } from "@nucleum/application/record/recent.store";
   import { page } from "$app/stores";
   import view from "@nucleum/stores/view.store";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import Panel from "@21n/layout/paint/Panel.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import LibraryRecordsPane from "@nucleum/application/library/LibraryRecordsPane.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import LibraryLoadingPulse from "@nucleum/application/library/LibraryLoadingPulse.svelte";
-  import { Arrangement, Placement } from "@21n/types/direction.enum";
+  import { Arrangement, Placement } from "@21n/elements/direction.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
   import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { isHideCreateAction } from "@nucleum/application/library/library.utils";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { isValidEnumValue } from "@21n/shared-utils/text.utils";
 
   let { resources = [] }: { resources?: Resource[] } = $props();

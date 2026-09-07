@@ -1,14 +1,14 @@
 import { get, writable } from "svelte/store";
-import { AppSkin } from "@21n/types/appearance.type";
-import { AppSearchParam, type IAppStore } from "@21n/types/appStore.type";
-import type { DragAndDrop } from "@21n/types/draganddrop.type";
-import { DragStatus } from "@21n/types/dragstatus.enum";
+import { AppSkin } from "@21n/theme/appearance.type";
+import { AppSearchParam, type IAppStore } from "@nucleum/stores/appStore.type";
+import type { DragAndDrop } from "@nucleum/actions/draganddrop.type";
+import { DragStatus } from "@nucleum/actions/dragstatus.enum";
 import blankJson from "@nucleum/client/config/blank.json";
 import colorSchemes from "@21n/theme/colorschemes.json";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { shuffleEmojis } from "@21n/elements/avatarPicker/avatars";
-import { ActionType, type IAction } from "@21n/types/action.type";
-import { IdentityProvider } from "@21n/types/oauth.type";
+import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
+import { IdentityProvider } from "@nucleum/client/runtime/account/oauth.type";
 import { dispatchCustomEvent, goto } from "@21n/utils/browser.utils";
 import { persistLocally, getDapId } from "@nucleum/persistence/persistence.utils";
 import { postDataToParent } from "@21n/utils/embed.utils";
@@ -19,22 +19,23 @@ import {
   appEvents,
   confirmationNotification
 } from "@nucleum/stores/notification.store";
-import { Embed, OperatingSystem } from "@21n/types/context.type";
-import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
-import { InteractionMode } from "@21n/types/interaction-mode.type";
-import { Action } from "@21n/types/action.enum";
-import { GlobalEvent, type Event } from "@21n/types/event.enum";
+import { Embed, OperatingSystem } from "@nucleum/client/runtime/context.type";
+import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
+import { Action } from "@nucleum/application/commandBar/action.enum";
+import { GlobalEvent, type Event } from "@nucleum/stores/notifications/event.enum";
 import { logger } from "@nucleum/client/runtime/logging/logger";
-import { Size } from "@21n/types/size.enum";
-import type { IRecordId } from "@21n/types/data.type";
+import { Size } from "@21n/elements/size.enum";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import account from "@nucleum/stores/account.store";
 import { tabs, vTrail } from "@21n/layout/topNav/tabs/tabs.store";
 import {
   determineResourceAccessMode,
   resourceAction
 } from "@nucleum/datafn/resource.utils";
-import { Product } from "@21n/types/product.type";
-import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
+import { Product } from "@nucleum/client/config/product.type";
+import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
 import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 

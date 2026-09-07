@@ -10,8 +10,8 @@
   import { appStore } from "@nucleum/stores/app.store";
   import context from "@nucleum/stores/context.store";
   import view from "@nucleum/stores/view.store";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Embed } from "@21n/types/context.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import { wait } from "@21n/utils/time.utils";
   import { MAX_FILE_SIZE_MB } from "@nucleum/application/record/record.store";
   import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
@@ -20,7 +20,7 @@
   import type { IMultiFileCaptureData } from "@nucleum/features/memory/capture/capture.type";
   import { resolveMultipleFilesData } from "@nucleum/features/memory/capture/capture.utils";
   import { clipboard, type IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { fly } from "svelte/transition";
 
   let {

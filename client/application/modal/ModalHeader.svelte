@@ -1,8 +1,8 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { cn } from "@21n/utils/ui.utils";
   let {
     title,

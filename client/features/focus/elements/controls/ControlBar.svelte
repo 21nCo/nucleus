@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { Control } from "@21n/types/pointron/control.enum";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
+  import { Control } from "@nucleum/features/focus/elements/controls/control.enum";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
   import ControlItem from "@nucleum/features/focus/elements/controls/ControlItem.svelte";
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { cn } from "@21n/utils/ui.utils";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
 
   let { context = SessionUIContext.DEFAULT }: { context?: SessionUIContext } =
     $props();

@@ -3,15 +3,15 @@
     activeSession,
     currentFocusItem
   } from "@nucleum/features/focus/session.store";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { cn } from "@21n/utils/ui.utils";
   import SessionStatusLabel from "@nucleum/features/focus/elements/sessionTimeText/SessionStatusLabel.svelte";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
 

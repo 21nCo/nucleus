@@ -1,10 +1,10 @@
 <script lang="ts">
   import { startTouch, moveTouch } from "@21n/utils/touchGesture";
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
   import { isInEditMode } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import SessionTimeText from "@nucleum/features/focus/elements/sessionTimeText/SessionTimeText.svelte";
   import ControlBar from "@nucleum/features/focus/elements/controls/ControlBar.svelte";
   import FocusItemList from "@nucleum/features/focus/elements/focusitem/FocusItemList.svelte";
@@ -12,20 +12,20 @@
   import FocusItemsHeading from "@nucleum/features/focus/zen/FocusItemsHeading.svelte";
   import TimeleftIndicator from "@nucleum/features/focus/zen/timeleftindicator/TimeleftIndicator.svelte";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
-  import { AppSkin } from "@21n/types/appearance.type";
+  import { AppSkin } from "@21n/theme/appearance.type";
   import Divider from "@21n/elements/Divider.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import Extras from "@nucleum/features/focus/elements/controls/Extras.svelte";
   import SessionNotes from "@nucleum/features/focus/notes/SessionNotes.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { fullScreen } from "@nucleum/application/modal/modal.store";
   import { page } from "$app/stores";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   import type { IContainer } from "@21n/layout/layout.type";
   import { resolveMinWidth } from "@21n/layout/layout.utils";
 

@@ -8,11 +8,11 @@
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     PanelSwitcherActiveItemStrength,
     PanelSwitcherStyle
-  } from "@21n/types/switcher.enum";
+  } from "@21n/elements/switcher/switcher.enum";
   import NodeGraph from "@nucleum/features/memory/graph/NodeGraph.svelte";
   import { linkTagLabelMapper } from "@nucleum/features/memory/linking/link.utils";
   import { type IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
@@ -23,16 +23,16 @@
     type INodeLinkThumb,
     type INodeThumb
   } from "@nucleum/features/memory/node/node.type";
-  import { ResourcePanelType } from "@21n/types/resource-panel.type";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
+  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
   import {
     LinkType,
     type ILinkTag
   } from "@nucleum/features/memory/linking/link.type";
   import { enumToString } from "@21n/shared-utils/text.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import view from "@nucleum/stores/view.store";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import {
     resolveNodeFavicon,
     resolveNodeGraphFill,
@@ -44,7 +44,7 @@
   import NodeTimelineView from "@nucleum/features/memory/node/timeline/NodeTimelineView.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { NodeBirdViewMode } from "@nucleum/features/memory/node/birdView/birdView.type";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { page } from "$app/stores";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

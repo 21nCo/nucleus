@@ -1,9 +1,9 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import appearance from "@nucleum/stores/appearance.store";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { PlayActionState } from "@21n/types/event.enum";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { PlayActionState } from "@nucleum/stores/notifications/event.enum";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { retrieveCurrentColors } from "@21n/utils/theme.utils";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { onDestroy, onMount } from "svelte";
@@ -24,8 +24,8 @@
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
-  import { Size } from "@21n/types/size.enum";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
+  import { Size } from "@21n/elements/size.enum";
   import type {
     IAudioBody,
     IAudioMetadata

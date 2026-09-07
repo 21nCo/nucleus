@@ -2,7 +2,7 @@
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import { resolveResourceIcon } from "@nucleum/datafn/resource.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { cn } from "@21n/utils/ui.utils";
@@ -14,7 +14,7 @@
   } from "@nucleum/datafn/resource.type";
   import Button from "@21n/elements/button/Button.svelte";
   import { resolveObjectiveColor } from "@nucleum/features/focus/goals/goal.utils";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
 
   let {
     objective: initialObjective,

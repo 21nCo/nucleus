@@ -2,7 +2,7 @@ import { Agent } from "../../account/account.type";
 import {
   BillingCycle,
   PlanType
-} from "@21n/shared-types/subscription.type";
+} from "@nucleum/schema/account/subscription";
 import { ValidationError } from "../../errors";
 import { performQueryOnMasterDb } from "$lib/server/surrealHelpers";
 import {
@@ -15,7 +15,7 @@ import {
   refundPaymentForSubscription,
   verifyPayment
 } from "../dodoPaymentProvider";
-import { PaymentProvider } from "$lib/shared/types/plan.type";
+import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
 import {
   AppleVerificationResponse,
   getLatestSubscriptionPayment,

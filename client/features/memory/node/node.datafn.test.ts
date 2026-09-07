@@ -6,8 +6,8 @@ import {
   destroyNucleumDatafn,
   initializeNucleumDatafn
 } from "@nucleum/datafn/datafn.store";
-import { Product } from "@21n/types/product.type";
-import { UserDataMode } from "@21n/types/account.type";
+import { Product } from "@nucleum/client/config/product.type";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { appStore } from "@nucleum/stores/app.store";
 import { NodeType } from "./node.type";

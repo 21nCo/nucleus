@@ -5,8 +5,8 @@
   import { cn, convertToRGBA } from "@21n/utils/ui.utils";
   import { truncateString } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { toasts } from "@nucleum/stores/notification.store";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import {
@@ -15,7 +15,7 @@
   } from "@nucleum/stores/preferences/preferences.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { derived } from "svelte/store";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   let {
     node,
     contentPreview,

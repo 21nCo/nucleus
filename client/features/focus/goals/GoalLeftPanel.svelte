@@ -4,7 +4,7 @@
   import ObjectiveTitleRow from "@nucleum/features/focus/goals/info/GoalTitleRow.svelte";
   import { SubObjectivesLayout } from "@nucleum/features/focus/goals/goal.type";
   import { cn } from "@21n/utils/ui.utils";
-  import { type IInlineStatus } from "@21n/types/notification.type";
+  import { type IInlineStatus } from "@nucleum/stores/notifications/notification.type";
   import SubObjectivesPanel from "@nucleum/features/focus/goals/sub/SubGoalsPanel.svelte";
   import RecordStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
 

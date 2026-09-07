@@ -2,11 +2,11 @@
   import Button from "@21n/elements/button/Button.svelte";
   import TypewritingText from "@21n/elements/text/animatingText/TypewritingText.svelte";
   import modalEvent from "@nucleum/application/modal/modal.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import FocusPlayerTimeText from "@nucleum/features/focus/player/FocusPlayerTimeText.svelte";
   import SessionNotes from "@nucleum/features/focus/notes/SessionNotes.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import view from "@nucleum/stores/view.store";
 </script>
 

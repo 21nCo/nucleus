@@ -7,16 +7,14 @@
     isValidString,
     properCase
   } from "@21n/shared-utils/text.utils";
-  import {
-    PlanStatus,
-    UserDataMode,
-    type EmailParts
-  } from "@21n/types/account.type";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { PlanStatus } from "@nucleum/schema/account/subscription";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
+import { type EmailParts } from "@nucleum/schema/account/profile.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import TextInput from "@21n/elements/input/TextInput.svelte";
@@ -27,9 +25,9 @@
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { isRecordId } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import {
     determineIfPlanIsActive,
     resolveNextRenewalDate,
@@ -38,12 +36,12 @@
   import {
     BillingCycle,
     PlanType
-  } from "@21n/shared-types/subscription.type";
+  } from "@nucleum/schema/account/subscription";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import RestorePurchaseAction from "@nucleum/application/subscription/RestorePurchaseAction.svelte";
   import view from "@nucleum/stores/view.store";
-  import { AppSearchParam } from "@21n/types/appStore.type";
-  import { Product } from "@21n/types/product.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { hasLegacyCloudSession } from "@21n/utils/account.utils";
   import {
     authClient,

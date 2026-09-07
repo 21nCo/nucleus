@@ -1,8 +1,8 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import {
     SubObjectivesLayout,

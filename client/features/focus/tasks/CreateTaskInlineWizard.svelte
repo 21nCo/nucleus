@@ -2,15 +2,13 @@
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount } from "svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import {
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import {
     ObjectiveStatus,
@@ -19,14 +17,14 @@
   } from "@nucleum/features/focus/goals/goal.type";
   import modalEvent from "@nucleum/application/modal/modal.store";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
   import { appEvents, toasts } from "@nucleum/stores/notification.store";
   import ObjectiveSearchResultItem from "@nucleum/features/focus/goals/GoalSearchResultItem.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
 

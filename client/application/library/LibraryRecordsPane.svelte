@@ -1,17 +1,13 @@
 <script lang="ts">
   import Records from "@nucleum/application/record/Records.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { Arrangement, Orientation } from "@21n/types/direction.enum";
+  import { Arrangement, Orientation } from "@21n/elements/direction.enum";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import {
-    AccessMode,
-    ResourceAccessPoint,
-    ResourceAccessPointState,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { AccessMode, ResourceAccessPoint, ResourceAccessPointState } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { BulkEditor } from "@nucleum/application/record/record.store";
   import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
 
@@ -27,13 +23,13 @@
     archivedResourceFilter,
     debouncer
   } from "@21n/utils/utils";
-  import { type IRecordId, SearchType } from "@21n/types/data.type";
+  import { type IRecordId, SearchType } from "@nucleum/schema/legacy/data.type";
   import LibraryLoadingPulse from "@nucleum/application/library/LibraryLoadingPulse.svelte";
   import view from "@nucleum/stores/view.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { intersection } from "@nucleum/actions/intersection.action";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import Icon from "@21n/elements/Icon.svelte";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import { enumToString } from "@21n/shared-utils/text.utils";
@@ -42,7 +38,7 @@
   import { onDestroy, onMount, tick } from "svelte";
   import { page } from "$app/stores";
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState } from "@nucleum/stores/uiState/uiState.type";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
@@ -58,9 +54,9 @@
   import type { SubType } from "@nucleum/application/library/library.type";
   import { isCustomLibrary } from "@nucleum/application/library/library.utils";
   import LinkTagsControlPanel from "@nucleum/features/memory/linking/LinkTagsControlPanel.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { dragSelection } from "@nucleum/actions/dragSelection.action";
   import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

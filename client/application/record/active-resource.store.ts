@@ -1,5 +1,5 @@
 import { get, writable } from "svelte/store";
-import { type IRecordId } from "@21n/types/data.type";
+import { type IRecordId } from "@nucleum/schema/legacy/data.type";
 import {
   AccessMode,
   type IActiveResource,

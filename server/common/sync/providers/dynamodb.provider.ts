@@ -1,5 +1,5 @@
 import { Agent } from "$lib/server/common/account/account.type";
-import { Resource } from "@nucleum/datafn/resource.enum";
+import { Resource } from "@nucleum/schema/resource.enum";
 import {
   ISyncUpBody,
   ISyncDownBody,
@@ -8,13 +8,13 @@ import {
   ICloneDownPaginateBody,
   IReconcileBody,
   ICloneDownPaginatev2Body
-} from "$lib/shared/types/sync.type";
+} from "@nucleum/schema/legacy/sync.type";
 import {
   IMutation,
   IResourceSelectParams,
   PersistenceActionType
-} from "$lib/client/types/data.type";
-import { ResourceActionType } from "@nucleum/datafn/resource.type";
+} from "@nucleum/schema/legacy/data.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { ISyncProvider, SyncProvider } from "./types";
 import { resolveProviderRegionCode } from "$lib/deployment/deploy.utils";
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";

@@ -2,10 +2,10 @@
   import { isSameResource } from "@nucleum/datafn/resource.utils";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { Layout } from "@21n/types/layout.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { Layout } from "@21n/layout/layout-mode.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { cn } from "@21n/utils/ui.utils";
   import QuickStartThumbnail from "@nucleum/features/focus/quickstart/QuickStartThumbnail.svelte";
 

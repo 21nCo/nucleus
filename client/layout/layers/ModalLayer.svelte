@@ -14,30 +14,30 @@
     fullPageLoadingScreen,
     appEvents
   } from "@nucleum/stores/notification.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { fly, slide } from "svelte/transition";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import { onMount } from "svelte";
-  import type { ModalEvent, ModalParams } from "@21n/types/popup.type";
-  import { GlobalEvent } from "@21n/types/event.enum";
-  import type { IEvent } from "@21n/types/event.type";
+  import type { ModalEvent, ModalParams } from "@nucleum/application/modal/popup.type";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
+  import type { IEvent } from "@21n/elements/input/event.type";
   import { postDataToParent } from "@21n/utils/embed.utils";
   import ToastNotification from "@21n/elements/feedback/ToastNotification.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import ModalLayout from "@nucleum/application/modal/ModalLayout.svelte";
   import PageLoadingAnimation from "@21n/elements/feedback/animations/PageLoadingAnimation.svelte";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import { page } from "$app/stores";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import SplitView from "@21n/layout/SplitView.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
   import ConfirmationNotification from "@nucleum/application/notifications/ConfirmationNotification.svelte";
-  import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
   let modals = $state<ModalEvent[]>([]);
   let isShowAppearancePreview = $state(false);
   let fullscreen = $state<string | undefined>(undefined);

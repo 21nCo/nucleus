@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount } from "svelte";
   import SearchResultItem from "@21n/elements/input/SearchResultItem.svelte";
   import { debouncer } from "@21n/utils/utils";
@@ -11,7 +11,7 @@
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { appStore } from "@nucleum/stores/app.store";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
-  import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
+  import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   type SearchItem = Partial<IResource & Record<string, unknown>>;
 
   let {

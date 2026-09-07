@@ -1,7 +1,7 @@
 <script lang="ts">
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
-  import type { TimeScale } from "@21n/types/time.type";
+  import type { TimeScale } from "@21n/utils/time.type";
   import { getCorrespoingHorizonFrequencyLabel } from "@21n/utils/time.utils";
   import { onMount } from "svelte";
 

@@ -10,8 +10,8 @@
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import { tooltip } from "@nucleum/actions/popover.action";
-  import { Placement } from "@21n/types/direction.enum";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import { getWeekNumber } from "@21n/utils/time.utils";
   import {
     buildResolvedIndicatorDataByDayMap,

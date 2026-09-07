@@ -1,9 +1,9 @@
-import type { ISelectItem } from "@21n/types/select.type";
+import type { ISelectItem } from "@21n/elements/select/select.type";
 import {
   TimePeriodType,
   TimeScale,
   type RelativeTimePeriodValue
-} from "@21n/types/time.type";
+} from "@21n/utils/time.type";
 import { timePeriodLabel } from "@21n/utils/time.utils";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
 

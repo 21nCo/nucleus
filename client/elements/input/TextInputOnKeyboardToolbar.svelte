@@ -2,9 +2,9 @@
   import { tick } from "svelte";
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
 
   let {
     value = $bindable(""),

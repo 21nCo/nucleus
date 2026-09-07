@@ -4,8 +4,8 @@
   import Icon from "@21n/elements/Icon.svelte";
   import dayjs from "dayjs";
   import "dayjs/locale/en";
-  import { Size } from "@21n/types/size.enum";
-  import { TimeScale } from "@21n/types/time.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TimeScale } from "@21n/utils/time.type";
   import Button from "@21n/elements/button/Button.svelte";
   import { abg, bg, cn } from "@21n/utils/ui.utils";
   import { isSameDay } from "@21n/utils/time.utils";

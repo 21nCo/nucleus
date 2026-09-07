@@ -6,7 +6,7 @@
   import type { ICalendarIndicatorData } from "@nucleum/features/calendar/calendar.type";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import {
     buildResolvedIndicatorDataByDayMap,

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import {
     SelectionItemActiveStyle,
     SwitcherStyle
-  } from "@21n/types/switcher.enum";
+  } from "@21n/elements/switcher/switcher.enum";
 
   let { selectedSound = $bindable("") }: { selectedSound?: string } = $props();
   let sounds: string[] = [

@@ -13,7 +13,7 @@
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
   import NodeAvatar from "@nucleum/features/memory/node/avatar/NodeAvatar.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { resolveNodeLabel } from "@nucleum/features/memory/node/node.utils";
   import NodeTitleBreadcrumbs from "@nucleum/features/memory/node/title/NodeTitleBreadcrumbs.svelte";
   import { isValidString } from "@21n/shared-utils/text.utils";

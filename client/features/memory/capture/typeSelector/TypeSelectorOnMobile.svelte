@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import CaptureDraftsAction from "@nucleum/features/memory/capture/draftSelector/CaptureDraftsAction.svelte";
   import { CaptureMethod } from "@nucleum/features/memory/capture/capture.type";
   import { cn } from "@21n/utils/ui.utils";
@@ -19,7 +19,7 @@
   import { toSvelteStore } from "@datafn/svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState } from "@nucleum/stores/uiState/uiState.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   type IBaseType = {
     icon: string;
     label: string;

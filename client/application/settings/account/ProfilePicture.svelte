@@ -6,10 +6,10 @@
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import FileView from "@nucleum/features/files/FileView.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   let {
     context = "cp-profile",
     fileId: providedFileId = undefined,

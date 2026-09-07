@@ -1,5 +1,5 @@
-import { EmbedDataMessage, EmbedMessage } from "@21n/types/embedMessage.enum";
-import type { HapticFeedback } from "@21n/types/haptic.enum";
+import { EmbedDataMessage, EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+import type { HapticFeedback } from "@nucleum/application/embed/haptic.enum";
 import { stringify } from "@21n/shared-utils/json.utils";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 

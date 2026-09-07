@@ -9,9 +9,9 @@
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
   import view from "@nucleum/stores/view.store";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { InputStyle } from "@21n/types/input.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import type {
     ILinkTag,

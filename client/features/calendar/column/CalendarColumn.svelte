@@ -5,9 +5,9 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
-  import { Product } from "@21n/types/product.type";
-  import { TextStyle } from "@21n/types/text.enum";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { Product } from "@nucleum/client/config/product.type";
+  import { TextStyle } from "@21n/elements/text/text.enum";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import { cn } from "@21n/utils/ui.utils";
   import {
     CalendarColumnLayout,
@@ -18,18 +18,18 @@
   import CalendarColumnPanelSelector from "@nucleum/features/calendar/column/CalendarColumnPanelSelector.svelte";
   import CalendarColumnTimeline from "@nucleum/features/calendar/column/timeline/CalendarColumnTimeline.svelte";
   import Divider from "@21n/elements/Divider.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { page } from "$app/stores";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
   import {
     resolveCalendarColumnPanels,
     resolveCalendarNotesId
   } from "@nucleum/features/calendar/calendar.utils";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import DayTimeline from "./timeline/daytimeline/DayTimeline.svelte";
   import BoxButton from "@21n/elements/button/BoxButton.svelte";
 

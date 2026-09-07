@@ -10,8 +10,8 @@
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
-  import { Action } from "@21n/types/action.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { resolveProductConfig } from "@nucleum/products/product.config";
   let {
     variant = "expandable",

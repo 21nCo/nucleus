@@ -9,15 +9,15 @@
     AccessMode,
     type IResourcePageWithPanels
   } from "@nucleum/datafn/resource.type";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
   import ContextMenuAction from "@21n/elements/contextMenu/ContextMenuAction.svelte";
-  import type { IContextMenuItem } from "@21n/types/select.type";
+  import type { IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
   import { page } from "$app/stores";
   import Icon from "@21n/elements/Icon.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
 
   interface Props {
     resourceStore: Readable<IResourcePageWithPanels>;

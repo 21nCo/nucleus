@@ -4,15 +4,15 @@
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
   import MultiselectDropdown from "@21n/elements/dropdown/MultiselectDropdown.svelte";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TimeScale } from "@21n/types/time.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TimeScale } from "@21n/utils/time.type";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { getTimeZonesWithOffsets } from "@21n/utils/time.utils";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
   let timeZones: { label: string; offset: number; zone: string }[] = [];
   let timeZoneDropdownItems: (Omit<DropdownItem, "value"> & {
     value: string;

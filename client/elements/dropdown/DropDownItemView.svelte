@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { MouseEventHandler } from "svelte/elements";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
+  import { Size } from "@21n/elements/size.enum";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";

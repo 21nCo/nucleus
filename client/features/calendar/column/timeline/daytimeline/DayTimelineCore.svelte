@@ -9,15 +9,15 @@
   import { formatTime } from "@21n/utils/time.utils";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import { cn } from "@21n/utils/ui.utils";
   import { player } from "@nucleum/application/modal/modal.store";
   import RefreshingOverlayFeedback from "@21n/elements/feedback/RefreshingOverlayFeedback.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 
   let {
     date = new Date(),

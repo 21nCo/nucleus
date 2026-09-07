@@ -9,13 +9,13 @@
     AvatarPickerContext,
     AvatarType,
     type IAvatar
-  } from "@21n/types/avatar.type";
+  } from "@21n/elements/avatarPicker/avatar.type";
   import {
     TableCellDefaultAction,
     TableCellType,
     type TableColumn
-  } from "@21n/types/table.type";
-  import { TextStyle } from "@21n/types/text.enum";
+  } from "@21n/elements/table/table.type";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
   import { markdownSettings } from "@nucleum/features/memory/markdown/markdown.settings";

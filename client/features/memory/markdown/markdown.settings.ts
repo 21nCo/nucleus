@@ -1,4 +1,4 @@
-import { AvatarType } from "@21n/types/avatar.type";
+import { AvatarType } from "@21n/elements/avatarPicker/avatar.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import type { IMarkdownSettings } from "@nucleum/features/memory/markdown/md.type";
 import { datafn } from "@nucleum/datafn/datafn.store";

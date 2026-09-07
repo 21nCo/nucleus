@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { IActiveObjectiveStore } from "@nucleum/features/focus/goals/goal.store";
-  import { TimeScale } from "@21n/types/time.type";
-  import { InputStyle } from "@21n/types/input.type";
+  import { TimeScale } from "@21n/utils/time.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import TimelineCardAxis from "@nucleum/features/focus/goals/info/TimelineCardAxis.svelte";
   import Divider from "@21n/elements/Divider.svelte";

@@ -1,5 +1,5 @@
 import { NodeType } from "@nucleum/features/memory/node/node.type";
-import { Embed } from "@21n/types/context.type";
+import { Embed } from "@nucleum/client/runtime/context.type";
 import { InlineType } from "@nucleum/features/memory/markdown/md.type";
 import type {
   IBlockBrowserItem,

@@ -5,7 +5,7 @@
   import { acquireDnDPage, appStore } from "@nucleum/stores/app.store";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     reorderList,
     type DragDropEvent
@@ -17,12 +17,12 @@
   import { cn } from "@21n/utils/ui.utils";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { properCase } from "@21n/shared-utils/text.utils";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import { onDestroy, onMount } from "svelte";
   let { onUpdate }: { onUpdate?: () => void } = $props();
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Writer from "@nucleum/features/memory/capture/Writer.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import {
     acquireDnDPage,
     appStore,
@@ -9,7 +9,7 @@
   } from "@nucleum/stores/app.store";
   import { cn } from "@21n/utils/ui.utils";
   import TypeSelector from "@nucleum/features/memory/capture/TypeSelector.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { CaptureMethod } from "@nucleum/features/memory/capture/capture.type";
   import FileUploader from "@nucleum/features/memory/capture/FileUploader.svelte";
@@ -18,32 +18,32 @@
   import Icon from "@21n/elements/Icon.svelte";
   import view from "@nucleum/stores/view.store";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import type { IEvent } from "@21n/types/event.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IEvent } from "@21n/elements/input/event.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     ActiveCaptureStore,
     type IActiveCaptureStore
   } from "@nucleum/features/memory/capture/capture.store";
   import CaptureDraftsAction from "@nucleum/features/memory/capture/draftSelector/CaptureDraftsAction.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import CaptureTopBar from "@nucleum/features/memory/capture/CaptureTopBar.svelte";
   import WebCaptureModal from "@nucleum/features/memory/capture/web/WebCaptureModal.svelte";
   import type { WebArtifact } from "@nucleum/features/memory/capture/web/webCapture.types";
   import { fly } from "svelte/transition";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
-  import { Action } from "@21n/types/action.enum";
-  import { Context } from "@21n/types/appStore.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Context } from "@nucleum/stores/appStore.type";
   import EdgeButton from "@21n/elements/button/EdgeButton.svelte";
 
   let {

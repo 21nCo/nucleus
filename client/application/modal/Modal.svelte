@@ -5,8 +5,8 @@
   import { fade } from "svelte/transition";
   import ModalHeader from "@nucleum/application/modal/ModalHeader.svelte";
   import { generateUID } from "@21n/utils/utils";
-  import { Size } from "@21n/types/size.enum";
-  import { Orientation, Placement } from "@21n/types/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { Orientation, Placement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import appearance from "@nucleum/stores/appearance.store";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
@@ -17,7 +17,7 @@
   import view from "@nucleum/stores/view.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   let {
     index = 0,
     show = $bindable(true),

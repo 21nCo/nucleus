@@ -1,11 +1,11 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { Orientation, Placement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { VerticalSwitcherStyle } from "@21n/types/switcher.enum";
+  import { Orientation, Placement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { VerticalSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { bg, cn } from "@21n/utils/ui.utils";
-  import type { ISelectItem } from "@21n/types/select.type";
+  import type { ISelectItem } from "@21n/elements/select/select.type";
   import Badge from "@21n/elements/text/Badge.svelte";
   import { hoverable } from "@nucleum/actions/hover.action";
   import { tooltip } from "@nucleum/actions/popover.action";

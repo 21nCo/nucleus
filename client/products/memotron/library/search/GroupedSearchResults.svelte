@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { Resource } from "@nucleum/datafn/resource.enum";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
-  import { KeyboardKey } from "@21n/types/keyboard.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
+  import { KeyboardKey } from "@21n/elements/keyboard/keyboard.type";
   import GroupItem from "@nucleum/products/memotron/library/search/GroupItem.svelte";
 
   let {

@@ -6,7 +6,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { cn } from "@21n/utils/ui.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 
   let {
     objectiveId,

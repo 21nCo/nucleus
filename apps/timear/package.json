@@ -29,7 +29,6 @@
   "dependencies": {
     "@nucleum/components": "*",
     "@nucleum/stores": "*",
-    "@21n/types": "*",
     "@21n/utils": "*",
     "clsx": "^2.1.0"
   },

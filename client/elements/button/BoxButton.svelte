@@ -1,14 +1,14 @@
 <script lang="ts">
   import type { MouseEventHandler } from "svelte/elements";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Icon from "../Icon.svelte";
   import { popover } from "@nucleum/actions/popover.action";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import ShortcutText from "../text/ShortcutText.svelte";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 
   let {

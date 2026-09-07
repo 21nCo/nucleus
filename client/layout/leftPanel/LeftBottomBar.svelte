@@ -3,7 +3,7 @@
 <script lang="ts">
   import BoxButton from "@21n/elements/button/BoxButton.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   let {
     isInThinMode = false,
     isRounded = false

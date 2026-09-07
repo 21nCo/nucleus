@@ -1,12 +1,12 @@
 <script lang="ts">
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
   import {
     SessionCompositionType,
     type SessionComposition
-  } from "@21n/types/pointron/sessionComposition.type";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
+  } from "@nucleum/features/focus/sessionComposition.type";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
   import { appStore, currentTime } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";

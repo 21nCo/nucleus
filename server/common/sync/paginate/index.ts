@@ -2,7 +2,7 @@ import { Agent } from "$lib/server/common/account/account.type";
 import {
   ICloneDownPaginateBody,
   ICloneDownPaginatev2Body
-} from "$lib/shared/types/sync.type";
+} from "@nucleum/schema/legacy/sync.type";
 import { SyncProvider, SyncProviderFactory } from "../providers";
 
 /**

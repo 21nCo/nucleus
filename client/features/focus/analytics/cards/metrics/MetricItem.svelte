@@ -1,6 +1,6 @@
 <script lang="ts">
   import view from "@nucleum/stores/view.store";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { cn } from "@21n/utils/ui.utils";

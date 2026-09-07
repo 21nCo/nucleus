@@ -24,7 +24,7 @@
   import { getContext } from "svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { queryLinkingSearchResults } from "@nucleum/features/memory/linking/link-search";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     inlineLinkPatterns,
     performEscShortcuts,
@@ -33,11 +33,11 @@
   import view from "@nucleum/stores/view.store";
   import context from "@nucleum/stores/context.store";
   import { popover } from "@nucleum/actions/popover.action";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
 
   const nodeContentContext = getContext<any>(Context.CONTENT);

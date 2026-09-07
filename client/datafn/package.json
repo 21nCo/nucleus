@@ -9,7 +9,6 @@
     "@datafn/client": "0.1.0",
     "@searchfn/adapter-indexeddb": "0.1.0",
     "@searchfn/datafn-provider": "0.4.0",
-    "@21n/types": "*",
     "@nucleum/persistence": "*"
   },
   "peerDependencies": {
@@ -26,6 +25,10 @@
     "./resource.enum": "./resource.enum.ts",
     "./resource.type": "./resource.type.ts",
     "./resource.utils": "./resource.utils.ts",
-    "./signalCache": "./signalCache.ts"
+    "./signalCache": "./signalCache.ts",
+    "./datafn.type": "./datafn.type.ts",
+    "./observable-store.type": "./observable-store.type.ts",
+    "./e2ee.type": "./e2ee.type.ts",
+    "./optimisticKv.type": "./optimisticKv.type.ts"
   }
 }

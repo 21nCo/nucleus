@@ -35,7 +35,7 @@
   import { MemotronEvent } from "@nucleum/features/memory/memory.type";
   import { hoverable } from "@nucleum/actions/hover.action";
   import view from "@nucleum/stores/view.store";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
   import {
     resolveDefaultBodyForBlock,
@@ -56,18 +56,18 @@
     resolvePasteContents
   } from "@nucleum/features/memory/capture/capture.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { isValidUrl } from "@21n/shared-utils/utils";
   import account from "@nucleum/stores/account.store";
-  import { UserDataMode } from "@21n/types/account.type";
+  import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import { Persistence } from "@nucleum/persistence/persistence";
   import { wait } from "@21n/utils/time.utils";
   import { appStore } from "@nucleum/stores/app.store";
   import type { IMultiFileCaptureData } from "@nucleum/features/memory/capture/capture.type";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import FocusRing from "@nucleum/features/memory/markdown/contextMenu/FocusRing.svelte";
   import { tooltip } from "@nucleum/actions/popover.action";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { observeAttributes } from "@nucleum/actions/observe.action";
   import context from "@nucleum/stores/context.store";
   import MarkdownkeyboardToolbar from "@nucleum/features/memory/markdown/toolbar/MarkdownkeyboardToolbar.svelte";
@@ -77,7 +77,7 @@
     type IActiveCaptureStore
   } from "@nucleum/features/memory/capture/capture.store";
   import Check from "@21n/icons/Check.svelte";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
 
   let {

@@ -1,14 +1,14 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
   import { resizeListener } from "@nucleum/actions/resize.action";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import { uiState, uiStateDerived } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { MemotronOverviewPanel } from "@nucleum/products/memotron/overview/overview.type";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { cn } from "@21n/utils/ui.utils";
 

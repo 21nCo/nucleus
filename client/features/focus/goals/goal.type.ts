@@ -1,5 +1,5 @@
 import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import type {
   IActiveResource,
   IResource,
@@ -14,7 +14,7 @@ import type {
   ICollectible,
   ICollectionExpanded
 } from "@nucleum/features/collections/collection.type";
-import type { TimeScale } from "@21n/types/time.type";
+import type { TimeScale } from "@21n/utils/time.type";
 import type { ITask } from "@nucleum/features/focus/tasks/task.type";
 
 export enum ObjectiveType {

@@ -1,17 +1,17 @@
 <script lang="ts">
   import account from "@nucleum/stores/account.store";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import modalEvent from "@nucleum/application/modal/modal.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { resolveNextRenewalDate, SUBSCRIPTION_PLANS } from "@nucleum/application/subscription/userPlan.utils";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import PlanFeatureList from "@nucleum/application/subscription/elements/PlanFeatureList.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { PaymentProvider } from "@21n/shared-types/plan.type";
+  import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
   import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
-  import { BillingCycle } from "@21n/shared-types/subscription.type";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { BillingCycle } from "@nucleum/schema/account/subscription";
 
   let isCancelInProgress = false;
 

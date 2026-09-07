@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fileLoaderv2 } from "@nucleum/actions/lazyload.action";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { isValidUrl } from "@21n/shared-utils/utils";
   import { resolveFallbackIconForUrl } from "@nucleum/features/memory/node/node.utils";

@@ -16,7 +16,7 @@ import {
   applyOptimisticKvEntries,
   removeOptimisticKvEntries
 } from "@nucleum/datafn/optimisticKv.utils";
-import type { OptimisticKvEntries } from "@21n/types/datafn.type";
+import type { OptimisticKvEntries } from "@nucleum/datafn/optimisticKv.type";
 
 const preferencesSignal = datafn.kv.signal<IPreferencesStore>(
   Resource.preferences,

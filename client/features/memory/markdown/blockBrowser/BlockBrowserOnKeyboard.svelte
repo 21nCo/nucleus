@@ -5,7 +5,7 @@
     quoteBrowserItem
   } from "@nucleum/features/memory/markdown/blockBrowser/blockBrowser.utils";
   import type { IBlockBrowserItem } from "@nucleum/features/memory/markdown/blockBrowser/blockBrowser.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import BlockBrowserKeyboardItem from "@nucleum/features/memory/markdown/blockBrowser/BlockBrowserKeyboardItem.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";

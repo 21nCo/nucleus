@@ -2,15 +2,15 @@
   import FormControlLabelWrapper from "@21n/elements/text/formLabel/FormControlLabelWrapper.svelte";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonVariant, ButtonStyle } from "@21n/types/button.type";
+  import { ButtonVariant, ButtonStyle } from "@21n/elements/button/button.type";
   import { bg, cn } from "@21n/utils/ui.utils";
-  import type { InputLabel } from "@21n/types/input.type";
-  import { Orientation } from "@21n/types/direction.enum";
+  import type { InputLabel } from "@21n/elements/input/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
   import { rearrangeOnAxis } from "@nucleum/actions/rearrange.action";
   import { moveItemInArray } from "@21n/shared-utils/obj.utils";
   import { formatSeconds } from "@21n/utils/time.utils";
-  import { TimeFormat } from "@21n/types/time.type";
-  import { Size } from "@21n/types/size.enum";
+  import { TimeFormat } from "@21n/utils/time.type";
+  import { Size } from "@21n/elements/size.enum";
 
   let {
     values = $bindable<number[]>([]),

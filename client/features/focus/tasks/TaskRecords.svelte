@@ -1,28 +1,28 @@
 <script lang="ts">
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import {
     TaskSubTypeForSwitcher,
     type ITaskThumb
   } from "@nucleum/features/focus/tasks/task.type";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
-  import { Size } from "@21n/types/size.enum";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { Size } from "@21n/elements/size.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import Button from "@21n/elements/button/Button.svelte";
   import type { SubType } from "@nucleum/application/library/library.type";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { onMount } from "svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import type { IEvent } from "@21n/types/event.type";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import type { IEvent } from "@21n/elements/input/event.type";
   import CreateTaskInlineWizard from "./CreateTaskInlineWizard.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import view from "@nucleum/stores/view.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import TasksGroupedByObjective from "./TasksGroupedByGoal.svelte";
   let {
     data,

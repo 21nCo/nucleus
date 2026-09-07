@@ -3,7 +3,7 @@ import {
   type ICollectionExpanded,
   type ICollectionItem
 } from "@nucleum/features/collections/collection.type";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import type { IProperty } from "@nucleum/features/collections/properties/property.type";
 import { PropertyType } from "@nucleum/features/collections/properties/property.type";
 import {
@@ -14,10 +14,10 @@ import {
   isNoneResource,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import type { ISelectItem } from "@21n/types/select.type";
+import type { ISelectItem } from "@21n/elements/select/select.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { Product } from "@21n/types/product.type";
-import type { IAvatar } from "@21n/types/avatar.type";
+import { Product } from "@nucleum/client/config/product.type";
+import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
 import { datafn } from "@nucleum/datafn/datafn.store";
 
 export const UNASSIGNED_VALUE = "unassigned";

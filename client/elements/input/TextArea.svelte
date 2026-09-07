@@ -1,9 +1,9 @@
 <script lang="ts">
   import view from "@nucleum/stores/view.store";
-  import { InputStyle, type InputLabel } from "@21n/types/input.type";
+  import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
   import InputBaseElement from "@21n/elements/InputBaseElement.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { debouncer } from "@21n/utils/utils";
   let {
     size = Size.md,

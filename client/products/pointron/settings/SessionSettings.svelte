@@ -2,7 +2,7 @@
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
   import QuickAddDurationsEditor from "@nucleum/features/focus/logs/manualLog/QuickAddDurationsEditor.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import context from "@nucleum/stores/context.store";
 

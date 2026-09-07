@@ -20,7 +20,7 @@
   import Month from "@nucleum/features/calendar/birdView/Month.svelte";
   import Year from "@nucleum/features/calendar/birdView/Year.svelte";
   import { debouncer } from "@21n/utils/utils";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
 
   let {
     mode = TimeScaleUnit.DAY,

@@ -1,17 +1,17 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { Layout } from "@21n/types/layout.type";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { Layout } from "@21n/layout/layout-mode.type";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import Button from "@21n/elements/button/Button.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import { isValidArray } from "@21n/shared-utils/obj.utils";
@@ -19,9 +19,9 @@
     isSameResource,
     resourceAction
   } from "@nucleum/datafn/resource.utils";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { resolveObjectiveColor } from "@nucleum/features/focus/goals/goal.utils";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import QuickStartThumbnailList from "@nucleum/features/focus/quickstart/QuickStartThumbnailList.svelte";
   import view from "@nucleum/stores/view.store";

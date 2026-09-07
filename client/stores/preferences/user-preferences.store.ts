@@ -1,16 +1,16 @@
-import { AppSkin, Theme } from "@21n/types/appearance.type";
+import { AppSkin, Theme } from "@21n/theme/appearance.type";
 import type {
   IUserGlobalPreferences,
   UserAppearanceSettings
-} from "@21n/types/preferences.type";
-import { TimeScale } from "@21n/types/time.type";
+} from "@nucleum/stores/preferences/user-preferences.type";
+import { TimeScale } from "@21n/utils/time.type";
 import {
   detectTimeZone,
   detectTimeZoneFallback,
   getTimeZonesWithOffsets
 } from "@21n/utils/time.utils";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { TranscriptionModel } from "@nucleum/products/memotron/taco/taco.types";
+import { TranscriptionModel } from "@nucleum/application/taco/worker.type";
 import { tzStore } from "@nucleum/stores/preferences/timezone.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { get, writable } from "svelte/store";
@@ -20,7 +20,7 @@ import {
   applyOptimisticKvEntries,
   removeOptimisticKvEntries
 } from "@nucleum/datafn/optimisticKv.utils";
-import type { OptimisticKvEntries } from "@21n/types/datafn.type";
+import type { OptimisticKvEntries } from "@nucleum/datafn/optimisticKv.type";
 
 const defaultColorSchemeId = "colorscheme:clean_tidyblue_light";
 const defaultDarkColorSchemeId = "colorscheme:clean_tidyblue_dark";

@@ -9,8 +9,8 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore, isInEditMode } from "@nucleum/stores/app.store";
   import context from "@nucleum/stores/context.store";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { formatDateRelativeToToday } from "@21n/utils/time.utils";
   import {
     activeSession,

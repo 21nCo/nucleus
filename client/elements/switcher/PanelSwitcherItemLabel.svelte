@@ -3,11 +3,11 @@
     PanelSwitcherActiveItemStrength,
     PanelSwitcherStyle,
     type PanelSwitcherEditModeOptions
-  } from "@21n/types/switcher.enum";
+  } from "@21n/elements/switcher/switcher.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import type { ISelectItem } from "@21n/types/select.type";
+  import { Size } from "@21n/elements/size.enum";
+  import type { ISelectItem } from "@21n/elements/select/select.type";
   import Popover from "@21n/elements/popover/Popover.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { cn } from "@21n/utils/ui.utils";

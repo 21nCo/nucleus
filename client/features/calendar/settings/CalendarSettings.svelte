@@ -1,9 +1,9 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { TextStyle } from "@21n/elements/text/text.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
@@ -13,12 +13,12 @@
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import context from "@nucleum/stores/context.store";
   import type { IMarkdownTemplate } from "@nucleum/features/memory/markdown/md.type";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import CalendarNotesTemplateCard from "@nucleum/features/calendar/settings/CalendarNotesTemplateCard.svelte";
   import { generateMarkdownText } from "@nucleum/features/memory/node/node.utils";
   import Switch from "@21n/elements/toggle/Switch.svelte";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { appStore } from "@nucleum/stores/app.store";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   let editingTemplate: TimeScaleUnit | null = null;

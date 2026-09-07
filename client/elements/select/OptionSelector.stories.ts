@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/svelte";
 import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-import { Size } from "@21n/types/size.enum";
-import { OptionSelectorStyle } from "@21n/types/select.type";
-import { Orientation } from "@21n/types/direction.enum";
+import { Size } from "@21n/elements/size.enum";
+import { OptionSelectorStyle } from "@21n/elements/select/select.type";
+import { Orientation } from "@21n/elements/direction.enum";
 
 const meta = {
   title: "Elements/Select/OptionSelector",

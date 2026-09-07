@@ -1,4 +1,4 @@
-import { Resource } from "@nucleum/datafn/resource.enum";
+import { Resource } from "@nucleum/schema/resource.enum";
 
 export function resolveSyncDownQuery(
   lastSyncDown: number,

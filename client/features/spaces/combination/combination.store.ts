@@ -4,7 +4,7 @@ import {
   AccessMode,
   ResourceAccessPoint
 } from "@nucleum/datafn/resource.type";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import { appStore } from "@nucleum/stores/app.store";
 import { logger } from "@nucleum/client/runtime/logging/logger";

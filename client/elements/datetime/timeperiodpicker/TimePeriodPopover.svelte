@@ -4,16 +4,16 @@
     TimeScale,
     TimePeriodType,
     type RelativeTimePeriodValue
-  } from "@21n/types/time.type";
+  } from "@21n/utils/time.type";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import RelativeTimeRangeSelector from "@21n/elements/datetime/timeperiodpicker/RelativeTimeRangeSelector.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import AbsoluteTimeRangePopoverV2 from "@21n/elements/datetime/absolute/AbsoluteTimeRangePopoverV2.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   let { period, onChange }: any = $props();
   type AbsoluteTimePeriodValue = Extract<
     TimePeriod["value"],

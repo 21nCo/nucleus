@@ -25,9 +25,9 @@
   import VerticalQuadrennialLayout from "@nucleum/features/calendar/calendarHeatmap/VerticalQuadrennialLayout.svelte";
   import VerticalYearsLayout from "@nucleum/features/calendar/calendarHeatmap/VerticalYearsLayout.svelte";
   import YearsLayout from "@nucleum/features/calendar/calendarHeatmap/YearsLayout.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
 
   let {
     variant = CalendarHmVariant.PLAIN,

@@ -1,5 +1,5 @@
 <script>
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import CalendarColumn from "./column/CalendarColumn.svelte";
 </script>
 

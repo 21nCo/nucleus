@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { IconVariant } from "@21n/types/icon.type";
+  import { IconVariant } from "@21n/elements/icon.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { generateUID } from "@21n/utils/utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let {
     isVisible = false,
     hideCloseButton = false,

@@ -1,9 +1,9 @@
 <script lang="ts">
   import RocketLaunch from "@21n/illustrations/RocketLaunch.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
   import Link from "@21n/elements/text/Link.svelte";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import ComingSoon from "@21n/illustrations/pixelsmarket/ComingSoon.svelte";
     let {
     mainText = undefined,

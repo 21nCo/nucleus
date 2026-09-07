@@ -1,4 +1,4 @@
-import type { EmbedMessage } from "@21n/types/embedMessage.enum";
+import type { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
 export type IEmbedChannel = {
   [key: string]: IEmbedChannelData;
 };

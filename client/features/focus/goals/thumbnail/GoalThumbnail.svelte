@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Arrangement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import ResourceGridThumbnail from "@nucleum/application/record/thumbnail/ResourceGridThumbnail.svelte";
   import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";

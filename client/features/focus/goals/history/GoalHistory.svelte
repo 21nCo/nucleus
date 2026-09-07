@@ -3,7 +3,7 @@
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import ObjectiveAllActivityPanel from "@nucleum/features/focus/goals/history/GoalAllActivityPanel.svelte";
   import ObjectiveFocusSessions from "@nucleum/features/focus/goals/history/GoalFocusSessions.svelte";
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   import CarbonChart from "@nucleum/components/charts/CarbonChart.svelte";
-  import { ChartType } from "@21n/types/analytics.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ChartType } from "@nucleum/components/charts/analytics.type";
+  import { Size } from "@21n/elements/size.enum";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { cn } from "@21n/utils/ui.utils";
 

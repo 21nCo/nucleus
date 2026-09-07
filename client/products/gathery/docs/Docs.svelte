@@ -5,13 +5,13 @@
   import Text from "@21n/elements/text/Text.svelte";
   import NodeThumbnail from "@nucleum/features/memory/node/thumbnail/NodeThumbnail.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { docStore } from "$local/client/products/gathery/docs.store";
-  import { GatheryEvent } from "@21n/types/gathery/gatheryEvent.enum";
+  import { GatheryEvent } from "@nucleum/features/spaces/gatheryEvent.enum";
   let { searchInput = $bindable("") }: { searchInput?: string } = $props();
   docStore.refresh();
 </script>

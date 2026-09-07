@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/svelte";
 import Button from "@21n/elements/button/Button.svelte";
-import { Size } from "@21n/types/size.enum";
-import { Placement } from "@21n/types/direction.enum";
-import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+import { Size } from "@21n/elements/size.enum";
+import { Placement } from "@21n/elements/direction.enum";
+import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
 
 const meta = {
   component: Button,

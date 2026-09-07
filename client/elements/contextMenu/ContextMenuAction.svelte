@@ -4,13 +4,13 @@
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { createEventPropagator } from "@nucleum/features/calendar/events/event.utils";
   import view from "@nucleum/stores/view.store";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import {
     type IPopoverRenderBaseParams,
     PopoverTriggerMethod
-  } from "@21n/types/popover.type";
-  import type { IContextMenuItem } from "@21n/types/select.type";
-  import { Size } from "@21n/types/size.enum";
+  } from "@nucleum/actions/popover.type";
+  import type { IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
+  import { Size } from "@21n/elements/size.enum";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
   let {

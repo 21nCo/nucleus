@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { ChipVariant } from "@21n/types/chipVariant.enum";
+  import { ChipVariant } from "@21n/elements/autocomplete/chipVariant.enum";
   import Icon from "@21n/elements/Icon.svelte";
   let {
     children,

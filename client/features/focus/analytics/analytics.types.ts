@@ -1,4 +1,4 @@
-import type { TimePeriod } from "@21n/types/time.type";
+import type { TimePeriod } from "@21n/utils/time.type";
 
 export type IAnalyticsConfigStore = {
   pages: AnalyticsPage[];

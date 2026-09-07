@@ -7,9 +7,9 @@ import type {
   IResourceShareable,
   IResourceImportable
 } from "@nucleum/datafn/resource.type";
-import type { IAvatar } from "@21n/types/avatar.type";
-import type { IRecordId } from "@21n/types/data.type";
-import type { Arrangement, Placement } from "@21n/types/direction.enum";
+import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+import type { Arrangement, Placement } from "@21n/elements/direction.enum";
 import type { INodeThumb } from "@nucleum/features/memory/node/node.type";
 import type {
   IProperty,

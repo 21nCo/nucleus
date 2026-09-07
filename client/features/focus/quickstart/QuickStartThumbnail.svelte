@@ -5,8 +5,8 @@
   } from "@nucleum/features/focus/session.store";
   import Icon from "@21n/elements/Icon.svelte";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
-  import { Layout } from "@21n/types/layout.type";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { Layout } from "@21n/layout/layout-mode.type";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { formatTime, formatSeconds } from "@21n/utils/time.utils";
   import BreadcrumbMini from "@21n/elements/breadcrumb/BreadcrumbMini.svelte";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";

@@ -13,14 +13,14 @@ import {
 import {
   BillingCycle,
   PlanType
-} from "@21n/shared-types/subscription.type";
+} from "@nucleum/schema/account/subscription";
 import {
   resolvePlanQuery,
   resolvePromotePlanQuery,
   resolveTransactionStatusFromDodo,
   resolveTransactionStatusFromApple
 } from "../plan.utils";
-import { PaymentProvider } from "$lib/shared/types/plan.type";
+import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
 
 interface VerifyRequest {
   nonce: string;

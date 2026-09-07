@@ -3,7 +3,7 @@
   import Link from "@21n/icons/Link.svelte";
   import Web from "@21n/icons/Web.svelte";
   import Phone from "@21n/icons/Phone.svelte";
-  import { IdentityProvider } from "@21n/types/oauth.type";
+  import { IdentityProvider } from "@nucleum/client/runtime/account/oauth.type";
   import Behance from "@21n/branding/external/logos/Behance.svelte";
   import Dribbble from "@21n/branding/external/logos/Dribbble.svelte";
   import FiveHundredPx from "@21n/branding/external/logos/FiveHundredPx.svelte";

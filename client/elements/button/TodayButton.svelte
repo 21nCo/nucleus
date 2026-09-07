@@ -2,8 +2,8 @@
   import type { MouseEventHandler } from "svelte/elements";
   import Button from "@21n/elements/button/Button.svelte";
   import { selectedTimePeriod } from "@nucleum/stores/app.store";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { isSameDay } from "@21n/utils/time.utils";
 
   let {

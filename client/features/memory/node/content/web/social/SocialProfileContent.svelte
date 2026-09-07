@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     NodeType,
     socialProfileNodeTypeList,

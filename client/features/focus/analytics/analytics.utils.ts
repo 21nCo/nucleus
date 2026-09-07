@@ -2,7 +2,7 @@ import {
   TimePeriodType,
   TimeScale,
   type TimePeriod
-} from "@21n/types/time.type";
+} from "@21n/utils/time.type";
 import { deepCopy } from "@21n/shared-utils/obj.utils";
 import {
   determinePreviousTimePeriod,

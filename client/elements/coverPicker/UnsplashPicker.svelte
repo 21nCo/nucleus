@@ -1,7 +1,7 @@
 <script lang="ts">
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { InputStyle } from "@21n/types/input.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import Icon from "@21n/elements/Icon.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";

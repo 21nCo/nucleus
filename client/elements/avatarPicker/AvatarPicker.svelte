@@ -1,13 +1,13 @@
 <script lang="ts">
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { ColorStrength } from "@21n/types/appearance.type";
+  import { ColorStrength } from "@21n/theme/appearance.type";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
   import Divider from "@21n/elements/Divider.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { appStoreShuffleEmojis } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount, tick } from "svelte";
   import { debouncer } from "@21n/utils/utils";
   import {
@@ -18,10 +18,10 @@
     type IconAvatar,
     type EmojiAvatar,
     AvatarPickerContext
-  } from "@21n/types/avatar.type";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  } from "@21n/elements/avatarPicker/avatar.type";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import { emojis, materialSymbols } from "@21n/elements/avatarPicker/avatars";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";

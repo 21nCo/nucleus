@@ -1,18 +1,18 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import type { MouseEventHandler } from "svelte/elements";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Placement } from "@21n/types/direction.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Placement } from "@21n/elements/direction.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
-  import type { IPopoverRenderBaseParams } from "@21n/types/popover.type";
+  import type { IPopoverRenderBaseParams } from "@nucleum/actions/popover.type";
   import Badge from "@21n/elements/text/Badge.svelte";
   import { hoverable } from "@nucleum/actions/hover.action";
   import { popover } from "@nucleum/actions/popover.action";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
-  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import ButtonTooltip from "@21n/elements/button/ButtonTooltip.svelte";
   import context from "@nucleum/stores/context.store";
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ChartType } from "@21n/types/analytics.type";
+  import type { ChartType } from "@nucleum/components/charts/analytics.type";
   import EChart from "./EChart.svelte";
   import view from "@nucleum/stores/view.store";
   let type: ChartType;

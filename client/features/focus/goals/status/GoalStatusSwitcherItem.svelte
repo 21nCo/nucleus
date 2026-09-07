@@ -1,8 +1,8 @@
 <script lang="ts">
   import { tooltip } from "@nucleum/actions/popover.action";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Placement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import { fly } from "svelte/transition";

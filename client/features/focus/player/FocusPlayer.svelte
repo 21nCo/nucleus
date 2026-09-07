@@ -4,15 +4,15 @@
     activeSession,
     currentFocusItem
   } from "@nucleum/features/focus/session.store";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
   import Icon from "@21n/elements/Icon.svelte";
   import view from "@nucleum/stores/view.store";
   import ControlBar from "@nucleum/features/focus/elements/controls/ControlBar.svelte";
   import { onMount, tick } from "svelte";
   import FocusPlayerTimeText from "@nucleum/features/focus/player/FocusPlayerTimeText.svelte";
   import InlineLoadingAnimation from "@21n/elements/feedback/animations/InlineLoadingAnimation.svelte";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import context from "@nucleum/stores/context.store";
@@ -31,7 +31,7 @@
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { focusPlayerPipRequestEvent } from "@nucleum/features/focus/player/focusPlayer.events";
   let playerContainerRef: any;
   let playerRef: HTMLElement | null = document.getElementById("focusplayer");

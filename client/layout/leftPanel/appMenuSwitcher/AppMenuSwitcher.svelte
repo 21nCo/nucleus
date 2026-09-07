@@ -1,22 +1,22 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { LayoutContext } from "@21n/types/layout.type";
+  import { LayoutContext } from "@21n/layout/layout-mode.type";
   import { onMount } from "svelte";
   import AppMenuSwitcherItem from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcherItem.svelte";
-  import { ActionType, type IAction } from "@21n/types/action.type";
+  import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
   import CaptureComponent from "@nucleum/application/CaptureComponent.svelte";
   import { appStore, isInEditMode } from "@nucleum/stores/app.store";
   import { appMenuStore } from "@nucleum/stores/appMenu/appMenu.store";
   import type { IAppMenuStore } from "@nucleum/stores/appMenu/appMenu.type";
   import { appEvents, toasts } from "@nucleum/stores/notification.store";
   import Divider from "@21n/elements/Divider.svelte";
-  import { ColorStrength } from "@21n/types/appearance.type";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import view from "@nucleum/stores/view.store";
   import { cn } from "@21n/utils/ui.utils";
   import AppMenuSwitcherItemGroup from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcherItemGroup.svelte";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { resolveProductConfig } from "@nucleum/products/product.config";
   import type { Resource } from "@nucleum/datafn/resource.enum";

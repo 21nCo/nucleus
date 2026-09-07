@@ -1,7 +1,7 @@
 <script lang="ts">
   import appearance from "@nucleum/stores/appearance.store";
   import view from "@nucleum/stores/view.store";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { properCase } from "@21n/shared-utils/text.utils";
   import MarkdownRenderer from "@21n/elements/text/MarkdownRenderer.svelte";
   import { onMount } from "svelte";

@@ -1,13 +1,13 @@
 <script lang="ts">
   import view from "@nucleum/stores/view.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     BarStyle,
     PanelSwitcherStyle,
     type PanelSwitcherEditModeOptions
-  } from "@21n/types/switcher.enum";
+  } from "@21n/elements/switcher/switcher.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
-  import type { ISelectItem } from "@21n/types/select.type";
+  import type { ISelectItem } from "@21n/elements/select/select.type";
   import PanelSwitcherItemLabel from "@21n/elements/switcher/PanelSwitcherItemLabel.svelte";
   import { rearrangeOnAxis } from "@nucleum/actions/rearrange.action";
   import { scrollIntoViewOnFocus } from "@nucleum/actions/scroll.action";

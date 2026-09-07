@@ -1,4 +1,4 @@
-import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
+import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
 import { postDataToParent } from "@21n/utils/embed.utils";
 import { wait } from "@21n/utils/time.utils";
 import { type IFileEmbedChannel } from "@nucleum/features/files/file.type";

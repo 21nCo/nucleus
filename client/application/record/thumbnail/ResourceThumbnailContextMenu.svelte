@@ -2,14 +2,14 @@
   import type { Snippet } from "svelte";
   import ContextMenuAction from "@21n/elements/contextMenu/ContextMenuAction.svelte";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { resolveCollectionContextMenu } from "@nucleum/features/collections/collection.store";
   import { resolveNodeContextMenu } from "@nucleum/features/memory/node/node.store";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { Arrangement, Placement } from "@21n/types/direction.enum";
+  import { Arrangement, Placement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { resolveObjectiveContextMenu } from "@nucleum/features/focus/goals/goal.store";
   import { resolveTaskContextMenu } from "@nucleum/features/focus/tasks/task.store";

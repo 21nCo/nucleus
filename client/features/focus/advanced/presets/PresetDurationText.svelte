@@ -2,7 +2,7 @@
   import {
     SessionCompositionType,
     type SessionComposition
-  } from "@21n/types/pointron/sessionComposition.type";
+  } from "@nucleum/features/focus/sessionComposition.type";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { bg, cn } from "@21n/utils/ui.utils";
   let {

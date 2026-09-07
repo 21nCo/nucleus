@@ -1,8 +1,8 @@
 <script lang="ts">
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import Birdview from "@nucleum/features/calendar/birdView/Birdview.svelte";
   import {
     CalendarColumnLayout,

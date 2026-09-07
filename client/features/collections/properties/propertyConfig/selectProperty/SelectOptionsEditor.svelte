@@ -10,8 +10,8 @@
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { isTextElement } from "@21n/utils/browser.utils";
   import { cn } from "@21n/utils/ui.utils";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";

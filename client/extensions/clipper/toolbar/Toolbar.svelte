@@ -5,18 +5,18 @@
   import Button from "@21n/elements/button/Button.svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Placement, Orientation } from "@21n/types/direction.enum";
+  import { Placement, Orientation } from "@21n/elements/direction.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { webpage, toolbarState, syncStore } from "@nucleum/extensions/clipper/contentScripts/store";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     saveOnlyPages,
     screenShotOnlyPages
   } from "@nucleum/features/memory/common/urlMap";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";
-  import { ExtensionEvent } from "@21n/types/extension.type";
+  import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";
   import { fly, scale } from "svelte/transition";
   import { tooltip } from "@nucleum/actions/popover.action";

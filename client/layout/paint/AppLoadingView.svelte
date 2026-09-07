@@ -7,7 +7,7 @@
   import PageLoadingAnimation from "@21n/elements/feedback/animations/PageLoadingAnimation.svelte";
   import context from "@nucleum/stores/context.store";
   import ProgressBar from "@21n/elements/ProgressBar.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { fade } from "svelte/transition";
 
   let {

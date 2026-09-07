@@ -1,11 +1,9 @@
-import {
-  LicenseType,
-  PlanStatus,
-  type IUserPlan
-} from "@21n/types/account.type";
+import { LicenseType } from "@nucleum/client/runtime/account/account.type";
+import { PlanStatus, type IUserPlan } from "@nucleum/schema/account/subscription";
 import { parseAndFormatDate } from "@21n/utils/time.utils";
 import { enumToString } from "@21n/shared-utils/text.utils";
-import { BillingCycle, PlanType, type IPlan } from "@21n/shared-types/subscription.type";
+import { BillingCycle, PlanType } from "@nucleum/schema/account/subscription";
+import { type IPlan } from "@nucleum/application/subscription/plan-presentation.type";
 
 const plans = import.meta?.env?.VITE_PLANS;
 let rates: number[] = [7, 60, 200, 15, 144, 450];

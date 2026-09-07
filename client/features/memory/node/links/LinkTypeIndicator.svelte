@@ -2,7 +2,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { LinkType } from "@nucleum/features/memory/linking/link.type";
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { tooltip } from "@nucleum/actions/popover.action";
   import { resolveLinkTypeConfig } from "@nucleum/features/memory/linking/link.utils";
 

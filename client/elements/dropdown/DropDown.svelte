@@ -1,20 +1,20 @@
 <script lang="ts">
-  import type { ISelectValue } from "@21n/types/select.type";
+  import type { ISelectValue } from "@21n/elements/select/select.type";
   import type {
     DropdownGroup,
     DropdownItem
-  } from "@21n/types/dropdownItem.type";
+  } from "@21n/elements/dropdown/dropdownItem.type";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import FormLabelTooltip from "@21n/elements/text/formLabel/FormLabelTooltip.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import type { IPopoverOptions } from "@21n/types/popover.type";
-  import { InputStyle, type InputLabel } from "@21n/types/input.type";
+  import type { IPopoverOptions } from "@nucleum/actions/popover.type";
+  import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
   import DropDownItemView from "@21n/elements/dropdown/DropDownItemView.svelte";
   import InputBaseElement from "@21n/elements/InputBaseElement.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Orientation, Placement } from "@21n/types/direction.enum";
+  import { Orientation, Placement } from "@21n/elements/direction.enum";
   import { properCase } from "@21n/shared-utils/text.utils";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   let {

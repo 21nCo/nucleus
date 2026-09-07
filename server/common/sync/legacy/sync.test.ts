@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { resolveSyncDownQuery } from "./sync.utils";
 import { Resource } from "$lib/client/components/flux/resourceStores/resource.enum";
 import { syncV2 } from "./sync";
-import { SyncMethod } from "$lib/shared/types/sync.type";
+import { SyncMethod } from "@nucleum/schema/legacy/sync.type";
 import { Agent } from "../../account/account.type";
 
 describe("syncV2", () => {

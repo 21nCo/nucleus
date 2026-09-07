@@ -5,7 +5,7 @@
   import { tacoWorker } from "@nucleum/products/memotron/memotron.utils";
 
   import { onMount, onDestroy } from "svelte";
-  import { TacoActions } from "@nucleum/products/memotron/taco/taco.types";
+  import { TacoActions } from "@nucleum/application/taco/worker.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
 
   let isLoading: boolean = false;

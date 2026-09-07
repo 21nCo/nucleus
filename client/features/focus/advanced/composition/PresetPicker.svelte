@@ -2,12 +2,12 @@
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import { activeSession } from "@nucleum/features/focus/session.store";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Presets from "@nucleum/features/focus/advanced/presets/Presets.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { cn } from "@21n/utils/ui.utils";
   import { appStore } from "@nucleum/stores/app.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   let {
     isExpandedVariant = true,
     parentBackgroundIndex = 1

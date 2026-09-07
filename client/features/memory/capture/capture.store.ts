@@ -35,8 +35,9 @@ import {
 import { hierarchyFactorLimit } from "@nucleum/features/memory/node/node.store";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { resolveContentTypeForFile } from "@nucleum/features/memory/capture/capture.utils";
-import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
-import type { IRecordId } from "@21n/types/data.type";
+import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import {
   CollectionType,
   type ICollection,
@@ -58,12 +59,12 @@ import {
 import { appStore } from "@nucleum/stores/app.store";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
-import { UserDataMode } from "@21n/types/account.type";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
 import { Persistence } from "@nucleum/persistence/persistence";
 import view from "@nucleum/stores/view.store";
 import context from "@nucleum/stores/context.store";
-import { OperatingSystem } from "@21n/types/context.type";
+import { OperatingSystem } from "@nucleum/client/runtime/context.type";
 import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
 import {
   fetchYouTubeMetadata,
@@ -84,9 +85,9 @@ import {
 import type { IBlock } from "@nucleum/features/memory/markdown/md.type";
 import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
 import { embedBridge } from "@nucleum/application/embed/embed.store";
-import { EmbedMessage } from "@21n/types/embedMessage.enum";
+import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
 import { convertWebMToWav } from "@21n/utils/audio.utils";
-import { TimeScaleUnit } from "@21n/types/time.type";
+import { TimeScaleUnit } from "@21n/utils/time.type";
 import { resolveCalendarNotesId } from "@nucleum/features/calendar/calendar.utils";
 import { getUtcSafeDay } from "@21n/elements/datetime/datetime.utils";
 import type { IMarkdownTemplate } from "@nucleum/features/memory/markdown/md.type";

@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
   import view from "@nucleum/stores/view.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import Button from "@21n/elements/button/Button.svelte";
 
   let {

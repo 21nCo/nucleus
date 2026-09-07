@@ -1,6 +1,6 @@
 <script lang="ts">
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   let {
     estimatedTime = 0,
     onChange

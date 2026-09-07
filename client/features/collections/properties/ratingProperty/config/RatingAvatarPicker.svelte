@@ -6,9 +6,9 @@
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import { phosphorRatingIcons } from "@21n/icons-v2/icons-list";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { cn } from "@21n/utils/ui.utils";
   let {
     onAvatarSelect,

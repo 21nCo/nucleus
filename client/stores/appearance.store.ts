@@ -1,21 +1,17 @@
 import { get, writable } from "svelte/store";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import {
-  AppSkin,
-  Theme,
-  type AppearanceStore,
-  type ColorScheme
-} from "@21n/types/appearance.type";
+import { AppSkin, Theme, type ColorScheme } from "@21n/theme/appearance.type";
+import { type AppearanceStore } from "@nucleum/stores/appearance.type";
 import colorSchemes from "@21n/theme/colorschemes.json";
-import { StoreDataType } from "@21n/types/data.type";
+import { StoreDataType } from "@nucleum/schema/legacy/store-data-type.enum";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
 import {
   persistLocally,
   retrieveLocally
 } from "@nucleum/persistence/persistence.utils";
-import type { UserAppearanceSettings } from "@21n/types/preferences.type";
-import { GlobalEvent } from "@21n/types/event.enum";
-import type { JsonValue } from "@21n/types/json.type";
+import type { UserAppearanceSettings } from "@nucleum/stores/preferences/user-preferences.type";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
+import type { JsonValue } from "@nucleum/persistence/json.type";
 const defaultLightColorSchemeId = "colorscheme:clean_tidyblue_light";
 // const defaultDarkColorSchemeId = "colorscheme:clean_tidyblue_dark";
 const defaultDarkColorSchemeId = "colorscheme:clean_tidyblue_dark";

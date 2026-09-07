@@ -5,7 +5,7 @@
   import { stringify } from "@21n/shared-utils/json.utils";
   import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import { pointronDatafnBackupResources } from "@nucleum/products/pointron/settings/data/pointronDatafnBackup.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";
 

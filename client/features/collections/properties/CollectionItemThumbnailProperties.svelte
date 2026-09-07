@@ -11,7 +11,7 @@
     ICollectionItem,
     ICollectionItemPropertyValue
   } from "@nucleum/features/collections/collection.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import type {
     IProperty,
     IPropertyValue

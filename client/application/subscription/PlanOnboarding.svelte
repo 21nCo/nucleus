@@ -1,11 +1,11 @@
 <script lang="ts">
   import account from "@nucleum/stores/account.store";
-  import { PlanType, BillingCycle } from "@21n/shared-types/subscription.type";
-  import { Action } from "@21n/types/action.enum";
+  import { PlanType, BillingCycle } from "@nucleum/schema/account/subscription";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import {
     resolveNextRenewalDate,
     resolvePlanLabel,

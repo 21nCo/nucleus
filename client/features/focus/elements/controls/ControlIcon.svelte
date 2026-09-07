@@ -1,10 +1,10 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import view from "@nucleum/stores/view.store";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { Display } from "@21n/types/view.type";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { Display } from "@21n/elements/display.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { activeSession } from "@nucleum/features/focus/session.store";
   let {

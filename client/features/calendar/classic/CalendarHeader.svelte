@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import BoxButton from "@21n/elements/button/BoxButton.svelte";

@@ -6,7 +6,7 @@ import {
 import { globalDbo } from "@21n/shared-dbo";
 import { memotronDboDefinitions } from "@21n/shared-dbo";
 import { pointronDboDefinitions } from "@21n/shared-dbo";
-import { PersistenceActionType } from "@21n/types/data.type";
+import { PersistenceActionType } from "@nucleum/schema/legacy/data.type";
 describe("resolveBootstrapQuery", () => {
   it("should return concatenated string of table names and function results when valid dbo array is provided", () => {
     const dbo = [

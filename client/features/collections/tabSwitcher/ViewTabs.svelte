@@ -1,7 +1,7 @@
 <script lang="ts">
   import { hoverable } from "@nucleum/actions/hover.action";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
-  import type { ISelectValue } from "@21n/types/select.type";
+  import type { ISelectValue } from "@21n/elements/select/select.type";
   import { cn } from "@21n/utils/ui.utils";
   import type { IViewTab } from "@nucleum/features/collections/tabSwitcher/viewTab.type";
   import TabCountBadge from "@nucleum/features/collections/counts/TabCountBadge.svelte";

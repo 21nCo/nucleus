@@ -1,13 +1,13 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import CoverRenderer from "@21n/elements/coverPicker/CoverRenderer.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import ToggleGroup from "@21n/elements/toggle/ToggleGroup.svelte";
   import type { ICoverLayout } from "@nucleum/features/collections/collection.type";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { hoverable } from "@nucleum/actions/hover.action";
   import type { IImageRepositionerOptions } from "@nucleum/features/files/file.type";
   import { resizable } from "@nucleum/actions/resize.action";

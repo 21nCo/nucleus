@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 
 import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
 
-import { Size } from "@21n/types/size.enum";
-import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
+import { Size } from "@21n/elements/size.enum";
+import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
 const meta = {
   title: "Elements/Switcher/PanelSwitcher",
   component: PanelSwitcher,

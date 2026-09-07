@@ -1,14 +1,14 @@
 import "fake-indexeddb/auto";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { Product } from "@21n/types/product.type";
+import { Product } from "@nucleum/client/config/product.type";
 import { appStore } from "@nucleum/stores/app.store";
 import {
   datafn,
   destroyNucleumDatafn,
   initializeNucleumDatafn
 } from "@nucleum/datafn/datafn.store";
-import { UserDataMode } from "@21n/types/account.type";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import {
   Preference,
   PreferencesScope

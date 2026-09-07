@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { AppSearchParam } from "@21n/types/appStore.type";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
+  import { Orientation } from "@21n/elements/direction.enum";
   import SettingsList from "@nucleum/application/settings/asPage/SettingsList.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import ProfileCpSection from "@nucleum/application/settings/account/ProfileCPSection.svelte";
   import { page } from "$app/stores";
   import { retrieveCurrentColors } from "@21n/utils/theme.utils";

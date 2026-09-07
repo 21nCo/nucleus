@@ -6,16 +6,8 @@ import {
 import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
 import { copyResourceLinkToClipboard } from "@nucleum/application/record/resource-link.utils";
 import { LinkType } from "@nucleum/features/memory/linking/link.type";
-import {
-  ResourceAccessPoint,
-  AccessMode,
-  ResourceActionType,
-  type IActiveResource,
-  type IResource,
-  type IResourceArchivable,
-  type IResourceLockable,
-  type IResourceStarrable
-} from "@nucleum/datafn/resource.type";
+import { ResourceAccessPoint, AccessMode, type IActiveResource, type IResource, type IResourceArchivable, type IResourceLockable, type IResourceStarrable } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import {
   determineResourceAccessMode,
@@ -26,16 +18,16 @@ import {
   resolveResourceActionIcon,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import { ContextMenuType, type IContextMenuItem } from "@21n/types/select.type";
-import type { IRecordId } from "@21n/types/data.type";
+import { ContextMenuType, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { toasts } from "@nucleum/stores/notification.store";
-import { Action } from "@21n/types/action.enum";
-import { AppSearchParam } from "@21n/types/appStore.type";
+import { Action } from "@nucleum/application/commandBar/action.enum";
+import { AppSearchParam } from "@nucleum/stores/appStore.type";
 import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
 import { BulkEditor } from "@nucleum/application/record/record.store";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
 
 type IActionableResource = IResource &

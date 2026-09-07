@@ -2,15 +2,15 @@
   import { appConstants, appStore } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { onMount } from "svelte";
-  import { AppSkin, Theme } from "@21n/types/appearance.type";
-  import { Size } from "@21n/types/size.enum";
+  import { AppSkin, Theme } from "@21n/theme/appearance.type";
+  import { Size } from "@21n/elements/size.enum";
   import appearance from "@nucleum/stores/appearance.store";
   import ColorSchemeSelector from "@nucleum/application/settings/appearance/ColorSchemeSelector.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import ScrollView from "@21n/layout/scrollView/ScrollView.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import view from "@nucleum/stores/view.store";
   import TypefaceSelector from "@nucleum/application/settings/appearance/TypefaceSelector.svelte";
   let { parentBackgroundIndex = 1 }: { parentBackgroundIndex?: number } =

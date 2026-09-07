@@ -1,7 +1,7 @@
 import { Agent } from "../account/account.type";
 import { frameNonSensitiveUserInfo } from "../account/account.utils";
 import { generateUserToken, validateToken } from "./auth.utils";
-import { IUserProfileInfo } from "$lib/shared/types/account.type";
+import { IUserProfileInfo } from "@nucleum/schema/account/profile.type";
 
 export async function authorize(props: { token: string; host?: string }) {
   try {

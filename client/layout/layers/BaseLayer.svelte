@@ -7,12 +7,12 @@
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import { browser } from "$app/environment";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import {
     Embed,
     OperatingSystem,
     type IAppContext
-  } from "@21n/types/context.type";
+  } from "@nucleum/client/runtime/context.type";
   import { pingParent, postDataToParent } from "@21n/utils/embed.utils";
   import account from "@nucleum/stores/account.store";
   import { appStore, currentTime } from "@nucleum/stores/app.store";
@@ -21,7 +21,7 @@
   import ThemeLayer from "@21n/layout/layers/themeLayer/ThemeLayer.svelte";
   import { detectSystemOS, detectTouchDevice } from "@21n/utils/browser.utils";
   import { extractProduct } from "@21n/shared-utils/utils";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { LogType } from "@nucleum/client/runtime/logging/log.type";
   import { clientStorage, getDapId } from "@nucleum/persistence/persistence.utils";
@@ -33,7 +33,7 @@
   import dynamicProductData from "$lib/product.json";
   import { getSettingsAsModal } from "@21n/layout/settingsActionMap";
   import { globalActions } from "@nucleum/stores/actionMap";
-  import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
   import { updateNucleumDatafnConnectivity } from "@nucleum/datafn/datafn.store";
   import { parse } from "@21n/shared-utils/json.utils";
   import { productData } from "@nucleum/products/product.resolver";

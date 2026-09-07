@@ -1,4 +1,4 @@
-import { IUserProfileInfo } from "$lib/shared/types/account.type";
+import { IUserProfileInfo } from "@nucleum/schema/account/profile.type";
 
 export function frameNonSensitiveUserInfo(userInfo: IUserProfileInfo) {
   const {

@@ -1,9 +1,9 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { embedBridge } from "@nucleum/application/embed/embed.store";
-import { EmbedMessage } from "@21n/types/embedMessage.enum";
+import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
 import { generateMiniRandomId } from "@21n/shared-utils/crypto.utils";
 import { convertFloat32ArrayToWav } from "@21n/utils/audio.utils";
-import { TranscriptionModel } from "@nucleum/products/memotron/taco/taco.types";
+import { TranscriptionModel } from "@nucleum/application/taco/worker.type";
 import type { IJobStatus } from "@nucleum/application/taco/taco.type";
 
 export class Taco {

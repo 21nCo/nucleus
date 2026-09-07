@@ -15,12 +15,12 @@
   import { resolveNodeLabelString } from "@nucleum/features/memory/node/node.utils";
   import NodeTitleLabelPart from "@nucleum/features/memory/node/title/NodeTitleLabelPart.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Divider from "@21n/elements/Divider.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { ColorStrength } from "@21n/types/appearance.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   import { browser } from "$app/environment";

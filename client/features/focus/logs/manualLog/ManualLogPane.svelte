@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import ManualLogItem from "@nucleum/features/focus/logs/manualLog/ManualLogItem.svelte";
   import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import { manualLogStore } from "@nucleum/features/focus/logs/log.store";
 

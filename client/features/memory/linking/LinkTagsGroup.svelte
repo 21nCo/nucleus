@@ -14,12 +14,12 @@
     ButtonStyle,
     ButtonVariant,
     type IButtonParams
-  } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { cn } from "@21n/utils/ui.utils";
   import type { ILinkTagGroup } from "@nucleum/features/memory/linking/link.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 
   let {
     group,

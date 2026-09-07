@@ -1,10 +1,10 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   let {
     scale,
     description = null,

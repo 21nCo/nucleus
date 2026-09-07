@@ -1,12 +1,12 @@
 import { get } from "svelte/store";
-import { ExtensionEvent } from "$lib/client/types/extension.type";
+import { ExtensionEvent } from "@nucleum/extensions/extension.type";
 import { relayToSidePanel } from "$lib/client/utils/extension.utils";
 import { ClientStorageKey } from "$lib/client/persistence/persistence.type";
 import { clientStorage } from "$lib/client/persistence/persistence.utils";
 import { getDapId } from "$lib/client/persistence/persistence.utils";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import type { Extension } from "@21n/types/product.type";
+import type { Extension } from "@nucleum/client/config/product.type";
 import { appStore } from "$lib/client/stores/app.store";
 import account from "$lib/client/stores/account.store";
 import {
@@ -17,7 +17,7 @@ import {
   reconcileDatafnNow
 } from "@nucleum/datafn/datafn.store";
 import { determineResourceType } from "@nucleum/datafn/resource.utils";
-import type { IRecordId } from "$lib/client/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 
 type DatafnExtensionSearchParams = {
   query: string;

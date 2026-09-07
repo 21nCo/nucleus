@@ -1,6 +1,6 @@
-import { BillingCycle } from "@21n/shared-types/subscription.type";
+import { BillingCycle } from "@nucleum/schema/account/subscription";
 import { performQueryOnMasterDb } from "$lib/server/surrealHelpers";
-import { PaymentProvider } from "$lib/shared/types/plan.type";
+import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
 import { generateSHA256Hash } from "$lib/shared/utils/crypto.utils";
 import { Agent } from "../../account/account.type";
 import { InternalServerError, ValidationError } from "../../errors";

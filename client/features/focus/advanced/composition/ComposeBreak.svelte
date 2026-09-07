@@ -3,12 +3,12 @@
   import {
     BreakCompositionType,
     type SessionComposition
-  } from "@21n/types/pointron/sessionComposition.type";
+  } from "@nucleum/features/focus/sessionComposition.type";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
   let {
     composition = $bindable(),

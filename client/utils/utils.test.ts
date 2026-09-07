@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { ActionType } from "@21n/types/action.type";
-import { FileSizeMeasurement } from "@21n/types/fileSizeMeasurement.enum";
-import type { UserDate } from "@21n/types/userDate.type";
+import { ActionType } from "@nucleum/application/commandBar/action.type";
+import { FileSizeMeasurement } from "@21n/utils/fileSizeMeasurement.enum";
+import type { UserDate } from "@21n/utils/userDate.type";
 
 import {
   activeResourceFilter,

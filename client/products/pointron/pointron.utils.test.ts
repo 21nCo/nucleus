@@ -8,8 +8,8 @@ import {
   BreakCompositionType,
   SessionCompositionType,
   type SessionComposition
-} from "@21n/types/pointron/sessionComposition.type";
-import { BlockType } from "@21n/types/pointron/session.type";
+} from "@nucleum/features/focus/sessionComposition.type";
+import { BlockType } from "@nucleum/features/focus/session.type";
 
 function createComposition(
   overrides: Partial<SessionComposition>

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Orientation, Placement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Orientation, Placement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { popover, TriggerMethod } from "@nucleum/actions/popover.action";
   import { cn } from "@21n/utils/ui.utils";

@@ -1,9 +1,9 @@
 <script lang="ts">
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
   import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
-  import type { IPopoverOptions } from "@21n/types/popover.type";
-  import { Placement } from "@21n/types/direction.enum";
-  import { type InputLabel, InputStyle } from "@21n/types/input.type";
+  import type { IPopoverOptions } from "@nucleum/actions/popover.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { type InputLabel, InputStyle } from "@21n/elements/input/input.type";
   import {
     queryLinkingSearchResults,
     queryLinkingSearchResultsOnExtension
@@ -19,7 +19,7 @@
   } from "@nucleum/features/collections/collection.type";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { toasts } from "@nucleum/stores/notification.store";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import context from "@nucleum/stores/context.store";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { generateResourceId } from "@nucleum/datafn/id.utils";

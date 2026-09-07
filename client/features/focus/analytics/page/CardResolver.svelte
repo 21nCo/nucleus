@@ -9,7 +9,7 @@
   import TopNCard from "@nucleum/features/focus/analytics/cards/topN/TopNCard.svelte";
   import MetricsCard from "@nucleum/features/focus/analytics/cards/metrics/MetricsCard.svelte";
   import TargetGuages from "@nucleum/features/focus/analytics/targets/TargetGuages.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
 
   let {

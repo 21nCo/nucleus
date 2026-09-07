@@ -1,8 +1,8 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { PlayActionState } from "@21n/types/event.enum";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { PlayActionState } from "@nucleum/stores/notifications/event.enum";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { formatSeconds } from "@21n/utils/time.utils";
   import WaveSurfer from "wavesurfer.js";
   import RecordPlugin from "wavesurfer.js/dist/plugins/record";
@@ -12,10 +12,10 @@
   import PlayerControl from "@21n/elements/player/controls/PlayerControl.svelte";
   import { onDestroy } from "svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { confirmationNotification } from "@nucleum/stores/notification.store";
   import { cn } from "@21n/utils/ui.utils";
 

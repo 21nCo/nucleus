@@ -4,8 +4,8 @@
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import context from "@nucleum/stores/context.store";
-  import { Action } from "@21n/types/action.enum";
-  import { Embed } from "@21n/types/context.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
   import ShortcutItem from "@nucleum/application/shortcuts/settings/ShortcutItem.svelte";
   let error: string | undefined = undefined;

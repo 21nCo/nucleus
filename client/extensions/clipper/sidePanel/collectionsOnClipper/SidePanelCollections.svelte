@@ -19,7 +19,7 @@
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import Badge from "@21n/elements/text/Badge.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import NewCollectionWizard from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/NewCollectionWizard.svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import ErrorStatusPane from "@21n/elements/feedback/ErrorStatusPane.svelte";

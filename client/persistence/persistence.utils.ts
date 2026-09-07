@@ -1,4 +1,4 @@
-import type { JsonValue } from "@21n/types/json.type";
+import type { JsonValue } from "@nucleum/persistence/json.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { isExtensionEnvironment } from "@21n/utils/browser.utils";

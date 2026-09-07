@@ -1,7 +1,7 @@
 <script lang="ts">
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import {
     NodeType,
     type INodeThumb
@@ -12,7 +12,7 @@
   import { fade } from "svelte/transition";
   import view from "@nucleum/stores/view.store";
   import NodeThumbnailTitle from "@nucleum/features/memory/node/thumbnail/NodeThumbnailTitle.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
   import { hoverable } from "@nucleum/actions/hover.action";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";

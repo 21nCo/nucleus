@@ -15,14 +15,14 @@
     webNodeTypeList
   } from "@nucleum/features/memory/node/node.type";
   import context from "@nucleum/stores/context.store";
-  import { ColorStrength } from "@21n/types/appearance.type";
+  import { ColorStrength } from "@21n/theme/appearance.type";
   import {
     ButtonStyle,
     ButtonVariant,
     type IButtonParams
-  } from "@21n/types/button.type";
-  import { Embed } from "@21n/types/context.type";
-  import { Size } from "@21n/types/size.enum";
+  } from "@21n/elements/button/button.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";
@@ -34,7 +34,7 @@
     ActiveCaptureStore,
     type IActiveCaptureStore
   } from "@nucleum/features/memory/capture/capture.store";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";

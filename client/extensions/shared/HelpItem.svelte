@@ -2,7 +2,7 @@
   import type { MouseEventHandler } from "svelte/elements";
   import { hoverable } from "@nucleum/actions/hover.action";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
 
   let {
     label,

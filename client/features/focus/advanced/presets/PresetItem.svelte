@@ -3,9 +3,9 @@
   import {
     SessionCompositionType,
     type SessionComposition
-  } from "@21n/types/pointron/sessionComposition.type";
-  import { Size } from "@21n/types/size.enum";
-  import { SelectionItemActiveStyle } from "@21n/types/switcher.enum";
+  } from "@nucleum/features/focus/sessionComposition.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { SelectionItemActiveStyle } from "@21n/elements/switcher/switcher.enum";
   import { getTotalsFromComposition } from "@nucleum/features/focus/composition.utils";
   import { formatSeconds } from "@21n/utils/time.utils";
   import Icon from "@21n/elements/Icon.svelte";

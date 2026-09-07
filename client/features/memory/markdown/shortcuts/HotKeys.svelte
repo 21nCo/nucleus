@@ -1,7 +1,7 @@
 <script lang="ts">
   import Table2 from "@21n/elements/table/Table2.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { TableCellType } from "@21n/types/table.type";
+  import { TableCellType } from "@21n/elements/table/table.type";
   import HotKeyShortcutText from "@nucleum/features/memory/markdown/shortcuts/HotKeyShortcutText.svelte";
   import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
   const data = keyboardShortcuts

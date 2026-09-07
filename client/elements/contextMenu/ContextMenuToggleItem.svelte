@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import type { IContextMenuItem } from "@21n/types/select.type";
+  import type { IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
   import { hoverable } from "@nucleum/actions/hover.action";
   let {
     item,

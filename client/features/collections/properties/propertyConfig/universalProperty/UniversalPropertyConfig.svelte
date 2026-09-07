@@ -8,9 +8,9 @@
     type IPropertyConfigOption,
     type IUniversalProperty
   } from "@nucleum/features/collections/properties/property.type";
-  import { ColorStrength } from "@21n/types/appearance.type";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { ColorStrength } from "@21n/theme/appearance.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import { universalPropertyOptions } from "@nucleum/features/collections/properties/property.store";
   import { resolveUniversalPropertyOptions } from "@nucleum/features/collections/properties/property.utils";

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
-  import type { IKeyboardShortcut } from "@21n/types/shortcut.type";
+  import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
   import { fade } from "svelte/transition";
 
     let {

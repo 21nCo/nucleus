@@ -3,11 +3,11 @@
   import type { IBreadcrumbItem } from "@21n/elements/breadcrumbsV2/breadcrumbItem.type";
   import { textTruncateMapper } from "@21n/utils/utils";
   import view from "@nucleum/stores/view.store";
-  import { Display } from "@21n/types/view.type";
-  import { determineTruncateLength } from "@21n/shared-utils/text.utils";
+  import { Display } from "@21n/elements/display.enum";
+  import { determineTruncateLength } from "@21n/elements/text/truncation.utils";
   import { appStore } from "@nucleum/stores/app.store";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let {
     items = [],
     isPreventDefault = false,

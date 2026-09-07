@@ -2,10 +2,7 @@ import type { DatafnE2eeProvider } from "@datafn/client";
 import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import { parse, stringify } from "@21n/shared-utils/json.utils";
-import type {
-  NucleumDatafnE2eeSettings,
-  NucleumDatafnE2eeState
-} from "@21n/types/datafn.type";
+import type { NucleumDatafnE2eeSettings, NucleumDatafnE2eeState } from "@nucleum/datafn/e2ee.type";
 import { writable } from "svelte/store";
 
 export const DATAFN_E2EE_KV_KEY = "nucleum:e2ee";

@@ -6,10 +6,10 @@
   import Text from "@21n/elements/text/Text.svelte";
   import type { LegacyLocalDataSummary } from "@nucleum/persistence/legacyLocalDataBackup";
   import { resolveLegacyLocalDataRecordCount } from "@nucleum/persistence/legacyLocalDataBackup";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
+  import { InfoTextType } from "@21n/elements/text/info.type";
 
   let {
     summary,

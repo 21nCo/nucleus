@@ -5,27 +5,27 @@
   import {
     StatusMessageType,
     type StatusMessage
-  } from "@21n/types/statusMessage.type";
+  } from "@21n/elements/feedback/statusMessage.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import context from "@nucleum/stores/context.store";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import Text from "@21n/elements/text/Text.svelte";
   import type {
     TableColumnItem,
     TableRowItem
-  } from "@21n/types/tableCell.type";
+  } from "@21n/elements/table/tableCell.type";
   import { onMount } from "svelte";
   import ExportData from "@nucleum/products/pointron/settings/data/ExportData.svelte";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import Table2 from "@21n/elements/table/Table2.svelte";
   import {
     TableCellType,
     type TableColumn
-  } from "@21n/types/table.type";
+  } from "@21n/elements/table/table.type";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { InfoTextType } from "@21n/types/text.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import ImportAppListPart from "@nucleum/products/pointron/settings/data/ImportAppListPart.svelte";
 
   let clearMessage: string | undefined = undefined;

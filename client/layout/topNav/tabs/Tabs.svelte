@@ -4,10 +4,10 @@
   import TopBarResourceItem from "@21n/layout/topNav/tabs/TopBarResourceItem.svelte";
   import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
   import { moveItemInArray } from "@21n/shared-utils/obj.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import Button from "@21n/elements/button/Button.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   let {
     pinnedItems,
     isShowHome = false,

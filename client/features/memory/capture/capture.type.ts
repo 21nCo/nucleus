@@ -1,6 +1,6 @@
 import type { IProperty } from "@nucleum/features/collections/properties/property.type";
-import type { IAvatar } from "@21n/types/avatar.type";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
 import type {
   INodeStructure,

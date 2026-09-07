@@ -19,7 +19,7 @@ import { determineIfOffline } from "@nucleum/client/runtime/connectivity";
 import type {
   AuthSessionResolution,
   StoredAuthSessionState
-} from "@21n/types/auth.type";
+} from "@nucleum/client/runtime/account/auth.type";
 
 type StoredRegionValue = string | AuthFnCachedRegion;
 

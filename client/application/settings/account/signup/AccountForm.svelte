@@ -4,7 +4,7 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
   import {
     postMessageToParent,
     postTokenToExtension
@@ -15,12 +15,12 @@
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import account from "@nucleum/stores/account.store";
   import view from "@nucleum/stores/view.store";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Action } from "@21n/types/action.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import {
     authClient,
     resolveAuthFnSessionMode

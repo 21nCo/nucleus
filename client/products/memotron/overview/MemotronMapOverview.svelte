@@ -4,7 +4,7 @@
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import type { INode } from "@nucleum/features/memory/node/node.type";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
 

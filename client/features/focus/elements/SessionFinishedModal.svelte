@@ -1,7 +1,7 @@
 <script lang="ts">
   import Celebrate from "@21n/icons/Celebrate.svelte";
-  import { SessionUIContext } from "@21n/types/pointron/session.type";
-  import { Size } from "@21n/types/size.enum";
+  import { SessionUIContext } from "@nucleum/features/focus/session.type";
+  import { Size } from "@21n/elements/size.enum";
   import IntervalBar from "@nucleum/features/focus/elements/intervalbar/IntervalBar.svelte";
   import SessionTimeText from "@nucleum/features/focus/elements/sessionTimeText/SessionTimeText.svelte";
   //import confetti from "canvas-confetti";

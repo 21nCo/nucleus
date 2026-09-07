@@ -1,6 +1,6 @@
 <script lang="ts">
   import { selectedTimePeriod } from "@nucleum/stores/app.store";
-  import { Placement, Orientation } from "@21n/types/direction.enum";
+  import { Placement, Orientation } from "@21n/elements/direction.enum";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import {
     TileAppearance,

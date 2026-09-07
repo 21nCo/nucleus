@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { ISelectItem, ISelectValue } from "@21n/types/select.type";
+  import type { ISelectItem, ISelectValue } from "@21n/elements/select/select.type";
   import Icon from "../Icon.svelte";
   import { bg, cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { onMount } from "svelte";
   import { tooltip } from "@nucleum/actions/popover.action";
 

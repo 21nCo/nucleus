@@ -3,7 +3,7 @@ import { cloneDown } from "./index";
 import { cloneUp } from "../cloneup";
 import { Resource } from "$lib/client/components/flux/resourceStores/resource.enum";
 import { SyncProviderFactory, SyncProvider } from "../providers";
-import { ICloneDownBody, ICloneUpBody } from "$lib/shared/types/sync.type";
+import { ICloneDownBody, ICloneUpBody } from "@nucleum/schema/legacy/sync.type";
 
 describe("CloneDown Integration Tests", () => {
   // Reset provider instance before each test to ensure clean state

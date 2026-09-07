@@ -6,7 +6,7 @@
     feedbackPane,
     webpage
   } from "@nucleum/extensions/clipper/contentScripts/store";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import type { NodeType } from "@nucleum/features/memory/node/node.type";
   import { enumToString } from "@21n/shared-utils/text.utils";
   let {

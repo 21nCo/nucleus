@@ -1,6 +1,6 @@
 <script lang="ts">
   import { isInEditMode } from "@nucleum/stores/app.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import Switch from "@21n/elements/toggle/Switch.svelte";
   let {

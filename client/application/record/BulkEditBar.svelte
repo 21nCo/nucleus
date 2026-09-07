@@ -1,17 +1,14 @@
 <script lang="ts">
-  import {
-    ResourceAccessPoint,
-    ResourceActionType,
-    type IMultiSelectContext
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint, type IMultiSelectContext } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { LinkType } from "@nucleum/features/memory/linking/link.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import appearance from "@nucleum/stores/appearance.store";
-  import { Theme } from "@21n/types/appearance.type";
+  import { Theme } from "@21n/theme/appearance.type";
   import { resolveResourceActionIcon } from "@nucleum/datafn/resource.utils";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import { isSameDay } from "@21n/utils/time.utils";

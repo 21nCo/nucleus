@@ -1,5 +1,5 @@
-import type { DragAndDrop } from "@21n/types/draganddrop.type";
-import { DragStatus } from "@21n/types/dragstatus.enum";
+import type { DragAndDrop } from "@nucleum/actions/draganddrop.type";
+import { DragStatus } from "@nucleum/actions/dragstatus.enum";
 
 export function handleDragNDrop(x: DragAndDrop, items: any[]) {
   const objectiveIdCheck = x.dropItem.objectiveId === x.dragItem.objectiveId;

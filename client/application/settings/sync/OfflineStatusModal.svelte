@@ -1,14 +1,14 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
   import account from "@nucleum/stores/account.store";
-  import { UserDataMode } from "@21n/types/account.type";
-  import { Size } from "@21n/types/size.enum";
-  import { Action } from "@21n/types/action.enum";
+  import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import context from "@nucleum/stores/context.store";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
 </script>
 
 <div class="flex flex-col justify-between gap-4 h-full w-full">

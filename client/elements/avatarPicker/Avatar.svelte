@@ -4,12 +4,12 @@
     AvatarPickerContext,
     AvatarType,
     type IAvatar
-  } from "@21n/types/avatar.type";
-  import { Size } from "@21n/types/size.enum";
+  } from "@21n/elements/avatarPicker/avatar.type";
+  import { Size } from "@21n/elements/size.enum";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import { objIsEmpty } from "@21n/shared-utils/obj.utils";
   import { popover } from "@nucleum/actions/popover.action";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   let {
     avatar = $bindable(),
     size = Size.md,

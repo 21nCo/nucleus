@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
 
   let {

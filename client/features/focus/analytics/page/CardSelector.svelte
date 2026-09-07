@@ -5,9 +5,9 @@
   import type {
     DropdownGroup,
     DropdownItem
-  } from "@21n/types/dropdownItem.type";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  } from "@21n/elements/dropdown/dropdownItem.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import { AnalyticsCardType } from "@nucleum/features/focus/analytics/analytics.types";
 
   let {

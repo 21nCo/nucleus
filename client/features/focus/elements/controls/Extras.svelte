@@ -1,15 +1,15 @@
 <script lang="ts">
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
   import Button from "@21n/elements/button/Button.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import context from "@nucleum/stores/context.store";
-  import type { IPopoverRenderBaseParams } from "@21n/types/popover.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IPopoverRenderBaseParams } from "@nucleum/actions/popover.type";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
-  import { Display } from "@21n/types/view.type";
+  import { Display } from "@21n/elements/display.enum";
   import { dispatchFocusPlayerPipRequest } from "@nucleum/features/focus/player/focusPlayer.events";
   import modalEvent, { fullScreen } from "@nucleum/application/modal/modal.store";
   let {

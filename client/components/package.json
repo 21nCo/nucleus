@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@nucleum/datafn": "*",
-    "echarts": "^5.5.0"
+    "echarts": "^5.5.0",
+    "@nucleum/schema": "*"
   }
 }

@@ -3,11 +3,11 @@
   import type { ICodeBlockBody } from "@nucleum/features/memory/markdown/md.type";
   import hljs from "highlight.js";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import { copyToClipboard } from "@21n/utils/utils";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
   import { hoverable } from "@nucleum/actions/hover.action";
   let {

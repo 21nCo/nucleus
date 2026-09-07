@@ -5,15 +5,15 @@
   import { logger } from "@nucleum/client/runtime/logging/logger";
 
   import { setContext } from "svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import CameraCapture from "@nucleum/features/memory/capture/CameraCapture.svelte";
   import context from "@nucleum/stores/context.store";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
   import { fly } from "svelte/transition";
   import PlayerControl from "@21n/elements/player/controls/PlayerControl.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Context } from "@21n/types/appStore.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Context } from "@nucleum/stores/appStore.type";
 
   let {
     captureStore,

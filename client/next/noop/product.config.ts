@@ -1,4 +1,4 @@
-import type { ISelectItem } from "@21n/types/select.type";
+import type { ISelectItem } from "@21n/elements/select/select.type";
 
 export const nextProducts: Record<string, never> = {};
 export const nextResourceTableMap: Record<string, never> = {};

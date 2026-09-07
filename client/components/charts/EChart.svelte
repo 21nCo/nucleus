@@ -2,7 +2,7 @@
   import { onDestroy } from "svelte";
   import * as echarts from "echarts";
   import type { ECharts, EChartsOption } from "echarts";
-  import { ChartType } from "@21n/types/analytics.type";
+  import { ChartType } from "@nucleum/components/charts/analytics.type";
   import { retrieveCurrentColors } from "@21n/utils/theme.utils";
   import appearance from "@nucleum/stores/appearance.store";
   import {

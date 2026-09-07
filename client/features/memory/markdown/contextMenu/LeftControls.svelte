@@ -14,24 +14,18 @@
   } from "@nucleum/features/memory/node/node.type";
   import { onMount } from "svelte";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
-  import { Size } from "@21n/types/size.enum";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
-  import {
-    ContextMenuType,
-    type IContextMenu,
-    type IContextMenuItem
-  } from "@21n/types/select.type";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
+  import { ContextMenuType, type IContextMenu, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
+  import { Placement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import FocusRing from "@nucleum/features/memory/markdown/contextMenu/FocusRing.svelte";
   import BlockBrowser from "@nucleum/features/memory/markdown/blockBrowser/BlockBrowser.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import {
-    AccessMode,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { MemotronEvent } from "@nucleum/features/memory/memory.type";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
   import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
@@ -40,7 +34,7 @@
   import { hoverable } from "@nucleum/actions/hover.action";
   import { downloadNode } from "@nucleum/features/memory/node/node.store";
   import { resolveResourceActionIcon } from "@nucleum/datafn/resource.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   let {
     block,
     isFocusing = false,

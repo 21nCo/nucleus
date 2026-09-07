@@ -3,7 +3,7 @@
 <script lang="ts">
   import { Resource } from "@nucleum/datafn/resource.enum";
   import Library from "@nucleum/application/library/Library.svelte";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
 
   function resolveLibraryItems() {

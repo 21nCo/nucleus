@@ -8,7 +8,7 @@
   import FocusItem from "@nucleum/features/focus/elements/focusitem/FocusItem.svelte";
   import AddFocusItem from "@nucleum/features/focus/elements/focusitem/AddFocusItem.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import {
     ObjectiveStatus,
@@ -23,16 +23,16 @@
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { ErrorMessage } from "@21n/types/resource-error.type";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { ErrorMessage } from "@nucleum/application/error/resource-error.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import Records from "@nucleum/application/record/Records.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState } from "@nucleum/stores/uiState/uiState.type";
   import CalendarColumnTasksPanel from "@nucleum/features/calendar/column/CalendarColumnTasksPanel.svelte";

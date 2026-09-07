@@ -3,7 +3,7 @@
   import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
   import LinkSearch from "@nucleum/features/memory/common/linkbox/LinkSearch.svelte";
   import { LinkType } from "@nucleum/features/memory/linking/link.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";

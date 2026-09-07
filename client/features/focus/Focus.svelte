@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { page } from "$app/stores";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import { onMount } from "svelte";
   import QuickStart from "@nucleum/features/focus/quickstart/QuickStart.svelte";
   import Advanced from "@nucleum/features/focus/advanced/Advanced.svelte";
@@ -9,26 +9,26 @@
   import { activeSession } from "@nucleum/features/focus/session.store";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import Zen from "@nucleum/features/focus/zen/Zen.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import Panel from "@21n/layout/paint/Panel.svelte";
   import FloatingButton from "@21n/elements/button/FloatingButton.svelte";
   import AdvancedPortrait from "@nucleum/features/focus/advanced/AdvancedPortrait.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import {
     ButtonStyle,
     ButtonVariant,
     type IButtonParams
-  } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import QuickStartLayoutToggle from "@nucleum/features/focus/quickstart/actions/QuickStartLayoutToggle.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   import type { IContainer } from "@21n/layout/layout.type";
   import { resolveMinWidth } from "@21n/layout/layout.utils";
 

@@ -5,7 +5,7 @@
     toastDefaultDuration,
     toasts
   } from "@nucleum/stores/notification.store";
-  import { AlertType, type Toast } from "@21n/types/notification.type";
+  import { AlertType, type Toast } from "@nucleum/stores/notifications/notification.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { linear } from "svelte/easing";
   import { onMount } from "svelte";

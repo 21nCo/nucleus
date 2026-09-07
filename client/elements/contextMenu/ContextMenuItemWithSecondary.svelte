@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { IContextMenuItem } from "@21n/types/select.type";
-  import { Placement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import type { IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import ContextMenuItemBase from "@21n/elements/contextMenu/ContextMenuItemBase.svelte";
   import { popover } from "@nucleum/actions/popover.action";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   let {
     item,
     size = Size.md,

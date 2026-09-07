@@ -1,7 +1,7 @@
 import { determineIfOffline } from "@nucleum/client/runtime/connectivity";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import {
   resolveLegacyToken,
   resolveToken,
@@ -19,7 +19,7 @@ import {
   relayToBackgroundScript,
   relayToContentScript
 } from "@21n/utils/extension.utils";
-import { ExtensionEvent } from "@21n/types/extension.type";
+import { ExtensionEvent } from "@nucleum/extensions/extension.type";
 import { relayToSidePanel } from "@21n/utils/extension.utils";
 import { stringify } from "@21n/shared-utils/json.utils";
 

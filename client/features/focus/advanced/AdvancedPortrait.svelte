@@ -1,7 +1,7 @@
 <script lang="ts">
   import TimeComposition from "@nucleum/features/focus/advanced/composition/TimeComposition.svelte";
   import IntervalBar from "@nucleum/features/focus/elements/intervalbar/IntervalBar.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { focusItemsStore } from "@nucleum/features/focus/session.store";
   import { appStore } from "@nucleum/stores/app.store";
   import { advancedCompositionDraft } from "@nucleum/features/focus/advanced/composition/advancedCompositionDraft.store";

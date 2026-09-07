@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
+  import { TimeFormat } from "@21n/utils/time.type";
 
   import { formatSeconds } from "@21n/utils/time.utils";
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
 
   let { ctx = Product.NUCLEUM }: { ctx?: Product } = $props();

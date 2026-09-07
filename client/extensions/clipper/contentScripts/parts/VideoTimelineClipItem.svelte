@@ -3,7 +3,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import FileView from "@nucleum/features/files/FileView.svelte";
   import { formatSeconds } from "@21n/utils/time.utils";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import { checkIfVideoPaused } from "@nucleum/extensions/clipper/parsers/shared/video.utils";
   import { pauseVideo } from "@nucleum/extensions/clipper/parsers/shared/video.utils";
@@ -11,7 +11,7 @@
   import { appEvents } from "@nucleum/stores/notification.store";
   import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
 
   let {
     clip,

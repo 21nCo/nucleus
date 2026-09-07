@@ -1,9 +1,7 @@
 <script lang="ts">
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import {
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { onDestroy, onMount } from "svelte";
   import { BulkEditor } from "@nucleum/application/record/record.store";
   import {
@@ -16,9 +14,9 @@
   import {
     IResourceFilterDateGrouping,
     type IRecordId
-  } from "@21n/types/data.type";
+  } from "@nucleum/schema/legacy/data.type";
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { page } from "$app/stores";
   import type { SubType } from "@nucleum/application/library/library.type";
   import LibrarySubTypeSwitcher from "@nucleum/application/library/LibrarySubTypeSwitcher.svelte";
@@ -29,10 +27,10 @@
     archivedResourceFilter
   } from "@21n/utils/utils";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import DatePickerRow from "@21n/elements/datetime/DatePickerRow.svelte";
   import AbsoluteTimeRangePopoverV2 from "@21n/elements/datetime/absolute/AbsoluteTimeRangePopoverV2.svelte";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { popover } from "@nucleum/actions/popover.action";
   import {
     compareDates,
@@ -46,7 +44,7 @@
     removeDuplicatesFilter,
     resourceAction
   } from "@nucleum/datafn/resource.utils";
-  import { ButtonVariant, ButtonStyle } from "@21n/types/button.type";
+  import { ButtonVariant, ButtonStyle } from "@21n/elements/button/button.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { generateMiniRandomId } from "@21n/shared-utils/crypto.utils";
   import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
@@ -56,11 +54,11 @@
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import { resolveTaskDueDateFilters } from "@nucleum/features/focus/tasks/task.utils";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import { intersection } from "@nucleum/actions/intersection.action";
   import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { dragSelection } from "@nucleum/actions/dragSelection.action";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
@@ -68,7 +66,7 @@
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   import { time } from "@datafn/client";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
 
   let {

@@ -25,7 +25,7 @@
     ]
   },
   "include": [
-    "../../client/types/globals/**/*.d.ts",
+    "../../client/ambient/**/*.d.ts",
     "src/**/*.d.ts",
     "src/**/*.js",
     "src/**/*.ts",

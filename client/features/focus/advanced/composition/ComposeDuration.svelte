@@ -4,15 +4,15 @@
     SessionCompositionType,
     type SessionComposition,
     BreakCompositionType
-  } from "@21n/types/pointron/sessionComposition.type";
+  } from "@nucleum/features/focus/sessionComposition.type";
   import { getTotalsFromComposition } from "@nucleum/features/focus/composition.utils";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import PomodoroUnitView from "@nucleum/features/focus/advanced/presets/PomodoroUnitView.svelte";
   import ComposeBreak from "@nucleum/features/focus/advanced/composition/ComposeBreak.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import { appStore } from "@nucleum/stores/app.store";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
@@ -22,7 +22,7 @@
   import BackButton from "@21n/elements/button/BackButton.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
 
   let {
     composition,

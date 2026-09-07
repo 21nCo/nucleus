@@ -7,11 +7,11 @@
   import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
   import { NodeType, type IClip } from "@nucleum/features/memory/node/node.type";
   import NodeTitle from "@nucleum/features/memory/node/title/NodeTitle.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { fly } from "svelte/transition";
   import { resumeVideo } from "@nucleum/extensions/clipper/parsers/shared/video.utils";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
 

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Text from "@21n/elements/text/Text.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { TextStyle } from "@21n/types/text.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import type { ICapture } from "@nucleum/features/memory/capture/capture.type";
   import DraftItem from "@nucleum/features/memory/capture/draftSelector/DraftItem.svelte";
   import { isSameResource } from "@nucleum/datafn/resource.utils";

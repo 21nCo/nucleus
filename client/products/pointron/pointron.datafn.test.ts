@@ -5,14 +5,14 @@ import {
   destroyNucleumDatafn,
   initializeNucleumDatafn
 } from "@nucleum/datafn/datafn.store";
-import { Product } from "@21n/types/product.type";
-import { UserDataMode } from "@21n/types/account.type";
+import { Product } from "@nucleum/client/config/product.type";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import { appStore } from "@nucleum/stores/app.store";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { focusAggregates } from "@nucleum/features/focus/analytics/analytics.store";
 import { recentsStore } from "@nucleum/application/record/recent.store";
-import { BlockType } from "@21n/types/pointron/session.type";
+import { BlockType } from "@nucleum/features/focus/session.type";
 import { SessionType } from "@nucleum/features/focus/logs/log.type";
 import { ObjectiveStatus, ObjectiveType } from "@nucleum/features/focus/goals/goal.type";
 import {

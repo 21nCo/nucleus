@@ -2,7 +2,7 @@
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import { selectedTimePeriod } from "@nucleum/stores/app.store";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Popover from "@21n/elements/popover/Popover.svelte";
   import AbsoluteTimeRangePopover from "@21n/elements/datetime/absolute/AbsoluteTimeRangePopover.svelte";
   import { cn } from "@21n/utils/ui.utils";

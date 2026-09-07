@@ -1,8 +1,8 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import { debouncer } from "@21n/utils/utils";
   import { analyticsConfigStore } from "@nucleum/features/focus/analytics/analytics.store";
   import {

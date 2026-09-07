@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { TimeUnit } from "@21n/types/time.type";
+  import { TimeUnit } from "@21n/utils/time.type";
   import { cn } from "@21n/utils/ui.utils";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
 
   let {
     units,

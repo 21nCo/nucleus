@@ -3,7 +3,7 @@ import { subscribe } from "./index";
 import {
   BillingCycle,
   PlanType
-} from "@21n/shared-types/subscription.type";
+} from "@nucleum/schema/account/subscription";
 import { ValidationError } from "../../errors";
 
 const product = "memotron";

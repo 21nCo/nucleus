@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Placement } from "@21n/types/direction.enum";
-  import { IconVariant } from "@21n/types/icon.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { IconVariant } from "@21n/elements/icon.type";
 
   let {
     direction = Placement.Left,

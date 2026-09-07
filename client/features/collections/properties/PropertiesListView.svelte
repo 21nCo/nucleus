@@ -9,9 +9,9 @@
     resolveIsMultiSelectProperty
   } from "@nucleum/features/collections/properties/property.utils";
   import { hoverable } from "@nucleum/actions/hover.action";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Badge from "@21n/elements/text/Badge.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import type {
     ICollectionExpanded,
     ICollectionItem,

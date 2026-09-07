@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import CalendarOverviewPanelPointron from "@nucleum/features/calendar/column/overview/CalendarOverviewPanelPointron.svelte";
   import MemoryOverviewForTimePeriod from "@nucleum/features/calendar/column/overview/MemoryOverviewForTimePeriod.svelte";
 

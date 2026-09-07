@@ -1,14 +1,14 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import AutocompleteResultItem from "@21n/elements/autocomplete/AutocompleteResultItem.svelte";
-  import type { AutocompleteListItemType } from "@21n/types/autocompleteListItem.type";
+  import type { AutocompleteListItemType } from "@21n/elements/autocomplete/autocompleteListItem.type";
   import { generateUID } from "@21n/utils/utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import type { IEvent } from "@21n/types/event.type";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import type { IEvent } from "@21n/elements/input/event.type";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   let {
     wrapperClassList = "w-full",
     wrapperStyle = "",

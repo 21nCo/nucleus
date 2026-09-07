@@ -1,7 +1,7 @@
 <script lang="ts">
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { CollectionType } from "@nucleum/features/collections/collection.type";
   import type { CollectionData } from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/types";
 

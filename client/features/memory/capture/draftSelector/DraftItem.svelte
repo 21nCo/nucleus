@@ -2,8 +2,8 @@
   import { hoverable } from "@nucleum/actions/hover.action";
   import Button from "@21n/elements/button/Button.svelte";
   import context from "@nucleum/stores/context.store";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import type { ICapture } from "@nucleum/features/memory/capture/capture.type";
 

@@ -6,7 +6,7 @@ import { Resource } from "@nucleum/datafn/resource.enum";
 import {
   TacoActions,
   TranscriptionModel
-} from "@nucleum/products/memotron/taco/taco.types";
+} from "@nucleum/application/taco/worker.type";
 
 env.allowLocalModels = false;
 // let call = 0;

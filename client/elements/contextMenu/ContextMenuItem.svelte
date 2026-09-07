@@ -1,10 +1,7 @@
 <script lang="ts">
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
-  import {
-    ContextMenuType,
-    type IContextMenuItem
-  } from "@21n/types/select.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ContextMenuType, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
   import ContextMenuItemBase from "@21n/elements/contextMenu/ContextMenuItemBase.svelte";
   import ContextMenuItemWithSecondary from "@21n/elements/contextMenu/ContextMenuItemWithSecondary.svelte";
   import { appStore } from "@nucleum/stores/app.store";

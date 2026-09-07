@@ -2,8 +2,8 @@
   import { onMount } from "svelte";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import HoverableElement from "@21n/elements/HoverableElement.svelte";
   import type { IWebPage } from "@nucleum/features/memory/node/node.type";
   import FileView from "@nucleum/features/files/FileView.svelte";

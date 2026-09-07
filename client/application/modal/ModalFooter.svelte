@@ -4,21 +4,21 @@
     ButtonStyle,
     ButtonVariant,
     type IButtonParams
-  } from "@21n/types/button.type";
+  } from "@21n/elements/button/button.type";
   import { onMount } from "svelte";
   import modalEvent, {
     isPrimaryActionDisabled
   } from "@nucleum/application/modal/modal.store";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import { GlobalEvent } from "@21n/types/event.enum";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import { KeyboardKey, ModifierKey } from "@21n/types/keyboard.type";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
+  import { Orientation } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import ButtonGroup from "@21n/elements/button/ButtonGroup.svelte";
   import view from "@nucleum/stores/view.store";
   let {

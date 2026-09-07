@@ -4,8 +4,8 @@
   import Rating from "@nucleum/features/collections/properties/ratingProperty/Rating.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import view from "@nucleum/stores/view.store";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { InputStyle } from "@21n/types/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { enumToString, isValidString } from "@21n/shared-utils/text.utils";
   import { cn } from "@21n/utils/ui.utils";
   import MetaPropertyItem from "@nucleum/features/collections/properties/MetaPropertyItem.svelte";
@@ -18,10 +18,10 @@
     PropertyType,
     textPropertyTypes
   } from "@nucleum/features/collections/properties/property.type";
-  import { type IRecordId } from "@21n/types/data.type";
+  import { type IRecordId } from "@nucleum/schema/legacy/data.type";
   import SelectPropertyOption from "@nucleum/features/collections/properties/selectProperty/SelectPropertyOption.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import {
     resolvePropertyDefaultValue,
     resolveIsMultiSelectProperty,
@@ -30,7 +30,7 @@
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import { debouncer } from "@21n/utils/utils";
-  import type { InputLabel } from "@21n/types/input.type";
+  import type { InputLabel } from "@21n/elements/input/input.type";
   import type { ICollectionItem } from "@nucleum/features/collections/collection.type";
 
   let {

@@ -3,7 +3,7 @@
   import RiveAnimatedIcon from "@21n/icons/RiveAnimatedIcon.svelte";
   import CaretPlay from "@nucleum/client/routes/play/CaretPlay.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
 </script>
 
 <div class="flex w-full h-full justify-center items-start p-8">

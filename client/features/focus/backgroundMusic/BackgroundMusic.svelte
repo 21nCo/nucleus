@@ -4,8 +4,8 @@
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import SystemSounds from "@nucleum/features/focus/backgroundMusic/SystemSounds.svelte";
   let youtubeUrl = $backgroundSoundStore.youtubeUrl;
 </script>

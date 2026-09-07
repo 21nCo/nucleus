@@ -8,7 +8,7 @@
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import type { IRecordId } from "@nucleum/client/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import Objective from "@nucleum/features/focus/goals/Goal.svelte";
 
   let {

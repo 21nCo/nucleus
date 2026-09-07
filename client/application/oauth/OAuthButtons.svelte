@@ -1,7 +1,7 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { authClient } from "@nucleum/client/runtime/account/auth";

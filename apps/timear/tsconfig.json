@@ -12,7 +12,7 @@
     "moduleResolution": "bundler"
   },
   "include": [
-    "../../client/types/globals/**/*.d.ts",
+    "../../client/ambient/**/*.d.ts",
     ".svelte-kit/ambient.d.ts",
     ".svelte-kit/non-ambient.d.ts",
     ".svelte-kit/types/**/$types.d.ts",

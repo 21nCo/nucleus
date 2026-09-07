@@ -1,13 +1,13 @@
 <script lang="ts">
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { formatTime } from "@21n/utils/time.utils";
   import { onMount } from "svelte";
   import DurationSuggestions from "@nucleum/features/focus/logs/manualLog/DurationSuggestions.svelte";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
@@ -18,8 +18,8 @@
     type IManualSessionLogForm
   } from "@nucleum/features/focus/logs/log.type";
   import TextSearchInput from "@21n/elements/input/TextSearchInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
   import FocusNotes from "@nucleum/features/focus/notes/FocusNotes.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import { isPrimaryActionDisabled } from "@nucleum/application/modal/modal.store";
@@ -27,7 +27,7 @@
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import Divider from "@21n/elements/Divider.svelte";
   import {
     ObjectiveStatus,

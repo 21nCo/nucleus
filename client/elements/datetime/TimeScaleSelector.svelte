@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { TimeScale } from "@21n/types/time.type";
+  import { TimeScale } from "@21n/utils/time.type";
   import { enumToString } from "@21n/shared-utils/text.utils";
   let { scales, onSelect, onHide }: any = $props();
 

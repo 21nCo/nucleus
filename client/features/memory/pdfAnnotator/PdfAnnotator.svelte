@@ -28,7 +28,7 @@
   import CommentEditor from "@nucleum/features/memory/pdfAnnotator/comment/CommentEditor.svelte";
   import ToolBar from "@nucleum/features/memory/pdfAnnotator/toolbar/ToolBar.svelte";
   import { FindState } from "pdfjs-dist/web/pdf_viewer.mjs";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
@@ -36,7 +36,7 @@
   import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import context from "@nucleum/stores/context.store";
-  import { Embed, OperatingSystem } from "@21n/types/context.type";
+  import { Embed, OperatingSystem } from "@nucleum/client/runtime/context.type";
   import { fileStore } from "@nucleum/features/files/file.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";

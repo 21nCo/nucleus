@@ -1,14 +1,14 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import type { IRecordId } from "@nucleum/client/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { Size } from "@nucleum/client/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@nucleum/client/utils/ui.utils";
   import Button from "@nucleum/client/elements/button/Button.svelte";
   import TextInput from "@nucleum/client/elements/input/TextInput.svelte";
   import EmptyStatusView from "@nucleum/client/elements/feedback/EmptyStatusView.svelte";
-  import { ButtonStyle, ButtonVariant } from "@nucleum/client/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import {
     CombinationNavItemType,
     type ICombinationNavItem

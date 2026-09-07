@@ -2,8 +2,8 @@
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { parse } from "@21n/shared-utils/json.utils";
   import {

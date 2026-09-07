@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { PopoverTriggerMethod } from "@21n/types/popover.type";
+import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
 
 import { popover } from "./popover.action";
 

@@ -6,7 +6,7 @@ import {
   type IFocusItemsStore,
   type ICurrentFocusItem,
   type IFocusItem
-} from "@21n/types/pointron/session.type";
+} from "@nucleum/features/focus/session.type";
 import {
   generateIntervalsFromComposition,
   getTotalsFromComposition,
@@ -14,13 +14,13 @@ import {
   resolveSessionTimeSplit
 } from "@nucleum/features/focus/composition.utils";
 import { get, writable } from "svelte/store";
-import { SessionState } from "@21n/types/pointron/sessionState.enum";
+import { SessionState } from "@nucleum/features/focus/sessionState.enum";
 import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
 import {
   SessionCompositionType,
   type SessionComposition,
   BreakCompositionType
-} from "@21n/types/pointron/sessionComposition.type";
+} from "@nucleum/features/focus/sessionComposition.type";
 import { appStore } from "@nucleum/stores/app.store";
 import modalEvent, {
   fullScreen,
@@ -33,9 +33,9 @@ import {
   appEvents
 } from "@nucleum/stores/notification.store";
 import { deepCopy, isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-import { AlertType } from "@21n/types/notification.type";
+import { AlertType } from "@nucleum/stores/notifications/notification.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import {
   type ISession,
@@ -45,8 +45,8 @@ import {
 } from "@nucleum/features/focus/logs/log.type";
 import { createSessionItemRelationRefs } from "@nucleum/features/focus/logs/session-items.utils";
 import context from "@nucleum/stores/context.store";
-import { PointronEvent } from "@21n/types/pointron/pointronEvent.enum";
-import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+import { PointronEvent } from "@nucleum/features/focus/pointronEvent.enum";
+import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { advancedCompositionDraft } from "@nucleum/features/focus/advanced/composition/advancedCompositionDraft.store";
 import { ObservableStore } from "@nucleum/stores/client.store";
@@ -70,10 +70,10 @@ import { toDateValue } from "@21n/utils/time.utils";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import { UIState } from "@nucleum/stores/uiState/uiState.type";
 import { removeDuplicatesFilter } from "@nucleum/datafn/resource.utils";
-import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
+import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
 import { getUtcSafeDay } from "@21n/elements/datetime/datetime.utils";
 import type { ITaskCapture } from "@nucleum/features/focus/tasks/task.type";
-import { StoreDataType } from "@21n/types/data.type";
+import { StoreDataType } from "@nucleum/schema/legacy/store-data-type.enum";
 
 /** @deprecated */
 export const todayFocusStore = initTodayFocus();

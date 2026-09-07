@@ -31,8 +31,8 @@
   import view from "@nucleum/stores/view.store";
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { Size } from "@21n/elements/size.enum";
 
   interface $$Events {
     blur: FocusEvent;

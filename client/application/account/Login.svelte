@@ -4,13 +4,13 @@
   import { properCase } from "@21n/shared-utils/text.utils";
   import PoliciesFooter from "@21n/elements/PoliciesFooter.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
   import BoxSwitcher from "@21n/elements/switcher/BoxSwitcher.svelte";
   import CloudSyncLogin from "@nucleum/application/account/CloudSyncLogin.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Display } from "@21n/types/view.type";
+  import { Display } from "@21n/elements/display.enum";
   import { parse } from "@21n/shared-utils/json.utils";
   import { toasts } from "@nucleum/stores/notification.store";
   import { page } from "$app/stores";

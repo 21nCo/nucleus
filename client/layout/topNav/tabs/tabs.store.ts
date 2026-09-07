@@ -7,8 +7,8 @@ import { appStore } from "@nucleum/stores/app.store";
 import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
 import type { HorizontalTrail, VerticalTrail } from "./tabs.type";
-import type { IRecordId } from "@21n/types/data.type";
-import { Action } from "@21n/types/action.enum";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import { get, writable } from "svelte/store";
 
 class TabStore {

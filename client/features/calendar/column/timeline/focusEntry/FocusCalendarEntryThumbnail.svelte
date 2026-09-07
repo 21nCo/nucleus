@@ -9,7 +9,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import FocusEntryGoalsInfoShort from "@nucleum/features/calendar/column/timeline/focusEntry/FocusEntryGoalsInfoShort.svelte";
   import FocusEntryFocusSplitInfo from "@nucleum/features/calendar/column/timeline/focusEntry/FocusEntryFocusSplitInfo.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
 
   let {
     item,

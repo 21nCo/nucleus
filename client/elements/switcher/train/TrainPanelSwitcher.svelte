@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import type {
     ISelectItem,
     ISelectValue
-  } from "@21n/types/select.type";
+  } from "@21n/elements/select/select.type";
   import TrainPanelSwitcherItem from "@21n/elements/switcher/train/TrainPanelSwitcherItem.svelte";
-  import { PanelSwitcherActiveItemStrength } from "@21n/types/switcher.enum";
+  import { PanelSwitcherActiveItemStrength } from "@21n/elements/switcher/switcher.enum";
   let {
     items,
     value = $bindable(),

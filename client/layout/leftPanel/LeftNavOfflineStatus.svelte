@@ -4,8 +4,8 @@
   import account from "@nucleum/stores/account.store";
   import { appStore } from "@nucleum/stores/app.store";
   import context from "@nucleum/stores/context.store";
-  import { UserDataMode } from "@21n/types/account.type";
-  import { Action } from "@21n/types/action.enum";
+  import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { cn } from "@21n/utils/ui.utils";
 
   let { isInThinMode = false }: { isInThinMode?: boolean } = $props();

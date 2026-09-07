@@ -1,16 +1,16 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { Size } from "@21n/types/size.enum";
-  import type { ISelectItem } from "@21n/types/select.type";
+  import { Size } from "@21n/elements/size.enum";
+  import type { ISelectItem } from "@21n/elements/select/select.type";
   import { CalendarLayout } from "@nucleum/features/calendar/calendar.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@21n/types/product.type";
-  import { Action } from "@21n/types/action.enum";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { Product } from "@nucleum/client/config/product.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { page } from "$app/stores";
   import BackButton from "@21n/elements/button/BackButton.svelte";
   import BoxSwitcher from "@21n/elements/switcher/BoxSwitcher.svelte";

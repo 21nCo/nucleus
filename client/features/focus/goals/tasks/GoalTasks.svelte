@@ -7,7 +7,7 @@
   } from "@nucleum/datafn/resource.type";
   import TaskLibrary from "@nucleum/features/focus/tasks/TaskLibrary.svelte";
   import Task from "@nucleum/features/focus/tasks/Task.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { appStore } from "@nucleum/stores/app.store";
 
   let {

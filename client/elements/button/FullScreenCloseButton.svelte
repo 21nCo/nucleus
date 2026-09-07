@@ -4,8 +4,8 @@
   import modalEvent from "@nucleum/application/modal/modal.store";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { Placement } from "@21n/types/direction.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { Placement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   let {

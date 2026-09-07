@@ -1,7 +1,7 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { determineResourceType } from "@nucleum/datafn/resource.utils";
 import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { get } from "svelte/store";
 import { assertDatafnMutationSucceeded } from "@nucleum/datafn/mutation.utils";
 

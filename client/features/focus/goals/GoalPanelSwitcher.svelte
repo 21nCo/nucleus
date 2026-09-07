@@ -11,7 +11,7 @@
     type IResourcePageWithPanels,
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
-  import type { ResourcePanelType } from "@21n/types/resource-panel.type";
+  import type { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
 

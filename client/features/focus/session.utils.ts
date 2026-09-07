@@ -4,13 +4,13 @@ import {
   isSameResource,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import {
   BlockType,
   type ICurrentFocusItem,
   type IFocusItemsStore,
   type ISessionInterval
-} from "@21n/types/pointron/session.type";
+} from "@nucleum/features/focus/session.type";
 import { sortArrayByOrder } from "@21n/shared-utils/obj.utils";
 import type {
   DaySummary,

@@ -7,15 +7,15 @@ import {
   PropertyType,
   UniversalPropertyType
 } from "@nucleum/features/collections/properties/property.type";
-import type { ISelectItem } from "@21n/types/select.type";
-import type { IRecordId } from "@21n/types/data.type";
+import type { ISelectItem } from "@21n/elements/select/select.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { enumToString, isValidString } from "@21n/shared-utils/text.utils";
 import type { OmitForCaptureWithId } from "@nucleum/datafn/resource.type";
 import {
   propertyOptions,
   universalPropertyOptions
 } from "@nucleum/features/collections/properties/property.store";
-import { AvatarType } from "@21n/types/avatar.type";
+import { AvatarType } from "@21n/elements/avatarPicker/avatar.type";
 import { iso31661CountryCodes } from "@nucleum/features/collections/properties/countries";
 import { languages } from "@nucleum/features/collections/properties/languages";
 import type { ICollectionItemPropertyValue } from "@nucleum/features/collections/collection.type";

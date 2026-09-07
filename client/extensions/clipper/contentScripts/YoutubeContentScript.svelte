@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
   import { createClipPointer } from "@nucleum/extensions/clipper/clipper.utils";
-  import { ExtensionEvent } from "@21n/types/extension.type";
+  import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import {
     NodeType,
     type IClipCapture
@@ -18,7 +18,7 @@
   import { getPort } from "@plasmohq/messaging/port";
   import { cn } from "@21n/utils/ui.utils";
   import { formatSeconds } from "@21n/utils/time.utils";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { TimeFormat } from "@21n/utils/time.type";
   let {
     isRenderedAsOverlay = false
   }: {

@@ -5,9 +5,9 @@
     ButtonStyle,
     ButtonVariant,
     type IButtonParams
-  } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
-  import { InfoTextType } from "@21n/types/text.type";
+  } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { InfoTextType } from "@21n/elements/text/info.type";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";

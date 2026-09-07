@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { Action } from "@21n/types/action.enum";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import { ensureInAppOnHome, isCloudAuthModeActive } from "../utils/helpers";
 
 test.describe("shared - auth and nav @auth", () => {

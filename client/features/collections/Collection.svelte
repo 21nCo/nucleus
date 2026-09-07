@@ -12,22 +12,19 @@
   import { bg, cn } from "@21n/utils/ui.utils";
   import ViewTabSwitcher from "@nucleum/features/collections/tabSwitcher/ViewTabSwitcher.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import {
     PropertyType,
     type IProperty
   } from "@nucleum/features/collections/properties/property.type";
   import { activeResourceFilter } from "@21n/utils/utils";
   import { onDestroy, onMount, untrack } from "svelte";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
-  import type { ISelectItem, ISelectValue } from "@21n/types/select.type";
-  import {
-    AccessMode,
-    ResourceAccessPoint,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
+  import type { ISelectItem, ISelectValue } from "@21n/elements/select/select.type";
+  import { AccessMode, ResourceAccessPoint } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { isValidString } from "@21n/shared-utils/text.utils";
   import {
     CollectionLayout,
@@ -40,7 +37,7 @@
     Arrangement,
     Orientation,
     Placement
-  } from "@21n/types/direction.enum";
+  } from "@21n/elements/direction.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import CoverPicker from "@21n/elements/coverPicker/CoverPicker.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
@@ -49,7 +46,7 @@
   import ToggleGroup from "@21n/elements/toggle/ToggleGroup.svelte";
   import AddResourceAction from "@nucleum/features/collections/AddResourceAction.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import {
     isNoneResource,
@@ -64,14 +61,14 @@
     tabAndGroupableProperties
   } from "@nucleum/features/collections/properties/property.utils";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { resizeListener } from "@nucleum/actions/resize.action";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

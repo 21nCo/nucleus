@@ -4,10 +4,10 @@
   import Bolt from "@21n/icons/Bolt.svelte";
   import Home from "@21n/icons/Home.svelte";
   import Stack from "@21n/icons/Stack.svelte";
-  import { ChatIconVariant, IconVariant } from "@21n/types/icon.type";
+  import { ChatIconVariant, IconVariant } from "@21n/elements/icon.type";
   import ChevronDouble from "@21n/icons/ChevronDouble.svelte";
-  import { Placement, Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Placement, Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import Command from "@21n/icons/Command.svelte";
   import Chevron from "@21n/icons/Chevron.svelte";
   import Clock from "@21n/icons/Clock.svelte";

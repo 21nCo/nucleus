@@ -20,9 +20,10 @@ import {
   type OmitForCapture
 } from "@nucleum/datafn/resource.type";
 import type { IBlockBody, IMarkdown } from "@nucleum/features/memory/markdown/md.type";
-import type { IAvatar } from "@21n/types/avatar.type";
-import type { IRecordId, IStore } from "@21n/types/data.type";
-import { ResourcePanelType } from "@21n/types/resource-panel.type";
+import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+import type { IStore } from "@nucleum/datafn/observable-store.type";
+import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
 import type {
   ILink,
   ILinkBase,

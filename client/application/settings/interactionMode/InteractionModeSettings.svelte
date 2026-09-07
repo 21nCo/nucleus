@@ -7,13 +7,13 @@
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import view from "@nucleum/stores/view.store";
-  import { Action } from "@21n/types/action.enum";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import ShortcutSettings from "@nucleum/application/shortcuts/settings/ShortcutSettings.svelte";
-  import { InteractionMode } from "@21n/types/interaction-mode.type";
+  import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
   const persistedMode = uiState.getState(Action.MODE_OF_INTERACTION, {
     scope: UIStateScope.PRODUCT
   });

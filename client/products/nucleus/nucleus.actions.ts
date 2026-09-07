@@ -1,5 +1,5 @@
-import { Action } from "@21n/types/action.enum";
-import { ActionType, type IAction } from "@21n/types/action.type";
+import { Action } from "@nucleum/application/commandBar/action.enum";
+import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
 import { memotronActions } from "@nucleum/products/memotron/memotron.actions";
 import { pointronActions } from "@nucleum/products/pointron/pointron.actions";
 import NucleusLibrary from "@nucleum/products/nucleus/NucleusLibrary.svelte";
@@ -8,7 +8,8 @@ import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
 import LibraryPanelContentResolver from "@nucleum/application/library/LibraryPanelContentResolver.svelte";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import NucleusOverviewPanel from "@nucleum/products/nucleus/overview/NucleusOverviewPanel.svelte";
-import { AccessMode, ResourceActionType } from "@nucleum/datafn/resource.type";
+import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { resourceAction } from "@nucleum/datafn/resource.utils";
 import { appMenuActionLabelsByAction } from "@nucleum/client/config/product-nav.config";
 import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";

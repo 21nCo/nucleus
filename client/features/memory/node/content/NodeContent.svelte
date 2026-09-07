@@ -5,7 +5,7 @@
     headingNodeTypes,
     type INodeStructure
   } from "@nucleum/features/memory/node/node.type";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import {
     hierarchyFactorLimit,
     type IActiveNodeStore
@@ -19,7 +19,7 @@
   import NodularMarkdown from "@nucleum/features/memory/markdown/NodularMarkdown.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import Divider from "@21n/elements/Divider.svelte";
-  import { ColorStrength } from "@21n/types/appearance.type";
+  import { ColorStrength } from "@21n/theme/appearance.type";
   import { formatDatetime } from "@21n/utils/time.utils";
   import { onDestroy, onMount } from "svelte";
   import { appStore } from "@nucleum/stores/app.store";
@@ -30,8 +30,8 @@
   import { wordCounter } from "@nucleum/actions/counter.action";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { Size } from "@21n/types/size.enum";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { Size } from "@21n/elements/size.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import view from "@nucleum/stores/view.store";
   import context from "@nucleum/stores/context.store";
@@ -44,7 +44,7 @@
     resourceInList
   } from "@nucleum/datafn/resource.utils";
   import { tabs } from "@21n/layout/topNav/tabs/tabs.store";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
 
   type BlockCreateInput = {
     id: IRecordId;

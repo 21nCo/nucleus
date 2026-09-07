@@ -1,17 +1,17 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { TimeFormat } from "@21n/types/time.type";
+  import { TimeFormat } from "@21n/utils/time.type";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { tooltip } from "@nucleum/actions/popover.action";
   import { cn } from "@21n/utils/ui.utils";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
   import TopNavLeftMenuItem from "@21n/layout/topNav/TopNavLeftMenuItem.svelte";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   const action = PointronAction.FOCUS;
 </script>
 

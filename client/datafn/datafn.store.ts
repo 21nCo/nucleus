@@ -22,16 +22,16 @@ import { IndexedDbAdapter } from "@searchfn/adapter-indexeddb";
 import { resolveProductResourceConfig } from "@nucleum/schema/product.config";
 import { resolveAccountBaseUrl } from "@nucleum/client/runtime/account/network";
 import { createNucleumAuthFnTransportAuth } from "@nucleum/client/runtime/account/auth";
-import type { Product } from "@21n/types/product.type";
+import type { Product } from "@nucleum/client/config/product.type";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
 import {
   clientStorage,
   deleteIndexedDbDatabase,
   getDapId
 } from "@nucleum/persistence/persistence.utils";
-import type { UserAccount } from "@21n/types/account.type";
-import type { NucleumDatafnE2eeSettings } from "@21n/types/datafn.type";
-import { UserDataMode } from "@21n/types/account.type";
+import type { UserAccount } from "@nucleum/client/runtime/account/account.type";
+import type { NucleumDatafnE2eeSettings } from "@nucleum/datafn/e2ee.type";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import { get, writable } from "svelte/store";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { compareObjects } from "@21n/shared-utils/obj.utils";

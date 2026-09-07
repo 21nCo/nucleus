@@ -4,15 +4,15 @@
     focusItemsStore
   } from "@nucleum/features/focus/session.store";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import PresetItem from "@nucleum/features/focus/advanced/presets/PresetItem.svelte";
   import PresetObjectivesSelector from "@nucleum/features/focus/advanced/presets/PresetGoalsSelector.svelte";
   import type { IObjectiveThumb } from "@nucleum/features/focus/goals/goal.type";
   import { onMount } from "svelte";
-  import type { IFocusItem } from "@21n/types/pointron/session.type";
+  import type { IFocusItem } from "@nucleum/features/focus/session.type";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { advancedCompositionDraft } from "@nucleum/features/focus/advanced/composition/advancedCompositionDraft.store";

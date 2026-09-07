@@ -3,9 +3,9 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { ActionType } from "@21n/types/action.type";
-  import { ColorStrength } from "@21n/types/appearance.type";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { ActionType } from "@nucleum/application/commandBar/action.type";
+  import { ColorStrength } from "@21n/theme/appearance.type";
+  import { Orientation } from "@21n/elements/direction.enum";
   import { abg, bg, cn } from "@21n/utils/ui.utils";
   let {
     action,

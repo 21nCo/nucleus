@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
-  import { Arrangement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     AccessMode,
     ResourceAccessPoint
@@ -12,17 +12,17 @@
   import { hoverable } from "@nucleum/actions/hover.action";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import TaskThumbnailObjectiveLabel from "@nucleum/features/focus/tasks/TaskThumbnailGoalLabel.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import ResourceThumbnailContextMenu from "@nucleum/application/record/thumbnail/ResourceThumbnailContextMenu.svelte";
   import view from "@nucleum/stores/view.store";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
   import AbsoluteTimeRangePopoverV2 from "@21n/elements/datetime/absolute/AbsoluteTimeRangePopoverV2.svelte";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import { generateMiniRandomId } from "@21n/shared-utils/crypto.utils";
   import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
   import FocusItemPickOverlay from "@nucleum/features/focus/elements/focusitem/FocusItemPickOverlay.svelte";
@@ -32,7 +32,7 @@
   } from "@nucleum/features/focus/session.store";
   import { movingBorder } from "@nucleum/actions/movingBorder.action";
   import { appStore } from "@nucleum/stores/app.store";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import { resolveBulkSelectionAccessPointId } from "@nucleum/datafn/resource.utils";

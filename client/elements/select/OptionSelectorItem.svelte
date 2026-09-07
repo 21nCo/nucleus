@@ -1,14 +1,14 @@
 <script lang="ts">
   import type { MouseEventHandler } from "svelte/elements";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { fade, scale } from "svelte/transition";
   import Icon from "@21n/elements/Icon.svelte";
   import {
     OptionSelectorStyle,
     type ISelectItem
-  } from "@21n/types/select.type";
+  } from "@21n/elements/select/select.type";
   import { cn } from "@21n/utils/ui.utils";
   import AvatarRenderer from "@21n/elements/avatarPicker/AvatarRenderer.svelte";
   import TextWithHoverTooltip from "@21n/elements/text/TextWithHoverTooltip.svelte";

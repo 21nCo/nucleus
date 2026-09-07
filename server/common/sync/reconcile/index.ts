@@ -1,4 +1,4 @@
-import { IReconcileBody } from "$lib/shared/types/sync.type";
+import { IReconcileBody } from "@nucleum/schema/legacy/sync.type";
 import { Agent } from "$lib/server/common/account/account.type";
 import { SyncProviderFactory } from "../providers";
 

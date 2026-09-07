@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { NodeType } from "@nucleum/features/memory/node/node.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
   import TextContent from "@nucleum/features/memory/markdown/content/TextContent.svelte";
   let {

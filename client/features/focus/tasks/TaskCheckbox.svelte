@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import type { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { datafn } from "@nucleum/datafn/datafn.store";

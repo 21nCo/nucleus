@@ -4,19 +4,8 @@ import { memotronTables } from "@21n/shared-dbo/memotron.tables";
 import { pointronDboDefinitions } from "@21n/shared-dbo/pointron.dbo";
 import { pointronTables } from "@21n/shared-dbo/pointron.tables";
 import { globalTables } from "@21n/shared-dbo/global.tables";
-import {
-  type IPrimitiveDbDataType,
-  type IResourceFilterValue,
-  type IResourceSelectParams,
-  PersistenceActionType,
-  SearchType,
-  StoreDataType,
-  type IMutation,
-  type IRecordId,
-  IResourceFilterOperator,
-  IResourceFilterDateGrouping,
-  type IResourceSelectProperties
-} from "@21n/types/data.type";
+import { type IPrimitiveDbDataType, type IResourceFilterValue, type IResourceSelectParams, PersistenceActionType, SearchType, type IMutation, type IRecordId, IResourceFilterOperator, IResourceFilterDateGrouping, type IResourceSelectProperties } from "@nucleum/schema/legacy/data.type";
+import { StoreDataType } from "@nucleum/schema/legacy/store-data-type.enum";
 import { Resource } from "@nucleum/schema/resource.enum";
 import { generateRandomId } from "@21n/shared-utils/crypto.utils";
 

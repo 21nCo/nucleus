@@ -3,11 +3,11 @@ import { get, writable } from "svelte/store";
 import type {
   IKeyboardShortcut,
   IKeyboardShortcutsStore
-} from "@21n/types/shortcut.type";
+} from "@21n/elements/keyboard/shortcut.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { resolveModifiers } from "@nucleum/application/shortcuts/shortcut.utils";
 import context from "@nucleum/stores/context.store";
-import { OperatingSystem } from "@21n/types/context.type";
+import { OperatingSystem } from "@nucleum/client/runtime/context.type";
 import { shortcutsConfig } from "@nucleum/application/shortcuts/shortcuts.config";
 import { replacer } from "@21n/shared-utils/json.utils";
 import { resolveProductConfig } from "@nucleum/products/product.config";

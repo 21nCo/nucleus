@@ -12,9 +12,9 @@
   import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import Check from "@21n/icons/Check.svelte";
   import context from "@nucleum/stores/context.store";
-  import type { IRecordId } from "@21n/types/data.type";
-  import { Arrangement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
+  import { Arrangement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import ResourceThumbnailContextMenu from "@nucleum/application/record/thumbnail/ResourceThumbnailContextMenu.svelte";
   import { stringify } from "@21n/shared-utils/json.utils";

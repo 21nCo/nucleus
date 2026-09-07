@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import { toolbarState } from "@nucleum/extensions/clipper/contentScripts/store";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { hoverable } from "@nucleum/actions/hover.action";
   import { fly, scale } from "svelte/transition";

@@ -24,21 +24,21 @@
     type IActiveNodeStore
   } from "@nucleum/features/memory/node/node.store";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
-  import type { TimeScaleUnit } from "@21n/types/time.type";
+  import type { TimeScaleUnit } from "@21n/utils/time.type";
   import { onDestroy, onMount, setContext } from "svelte";
   import {
     AccessMode,
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
   import { resolveCalendarNotesId } from "@nucleum/features/calendar/calendar.utils";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
   import { ActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import type { IMarkdownTemplate } from "@nucleum/features/memory/markdown/md.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { page } from "$app/stores";
-  import { Context } from "@21n/types/appStore.type";
+  import { Context } from "@nucleum/stores/appStore.type";
   import { datafn, nucleumDatafnStatus } from "@nucleum/datafn/datafn.store";
   import { acquireDnDPage, appStore } from "@nucleum/stores/app.store";
 

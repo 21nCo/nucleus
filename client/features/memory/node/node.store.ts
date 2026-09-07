@@ -11,28 +11,20 @@ import {
   mediaNodeTypeList,
   socialPostNodeTypeList
 } from "@nucleum/features/memory/node/node.type";
-import { ResourcePanelType } from "@21n/types/resource-panel.type";
+import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
 import { ActiveResourceStore } from "@nucleum/application/record/active-resource.store";
 import { PanelSwitcherMixin } from "@nucleum/application/resource/panelSwitcher.mixin";
 import {
   activeResourceFilterIgnoreAncestorInactive
 } from "@21n/utils/utils";
-import {
-  AccessMode,
-  ResourceAccessPoint,
-  ResourceActionType,
-  type IResourceMutationParams
-} from "@nucleum/datafn/resource.type";
+import { AccessMode, ResourceAccessPoint, type IResourceMutationParams } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { ResourceActions } from "@nucleum/application/record/resource.actions";
 import { get, writable } from "svelte/store";
-import {
-  ContextMenuType,
-  type IContextMenu,
-  type IContextMenuItem
-} from "@21n/types/select.type";
+import { ContextMenuType, type IContextMenu, type IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { resolveCollectionTypes } from "@nucleum/features/collections/collection.utils";
-import type { IRecordId } from "@21n/types/data.type";
+import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import type { IToggleItem } from "@21n/elements/toggle/toggle.type";
 import { generateMarkdownText } from "@nucleum/features/memory/node/node.utils";
 import {
@@ -44,7 +36,7 @@ import {
 } from "@nucleum/datafn/resource.utils";
 
 import context from "@nucleum/stores/context.store";
-import { Embed } from "@21n/types/context.type";
+import { Embed } from "@nucleum/client/runtime/context.type";
 import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
 import { fileStore } from "@nucleum/features/files/file.store";
 import { recursivelyExtractAllChildrenIntoArray } from "@nucleum/features/memory/markdown/markdown.utils";

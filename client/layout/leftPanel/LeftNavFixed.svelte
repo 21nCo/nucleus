@@ -3,14 +3,14 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
   import AppMenuSwitcher from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcher.svelte";
-  import { LayoutContext } from "@21n/types/layout.type";
-  import { Size } from "@21n/types/size.enum";
+  import { LayoutContext } from "@21n/layout/layout-mode.type";
+  import { Size } from "@21n/elements/size.enum";
   import LeftBottomBar from "@21n/layout/leftPanel/LeftBottomBar.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
-  import { PopoverTriggerMethod } from "@21n/types/popover.type";
+  import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import LeftNavSettingsPopover from "@21n/layout/leftPanel/LeftNavSettingsPopover.svelte";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
@@ -18,7 +18,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import OfflineStatusMessage from "@21n/elements/feedback/OfflineStatusMessage.svelte";
   import context from "@nucleum/stores/context.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import BoxButton from "@21n/elements/button/BoxButton.svelte";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { page } from "$app/stores";

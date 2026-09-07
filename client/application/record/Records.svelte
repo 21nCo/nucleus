@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import CollectionThumbnail from "@nucleum/features/collections/thumbnail/CollectionThumbnail.svelte";
   import CombinationThumbnail from "@nucleum/features/spaces/combination/thumbnail/CombinationThumbnail.svelte";
   import NodeThumbnail from "@nucleum/features/memory/node/thumbnail/NodeThumbnail.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     ResourceAccessPoint,
     AccessMode,

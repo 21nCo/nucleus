@@ -15,8 +15,8 @@ import { ResourceActionType } from "$lib/client/components/flux/resourceStores/r
 import {
   PersistenceActionType,
   IMutationParamsv2
-} from "$lib/client/types/data.type";
-import { IMutation } from "$lib/client/types/data.type";
+} from "@nucleum/schema/legacy/data.type";
+import { IMutation } from "@nucleum/schema/legacy/data.type";
 
 async function waitForResourceRecords(
   provider: DynamoDBSyncProvider,

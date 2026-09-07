@@ -1,8 +1,8 @@
 <script lang="ts">
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Product } from "@21n/types/product.type";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { Product } from "@nucleum/client/config/product.type";
+  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import { cn } from "@21n/utils/ui.utils";
   import CalendarColumnTasksPanel from "@nucleum/features/calendar/column/CalendarColumnTasksPanel.svelte";
   import CalendarColumnEventsPanel from "@nucleum/features/calendar/column/CalendarColumnEventsPanel.svelte";
@@ -11,17 +11,17 @@
   import Button from "@21n/elements/button/Button.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
-  import { ResourceActionType } from "@nucleum/datafn/resource.type";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import ButtonGroup from "@21n/elements/button/ButtonGroup.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import BoxSwitcher from "@21n/elements/switcher/BoxSwitcher.svelte";
-  import { TimeScaleUnit } from "@21n/types/time.type";
+  import { TimeScaleUnit } from "@21n/utils/time.type";
   import BoxButton from "@21n/elements/button/BoxButton.svelte";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
-  import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
-  import { Action } from "@21n/types/action.enum";
+  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
 
   let {
     date = $bindable(),

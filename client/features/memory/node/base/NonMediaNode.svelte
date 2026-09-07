@@ -7,10 +7,10 @@
   import NodeTitleBreadcrumbs from "@nucleum/features/memory/node/title/NodeTitleBreadcrumbs.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import NodeContent from "@nucleum/features/memory/node/content/NodeContent.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import ResourceStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import NodeAvatar from "@nucleum/features/memory/node/avatar/NodeAvatar.svelte";
   import CollectionsLane from "@nucleum/features/memory/node/floatingBar/CollectionsLane.svelte";
@@ -18,7 +18,7 @@
     headingNodeTypes,
     NodeView
   } from "@nucleum/features/memory/node/node.type";
-  import { ResourcePanelType } from "@21n/types/resource-panel.type";
+  import { ResourcePanelType } from "@nucleum/application/resource/resource-panel.type";
   import PropertiesPane from "@nucleum/features/collections/properties/PropertiesPane.svelte";
   import NodeRightPaneContent from "@nucleum/features/memory/node/rightPanel/NodeRightPaneContent.svelte";
   import NodeBirdView from "@nucleum/features/memory/node/birdView/NodeBirdView.svelte";
@@ -31,15 +31,15 @@
   import TableOfContents from "@nucleum/features/memory/markdown/TableOfContents.svelte";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import context from "@nucleum/stores/context.store";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { appStore } from "@nucleum/stores/app.store";
   import CoverPicker from "@21n/elements/coverPicker/CoverPicker.svelte";
   import CoverRenderer from "@21n/elements/coverPicker/CoverRenderer.svelte";
   import { hoverable } from "@nucleum/actions/hover.action";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
 
   let {

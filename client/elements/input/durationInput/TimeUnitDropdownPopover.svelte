@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { TimeUnit } from "@21n/types/time.type";
+  import type { TimeUnit } from "@21n/utils/time.type";
   import TimeUnitItem from "@21n/elements/input/durationInput/TimeUnitItem.svelte";
   let {
     units,

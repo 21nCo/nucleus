@@ -4,7 +4,7 @@
   import { isEmptyArray } from "@21n/shared-utils/obj.utils";
   import { formatTime } from "@21n/utils/time.utils";
   import IntervalBarItem from "@nucleum/features/focus/elements/intervalbar/IntervalBarItem.svelte";
-  import type { ISessionInterval } from "@21n/types/pointron/session.type";
+  import type { ISessionInterval } from "@nucleum/features/focus/session.type";
   import MoreBarsInfo from "@nucleum/features/focus/elements/intervalbar/MoreBarsInfo.svelte";
 
   let { log }: { log: any } = $props();

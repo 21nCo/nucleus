@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { Orientation } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { InputStyle, type InputLabel } from "@21n/types/input.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import Switch from "@21n/elements/toggle/Switch.svelte";

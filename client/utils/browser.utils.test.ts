@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { Placement } from "@21n/types/direction.enum";
+import { Placement } from "@21n/elements/direction.enum";
 
 import {
   detectSystemOS,

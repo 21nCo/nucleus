@@ -3,7 +3,7 @@ import { Resource } from "@nucleum/datafn/resource.enum";
 import { appStore } from "@nucleum/stores/app.store";
 import { get, writable } from "svelte/store";
 import { logger } from "@nucleum/client/runtime/logging/logger";
-import { Product } from "@21n/types/product.type";
+import { Product } from "@nucleum/client/config/product.type";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import {
   acknowledgeOptimisticKvEntries,
@@ -11,7 +11,7 @@ import {
   applyOptimisticKvEntries,
   removeOptimisticKvEntries
 } from "@nucleum/datafn/optimisticKv.utils";
-import type { OptimisticKvEntries } from "@21n/types/datafn.type";
+import type { OptimisticKvEntries } from "@nucleum/datafn/optimisticKv.type";
 
 const appMenuSignal = datafn.kv.signal<IAppMenuStore>(Resource.appMenu, {
   defaultValue: {}

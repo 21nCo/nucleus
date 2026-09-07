@@ -1,13 +1,13 @@
 <script lang="ts">
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import type { SessionComposition } from "@21n/types/pointron/sessionComposition.type";
+  import type { SessionComposition } from "@nucleum/features/focus/sessionComposition.type";
   import Button from "@21n/elements/button/Button.svelte";
   import DurationInput from "@21n/elements/input/durationInput/DurationInput.svelte";
   import FormControlLabel from "@21n/elements/text/formLabel/FormControlLabel.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { ButtonStyle, ButtonVariant } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   let {
     composition = $bindable(),
     isShowRemove = false,

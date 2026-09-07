@@ -4,8 +4,8 @@
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import type { ICollectionView } from "@nucleum/features/collections/collection.type";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import { cn } from "@21n/utils/ui.utils";
   import SubGroup from "@nucleum/features/collections/boardView/SubGroup.svelte";

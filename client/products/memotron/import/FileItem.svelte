@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { UploadStatus } from "@21n/types/uploadStatus.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { UploadStatus } from "@nucleum/application/settings/import/uploadStatus.enum";
   import view from "@nucleum/stores/view.store";
   import { cn } from "@21n/utils/ui.utils";
 

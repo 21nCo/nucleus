@@ -1,26 +1,27 @@
 <script lang="ts">
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
-  import type { IPlan, IBillingAddress } from "@21n/shared-types/subscription.type";
-  import { BillingCycle } from "@21n/shared-types/subscription.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import type { IPlan } from "@nucleum/application/subscription/plan-presentation.type";
+import type { IBillingAddress } from "@nucleum/schema/account/subscription";
+  import { BillingCycle } from "@nucleum/schema/account/subscription";
   import PlanCard from "@nucleum/application/subscription/elements/PlanCard.svelte";
   import FullScreenCloseButton from "@21n/elements/button/FullScreenCloseButton.svelte";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import account from "@nucleum/stores/account.store";
   import { SUBSCRIPTION_PLANS } from "@nucleum/application/subscription/userPlan.utils";
   import BillingAddressCapture from "@nucleum/application/subscription/BillingAddressCapture.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import { postDataToParent } from "@21n/utils/embed.utils";
   import { toasts } from "@nucleum/stores/notification.store";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-  import { GlobalEvent } from "@21n/types/event.enum";
-  import { PaymentProvider } from "@21n/shared-types/plan.type";
+  import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
+  import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
+  import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
 
   let selectedCycle: BillingCycle = BillingCycle.YEARLY;
   let isBillingAddressCapture = false;

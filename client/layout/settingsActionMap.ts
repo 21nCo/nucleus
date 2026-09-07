@@ -1,4 +1,4 @@
-import { ActionType, type IAction } from "@21n/types/action.type";
+import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
 import AccountSettings from "@nucleum/application/settings/account/AccountSettings.svelte";
 import SettingsAsPage from "@nucleum/application/settings/asPage/SettingsAsPage.svelte";
 import ShortcutSettings from "@nucleum/application/shortcuts/settings/ShortcutSettings.svelte";
@@ -9,16 +9,16 @@ import AppMenuSettings from "@nucleum/application/settings/AppMenuSettings.svelt
 import AccessibilitySettings from "@nucleum/application/settings/appearance/accessibility/AccessibilitySettings.svelte";
 import AppearanceSettings from "@nucleum/application/settings/appearance/AppearanceSettings.svelte";
 import SettingsAsModal from "@nucleum/application/settings/SettingsAsModal.svelte";
-import { Size } from "@21n/types/size.enum";
-import { Orientation } from "@21n/types/direction.enum";
-import { Action } from "@21n/types/action.enum";
+import { Size } from "@21n/elements/size.enum";
+import { Orientation } from "@21n/elements/direction.enum";
+import { Action } from "@nucleum/application/commandBar/action.enum";
 import InteractionModeSettings from "@nucleum/application/settings/interactionMode/InteractionModeSettings.svelte";
-import { Embed, OperatingSystem } from "@21n/types/context.type";
+import { Embed, OperatingSystem } from "@nucleum/client/runtime/context.type";
 import SyncSettings from "@nucleum/application/settings/sync/SyncSettings.svelte";
 import TacoSettings from "@nucleum/application/settings/taco/TacoSettings.svelte";
-import { UserDataMode } from "@21n/types/account.type";
+import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import AnalyticsSettings from "@nucleum/products/pointron/settings/AnalyticsSettings.svelte";
-import { PointronAction } from "@21n/types/pointron/pointronAction.enum";
+import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 import SessionSettings from "@nucleum/products/pointron/settings/SessionSettings.svelte";
 import ModSettings from "@nucleum/application/settings/mod/ModSettings.svelte";
 import DeveloperSettings from "@nucleum/application/settings/developer/DeveloperSettings.svelte";

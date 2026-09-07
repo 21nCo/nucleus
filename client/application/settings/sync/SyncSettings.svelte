@@ -2,10 +2,10 @@
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
   import context from "@nucleum/stores/context.store";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import SyncStatus from "@nucleum/application/settings/sync/SyncStatus.svelte";
   import account from "@nucleum/stores/account.store";
-  import { PlanType } from "@21n/shared-types/subscription.type";
+  import { PlanType } from "@nucleum/schema/account/subscription";
   import { appStore } from "@nucleum/stores/app.store";
   import {
     nucleumDatafnStatus,
@@ -16,7 +16,7 @@
   } from "@nucleum/datafn/datafn.store";
   import { datafnE2eeState } from "@nucleum/datafn/datafnE2ee.store";
   import { getDapId } from "@nucleum/persistence/persistence.utils";
-  import { UserDataMode } from "@21n/types/account.type";
+  import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import { onMount } from "svelte";
   let isInOfflineMode = $state(false);
   let isOfflinabilityEnabled = $state(true);

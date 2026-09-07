@@ -1,7 +1,7 @@
 <script lang="ts">
   import DropDown from "@21n/elements/dropdown/DropDown.svelte";
-  import type { DropdownItem } from "@21n/types/dropdownItem.type";
-  import { InputStyle } from "@21n/types/input.type";
+  import type { DropdownItem } from "@21n/elements/dropdown/dropdownItem.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { CalendarHeatmapDataManager } from "@nucleum/features/calendar/calendarHeatmap/calendarHeatMap.utils";
   import type {
     ICalendarHeatMapDataProvider,

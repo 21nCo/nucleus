@@ -1,7 +1,7 @@
 <script lang="ts">
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
   import { extractProduct } from "@21n/shared-utils/utils";
   import FeedbackPaneBase from "@nucleum/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
   let {

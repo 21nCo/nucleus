@@ -5,8 +5,8 @@
   import FormLabelTooltip from "@21n/elements/text/formLabel/FormLabelTooltip.svelte";
   import Text from "@21n/elements/text/Text.svelte";
   import LinkTagsControlPanel from "@nucleum/features/memory/linking/LinkTagsControlPanel.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
 

@@ -3,10 +3,10 @@
   import Icon from "@nucleum/client/elements/Icon.svelte";
   import TextInput from "@nucleum/client/elements/input/TextInput.svelte";
   import AvatarRenderer from "@nucleum/client/elements/avatarPicker/AvatarRenderer.svelte";
-  import { Size } from "@nucleum/client/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@nucleum/client/utils/ui.utils";
   import { resolveResourceIcon } from "@nucleum/datafn/resource.utils";
-  import type { IAvatar } from "@nucleum/client/types/avatar.type";
+  import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
   import SideNavCombinationNavItem from "@nucleum/features/spaces/combination/SideNavCombinationNavItem.svelte";
   import {
     CombinationNavItemType,

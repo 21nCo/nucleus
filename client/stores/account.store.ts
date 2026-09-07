@@ -1,12 +1,6 @@
 import { get, writable } from "svelte/store";
-import {
-  PlanStatus,
-  UserDataMode,
-  UserSessionType,
-  type IUserPlan,
-  type UserAccount,
-  type UserInformation
-} from "@21n/types/account.type";
+import { PlanStatus, type IUserPlan } from "@nucleum/schema/account/subscription";
+import { UserDataMode, UserSessionType, type UserAccount, type UserInformation } from "@nucleum/client/runtime/account/account.type";
 import { postDataToParent } from "@21n/utils/embed.utils";
 import { Persistence } from "@nucleum/persistence/persistence";
 import { performApiCall } from "@21n/utils/network.utils";
@@ -15,7 +9,7 @@ import {
   confirmationNotification,
   toasts
 } from "@nucleum/stores/notification.store";
-import { ButtonVariant } from "@21n/types/button.type";
+import { ButtonVariant } from "@21n/elements/button/button.type";
 import { appStore } from "@nucleum/stores/app.store";
 import {
   getBucketNameandKey,
@@ -26,9 +20,10 @@ import {
   determineIfPlanIsActive,
   determineIfSubscriptionExpired
 } from "@nucleum/application/subscription/userPlan.utils";
-import { PlanType } from "@21n/shared-types/subscription.type";
+import { PlanType } from "@nucleum/schema/account/subscription";
 import { ObservableStore } from "@nucleum/stores/client.store";
-import { StoreDataType, type IRecordId } from "@21n/types/data.type";
+import { StoreDataType } from "@nucleum/schema/legacy/store-data-type.enum";
+import { type IRecordId } from "@nucleum/schema/legacy/data.type";
 import {
   clientStorage,
   deleteIndexedDbDatabase
@@ -44,13 +39,13 @@ import {
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-import { GlobalEvent } from "@21n/types/event.enum";
+import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 import context from "@nucleum/stores/context.store";
 import { compressImageToTargetSize } from "@21n/utils/ui.utils";
 import { convertHeicToPng } from "@21n/utils/ui.utils";
 import { generateImagePreviewFromPdf } from "@21n/utils/pdf.utils";
-import { Action } from "@21n/types/action.enum";
-import { EmbedDataMessage } from "@21n/types/embedMessage.enum";
+import { Action } from "@nucleum/application/commandBar/action.enum";
+import { EmbedDataMessage } from "@nucleum/application/embed/embedMessage.enum";
 import { parse } from "@21n/shared-utils/json.utils";
 import {
   bootstrapNucleusAccount,

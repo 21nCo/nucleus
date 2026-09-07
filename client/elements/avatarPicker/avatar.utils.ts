@@ -1,5 +1,5 @@
 import { isRecordId } from "@nucleum/datafn/resource.utils";
-import type { IAvatar } from "@21n/types/avatar.type";
+import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
 import { isValidString } from "@21n/shared-utils/text.utils";
 
 export function isValidAvatar(avatar: IAvatar | undefined) {

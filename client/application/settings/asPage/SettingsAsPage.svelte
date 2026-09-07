@@ -5,7 +5,7 @@
   import { page } from "$app/stores";
   import view from "@nucleum/stores/view.store";
   import SettingsAsModal from "@nucleum/application/settings/SettingsAsModal.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { appStore } from "@nucleum/stores/app.store";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
   const route = $derived($page.url.searchParams.get(AppSearchParam.SETTING));

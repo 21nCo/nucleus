@@ -1,8 +1,8 @@
 import type {
   ITimezone,
   ITimezoneCapture
-} from "@nucleum/application/settings/timezone/tz.type";
-import { TimeScale, TimeScaleUnit, type TimePeriod } from "@21n/types/time.type";
+} from "@nucleum/stores/preferences/timezone.type";
+import { TimeScale, TimeScaleUnit, type TimePeriod } from "@21n/utils/time.type";
 import { determineTimePeriodv2 } from "@21n/utils/time.utils";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
 import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";

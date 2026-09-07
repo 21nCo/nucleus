@@ -4,9 +4,9 @@
   import { onMount } from "svelte";
   import { page } from "$app/stores";
   import { appStore } from "@nucleum/stores/app.store";
-  import type { OAuthProviderConfig } from "@21n/types/oauth.type";
+  import type { OAuthProviderConfig } from "@nucleum/client/runtime/account/oauth.type";
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   onMount(async () => {
     clientStorage.setForSession(ClientStorageKey.EMBED_OAUTH, true);
     await triggerOAuth();

@@ -2,11 +2,11 @@
   import { onMount } from "svelte";
   import { roundOffToNdigitsAfterDecimal } from "@21n/shared-utils/number.utils";
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import type { IActiveSessionStore } from "@21n/types/pointron/session.type";
-  import { SessionState } from "@21n/types/pointron/sessionState.enum";
+  import type { IActiveSessionStore } from "@nucleum/features/focus/session.type";
+  import { SessionState } from "@nucleum/features/focus/sessionState.enum";
   import Popover from "@nucleum/application/modal/Modal.svelte";
-  import { TimeUnit } from "@21n/types/time.type";
-  import { AppSkin } from "@21n/types/appearance.type";
+  import { TimeUnit } from "@21n/utils/time.type";
+  import { AppSkin } from "@21n/theme/appearance.type";
   import appearance from "@nucleum/stores/appearance.store";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";

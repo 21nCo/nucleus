@@ -4,9 +4,9 @@
   import type { Snippet } from "svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { onMount } from "svelte";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import Tabs from "@21n/layout/topNav/tabs/Tabs.svelte";
   import { tabs, vTrail } from "@21n/layout/topNav/tabs/tabs.store";
   import TrailLeftIndicator from "@21n/layout/topNav/TrailLeftIndicator.svelte";
@@ -21,7 +21,7 @@
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import TopNavLeftLogo from "@21n/layout/topNav/TopNavLeftLogo.svelte";
-  import { Embed } from "@21n/types/context.type";
+  import { Embed } from "@nucleum/client/runtime/context.type";
   import context from "@nucleum/stores/context.store";
   import OfflineStatusMessage from "@21n/elements/feedback/OfflineStatusMessage.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
@@ -29,8 +29,8 @@
   import ToastNotificationContent from "@21n/elements/feedback/ToastNotificationContent.svelte";
   import { bulkEditStore } from "@nucleum/application/record/bulkedit.store";
   import BulkEditBar from "@nucleum/application/record/BulkEditBar.svelte";
-  import { InputStyle } from "@21n/types/input.type";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import SearchInput from "@nucleum/application/search/SearchInput.svelte";
   import { searchStore } from "@nucleum/application/search/search.store";
   let { topnav }: { topnav?: Snippet } = $props();

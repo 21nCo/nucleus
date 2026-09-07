@@ -2,7 +2,7 @@
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { resolveNodeIcon } from "@nucleum/features/memory/node/node.utils";
   let {

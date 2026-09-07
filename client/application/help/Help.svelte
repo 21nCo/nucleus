@@ -1,19 +1,19 @@
 <script lang="ts">
   import Text from "@21n/elements/text/Text.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import SettingThumbnail from "@nucleum/application/settings/SettingThumbnail.svelte";
   import AppNameWithVersion from "@nucleum/application/settings/about/AppNameWithVersion.svelte";
   import ProductInfoFooter from "@nucleum/application/settings/about/ProductInfoFooter.svelte";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
-  import type { IAction } from "@21n/types/action.type";
+  import type { IAction } from "@nucleum/application/commandBar/action.type";
   import NavigationHeader from "@21n/elements/NavigationHeader.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
-  import { Size } from "@21n/types/size.enum";
-  import { Action } from "@21n/types/action.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import account from "@nucleum/stores/account.store";
-  import { PlanType } from "@21n/shared-types/subscription.type";
+  import { PlanType } from "@nucleum/schema/account/subscription";
   let pageAction: IAction | null = null;
   let updatedDate: string | undefined = resolveUpdatedDate();
   let config = $derived($appStore?.appData?.help);

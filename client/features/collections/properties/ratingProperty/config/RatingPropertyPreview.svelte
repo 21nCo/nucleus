@@ -1,6 +1,6 @@
 <script lang="ts">
   import Rating from "@nucleum/features/collections/properties/ratingProperty/Rating.svelte";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import EndText from "@nucleum/features/collections/properties/propertyConfig/EndText.svelte";
   let {
     avatar,

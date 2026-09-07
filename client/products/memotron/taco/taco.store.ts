@@ -1,9 +1,9 @@
 import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
 import { get } from "svelte/store";
 import { NodeType } from "@nucleum/features/memory/node/node.type";
-import { TacoActions } from "@nucleum/products/memotron/taco/taco.types";
+import { TacoActions } from "@nucleum/application/taco/worker.type";
 import { tacoWorker } from "@nucleum/products/memotron/memotron.utils";
-import { Embed, OperatingSystem } from "@21n/types/context.type";
+import { Embed, OperatingSystem } from "@nucleum/client/runtime/context.type";
 import context from "@nucleum/stores/context.store";
 import { deleteAllLocalModels } from "@nucleum/products/memotron/taco/taco.utils";
 import { datafn } from "@nucleum/datafn/datafn.store";

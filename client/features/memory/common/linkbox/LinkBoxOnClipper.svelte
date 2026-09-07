@@ -1,9 +1,9 @@
 <script lang="ts">
   import { toolbarState } from "@nucleum/extensions/clipper/contentScripts/store";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import LinkSearch from "@nucleum/features/memory/common/linkbox/LinkSearch.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   let {
     onFocus = undefined,
     onLink = undefined

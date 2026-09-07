@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import {
     TableCellDefaultAction,
     TableCellType,
     type TableColumn
-  } from "@21n/types/table.type";
+  } from "@21n/elements/table/table.type";
   import { enumToString, isValidString } from "@21n/shared-utils/text.utils";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
 
@@ -24,27 +24,24 @@
     type IActiveCollectionStore
   } from "@nucleum/features/collections/collection.store";
   import ModalFooter from "@nucleum/application/modal/ModalFooter.svelte";
-  import {
-    AccessMode,
-    ResourceActionType,
-    type OmitForCaptureWithId
-  } from "@nucleum/datafn/resource.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { AccessMode, type OmitForCaptureWithId } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { onDestroy, onMount } from "svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
   import SearchSingleSelect from "@21n/elements/select/SearchSingleSelect.svelte";
   import {
     CollectionType,
     type ICollection
   } from "@nucleum/features/collections/collection.type";
   import { confirmationNotification } from "@nucleum/stores/notification.store";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import { acquireDnDPage, appStore } from "@nucleum/stores/app.store";
   import modalEvent from "@nucleum/application/modal/modal.store";
   import PropertyTypeSelector from "@nucleum/features/collections/properties/propertyTypeSelector/PropertyTypeSelector.svelte";
@@ -56,7 +53,7 @@
   import { resolvePropertyDefaultConfig } from "@nucleum/features/collections/properties/property.utils";
   import { objIsEmpty } from "@21n/shared-utils/obj.utils";
   import CollectionTitleLabelPart from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
-  import { Product } from "@21n/types/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import Table3 from "@21n/elements/table/Table3.svelte";
   import ModalContentPadded from "@nucleum/application/modal/ModalContentPadded.svelte";
 

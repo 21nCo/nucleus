@@ -16,10 +16,10 @@
     type IClipCapture,
     type ITextClip
   } from "@nucleum/features/memory/node/node.type";
-  import { ExtensionEvent } from "@21n/types/extension.type";
+  import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import { AlertType } from "@21n/types/notification.type";
+  import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import type { IHighlighter } from "@nucleum/features/memory/common/highlighters/highlight.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";

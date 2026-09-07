@@ -6,9 +6,9 @@
     spaceStore
   } from "@nucleum/features/spaces/space.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { GatheryEvent } from "@21n/types/gathery/gatheryEvent.enum";
-  import { OptionSelectorStyle } from "@21n/types/select.type";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { GatheryEvent } from "@nucleum/features/spaces/gatheryEvent.enum";
+  import { OptionSelectorStyle } from "@21n/elements/select/select.type";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   spaceStore.refresh();
   let selected = $spaceInContext?.label ?? undefined;

@@ -1,4 +1,4 @@
-import type { IUserGlobalPreferences } from "@21n/types/preferences.type";
+import type { IUserGlobalPreferences } from "@nucleum/stores/preferences/user-preferences.type";
 import type { DatafnDateValue } from "@nucleum/datafn/resource.type";
 import {
   TimePeriodType,
@@ -6,9 +6,9 @@ import {
   TimeScale,
   TimeFormat,
   TimeUnit
-} from "@21n/types/time.type";
-import type { UserDate } from "@21n/types/userDate.type";
-import { Size } from "@21n/types/size.enum";
+} from "@21n/utils/time.type";
+import type { UserDate } from "@21n/utils/userDate.type";
+import { Size } from "@21n/elements/size.enum";
 import moment from "moment-timezone";
 
 const months = [

@@ -4,17 +4,17 @@
   import ColorPicker from "@21n/elements/colorPicker/ColorPicker.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import Popover from "@21n/elements/popover/Popover.svelte";
-  import { Orientation } from "@21n/types/direction.enum";
-  import { InputStyle } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Orientation } from "@21n/elements/direction.enum";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import type { IPropertyConfigOption } from "@nucleum/features/collections/properties/property.type";
   import { hoverable } from "@nucleum/actions/hover.action";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
   import Badge from "@21n/elements/text/Badge.svelte";
   import context from "@nucleum/stores/context.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   let {
     option,
     index,

@@ -1,5 +1,5 @@
-import { BillingCycle } from "@21n/shared-types/subscription.type";
-import { PlanType } from "@21n/shared-types/subscription.type";
+import { BillingCycle } from "@nucleum/schema/account/subscription";
+import { PlanType } from "@nucleum/schema/account/subscription";
 import { performQueryOnMasterDb } from "$lib/server/surrealHelpers";
 import { Agent } from "../../account/account.type";
 import {

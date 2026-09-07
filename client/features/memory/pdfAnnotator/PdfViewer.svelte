@@ -5,7 +5,7 @@
   import context from "@nucleum/stores/context.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import { pdfCache } from "@21n/utils/pdfCache.utils";
 
   let {

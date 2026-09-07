@@ -5,7 +5,7 @@
     ISessionLogThumb,
     ISessionThumb
   } from "@nucleum/features/focus/logs/log.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
   import ObjectiveFocusSessionThumbnail from "@nucleum/features/focus/goals/history/GoalFocusSessionThumbnail.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";

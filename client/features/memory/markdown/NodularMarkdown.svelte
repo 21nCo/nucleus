@@ -21,13 +21,13 @@
   import { hierarchyFactorLimit } from "@nucleum/features/memory/node/node.store";
   import { isReplaceableMd } from "@nucleum/features/memory/markdown/markdown.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     isSameResource,
     resourceInList
   } from "@nucleum/datafn/resource.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
 
   /**
    * Markdown in node form i.e. each block of the markdown stored as node record and nested under each node

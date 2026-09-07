@@ -2,7 +2,7 @@
   import { page } from "$app/stores";
   import PageError from "@nucleum/application/error/PageError.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { ButtonVariant } from "@21n/types/button.type";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
 
   function resolveErrorParam() {
     return $page?.url?.searchParams?.get("error") ?? undefined;

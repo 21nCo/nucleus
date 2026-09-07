@@ -1,7 +1,7 @@
 <script lang="ts">
   import context from "@nucleum/stores/context.store";
-  import { Action } from "@21n/types/action.enum";
-  import { OperatingSystem } from "@21n/types/context.type";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import Link from "@21n/elements/text/Link.svelte";
   let {
     pretext = "By signing up, you agree to our",

@@ -1,8 +1,8 @@
 <script lang="ts">
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import type { ISessionLog } from "@nucleum/features/focus/logs/log.type";
-  import { Size } from "@21n/types/size.enum";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import HistoricalMetrics from "@nucleum/features/calendar/column/overview/HistoricalMetrics.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { time } from "@datafn/client";

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { popover } from "@nucleum/actions/popover.action";
-  import { InputStyle } from "@21n/types/input.type";
-  import type { TimePeriod } from "@21n/types/time.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
+  import type { TimePeriod } from "@21n/utils/time.type";
   import { timePeriodLabel } from "@21n/utils/time.utils";
   import FormElement from "@21n/elements/FormElement.svelte";
   import Icon from "@21n/elements/Icon.svelte";

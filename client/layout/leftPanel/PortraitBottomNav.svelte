@@ -2,7 +2,7 @@
 
 <script lang="ts">
   import AppMenuSwitcher from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcher.svelte";
-  import { LayoutContext } from "@21n/types/layout.type";
+  import { LayoutContext } from "@21n/layout/layout-mode.type";
   import { player } from "@nucleum/application/modal/modal.store";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
   import { page } from "$app/stores";

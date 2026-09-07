@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
   import { CollectionType } from "@nucleum/features/collections/collection.type";

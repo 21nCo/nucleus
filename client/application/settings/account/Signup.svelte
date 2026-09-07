@@ -2,7 +2,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import AccountForm from "@nucleum/application/settings/account/signup/AccountForm.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { PanelSwitcherStyle } from "@21n/types/switcher.enum";
+  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
   import { page } from "$app/stores";
   import { onMount } from "svelte";
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
@@ -10,14 +10,14 @@
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
   import { clientStorage } from "@nucleum/persistence/persistence.utils";
   import PoliciesFooter from "@21n/elements/PoliciesFooter.svelte";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import account from "@nucleum/stores/account.store";
   import { toasts } from "@nucleum/stores/notification.store";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
   import { parse } from "@21n/shared-utils/json.utils";
   import Button from "@21n/elements/button/Button.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
   import { authClient } from "@nucleum/client/runtime/account/auth";
   let isSignup = $state(true);

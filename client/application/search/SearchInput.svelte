@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { searchStore } from "@nucleum/application/search/search.store";
-  import { InputStyle } from "@21n/types/input.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import {
@@ -11,7 +11,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { properCase } from "@21n/shared-utils/text.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   let {
     style = InputStyle.PLAIN,
     isAutoFocus = false,

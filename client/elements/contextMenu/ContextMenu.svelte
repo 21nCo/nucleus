@@ -1,15 +1,12 @@
 <script lang="ts">
-  import type {
-    IContextMenuGroup,
-    IContextMenuItem
-  } from "@21n/types/select.type";
-  import { Size } from "@21n/types/size.enum";
+  import type { IContextMenuGroup, IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
+  import { Size } from "@21n/elements/size.enum";
   import { bg, cn } from "@21n/utils/ui.utils";
   import Divider from "@21n/elements/Divider.svelte";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import ContextMenuItem from "@21n/elements/contextMenu/ContextMenuItem.svelte";
-  import { ColorStrength } from "@21n/types/appearance.type";
+  import { ColorStrength } from "@21n/theme/appearance.type";
   import view from "@nucleum/stores/view.store";
   let {
     menuResolver,

@@ -3,13 +3,13 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import CopyableText from "@21n/elements/text/CopyableText.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { Size } from "@21n/types/size.enum";
-  import { ButtonVariant } from "@21n/types/button.type";
-  import { InputStyle } from "@21n/types/input.type";
+  import { Size } from "@21n/elements/size.enum";
+  import { ButtonVariant } from "@21n/elements/button/button.type";
+  import { InputStyle } from "@21n/elements/input/input.type";
   import {
     OptionSelectorStyle,
     type ISelectValue
-  } from "@21n/types/select.type";
+  } from "@21n/elements/select/select.type";
   import { toasts } from "@nucleum/stores/notification.store";
   import {
     createDatafnPublicLink,

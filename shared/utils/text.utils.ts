@@ -1,10 +1,5 @@
 import type { Resource } from "@nucleum/schema/resource.enum";
-import type { EmailParts } from "@21n/types/account.type";
-import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
-
-import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-import { Display } from "@21n/types/view.type";
-import { Size } from "@21n/types/size.enum";
+import type { EmailParts } from "@nucleum/schema/account/profile.type";
 
 export function properCase(str: string) {
   if (!str) return str;
@@ -38,19 +33,6 @@ export function isValidParentDomain(text: string) {
 
 export function frameEmailFromParts(parts: EmailParts) {
   return `${parts.firstFew}...${parts.lastFew ?? ""}@${parts.emailDomain}`;
-}
-
-export function isValidMarkdown(md: IMarkdown) {
-  return (
-    md &&
-    md.blocks &&
-    isValidArrayWithData(md.blocks) &&
-    md.blocks.length > 0 &&
-    ((md.blocks.length === 1 &&
-      "body" in md.blocks[0] &&
-      md.blocks[0].body != "") ||
-      md.blocks.length > 1)
-  );
 }
 /**
  * Checks if a string is valid and not empty or null or any other falsy value as string. Returns the string if valid, otherwise returns undefined.
@@ -115,43 +97,6 @@ export function enumToCamelCase(val: unknown) {
       else output += x.charAt(0).toUpperCase() + x.slice(1).toLowerCase();
     });
   return output;
-}
-
-export function determineTruncateLength(
-  display: Display,
-  space: Size.sm | Size.md | Size.lg = Size.md
-) {
-  if (space === Size.lg) {
-    if (display === Display.MO || display === Display.CW) {
-      return 20;
-    } else if (display === Display.TP || display === Display.DP) {
-      return 40;
-    } else if (display === Display.TK) {
-      return 40;
-    } else {
-      return 20;
-    }
-  } else if (space === Size.md) {
-    if (display === Display.MO || display === Display.CW) {
-      return 12;
-    } else if (display === Display.TP || display === Display.DP) {
-      return 20;
-    } else if (display === Display.TK) {
-      return 30;
-    } else {
-      return 12;
-    }
-  } else {
-    if (display === Display.MO || display === Display.CW) {
-      return 8;
-    } else if (display === Display.TP || display === Display.DP) {
-      return 12;
-    } else if (display === Display.TK) {
-      return 20;
-    } else {
-      return 8;
-    }
-  }
 }
 
 export function formatBytes(bytes: number, decimals = 2) {

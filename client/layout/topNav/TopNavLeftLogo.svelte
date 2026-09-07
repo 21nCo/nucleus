@@ -2,15 +2,15 @@
 
 <script lang="ts">
   import { cn } from "@21n/utils/ui.utils";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import SubAtomLogo from "@21n/branding/SubAtomLogo.svelte";
   import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { tooltip } from "@nucleum/actions/popover.action";
   import { determineIfActiveSubscriber } from "@nucleum/application/subscription/userPlan.utils";
-  import { UserDataMode } from "@21n/types/account.type";
+  import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import account from "@nucleum/stores/account.store";
-  import { Action } from "@21n/types/action.enum";
+  import { Action } from "@nucleum/application/commandBar/action.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { onMount } from "svelte";

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import {
     headingNodeTypes,
     type INode,
@@ -19,7 +19,7 @@
   import ResourceGridThumbnail from "@nucleum/application/record/thumbnail/ResourceGridThumbnail.svelte";
   import ResourceThumbnailBase from "@nucleum/application/record/thumbnail/ResourceThumbnailBase.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import NodeThumbnailTitle from "@nucleum/features/memory/node/thumbnail/NodeThumbnailTitle.svelte";
   import TextClipPreview from "@nucleum/features/memory/node/content/web/TextClipPreview.svelte";
@@ -32,8 +32,8 @@
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import NodeThumbnailAudioPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailAudioPreview.svelte";
   import NodeThumbnailPdfPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailPdfPreview.svelte";
-  import { TimeFormat } from "@21n/types/time.type";
-  import type { IRecordId } from "@21n/types/data.type";
+  import { TimeFormat } from "@21n/utils/time.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { fileStore } from "@nucleum/features/files/file.store";
   import type { IFile } from "@nucleum/features/files/file.type";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";

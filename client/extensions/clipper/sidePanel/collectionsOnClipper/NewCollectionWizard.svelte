@@ -2,8 +2,8 @@
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
-  import { ButtonStyle } from "@21n/types/button.type";
-  import { Size } from "@21n/types/size.enum";
+  import { ButtonStyle } from "@21n/elements/button/button.type";
+  import { Size } from "@21n/elements/size.enum";
   let {
     label = $bindable<string | undefined>(undefined),
     onSave = undefined

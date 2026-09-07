@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { InputStyle, type InputLabel } from "@21n/types/input.type";
-  import { Size } from "@21n/types/size.enum";
+  import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
+  import { Size } from "@21n/elements/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import SelectPropertyOption from "@nucleum/features/collections/properties/selectProperty/SelectPropertyOption.svelte";
   import {
@@ -13,7 +13,7 @@
   import { popover } from "@nucleum/actions/popover.action";
   import SelectPropertyOptionsPopover from "@nucleum/features/collections/properties/selectProperty/SelectPropertyOptionsPopover.svelte";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import FormElement from "@21n/elements/FormElement.svelte";
   import IconSelect from "@nucleum/features/collections/properties/selectProperty/IconSelect.svelte";
   let {

@@ -2,13 +2,13 @@
   import { onMount } from "svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
   import SessionLogPage from "@nucleum/features/focus/logs/logPage/SessionLogPage.svelte";
   import BackButton from "@21n/elements/button/BackButton.svelte";
   import { postMessageToParent } from "@21n/utils/embed.utils";
-  import { EmbedMessage } from "@21n/types/embedMessage.enum";
-  import { LoadingAnimationType } from "@21n/types/feedback.type";
+  import { EmbedMessage } from "@nucleum/application/embed/embedMessage.enum";
+  import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import LogThumbnailItem from "@nucleum/features/focus/logs/LogThumbnailItem.svelte";
   import DaySummaryPart from "@nucleum/features/focus/logs/daySummary/DaySummaryPart.svelte";

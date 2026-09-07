@@ -1,8 +1,5 @@
-import type { IObservableStore } from "@21n/types/data.type";
-import type {
-  IMutationAdditionalParams,
-  IRecordId
-} from "@21n/types/data.type";
+import type { IObservableStore } from "@nucleum/datafn/observable-store.type";
+import type { IMutationAdditionalParams, IRecordId } from "@nucleum/schema/legacy/data.type";
 import type { Resource } from "@nucleum/datafn/resource.enum";
 
 export type DatafnDateValue = Date | string | number;
@@ -114,43 +111,6 @@ export enum AccessMode {
   SHEET = "sheet",
   RIGHT = "right",
   MAIN = "m"
-}
-
-export enum ResourceActionType {
-  BROWSE = "browse",
-  OPEN = "open",
-  CREATE = "create",
-  EDIT = "edit",
-  ARCHIVE = "archive",
-  UNARCHIVE = "unarchive",
-  DELETE = "delete",
-  RESTORE = "restore",
-  SHARE = "share",
-  EXPORT = "export",
-  FOCUS = "focus",
-  PIN = "pin",
-  UNPIN = "unpin",
-  SELECT = "select",
-  STAR = "star",
-  UNSTAR = "unstar",
-  DUPLICATE = "duplicate",
-  LOCK = "lock",
-  UNLOCK = "unlock",
-  LINK = "link",
-  UNLINK = "unlink",
-  ADD_TO = "ADD_TO",
-  MOVE = "move",
-  CONVERT = "convert",
-  REMOVE_FROM = "REMOVE_FROM",
-  EDIT_TITLE = "EDIT_TITLE",
-  EDIT_LINKS = "EDIT_LINKS",
-  EDIT_NOTES = "EDIT_NOTES",
-  EDIT_COVER = "EDIT_COVER",
-  COPY_LINK = "COPY_LINK",
-  COPY_CONTENTS = "COPY_CONTENTS",
-  TOGGLE_READ_MODE = "TOGGLE_READ_MODE",
-  TOGGLE_FOCUS_MODE = "TOGGLE_FOCUS_MODE",
-  SET_COVER_PHOTO = "SET_COVER_PHOTO"
 }
 
 /**

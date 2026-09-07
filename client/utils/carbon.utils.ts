@@ -1,4 +1,4 @@
-import { TimeScale } from "@21n/types/time.type";
+import { TimeScale } from "@21n/utils/time.type";
 
 export function pieLabelFormatter(d: any) {
   //console.log(d);

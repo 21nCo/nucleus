@@ -1,7 +1,7 @@
 <script lang="ts">
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import type { IRecordId } from "@21n/types/data.type";
+  import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import BreadcrumbItem from "@21n/elements/breadcrumbsV2/BreadcrumbItem.svelte";
   import type { IBreadcrumbItem } from "@21n/elements/breadcrumbsV2/breadcrumbItem.type";
   let {

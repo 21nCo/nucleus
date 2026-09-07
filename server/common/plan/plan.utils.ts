@@ -1,6 +1,7 @@
-import { BillingCycle } from "@21n/shared-types/subscription.type";
-import { PlanType } from "@21n/shared-types/subscription.type";
-import { PaymentProvider } from "$lib/shared/types/plan.type";
+import type { AppleVerificationResponse } from "./applePaymentProvider";
+import { BillingCycle } from "@nucleum/schema/account/subscription";
+import { PlanType } from "@nucleum/schema/account/subscription";
+import { PaymentProvider } from "@nucleum/schema/account/payment-provider";
 import { paymentProductsList } from "./paymentProducts";
 
 export function resolvePlanQuery(userId: string) {
@@ -63,19 +64,7 @@ export interface DodoPaymentResponse {
   [key: string]: any;
 }
 
-export interface AppleVerificationResponse {
-  status:
-    | "active"
-    | "expired"
-    | "grace_period"
-    | "billing_retry"
-    | "revoked"
-    | "refunded";
-  originalTransactionId?: string;
-  expiresDate?: string;
-  environment: "Production" | "Sandbox";
-  lastTransactionId?: string;
-}
+
 
 //pending, active, on_hold, paused, cancelled, failed, expired
 export function resolveTransactionStatusFromDodo(

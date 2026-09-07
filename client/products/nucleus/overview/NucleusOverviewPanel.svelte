@@ -6,12 +6,12 @@
     UIState,
     UIStateScope
   } from "@nucleum/stores/uiState/uiState.type";
-  import { Placement } from "@21n/types/direction.enum";
-  import { Size } from "@21n/types/size.enum";
-  import { VerticalSwitcherStyle } from "@21n/types/switcher.enum";
-  import type { ISelectValue } from "@21n/types/select.type";
-  import { OverviewPanel } from "@21n/types/product.type";
-  import { Product } from "@21n/types/product.type";
+  import { Placement } from "@21n/elements/direction.enum";
+  import { Size } from "@21n/elements/size.enum";
+  import { VerticalSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import type { ISelectValue } from "@21n/elements/select/select.type";
+  import { OverviewPanel } from "@nucleum/client/config/product.type";
+  import { Product } from "@nucleum/client/config/product.type";
   import { resolveProductConfig } from "@nucleum/products/product.config";
 
   const items =

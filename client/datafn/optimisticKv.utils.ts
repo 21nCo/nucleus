@@ -1,5 +1,5 @@
 import { compareObjects } from "@21n/shared-utils/obj.utils";
-import type { OptimisticKvEntries } from "@21n/types/datafn.type";
+import type { OptimisticKvEntries } from "@nucleum/datafn/optimisticKv.type";
 
 export function addOptimisticKvEntries(
   pending: OptimisticKvEntries,

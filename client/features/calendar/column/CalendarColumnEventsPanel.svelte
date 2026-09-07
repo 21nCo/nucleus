@@ -4,7 +4,7 @@
   import type { ICalendarEvent } from "@nucleum/features/calendar/events/event.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   import { resolveCalendarEventOverlapFilters } from "@nucleum/features/calendar/calendar.utils";

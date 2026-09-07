@@ -11,12 +11,10 @@
   import account from "@nucleum/stores/account.store";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import {
-    AccessMode,
-    ResourceActionType
-  } from "@nucleum/datafn/resource.type";
+  import { AccessMode } from "@nucleum/datafn/resource.type";
+import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
-  import { AppSearchParam } from "@21n/types/appStore.type";
+  import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { appStore } from "@nucleum/stores/app.store";
   import ShareContentSaver from "@nucleum/features/memory/capture/ShareContentSaver.svelte";
 

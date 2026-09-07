@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { Arrangement } from "@21n/types/direction.enum";
+  import { Arrangement } from "@21n/elements/direction.enum";
   let {
     isTail = false,
     arrangement = Arrangement.LIST,

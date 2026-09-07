@@ -6,13 +6,13 @@
   import { onMount } from "svelte";
   import { getMdStore } from "@nucleum/features/memory/markdown/markdown.store";
   import Text from "@21n/elements/text/Text.svelte";
-  import { TextStyle } from "@21n/types/text.enum";
+  import { TextStyle } from "@21n/elements/text/text.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { headingNodeTypes } from "@nucleum/features/memory/node/node.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Size } from "@21n/types/size.enum";
+  import { Size } from "@21n/elements/size.enum";
   import { tooltip } from "@nucleum/actions/popover.action";
-  import { Placement } from "@21n/types/direction.enum";
+  import { Placement } from "@21n/elements/direction.enum";
   import {
     isSameResource,
     resourceInList

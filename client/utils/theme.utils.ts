@@ -1,8 +1,5 @@
-import {
-  ColorStrength,
-  type ColorSchemeSLValues,
-  type AppearanceStore
-} from "@21n/types/appearance.type";
+import { ColorStrength, type ColorSchemeSLValues } from "@21n/theme/appearance.type";
+import { type AppearanceStore } from "@nucleum/stores/appearance.type";
 
 const selectableColorParams: ColorSchemeSLValues[] = [
   {
