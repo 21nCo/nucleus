@@ -26,7 +26,7 @@
   import BottomNav from "../bottomNav/BottomNav.svelte";
   import { hTrail } from "../topNav/tabs/tabs.store";
   import Trail from "../trail/Trail.svelte";
-  import type { IAction } from "@nucleum/application/commandBar/action.type";
+  import type { IAction } from "@nucleum/client/config/action.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import ResourceResolver from "../paint/ResourceResolver.svelte";

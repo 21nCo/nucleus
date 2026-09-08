@@ -5,7 +5,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { LinkType } from "@nucleum/features/memory/linking/link.type";
+  import { LinkType } from "@nucleum/datafn/link.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import appearance from "@nucleum/stores/appearance.store";
   import { Theme } from "@21n/theme/appearance.type";

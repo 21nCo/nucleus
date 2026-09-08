@@ -8,7 +8,7 @@ import { determineResourceType } from "@nucleum/datafn/resource.utils";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import type { NucleumDatafnResource } from "@nucleum/schema";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
-import { LinkType } from "@nucleum/features/memory/linking/link.type";
+import { LinkType } from "@nucleum/datafn/link.type";
 import { assertDatafnMutationSucceeded } from "@nucleum/datafn/mutation.utils";
 
 function isCollectionItemResource(resource: Resource) {

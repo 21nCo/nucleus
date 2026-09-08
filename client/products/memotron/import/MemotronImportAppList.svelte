@@ -6,7 +6,7 @@
   import { TextStyle } from "@21n/elements/text/text.enum";
   import view from "@nucleum/stores/view.store";
   import { appStore } from "@nucleum/stores/app.store";
-  import { ImportSource } from "@nucleum/products/memotron/import/data.type";
+  import { ImportSource } from "@nucleum/stores/preferences/import.type";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import ExternalLogo from "@21n/branding/external/ExternalLogo.svelte";
 

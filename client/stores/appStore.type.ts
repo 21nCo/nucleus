@@ -1,4 +1,4 @@
-import type { IAction } from "@nucleum/application/commandBar/action.type";
+import type { IAction } from "@nucleum/client/config/action.type";
 import type { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
 import type { IMetadata } from "@21n/layout/metadata.type";
 import type { Product } from "@nucleum/client/config/product.type";

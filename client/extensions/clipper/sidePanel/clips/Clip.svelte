@@ -18,7 +18,7 @@
     openAppPath,
     relayToContentScript
   } from "@21n/utils/extension.utils";
-  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { onMount, onDestroy } from "svelte";
   import FileView from "@nucleum/features/files/FileView.svelte";

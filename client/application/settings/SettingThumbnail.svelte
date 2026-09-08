@@ -3,7 +3,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
-  import { ActionType } from "@nucleum/application/commandBar/action.type";
+  import { ActionType } from "@nucleum/client/config/action.type";
   import { ColorStrength } from "@21n/theme/appearance.type";
   import { Orientation } from "@21n/elements/direction.enum";
   import { abg, bg, cn } from "@21n/utils/ui.utils";

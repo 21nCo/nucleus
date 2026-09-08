@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import {
     NodeType,

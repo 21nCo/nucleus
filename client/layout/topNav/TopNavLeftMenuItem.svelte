@@ -12,7 +12,7 @@
   import { Action } from "@nucleum/client/config/action.enum";
   import { page } from "$app/stores";
   import { onMount } from "svelte";
-  import type { IAction } from "@nucleum/application/commandBar/action.type";
+  import type { IAction } from "@nucleum/client/config/action.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";

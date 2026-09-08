@@ -8,7 +8,7 @@ import {
   ActionType,
   type IAction,
   type IActionFnParams
-} from "@nucleum/application/commandBar/action.type";
+} from "@nucleum/client/config/action.type";
 import ImportAppData from "@nucleum/products/pointron/settings/ImportAppData/ImportAppData.svelte";
 import EditPresetView from "@nucleum/features/focus/advanced/presets/EditPresetModal.svelte";
 import PointronOnboarding from "@nucleum/products/pointron/base/PointronOnboarding.svelte";
@@ -41,7 +41,7 @@ import { Orientation, Placement } from "@21n/elements/direction.enum";
 import PresetSettings from "@nucleum/features/focus/advanced/presets/PresetSettings.svelte";
 import { activeSession } from "@nucleum/features/focus/session.store";
 import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
-import { PointronEvent } from "@nucleum/features/focus/pointronEvent.enum";
+import { PointronEvent } from "@nucleum/client/config/events/focus-event.enum";
 import AnalyticsViewsPageEditMobile from "@nucleum/features/focus/analytics/AnalyticsViewsPageEditMobile.svelte";
 import { appStore } from "@nucleum/stores/app.store";
 import { Embed } from "@nucleum/client/runtime/context.type";

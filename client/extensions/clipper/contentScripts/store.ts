@@ -19,11 +19,11 @@ import {
   resourceInList
 } from "@nucleum/datafn/resource.utils";
 import { Persistence } from "@nucleum/persistence/persistence";
-import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
 import {
   LinkType,
   type ILinkTag
-} from "@nucleum/features/memory/linking/link.type";
+} from "@nucleum/datafn/link.type";
 import {
   type IClip,
   type IClipCapture,

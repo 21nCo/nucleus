@@ -28,7 +28,7 @@
   import {
     LinkType,
     type ILinkTag
-  } from "@nucleum/features/memory/linking/link.type";
+  } from "@nucleum/datafn/link.type";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import view from "@nucleum/stores/view.store";

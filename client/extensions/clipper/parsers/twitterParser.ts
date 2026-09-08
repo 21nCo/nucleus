@@ -1,6 +1,6 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
-import { ClipperElementIdentifier } from "@nucleum/features/memory/common/clip.type";
+import { ClipperElementIdentifier } from "@nucleum/client/config/events/clipper-event.type";
 import {
   NodeType,
   type ITweet,

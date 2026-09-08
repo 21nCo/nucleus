@@ -13,7 +13,7 @@
   import { InfoTextType } from "@21n/elements/text/info.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
-  import { type ImportHistoryItem } from "@nucleum/products/memotron/import/data.type";
+  import { type ImportHistoryItem } from "@nucleum/stores/preferences/import.type";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
   import MemotronImportAppList from "@nucleum/products/memotron/import/MemotronImportAppList.svelte";
   import { Preference } from "@nucleum/stores/preferences/preferences.type";

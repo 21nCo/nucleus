@@ -14,7 +14,7 @@
   import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import CaptureTitle from "@nucleum/features/memory/capture/CaptureTitle.svelte";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
-  import { LinkType } from "@nucleum/features/memory/linking/link.type";
+  import { LinkType } from "@nucleum/datafn/link.type";
   import { CollectionType } from "@nucleum/features/collections/collection.type";
   import { tick } from "svelte";
   import Icon from "@21n/elements/Icon.svelte";

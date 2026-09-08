@@ -18,7 +18,7 @@
   import { UIState } from "@nucleum/stores/uiState/uiState.type";
   import SessionTitle from "@nucleum/products/pointron/base/SessionTitle.svelte";
   import { SessionState } from "@nucleum/features/focus/sessionState.enum";
-  import { PointronEvent } from "@nucleum/features/focus/pointronEvent.enum";
+  import { PointronEvent } from "@nucleum/client/config/events/focus-event.enum";
   import FocusTopNavWidget from "@nucleum/features/focus/player/FocusTopNavWidget.svelte";
   import { Product } from "@nucleum/client/config/product.type";
   let { children }: { children?: Snippet } = $props();

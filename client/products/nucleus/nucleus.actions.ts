@@ -1,5 +1,5 @@
 import { Action } from "@nucleum/client/config/action.enum";
-import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
+import { ActionType, type IAction } from "@nucleum/client/config/action.type";
 import { memotronActions } from "@nucleum/products/memotron/memotron.actions";
 import { pointronActions } from "@nucleum/products/pointron/pointron.actions";
 import NucleusLibrary from "@nucleum/products/nucleus/NucleusLibrary.svelte";

@@ -4,7 +4,7 @@
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { Size } from "@21n/elements/size.enum";
   import { linkTagLabelMapper } from "@nucleum/features/memory/linking/link.utils";
-  import type { ILinkTag } from "@nucleum/features/memory/linking/link.type";
+  import type { ILinkTag } from "@nucleum/datafn/link.type";
   import type { INodeLinkThumb } from "@nucleum/features/memory/node/node.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";

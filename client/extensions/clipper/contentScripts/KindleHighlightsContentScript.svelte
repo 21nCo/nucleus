@@ -14,7 +14,7 @@
   } from "@nucleum/features/memory/node/node.type";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import { SyncStatus } from "@nucleum/extensions/clipper/contentScripts/types";
   import type { OmitForCaptureWithId } from "@nucleum/datafn/resource.type";
   import { generateHash } from "@21n/shared-utils/crypto.utils";

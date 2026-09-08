@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ActionType } from "@nucleum/application/commandBar/action.type";
+  import { ActionType } from "@nucleum/client/config/action.type";
   import { generateCmdType } from "@21n/utils/utils";
   import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import type { ICommandAction } from "@nucleum/application/commandBar/cmd.type";

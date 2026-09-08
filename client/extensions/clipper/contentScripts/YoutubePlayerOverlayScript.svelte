@@ -3,7 +3,7 @@
   import { createClipPointer } from "@nucleum/extensions/clipper/clipper.utils";
   import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
-  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { logger } from "@nucleum/client/runtime/logging/logger";

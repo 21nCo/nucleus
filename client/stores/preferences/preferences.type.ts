@@ -1,4 +1,4 @@
-import type { ImportHistoryItem } from "@nucleum/products/memotron/import/data.type";
+import type { ImportHistoryItem } from "@nucleum/stores/preferences/import.type";
 
 export interface IPreferencesStore {
   [Preference.TRANSCRIPTION_METHOD]?: string;

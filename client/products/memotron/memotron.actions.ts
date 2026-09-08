@@ -1,4 +1,4 @@
-import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
+import { ActionType, type IAction } from "@nucleum/client/config/action.type";
 import { Orientation, Placement } from "@21n/elements/direction.enum";
 import { Size } from "@21n/elements/size.enum";
 import Capture from "@nucleum/features/memory/capture/Capture.svelte";

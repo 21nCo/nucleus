@@ -1,6 +1,6 @@
 import type { UserDate } from "@21n/utils/userDate.type";
 import { FileSizeMeasurement } from "@21n/utils/fileSizeMeasurement.enum";
-import { ActionType } from "@nucleum/application/commandBar/action.type";
+import { ActionType } from "@nucleum/client/config/action.type";
 
 /**
  * @deprecated - use lib/shared/crypto.utils instead

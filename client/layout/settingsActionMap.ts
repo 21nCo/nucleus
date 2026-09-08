@@ -1,4 +1,4 @@
-import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
+import { ActionType, type IAction } from "@nucleum/client/config/action.type";
 import AccountSettings from "@nucleum/application/settings/account/AccountSettings.svelte";
 import SettingsAsPage from "@nucleum/application/settings/asPage/SettingsAsPage.svelte";
 import ShortcutSettings from "@nucleum/application/shortcuts/settings/ShortcutSettings.svelte";

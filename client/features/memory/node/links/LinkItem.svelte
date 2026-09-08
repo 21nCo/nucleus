@@ -12,7 +12,7 @@
   import LinkTags from "@nucleum/features/memory/linking/LinkTags.svelte";
   import NodeThumbnail from "@nucleum/features/memory/node/thumbnail/NodeThumbnail.svelte";
   import LinkTypeIndicator from "./LinkTypeIndicator.svelte";
-  import { LinkType } from "@nucleum/features/memory/linking/link.type";
+  import { LinkType } from "@nucleum/datafn/link.type";
   let {
     accessPointId,
     link,

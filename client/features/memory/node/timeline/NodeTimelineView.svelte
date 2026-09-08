@@ -15,7 +15,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { linkTagLabelMapper } from "@nucleum/features/memory/linking/link.utils";
-  import type { ILinkTag } from "@nucleum/features/memory/linking/link.type";
+  import type { ILinkTag } from "@nucleum/datafn/link.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
 

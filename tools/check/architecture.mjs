@@ -177,7 +177,7 @@ const violations = edges.filter(production).filter(({ from, to }) => {
     ) &&
     (/^client\/(application|products)\//.test(to) ||
       (to.startsWith("client/features/") &&
-        to !== "client/features/memory/linking/link.type.ts"))
+        to !== "client/datafn/link.type.ts"))
   )
     return true;
   if (

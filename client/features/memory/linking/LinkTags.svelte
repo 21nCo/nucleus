@@ -11,7 +11,7 @@
   import {
     LinkType,
     type ILinkTag
-  } from "@nucleum/features/memory/linking/link.type";
+  } from "@nucleum/datafn/link.type";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
 

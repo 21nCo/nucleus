@@ -1,6 +1,6 @@
 import type { Display } from "@21n/elements/display.enum";
 import type { IContainer } from "@21n/layout/layout.type";
-import type { IAction } from "@nucleum/application/commandBar/action.type";
+import type { IAction } from "@nucleum/client/config/action.type";
 
 export type IViewStore = IContainer & {
   scale: number;

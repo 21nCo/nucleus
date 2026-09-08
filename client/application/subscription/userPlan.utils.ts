@@ -1,3 +1,4 @@
+import { determineIfPlanIsActive } from "@nucleum/client/runtime/account/plan.utils";
 import { LicenseType } from "@nucleum/client/runtime/account/account.type";
 import { PlanStatus, type IUserPlan } from "@nucleum/schema/account/subscription";
 import { parseAndFormatDate } from "@21n/utils/time.utils";
@@ -151,65 +152,6 @@ export function resolvePlanLabel(plan: IUserPlan | undefined) {
   } else {
     return `Unknown plan`;
   }
-}
-
-export function determineIfPlanIsActive(plan: IUserPlan) {
-  if (plan.plan === PlanType.TRIAL && plan.trialPlan?.expiry) {
-    const isExpired =
-      new Date(plan.trialPlan.expiry).getTime() < new Date().getTime();
-    return !isExpired;
-  } else if (
-    (plan.plan === PlanType.CLOUD_SYNC || plan.plan === PlanType.NUCLEUS) &&
-    plan.billingErrors
-  ) {
-    return false;
-  } else if (plan.status === PlanStatus.REFUNDED) {
-    return false;
-  }
-  return true;
-}
-
-export function determineIfActiveSubscriber(plan: IUserPlan) {
-  const isActive = determineIfPlanIsActive(plan);
-  if (!isActive) return false;
-  if (plan.plan === PlanType.CLOUD_SYNC || plan.plan === PlanType.NUCLEUS) {
-    return true;
-  }
-  return false;
-}
-
-export function determineIfSubscriptionExpired(plan: IUserPlan) {
-  if (plan.cycle === BillingCycle.LIFETIME)
-    return {
-      isExpired: false
-    };
-  if (plan.plan === PlanType.CLOUD_SYNC || plan.plan === PlanType.NUCLEUS) {
-    const buffer = plan.status === PlanStatus.CANCELLED ? 2 : 7;
-    const purchaseDate =
-      typeof plan.paymentDate === "string"
-        ? new Date(plan.paymentDate)
-        : plan.paymentDate;
-    const renewalDate = plan.renewalDate
-      ? new Date(plan.renewalDate)
-      : new Date(
-          (purchaseDate?.getTime() ?? 0) +
-            (plan.cycle === BillingCycle.MONTHLY
-              ? 31 * 24 * 60 * 60 * 1000
-              : 365 * 24 * 60 * 60 * 1000)
-        );
-    const isExpired =
-      renewalDate.getTime() + 24 * 60 * 60 * 1000 < new Date().getTime();
-    const isWithinBuffer =
-      renewalDate.getTime() + buffer * 24 * 60 * 60 * 1000 >
-      new Date().getTime();
-    return {
-      isExpired,
-      isWithinBuffer
-    };
-  }
-  return {
-    isExpired: false
-  };
 }
 
 export function resolveDiscountLabel(plan: IUserPlan) {

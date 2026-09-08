@@ -1,6 +1,6 @@
 import { get, writable } from "svelte/store";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { LinkType } from "@nucleum/features/memory/linking/link.type";
+import { LinkType } from "@nucleum/datafn/link.type";
 import {
   NodeType,
   type INodeCapture,

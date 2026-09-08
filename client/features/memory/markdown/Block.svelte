@@ -32,7 +32,7 @@
     toasts
   } from "@nucleum/stores/notification.store";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
-  import { MemotronEvent } from "@nucleum/features/memory/memory.type";
+  import { MemotronEvent } from "@nucleum/client/config/events/memory-event.enum";
   import { hoverable } from "@nucleum/actions/hover.action";
   import view from "@nucleum/stores/view.store";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";

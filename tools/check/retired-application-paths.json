@@ -1,5 +1,6 @@
 [
   "client/application/commandBar/action.enum.ts",
+  "client/application/commandBar/action.type.ts",
   "client/application/embed/embed.store.ts",
   "client/application/embed/embed.type.ts",
   "client/application/embed/embedMessage.enum.ts",
@@ -38,6 +39,11 @@
   "client/application/taco/taco.ts",
   "client/application/taco/taco.type.ts",
   "client/application/taco/worker.type.ts",
+  "client/features/focus/pointronEvent.enum.ts",
+  "client/features/memory/common/clip.type.ts",
+  "client/features/memory/linking/link.type.ts",
+  "client/products/memotron/import/data.type.ts",
+  "client/stores/actionMap.ts",
   "client/utils/audio.utils.ts",
   "client/utils/embed.utils.ts"
 ]

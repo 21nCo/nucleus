@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
+  import { ActionType, type IAction } from "@nucleum/client/config/action.type";
   import SearchActionResults from "@nucleum/application/commandBar/SearchActionResults.svelte";
   import CmdResults from "@nucleum/application/commandBar/CmdResults.svelte";
   import { Size } from "@21n/elements/size.enum";

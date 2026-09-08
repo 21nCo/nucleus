@@ -9,7 +9,3 @@ import type {
 export interface IMemotronItemBase extends IResource, IResourceShareable {
   isStarred?: boolean;
 }
-
-export enum MemotronEvent {
-  BLOCK_HOVER = "blockHover"
-}

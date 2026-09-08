@@ -28,7 +28,7 @@ import type {
   ILink,
   ILinkBase,
   LinkType
-} from "@nucleum/features/memory/linking/link.type";
+} from "@nucleum/datafn/link.type";
 import type {
   AnnotationType,
   Scaled

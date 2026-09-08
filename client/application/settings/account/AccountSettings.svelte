@@ -28,11 +28,8 @@ import { type EmailParts } from "@nucleum/schema/account/profile.type";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { appStore } from "@nucleum/stores/app.store";
   import { Action } from "@nucleum/client/config/action.enum";
-  import {
-    determineIfPlanIsActive,
-    resolveNextRenewalDate,
-    resolvePlanLabel
-  } from "@nucleum/application/subscription/userPlan.utils";
+  import { resolveNextRenewalDate, resolvePlanLabel } from "@nucleum/application/subscription/userPlan.utils";
+import { determineIfPlanIsActive } from "@nucleum/client/runtime/account/plan.utils";
   import {
     BillingCycle,
     PlanType

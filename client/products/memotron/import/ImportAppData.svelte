@@ -13,7 +13,7 @@
     ImportSource,
     StepType,
     type ImportHistoryItem
-  } from "@nucleum/products/memotron/import/data.type";
+  } from "@nucleum/stores/preferences/import.type";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import Divider from "@21n/elements/Divider.svelte";
   import { Display } from "@21n/elements/display.enum";
@@ -26,7 +26,7 @@
   import { Preference } from "@nucleum/stores/preferences/preferences.type";
   import { cn } from "@21n/utils/ui.utils";
   import FieldMapping from "@nucleum/products/memotron/import/FieldMapping.svelte";
-  import type { FieldMappingConfig } from "@nucleum/products/memotron/import/data.type";
+  import type { FieldMappingConfig } from "@nucleum/stores/preferences/import.type";
   import { PocketImporter } from "@nucleum/products/memotron/import/pocket.importer";
   import { Action } from "@nucleum/client/config/action.enum";
 

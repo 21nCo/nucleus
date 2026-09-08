@@ -3797,7 +3797,7 @@
       "path": "client/features/memory/common/clip.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/features/memory/common/clip.type.ts"
+        "client/config/events/clipper-event.type.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Capability-owned contract retained beside implementation; external production imports are declared in the feature entrypoint registry.",
@@ -3915,7 +3915,7 @@
       "path": "client/features/memory/linking/link.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/features/memory/linking/link.type.ts"
+        "client/datafn/link.type.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Capability-owned contract retained beside implementation; external production imports are declared in the feature entrypoint registry.",
@@ -4268,7 +4268,8 @@
       "path": "client/features/memory/memory.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/features/memory/memory.type.ts"
+        "client/features/memory/memory.type.ts",
+        "client/config/events/memory-event.enum.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Capability-owned contract retained beside implementation; external production imports are declared in the feature entrypoint registry.",
@@ -5331,7 +5332,7 @@
       "path": "client/products/memotron/import/data.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/products/memotron/import/data.type.ts"
+        "client/stores/preferences/import.type.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Product-specific composition or import adapter; similarly named import enums have different supported sources.",
@@ -5972,7 +5973,7 @@
       "path": "client/types/action.type.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/application/commandBar/action.type.ts"
+        "client/config/action.type.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",
@@ -8092,7 +8093,7 @@
       "path": "client/types/pointron/pointronEvent.enum.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/features/focus/pointronEvent.enum.ts"
+        "client/config/events/focus-event.enum.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",

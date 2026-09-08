@@ -1,5 +1,5 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { LinkType } from "@nucleum/features/memory/linking/link.type";
+import { LinkType } from "@nucleum/datafn/link.type";
 import {
   type IActiveNode,
   type INode,
@@ -43,7 +43,7 @@ import { recursivelyExtractAllChildrenIntoArray } from "@nucleum/features/memory
 import view from "@nucleum/stores/view.store";
 import { CollectibleStore } from "@nucleum/features/collections/collectible.store";
 import { appStore } from "@nucleum/stores/app.store";
-import type { ILink } from "@nucleum/features/memory/linking/link.type";
+import type { ILink } from "@nucleum/datafn/link.type";
 import { toasts } from "@nucleum/stores/notification.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 

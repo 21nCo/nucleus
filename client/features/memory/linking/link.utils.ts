@@ -1,7 +1,7 @@
 import {
   LinkType,
   type ILinkTag
-} from "@nucleum/features/memory/linking/link.type";
+} from "@nucleum/datafn/link.type";
 
 export function linkTagLabelMapper(tag: ILinkTag) {
   const label = tag.group

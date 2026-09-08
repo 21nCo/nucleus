@@ -7,7 +7,7 @@
   import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { tooltip } from "@nucleum/actions/popover.action";
-  import { determineIfActiveSubscriber } from "@nucleum/application/subscription/userPlan.utils";
+  import { determineIfActiveSubscriber } from "@nucleum/client/runtime/account/plan.utils";
   import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import account from "@nucleum/stores/account.store";
   import { Action } from "@nucleum/client/config/action.enum";

@@ -10,7 +10,7 @@ import { shuffleEmojis } from "@21n/elements/avatarPicker/avatars";
 import {
   ActionType,
   type IAction
-} from "@nucleum/application/commandBar/action.type";
+} from "@nucleum/client/config/action.type";
 import { IdentityProvider } from "@nucleum/client/runtime/account/oauth.type";
 import { dispatchCustomEvent, goto } from "@21n/utils/browser.utils";
 import {

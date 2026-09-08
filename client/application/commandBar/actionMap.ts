@@ -3,7 +3,7 @@ import {
   type IActionFnParams,
   ActionType,
   ContentType
-} from "@nucleum/application/commandBar/action.type";
+} from "@nucleum/client/config/action.type";
 import PageError from "@nucleum/application/error/PageError.svelte";
 import DebugLogs from "@nucleum/application/error/DebugLogs.svelte";
 import Offline from "@nucleum/application/error/Offline.svelte";
@@ -78,7 +78,7 @@ import DexieConsole from "@nucleum/application/debug/DexieConsole.svelte";
 import { AppSearchParam } from "@nucleum/stores/appStore.type";
 import OfflineStatusModal from "@nucleum/application/settings/sync/OfflineStatusModal.svelte";
 import context from "@nucleum/stores/context.store";
-import view from "./view.store";
+import view from "@nucleum/stores/view.store";
 import Navigator from "@21n/layout/navigator/Navigator.svelte";
 import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
 import Today from "@nucleum/features/calendar/Today.svelte";

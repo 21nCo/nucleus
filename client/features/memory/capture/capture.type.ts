@@ -6,7 +6,7 @@ import type {
   INodeStructure,
   NodeType
 } from "@nucleum/features/memory/node/node.type";
-import type { LinkType } from "@nucleum/features/memory/linking/link.type";
+import type { LinkType } from "@nucleum/datafn/link.type";
 import type {
   CollectionType,
   ICollectionItemPropertyValue

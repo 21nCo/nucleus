@@ -8,7 +8,7 @@
   import { SyncStatus } from "@nucleum/extensions/clipper/contentScripts/types";
   import { ButtonVariant } from "@21n/elements/button/button.type";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import { Size } from "@21n/elements/size.enum";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";

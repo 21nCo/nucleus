@@ -4,7 +4,7 @@ import {
   updateActiveResource
 } from "@nucleum/stores/resources/active-resource.store";
 import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
-import { LinkType } from "@nucleum/features/memory/linking/link.type";
+import { LinkType } from "@nucleum/datafn/link.type";
 import {
   ResourceAccessPoint,
   AccessMode,

@@ -14,7 +14,7 @@
     feedbackPane,
     syncStore
   } from "@nucleum/extensions/clipper/contentScripts/store";
-  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import ExtensionBaseLayer from "@nucleum/extensions/ExtensionBaseLayer.svelte";
   import ScreenShot from "@nucleum/extensions/clipper/contentScripts/ScreenShot.svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";

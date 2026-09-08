@@ -1,5 +1,5 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
-import type { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+import type { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
 import type { ExtensionEvent } from "@nucleum/extensions/extension.type";
 import {
   sendToBackground,

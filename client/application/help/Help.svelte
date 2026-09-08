@@ -6,7 +6,7 @@
   import AppNameWithVersion from "@nucleum/application/settings/about/AppNameWithVersion.svelte";
   import ProductInfoFooter from "@nucleum/application/settings/about/ProductInfoFooter.svelte";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
-  import type { IAction } from "@nucleum/application/commandBar/action.type";
+  import type { IAction } from "@nucleum/client/config/action.type";
   import NavigationHeader from "@21n/elements/NavigationHeader.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { parseAndFormatDate } from "@21n/utils/time.utils";

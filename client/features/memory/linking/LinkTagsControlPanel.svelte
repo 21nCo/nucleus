@@ -16,7 +16,7 @@
   import type {
     ILinkTag,
     ILinkTagGroup
-  } from "@nucleum/features/memory/linking/link.type";
+  } from "@nucleum/datafn/link.type";
   import LinkTagsGroup from "@nucleum/features/memory/linking/LinkTagsGroup.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { Resource } from "@nucleum/datafn/resource.enum";

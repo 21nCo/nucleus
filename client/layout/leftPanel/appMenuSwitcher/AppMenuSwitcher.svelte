@@ -4,7 +4,7 @@
   import { LayoutContext } from "@21n/layout/layout-mode.type";
   import { onMount } from "svelte";
   import AppMenuSwitcherItem from "@21n/layout/leftPanel/appMenuSwitcher/AppMenuSwitcherItem.svelte";
-  import { ActionType, type IAction } from "@nucleum/application/commandBar/action.type";
+  import { ActionType, type IAction } from "@nucleum/client/config/action.type";
   import CaptureComponent from "@nucleum/application/CaptureComponent.svelte";
   import { appStore, isInEditMode } from "@nucleum/stores/app.store";
   import { appMenuStore } from "@nucleum/stores/appMenu/appMenu.store";

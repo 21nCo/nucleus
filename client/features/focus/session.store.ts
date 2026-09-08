@@ -45,7 +45,7 @@ import {
 } from "@nucleum/features/focus/logs/log.type";
 import { createSessionItemRelationRefs } from "@nucleum/features/focus/logs/session-items.utils";
 import context from "@nucleum/stores/context.store";
-import { PointronEvent } from "@nucleum/features/focus/pointronEvent.enum";
+import { PointronEvent } from "@nucleum/client/config/events/focus-event.enum";
 import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { advancedCompositionDraft } from "@nucleum/features/focus/advanced/composition/advancedCompositionDraft.store";

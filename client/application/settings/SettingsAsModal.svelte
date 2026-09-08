@@ -6,7 +6,7 @@
   import { TextStyle } from "@21n/elements/text/text.enum";
   import SettingThumbnail from "@nucleum/application/settings/SettingThumbnail.svelte";
   import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
-  import type { IAction } from "@nucleum/application/commandBar/action.type";
+  import type { IAction } from "@nucleum/client/config/action.type";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { appStore } from "@nucleum/stores/app.store";
   import ProfileCpSection from "@nucleum/application/settings/account/ProfileCPSection.svelte";

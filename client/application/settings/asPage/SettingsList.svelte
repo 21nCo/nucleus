@@ -4,7 +4,7 @@
   import { TextStyle } from "@21n/elements/text/text.enum";
   import SettingThumbnail from "@nucleum/application/settings/SettingThumbnail.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { ActionType } from "@nucleum/application/commandBar/action.type";
+  import { ActionType } from "@nucleum/client/config/action.type";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
   let {
     items = [],

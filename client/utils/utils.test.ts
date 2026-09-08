@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { ActionType } from "@nucleum/application/commandBar/action.type";
+import { ActionType } from "@nucleum/client/config/action.type";
 import { FileSizeMeasurement } from "@21n/utils/fileSizeMeasurement.enum";
 import type { UserDate } from "@21n/utils/userDate.type";
 

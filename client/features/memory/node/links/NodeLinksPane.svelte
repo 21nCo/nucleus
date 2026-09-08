@@ -11,7 +11,7 @@
     type INode,
     type INodeLinkThumb
   } from "@nucleum/features/memory/node/node.type";
-  import { LinkType } from "@nucleum/features/memory/linking/link.type";
+  import { LinkType } from "@nucleum/datafn/link.type";
   import LinkSearch from "@nucleum/features/memory/common/linkbox/LinkSearch.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { appStore } from "@nucleum/stores/app.store";

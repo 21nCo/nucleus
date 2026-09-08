@@ -12,11 +12,8 @@
   import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { Action } from "@nucleum/client/config/action.enum";
-  import {
-    determineIfPlanIsActive,
-    resolveLicenseString,
-    resolvePlanLabel
-  } from "@nucleum/application/subscription/userPlan.utils";
+  import { resolveLicenseString, resolvePlanLabel } from "@nucleum/application/subscription/userPlan.utils";
+import { determineIfPlanIsActive } from "@nucleum/client/runtime/account/plan.utils";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { PlanType } from "@nucleum/schema/account/subscription";
   import Icon from "@21n/elements/Icon.svelte";

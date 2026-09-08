@@ -7,7 +7,7 @@
   import { formatSeconds } from "@21n/utils/time.utils";
   import { TimeFormat } from "@21n/utils/time.type";
   import { appEvents } from "@nucleum/stores/notification.store";
-  import { ClipperExtensionEvent } from "@nucleum/features/memory/common/clip.type";
+  import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import {
     seekToTimestamp,

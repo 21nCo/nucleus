@@ -16,10 +16,7 @@ import {
   hasLegacyCloudSession,
   signout
 } from "@21n/utils/account.utils";
-import {
-  determineIfPlanIsActive,
-  determineIfSubscriptionExpired
-} from "@nucleum/application/subscription/userPlan.utils";
+import { determineIfPlanIsActive, determineIfSubscriptionExpired } from "@nucleum/client/runtime/account/plan.utils";
 import { PlanType } from "@nucleum/schema/account/subscription";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { StoreDataType } from "@nucleum/schema/legacy/store-data-type.enum";

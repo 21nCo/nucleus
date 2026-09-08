@@ -6,7 +6,7 @@
   import { pointronPreferences } from "@nucleum/features/focus/preferences.store";
   import { appEvents } from "@nucleum/stores/notification.store";
   import type { IEvent } from "@21n/elements/input/event.type";
-  import { PointronEvent } from "@nucleum/features/focus/pointronEvent.enum";
+  import { PointronEvent } from "@nucleum/client/config/events/focus-event.enum";
   import { postNotificationToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";

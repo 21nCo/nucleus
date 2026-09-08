@@ -33,7 +33,7 @@
   import PosthogTelemetry from "@21n/layout/layers/analytics/PosthogTelemetry.svelte";
   import dynamicProductData from "$lib/product.json";
   import { getSettingsAsModal } from "@21n/layout/settingsActionMap";
-  import { globalActions } from "@nucleum/stores/actionMap";
+  import { globalActions } from "@nucleum/application/commandBar/actionMap";
   import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { updateNucleumDatafnConnectivity } from "@nucleum/datafn/datafn.store";
   import { parse } from "@21n/shared-utils/json.utils";
