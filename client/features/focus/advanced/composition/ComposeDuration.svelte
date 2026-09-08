@@ -10,7 +10,7 @@
   import { Orientation } from "@21n/elements/direction.enum";
   import PomodoroUnitView from "@nucleum/features/focus/advanced/presets/PomodoroUnitView.svelte";
   import ComposeBreak from "@nucleum/features/focus/advanced/composition/ComposeBreak.svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { Size } from "@21n/elements/size.enum";
   import { ButtonStyle } from "@21n/elements/button/button.type";
   import { appStore } from "@nucleum/stores/app.store";

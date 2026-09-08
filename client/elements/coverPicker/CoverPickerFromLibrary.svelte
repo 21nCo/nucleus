@@ -1,14 +1,15 @@
 <script lang="ts">
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { onMount } from "svelte";
-  import Records from "@nucleum/application/record/Records.svelte";
+  import { requireRecordRenderer } from "@nucleum/stores/resources/record-renderer";
+  const Records = requireRecordRenderer();
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { InputStyle } from "@21n/elements/input/input.type";
   import { Size } from "@21n/elements/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { recentsStore } from "@nucleum/stores/resources/recent.store";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { datafn } from "@nucleum/datafn/datafn.store";

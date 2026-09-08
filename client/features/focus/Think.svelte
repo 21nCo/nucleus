@@ -5,7 +5,7 @@
   import { Size } from "@21n/elements/size.enum";
   import FocusPlayerTimeText from "@nucleum/features/focus/player/FocusPlayerTimeText.svelte";
   import SessionNotes from "@nucleum/features/focus/notes/SessionNotes.svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { ButtonStyle } from "@21n/elements/button/button.type";
   import view from "@nucleum/stores/view.store";
 </script>

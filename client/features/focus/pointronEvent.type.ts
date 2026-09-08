@@ -1,4 +1,4 @@
-import type { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+import type { PointronAction } from "@nucleum/client/config/focus-action.enum";
 
 /**
  * @deprecated - use IEvent instead

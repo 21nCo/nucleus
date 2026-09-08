@@ -1,6 +1,6 @@
 <script lang="ts">
   import Table2 from "@21n/elements/table/Table2.svelte";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { TableCellType } from "@21n/elements/table/table.type";
   import { BlockAction } from "@nucleum/features/memory/markdown/md.type";
   import MdShortcutText from "@nucleum/features/memory/markdown/shortcuts/MdShortcutText.svelte";

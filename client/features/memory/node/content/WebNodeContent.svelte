@@ -1,13 +1,7 @@
 <script lang="ts">
   import WebPagePreview from "@nucleum/features/memory/node/content/web/WebPagePreview.svelte";
-  import {
-    type IClip,
-    type IWebPage,
-    NodeType,
-    socialPostNodeTypeList,
-    socialProfileNodeTypeList,
-    socialSubNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { type IClip, type IWebPage, socialPostNodeTypeList, socialProfileNodeTypeList, socialSubNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import SocialPostContent from "@nucleum/features/memory/node/content/web/social/SocialPostContent.svelte";
   import SocialProfileContent from "@nucleum/features/memory/node/content/web/social/SocialProfileContent.svelte";
   import WebClipPreview from "@nucleum/features/memory/node/content/web/WebClipPreview.svelte";

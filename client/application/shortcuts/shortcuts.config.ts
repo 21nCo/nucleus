@@ -1,7 +1,7 @@
 import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
 import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
 import { Action } from "@nucleum/client/config/action.enum";
-import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+import { PointronAction } from "@nucleum/client/config/focus-action.enum";
 import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
 import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 

@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { tick, type Snippet } from "svelte";
+  import { tick, type Snippet, type Component } from "svelte";
   import { Size } from "@21n/elements/size.enum";
-  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { InputStyle, type InputLabel } from "@21n/elements/input/input.type";
   import InputBaseElement from "@21n/elements/InputBaseElement.svelte";
@@ -29,7 +28,7 @@
     id = "",
     width = undefined,
     numberInputParams = undefined,
-    isExperimentalMdInput = false,
+    inlineEditor = undefined,
     icon = undefined,
     hasControls = false,
     isShowSaveControl = false,
@@ -67,7 +66,7 @@
     id?: string;
     width?: string | undefined;
     numberInputParams?: { min: number; max: number; step: number } | undefined;
-    isExperimentalMdInput?: boolean;
+    inlineEditor?: Component<any>;
     icon?: string | undefined;
     hasControls?: boolean;
     isShowSaveControl?: boolean;
@@ -289,13 +288,14 @@
   }
 </script>
 
-{#if isExperimentalMdInput}
+{#if inlineEditor}
+  {@const InlineEditor = inlineEditor}
   <div class={inputClasses} data-testid={testId}>
-    <InlineMarkdownTextInput
+    <InlineEditor
       {id}
       bind:content={value}
       {placeholder}
-      onKeydown={(event) => {
+      onKeydown={(event: CustomEvent<any>) => {
         const keyboardEvent = event.detail;
         if (isPreventDefaultOnEnter && keyboardEvent.key === "Enter") {
           keyboardEvent.preventDefault();
@@ -313,7 +313,7 @@
           onKeydown?.(keydownEvent);
         }
       }}
-      onKeyup={(event) => {
+      onKeyup={(event: CustomEvent<any>) => {
         onKeyup?.(event);
       }}
       onFocus={() => {
@@ -322,16 +322,16 @@
       onBlur={() => {
         emitBlur();
       }}
-      onChange={(event) => {
+      onChange={(event: CustomEvent<any>) => {
         onChange?.(event);
       }}
-      onDebouncedChange={(event) => {
+      onDebouncedChange={(event: CustomEvent<any>) => {
         onDebouncedChange?.(event);
       }}
       onEnter={(event: CustomEvent<any>) => {
         onEnter?.(event);
       }}
-      onPaste={(event) => {
+      onPaste={(event: CustomEvent<any>) => {
         onPaste?.(event);
       }}
     />

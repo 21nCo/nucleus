@@ -10,7 +10,7 @@
   } from "@nucleum/features/focus/session.store";
   import { appLoadingState, appStore } from "@nucleum/stores/app.store";
   import BackgroundSoundPlayer from "@nucleum/features/focus/backgroundMusic/BackgroundSoundPlayer.svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import context from "@nucleum/stores/context.store";
   import UserBaseLayer from "@21n/layout/layers/UserBaseLayer.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";

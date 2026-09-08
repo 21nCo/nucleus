@@ -1,4 +1,3 @@
-// typeSafeEventPropagation.ts
 import { setContext, getContext } from "svelte";
 import { writable, type Writable } from "svelte/store";
 
@@ -11,6 +10,7 @@ interface EventContext {
   dispatchEvent: (eventName: string, detail: any) => void;
 }
 
+/** Creates a context-scoped event dispatcher shared by reusable controls. */
 export function createEventPropagator(
   uniqueKey: string = "defaultEventPropagator"
 ) {

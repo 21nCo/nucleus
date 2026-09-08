@@ -3,7 +3,7 @@
   import Slider from "@nucleum/features/focus/advanced/slider/Slider.svelte";
   import Button from "@21n/elements/button/Button.svelte";
   import { Size } from "@21n/elements/size.enum";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import AdvancedFocusModeSwitcher from "@nucleum/features/focus/advanced/modeSwitcher/AdvancedFocusModeSwitcher.svelte";
   import ComposeDuration from "@nucleum/features/focus/advanced/composition/ComposeDuration.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";

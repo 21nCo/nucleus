@@ -6,7 +6,7 @@
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import HoverableElement from "@21n/elements/HoverableElement.svelte";
   import type { IWebPage } from "@nucleum/features/memory/node/node.type";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import ImagePreview from "@nucleum/features/memory/node/content/ImagePreview.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { resolveUrlData } from "@nucleum/features/memory/node/url.utils";

@@ -3,7 +3,7 @@
   import modalEvent from "@nucleum/stores/overlays/modal.store";
   import Icon from "@21n/elements/Icon.svelte";
   import Button from "@21n/elements/button/Button.svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { Size } from "@21n/elements/size.enum";
   import FileItem from "@nucleum/products/pointron/settings/ImportAppData/FileItem.svelte";
   import { UploadStatus } from "@nucleum/application/settings/import/uploadStatus.enum";

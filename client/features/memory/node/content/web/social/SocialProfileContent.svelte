@@ -2,12 +2,8 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { Size } from "@21n/elements/size.enum";
-  import {
-    NodeType,
-    socialProfileNodeTypeList,
-    socialProfileWithImageUnavailable,
-    type ILinkedInProfileMetadata
-  } from "@nucleum/features/memory/node/node.type";
+  import { socialProfileNodeTypeList, socialProfileWithImageUnavailable, type ILinkedInProfileMetadata } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import type { INode } from "@nucleum/features/memory/node/node.type";
   import { resolveNodeIcon } from "@nucleum/features/memory/node/node.utils";
 

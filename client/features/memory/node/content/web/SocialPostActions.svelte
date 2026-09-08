@@ -3,7 +3,8 @@
   import ButtonGroup from "@21n/elements/button/ButtonGroup.svelte";
   import { Size } from "@21n/elements/size.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import { NodeType, type INode } from "@nucleum/features/memory/node/node.type";
+  import { type INode } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { resolveContentPreview } from "@nucleum/features/memory/node/node.utils";
   import { properCase } from "@21n/shared-utils/text.utils";
   import { toasts } from "@nucleum/stores/notification.store";

@@ -35,8 +35,8 @@
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { Action } from "@nucleum/client/config/action.enum";
   import { BillingCycle } from "@nucleum/schema/account/subscription";
-  import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";
-  import { fileStore } from "@nucleum/features/files/file.store";
+  import { fileEmbedChannel } from "@nucleum/stores/files/fileEmbedChannel.store";
+  import { fileStore } from "@nucleum/stores/files/file.store";
   import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { PaymentProvider } from "@nucleum/schema/account/payment-provider";

@@ -2,7 +2,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/elements/size.enum";
   import { onMount } from "svelte";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { lazyLoad } from "@nucleum/actions/lazyload.action";
   import { cn } from "@21n/utils/ui.utils";
   import {

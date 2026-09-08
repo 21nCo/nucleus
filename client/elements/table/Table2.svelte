@@ -3,7 +3,7 @@
     reorderList,
     type DragDropEvent
   } from "@nucleum/actions/rearrange.action";
-  import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
+  import { requireActionRenderer } from "@nucleum/stores/resources/action-renderer";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { InputStyle } from "@21n/elements/input/input.type";
   import {
@@ -203,6 +203,7 @@
                 ? column.componentProps(row)
                 : column.componentProps}
             {#if typeof column.component === "string"}
+              {@const ComponentResolver = requireActionRenderer()}
               <ComponentResolver
                 path={column.component}
                 params={{ row, ...componentProps }}

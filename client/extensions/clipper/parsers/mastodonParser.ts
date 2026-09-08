@@ -1,9 +1,6 @@
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
-import {
-  NodeType,
-  type IMastodonPost,
-  type IMastodonProfile
-} from "@nucleum/features/memory/node/node.type";
+import { type IMastodonPost, type IMastodonProfile } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { csuiSelector } from "@nucleum/extensions/clipper/clipper.constants";
 import type {
   ISocialPost,

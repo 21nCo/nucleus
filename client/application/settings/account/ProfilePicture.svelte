@@ -5,7 +5,7 @@
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { appStore } from "@nucleum/stores/app.store";

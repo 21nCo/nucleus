@@ -6,7 +6,7 @@ import {
 } from "@nucleum/features/collections/collection.type";
 import JSZip from "jszip";
 import { sanitizeAndResolve } from "@nucleum/features/memory/node/url.utils";
-import { NodeType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { dispatchCustomEvent } from "@21n/utils/browser.utils";

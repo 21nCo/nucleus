@@ -3,8 +3,8 @@
   import {
     FileType,
     type IImageRepositionerOptions
-  } from "@nucleum/features/files/file.type";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  } from "@nucleum/stores/files/file.type";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { gradientsList } from "@21n/elements/colorPicker/gradients/gradients";
   import { debouncer } from "@21n/utils/utils";

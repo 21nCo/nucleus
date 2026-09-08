@@ -1,4 +1,4 @@
-import type { NodeType } from "@nucleum/features/memory/node/node.type";
+import type { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import type { InlineType } from "@21n/elements/markdown/inline.type";
 
 export type IBlockBrowserItem = {

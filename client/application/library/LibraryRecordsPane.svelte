@@ -22,10 +22,8 @@
 
   import LibrarySearchBox from "@nucleum/application/library/LibrarySearchBox.svelte";
   import { CollectionType } from "@nucleum/features/collections/collection.type";
-  import {
-    NodeType,
-    rootNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 
   import {
     activeResourceFilter,

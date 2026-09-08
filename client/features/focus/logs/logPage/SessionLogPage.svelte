@@ -14,7 +14,7 @@
   import { TextStyle } from "@21n/elements/text/text.enum";
   import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import FocusItem from "@nucleum/features/focus/elements/focusitem/FocusItem.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";

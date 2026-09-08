@@ -1,9 +1,6 @@
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
-import {
-  NodeType,
-  type IBlueskyPost,
-  type IBlueskyProfile
-} from "@nucleum/features/memory/node/node.type";
+import { type IBlueskyPost, type IBlueskyProfile } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import type {
   ISocialPost,
   ISocialPostBase

@@ -8,12 +8,8 @@
     AccessMode,
     ResourceAccessPoint
   } from "@nucleum/datafn/resource.type";
-  import {
-    mediaNodeTypeList,
-    NodeType,
-    NodeView,
-    webNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { mediaNodeTypeList, NodeView, webNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import MediaNode from "@nucleum/features/memory/node/base/MediaNode.svelte";
   import NonMediaNode from "@nucleum/features/memory/node/base/NonMediaNode.svelte";
   import { onDestroy, onMount, setContext, untrack } from "svelte";

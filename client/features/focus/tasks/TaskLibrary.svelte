@@ -67,7 +67,7 @@
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   import { time } from "@datafn/client";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
 
   let {

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { cn } from "@21n/utils/ui.utils";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import NodeRightPaneContent from "@nucleum/features/memory/node/rightPanel/NodeRightPaneContent.svelte";
   import NodeDefaultRightPane from "./NodeDefaultRightPane.svelte";

@@ -11,11 +11,8 @@
   } from "@nucleum/extensions/clipper/contentScripts/getQuery";
   import { onMount } from "svelte";
   import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
-  import {
-    NodeType,
-    type IClipCapture,
-    type ITextClip
-  } from "@nucleum/features/memory/node/node.type";
+  import { type IClipCapture, type ITextClip } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import { appEvents } from "@nucleum/stores/notification.store";

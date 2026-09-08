@@ -8,7 +8,7 @@
   } from "@nucleum/features/focus/sessionComposition.type";
   import ComposeDuration from "@nucleum/features/focus/advanced/composition/ComposeDuration.svelte";
   import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { ButtonVariant } from "@21n/elements/button/button.type";
   import { deepCopy } from "@21n/shared-utils/obj.utils";
   import { onMount } from "svelte";

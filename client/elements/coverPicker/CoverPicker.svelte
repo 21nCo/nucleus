@@ -14,8 +14,8 @@
   import account from "@nucleum/stores/account.store";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import FileView from "@nucleum/features/files/FileView.svelte";
-  import { FileType } from "@nucleum/features/files/file.type";
+  import FileView from "@nucleum/components/files/FileView.svelte";
+  import { FileType } from "@nucleum/stores/files/file.type";
   import { cn } from "@21n/utils/ui.utils";
   import ComingSoonView from "@21n/elements/ComingSoonView.svelte";
   import { Orientation } from "@21n/elements/direction.enum";
@@ -24,7 +24,7 @@
   import CoverPickerFromLibrary from "@21n/elements/coverPicker/CoverPickerFromLibrary.svelte";
   import { isRecordId } from "@nucleum/datafn/resource.utils";
   import { appStore } from "@nucleum/stores/app.store";
-  import { resolveProductConfig } from "@nucleum/products/product.config";
+  import { productHasResource } from "@nucleum/client/config/product-resources";
 
   enum Method {
     COLOR = "color",
@@ -48,9 +48,7 @@
     onSelect?: ((event: CustomEvent<string>) => void) | undefined;
   } = $props();
   const isFileUploadAvailable = $derived(
-    resolveProductConfig($appStore.product).resources.table.includes(
-      Resource.file
-    )
+    productHasResource($appStore.product, Resource.file)
   );
 
   let selectedMethod = $state<Method>(Method.COLOR);

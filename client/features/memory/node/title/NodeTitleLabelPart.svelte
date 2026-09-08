@@ -1,10 +1,6 @@
 <script lang="ts">
-  import {
-    headingNodeTypes,
-    type INode,
-    type INodeThumb,
-    NodeType
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes, type INode, type INodeThumb } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import { appStore } from "@nucleum/stores/app.store";
   import { cn } from "@21n/utils/ui.utils";

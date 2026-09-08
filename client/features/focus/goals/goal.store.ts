@@ -25,7 +25,7 @@ import view from "@nucleum/stores/view.store";
 import { resolveCollectionTypes } from "@nucleum/features/collections/collection.utils";
 import type { ICollectionExpanded } from "@nucleum/features/collections/collection.type";
 import { resolveResourceIcon } from "@nucleum/datafn/resource.utils";
-import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+import { PointronAction } from "@nucleum/client/config/focus-action.enum";
 import { datafn } from "@nucleum/datafn/datafn.store";
 
 function pruneUndefined(input: Record<string, unknown>) {

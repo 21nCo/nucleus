@@ -1,7 +1,7 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { parse } from "@21n/shared-utils/json.utils";
 import { textIsCode } from "@21n/shared-utils/text.utils";
-import { NodeType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { sanitizeAndResolve } from "@nucleum/features/memory/node/url.utils";
 import type { IMultiFileCaptureData, IPasteCaptureData } from "@nucleum/features/memory/capture/capture.type";
 

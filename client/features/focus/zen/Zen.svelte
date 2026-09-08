@@ -21,7 +21,7 @@
   import { fullScreen } from "@nucleum/stores/overlays/modal.store";
   import { page } from "$app/stores";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { getContext } from "svelte";
   import { readable, type Writable } from "svelte/store";

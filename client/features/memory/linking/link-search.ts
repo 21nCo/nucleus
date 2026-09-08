@@ -6,12 +6,8 @@ import {
   resourceInList
 } from "@nucleum/datafn/resource.utils";
 import { isValidString } from "@21n/shared-utils/text.utils";
-import {
-  headingNodeTypes,
-  NodeType,
-  rootNodeTypeList,
-  type INode
-} from "@nucleum/features/memory/node/node.type";
+import { headingNodeTypes, rootNodeTypeList, type INode } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import type { CollectionType } from "@nucleum/features/collections/collection.type";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";

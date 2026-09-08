@@ -1,7 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { activeSession } from "@nucleum/features/focus/session.store";
   import { TimeFormat } from "@21n/utils/time.type";

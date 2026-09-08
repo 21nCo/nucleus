@@ -3,10 +3,10 @@
   import { dragAndDropStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
   import { DragStatus } from "@nucleum/actions/dragstatus.enum";
-  import type { IFile } from "@nucleum/features/files/file.type";
+  import type { IFile } from "@nucleum/stores/files/file.type";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-  import { fileStore } from "@nucleum/features/files/file.store";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import { fileStore } from "@nucleum/stores/files/file.store";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import { cn } from "@21n/utils/ui.utils";
 
   let {

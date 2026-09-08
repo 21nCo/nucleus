@@ -1,5 +1,5 @@
 import { prefixTable } from "@21n/shared-utils/text.utils";
-import { NodeType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import {
   HeadingKeys,
   InlineKeys,

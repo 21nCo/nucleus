@@ -1,5 +1,5 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
-import type { NodeType } from "./node.type";
+import type { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { enumToCamelCase } from "@21n/shared-utils/text.utils";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 

@@ -1,7 +1,7 @@
 import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
 import { wait } from "@21n/shared-utils/wait";
-import { type IFileEmbedChannel } from "@nucleum/features/files/file.type";
+import { type IFileEmbedChannel } from "@nucleum/stores/files/file.type";
 import { get, writable } from "svelte/store";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 

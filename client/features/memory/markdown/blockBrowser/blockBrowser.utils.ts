@@ -1,4 +1,4 @@
-import { NodeType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { Embed } from "@nucleum/client/runtime/context.type";
 import { InlineType } from "@21n/elements/markdown/inline.type";
 import type {

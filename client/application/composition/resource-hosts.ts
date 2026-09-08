@@ -1,3 +1,6 @@
+import { configureProductResourceTables } from "@nucleum/client/config/product-resources";
+import { configureActionRenderer } from "@nucleum/stores/resources/action-renderer";
+import ComponentResolver from "@21n/layout/paint/ComponentResolver.svelte";
 import { get } from "svelte/store";
 import { appStore } from "@nucleum/stores/app.store";
 import { AppSearchParam } from "@nucleum/stores/appStore.type";
@@ -72,3 +75,6 @@ configureResourceActionHost({
   }
 });
 
+
+configureActionRenderer(ComponentResolver);
+configureProductResourceTables((product) => resolveProductConfig(product).resources.table);

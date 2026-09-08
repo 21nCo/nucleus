@@ -24,6 +24,7 @@
     "./account/profile.type": "./account/profile.type.ts",
     "./account/payment-provider": "./account/payment-provider.ts",
     "./account/subscription": "./account/subscription.ts",
-    "./legacy/store-data-type.enum": "./legacy/store-data-type.enum.ts"
+    "./legacy/store-data-type.enum": "./legacy/store-data-type.enum.ts",
+    "./legacy/node-type.enum": "./legacy/node-type.enum.ts"
   }
 }

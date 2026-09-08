@@ -1,11 +1,7 @@
 <script lang="ts">
   import { resolveNodeContextMenu } from "@nucleum/features/memory/node/node.store";
-  import {
-    NodeType,
-    type ITextClip,
-    type IVideoTimestampClip,
-    type IWebScreenshotClip
-  } from "@nucleum/features/memory/node/node.type";
+  import { type ITextClip, type IVideoTimestampClip, type IWebScreenshotClip } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { TimeFormat } from "@21n/utils/time.type";
   import { formatDatetime, formatSeconds } from "@21n/utils/time.utils";
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
@@ -21,7 +17,7 @@
   import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { onMount, onDestroy } from "svelte";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import TextClip from "@nucleum/extensions/clipper/sidePanel/clips/TextClip.svelte";
   import { hoverable } from "@nucleum/actions/hover.action";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";

@@ -2,10 +2,8 @@
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { Arrangement } from "@21n/elements/direction.enum";
-  import {
-    NodeType,
-    type INodeThumb
-  } from "@nucleum/features/memory/node/node.type";
+  import { type INodeThumb } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { cn } from "@21n/utils/ui.utils";
   import NodeThumbnail from "@nucleum/features/memory/node/thumbnail/NodeThumbnail.svelte";
   import { onDestroy, onMount } from "svelte";

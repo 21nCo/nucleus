@@ -1,13 +1,9 @@
 <script lang="ts">
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { cn } from "@21n/utils/ui.utils";
-  import {
-    type IKindleHighlight,
-    type ITextClip,
-    type IWebScreenshotClip,
-    NodeType
-  } from "@nucleum/features/memory/node/node.type";
+  import { type IKindleHighlight, type ITextClip, type IWebScreenshotClip } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { resolveContentPreview } from "@nucleum/features/memory/node/node.utils";
   import TextClipPreview from "@nucleum/features/memory/node/content/web/TextClipPreview.svelte";
   let {

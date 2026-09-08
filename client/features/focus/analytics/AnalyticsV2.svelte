@@ -15,7 +15,7 @@
   import AnalyticsPageView from "@nucleum/features/focus/analytics/page/AnalyticsPageView.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import {
     onAddPageClicked,
     onPagelabelChange,

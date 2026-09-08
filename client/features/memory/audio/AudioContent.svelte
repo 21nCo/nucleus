@@ -15,7 +15,7 @@
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Taco } from "@nucleum/client/runtime/inference/taco";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import { isRecordId } from "@nucleum/datafn/resource.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import type { IJobStatus } from "@nucleum/client/runtime/inference/taco.type";

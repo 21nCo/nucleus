@@ -5,7 +5,7 @@
  */
 import { Product } from "@nucleum/client/config/product.type";
 import { Action } from "@nucleum/client/config/action.enum";
-import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+import { PointronAction } from "@nucleum/client/config/focus-action.enum";
 
 /** Product navigation supplied by the application shell to capability components. */
 export const PRODUCT_NAV_CONTEXT = Symbol("product-navigation");

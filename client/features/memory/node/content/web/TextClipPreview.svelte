@@ -1,7 +1,8 @@
 <script lang="ts">
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";
-  import { type INode, NodeType } from "@nucleum/features/memory/node/node.type";
+  import { type INode } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { cn, convertToRGBA } from "@21n/utils/ui.utils";
   import { truncateString } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";

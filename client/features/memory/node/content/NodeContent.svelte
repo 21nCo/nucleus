@@ -1,10 +1,7 @@
 <script lang="ts">
   import Text from "@21n/elements/text/Text.svelte";
-  import {
-    NodeType,
-    headingNodeTypes,
-    type INodeStructure
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes, type INodeStructure } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { TextStyle } from "@21n/elements/text/text.enum";
   import {
     hierarchyFactorLimit,

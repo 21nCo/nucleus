@@ -14,7 +14,7 @@
     saveOnlyPages,
     screenShotOnlyPages
   } from "@nucleum/features/memory/common/urlMap";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { highlightStore } from "@nucleum/features/memory/common/highlighters/highlight.store";
   import { ExtensionEvent } from "@nucleum/extensions/extension.type";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";

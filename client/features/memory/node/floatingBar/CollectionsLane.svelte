@@ -20,10 +20,8 @@
     resourceInList
   } from "@nucleum/datafn/resource.utils";
   import { popover, tooltip } from "@nucleum/actions/popover.action";
-  import {
-    headingNodeTypes,
-    NodeType
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { ResourceError } from "@nucleum/datafn/resource-error";
   import { ResourceErrorCode } from "@nucleum/schema/resource-error.enum";

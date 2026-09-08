@@ -5,11 +5,8 @@
   import { formatDatetime } from "@21n/utils/time.utils";
   import { getContext, onMount } from "svelte";
   import { resolveContentPreview } from "@nucleum/features/memory/node/node.utils";
-  import {
-    NodeType,
-    socialPostNodeTypeList,
-    socialProfileWithImageUnavailable
-  } from "@nucleum/features/memory/node/node.type";
+  import { socialPostNodeTypeList, socialProfileWithImageUnavailable } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import type { INode } from "@nucleum/features/memory/node/node.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";

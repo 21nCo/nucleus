@@ -12,7 +12,7 @@
     ResourceAccessPointState
   } from "@nucleum/datafn/resource.type";
   import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import type { INodeThumb } from "@nucleum/features/memory/node/node.type";
   import type {
     ICollection,
@@ -20,7 +20,7 @@
   } from "@nucleum/features/collections/collection.type";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
   import type { ISideNavCombination } from "@nucleum/features/spaces/combination/combination.type";
-  import type { IFile } from "@nucleum/features/files/file.type";
+  import type { IFile } from "@nucleum/stores/files/file.type";
   import { determineResourceType } from "@nucleum/datafn/resource.utils";
   import NodeItems from "@nucleum/features/memory/node/NodeRecords.svelte";
   import LibraryLoadingPulse from "@nucleum/application/library/LibraryLoadingPulse.svelte";

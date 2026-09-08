@@ -18,7 +18,7 @@
     type IMediaGridNode
   } from "@nucleum/features/memory/node/node.type";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import type { IFile } from "@nucleum/features/files/file.type";
+  import type { IFile } from "@nucleum/stores/files/file.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
   import { cn } from "@21n/utils/ui.utils";
   import { debouncer } from "@21n/utils/utils";

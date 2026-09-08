@@ -169,7 +169,7 @@ const violations = edges.filter(production).filter(({ from, to }) => {
   )
     return true;
   if (
-    from.startsWith("client/components/") &&
+    /^client\/(components|elements)\//.test(from) &&
     /^client\/(features|products|application)\//.test(to)
   )
     return true;
@@ -224,7 +224,7 @@ for (const { from, to, typeOnly } of edges.filter(production)) {
   runtimeGraph.get(from).push(to);
 }
 for (const root of runtimeGraph.keys()) {
-  if (!/^client\/(stores|utils|actions)\//.test(root)) continue;
+  if (!/^client\/(stores|utils|actions|components|elements)\//.test(root)) continue;
   const pending = [...runtimeGraph.get(root)];
   const visited = new Set();
   while (pending.length) {

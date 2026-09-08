@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import ShareContentSaver from "@nucleum/features/memory/capture/ShareContentSaver.svelte";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import type { IPasteCaptureData } from "@nucleum/features/memory/capture/capture.type";
   import { sanitizeAndResolve } from "@nucleum/features/memory/node/url.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";

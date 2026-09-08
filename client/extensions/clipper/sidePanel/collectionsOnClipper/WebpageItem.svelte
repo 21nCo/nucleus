@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from "@21n/elements/Icon.svelte";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { Size } from "@21n/elements/size.enum";
   import { cn } from "@21n/utils/ui.utils";
   import type { CollectionItem } from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/types";

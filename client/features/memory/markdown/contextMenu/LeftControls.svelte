@@ -5,13 +5,8 @@
     type IBlock,
     type IEmbedBlockBody
   } from "@nucleum/features/memory/markdown/md.type";
-  import {
-    headingNodeTypes,
-    mediaNodeTypeList,
-    NodeType,
-    structuralNodeTypes,
-    webNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes, mediaNodeTypeList, structuralNodeTypes, webNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { onMount } from "svelte";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
   import { Size } from "@21n/elements/size.enum";

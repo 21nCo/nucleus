@@ -10,7 +10,7 @@
   import { toasts } from "@nucleum/stores/notification.store";
   import { dragSelection } from "@nucleum/actions/dragSelection.action";
   import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { toSvelteStore } from "@datafn/svelte";
   import { time } from "@datafn/client";

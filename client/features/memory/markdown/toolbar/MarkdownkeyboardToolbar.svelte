@@ -4,13 +4,8 @@
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import {
-    embedNodeTypeList,
-    mediaNodeTypeList,
-    NodeType,
-    structuralNodeTypes,
-    webNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { embedNodeTypeList, mediaNodeTypeList, structuralNodeTypes, webNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import context from "@nucleum/stores/context.store";
   import { ColorStrength } from "@21n/theme/appearance.type";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";

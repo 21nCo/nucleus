@@ -1,6 +1,6 @@
 <script lang="ts">
   import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItem.svelte";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { enumToString } from "@21n/shared-utils/text.utils";
   import { onMount } from "svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";

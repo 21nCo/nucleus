@@ -1,12 +1,8 @@
 <script lang="ts">
   import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import { ExtensionEvent } from "@nucleum/extensions/extension.type";
-  import {
-    NodeType,
-    type IClip,
-    type ITextClip,
-    type IVideoTimestampClip
-  } from "@nucleum/features/memory/node/node.type";
+  import { type IClip, type ITextClip, type IVideoTimestampClip } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { relayToContentScript } from "@21n/utils/extension.utils";
   import Clip from "@nucleum/extensions/clipper/sidePanel/clips/Clip.svelte";
   import { wait } from "@21n/shared-utils/wait";

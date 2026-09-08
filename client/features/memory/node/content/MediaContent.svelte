@@ -1,8 +1,6 @@
 <script lang="ts">
-  import {
-    NodeType,
-    webNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { webNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
   import { type IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import { AccessMode } from "@nucleum/datafn/resource.type";

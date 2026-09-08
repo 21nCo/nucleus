@@ -11,7 +11,7 @@ import { Product } from "@nucleum/client/config/product.type";
 import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import { appStore } from "@nucleum/stores/app.store";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { NodeType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { CollectionType } from "@nucleum/features/collections/collection.type";
 import { resolveProductResources } from "@nucleum/datafn/resource.utils";
 import { ObjectiveStatus, ObjectiveType } from "@nucleum/features/focus/goals/goal.type";

@@ -12,7 +12,7 @@
   import FocusPlayerTimeText from "@nucleum/features/focus/player/FocusPlayerTimeText.svelte";
   import InlineLoadingAnimation from "@21n/elements/feedback/animations/InlineLoadingAnimation.svelte";
   import { SessionState } from "@nucleum/features/focus/sessionState.enum";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { cn } from "@21n/utils/ui.utils";
   import CustomColorPropagator from "@21n/elements/style/CustomColorPropagator.svelte";
   import context from "@nucleum/stores/context.store";

@@ -27,7 +27,7 @@
   } from "@nucleum/datafn/resource.utils";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { datafn } from "@nucleum/datafn/datafn.store";
   let {
     types = undefined,

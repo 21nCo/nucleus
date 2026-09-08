@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { ListType, NodeType } from "@nucleum/features/memory/node/node.type";
+  import { ListType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import TextContent from "@nucleum/features/memory/markdown/content/TextContent.svelte";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
   import type { IListBlockBody } from "@nucleum/features/memory/markdown/md.type";

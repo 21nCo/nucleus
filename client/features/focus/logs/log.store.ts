@@ -16,7 +16,7 @@ import { sessionStore } from "@nucleum/features/focus/session.store";
 import { BlockType } from "@nucleum/features/focus/session.type";
 import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
-import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+import { PointronAction } from "@nucleum/client/config/focus-action.enum";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
 import { deepCopy } from "@21n/shared-utils/obj.utils";
 import { datafn } from "@nucleum/datafn/datafn.store";

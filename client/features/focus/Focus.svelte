@@ -9,7 +9,7 @@
   import { activeSession } from "@nucleum/features/focus/session.store";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import Zen from "@nucleum/features/focus/zen/Zen.svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import Panel from "@21n/layout/paint/Panel.svelte";
   import FloatingButton from "@21n/elements/button/FloatingButton.svelte";
   import AdvancedPortrait from "@nucleum/features/focus/advanced/AdvancedPortrait.svelte";

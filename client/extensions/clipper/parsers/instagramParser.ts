@@ -1,10 +1,6 @@
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
-import {
-  NodeType,
-  type IInstagramPost,
-  type IInstagramReel,
-  type IInstagramProfile
-} from "@nucleum/features/memory/node/node.type";
+import { type IInstagramPost, type IInstagramReel, type IInstagramProfile } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import {
   createUrlFilter,
   isHostnameMatch

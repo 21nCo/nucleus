@@ -4,13 +4,8 @@
     IMarkdown,
     IMarkdownParams
   } from "@nucleum/features/memory/markdown/md.type";
-  import {
-    NodeType,
-    headingNodeTypes,
-    type IActiveNode,
-    type INodeHierarchyV1,
-    type INodeStructure
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes, type IActiveNode, type INodeHierarchyV1, type INodeStructure } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { onDestroy, onMount } from "svelte";
   import Markdown from "@nucleum/features/memory/markdown/Markdown.svelte";
   import {

@@ -1,6 +1,7 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
-import { NodeType, type INode } from "@nucleum/features/memory/node/node.type";
+import { type INode } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import {
   contentTypeMap,
   fetchYouTubeMetadata

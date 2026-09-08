@@ -2799,7 +2799,7 @@
       "path": "client/features/calendar/events/event.utils.ts",
       "disposition": "retained",
       "destinations": [
-        "client/features/calendar/events/event.utils.ts"
+        "client/utils/event.utils.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Capability-owned contract retained beside implementation; external production imports are declared in the feature entrypoint registry.",
@@ -3092,7 +3092,7 @@
       "path": "client/features/files/file.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/features/files/file.type.ts"
+        "client/stores/files/file.type.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Capability-owned contract retained beside implementation; external production imports are declared in the feature entrypoint registry.",
@@ -4475,7 +4475,8 @@
       "path": "client/features/memory/node/node.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/features/memory/node/node.type.ts"
+        "client/features/memory/node/node.type.ts",
+        "schema/legacy/node-type.enum.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Capability-owned contract retained beside implementation; external production imports are declared in the feature entrypoint registry.",
@@ -8018,7 +8019,7 @@
       "path": "client/types/pointron/pointronAction.enum.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/features/focus/pointronAction.enum.ts"
+        "client/config/focus-action.enum.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",

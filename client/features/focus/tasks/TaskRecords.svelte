@@ -12,7 +12,7 @@
   import type { TaskLibrarySubType as SubType } from "./task.type";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { onMount } from "svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import type { IEvent } from "@21n/elements/input/event.type";
   import CreateTaskInlineWizard from "./CreateTaskInlineWizard.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";

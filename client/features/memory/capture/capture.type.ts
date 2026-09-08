@@ -2,10 +2,8 @@ import type { IProperty } from "@nucleum/features/collections/properties/propert
 import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import type { IMarkdown } from "@nucleum/features/memory/markdown/md.type";
-import type {
-  INodeStructure,
-  NodeType
-} from "@nucleum/features/memory/node/node.type";
+import type { INodeStructure } from "@nucleum/features/memory/node/node.type";
+import type { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import type { LinkType } from "@nucleum/datafn/link.type";
 import type {
   CollectionType,

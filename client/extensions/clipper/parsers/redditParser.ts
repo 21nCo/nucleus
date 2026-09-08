@@ -1,10 +1,6 @@
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
-import {
-  NodeType,
-  type IRedditPost,
-  type IRedditProfile,
-  type IRedditSub
-} from "@nucleum/features/memory/node/node.type";
+import { type IRedditPost, type IRedditProfile, type IRedditSub } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { createUrlFilter } from "@nucleum/features/memory/node/url.utils";
 import { generateRandomIdv2 } from "@21n/shared-utils/crypto.utils";
 import type {

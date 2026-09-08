@@ -7,7 +7,7 @@
     CollectionType
   } from "@nucleum/features/collections/collection.type";
   import type { ICollection } from "@nucleum/features/collections/collection.type";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { activeResourceFilter } from "@21n/utils/utils";
   import CollectionsList from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/CollectionsList.svelte";
   import CollectionItemsView from "@nucleum/extensions/clipper/sidePanel/collectionsOnClipper/CollectionItemsView.svelte";

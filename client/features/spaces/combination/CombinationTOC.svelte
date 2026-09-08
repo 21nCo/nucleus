@@ -6,10 +6,8 @@
     ActiveNodeStore,
     type IActiveNodeStore
   } from "@nucleum/features/memory/node/node.store";
-  import {
-    headingNodeTypes,
-    NodeType
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { cn } from "@nucleum/client/utils/ui.utils";
 
   let {

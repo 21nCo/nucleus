@@ -7,7 +7,7 @@
     webpage
   } from "@nucleum/extensions/clipper/contentScripts/store";
   import { AlertType } from "@nucleum/stores/notifications/notification.type";
-  import type { NodeType } from "@nucleum/features/memory/node/node.type";
+  import type { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { enumToString } from "@21n/shared-utils/text.utils";
   let {
     contentType,

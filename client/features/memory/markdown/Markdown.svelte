@@ -33,7 +33,7 @@
     resourceInList,
     shiftResourceInArray
   } from "@nucleum/datafn/resource.utils";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import context from "@nucleum/stores/context.store";
   import MarkdownkeyboardToolbar from "@nucleum/features/memory/markdown/toolbar/MarkdownkeyboardToolbar.svelte";
   import { debouncer } from "@21n/utils/utils";

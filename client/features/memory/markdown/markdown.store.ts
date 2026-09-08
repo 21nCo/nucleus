@@ -1,8 +1,5 @@
-import {
-  NodeType,
-  type StructuralNodeType,
-  structuralNodeTypes
-} from "@nucleum/features/memory/node/node.type";
+import { type StructuralNodeType, structuralNodeTypes } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { get, writable } from "svelte/store";
 import { tick } from "svelte";
 import {

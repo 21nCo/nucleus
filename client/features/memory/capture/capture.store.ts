@@ -2,23 +2,8 @@ import { retrieveUrlData } from "@nucleum/features/memory/capture/url-data";
 import { get, writable } from "svelte/store";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { LinkType } from "@nucleum/datafn/link.type";
-import {
-  NodeType,
-  type INodeCapture,
-  type IMediaNode,
-  type INodeThumb,
-  type IMediaGridItem,
-  type IWebPage,
-  type IAudioMetadata,
-  type IImageMetadata,
-  type IImageNode,
-  headingNodeTypes,
-  NodeMetaType,
-  type INodeStructure,
-  type INode,
-  type IWebNodeType,
-  type IClip
-} from "@nucleum/features/memory/node/node.type";
+import { type INodeCapture, type IMediaNode, type INodeThumb, type IMediaGridItem, type IWebPage, type IAudioMetadata, type IImageMetadata, type IImageNode, headingNodeTypes, NodeMetaType, type INodeStructure, type INode, type IWebNodeType, type IClip } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import {
   CaptureMethod,
   type IActiveCapture,
@@ -52,7 +37,7 @@ import {
   resourceInList
 } from "@nucleum/datafn/resource.utils";
 import { resolveResource } from "@nucleum/datafn/resource-query.utils";
-import type { IFile } from "@nucleum/features/files/file.type";
+import type { IFile } from "@nucleum/stores/files/file.type";
 import {
   generateMiniRandomId,
   generateSimpleRandomId

@@ -8,7 +8,7 @@
   import account from "$lib/client/stores/account.store";
   import { ButtonVariant } from "@21n/elements/button/button.type";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-  import { MAX_FILE_SIZE_MB } from "@nucleum/features/files/file.constants";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/stores/files/file.constants";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
   import modalStore from "@nucleum/stores/overlays/modal.store";
   import { Size } from "@21n/elements/size.enum";

@@ -40,7 +40,7 @@ import AnalyticsV2 from "@nucleum/features/focus/analytics/AnalyticsV2.svelte";
 import { Orientation, Placement } from "@21n/elements/direction.enum";
 import PresetSettings from "@nucleum/features/focus/advanced/presets/PresetSettings.svelte";
 import { activeSession } from "@nucleum/features/focus/session.store";
-import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+import { PointronAction } from "@nucleum/client/config/focus-action.enum";
 import { PointronEvent } from "@nucleum/client/config/events/focus-event.enum";
 import AnalyticsViewsPageEditMobile from "@nucleum/features/focus/analytics/AnalyticsViewsPageEditMobile.svelte";
 import { appStore } from "@nucleum/stores/app.store";

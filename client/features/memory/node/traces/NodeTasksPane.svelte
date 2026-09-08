@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import TaskThumbnail from "@nucleum/features/focus/tasks/TaskThumbnail.svelte";

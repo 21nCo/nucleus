@@ -2,7 +2,7 @@
   import type { Snippet } from "svelte";
   import { popover } from "@nucleum/actions/popover.action";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { createEventPropagator } from "@nucleum/features/calendar/events/event.utils";
+  import { createEventPropagator } from "@21n/utils/event.utils";
   import view from "@nucleum/stores/view.store";
   import { Placement } from "@21n/elements/direction.enum";
   import {

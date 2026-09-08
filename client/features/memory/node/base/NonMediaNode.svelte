@@ -1,4 +1,5 @@
 <script lang="ts">
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
   import type { IActiveNodeStore } from "@nucleum/features/memory/node/node.store";
   import { updateActiveResource } from "@nucleum/stores/resources/active-resource.store";
@@ -40,7 +41,7 @@
   import { hoverable } from "@nucleum/actions/hover.action";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonVariant } from "@21n/elements/button/button.type";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 
   let {
     node,
@@ -282,7 +283,7 @@
                           id={`title-${$node.id}`}
                           size={Size.xl}
                           bind:value={$node.label}
-                          isExperimentalMdInput={true}
+                          inlineEditor={InlineMarkdownTextInput}
                           style={InputStyle.PLAIN}
                           placeholder="Node title"
                           width="w-full"

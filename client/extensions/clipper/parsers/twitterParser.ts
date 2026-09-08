@@ -1,11 +1,8 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
 import { ClipperElementIdentifier } from "@nucleum/client/config/events/clipper-event.type";
-import {
-  NodeType,
-  type ITweet,
-  type ITwitterProfile
-} from "@nucleum/features/memory/node/node.type";
+import { type ITweet, type ITwitterProfile } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { contentTypeMap } from "@nucleum/features/memory/node/url.utils";
 import type { ISocialPost } from "@nucleum/extensions/clipper/clipper.type";
 import {

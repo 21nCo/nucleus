@@ -5,7 +5,7 @@
   import { Size } from "@21n/elements/size.enum";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { toasts } from "@nucleum/stores/notification.store";

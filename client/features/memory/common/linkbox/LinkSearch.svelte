@@ -12,7 +12,7 @@
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { isExtensionEnvironment } from "@21n/utils/browser.utils";
   import view from "@nucleum/stores/view.store";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import {
     CollectionLayout,
     CollectionType

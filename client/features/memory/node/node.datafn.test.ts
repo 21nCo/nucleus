@@ -10,7 +10,7 @@ import { Product } from "@nucleum/client/config/product.type";
 import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { appStore } from "@nucleum/stores/app.store";
-import { NodeType } from "./node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { CaptureMethod } from "@nucleum/features/memory/capture/capture.type";
 
 describe("Memotron DataFn resources", () => {

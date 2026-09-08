@@ -9,7 +9,7 @@
   import { PointronEvent } from "@nucleum/client/config/events/focus-event.enum";
   import { postNotificationToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import context from "@nucleum/stores/context.store";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
 

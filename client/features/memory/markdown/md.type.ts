@@ -1,13 +1,7 @@
 import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-import type {
-  NodeType,
-  ListType,
-  SimpleTextNodeType,
-  ListNodeType,
-  INodeStructure,
-  INodeMetadata
-} from "@nucleum/features/memory/node/node.type";
+import type { ListType, SimpleTextNodeType, ListNodeType, INodeStructure, INodeMetadata } from "@nucleum/features/memory/node/node.type";
+import type { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import type { IResourceBase } from "@nucleum/datafn/resource.type";
 
 export type IMarkdownStore = IMarkdown & {

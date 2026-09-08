@@ -1,6 +1,7 @@
 <script lang="ts">
   import { appStore } from "@nucleum/stores/app.store";
-  import { NodeType, socialSubNodeTypeList } from "@nucleum/features/memory/node/node.type";
+  import { socialSubNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import type { INode } from "@nucleum/features/memory/node/node.type";
 
   let { node }: { node: INode } = $props();

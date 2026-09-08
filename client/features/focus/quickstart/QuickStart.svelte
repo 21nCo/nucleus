@@ -3,7 +3,7 @@
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import { Size } from "@21n/elements/size.enum";
   import { Layout } from "@21n/layout/layout-mode.type";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import Button from "@21n/elements/button/Button.svelte";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";

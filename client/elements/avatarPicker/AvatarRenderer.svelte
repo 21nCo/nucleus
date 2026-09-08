@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import context from "@nucleum/stores/context.store";
   import { AvatarType, type IAvatar } from "@21n/elements/avatarPicker/avatar.type";
   import { OperatingSystem } from "@nucleum/client/runtime/context.type";

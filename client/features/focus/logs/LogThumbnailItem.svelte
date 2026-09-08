@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import Divider from "@21n/elements/Divider.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import Text from "@21n/elements/text/Text.svelte";

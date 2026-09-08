@@ -11,18 +11,8 @@
   import BlockContent from "@nucleum/features/memory/markdown/content/BlockContent.svelte";
   import LeftControls from "@nucleum/features/memory/markdown/contextMenu/LeftControls.svelte";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
-  import {
-    embedNodeTypeList,
-    headingNodeTypes,
-    mediaNodeTypeList,
-    NodeType,
-    type StructuralNodeType,
-    structuralNodeTypes,
-    simpleTextNodeTypeList,
-    webNodeTypeList,
-    nonSimpleTextNodeTypeList,
-    listNodeTypes
-  } from "@nucleum/features/memory/node/node.type";
+  import { embedNodeTypeList, headingNodeTypes, mediaNodeTypeList, type StructuralNodeType, structuralNodeTypes, simpleTextNodeTypeList, webNodeTypeList, nonSimpleTextNodeTypeList, listNodeTypes } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { cn } from "@21n/utils/ui.utils";
   import { setContext } from "svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
@@ -42,7 +32,7 @@ import { resolvePlainOffsetForMdEnd, resolvePlainText, splitMarkdownAtPlainOffse
   import { isValidString, truncateString } from "@21n/shared-utils/text.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { fileDrop } from "@nucleum/actions/fileDrop.action";
-  import { MAX_FILE_SIZE_MB } from "@nucleum/features/files/file.constants";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/stores/files/file.constants";
   import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";

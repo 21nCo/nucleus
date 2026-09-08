@@ -15,7 +15,7 @@
     UIState,
     UIStateScope
   } from "@nucleum/stores/uiState/uiState.type";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import context from "@nucleum/stores/context.store";
 
   let currentStep = 0;

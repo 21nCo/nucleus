@@ -31,7 +31,7 @@
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType, type IInlineStatus } from "@nucleum/stores/notifications/notification.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
 
   let {
     objective,

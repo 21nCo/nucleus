@@ -1,4 +1,5 @@
 <script lang="ts">
+  import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
   import type { IActiveCaptureStore } from "@nucleum/features/memory/capture/capture.store";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { InputStyle } from "@21n/elements/input/input.type";
@@ -43,7 +44,7 @@
     bind:value={$captureStore.label}
     style={InputStyle.PLAIN}
     id="capture-title"
-    isExperimentalMdInput={true}
+    inlineEditor={InlineMarkdownTextInput}
     placeholder="Title"
     isPreventDefaultOnEnter={true}
     onChange={() => {

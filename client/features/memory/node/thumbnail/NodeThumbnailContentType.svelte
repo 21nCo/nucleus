@@ -1,6 +1,7 @@
 <script lang="ts">
   import { properCase } from "@21n/shared-utils/text.utils";
-  import { NodeType, type INode } from "@nucleum/features/memory/node/node.type";
+  import { type INode } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   let { item }: { item: INode } = $props();
   function formatContentType(contentType: string) {
     if (

@@ -9,7 +9,7 @@
   import type { ICoverLayout } from "@nucleum/features/collections/collection.type";
   import { Placement } from "@21n/elements/direction.enum";
   import { hoverable } from "@nucleum/actions/hover.action";
-  import type { IImageRepositionerOptions } from "@nucleum/features/files/file.type";
+  import type { IImageRepositionerOptions } from "@nucleum/stores/files/file.type";
   import { resizable } from "@nucleum/actions/resize.action";
   import view from "@nucleum/stores/view.store";
   import { debouncer } from "@21n/utils/utils";

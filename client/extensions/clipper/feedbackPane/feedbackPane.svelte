@@ -11,13 +11,11 @@
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { AlertType } from "@nucleum/stores/notifications/notification.type";
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";
-  import {
-    NodeType,
-    socialPostNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { socialPostNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { resolveContentTypeString } from "@nucleum/extensions/clipper/clipper.utils";
   import FeedbackPaneBase from "@nucleum/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import {
     determineResourceType,

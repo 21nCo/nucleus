@@ -1,8 +1,6 @@
 import type { IToggleItem } from "@21n/elements/toggle/toggle.type";
-import {
-  NodeType,
-  type IPdfBookmarkBody
-} from "@nucleum/features/memory/node/node.type";
+import { type IPdfBookmarkBody } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import {
   AnnotationType,
   type Coords,

@@ -3,12 +3,8 @@
   import Icon from "@21n/elements/Icon.svelte";
   import type { IAvatar } from "@21n/elements/avatarPicker/avatar.type";
   import { Size } from "@21n/elements/size.enum";
-  import {
-    type IActiveNode,
-    type INode,
-    NodeType,
-    webNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { type IActiveNode, type INode, webNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import {
     resolveFileIcon,
     resolveNodeIcon

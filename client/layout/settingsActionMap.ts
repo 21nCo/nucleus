@@ -18,7 +18,7 @@ import SyncSettings from "@nucleum/application/settings/sync/SyncSettings.svelte
 import TacoSettings from "@nucleum/application/settings/taco/TacoSettings.svelte";
 import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import AnalyticsSettings from "@nucleum/products/pointron/settings/AnalyticsSettings.svelte";
-import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+import { PointronAction } from "@nucleum/client/config/focus-action.enum";
 import SessionSettings from "@nucleum/products/pointron/settings/SessionSettings.svelte";
 import ModSettings from "@nucleum/application/settings/mod/ModSettings.svelte";
 import DeveloperSettings from "@nucleum/application/settings/developer/DeveloperSettings.svelte";

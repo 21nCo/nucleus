@@ -1,11 +1,7 @@
 <script lang="ts">
   import MediaContentResolver from "@nucleum/features/memory/node/content/MediaContentResolver.svelte";
-  import {
-    mediaNodeTypeList,
-    NodeType,
-    type INode,
-    type INodeThumb
-  } from "@nucleum/features/memory/node/node.type";
+  import { mediaNodeTypeList, type INode, type INodeThumb } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { getContext, onMount, untrack } from "svelte";
   import { get } from "svelte/store";
   import type { IEmbedBlockBody } from "@nucleum/features/memory/markdown/md.type";
@@ -32,8 +28,8 @@
   import { formatBytes } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
-  import { fileStore } from "@nucleum/features/files/file.store";
-  import type { IFile } from "@nucleum/features/files/file.type";
+  import { fileStore } from "@nucleum/stores/files/file.store";
+  import type { IFile } from "@nucleum/stores/files/file.type";
   import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
   import {
     fetchYouTubeMetadata,

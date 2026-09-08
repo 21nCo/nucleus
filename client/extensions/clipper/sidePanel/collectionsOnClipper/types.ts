@@ -1,5 +1,5 @@
 import { CollectionType } from "@nucleum/features/collections/collection.type";
-import type { NodeType } from "@nucleum/features/memory/node/node.type";
+import type { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 
 export interface CollectionData {
   id: string;

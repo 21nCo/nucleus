@@ -7,12 +7,9 @@
   import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/elements/size.enum";
-  import FileView from "@nucleum/features/files/FileView.svelte";
-  import {
-    NodeType,
-    type INode,
-    type INodeThumb
-  } from "@nucleum/features/memory/node/node.type";
+  import FileView from "@nucleum/components/files/FileView.svelte";
+  import { type INode, type INodeThumb } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import {
     resolveNodeContentLabel,
     resolveNodeIcon

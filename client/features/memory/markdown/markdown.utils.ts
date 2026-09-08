@@ -1,14 +1,6 @@
 import { type IBlockInterface, type IMarkdownStore, type IBlock, type IEscapeShortcut, type IListBlockBody, type IBlockBody } from "@nucleum/features/memory/markdown/md.type";
-import {
-  type INode,
-  type IActiveNode,
-  NodeType,
-  simpleTextNodeTypeList,
-  headingNodeTypes,
-  type INodeStructure,
-  type ListNodeType,
-  type SimpleTextNodeType
-} from "@nucleum/features/memory/node/node.type";
+import { type INode, type IActiveNode, simpleTextNodeTypeList, headingNodeTypes, type INodeStructure, type ListNodeType, type SimpleTextNodeType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { generateRandomIdv2 } from "@21n/shared-utils/crypto.utils";
 
 type NestedActiveNode = Omit<IActiveNode, "children"> & {

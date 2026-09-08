@@ -7,10 +7,8 @@
     feedbackPane,
     webpage
   } from "@nucleum/extensions/clipper/contentScripts/store";
-  import {
-    NodeType,
-    type IWebScreenshotClip
-  } from "@nucleum/features/memory/node/node.type";
+  import { type IWebScreenshotClip } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { relayToBackgroundScript } from "@21n/utils/extension.utils";

@@ -1,9 +1,6 @@
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
-import {
-  NodeType,
-  type IFacebookPost,
-  type IFacebookProfile
-} from "@nucleum/features/memory/node/node.type";
+import { type IFacebookPost, type IFacebookProfile } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import {
   createUrlFilter,
   isHostnameMatch

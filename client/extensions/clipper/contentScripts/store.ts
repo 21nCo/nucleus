@@ -24,25 +24,8 @@ import {
   LinkType,
   type ILinkTag
 } from "@nucleum/datafn/link.type";
-import {
-  type IClip,
-  type IClipCapture,
-  type IKindleBook,
-  type IKindleHighlight,
-  type INode,
-  type INodePropertyValue,
-  type ITextClip,
-  type ITweet,
-  type ITwitterProfile,
-  type IVideoBookmarkCapture,
-  type IVideoTimestampClip,
-  type IWebPage,
-  type IWebScreenshotClip,
-  NodeIdPrefix,
-  NodeType,
-  socialPostNodeTypeList,
-  socialProfileNodeTypeList
-} from "@nucleum/features/memory/node/node.type";
+import { type IClip, type IClipCapture, type IKindleBook, type IKindleHighlight, type INode, type INodePropertyValue, type ITextClip, type ITweet, type ITwitterProfile, type IVideoBookmarkCapture, type IVideoTimestampClip, type IWebPage, type IWebScreenshotClip, NodeIdPrefix, socialPostNodeTypeList, socialProfileNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { generateNodeIdPrefixed } from "@nucleum/features/memory/node/node.utils";
 import {
   isSameAsCurrentUrl,

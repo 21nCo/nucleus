@@ -1,16 +1,7 @@
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { LinkType } from "@nucleum/datafn/link.type";
-import {
-  type IActiveNode,
-  type INode,
-  NodeType,
-  type INodeLinkThumb,
-  canHaveTraces,
-  NodeView,
-  headingNodeTypes,
-  mediaNodeTypeList,
-  socialPostNodeTypeList
-} from "@nucleum/features/memory/node/node.type";
+import { type IActiveNode, type INode, type INodeLinkThumb, canHaveTraces, NodeView, headingNodeTypes, mediaNodeTypeList, socialPostNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { ResourcePanelType } from "@nucleum/stores/resources/resource-panel.type";
 import { ActiveResourceStore } from "@nucleum/stores/resources/active-resource.store";
 import { PanelSwitcherMixin } from "@nucleum/stores/resources/panelSwitcher.mixin";
@@ -38,7 +29,7 @@ import {
 import context from "@nucleum/stores/context.store";
 import { Embed } from "@nucleum/client/runtime/context.type";
 import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
-import { fileStore } from "@nucleum/features/files/file.store";
+import { fileStore } from "@nucleum/stores/files/file.store";
 import { recursivelyExtractAllChildrenIntoArray } from "@nucleum/features/memory/markdown/markdown.utils";
 import view from "@nucleum/stores/view.store";
 import { CollectibleStore } from "@nucleum/features/collections/collectible.store";

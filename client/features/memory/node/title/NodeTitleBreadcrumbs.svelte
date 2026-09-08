@@ -2,11 +2,8 @@
   import type { IBreadcrumbItem } from "@21n/elements/breadcrumbsV2/breadcrumbItem.type";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import Breadcrumbs from "@21n/elements/breadcrumbsV2/Breadcrumbs.svelte";
-  import {
-    headingNodeTypes,
-    NodeType,
-    type INode
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes, type INode } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import BreadcrumbMini from "@21n/elements/breadcrumb/BreadcrumbMini.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";

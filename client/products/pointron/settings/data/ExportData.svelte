@@ -1,7 +1,7 @@
 <script lang="ts">
   import Button from "@21n/elements/button/Button.svelte";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
-  import { fileStore } from "@nucleum/features/files/file.store";
+  import { fileStore } from "@nucleum/stores/files/file.store";
   import { stringify } from "@21n/shared-utils/json.utils";
   import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
   import { toasts } from "@nucleum/stores/notification.store";

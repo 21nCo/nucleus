@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { appStore } from "@nucleum/stores/app.store";
 
   let {

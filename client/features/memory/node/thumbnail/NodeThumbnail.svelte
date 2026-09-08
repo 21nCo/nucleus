@@ -2,15 +2,8 @@
   import { resolveNodeContextMenu } from "@nucleum/features/memory/node/node.store";
   import type { Snippet } from "svelte";
   import { Arrangement } from "@21n/elements/direction.enum";
-  import {
-    headingNodeTypes,
-    type INode,
-    type INodeThumb,
-    NodeType,
-    socialPostNodeTypeList,
-    socialProfileNodeTypeList,
-    socialProfileWithImageUnavailable
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes, type INode, type INodeThumb, socialPostNodeTypeList, socialProfileNodeTypeList, socialProfileWithImageUnavailable } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import {
     resolveContentPreview,
     resolveFilePreview,
@@ -24,7 +17,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import NodeThumbnailTitle from "@nucleum/features/memory/node/thumbnail/NodeThumbnailTitle.svelte";
   import TextClipPreview from "@nucleum/features/memory/node/content/web/TextClipPreview.svelte";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import {
     formatDatetime,
     formatSeconds,
@@ -35,8 +28,8 @@
   import NodeThumbnailPdfPreview from "@nucleum/features/memory/node/thumbnail/NodeThumbnailPdfPreview.svelte";
   import { TimeFormat } from "@21n/utils/time.type";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-  import { fileStore } from "@nucleum/features/files/file.store";
-  import type { IFile } from "@nucleum/features/files/file.type";
+  import { fileStore } from "@nucleum/stores/files/file.store";
+  import type { IFile } from "@nucleum/stores/files/file.type";
   import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import CollectionItemThumbnailProperties from "@nucleum/features/collections/properties/CollectionItemThumbnailProperties.svelte";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";

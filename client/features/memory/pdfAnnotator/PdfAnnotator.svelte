@@ -37,9 +37,9 @@
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import context from "@nucleum/stores/context.store";
   import { Embed, OperatingSystem } from "@nucleum/client/runtime/context.type";
-  import { fileStore } from "@nucleum/features/files/file.store";
+  import { fileStore } from "@nucleum/stores/files/file.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";
+  import { fileEmbedChannel } from "@nucleum/stores/files/fileEmbedChannel.store";
   import { fly } from "svelte/transition";
   import type { IPdfBookmarkBody } from "@nucleum/features/memory/node/node.type";
 

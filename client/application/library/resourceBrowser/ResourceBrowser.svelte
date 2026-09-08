@@ -26,7 +26,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import view from "@nucleum/stores/view.store";
   import { Display } from "@21n/elements/display.enum";
   import { bulkEditStore } from "@nucleum/stores/resources/bulkedit.store";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { Action } from "@nucleum/client/config/action.enum";
   let {
     resource,

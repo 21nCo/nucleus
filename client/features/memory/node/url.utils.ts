@@ -1,4 +1,4 @@
-import { NodeType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { sanitize } from "@21n/shared-utils/utils";
 import { isValidUrl } from "@21n/shared-utils/utils";
 

@@ -6,8 +6,8 @@ import { getBucketNameandKey, isUrlExpired } from "@21n/utils/account.utils";
 import { get } from "svelte/store";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { isRecordId } from "@nucleum/datafn/resource.utils";
-import type { IFile } from "@nucleum/features/files/file.type";
-import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";
+import type { IFile } from "@nucleum/stores/files/file.type";
+import { fileEmbedChannel } from "@nucleum/stores/files/fileEmbedChannel.store";
 import { OperatingSystem } from "@nucleum/client/runtime/context.type";
 import { datafn } from "@nucleum/datafn/datafn.store";
 

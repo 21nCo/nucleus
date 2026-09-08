@@ -5,7 +5,8 @@
   import { feedbackPane } from "@nucleum/extensions/clipper/contentScripts/store";
   import LinkBoxOnClipper from "@nucleum/features/memory/common/linkbox/LinkBoxOnClipper.svelte";
   import LinkItems from "@nucleum/features/memory/common/linkbox/LinkItems.svelte";
-  import { NodeType, type IClip } from "@nucleum/features/memory/node/node.type";
+  import { type IClip } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import NodeTitle from "@nucleum/features/memory/node/title/NodeTitle.svelte";
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { fly } from "svelte/transition";

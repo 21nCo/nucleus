@@ -9,13 +9,8 @@ import { InlineType } from "@21n/elements/markdown/inline.type";
   import BlockBrowser from "@nucleum/features/memory/markdown/blockBrowser/BlockBrowser.svelte";
   import EmojiPicker from "@nucleum/features/memory/markdown/content/EmojiPicker.svelte";
 
-  import {
-    headingNodeTypes,
-    ListType,
-    NodeType,
-    type ListNodeType,
-    type SimpleTextNodeType
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes, ListType, type ListNodeType, type SimpleTextNodeType } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { cn } from "@21n/utils/ui.utils";
   import Popover from "@21n/elements/popover/Popover.svelte";
   import InlineMarkdownTextInput from "@nucleum/features/memory/markdown/content/InlineMarkdownTextInput.svelte";

@@ -7,13 +7,10 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import InlineErrorMessage from "@21n/elements/text/InlineErrorMessage.svelte";
   import AudioCapture from "@nucleum/features/memory/capture/AudioCapture.svelte";
-  import { MAX_FILE_SIZE_MB } from "@nucleum/features/files/file.constants";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/stores/files/file.constants";
   import { resolveFileUploadErrorMessage } from "@nucleum/features/memory/capture/upload-error.utils";
-  import {
-    mediaNodeTypeList,
-    NodeType,
-    webNodeTypeList
-  } from "@nucleum/features/memory/node/node.type";
+  import { mediaNodeTypeList, webNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import context from "@nucleum/stores/context.store";
   import { ColorStrength } from "@21n/theme/appearance.type";
   import {

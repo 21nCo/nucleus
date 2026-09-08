@@ -1,9 +1,6 @@
 import type { OmitForCapture } from "@nucleum/datafn/resource.type";
-import {
-  NodeType,
-  type ILinkedInPost,
-  type ILinkedInProfile
-} from "@nucleum/features/memory/node/node.type";
+import { type ILinkedInPost, type ILinkedInProfile } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import { parseRelativeTimeToISO } from "@21n/utils/time.utils";
 import type { ISocialPost } from "@nucleum/extensions/clipper/clipper.type";
 import {

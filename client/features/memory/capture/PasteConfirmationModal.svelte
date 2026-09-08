@@ -2,9 +2,9 @@
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { onMount } from "svelte";
-  import { MAX_FILE_SIZE_MB } from "@nucleum/features/files/file.constants";
+  import { MAX_FILE_SIZE_MB } from "@nucleum/stores/files/file.constants";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { clipboard } from "@nucleum/features/memory/capture/capture.store";
   import type { IPasteCaptureData } from "@nucleum/features/memory/capture/capture.type";
   import { resolvePasteContents } from "@nucleum/features/memory/capture/capture.utils";

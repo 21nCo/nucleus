@@ -11,7 +11,7 @@
   import Button from "@21n/elements/button/Button.svelte";
   import { ButtonStyle } from "@21n/elements/button/button.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   let {
     selectedItem = $bindable(0),
     onSelect = undefined

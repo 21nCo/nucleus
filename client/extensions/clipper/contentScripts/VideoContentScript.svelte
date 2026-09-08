@@ -1,6 +1,6 @@
 <script lang="ts">
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { onMount } from "svelte";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import Icon from "@21n/elements/Icon.svelte";

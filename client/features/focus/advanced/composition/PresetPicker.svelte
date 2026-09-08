@@ -7,7 +7,7 @@
   import { ButtonStyle, ButtonVariant } from "@21n/elements/button/button.type";
   import { cn } from "@21n/utils/ui.utils";
   import { appStore } from "@nucleum/stores/app.store";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   let {
     isExpandedVariant = true,
     parentBackgroundIndex = 1

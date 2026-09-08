@@ -11,7 +11,7 @@
   import { onMount } from "svelte";
   import type { IFocusItem } from "@nucleum/features/focus/session.type";
   import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { Size } from "@21n/elements/size.enum";
   import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
   import { datafn } from "@nucleum/datafn/datafn.store";

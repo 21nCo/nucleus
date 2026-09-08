@@ -2,10 +2,8 @@
   import { onDestroy, onMount } from "svelte";
   import { createClipPointer } from "@nucleum/extensions/clipper/clipper.utils";
   import { ExtensionEvent } from "@nucleum/extensions/extension.type";
-  import {
-    NodeType,
-    type IClipCapture
-  } from "@nucleum/features/memory/node/node.type";
+  import { type IClipCapture } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import { appEvents } from "@nucleum/stores/notification.store";

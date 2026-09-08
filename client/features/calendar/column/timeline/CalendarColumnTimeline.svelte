@@ -20,7 +20,7 @@
   import { TimeScaleUnit } from "@21n/utils/time.type";
   import BoxButton from "@21n/elements/button/BoxButton.svelte";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { Action } from "@nucleum/client/config/action.enum";
 
   let {

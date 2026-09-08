@@ -3,7 +3,7 @@
   import { syncStore } from "@nucleum/extensions/clipper/contentScripts/store";
   import FeedbackPaneBase from "@nucleum/extensions/clipper/feedbackPane/FeedbackPaneBase.svelte";
   import { logger } from "@nucleum/client/runtime/logging/logger";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import { SyncStatus } from "@nucleum/extensions/clipper/contentScripts/types";
   import { ButtonVariant } from "@21n/elements/button/button.type";

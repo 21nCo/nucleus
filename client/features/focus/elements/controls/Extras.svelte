@@ -1,6 +1,6 @@
 <script lang="ts">
   import { activeSession } from "@nucleum/features/focus/session.store";
-  import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
+  import { PointronAction } from "@nucleum/client/config/focus-action.enum";
   import { SessionType } from "@nucleum/features/focus/logs/log.type";
   import Button from "@21n/elements/button/Button.svelte";
   import { appStore } from "@nucleum/stores/app.store";

@@ -2,7 +2,7 @@
   import { Placement } from "@21n/elements/direction.enum";
   import { Size } from "@21n/elements/size.enum";
   import HoverableElement from "@21n/elements/HoverableElement.svelte";
-  import type { NodeType } from "@nucleum/features/memory/node/node.type";
+  import type { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { AlertType } from "@nucleum/stores/notifications/notification.type";

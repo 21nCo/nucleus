@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { IVideoTimestampClip } from "@nucleum/features/memory/node/node.type";
   import { cn } from "@21n/utils/ui.utils";
-  import FileView from "@nucleum/features/files/FileView.svelte";
+  import FileView from "@nucleum/components/files/FileView.svelte";
   import { formatSeconds } from "@21n/utils/time.utils";
   import { TimeFormat } from "@21n/utils/time.type";
   import { webpage } from "@nucleum/extensions/clipper/contentScripts/store";

@@ -1,12 +1,7 @@
 <script lang="ts">
   import type { IBlock } from "@nucleum/features/memory/markdown/md.type";
-  import {
-    headingNodeTypes,
-    listNodeTypes,
-    NodeType,
-    simpleTextNodeTypeList,
-    type IMediaGridNode
-  } from "@nucleum/features/memory/node/node.type";
+  import { headingNodeTypes, listNodeTypes, simpleTextNodeTypeList, type IMediaGridNode } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import EmbedContent from "@nucleum/features/memory/markdown/embed/EmbedContent.svelte";
   import type { MdStoreType } from "@nucleum/features/memory/markdown/markdown.store";
   import MediaGrid from "@nucleum/features/memory/markdown/mediaGrid/MediaGrid.svelte";

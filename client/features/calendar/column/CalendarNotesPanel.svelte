@@ -23,7 +23,7 @@
     ActiveNodeStore,
     type IActiveNodeStore
   } from "@nucleum/features/memory/node/node.store";
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import type { TimeScaleUnit } from "@21n/utils/time.type";
   import { onDestroy, onMount, setContext } from "svelte";
   import {

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NodeType } from "@nucleum/features/memory/node/node.type";
+  import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
   import context from "@nucleum/stores/context.store";
   import { ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import { resolveShortcutText } from "@21n/elements/keyboard/shortcut.utils";

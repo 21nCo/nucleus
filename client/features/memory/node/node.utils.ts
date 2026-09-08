@@ -1,23 +1,11 @@
 import { logger } from "@nucleum/client/runtime/logging/logger";
-import type { IFile } from "@nucleum/features/files/file.type";
+import type { IFile } from "@nucleum/stores/files/file.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { isRecordId } from "@nucleum/datafn/resource.utils";
 import type { IBlock } from "@nucleum/features/memory/markdown/md.type";
-import {
-  NodeType,
-  type INode,
-  type ITwitterProfileBody,
-  type ITextClipBody,
-  type IVideoTimestampClip,
-  type ITwitterProfile,
-  type INodeThumb,
-  type INodeStructure,
-  webNodeTypeList,
-  socialPostNodeTypeList,
-  socialProfileNodeTypeList,
-  socialProfileWithImageUnavailable
-} from "@nucleum/features/memory/node/node.type";
+import { type INode, type ITwitterProfileBody, type ITextClipBody, type IVideoTimestampClip, type ITwitterProfile, type INodeThumb, type INodeStructure, webNodeTypeList, socialPostNodeTypeList, socialProfileNodeTypeList, socialProfileWithImageUnavailable } from "@nucleum/features/memory/node/node.type";
+import { NodeType } from "@nucleum/schema/legacy/node-type.enum";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { TimeFormat } from "@21n/utils/time.type";
 import { getGeoLocation } from "@21n/utils/browser.utils";

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fileDrop } from "@nucleum/actions/fileDrop.action";
-  import { fileStore } from "@nucleum/features/files/file.store";
+  import { fileStore } from "@nucleum/stores/files/file.store";
   import Button from "@21n/elements/button/Button.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";

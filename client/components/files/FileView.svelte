@@ -4,8 +4,8 @@
     FileType,
     type IFile,
     type IImageRepositionerOptions
-  } from "@nucleum/features/files/file.type";
-  import { fileStore } from "@nucleum/features/files/file.store";
+  } from "@nucleum/stores/files/file.type";
+  import { fileStore } from "@nucleum/stores/files/file.store";
   import { onMount } from "svelte";
   import { fileLoader, fileLoaderv2 } from "@nucleum/actions/lazyload.action";
   import { imageRepositioner } from "@nucleum/actions/imageRepositioning.action";
