@@ -13,7 +13,7 @@
   } from "@nucleum/datafn/resource.utils";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
-  import { recentsStore } from "@nucleum/application/record/recent.store";
+  import { recentsStore } from "@nucleum/stores/resources/recent.store";
   import { page } from "$app/stores";
   import view from "@nucleum/stores/view.store";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";

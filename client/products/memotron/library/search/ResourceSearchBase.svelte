@@ -5,7 +5,7 @@
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
   import { Size } from "@21n/elements/size.enum";
   import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
-  import { recentsStore } from "@nucleum/application/record/recent.store";
+  import { recentsStore } from "@nucleum/stores/resources/recent.store";
   import { onMount, onDestroy } from "svelte";
   import { isValidString, properCase } from "@21n/shared-utils/text.utils";
   import Button from "@21n/elements/button/Button.svelte";

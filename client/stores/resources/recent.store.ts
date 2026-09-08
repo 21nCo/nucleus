@@ -1,18 +1,14 @@
-import {
-  isSameResource,
-  resolveProductResources
-} from "@nucleum/datafn/resource.utils";
+import { isSameResource } from "@nucleum/datafn/resource.utils";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { resourceInList } from "@nucleum/datafn/resource.utils";
-import type { IRecentsStore } from "@nucleum/application/record/record.type";
-import { rootNodeTypeList } from "@nucleum/features/memory/node/node.type";
+import type { IRecentsStore } from "@nucleum/stores/resources/recent.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
-import { appStore } from "@nucleum/stores/app.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
-import { get } from "svelte/store";
+import { requireRecentsHost } from "./recent-host";
 
+/** Normalizes persisted timestamps and excludes invalid date values. */
 function resolveTimestamp(value: unknown): Date | null {
   if (value instanceof Date) {
     return isNaN(value.getTime()) ? null : value;
@@ -24,6 +20,7 @@ function resolveTimestamp(value: unknown): Date | null {
   return null;
 }
 
+/** Shared recent-record state with per-resource queries and timestamp ordering. */
 export class RecentsStore extends ObservableStore<IRecentsStore> {
   private readonly LIMIT = 20;
   constructor() {
@@ -100,7 +97,7 @@ export class RecentsStore extends ObservableStore<IRecentsStore> {
   private async recents(resource?: Resource) {
     let data: any[] = [];
     if (resource === Resource.everything) {
-      const resources = resolveProductResources(get(appStore).product);
+      const resources = requireRecentsHost().resources();
       if (!resources) return [];
       for (const resource of resources) {
         const resourceData = await this.recentResources(resource);
@@ -127,4 +124,5 @@ export class RecentsStore extends ObservableStore<IRecentsStore> {
   }
 }
 
+/** Recent records shared by linking, record pages and application navigation. */
 export const recentsStore = new RecentsStore();

@@ -50,7 +50,7 @@ import { toasts } from "@nucleum/stores/notification.store";
 import NodeLoadingPulse from "@21n/elements/feedback/animations/NodeLoadingPulse.svelte";
 import LinkSearchResultItem from "@nucleum/features/memory/common/linkbox/LinkSearchResultItemDummy.svelte";
 import { queryLinkingSearchResults } from "@nucleum/features/memory/linking/link-search";
-import { recentsStore } from "@nucleum/application/record/recent.store";
+import { recentsStore } from "@nucleum/stores/resources/recent.store";
 import { isValidString } from "@21n/shared-utils/text.utils";
 import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
 import UserPlan from "@nucleum/application/subscription/UserPlan.svelte";

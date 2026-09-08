@@ -134,6 +134,12 @@ const production = ({ from }) =>
   !/\.(test|spec)\./.test(from) && !from.includes("/tests/");
 const violations = edges.filter(production).filter(({ from, to }) => {
   if (
+    /^client\/stores\/resources\/recent(?:\.store|\.type|-host)\.ts$/.test(from) &&
+    (/^client\/(application|features|products)\//.test(to) ||
+      to === "client/stores/app.store.ts")
+  )
+    return true;
+  if (
     from.startsWith("client/stores/overlays/") &&
     /^client\/(application|features|products)\//.test(to)
   )

@@ -21,7 +21,7 @@ import { DatafnExtensionMethod } from "@nucleum/extensions/extension.store";
 import { appStore } from "@nucleum/stores/app.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
 import { resolveCollectionResource } from "@nucleum/features/collections/collection.utils";
-import { recentsStore } from "@nucleum/application/record/recent.store";
+import { recentsStore } from "@nucleum/stores/resources/recent.store";
 import { get } from "svelte/store";
 import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";

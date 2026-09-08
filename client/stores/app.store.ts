@@ -1,4 +1,5 @@
 import { configureShortcutHost } from "@nucleum/stores/keyboard/shortcut-host";
+import { configureRecentsHost } from "@nucleum/stores/resources/recent-host";
 import { shortcutsConfig } from "@nucleum/application/shortcuts/shortcuts.config";
 import { resolveProductConfig } from "@nucleum/products/product.config";
 import { configureResourcePanelHost } from "@nucleum/stores/resources/resource-panel-host";
@@ -47,6 +48,7 @@ import account from "@nucleum/stores/account.store";
 import { tabs, vTrail } from "@21n/layout/topNav/tabs/tabs.store";
 import {
   determineResourceAccessMode,
+  resolveProductResources,
   resourceAction
 } from "@nucleum/datafn/resource.utils";
 import { Product } from "@nucleum/client/config/product.type";
@@ -1042,6 +1044,10 @@ configureOverlayHost({
 configureShortcutHost({
   defaults: shortcutsConfig,
   configurableActions: () => resolveProductConfig().configurableShortcuts
+});
+
+configureRecentsHost({
+  resources: () => resolveProductResources(get(appStore).product)
 });
 
 configureResourcePanelHost({

@@ -7,7 +7,7 @@
   import { InputStyle } from "@21n/elements/input/input.type";
   import { Size } from "@21n/elements/size.enum";
   import Icon from "@21n/elements/Icon.svelte";
-  import { recentsStore } from "@nucleum/application/record/recent.store";
+  import { recentsStore } from "@nucleum/stores/resources/recent.store";
   import { NodeType } from "@nucleum/features/memory/node/node.type";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";

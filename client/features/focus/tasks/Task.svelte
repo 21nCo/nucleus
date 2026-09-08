@@ -7,7 +7,7 @@
   } from "@nucleum/datafn/resource.type";
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { recentsStore } from "@nucleum/application/record/recent.store";
+  import { recentsStore } from "@nucleum/stores/resources/recent.store";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import DatePicker from "@21n/elements/datetime/DatePicker.svelte";
   import { Orientation } from "@21n/elements/direction.enum";

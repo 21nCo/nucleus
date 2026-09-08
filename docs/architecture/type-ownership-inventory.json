@@ -1056,10 +1056,10 @@
       "path": "client/application/record/record.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/application/record/record.type.ts"
+        "client/stores/resources/recent.type.ts"
       ],
       "ownership": "implementation-private",
-      "rationale": "Implementation-local or cohesive frontend owner; no independent domain abstraction is needed.",
+      "rationale": "Recent-record state belongs to the shared resource store; product selection is supplied by application composition.",
       "declarations": [
         "IRecentsStore"
       ],

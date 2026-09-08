@@ -3,7 +3,7 @@
   import { InputStyle } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";
   import { fly } from "svelte/transition";
-  import { recentsStore } from "@nucleum/application/record/recent.store";
+  import { recentsStore } from "@nucleum/stores/resources/recent.store";
   import Records from "@nucleum/application/record/Records.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { Size } from "@21n/elements/size.enum";

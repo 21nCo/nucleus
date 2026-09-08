@@ -49,7 +49,7 @@
   import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { parse, stringify } from "@21n/shared-utils/json.utils";
   import { detectTimeZone, parseAndFormatDate } from "@21n/utils/time.utils";
-  import { recentsStore } from "@nucleum/application/record/recent.store";
+  import { recentsStore } from "@nucleum/stores/resources/recent.store";
   import { resolveProductResources } from "@nucleum/datafn/resource.utils";
   import {
     datafn,
