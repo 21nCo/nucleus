@@ -9,7 +9,7 @@
     type IButtonParams
   } from "@21n/elements/button/button.type";
   import { Size } from "@21n/elements/size.enum";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import SystemStatus from "@nucleum/application/settings/about/SystemStatus.svelte";
   let {
     message = undefined,

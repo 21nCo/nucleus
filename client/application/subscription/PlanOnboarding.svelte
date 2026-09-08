@@ -13,7 +13,7 @@
   } from "@nucleum/application/subscription/userPlan.utils";
   import { appStore } from "@nucleum/stores/app.store";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import PlanIcon from "@nucleum/application/subscription/elements/PlanIcon.svelte";
   import modalEvent from "@nucleum/stores/overlays/modal.store";
 

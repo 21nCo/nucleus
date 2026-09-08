@@ -18,7 +18,7 @@
   import Divider from "@21n/elements/Divider.svelte";
   import { Display } from "@21n/elements/display.enum";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import { generateResourceId } from "@nucleum/datafn/id.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { preferences } from "@nucleum/stores/preferences/preferences.store";

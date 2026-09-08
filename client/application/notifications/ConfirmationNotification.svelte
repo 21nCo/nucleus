@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { confirmationNotification } from "@nucleum/stores/notification.store";
   import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";

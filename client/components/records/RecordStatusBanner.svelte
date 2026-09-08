@@ -6,7 +6,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/elements/size.enum";
   import type { ActiveResourceStore } from "@nucleum/stores/resources/active-resource.store";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import {
     isShowStatusBanner,
     resolveTrashedAtDate
@@ -85,7 +85,6 @@
           class="text-b3 font-medium underline"
           onclick={() => {
             resource.toggleReadMode(false);
-            // floatingBarRef?.resetToggle();
           }}>turn off</button
         >
       </div>

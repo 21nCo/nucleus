@@ -25,7 +25,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import { Display } from "@21n/elements/display.enum";
   import { enumToString, properCase } from "@21n/shared-utils/text.utils";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import { parse } from "@21n/shared-utils/json.utils";
   import {
     datafn,

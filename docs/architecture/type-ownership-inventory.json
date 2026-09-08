@@ -4085,7 +4085,8 @@
       "path": "client/features/memory/markdown/markdown.utils.ts",
       "disposition": "retained",
       "destinations": [
-        "client/features/memory/markdown/markdown.utils.ts"
+        "client/features/memory/markdown/markdown.utils.ts",
+        "client/elements/markdown/markdown.utils.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Capability-owned contract retained beside implementation; external production imports are declared in the feature entrypoint registry.",
@@ -4133,7 +4134,8 @@
       "path": "client/features/memory/markdown/md.type.ts",
       "disposition": "retained",
       "destinations": [
-        "client/features/memory/markdown/md.type.ts"
+        "client/features/memory/markdown/md.type.ts",
+        "client/elements/markdown/inline.type.ts"
       ],
       "ownership": "capability-public",
       "rationale": "Capability-owned contract retained beside implementation; external production imports are declared in the feature entrypoint registry.",

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { BlockAction, InlineType } from "@nucleum/features/memory/markdown/md.type";
+  import { BlockAction } from "@nucleum/features/memory/markdown/md.type";
+import { InlineType } from "@21n/elements/markdown/inline.type";
   import {
     mdContentChangeEvent,
     type MdStoreType
@@ -25,11 +26,8 @@
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { queryLinkingSearchResults } from "@nucleum/features/memory/linking/link-search";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-  import {
-    inlineLinkPatterns,
-    performEscShortcuts,
-    renderMdAsHtml
-  } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { performEscShortcuts } from "@nucleum/features/memory/markdown/markdown.utils";
+import { inlineLinkPatterns, renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import view from "@nucleum/stores/view.store";
   import context from "@nucleum/stores/context.store";
   import { popover } from "@nucleum/actions/popover.action";

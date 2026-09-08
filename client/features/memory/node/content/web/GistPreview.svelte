@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import type { IGist } from "@nucleum/features/memory/node/node.type";
   let {
     node,

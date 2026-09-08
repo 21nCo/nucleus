@@ -1,5 +1,5 @@
 import type { NodeType } from "@nucleum/features/memory/node/node.type";
-import type { InlineType } from "@nucleum/features/memory/markdown/md.type";
+import type { InlineType } from "@21n/elements/markdown/inline.type";
 
 export type IBlockBrowserItem = {
   label: string;

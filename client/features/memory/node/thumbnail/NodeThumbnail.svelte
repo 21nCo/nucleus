@@ -37,7 +37,7 @@
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { fileStore } from "@nucleum/features/files/file.store";
   import type { IFile } from "@nucleum/features/files/file.type";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import CollectionItemThumbnailProperties from "@nucleum/features/collections/properties/CollectionItemThumbnailProperties.svelte";
   import type { IProperty } from "@nucleum/features/collections/properties/property.type";
   import { enumToString, isValidString } from "@21n/shared-utils/text.utils";

@@ -4,7 +4,7 @@ import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
 
 import { popover } from "./popover.action";
 
-vi.mock("@nucleum/features/memory/markdown/markdown.utils", () => ({
+vi.mock("@21n/elements/markdown/markdown.utils", () => ({
   renderMdAsHtml: (value: string) => value
 }));
 

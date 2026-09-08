@@ -9,7 +9,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { linear } from "svelte/easing";
   import { onMount } from "svelte";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
     let {
     notification,
     isShownAsModal = false,

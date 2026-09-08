@@ -32,7 +32,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
     type ICollectionItem,
     type ICollectionViewWithData
   } from "@nucleum/features/collections/collection.type";
-  import ResourceStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
+  import ResourceStatusBanner from "@nucleum/components/records/RecordStatusBanner.svelte";
   import {
     Arrangement,
     Orientation,

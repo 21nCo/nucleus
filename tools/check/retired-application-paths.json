@@ -12,6 +12,7 @@
   "client/application/modal/modal.store.ts",
   "client/application/modal/popup.type.ts",
   "client/application/record/RecordStarStatusFeedback.svelte",
+  "client/application/record/RecordStatusBanner.svelte",
   "client/application/record/RecordTrashBanner.svelte",
   "client/application/record/active-resource.store.ts",
   "client/application/record/bulkedit.store.ts",

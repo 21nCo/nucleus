@@ -5,7 +5,7 @@
   import { debouncer } from "@21n/utils/utils";
   import { cn } from "@21n/utils/ui.utils";
   import type { IResource } from "@nucleum/datafn/resource.type";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import Icon from "@21n/elements/Icon.svelte";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";

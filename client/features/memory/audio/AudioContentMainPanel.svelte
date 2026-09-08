@@ -11,7 +11,7 @@
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { Size } from "@21n/elements/size.enum";
   import { copyToClipboard } from "@21n/utils/utils";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import { toasts } from "@nucleum/stores/notification.store";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import {

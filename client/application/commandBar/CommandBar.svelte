@@ -18,7 +18,7 @@
   import context from "@nucleum/stores/context.store";
   import { Embed } from "@nucleum/client/runtime/context.type";
   import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
-  import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { renderMdAsHtml } from "@21n/elements/markdown/markdown.utils";
   import { resolveShortcutText } from "@21n/elements/keyboard/shortcut.utils";
   import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";

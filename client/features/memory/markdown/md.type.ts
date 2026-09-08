@@ -41,20 +41,6 @@ export type IBlockInterface<TType = NodeType, TBody = IBlockBody> = {
   childrenHierarchy?: IRecordId[];
 };
 
-export enum InlineType {
-  MENTION = "MENTION",
-  DATE = "DATE",
-  LINK = "LINK",
-  LINK_MENTION = "LINK_MENTION",
-  CODE = "CODE",
-  BOLD = "BOLD",
-  ITALIC = "ITALIC",
-  UNDERLINE = "UNDERLINE",
-  STRIKE = "STRIKE",
-  SUBSCRIPT = "SUBSCRIPT",
-  SUPERSCRIPT = "SUPERSCRIPT"
-}
-
 export type IMarkdownParams = {
   isNodular?: boolean;
   placeholder?: string;

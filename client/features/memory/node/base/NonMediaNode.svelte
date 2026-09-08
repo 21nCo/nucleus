@@ -8,7 +8,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import NodeContent from "@nucleum/features/memory/node/content/NodeContent.svelte";
   import { Size } from "@21n/elements/size.enum";
-  import ResourceStatusBanner from "@nucleum/application/record/RecordStatusBanner.svelte";
+  import ResourceStatusBanner from "@nucleum/components/records/RecordStatusBanner.svelte";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { InputStyle } from "@21n/elements/input/input.type";
   import { cn } from "@21n/utils/ui.utils";

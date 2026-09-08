@@ -37,13 +37,8 @@
   import view from "@nucleum/stores/view.store";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { isSameResource } from "@nucleum/datafn/resource.utils";
-  import {
-    resolveDefaultBodyForBlock,
-    resolvePlainOffsetForMdEnd,
-    resolvePlainText,
-    splitMarkdownAtPlainOffset,
-    textToMdBlocks
-  } from "@nucleum/features/memory/markdown/markdown.utils";
+  import { resolveDefaultBodyForBlock, textToMdBlocks } from "@nucleum/features/memory/markdown/markdown.utils";
+import { resolvePlainOffsetForMdEnd, resolvePlainText, splitMarkdownAtPlainOffset } from "@21n/elements/markdown/markdown.utils";
   import { isValidString, truncateString } from "@21n/shared-utils/text.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { fileDrop } from "@nucleum/actions/fileDrop.action";
