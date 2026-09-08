@@ -10,7 +10,7 @@
   import { cn } from "@21n/utils/ui.utils";
   import appearance from "@nucleum/stores/appearance.store";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
-  import { appStore } from "@nucleum/stores/app.store";
+  import { requireResourceActionHost } from "@nucleum/stores/resources/resource-action-host";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";
   import { AccessMode } from "@nucleum/datafn/resource.type";
@@ -80,7 +80,7 @@
     logger.log({ at: "Modal.svelte close", id, frontModal });
     confirmationNotification.reset();
     if (frontModal?.id?.includes("-resource")) {
-      appStore.closeResource({ accessMode: AccessMode.POP });
+      requireResourceActionHost().close({ accessMode: AccessMode.POP });
     }
     if (!frontModal || id != frontModal?.id) return;
     show = false;
@@ -102,7 +102,6 @@
     }
     return {
       "w-full h-full min-h-screen min-w-screen": size === Size.full,
-      // "w-[20rem] tp:w-[25rem] h-[25rem] min-h-[20rem]": size === Size.sm,
       "w-[20rem] tp:w-[25rem] h-[25rem] min-h-[20rem]": size === Size.xs,
       "w-[55rem] 2k:w-[65rem] h-full dp:h-full tp:h-[60rem] vm:h-[60rem] 2k:h-full":
         orientation === Orientation.Vertical && size === Size.xxl,

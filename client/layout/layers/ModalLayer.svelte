@@ -1,7 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-  import Modal from "@nucleum/application/modal/Modal.svelte";
+  import Modal from "@nucleum/components/overlays/Modal.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import view from "@nucleum/stores/view.store";
   import modalEvent, {

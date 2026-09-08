@@ -4,7 +4,7 @@
   import { activeSession } from "@nucleum/features/focus/session.store";
   import type { IActiveSessionStore } from "@nucleum/features/focus/session.type";
   import { SessionState } from "@nucleum/features/focus/sessionState.enum";
-  import Popover from "@nucleum/application/modal/Modal.svelte";
+  import Popover from "@nucleum/components/overlays/Modal.svelte";
   import { TimeUnit } from "@21n/utils/time.type";
   import { AppSkin } from "@21n/theme/appearance.type";
   import appearance from "@nucleum/stores/appearance.store";

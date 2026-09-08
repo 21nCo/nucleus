@@ -6,7 +6,7 @@
   import account from "@nucleum/stores/account.store";
   import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import context from "@nucleum/stores/context.store";
-  import { mapTileStyles } from "@nucleum/application/maps/map.styles";
+  import { mapTileStyles } from "@nucleum/components/maps/map.styles";
   import { mount } from "@nucleum/actions/mount.action";
   let {
     location = undefined

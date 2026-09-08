@@ -3,7 +3,7 @@
   import maplibregl from "maplibre-gl";
   import "maplibre-gl/dist/maplibre-gl.css";
   import MapItem from "@nucleum/application/overview/MapItem.svelte";
-  import { mapTileStyles } from "@nucleum/application/maps/map.styles";
+  import { mapTileStyles } from "@nucleum/components/maps/map.styles";
 
   interface MapDataPoint {
     id: string;

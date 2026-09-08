@@ -11,7 +11,7 @@ export interface ResourceActionHost {
     mode: AccessMode,
     options?: { searchParams: Record<string, string | number | boolean | null> }
   ): void;
-  close(options: { id: IRecordId; accessMode: AccessMode }): void;
+  close(options: { id?: IRecordId; accessMode: AccessMode }): void;
   maximize(mode: AccessMode, id: IRecordId): void;
   openTab(id: IRecordId): void;
   removeTab(id: IRecordId): void;

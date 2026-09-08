@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PointInMap from "@nucleum/application/maps/PointInMap.svelte";
+  import PointInMap from "@nucleum/components/maps/PointInMap.svelte";
   let {
     location = undefined
   }: {

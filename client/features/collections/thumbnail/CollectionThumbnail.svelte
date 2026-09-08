@@ -11,7 +11,6 @@
   } from "@nucleum/datafn/resource.type";
   import ResourceThumbnailBase from "@nucleum/components/records/ResourceThumbnailBase.svelte";
   import CollectionThumbnailLabelRow from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabelRow.svelte";
-  import ResourceThumbnailContentTypeOverlay from "@nucleum/application/record/thumbnail/ResourceThumbnailContentTypeOverlay.svelte";
   import CollectionPropertyCount from "@nucleum/features/collections/counts/CollectionPropertyCount.svelte";
   import CollectionItemCount from "@nucleum/features/collections/counts/CollectionItemCount.svelte";
   import CollectionThumbnailLabel from "@nucleum/features/collections/thumbnail/CollectionThumbnailLabel.svelte";
@@ -87,7 +86,6 @@
           {properCase(item.type)} collection
         </div>
       {/if} -->
-        <!-- <ResourceThumbnailContentTypeOverlay contentType={item.type} /> -->
         <Cover {item} {arrangement} />
         {#snippet bottom()}
           <CollectionThumbnailLabelRow
