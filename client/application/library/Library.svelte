@@ -31,7 +31,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import { Product } from "@nucleum/client/config/product.type";
   import { isHideCreateAction } from "@nucleum/application/library/library.utils";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
-  import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
+  import ComponentShortcutListener from "@nucleum/components/keyboard/ComponentShortcutListener.svelte";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { isValidEnumValue } from "@21n/shared-utils/text.utils";
 

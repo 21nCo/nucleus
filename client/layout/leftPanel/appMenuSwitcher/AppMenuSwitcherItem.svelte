@@ -14,7 +14,7 @@
   import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
   import { uiState, uiStateDerived } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
-  import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
+  import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
   import { popover } from "@nucleum/actions/popover.action";
   import { hoverable } from "@nucleum/actions/hover.action";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";

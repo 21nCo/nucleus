@@ -6,7 +6,7 @@
   import { propertyEditorStore } from "@nucleum/features/collections/properties/property.store";
   import Icon from "@21n/elements/Icon.svelte";
   import SwitchInput from "@21n/elements/toggle/SwitchInput.svelte";
-  import { type IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
+  import { type IActiveCollectionStore } from "./collection.store";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";

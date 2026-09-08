@@ -9,7 +9,7 @@
   import { Arrangement } from "@21n/elements/direction.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import BoardView from "@nucleum/features/collections/boardView/BoardView.svelte";
-  import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
+  import type { IActiveCollectionStore } from "./collection.store";
   let {
     collection,
     view = $bindable(),

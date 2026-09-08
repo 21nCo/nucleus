@@ -3,7 +3,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { TableCellType } from "@21n/elements/table/table.type";
   import HotKeyShortcutText from "@nucleum/features/memory/markdown/shortcuts/HotKeyShortcutText.svelte";
-  import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
+  import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
   const data = keyboardShortcuts
     .fetchKeyMap()
     .filter((x) => x.key !== undefined && x.modifiers === undefined)

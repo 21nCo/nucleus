@@ -8,7 +8,7 @@
   import { resourceInList } from "@nucleum/datafn/resource.utils";
   import type { ICollectionView } from "@nucleum/features/collections/collection.type";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
+  import type { IActiveCollectionStore } from "../collection.store";
   import { filterNodesByPropertyValue } from "@nucleum/features/collections/collection.utils";
   import type { Arrangement } from "@21n/elements/direction.enum";
   let {

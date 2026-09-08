@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
+  import type { IActiveCollectionStore } from "./collection.store";
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { Size } from "@21n/elements/size.enum";
   import { InputStyle } from "@21n/elements/input/input.type";
   import ContextMenuAction from "@21n/elements/contextMenu/ContextMenuAction.svelte";
-  import { resolveCollectionContextMenu } from "@nucleum/features/collections/collection.store";
+  import { resolveCollectionContextMenu } from "./collection.store";
   import { AccessMode, ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import Icon from "@21n/elements/Icon.svelte";

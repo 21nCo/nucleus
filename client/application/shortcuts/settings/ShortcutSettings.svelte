@@ -6,7 +6,7 @@
   import context from "@nucleum/stores/context.store";
   import { Action } from "@nucleum/application/commandBar/action.enum";
   import { Embed } from "@nucleum/client/runtime/context.type";
-  import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
+  import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
   import ShortcutItem from "@nucleum/application/shortcuts/settings/ShortcutItem.svelte";
   let error: string | undefined = undefined;
   let keyMap = keyboardShortcuts.fetchConfiguratbleShortcuts();

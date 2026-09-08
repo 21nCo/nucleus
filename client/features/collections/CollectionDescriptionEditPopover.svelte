@@ -4,7 +4,7 @@
   import { Orientation } from "@21n/elements/direction.enum";
   import { InputStyle } from "@21n/elements/input/input.type";
   import { AlertType } from "@nucleum/stores/notifications/notification.type";
-  import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
+  import type { IActiveCollectionStore } from "./collection.store";
   let {
     collection
   }: {

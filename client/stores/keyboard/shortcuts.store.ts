@@ -5,12 +5,11 @@ import type {
   IKeyboardShortcutsStore
 } from "@21n/elements/keyboard/shortcut.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
-import { resolveModifiers } from "@nucleum/application/shortcuts/shortcut.utils";
+import { resolveModifiers } from "@21n/elements/keyboard/shortcut.utils";
 import context from "@nucleum/stores/context.store";
 import { OperatingSystem } from "@nucleum/client/runtime/context.type";
-import { shortcutsConfig } from "@nucleum/application/shortcuts/shortcuts.config";
+import { requireShortcutHost } from "./shortcut-host";
 import { replacer } from "@21n/shared-utils/json.utils";
-import { resolveProductConfig } from "@nucleum/products/product.config";
 import { datafn } from "@nucleum/datafn/datafn.store";
 
 const keyboardShortcutsSignal = datafn.kv.signal<IKeyboardShortcutsStore>(
@@ -45,7 +44,7 @@ export const keyboardShortcuts = {
   },
 
   fetchKeyMap(): (IKeyboardShortcut & { action: string })[] {
-    let defaultKeyMap = shortcutsConfig;
+    let defaultKeyMap = requireShortcutHost().defaults;
     const ctx = get(context);
     if (ctx.os === OperatingSystem.WINDOWS) {
       defaultKeyMap = replacer(defaultKeyMap, { Meta: "Control" });
@@ -61,8 +60,7 @@ export const keyboardShortcuts = {
   },
 
   fetchConfiguratbleShortcuts() {
-    const config = resolveProductConfig();
-    const { configurableShortcuts } = config;
+    const configurableShortcuts = requireShortcutHost().configurableActions();
     return this.fetchKeyMap().filter((x) =>
       configurableShortcuts?.includes(x.action)
     );

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { resolveShortcutText } from "@nucleum/application/shortcuts/shortcut.utils";
-  import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
+  import { resolveShortcutText } from "@21n/elements/keyboard/shortcut.utils";
+  import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
   import context from "@nucleum/stores/context.store";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { Size } from "@21n/elements/size.enum";

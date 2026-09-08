@@ -8,7 +8,7 @@
     type ICollectionView
   } from "@nucleum/features/collections/collection.type";
   import { Size } from "@21n/elements/size.enum";
-  import { collectionLayoutOptions } from "@nucleum/features/collections/collection.store";
+  import { collectionLayoutOptions } from "./collection.store";
   import Badge from "@21n/elements/text/Badge.svelte";
   import MultiselectDropdown from "@21n/elements/dropdown/MultiselectDropdown.svelte";
 

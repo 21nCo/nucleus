@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { resolveTaskContextMenu } from "@nucleum/features/focus/tasks/task.store";
+  import { resolveTaskContextMenu } from "./task.store";
   import type { ITaskThumb } from "@nucleum/features/focus/tasks/task.type";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { Size } from "@21n/elements/size.enum";

@@ -3,7 +3,7 @@
 <script lang="ts">
   import { appStore } from "@nucleum/stores/app.store";
   import { isTextElement } from "@21n/utils/browser.utils";
-  import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
+  import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { KeyboardKey } from "@21n/elements/keyboard/keyboard.type";

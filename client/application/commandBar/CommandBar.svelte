@@ -17,9 +17,9 @@
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
   import context from "@nucleum/stores/context.store";
   import { Embed } from "@nucleum/client/runtime/context.type";
-  import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
+  import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
   import { renderMdAsHtml } from "@nucleum/features/memory/markdown/markdown.utils";
-  import { resolveShortcutText } from "@nucleum/application/shortcuts/shortcut.utils";
+  import { resolveShortcutText } from "@21n/elements/keyboard/shortcut.utils";
   import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import KeyboardToolbar from "@21n/elements/keyboardToolbar/KeyboardToolbar.svelte";
   import { fly } from "svelte/transition";

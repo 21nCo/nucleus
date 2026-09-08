@@ -178,6 +178,13 @@ const violations = edges.filter(production).filter(({ from, to }) => {
   )
     return true;
   if (
+    (from.startsWith("client/stores/keyboard/") ||
+      from === "client/components/keyboard/ComponentShortcutListener.svelte") &&
+    (/^client\/(application|features|products)\//.test(to) ||
+      to === "client/stores/app.store.ts")
+  )
+    return true;
+  if (
     from === "client/features/focus/composition.utils.ts" &&
     to === "client/features/focus/session.store.ts"
   )

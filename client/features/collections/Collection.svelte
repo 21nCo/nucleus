@@ -2,7 +2,7 @@
   import {
     ActiveCollectionStore,
     type IActiveCollectionStore
-  } from "@nucleum/features/collections/collection.store";
+  } from "./collection.store";
   import Cover from "@nucleum/features/collections/Cover.svelte";
   import CollectionTitleBar from "@nucleum/features/collections/CollectionTitleBar.svelte";
   import View from "@nucleum/features/collections/View.svelte";

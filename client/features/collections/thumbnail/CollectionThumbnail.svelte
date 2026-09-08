@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { resolveCollectionContextMenu } from "@nucleum/features/collections/collection.store";
+  import { resolveCollectionContextMenu } from "../collection.store";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { type ICollectionThumb } from "@nucleum/features/collections/collection.type";
   import ResourceGridThumbnail from "@nucleum/components/records/ResourceGridThumbnail.svelte";

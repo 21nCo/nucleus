@@ -1,3 +1,6 @@
+import { configureShortcutHost } from "@nucleum/stores/keyboard/shortcut-host";
+import { shortcutsConfig } from "@nucleum/application/shortcuts/shortcuts.config";
+import { resolveProductConfig } from "@nucleum/products/product.config";
 import { configureResourcePanelHost } from "@nucleum/stores/resources/resource-panel-host";
 import { get, writable } from "svelte/store";
 import { AppSkin } from "@21n/theme/appearance.type";
@@ -1034,6 +1037,11 @@ configureOverlayHost({
   closeFullscreen: () => appStore.toggleSearchParam([AccessMode.FULL]),
   resolvePlayer: (path) =>
     appStore.resolveComponentFromPath(path)?.associatedPlayer
+});
+
+configureShortcutHost({
+  defaults: shortcutsConfig,
+  configurableActions: () => resolveProductConfig().configurableShortcuts
 });
 
 configureResourcePanelHost({

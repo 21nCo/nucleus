@@ -19,7 +19,7 @@
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { dropzone } from "@nucleum/actions/dragAndDrop.action";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import type { IActiveCollectionStore } from "@nucleum/features/collections/collection.store";
+  import type { IActiveCollectionStore } from "../collection.store";
   import CollectionItems from "@nucleum/features/collections/CollectionItems.svelte";
   let {
     collection,

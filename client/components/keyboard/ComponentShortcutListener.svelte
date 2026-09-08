@@ -3,16 +3,16 @@
 <script lang="ts">
   import { isTextElement } from "@21n/utils/browser.utils";
   import type { IKeyboardShortcut } from "@21n/elements/keyboard/shortcut.type";
-  import { keyboardShortcuts } from "@nucleum/application/shortcuts/shortcuts.store";
+  import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
   let {
     isAllowFromTextInput = false,
     shortcuts
   }: {
     isAllowFromTextInput?: boolean;
     shortcuts: {
-    shortcut: string | IKeyboardShortcut;
-    callback: () => void;
-  }[];
+      shortcut: string | IKeyboardShortcut;
+      callback: () => void;
+    }[];
   } = $props();
 
   function shortcutListener(event: KeyboardEvent) {

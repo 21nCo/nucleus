@@ -37,7 +37,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import { toasts } from "@nucleum/stores/notification.store";
   import { tooltip } from "@nucleum/actions/popover.action";
   import ModalContentPadded from "@21n/elements/modal/ModalContentPadded.svelte";
-  import { createDatafnCollection } from "@nucleum/features/collections/collection.store";
+  import { createDatafnCollection } from "./collection.store";
 
   let {
     context = undefined

@@ -22,7 +22,7 @@
   import {
     ActiveCollectionStore,
     type IActiveCollectionStore
-  } from "@nucleum/features/collections/collection.store";
+  } from "../collection.store";
   import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { AccessMode, type OmitForCaptureWithId } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";

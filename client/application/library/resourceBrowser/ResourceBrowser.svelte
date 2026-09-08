@@ -20,7 +20,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
     isHideCreateAction,
     resolveResourceTooltip
   } from "@nucleum/application/library/library.utils";
-  import ComponentShortcutListener from "@nucleum/application/shortcuts/ComponentShortcutListener.svelte";
+  import ComponentShortcutListener from "@nucleum/components/keyboard/ComponentShortcutListener.svelte";
   import ComponentEmbedLayer from "@21n/layout/layers/ComponentEmbedLayer.svelte";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import view from "@nucleum/stores/view.store";
