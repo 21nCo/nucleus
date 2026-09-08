@@ -4,13 +4,27 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@datafn/client": "0.1.0",
+    "@datafn/svelte": "0.1.0",
+    "@huggingface/transformers": "^3.0.2",
     "@nucleum/datafn": "*",
     "@nucleum/features": "*",
     "@nucleum/schema": "*",
-    "@datafn/client": "0.1.0",
-    "@datafn/svelte": "0.1.0"
+    "jszip": "^3.10.1",
+    "svelte": "^5.55.0"
   },
   "exports": {
     "./*": "./*"
+  },
+  "peerDependencies": {
+    "@21n/branding": "*",
+    "@21n/elements": "*",
+    "@21n/layout": "*",
+    "@21n/shared-utils": "*",
+    "@21n/utils": "*",
+    "@nucleum/actions": "*",
+    "@nucleum/application": "*",
+    "@nucleum/client": "*",
+    "@nucleum/stores": "*"
   }
 }

@@ -7,8 +7,25 @@
     "./*": "./*"
   },
   "dependencies": {
+    "@carbon/charts": "1.22.18",
+    "@carbon/charts-svelte": "1.22.18",
+    "@datafn/svelte": "0.1.0",
     "@nucleum/datafn": "*",
+    "@nucleum/schema": "*",
+    "d3": "^7.8.5",
     "echarts": "^5.5.0",
-    "@nucleum/schema": "*"
+    "maplibre-gl": "^4.5.1",
+    "svelte": "^5.55.0"
+  },
+  "peerDependencies": {
+    "@21n/elements": "*",
+    "@21n/icons": "*",
+    "@21n/layout": "*",
+    "@21n/shared-utils": "*",
+    "@21n/utils": "*",
+    "@nucleum/actions": "*",
+    "@nucleum/client": "*",
+    "@nucleum/persistence": "*",
+    "@nucleum/stores": "*"
   }
 }

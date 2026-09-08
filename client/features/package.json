@@ -151,9 +151,35 @@
     "./system/accessLogging/accessLog.type": "./system/accessLogging/accessLog.type.ts"
   },
   "dependencies": {
+    "@antv/g6": "^5.0.26",
     "@datafn/client": "0.1.0",
     "@datafn/svelte": "0.1.0",
     "@nucleum/datafn": "*",
-    "@nucleum/schema": "*"
+    "@nucleum/schema": "*",
+    "dayjs": "^1.11.10",
+    "exifreader": "^4.26.0",
+    "highlight.js": "^11.10.0",
+    "ml-kmeans": "^6.0.0",
+    "monaco-editor": "^0.52.0",
+    "music-metadata": "^10.6.4",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.1.392",
+    "svelte": "^5.55.0",
+    "wavesurfer.js": "^7.7.2"
+  },
+  "peerDependencies": {
+    "@21n/elements": "*",
+    "@21n/icons": "*",
+    "@21n/icons-v2": "*",
+    "@21n/layout": "*",
+    "@21n/shared-utils": "*",
+    "@21n/theme": "*",
+    "@21n/utils": "*",
+    "@nucleum/actions": "*",
+    "@nucleum/client": "*",
+    "@nucleum/components": "*",
+    "@nucleum/extensions": "*",
+    "@nucleum/persistence": "*",
+    "@nucleum/stores": "*"
   }
 }

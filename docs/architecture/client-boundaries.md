@@ -25,7 +25,7 @@ Tracked in [TIDY-477](https://linear.app/21n/issue/TIDY-477/enforce-architectura
 
 `schema` owns resource definitions. `client/datafn` owns the client storage and sync runtime. `client/runtime` owns browser infrastructure such as account transport, network authority, connectivity, and diagnostic logging. `client/features` owns capability implementations. `client/products` composes those capabilities into product experiences. Client product identity composition lives in `client/config/product.type.ts`; cross-layer product identity lives in `schema/product.type.ts`; declarative navigation metadata lives in `client/config`.
 
-`client/elements` contains UI primitives. `client/components` contains shared charts, nested-list controls, and the time selector. `client/application` owns account/settings, library/resource rendering, modal orchestration, command UI, and app-specific integrations. Markdown editing and tags belong to memory; combinations belong to spaces. Shared preferences live in `client/stores/preferences`, and cross-layer billing contracts live in `schema/account`. Keyboard and interaction-mode contracts live in `client/elements/keyboard`; panel and error presentation contracts live in `client/application`. See [type ownership](type-ownership.md) for the complete inventory.
+`client/elements` contains UI primitives. `client/components` contains shared charts, nested-list controls, and the time selector. `client/application` owns account/settings, library/resource rendering, modal orchestration, command UI, and app-specific integrations. Markdown editing and tags belong to memory; combinations belong to spaces. Shared preferences live in `client/stores/preferences`, and cross-layer billing contracts live in `schema/account`. Keyboard and interaction-mode contracts live in `client/elements/keyboard`; panel and error presentation contracts live in shared resource and element owners. See [type ownership](type-ownership.md) for the complete inventory.
 
 ## Enforced rules
 
@@ -39,17 +39,27 @@ Run `npm run check:architecture`. CI and the root lint command run the same chec
 
 The feature entry-point list records the existing public surface, including individual components and type modules; it is not a barrel module. Additions require an explicit contract change. Package exports expose these same paths. Source aliases bypass package exports, which is why the source-level check remains necessary.
 
-## Remaining architecture work
+## Current architecture contract
 
-The public feature surface is still broad. Tighten it capability by capability as consumers move to smaller contracts. Generic components and application composition now have separate ownership and workspace packages. Cross-feature dependencies are permitted only through the declared entry points, but this does not prove all such dependencies are desirable or acyclic. The rules enforce completed directory boundaries; they do not claim npm workspace isolation or a fully acyclic transitive module graph.
+Features cannot import application or product implementations. Shared stores, utilities, actions, components and elements cannot transitively load capability or application composition at runtime. Explicit type-only edges are excluded from runtime reachability; legacy persistence adapters can still reference capability types. Cross-capability imports remain permitted through declared public entries, so the complete source graph is not claimed to be acyclic.
 
-Features still consume application-level modal and resource services, and shared helpers can pull in higher-level modules transitively. Resolve these cycles with explicit contracts in the next phase; the current checks enforce direct ownership boundaries. Adding every implicit package dependency before resolving these cycles would create misleading workspace build dependencies.
+Application and extension shells configure permanent overlay, resource-action, panel, shortcut, recents, record-renderer and action-renderer contracts in `client/application/composition/resource-hosts.ts`. Configuration runs from both base and user shells, before resource presentation is instantiated. Shared Markdown display owns portable parsing; memory owns Markdown editing. Shared file state and presentation, resource enums, event contracts and action identifiers no longer depend on capability implementations.
+
+The public feature API contains 145 entries: memory 57, focus 52, collections 16, calendar 13, spaces 6 and system 1. Each has a static consumer outside its capability. The checker rejects unused public entries and private external imports. This reduces the previous 154 entries by moving shared contracts and infrastructure to their proper owners without introducing barrels or compatibility paths.
+
+Registered workspaces declare their production source imports. `@nucleum/client` owns the existing config/runtime/next aliases. Source workspaces bundled by an app declare co-hosted workspace requirements as peer dependencies; existing build dependencies remain dependencies. Peers describe the host's source compilation requirements without adding artificial Turbo build cycles. This is not a claim that each source package builds or installs independently. The checker verifies both resolved workspace and external package imports; test and story dependencies are outside this production-source check.
+
+Broader product regression verification and the narrow Library unknown-resource fix remain pending before issue closure.
 
 ## Verification
 
 Preserve product gates, navigation destinations, preference resource keys, schemas, and immediate and durable user-visible behavior. Run the Nucleum, Pointron, and Memotron compiler scripts, account-service typecheck, affected existing unit tests, and the Nucleum focus probe. Record existing extension/compiler or test-harness failures separately from regressions. No cloud transport or deployment coverage is implied by the local probe.
 
-## Local verification record
+## Historical phase verification records
+
+The following records describe each phase at its original commit. Their pending-work notes and counts are historical; the current architecture contract above supersedes them.
+
+### Initial local verification record
 
 - `npm run check:architecture`: passed; alias, relative, and dynamic forbidden-import negative controls were rejected.
 - `npm --workspace nucleus-app run typecheck`: 0 errors, 379 warnings.

@@ -5,5 +5,16 @@
   "type": "module",
   "exports": {
     "./*": "./*"
+  },
+  "peerDependencies": {
+    "@21n/elements": "*",
+    "@21n/layout": "*",
+    "@21n/shared-utils": "*",
+    "@21n/utils": "*",
+    "@nucleum/client": "*",
+    "@nucleum/stores": "*"
+  },
+  "dependencies": {
+    "svelte": "^5.55.0"
   }
 }

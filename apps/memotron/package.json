@@ -107,8 +107,8 @@
     "jszip": "^3.10.1",
     "jwt-decode": "^3.1.2",
     "localforage": "^1.10.0",
-    "markdown-it": "^14.1.0",
     "maplibre-gl": "^4.5.1",
+    "markdown-it": "^14.1.0",
     "ml-kmeans": "^6.0.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
@@ -126,5 +126,8 @@
     "svelte-gestures": "^1.5.2",
     "wavesurfer.js": "^7.7.2"
   },
-  "type": "module"
+  "type": "module",
+  "peerDependencies": {
+    "@21n/theme": "*"
+  }
 }

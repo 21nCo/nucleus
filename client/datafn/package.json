@@ -4,14 +4,15 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@nucleum/schema": "*",
     "@21n/shared-utils": "*",
     "@datafn/client": "0.1.0",
+    "@nucleum/persistence": "*",
+    "@nucleum/schema": "*",
     "@searchfn/adapter-indexeddb": "0.1.0",
-    "@searchfn/datafn-provider": "0.4.0",
-    "@nucleum/persistence": "*"
+    "@searchfn/datafn-provider": "0.4.0"
   },
   "peerDependencies": {
+    "@nucleum/client": "*",
     "svelte": "^5.55.0"
   },
   "exports": {

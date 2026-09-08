@@ -29,7 +29,8 @@
     "shared/dbo",
     "schema",
     "tests",
-    "client/application"
+    "client/application",
+    "client"
   ],
   "dependencies": {
     "@carbon/charts": "1.22.18",

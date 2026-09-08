@@ -1,32 +1,32 @@
 {
-  "name": "@nucleum/extensions",
+  "name": "@nucleum/client",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "exports": {
-    "./*": "./*"
+    "./config/*": "./config/*",
+    "./runtime/*": "./runtime/*",
+    "./next/*": "./next/*"
   },
   "dependencies": {
-    "@datafn/core": "0.1.0",
+    "@21n/shared-utils": "*",
+    "@authfn/client": "0.2.0",
     "@nucleum/schema": "*",
-    "@plasmohq/messaging": "^0.6.2",
-    "jquery": "3.7.1",
-    "svelte": "^5.55.0"
+    "@superfunctions/http": "0.2.0",
+    "pdf-lib": "^1.17.1",
+    "svelte": "^5.55.0",
+    "svelte-preprocess": "^5.1.1"
   },
   "peerDependencies": {
     "@21n/branding": "*",
     "@21n/elements": "*",
-    "@21n/icons-v2": "*",
+    "@21n/icons": "*",
     "@21n/layout": "*",
-    "@21n/shared-utils": "*",
     "@21n/utils": "*",
-    "@nucleum/actions": "*",
     "@nucleum/application": "*",
-    "@nucleum/client": "*",
-    "@nucleum/components": "*",
     "@nucleum/datafn": "*",
-    "@nucleum/features": "*",
     "@nucleum/persistence": "*",
+    "@nucleum/products": "*",
     "@nucleum/stores": "*"
   }
 }

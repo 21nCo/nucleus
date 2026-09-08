@@ -7,6 +7,24 @@
     "./*": "./*"
   },
   "dependencies": {
-    "@nucleum/schema": "*"
+    "@nucleum/schema": "*",
+    "@plasmohq/messaging": "^0.6.2",
+    "clsx": "^2.1.0",
+    "heic2any": "^0.0.4",
+    "moment-timezone": "^0.5.43",
+    "pdfjs-dist": "^4.1.392",
+    "qrcode": "^1.5.4",
+    "svelte": "^5.55.0"
+  },
+  "peerDependencies": {
+    "@21n/elements": "*",
+    "@21n/shared-utils": "*",
+    "@21n/theme": "*",
+    "@nucleum/actions": "*",
+    "@nucleum/client": "*",
+    "@nucleum/datafn": "*",
+    "@nucleum/extensions": "*",
+    "@nucleum/persistence": "*",
+    "@nucleum/stores": "*"
   }
 }

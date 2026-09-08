@@ -4,10 +4,33 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@21n/fonts": "^1.0.1",
     "@datafn/svelte": "0.1.0",
-    "@nucleum/schema": "*"
+    "@fontsource-variable/hanken-grotesk": "^5.1.0",
+    "@fontsource-variable/sen": "^5.2.6",
+    "@fontsource-variable/space-grotesk": "^5.2.7",
+    "@fontsource/noto-color-emoji": "^5.1.0",
+    "@nucleum/schema": "*",
+    "@sveltejs/kit": "^2.55.0",
+    "posthog-js": "^1.154.0",
+    "svelte": "^5.55.0"
   },
   "exports": {
     "./*": "./*"
+  },
+  "peerDependencies": {
+    "@21n/branding": "*",
+    "@21n/elements": "*",
+    "@21n/shared-utils": "*",
+    "@21n/theme": "*",
+    "@21n/utils": "*",
+    "@nucleum/actions": "*",
+    "@nucleum/application": "*",
+    "@nucleum/client": "*",
+    "@nucleum/components": "*",
+    "@nucleum/datafn": "*",
+    "@nucleum/persistence": "*",
+    "@nucleum/products": "*",
+    "@nucleum/stores": "*"
   }
 }

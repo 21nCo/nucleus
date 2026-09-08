@@ -67,14 +67,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@nucleum/actions": "*",
-    "@nucleum/components": "*",
     "@21n/elements": "*",
-    "@nucleum/datafn": "*",
-    "@nucleum/features": "*",
-    "@nucleum/products": "*",
-    "@nucleum/static": "*",
-    "@nucleum/stores": "*",
     "@21n/utils": "*",
     "@antv/g6": "^5.0.26",
     "@carbon/charts-svelte": "1.22.18",
@@ -87,6 +80,13 @@
     "@iconify/json": "^2.2.286",
     "@iconify/tools": "^4.1.1",
     "@iconify/utils": "^2.2.1",
+    "@nucleum/actions": "*",
+    "@nucleum/components": "*",
+    "@nucleum/datafn": "*",
+    "@nucleum/features": "*",
+    "@nucleum/products": "*",
+    "@nucleum/static": "*",
+    "@nucleum/stores": "*",
     "@plasmohq/messaging": "^0.6.2",
     "@rive-app/canvas": "^1.1.3",
     "@sentry/sveltekit": "^8.38.0",
@@ -104,8 +104,8 @@
     "highlight.js": "^11.10.0",
     "jwt-decode": "^3.1.2",
     "localforage": "^1.10.0",
-    "markdown-it": "^14.1.0",
     "maplibre-gl": "^4.5.1",
+    "markdown-it": "^14.1.0",
     "ml-kmeans": "^6.0.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
@@ -122,5 +122,8 @@
     "searchfn": "^0.2.0",
     "svelte-gestures": "^1.5.2",
     "wavesurfer.js": "^7.7.2"
+  },
+  "peerDependencies": {
+    "@21n/theme": "*"
   }
 }

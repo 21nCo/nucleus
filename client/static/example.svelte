@@ -1,6 +1,6 @@
 <!-- Example: Using static in a Svelte component -->
 <script>
-  import { assets, assetPath } from 'static';
+  import { assets, assetPath } from '@nucleum/static';
   
   // You can now use shared assets across all apps
   let playSound = (soundType) => {

@@ -18,10 +18,12 @@
     "@vitest/coverage-v8": "^2.1.9",
     "jsdom": "^24.0.0",
     "svelte": "^5.55.0",
-    "vite-tsconfig-paths": "^4.3.2"
+    "vite-tsconfig-paths": "^4.3.2",
+    "undici": "7.29.0"
   },
   "dependencies": {
     "@nucleum/datafn": "*",
-    "@nucleum/schema": "*"
+    "@nucleum/schema": "*",
+    "vitest": "^2.0.5"
   }
 }

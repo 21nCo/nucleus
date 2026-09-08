@@ -7,6 +7,26 @@
     "./*": "./*"
   },
   "dependencies": {
-    "@nucleum/schema": "*"
+    "@fontsource/noto-color-emoji": "^5.1.0",
+    "@nucleum/schema": "*",
+    "dayjs": "^1.11.10",
+    "markdown-it": "^14.1.0",
+    "svelte": "^5.55.0"
+  },
+  "peerDependencies": {
+    "@21n/branding": "*",
+    "@21n/icons": "*",
+    "@21n/icons-v2": "*",
+    "@21n/illustrations": "*",
+    "@21n/layout": "*",
+    "@21n/shared-utils": "*",
+    "@21n/theme": "*",
+    "@21n/utils": "*",
+    "@nucleum/actions": "*",
+    "@nucleum/client": "*",
+    "@nucleum/components": "*",
+    "@nucleum/datafn": "*",
+    "@nucleum/persistence": "*",
+    "@nucleum/stores": "*"
   }
 }

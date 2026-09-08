@@ -11,5 +11,8 @@
       "types": "./index.d.ts"
     },
     "./*": "./*"
+  },
+  "peerDependencies": {
+    "@21n/shared-dbo": "*"
   }
 }

@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import ts from "typescript";
+import { checkWorkspaceDependencies } from "./workspace-dependencies.mjs";
 
 const root = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -24,6 +25,7 @@ const files = execFileSync(
   );
 const sourceFiles = new Set(files);
 const edges = [];
+const externalImports = [];
 const retiredImports = [];
 const retiredApplicationPaths = new Set(
   JSON.parse(
@@ -56,6 +58,7 @@ function resolveImport(specifier, importer) {
       `${target}.svelte`,
       `${target}.js`,
       `${target}/index.ts`,
+      `${target}/index.js`,
       target.replace(/\.js$/, ".ts")
     ].find((candidate) => sourceFiles.has(candidate)) ?? target
   );
@@ -131,7 +134,7 @@ for (const file of files) {
                 node.importClause.namedBindings.elements.every((item) => item.isTypeOnly)))) ||
             (ts.isExportDeclaration(node) && Boolean(node.isTypeOnly));
           edges.push({ from: file, to: target, typeOnly });
-        }
+        } else externalImports.push({ from: file, to: specifier });
       }
       ts.forEachChild(node, visit);
     };
@@ -284,6 +287,12 @@ for (const edge of edges.filter(production)) {
   if (!contract.includes(edge.to))
     violations.push({ ...edge, reason: "Feature entry point is not declared" });
 }
+for (const entry of contract) {
+  const capability = entry.split("/").slice(0, 3).join("/") + "/";
+  if (!edges.some((edge) => edge.to === entry && !edge.from.startsWith(capability)))
+    violations.push({ from: "tools/check/feature-entrypoints.json", to: entry, reason: "Public feature entry has no external consumer" });
+}
+violations.push(...checkWorkspaceDependencies(edges, externalImports));
 if (process.argv.includes("--graph"))
   console.log(JSON.stringify(edges, null, 2));
 else {

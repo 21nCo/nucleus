@@ -10,10 +10,27 @@
     "@authfn/client": "0.2.0",
     "@datafn/client": "0.1.0",
     "@datafn/svelte": "0.1.0",
+    "@nucleum/components": "*",
     "@nucleum/datafn": "*",
     "@nucleum/features": "*",
     "@nucleum/schema": "*",
     "@superfunctions/http": "0.2.0",
-    "@nucleum/components": "*"
+    "maplibre-gl": "^4.5.1",
+    "svelte": "^5.55.0"
+  },
+  "peerDependencies": {
+    "@21n/branding": "*",
+    "@21n/elements": "*",
+    "@21n/illustrations": "*",
+    "@21n/layout": "*",
+    "@21n/shared-utils": "*",
+    "@21n/theme": "*",
+    "@21n/utils": "*",
+    "@nucleum/actions": "*",
+    "@nucleum/client": "*",
+    "@nucleum/extensions": "*",
+    "@nucleum/persistence": "*",
+    "@nucleum/products": "*",
+    "@nucleum/stores": "*"
   }
 }

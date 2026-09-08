@@ -4,12 +4,24 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@datafn/client": "0.1.0",
     "@nucleum/datafn": "*",
-    "@nucleum/schema": "*"
+    "@nucleum/schema": "*",
+    "svelte": "^5.55.0"
   },
   "exports": {
     "./app.store": "./app.store.ts",
     "./view.store": "./view.store.ts",
     "./*": "./*"
+  },
+  "peerDependencies": {
+    "@21n/elements": "*",
+    "@21n/layout": "*",
+    "@21n/shared-utils": "*",
+    "@21n/theme": "*",
+    "@21n/utils": "*",
+    "@nucleum/actions": "*",
+    "@nucleum/client": "*",
+    "@nucleum/persistence": "*"
   }
 }

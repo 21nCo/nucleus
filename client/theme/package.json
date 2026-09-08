@@ -5,5 +5,8 @@
   "type": "module",
   "exports": {
     "./*": "./*"
+  },
+  "dependencies": {
+    "tailwindcss-themer": "^2.0.3"
   }
 }
