@@ -12,7 +12,7 @@
     resolveResourceIcon
   } from "@nucleum/datafn/resource.utils";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
+  import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { recentsStore } from "@nucleum/stores/resources/recent.store";
   import { page } from "$app/stores";
   import view from "@nucleum/stores/view.store";
@@ -236,23 +236,27 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
     </div>
   {/if}
   {#snippet nav()}
-    <div class="flex flex-grow">
-      <ResourceBrowser
-        resource={selectedResource}
-        isPreventCwPadding={true}
-        onBack={() => {
-          selectedResource = Resource.unknown;
-          appStore.toggleSearchParam([AppSearchParam.RESOURCE]);
-        }}
-      />
-    </div>
+    {#if selectedResource !== Resource.unknown}
+      <div class="flex flex-grow">
+        <ResourceBrowser
+          resource={selectedResource}
+          isPreventCwPadding={true}
+          onBack={() => {
+            selectedResource = Resource.unknown;
+            appStore.toggleSearchParam([AppSearchParam.RESOURCE]);
+          }}
+        />
+      </div>
+    {/if}
   {/snippet}
   {#snippet right()}
-    <div class="flex flex-col gap-4 w-full">
-      {#key selectedResource}
-        <LibraryRecordsPane resource={selectedResource} />
-      {/key}
-    </div>
+    {#if selectedResource !== Resource.unknown}
+      <div class="flex flex-col gap-4 w-full">
+        {#key selectedResource}
+          <LibraryRecordsPane resource={selectedResource} />
+        {/key}
+      </div>
+    {/if}
   {/snippet}
 </Panel>
 

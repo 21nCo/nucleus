@@ -56,10 +56,12 @@
 </script>
 
 <div class="flex flex-col gap-4 w-full">
-  {#key selectedResource}
-    <LibraryRecordsPane
-      resource={selectedResource}
-      bind:this={recordsPaneRef}
-    />
-  {/key}
+  {#if selectedResource !== Resource.unknown}
+    {#key selectedResource}
+      <LibraryRecordsPane
+        resource={selectedResource}
+        bind:this={recordsPaneRef}
+      />
+    {/key}
+  {/if}
 </div>
