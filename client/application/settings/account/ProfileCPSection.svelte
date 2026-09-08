@@ -11,7 +11,7 @@
   import { bg, cn } from "@21n/utils/ui.utils";
   import ProfilePicture from "@nucleum/application/settings/account/ProfilePicture.svelte";
   import modalEvent from "@nucleum/stores/overlays/modal.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import {
     determineIfPlanIsActive,
     resolveLicenseString,

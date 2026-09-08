@@ -12,7 +12,7 @@
   import ProfileCpSection from "@nucleum/application/settings/account/ProfileCPSection.svelte";
   import SettingsFooter from "@nucleum/application/settings/SettingsFooter.svelte";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { page } from "$app/stores";
   import { resolveProductConfig } from "@nucleum/products/product.config";
   import BackButton from "@21n/elements/button/BackButton.svelte";

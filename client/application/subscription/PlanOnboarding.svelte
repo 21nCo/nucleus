@@ -1,7 +1,7 @@
 <script lang="ts">
   import account from "@nucleum/stores/account.store";
   import { PlanType, BillingCycle } from "@nucleum/schema/account/subscription";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { ButtonVariant } from "@21n/elements/button/button.type";

@@ -6,7 +6,7 @@
   import { Size } from "@21n/elements/size.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import modalEvent from "@nucleum/stores/overlays/modal.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { cn } from "@21n/utils/ui.utils";
   import Icon from "@21n/elements/Icon.svelte";
   import { appStore } from "@nucleum/stores/app.store";

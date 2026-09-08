@@ -4,7 +4,7 @@
   import ResourceResolver from "@21n/layout/paint/ResourceResolver.svelte";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-  import type { Action } from "@nucleum/application/commandBar/action.enum";
+  import type { Action } from "@nucleum/client/config/action.enum";
   import { isRecordId } from "@nucleum/datafn/resource.utils";
 
   const ITEM_WIDTH =

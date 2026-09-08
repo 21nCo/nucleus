@@ -7,7 +7,7 @@ import type { IBillingAddress } from "@nucleum/schema/account/subscription";
   import { BillingCycle } from "@nucleum/schema/account/subscription";
   import PlanCard from "@nucleum/application/subscription/elements/PlanCard.svelte";
   import FullScreenCloseButton from "@21n/elements/button/FullScreenCloseButton.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import account from "@nucleum/stores/account.store";
   import { SUBSCRIPTION_PLANS } from "@nucleum/application/subscription/userPlan.utils";
   import BillingAddressCapture from "@nucleum/application/subscription/BillingAddressCapture.svelte";

@@ -27,7 +27,7 @@ import { type EmailParts } from "@nucleum/schema/account/profile.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import {
     determineIfPlanIsActive,
     resolveNextRenewalDate,

@@ -36,7 +36,7 @@ import { Embed, OperatingSystem } from "@nucleum/client/runtime/context.type";
 import { AccessMode } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import {
   GlobalEvent,
   type Event

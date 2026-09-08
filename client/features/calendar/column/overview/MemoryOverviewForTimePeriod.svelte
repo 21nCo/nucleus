@@ -10,7 +10,7 @@
   import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import MetricCard from "@nucleum/features/calendar/column/overview/MetricCard.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import { tzStore } from "@nucleum/stores/preferences/timezone.store";

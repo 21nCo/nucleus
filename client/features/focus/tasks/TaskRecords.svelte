@@ -22,7 +22,7 @@
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import ComponentShortcutListener from "@nucleum/components/keyboard/ComponentShortcutListener.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import TasksGroupedByObjective from "./TasksGroupedByGoal.svelte";
   let {
     data,

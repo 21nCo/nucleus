@@ -3,7 +3,7 @@
   import { Size } from "@21n/elements/size.enum";
   import view from "@nucleum/stores/view.store";
   import Link from "@21n/elements/text/Link.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import ComingSoon from "@21n/illustrations/pixelsmarket/ComingSoon.svelte";
     let {
     mainText = undefined,

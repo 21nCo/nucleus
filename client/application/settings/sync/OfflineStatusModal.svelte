@@ -3,7 +3,7 @@
   import account from "@nucleum/stores/account.store";
   import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import { Size } from "@21n/elements/size.enum";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { Orientation } from "@21n/elements/direction.enum";

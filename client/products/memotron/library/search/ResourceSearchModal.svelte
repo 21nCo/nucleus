@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import ResourceSearchBase from "@nucleum/products/memotron/library/search/ResourceSearchBase.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import SearchInput from "@nucleum/application/search/SearchInput.svelte";
 
   let { isInline = false }: { isInline?: boolean } = $props();

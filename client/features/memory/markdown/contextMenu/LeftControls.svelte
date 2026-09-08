@@ -25,7 +25,7 @@
   import { AccessMode } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { MemotronEvent } from "@nucleum/features/memory/memory.type";
   import { dispatchCustomEvent } from "@21n/utils/browser.utils";
   import { tabs } from "@21n/layout/topNav/tabs/tabs.store";

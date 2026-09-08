@@ -14,7 +14,7 @@
   import context from "@nucleum/stores/context.store";
   import { Embed } from "@nucleum/client/runtime/context.type";
   import { cn } from "@21n/utils/ui.utils";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { onMount } from "svelte";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { resolveModalOnFront } from "@21n/utils/browser.utils";

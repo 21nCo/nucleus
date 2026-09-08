@@ -63,7 +63,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import TextInput from "@21n/elements/input/TextInput.svelte";
   import { InputStyle } from "@21n/elements/input/input.type";
   import { resizeListener } from "@nucleum/actions/resize.action";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
   import Icon from "@21n/elements/Icon.svelte";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";

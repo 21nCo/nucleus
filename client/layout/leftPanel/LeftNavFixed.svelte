@@ -18,7 +18,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import OfflineStatusMessage from "@21n/elements/feedback/OfflineStatusMessage.svelte";
   import context from "@nucleum/stores/context.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import BoxButton from "@21n/elements/button/BoxButton.svelte";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { page } from "$app/stores";

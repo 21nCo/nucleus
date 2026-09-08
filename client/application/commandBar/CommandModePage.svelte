@@ -8,7 +8,7 @@
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import view from "@nucleum/stores/view.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { ColorStrength } from "@21n/theme/appearance.type";
   import { Orientation } from "@21n/elements/direction.enum";
   import { Size } from "@21n/elements/size.enum";

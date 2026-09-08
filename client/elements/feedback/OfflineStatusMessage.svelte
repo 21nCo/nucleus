@@ -6,7 +6,7 @@
   import Icon from "@21n/elements/Icon.svelte";
   import { Size } from "@21n/elements/size.enum";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
 
   let {
     isIconOnly = false,

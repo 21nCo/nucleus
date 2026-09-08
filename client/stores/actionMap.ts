@@ -17,7 +17,7 @@ import Help from "@nucleum/application/help/Help.svelte";
 import ExtensionLoginStatusPage from "@nucleum/application/settings/ExtensionLoginStatusPage.svelte";
 import DebugPage from "@21n/layout/layers/debug/DebugPage.svelte";
 import modalEvent from "@nucleum/stores/overlays/modal.store";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import Bootstrap from "@nucleum/application/settings/account/Bootstrap.svelte";
 import Calendar from "@nucleum/features/calendar/Calendar.svelte";
 import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";

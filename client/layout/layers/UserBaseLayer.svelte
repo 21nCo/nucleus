@@ -32,7 +32,7 @@
   import PageError from "@nucleum/application/error/PageError.svelte";
   import posthog from "posthog-js";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { BillingCycle } from "@nucleum/schema/account/subscription";
   import { fileEmbedChannel } from "@nucleum/features/files/fileEmbedChannel.store";
   import { fileStore } from "@nucleum/features/files/file.store";

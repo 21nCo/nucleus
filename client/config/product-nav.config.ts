@@ -4,7 +4,7 @@
  * are made in one place only.
  */
 import { Product } from "@nucleum/client/config/product.type";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
 
 /** Product navigation supplied by the application shell to capability components. */

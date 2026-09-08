@@ -4,7 +4,7 @@
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import context from "@nucleum/stores/context.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { Embed } from "@nucleum/client/runtime/context.type";
   import { keyboardShortcuts } from "@nucleum/stores/keyboard/shortcuts.store";
   import ShortcutItem from "@nucleum/application/shortcuts/settings/ShortcutItem.svelte";

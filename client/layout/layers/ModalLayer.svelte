@@ -33,7 +33,7 @@
   import SplitView from "@21n/layout/SplitView.svelte";
   import { Orientation } from "@21n/elements/direction.enum";
   import ColorLayer from "@21n/layout/layers/themeLayer/ColorLayer.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { cn } from "@21n/utils/ui.utils";
   import ConfirmationNotification from "@nucleum/application/notifications/ConfirmationNotification.svelte";

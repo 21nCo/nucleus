@@ -9,7 +9,7 @@
   import { KeyboardKey } from "@21n/elements/keyboard/keyboard.type";
   import { logger } from "@nucleum/client/runtime/logging/logger";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
   import { UIStateScope } from "@nucleum/stores/uiState/uiState.type";

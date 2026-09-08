@@ -7,7 +7,7 @@
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import view from "@nucleum/stores/view.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { Orientation } from "@21n/elements/direction.enum";
   import { OptionSelectorStyle } from "@21n/elements/select/select.type";
   import { Size } from "@21n/elements/size.enum";

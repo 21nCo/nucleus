@@ -10,7 +10,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import PlanFeatureList from "@nucleum/application/subscription/elements/PlanFeatureList.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { BillingCycle, PlanType } from "@nucleum/schema/account/subscription";
   import { PlanStatus, type IUserPlan } from "@nucleum/schema/account/subscription";
 import { UserDataMode } from "@nucleum/client/runtime/account/account.type";

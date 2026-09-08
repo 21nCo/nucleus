@@ -1,7 +1,7 @@
 import { Extension, OverviewPanel, Product } from "@nucleum/client/config/product.type";
 import { getProductNavConfig } from "@nucleum/client/config/product-nav.config";
 import { Resource } from "@nucleum/datafn/resource.enum";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
 import type { ISelectItem } from "@21n/elements/select/select.type";
 import {

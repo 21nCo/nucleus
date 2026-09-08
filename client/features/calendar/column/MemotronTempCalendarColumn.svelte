@@ -3,7 +3,7 @@
   import Text from "@21n/elements/text/Text.svelte";
   import InlineFeedbackText from "@nucleum/extensions/clipper/InlineFeedbackText.svelte";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { TextStyle } from "@21n/elements/text/text.enum";
   import { TimeScaleUnit } from "@21n/utils/time.type";

@@ -26,7 +26,7 @@
   import context from "@nucleum/stores/context.store";
   import { Embed } from "@nucleum/client/runtime/context.type";
   import { AccessMode } from "@nucleum/datafn/resource.type";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { searchStore } from "@nucleum/application/search/index";
   import { datafn } from "@nucleum/datafn/datafn.store";
   import {

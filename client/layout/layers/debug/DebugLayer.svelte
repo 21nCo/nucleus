@@ -14,7 +14,7 @@
   import context from "@nucleum/stores/context.store";
   import { cn } from "@21n/utils/ui.utils";
   import account from "@nucleum/stores/account.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { FallbackTracker } from "@21n/utils/fallbackTracker.utils";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   let { isShowAsPage = false }: { isShowAsPage?: boolean } = $props();

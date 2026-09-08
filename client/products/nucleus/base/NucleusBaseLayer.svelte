@@ -19,7 +19,7 @@
   import SessionTitle from "@nucleum/products/pointron/base/SessionTitle.svelte";
   import MemoryBase from "@nucleum/products/memotron/base/MemoryBase.svelte";
   import TopNavLeftMenuItem from "@21n/layout/topNav/TopNavLeftMenuItem.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   let { children }: { children?: Snippet } = $props();
   let isLiteMode = $state($context.isEmbed && $context.isSheet);
 

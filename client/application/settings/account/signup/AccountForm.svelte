@@ -16,7 +16,7 @@
   import account from "@nucleum/stores/account.store";
   import view from "@nucleum/stores/view.store";
   import { Orientation } from "@21n/elements/direction.enum";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import Icon from "@21n/elements/Icon.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import { ButtonStyle } from "@21n/elements/button/button.type";

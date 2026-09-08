@@ -1,6 +1,6 @@
 <script lang="ts">
   import modalEvent from "@nucleum/stores/overlays/modal.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import ModalFooter from "@21n/elements/modal/ModalFooter.svelte";
   import { toasts } from "@nucleum/stores/notification.store";
   import { Size } from "@21n/elements/size.enum";

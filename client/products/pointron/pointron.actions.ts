@@ -46,7 +46,7 @@ import AnalyticsViewsPageEditMobile from "@nucleum/features/focus/analytics/Anal
 import { appStore } from "@nucleum/stores/app.store";
 import { Embed } from "@nucleum/client/runtime/context.type";
 import ImportOnboarding from "@nucleum/products/pointron/settings/data/ImportOnboarding.svelte";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import FocusPlayerCommandModeWidget from "@nucleum/features/focus/player/FocusPlayerCommandModeWidget.svelte";
 import PointronLibrary from "@nucleum/products/pointron/library/PointronLibrary.svelte";
 import ObjectiveSearchResultItem from "@nucleum/features/focus/goals/GoalSearchResultItem.svelte";

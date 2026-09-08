@@ -1,6 +1,6 @@
 <script lang="ts">
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import InlineSyncingFeedback from "@21n/elements/feedback/InlineSyncingFeedback.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import RightNavMenuItem from "./RightNavMenuItem.svelte";

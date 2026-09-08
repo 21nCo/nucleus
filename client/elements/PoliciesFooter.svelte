@@ -1,6 +1,6 @@
 <script lang="ts">
   import context from "@nucleum/stores/context.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { OperatingSystem } from "@nucleum/client/runtime/context.type";
   import Link from "@21n/elements/text/Link.svelte";
   let {

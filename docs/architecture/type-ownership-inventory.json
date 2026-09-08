@@ -5871,7 +5871,7 @@
       "path": "client/types/action.enum.ts",
       "disposition": "colocated",
       "destinations": [
-        "client/application/commandBar/action.enum.ts"
+        "client/config/action.enum.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",

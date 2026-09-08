@@ -37,7 +37,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
     getProductNavConfig,
     type IProductNavConfig
   } from "@nucleum/client/config/product-nav.config";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
 
   let {
     node,

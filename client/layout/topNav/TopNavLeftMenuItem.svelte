@@ -9,7 +9,7 @@
   import { PopoverTriggerMethod } from "@nucleum/actions/popover.type";
   import { cn } from "@21n/utils/ui.utils";
   import { Size } from "@21n/elements/size.enum";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { page } from "$app/stores";
   import { onMount } from "svelte";
   import type { IAction } from "@nucleum/application/commandBar/action.type";

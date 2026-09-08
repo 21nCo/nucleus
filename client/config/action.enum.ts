@@ -1,3 +1,4 @@
+/** Stable command identifiers shared by capabilities and application composition. */
 export enum Action {
   CMD = "CMD",
   CLOSE = "CLOSE",

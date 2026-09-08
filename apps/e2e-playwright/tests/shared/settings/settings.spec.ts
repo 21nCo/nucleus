@@ -17,7 +17,7 @@ const appStorePath = resolveRepoFsImportPath("client/stores/app.store.ts");
 const interactionModePath = resolveRepoFsImportPath(
   "client/elements/keyboard/interaction-mode.type.ts"
 );
-const actionEnumPath = resolveRepoFsImportPath("client/application/commandBar/action.enum.ts");
+const actionEnumPath = resolveRepoFsImportPath("client/config/action.enum.ts");
 const uiStateStorePath = resolveRepoFsImportPath(
   "client/stores/uiState/uiState.store.ts"
 );

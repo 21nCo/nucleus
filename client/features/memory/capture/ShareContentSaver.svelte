@@ -41,7 +41,7 @@
     saveSheetNode
   } from "@nucleum/persistence/dexie/sheetStorage";
   import TextInput from "@21n/elements/input/TextInput.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { tick } from "svelte";
   import { cn } from "@21n/utils/ui.utils";

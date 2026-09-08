@@ -21,7 +21,7 @@ import MemotronGreenUse from "@nucleum/products/memotron/base/MemotronGreenUse.s
 import CalloutSettings from "@nucleum/features/memory/markdown/callout/CalloutSettings.svelte";
 import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
 import MemotronOverview from "@nucleum/products/memotron/overview/MemotronOverview.svelte";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import ImportAppData from "@nucleum/products/memotron/import/ImportAppData.svelte";
 import MemotronImportSettings from "@nucleum/products/memotron/import/MemotronImportSettings.svelte";
 import MemotronHomeOnMobile from "@nucleum/products/memotron/home/MemotronHomeOnMobile.svelte";

@@ -6,7 +6,7 @@
   import { onMount } from "svelte";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { appStore } from "@nucleum/stores/app.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import Tabs from "@21n/layout/topNav/tabs/Tabs.svelte";
   import { tabs, vTrail } from "@21n/layout/topNav/tabs/tabs.store";
   import TrailLeftIndicator from "@21n/layout/topNav/TrailLeftIndicator.svelte";

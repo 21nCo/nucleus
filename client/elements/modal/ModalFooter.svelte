@@ -18,7 +18,7 @@
   import { KeyboardKey, ModifierKey } from "@21n/elements/keyboard/keyboard.type";
   import { Orientation } from "@21n/elements/direction.enum";
   import { cn } from "@21n/utils/ui.utils";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import ButtonGroup from "@21n/elements/button/ButtonGroup.svelte";
   import view from "@nucleum/stores/view.store";
   let {

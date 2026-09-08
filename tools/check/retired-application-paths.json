@@ -1,4 +1,5 @@
 [
+  "client/application/commandBar/action.enum.ts",
   "client/application/embed/embed.store.ts",
   "client/application/embed/embed.type.ts",
   "client/application/embed/embedMessage.enum.ts",

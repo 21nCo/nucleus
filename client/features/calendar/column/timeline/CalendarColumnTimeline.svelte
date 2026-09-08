@@ -21,7 +21,7 @@
   import BoxButton from "@21n/elements/button/BoxButton.svelte";
   import { resourceAction } from "@nucleum/datafn/resource.utils";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
 
   let {
     date = $bindable(),

@@ -42,7 +42,7 @@
   import { Placement } from "@21n/elements/direction.enum";
   import ComponentShortcutListener from "@nucleum/components/keyboard/ComponentShortcutListener.svelte";
   import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { Context } from "@nucleum/stores/appStore.type";
   import EdgeButton from "@21n/elements/button/EdgeButton.svelte";
 

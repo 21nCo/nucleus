@@ -5,7 +5,7 @@ import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 import { appStore } from "@nucleum/stores/app.store";
 import { ObservableStore } from "@nucleum/stores/client.store";
 import { datafn } from "@nucleum/datafn/datafn.store";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import { InteractionMode } from "@21n/elements/keyboard/interaction-mode.type";
 import {
   UIState,

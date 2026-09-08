@@ -4,7 +4,7 @@
   import view from "@nucleum/stores/view.store";
   import type { IAction } from "@nucleum/application/commandBar/action.type";
   import { ActionType } from "@nucleum/application/commandBar/action.type";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";
   import { isValidArrayWithData } from "@21n/shared-utils/obj.utils";
   import CmdResultItem from "@nucleum/application/commandBar/CmdResultItem.svelte";

@@ -10,7 +10,7 @@
   import { determineIfActiveSubscriber } from "@nucleum/application/subscription/userPlan.utils";
   import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
   import account from "@nucleum/stores/account.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { uiState } from "@nucleum/stores/uiState/uiState.store";
   import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
   import { onMount } from "svelte";

@@ -1,5 +1,5 @@
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
-import type { Action } from "@nucleum/application/commandBar/action.enum";
+import type { Action } from "@nucleum/client/config/action.enum";
 
 export type HorizontalTrail = {
   path: (Action | IRecordId)[];

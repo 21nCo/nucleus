@@ -20,7 +20,7 @@
   } from "@21n/elements/switcher/switcher.enum";
   import { AudioView } from "@nucleum/features/memory/audio/audio.type";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { appStore } from "@nucleum/stores/app.store";
   import { generateMarkdownText } from "@nucleum/features/memory/node/node.utils";
   import type { IAudioBody, IAudioMetadata } from "@nucleum/features/memory/node/node.type";

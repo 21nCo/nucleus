@@ -2,7 +2,7 @@
   import PageError from "@nucleum/application/error/PageError.svelte";
   import { appStore } from "@nucleum/stores/app.store";
   import { Product } from "@nucleum/client/config/product.type";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { ButtonVariant } from "@21n/elements/button/button.type";
   function resolveMessage(product: Product) {
     if (product === Product.NUCLEUM) {

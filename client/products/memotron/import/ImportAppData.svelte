@@ -28,7 +28,7 @@
   import FieldMapping from "@nucleum/products/memotron/import/FieldMapping.svelte";
   import type { FieldMappingConfig } from "@nucleum/products/memotron/import/data.type";
   import { PocketImporter } from "@nucleum/products/memotron/import/pocket.importer";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
 
   let {
     importSource = ImportSource.POCKET

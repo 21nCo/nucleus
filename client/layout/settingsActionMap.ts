@@ -11,7 +11,7 @@ import AppearanceSettings from "@nucleum/application/settings/appearance/Appeara
 import SettingsAsModal from "@nucleum/application/settings/SettingsAsModal.svelte";
 import { Size } from "@21n/elements/size.enum";
 import { Orientation } from "@21n/elements/direction.enum";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import InteractionModeSettings from "@nucleum/application/settings/interactionMode/InteractionModeSettings.svelte";
 import { Embed, OperatingSystem } from "@nucleum/client/runtime/context.type";
 import SyncSettings from "@nucleum/application/settings/sync/SyncSettings.svelte";

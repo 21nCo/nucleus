@@ -11,7 +11,7 @@
   import { appStore } from "@nucleum/stores/app.store";
   import { parseAndFormatDate } from "@21n/utils/time.utils";
   import { Size } from "@21n/elements/size.enum";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import account from "@nucleum/stores/account.store";
   import { PlanType } from "@nucleum/schema/account/subscription";
   let pageAction: IAction | null = null;

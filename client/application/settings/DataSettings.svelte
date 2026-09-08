@@ -26,7 +26,7 @@
     confirmationNotification,
     toasts
   } from "@nucleum/stores/notification.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import { ButtonVariant } from "@21n/elements/button/button.type";
   import { Product } from "@nucleum/client/config/product.type";
   import { Size } from "@21n/elements/size.enum";

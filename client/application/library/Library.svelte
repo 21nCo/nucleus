@@ -25,7 +25,7 @@ import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum"
   import LibraryLoadingPulse from "@nucleum/application/library/LibraryLoadingPulse.svelte";
   import { Arrangement, Placement } from "@21n/elements/direction.enum";
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import ContextMenu from "@21n/elements/contextMenu/ContextMenu.svelte";
   import ResourceBrowser from "@nucleum/application/library/resourceBrowser/ResourceBrowser.svelte";
   import { Product } from "@nucleum/client/config/product.type";

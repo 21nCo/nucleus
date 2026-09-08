@@ -4,7 +4,7 @@
   import { TextStyle } from "@21n/elements/text/text.enum";
   import { isInEditMode } from "@nucleum/stores/app.store";
   import { focusItemsStore } from "@nucleum/features/focus/session.store";
-  import { Action } from "@nucleum/application/commandBar/action.enum";
+  import { Action } from "@nucleum/client/config/action.enum";
   import ShortcutText from "@21n/elements/text/ShortcutText.svelte";
 </script>
 

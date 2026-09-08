@@ -44,7 +44,7 @@ import context from "@nucleum/stores/context.store";
 import { compressImageToTargetSize } from "@21n/utils/ui.utils";
 import { convertHeicToPng } from "@21n/utils/ui.utils";
 import { generateImagePreviewFromPdf } from "@21n/utils/pdf.utils";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { parse } from "@21n/shared-utils/json.utils";
 import {

@@ -5,7 +5,7 @@ import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
 import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
 import type { IContextMenu, IContextMenuItem } from "@21n/elements/contextMenu/context-menu.type";
 import { appStore } from "@nucleum/stores/app.store";
-import { Action } from "@nucleum/application/commandBar/action.enum";
+import { Action } from "@nucleum/client/config/action.enum";
 import { get } from "svelte/store";
 import view from "@nucleum/stores/view.store";
 import { resolveUnixTimestamp } from "@21n/shared-utils/time.utils";
