@@ -5189,7 +5189,8 @@
       "path": "client/persistence/persistence.ts",
       "disposition": "retained",
       "destinations": [
-        "client/persistence/persistence.ts"
+        "client/persistence/persistence.ts",
+        "client/persistence/response.utils.ts"
       ],
       "ownership": "implementation-private",
       "rationale": "Implementation-local or cohesive frontend owner; no independent domain abstraction is needed.",

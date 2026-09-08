@@ -1,9 +1,9 @@
 <script lang="ts">
+  import { retrieveUrlData } from "@nucleum/features/memory/capture/url-data";
   import { onMount } from "svelte";
   import appearance from "@nucleum/stores/appearance.store";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
   import MastodonWidgetScript from "@nucleum/features/memory/node/content/web/social/MastodonWidgetScript.svelte";
-  import { Persistence } from "@nucleum/persistence/persistence";
   import { parse } from "@21n/shared-utils/json.utils";
   import SocialPostLoadingInfo from "@nucleum/features/memory/node/content/web/social/SocialPostLoadingInfo.svelte";
   let {
@@ -67,7 +67,7 @@
     }
 
     const url = `https://${domain}/api/v1/statuses/${postId}`;
-    const urlData = await new Persistence().retrieveUrlData(url, {
+    const urlData = await retrieveUrlData(url, {
       isReturnRawData: true
     });
     if (urlData) {
@@ -80,7 +80,7 @@
   async function tryOEmbedApproach(instanceDomain: string) {
     try {
       const oembedUrl = `https://${instanceDomain}/api/oembed?url=${encodeURIComponent(postUrl)}`;
-      const urlData = await new Persistence().retrieveUrlData(oembedUrl, {
+      const urlData = await retrieveUrlData(oembedUrl, {
         isReturnRawData: true
       });
       if (urlData) {

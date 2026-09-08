@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { retrieveUrlData } from "@nucleum/features/memory/capture/url-data";
   import { appStore } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";
@@ -7,7 +8,6 @@
   import type { ITweet } from "@nucleum/features/memory/node/node.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { Persistence } from "@nucleum/persistence/persistence";
   import TweetPreviewUsingWidget from "@nucleum/features/memory/node/content/web/social/TweetPreviewUsingWidget.svelte";
   import account from "@nucleum/stores/account.store";
   import { InfoTextType } from "@21n/elements/text/info.type";
@@ -41,7 +41,7 @@
 
   async function resolveOembedHtml() {
     const oEmbedUrl = `https://publish.twitter.com/oembed?url=${node.url}`;
-    const urlData = await new Persistence().retrieveUrlData(oEmbedUrl, {
+    const urlData = await retrieveUrlData(oEmbedUrl, {
       isReturnRawData: true
     });
     const parsed = parse(urlData.text);

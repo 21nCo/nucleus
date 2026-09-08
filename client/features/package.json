@@ -105,6 +105,7 @@
     "./memory/capture/capture.type": "./memory/capture/capture.type.ts",
     "./memory/capture/capture.utils": "./memory/capture/capture.utils.ts",
     "./memory/capture/typeSelector/TypeSelectorOnMobile.svelte": "./memory/capture/typeSelector/TypeSelectorOnMobile.svelte",
+    "./memory/capture/url-data": "./memory/capture/url-data.ts",
     "./memory/common/highlighters/HighlightColors.svelte": "./memory/common/highlighters/HighlightColors.svelte",
     "./memory/common/highlighters/HightlightColorItem.svelte": "./memory/common/highlighters/HightlightColorItem.svelte",
     "./memory/common/highlighters/highlight.store": "./memory/common/highlighters/highlight.store.ts",

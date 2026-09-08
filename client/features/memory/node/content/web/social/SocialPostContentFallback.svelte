@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { retrieveUrlData } from "@nucleum/features/memory/capture/url-data";
   import { appStore } from "@nucleum/stores/app.store";
   import { userPreferences } from "@nucleum/stores/preferences/user-preferences.store";
   import { formatDatetime } from "@21n/utils/time.utils";
@@ -12,7 +13,6 @@
   import type { INode } from "@nucleum/features/memory/node/node.type";
   import InlineInfoBanner from "@21n/elements/text/InlineInfoBanner.svelte";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import { Persistence } from "@nucleum/persistence/persistence";
   import { InfoTextType } from "@21n/elements/text/info.type";
   import { parse } from "@21n/shared-utils/json.utils";
   import Button from "@21n/elements/button/Button.svelte";
@@ -150,7 +150,7 @@
     if (node.contentType !== NodeType.TWEET) return;
 
     const oEmbedUrl = `https://publish.twitter.com/oembed?url=${node.url}`;
-    const urlData = await new Persistence().retrieveUrlData(oEmbedUrl, {
+    const urlData = await retrieveUrlData(oEmbedUrl, {
       isReturnRawData: true
     });
     const parsed = parse(urlData.text);

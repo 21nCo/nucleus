@@ -1,3 +1,4 @@
+import { retrieveUrlData } from "@nucleum/features/memory/capture/url-data";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import type { DfqlRelations } from "@datafn/core";
 import { ErrorMessage } from "@nucleum/stores/notifications/error.enum";
@@ -18,7 +19,6 @@ import {
   isSameResource,
   resourceInList
 } from "@nucleum/datafn/resource.utils";
-import { Persistence } from "@nucleum/persistence/persistence";
 import { ClipperExtensionEvent } from "@nucleum/client/config/events/clipper-event.type";
 import {
   LinkType,
@@ -543,7 +543,7 @@ class WebpageStore extends ObservableStore<IWebpageStore> {
       ) {
         return extractYoutubeVideoData();
       } else if (params?.contentType === NodeType.YOUTUBE_CHANNEL) {
-        const urlData = await new Persistence().retrieveUrlData(
+        const urlData = await retrieveUrlData(
           window.location.href
         );
         if (urlData?.parsedData) {

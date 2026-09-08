@@ -1,3 +1,4 @@
+import { retrieveUrlData } from "@nucleum/features/memory/capture/url-data";
 import { get, writable } from "svelte/store";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import { LinkType } from "@nucleum/datafn/link.type";
@@ -61,7 +62,6 @@ import { uiState } from "@nucleum/stores/uiState/uiState.store";
 import { UIState, UIStateScope } from "@nucleum/stores/uiState/uiState.type";
 import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 import { MemotronAction } from "@nucleum/features/memory/memory-action.enum";
-import { Persistence } from "@nucleum/persistence/persistence";
 import view from "@nucleum/stores/view.store";
 import context from "@nucleum/stores/context.store";
 import { OperatingSystem } from "@nucleum/client/runtime/context.type";
@@ -1440,7 +1440,7 @@ export class ActiveCaptureStore extends ActiveResourceStore<
           };
         }
       } else if (!params?.isEmbedContext) {
-        const data = await new Persistence().retrieveUrlData(text);
+        const data = await retrieveUrlData(text);
         if (data?.parsedData) {
           const parsedData = data.parsedData;
           label = parsedData.label ?? label;

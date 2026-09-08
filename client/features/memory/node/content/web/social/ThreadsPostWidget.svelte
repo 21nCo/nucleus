@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { retrieveUrlData } from "@nucleum/features/memory/capture/url-data";
   import { onDestroy, onMount } from "svelte";
   import { generateSimpleRandomId } from "@21n/shared-utils/crypto.utils";
-  import { Persistence } from "@nucleum/persistence/persistence";
   import { parse } from "@21n/shared-utils/json.utils";
   import SocialPostLoadingInfo from "@nucleum/features/memory/node/content/web/social/SocialPostLoadingInfo.svelte";
   let {
@@ -57,7 +57,7 @@
     try {
       const oembedUrl = `https://www.threads.com/oembed?url=${encodeURIComponent(postUrl)}`;
 
-      const urlData = await new Persistence().retrieveUrlData(oembedUrl, {
+      const urlData = await retrieveUrlData(oembedUrl, {
         isReturnRawData: true
       });
       if (urlData) {

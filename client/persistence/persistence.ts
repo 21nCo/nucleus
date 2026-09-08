@@ -1,3 +1,4 @@
+import { resolveJsonResponse } from "./response.utils";
 import {
   performApiCall,
   performStaticDataOperation
@@ -5,33 +6,15 @@ import {
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import { clientStorage } from "@nucleum/persistence/persistence.utils";
 import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
-import { extractFullTabData } from "@nucleum/extensions/clipper/clipper.utils";
-import {
-  isContentScript,
-  isExtensionEnvironment
-} from "@21n/utils/browser.utils";
+
+
 import { parse } from "@21n/shared-utils/json.utils";
 
-type JsonResponse = Pick<Response, "ok" | "json">;
-
-function isJsonResponse(response: unknown): response is JsonResponse {
-  if (!response || typeof response !== "object") return false;
-  const candidate = response as {
-    ok?: unknown;
-    json?: unknown;
-  };
-  return typeof candidate.ok === "boolean" && typeof candidate.json === "function";
-}
-
 export class Persistence {
-  private resolveJsonResponse(response: unknown) {
-    if (!isJsonResponse(response)) return;
-    return response;
-  }
 
   getUserInfo = async (token: string) => {
     try {
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall("account/n/refresh", "POST", {
           token
         })
@@ -48,7 +31,7 @@ export class Persistence {
   };
   getUserPlan = async () => {
     try {
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall("v2/plan/get", "POST", {})
       );
       if (!response?.ok) {
@@ -63,7 +46,7 @@ export class Persistence {
 
   initiateSubscription = async (params: any) => {
     try {
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall("v2/plan/subscribe", "POST", {
           ...params
         })
@@ -80,7 +63,7 @@ export class Persistence {
 
   modifySubscription = async (params: any) => {
     try {
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall("v2/plan/modify", "POST", {
           ...params
         })
@@ -97,7 +80,7 @@ export class Persistence {
 
   restorePurchase = async () => {
     try {
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall("v2/plan/restore", "POST", {})
       );
       if (!response?.ok) {
@@ -112,7 +95,7 @@ export class Persistence {
 
   verifyPayment = async (nonce: string, embedTransaction?: any) => {
     try {
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall("v2/plan/verify", "POST", {
           nonce,
           embedTransaction
@@ -138,7 +121,7 @@ export class Persistence {
       if (!apiBaseUrl) {
         return;
       }
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall("account/n/action", "POST", {
           action,
           ...params
@@ -155,7 +138,7 @@ export class Persistence {
   }
   async runGeoAction(method: string, params: any) {
     try {
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall("utils/n/geo", "POST", {
           method,
           ...params
@@ -192,7 +175,7 @@ export class Persistence {
     isTemp: boolean
   ) {
     try {
-      const response = this.resolveJsonResponse(
+      const response = resolveJsonResponse(
         await performApiCall(
           "utils/n/getsignedurl",
           "POST",
@@ -224,7 +207,7 @@ export class Persistence {
    *
    */
   async fetchSignedUrlForGet(key: string) {
-    const response = this.resolveJsonResponse(
+    const response = resolveJsonResponse(
       await performApiCall(
         "utils/n/getsignedurl",
         "POST",
@@ -253,51 +236,12 @@ export class Persistence {
     }
   }
 
-  async retrieveUrlData(
-    url: string,
-    params?: {
-      isReturnRawData?: boolean;
-    }
-  ) {
-    const response = await performApiCall("utils/n/run", "POST", {
-      url,
-      action: "get-webpage"
-    });
-    let data;
-    const isExtentionContentScript = isContentScript();
-    const isExtensionEnv = isExtensionEnvironment();
-    if (isExtensionEnv && isExtentionContentScript) {
-      if (!response) return;
-      data = response;
-    } else {
-      const jsonResponse = this.resolveJsonResponse(response);
-      if (!jsonResponse?.ok) return;
-      data = await jsonResponse.json();
-    }
-    if (params?.isReturnRawData) {
-      return data;
-    }
-    let parsedData = null;
-    if (data?.text) {
-      parsedData = await parseHtml(data.text);
-    }
-    return { ...data, parsedData };
-    function parseHtml(html: string) {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
-      return extractFullTabData(doc, {
-        docText: html,
-        url
-      });
-    }
-  }
-
   async browseUnsplash(params?: {
     query?: string;
     page?: number;
     perPage?: number;
   }) {
-    const response = this.resolveJsonResponse(
+    const response = resolveJsonResponse(
       await performApiCall("utils/n/run", "POST", {
         action: "unsplash-browse",
         ...params
@@ -310,7 +254,7 @@ export class Persistence {
   }
 
   async triggerUnsplashDownload(params?: { url: string }) {
-    const response = this.resolveJsonResponse(
+    const response = resolveJsonResponse(
       await performApiCall("utils/n/run", "POST", {
         action: "unsplash-download",
         ...params

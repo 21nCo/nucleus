@@ -1,8 +1,8 @@
 <script lang="ts">
+  import { retrieveUrlData } from "@nucleum/features/memory/capture/url-data";
   import { onMount } from "svelte";
   import appearance from "@nucleum/stores/appearance.store";
   import { parse } from "@21n/shared-utils/json.utils";
-  import { Persistence } from "@nucleum/persistence/persistence";
   import RedditWidgetScript from "@nucleum/features/memory/node/content/web/social/RedditWidgetScript.svelte";
   import SocialPostLoadingInfo from "@nucleum/features/memory/node/content/web/social/SocialPostLoadingInfo.svelte";
 
@@ -22,7 +22,7 @@
       const theme = $appearance?.colorScheme?.isDark ? "dark" : "light";
       const oembedUrl = `https://www.reddit.com/oembed?url=${encodeURIComponent(postUrl)}&theme=${theme}&omitscript=true`;
 
-      const urlData = await new Persistence().retrieveUrlData(oembedUrl, {
+      const urlData = await retrieveUrlData(oembedUrl, {
         isReturnRawData: true
       });
       if (urlData) {

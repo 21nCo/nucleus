@@ -100,6 +100,7 @@
   "client/features/memory/capture/capture.type.ts",
   "client/features/memory/capture/capture.utils.ts",
   "client/features/memory/capture/typeSelector/TypeSelectorOnMobile.svelte",
+  "client/features/memory/capture/url-data.ts",
   "client/features/memory/common/highlighters/HighlightColors.svelte",
   "client/features/memory/common/highlighters/HightlightColorItem.svelte",
   "client/features/memory/common/highlighters/highlight.store.ts",

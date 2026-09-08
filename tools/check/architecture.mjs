@@ -122,7 +122,16 @@ for (const file of files) {
             to: target,
             reason: "Relocated reusable application module"
           });
-        if (target) edges.push({ from: file, to: target });
+        if (target) {
+          const typeOnly = ts.isImportTypeNode(node) ||
+            (ts.isImportDeclaration(node) && Boolean(node.importClause?.isTypeOnly ||
+              (!node.importClause?.name && node.importClause?.namedBindings &&
+                ts.isNamedImports(node.importClause.namedBindings) &&
+                node.importClause.namedBindings.elements.length > 0 &&
+                node.importClause.namedBindings.elements.every((item) => item.isTypeOnly)))) ||
+            (ts.isExportDeclaration(node) && Boolean(node.isTypeOnly));
+          edges.push({ from: file, to: target, typeOnly });
+        }
       }
       ts.forEachChild(node, visit);
     };
@@ -204,9 +213,28 @@ const violations = edges.filter(production).filter(({ from, to }) => {
 });
 violations.push(...retiredImports);
 const productionGraph = new Map();
+const runtimeGraph = new Map();
 for (const { from, to } of edges.filter(production)) {
   if (!productionGraph.has(from)) productionGraph.set(from, []);
   productionGraph.get(from).push(to);
+}
+for (const { from, to, typeOnly } of edges.filter(production)) {
+  if (typeOnly) continue;
+  if (!runtimeGraph.has(from)) runtimeGraph.set(from, []);
+  runtimeGraph.get(from).push(to);
+}
+for (const root of runtimeGraph.keys()) {
+  if (!/^client\/(stores|utils|actions)\//.test(root)) continue;
+  const pending = [...runtimeGraph.get(root)];
+  const visited = new Set();
+  while (pending.length) {
+    const target = pending.pop();
+    if (visited.has(target)) continue;
+    visited.add(target);
+    if (/^client\/(application|features|products)\//.test(target))
+      violations.push({ from: root, to: target, reason: "Shared runtime dependency reaches composition" });
+    pending.push(...(runtimeGraph.get(target) ?? []));
+  }
 }
 for (const root of productionGraph.keys()) {
   const isSharedMarkdown = root.startsWith("client/elements/markdown/");
