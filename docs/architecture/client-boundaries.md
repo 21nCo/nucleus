@@ -49,7 +49,7 @@ The public feature API contains 145 entries: memory 57, focus 52, collections 16
 
 Registered workspaces declare their production source imports. `@nucleum/client` owns the existing config/runtime/next aliases. Source workspaces bundled by an app declare co-hosted workspace requirements as peer dependencies; existing build dependencies remain dependencies. Peers describe the host's source compilation requirements without adding artificial Turbo build cycles. This is not a claim that each source package builds or installs independently. The checker verifies both resolved workspace and external package imports; test and story dependencies are outside this production-source check.
 
-Broader product regression verification and the narrow Library unknown-resource fix remain pending before issue closure.
+The narrow Library now mounts resource panes only after a resource is selected. A dedicated focus-capability test covers the portrait Library in Nucleum and Pointron; a seeded Recents probe verifies visibility before and after reload without page errors. Broader regression results are recorded below separately from the architecture checks.
 
 ## Verification
 
@@ -202,3 +202,22 @@ Recent-record state now lives in `client/stores/resources/recent.store.ts`, with
 Direct feature-to-application imports decrease from 33 to 31; public feature entries remain 154. All 333 unit tests passed, 3 skipped, including six new contract tests. The existing Pointron DataFn integration test changed only its import path. All four product compilers passed with zero errors (379/302/308/0 warnings). Architecture checked 2,015 source files and 10,668 imports with zero violations; an injected app-store dependency was rejected. All 383 type dispositions and 199 runtime enum invariants, fixed-wait enforcement, Turbo build graph and Playwright discovery (549 tests in 55 files) passed. The direct share-extension build passed.
 
 Browser verification passed four focus scenarios and Markdown visible edit/persistence/reload without page errors. A new narrow-library probe confirmed recent-record visibility immediately and after reload, but its zero-page-error assertion failed with `DFQL_UNKNOWN_RESOURCE: Unknown resource: unknown`. Serving the original recent-store implementation from baseline `ca8dc455` at the same browser module URL reproduced that error while preserving both visible assertions; this isolates the store implementation, not the entire baseline checkout. Record this Library selection error under broader regression work instead of claiming a fully clean Recents browser run. Full cross-product Playwright, native devices, live cloud integration and deployment were not run. TIDY-477 remains In Progress.
+
+## Completion validation
+
+The final implementation is delivered as eight cohesive architecture commits (`a268d984` through `673547cb`) and a separate Library behavior fix (`64f39f58`). Command/event contracts, Markdown display, modal/map/file presentation, resource renderers and URL-capture ownership are separated without compatibility exports. The shell owns renderer/host configuration, including extension entry points.
+
+- Unit suite: 337 passed, 3 skipped across 58 files.
+- Product compilers: Nucleum, Memotron, Pointron and Timear all have zero errors; existing warning counts are 379, 302, 308 and 0. Account-service typecheck passes.
+- Production builds: Nucleum and the share extension pass. These are local builds, not deployment checks.
+- Type ownership: all 383 dispositions and 199 unchanged runtime enum invariants pass.
+- Source enforcement rejects forbidden alias, relative and dynamic imports, indirect shared-runtime composition dependencies, undeclared workspace/external dependencies and unused public feature entries. Turbo's build graph validates.
+- Library: Nucleum and Pointron portrait Library tests pass; seeded Recents visibility survives reload with no page errors.
+- Nucleum: 15 Library/settings/task-creation/collection/navigation scenarios pass. The countup item-switch scenario passes when run serially. The Markdown probe confirms visible edits and persisted content after reload, with no page errors.
+- Memotron: the broader node/collection/navigation run has 4 passed, 3 product-specific skips and 3 Capture-related failures. Its Capture smoke failure also reproduces in a detached worktree at the pre-completion baseline `350e4735`.
+- Pointron: the serial settings/collection/navigation run has 7 passed, 3 product-specific skips and 2 settings failures. Both settings cases also fail at baseline, but at different steps; their causes remain unclassified.
+- Four Nucleum focus failures also reproduce at `350e4735`: restoring mixed/nested focus items after reload, checking the active task, and countup break/resume state. Existing assertions were retained. These are recorded baseline failures, not passing coverage.
+
+Some early browser batches overlapped and caused excessive local memory use; those processes were stopped. Subsequent verification uses one product server and one browser worker, with the server's Node heap capped at 1 GB. Interrupted runs are not treated as passes. This verification does not claim execution of the entire Playwright suite, native-device coverage, live cloud auth/sync or deployment validation.
+
+Workflow failures and unresolved classification are tracked separately in [TIDY-479](https://linear.app/21n/issue/TIDY-479/investigate-offline-capture-and-focus-workflow-failures-found-during). TIDY-477 closes the structural work with this explicit regression record; it does not certify that every existing product workflow passes. Final architecture enforcement covers 2,029 files and 10,765 resolved imports with zero violations. Root lint passes architecture/fixed-wait checks, but Turbo defines no package source-lint tasks.
