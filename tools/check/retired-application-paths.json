@@ -6,6 +6,7 @@
   "client/application/embed/haptic.enum.ts",
   "client/application/error/errors.ts",
   "client/application/error/resource-error.type.ts",
+  "client/application/library/LibrarySubTypeSwitcher.svelte",
   "client/application/maps/PointInMap.svelte",
   "client/application/maps/map.styles.ts",
   "client/application/modal/Modal.svelte",

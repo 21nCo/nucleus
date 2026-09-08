@@ -152,7 +152,12 @@ const violations = edges.filter(production).filter(({ from, to }) => {
       from === "server/common/relay/index.ts" &&
       to === "client/components/flux/flux.type"
     );
-  if (from.startsWith("client/features/") && to.startsWith("client/products/"))
+  if (from.startsWith("client/features/") && /^client\/(products|application)\//.test(to))
+    return true;
+  if (
+    from === "client/stores/resources/record-renderer.ts" &&
+    (/^client\/(application|features|products)\//.test(to) || to === "client/stores/app.store.ts")
+  )
     return true;
   if (
     from.startsWith("client/components/") &&

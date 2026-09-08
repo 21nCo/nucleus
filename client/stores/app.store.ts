@@ -1,8 +1,3 @@
-import { configureShortcutHost } from "@nucleum/stores/keyboard/shortcut-host";
-import { configureRecentsHost } from "@nucleum/stores/resources/recent-host";
-import { shortcutsConfig } from "@nucleum/application/shortcuts/shortcuts.config";
-import { resolveProductConfig } from "@nucleum/products/product.config";
-import { configureResourcePanelHost } from "@nucleum/stores/resources/resource-panel-host";
 import { get, writable } from "svelte/store";
 import { AppSkin } from "@21n/theme/appearance.type";
 import { AppSearchParam, type IAppStore } from "@nucleum/stores/appStore.type";
@@ -23,9 +18,7 @@ import {
   getDapId
 } from "@nucleum/persistence/persistence.utils";
 import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
-import modalEvent, {
-  configureOverlayHost
-} from "@nucleum/stores/overlays/modal.store";
+import modalEvent from "@nucleum/stores/overlays/modal.store";
 import view from "@nucleum/stores/view.store";
 import context from "@nucleum/stores/context.store";
 import {
@@ -48,15 +41,12 @@ import account from "@nucleum/stores/account.store";
 import { tabs, vTrail } from "@21n/layout/topNav/tabs/tabs.store";
 import {
   determineResourceAccessMode,
-  resolveProductResources,
   resourceAction
 } from "@nucleum/datafn/resource.utils";
 import { Product } from "@nucleum/client/config/product.type";
 import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
-import { configureResourceActionHost } from "@nucleum/stores/resources/resource-action-host";
-import { copyResourceLinkToClipboard } from "@nucleum/application/record/resource-link.utils";
 
 // export const app = writable<{ product: string; env: string }>({
 //   product: "tidy",
@@ -1028,59 +1018,6 @@ export const appStore = {
     dispatchCustomEvent(GlobalEvent.ADD_TO_RECENTS, data);
   }
 };
-
-configureOverlayHost({
-  onDismiss: (action) => appEvents.nav(action),
-  openFullscreen: (path) =>
-    appStore.toggleSearchParam({
-      [AccessMode.FULL]: path,
-      [AccessMode.POP]: null
-    }),
-  closeFullscreen: () => appStore.toggleSearchParam([AccessMode.FULL]),
-  resolvePlayer: (path) =>
-    appStore.resolveComponentFromPath(path)?.associatedPlayer
-});
-
-configureShortcutHost({
-  defaults: shortcutsConfig,
-  configurableActions: () => resolveProductConfig().configurableShortcuts
-});
-
-configureRecentsHost({
-  resources: () => resolveProductResources(get(appStore).product)
-});
-
-configureResourcePanelHost({
-  readPanel: (id, url) => {
-    return url.searchParams.get(
-      appStore.resolveRecordSpecificSearchParam(id, AppSearchParam.PANEL)
-    );
-  },
-  writePanel: (id, panel) =>
-    appStore.toggleSearchParamRecordSpecific(id, {
-      [AppSearchParam.PANEL]: panel
-    }),
-  close: (id) => appStore.closeResource({ id }),
-  goBack: () => appStore.goBack(),
-  maximize: (mode, id) => appStore.toggleFullScreen(mode, id)
-});
-
-configureResourceActionHost({
-  copyLink: copyResourceLinkToClipboard,
-  open: (id, mode, options) => appStore.openResource(id, mode, options),
-  close: (options) => appStore.closeResource(options),
-  maximize: (mode, id) => appStore.toggleFullScreen(mode, id),
-  openTab: (id) => tabs.open(id),
-  removeTab: (id) => tabs.remove(id),
-  requestLink: (options) =>
-    appStore.runAction(Action.BULK_LINK, { componentParams: options }),
-  afterNodeMutation: async (action, ids) => {
-    const lifecycle = await import("@nucleum/features/memory/node/node.store");
-    if (action === "archive") return lifecycle.onNodeArchive(ids);
-    if (action === "unarchive") return lifecycle.onNodeUnarchive(ids);
-    return lifecycle.onNodeTrash(ids);
-  }
-});
 
 export const isInEditMode = initEditModeStore();
 

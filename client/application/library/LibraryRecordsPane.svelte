@@ -1,4 +1,9 @@
 <script lang="ts">
+  import { resolveObjectiveSubTypesForSwitcher } from "@nucleum/features/focus/goals/goal.utils";
+  import { resolveTaskSubTypesForSwitcher } from "@nucleum/features/focus/tasks/task.utils";
+  import { resolveNodeSubTypesForSwitcher } from "@nucleum/features/memory/node/node.utils";
+  import { resolveCollectionSubTypesForSwitcher } from "@nucleum/features/collections/collection.utils";
+
   import Records from "@nucleum/application/record/Records.svelte";
   import { Size } from "@21n/elements/size.enum";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
@@ -54,7 +59,7 @@
     resourceAction
   } from "@nucleum/datafn/resource.utils";
   import TaskLibrary from "@nucleum/features/focus/tasks/TaskLibrary.svelte";
-  import LibrarySubTypeSwitcher from "@nucleum/application/library/LibrarySubTypeSwitcher.svelte";
+  import LibrarySubTypeSwitcher from "@nucleum/components/records/ResourceSubtypeSwitcher.svelte";
   import type { SubType } from "@nucleum/application/library/library.type";
   import { isCustomLibrary } from "@nucleum/application/library/library.utils";
   import LinkTagsControlPanel from "@nucleum/features/memory/linking/LinkTagsControlPanel.svelte";
@@ -847,6 +852,8 @@
       }}
     />
     <LibrarySubTypeSwitcher
+      options={resource === Resource.node ? resolveNodeSubTypesForSwitcher() : resource === Resource.collection ? resolveCollectionSubTypesForSwitcher() : resource === Resource.objective ? resolveObjectiveSubTypesForSwitcher(true) : resource === Resource.task ? resolveTaskSubTypesForSwitcher() : []}
+      onSearchParamsChange={(params) => appStore.toggleSearchParam(params)}
       {resource}
       {isConstrainedWidth}
       {accessPoint}

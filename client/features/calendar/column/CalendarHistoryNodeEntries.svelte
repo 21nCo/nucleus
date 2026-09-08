@@ -3,7 +3,8 @@
   import type { INodeThumb } from "@nucleum/features/memory/node/node.type";
   import { Arrangement } from "@21n/elements/direction.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
-  import Records from "@nucleum/application/record/Records.svelte";
+  import { requireRecordRenderer } from "@nucleum/stores/resources/record-renderer";
+  const Records = requireRecordRenderer();
   import { datafn } from "@nucleum/datafn/datafn.store";
   import { time } from "@datafn/client";
   import { toSvelteStore } from "@datafn/svelte";

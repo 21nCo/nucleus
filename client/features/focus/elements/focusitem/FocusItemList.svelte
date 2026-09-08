@@ -28,7 +28,8 @@
   import { LoadingAnimationType } from "@21n/elements/feedback/feedback.type";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
   import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
-  import Records from "@nucleum/application/record/Records.svelte";
+  import { requireRecordRenderer } from "@nucleum/stores/resources/record-renderer";
+  const Records = requireRecordRenderer();
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import Text from "@21n/elements/text/Text.svelte";

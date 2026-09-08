@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Records from "@nucleum/application/record/Records.svelte";
+  import { requireRecordRenderer } from "@nucleum/stores/resources/record-renderer";
+  const Records = requireRecordRenderer();
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import type { ICalendarEvent } from "@nucleum/features/calendar/events/event.type";
   import { Resource } from "@nucleum/datafn/resource.enum";

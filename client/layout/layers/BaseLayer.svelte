@@ -1,6 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
+  import "@nucleum/application/composition/resource-hosts";
   import type { Snippet } from "svelte";
   import { onMount, onDestroy, setContext } from "svelte";
   import { PRODUCT_NAV_CONTEXT } from "@nucleum/client/config/product-nav.config";

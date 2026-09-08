@@ -1,6 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
+  import "@nucleum/application/composition/resource-hosts";
   import type { Snippet } from "svelte";
   import { onDestroy, onMount } from "svelte";
   import { GlobalEvent } from "@nucleum/stores/notifications/event.enum";

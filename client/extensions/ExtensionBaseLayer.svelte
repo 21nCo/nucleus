@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "@nucleum/application/composition/resource-hosts";
   import { onDestroy, onMount as onComponentMount, type Snippet } from "svelte";
   import { resolveToken } from "@21n/utils/account.utils";
   import account from "@nucleum/stores/account.store";

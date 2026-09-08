@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "@nucleum/application/composition/resource-hosts";
   import type { Snippet } from "svelte";
   import "@nucleum/client/app.css";
   import ThemeLayer from "@21n/layout/layers/themeLayer/ThemeLayer.svelte";

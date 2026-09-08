@@ -9,7 +9,7 @@
   import { Size } from "@21n/elements/size.enum";
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import Button from "@21n/elements/button/Button.svelte";
-  import type { SubType } from "@nucleum/application/library/library.type";
+  import type { TaskLibrarySubType as SubType } from "./task.type";
   import { appEvents } from "@nucleum/stores/notification.store";
   import { onMount } from "svelte";
   import { PointronAction } from "@nucleum/features/focus/pointronAction.enum";

@@ -7,7 +7,8 @@
   import type { ICollectionItem } from "@nucleum/features/collections/collection.type";
   import type { INodeThumb } from "@nucleum/features/memory/node/node.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import Records from "@nucleum/application/record/Records.svelte";
+  import { requireRecordRenderer } from "@nucleum/stores/resources/record-renderer";
+  const Records = requireRecordRenderer();
 
   let {
     items = [],

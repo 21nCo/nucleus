@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
-  import { appStore } from "@nucleum/stores/app.store";
   import {
     OptionSelectorStyle,
     type ISelectItem
@@ -9,20 +8,16 @@
   import OptionSelector from "@21n/elements/select/OptionSelector.svelte";
   import Divider from "@21n/elements/Divider.svelte";
   import { Resource } from "@nucleum/datafn/resource.enum";
-  import { resolveObjectiveSubTypesForSwitcher } from "@nucleum/features/focus/goals/goal.utils";
-  import { resolveTaskSubTypesForSwitcher } from "@nucleum/features/focus/tasks/task.utils";
-  import { resolveNodeSubTypesForSwitcher } from "@nucleum/features/memory/node/node.utils";
-  import { resolveCollectionSubTypesForSwitcher } from "@nucleum/features/collections/collection.utils";
-  import type { NodeType } from "@nucleum/features/memory/node/node.type";
-  import type { CollectionType } from "@nucleum/features/collections/collection.type";
   import view from "@nucleum/stores/view.store";
   import { Orientation } from "@21n/elements/direction.enum";
   import Toggle from "@21n/elements/toggle/Toggle.svelte";
-  import type { SubType } from "@nucleum/application/library/library.type";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { cn } from "@21n/utils/ui.utils";
   import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import {
+    BarStyle,
+    PanelSwitcherStyle
+  } from "@21n/elements/switcher/switcher.enum";
   import { AppSearchParam } from "@nucleum/stores/appStore.type";
   import { page } from "$app/stores";
   import { fade } from "svelte/transition";
@@ -30,6 +25,8 @@
   import { toSvelteStore } from "@datafn/svelte";
   let {
     resource,
+    options,
+    onSearchParamsChange,
     isConstrainedWidth = $view.isConstrainedWidth,
     accessPoint,
     subContext = undefined,
@@ -37,17 +34,17 @@
     children = undefined
   }: {
     resource: Resource;
+    options: ISelectItem[];
+    onSearchParamsChange: (
+      params: string[] | Record<string, string | boolean | null>
+    ) => void;
     isConstrainedWidth?: boolean;
     accessPoint: ResourceAccessPoint;
     subContext?: string | undefined;
-    selectedSubType?: SubType;
+    selectedSubType?: string;
     children?: Snippet | undefined;
   } = $props();
 
-  const nodeSubTypesForSwitcher = resolveNodeSubTypesForSwitcher();
-  const collectionSubTypesForSwitcher = resolveCollectionSubTypesForSwitcher();
-  const goalSubTypesForSwitcher = resolveObjectiveSubTypesForSwitcher(true);
-  const taskSubTypesForSwitcher = resolveTaskSubTypesForSwitcher();
   const allSubTypeSwitcherItem = {
     label: "All",
     value: "all",
@@ -109,13 +106,11 @@
   });
 
   function resolveBaseFilters() {
-    if (
-      !(
-        isStarFilterSelected ||
-        selectedSubType === "starred" ||
-        isArchivedFilterSelected
-      )
-    ) {
+    if (!(
+      isStarFilterSelected ||
+      selectedSubType === "starred" ||
+      isArchivedFilterSelected
+    )) {
       return;
     }
     return {
@@ -134,27 +129,19 @@
   function resolveSubItems(resource: Resource) {
     const items: ISelectItem[] = [allSubTypeSwitcherItem];
     if (isConstrainedWidth && isExpandableSubTypes) return items;
-    if (resource === Resource.node) {
-      items.push(...nodeSubTypesForSwitcher);
-    } else if (resource === Resource.collection) {
-      items.push(...collectionSubTypesForSwitcher);
-    } else if (resource === Resource.objective) {
-      items.push(...goalSubTypesForSwitcher);
-    } else if (resource === Resource.task) {
-      items.push(...taskSubTypesForSwitcher);
-    }
+    items.push(...options);
     return items;
   }
 
   function resolveAllSubTypes(
     resource: Resource,
-    subTypeCounts: Map<NodeType | CollectionType, number>
+    subTypeCounts: Map<string, number>
   ) {
     const items = resolveSubItems(resource);
     if (!isExpandableSubTypes || isConstrainedWidth) return items;
     return items.map((x) => {
       const count = subTypeCounts.get(
-        x.value.toString().toUpperCase() as NodeType | CollectionType
+        x.value.toString().toUpperCase() as string
       );
       return {
         ...x,
@@ -190,18 +177,17 @@
     );
   }
 
-  function onSelect(val: SubType) {
+  function onSelect(val: string) {
     if (subContext) {
-      appStore.toggleSearchParam({
+      onSearchParamsChange({
         [`${subContext}-${AppSearchParam.TYPE}`]: val.toLowerCase()
       });
     } else {
-      appStore.toggleSearchParam({
+      onSearchParamsChange({
         [AppSearchParam.TYPE]: val.toLowerCase()
       });
     }
   }
-
 </script>
 
 {#if isConstrainedWidth}
@@ -255,11 +241,11 @@
               bgSize={Size.sm}
               onChange={() => {
                 if (isStarFilterSelected) {
-                  appStore.toggleSearchParam({
+                  onSearchParamsChange({
                     [AppSearchParam.STARRED]: isStarFilterSelected
                   });
                 } else {
-                  appStore.toggleSearchParam([AppSearchParam.STARRED]);
+                  onSearchParamsChange([AppSearchParam.STARRED]);
                 }
               }}
             />
@@ -293,11 +279,11 @@
             tooltip="Show archived items"
             onChange={() => {
               if (isArchivedFilterSelected) {
-                appStore.toggleSearchParam({
+                onSearchParamsChange({
                   [AppSearchParam.ARCHIVED]: isArchivedFilterSelected
                 });
               } else {
-                appStore.toggleSearchParam([AppSearchParam.ARCHIVED]);
+                onSearchParamsChange([AppSearchParam.ARCHIVED]);
               }
             }}
             bgSize={Size.sm}

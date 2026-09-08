@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolveTaskSubTypesForSwitcher } from "./task.utils";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import { ResourceAccessPoint } from "@nucleum/datafn/resource.type";
   import { ResourceActionType } from "@nucleum/schema/legacy/resource-action.enum";
@@ -18,8 +19,8 @@
   import InlineSearchBar from "@21n/elements/InlineSearchBar.svelte";
   import { InputStyle } from "@21n/elements/input/input.type";
   import { page } from "$app/stores";
-  import type { SubType } from "@nucleum/application/library/library.type";
-  import LibrarySubTypeSwitcher from "@nucleum/application/library/LibrarySubTypeSwitcher.svelte";
+  import type { TaskLibrarySubType as SubType } from "./task.type";
+  import LibrarySubTypeSwitcher from "@nucleum/components/records/ResourceSubtypeSwitcher.svelte";
   import ScrollViewBottomSpacer from "@21n/layout/scrollView/ScrollViewBottomSpacer.svelte";
   import { cn } from "@21n/utils/ui.utils";
   import {
@@ -548,6 +549,8 @@
   }}
 >
   <LibrarySubTypeSwitcher
+    options={resolveTaskSubTypesForSwitcher()}
+    onSearchParamsChange={(params) => appStore.toggleSearchParam(params)}
     resource={Resource.task}
     accessPoint={resolveAccessPoint()}
     {selectedSubType}

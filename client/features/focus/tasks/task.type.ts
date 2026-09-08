@@ -76,3 +76,6 @@ export enum TaskDueDateFilter {
   OVERDUE = "overdue",
   WITHOUT_DUE_DATE = "without-due-date"
 }
+
+/** Task-library filtering and grouping choices persisted by the focus capability. */
+export type TaskLibrarySubType = TaskSubTypeForSwitcher | "all" | "recents" | "starred" | "incomplete";
