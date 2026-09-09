@@ -1,0 +1,5 @@
+<environment_context>
+  <current_date>2026-09-01</current_date>
+  <timezone>Asia/Kolkata</timezone>
+  <filesystem><workspace_roots><root>/Users/serro/Documents/dev/n/nucleus</root><root>/Users/serro/.codex/visualizations/2026/08/31/01a05773-7e83-7bf1-9627-4696e82a079c</root></workspace_roots><permission_profile type="disabled"><file_system type="unrestricted" /></permission_profile></filesystem>
+</environment_context>
