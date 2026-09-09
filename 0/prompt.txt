@@ -1,0 +1,3 @@
+A trial generate also dropped datafnTimezoneChange, so I restored the existing generated schema.
+
+What is this?
