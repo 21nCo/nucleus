@@ -1,0 +1,8 @@
+# Response annotations:
+Each item contains text selected from an earlier Codex response and may include a user comment. Treat items as Annotation 1, Annotation 2, and so on in array order. Use every selection as context and address every comment. For every annotation you address, include its inline directive `:codex-annotation{index="N"}`, where N is its one-based array position (for example, `:codex-annotation{index="1"}`). Do not use unstructured annotation labels.
+<response-annotations>
+[{"text":"May I apply the remaining test-path updates and adapt the fixed-end-time test to pass its end time explicitly?","source":{"messageId":"msg_0df6648002582a08016a9e9c12145887d085b6192604330786","startOffset":404,"endOffset":514}}]
+</response-annotations>
+
+## My request:
+test-path updates are fine... what adaptation is needed?
