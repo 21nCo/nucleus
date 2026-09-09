@@ -1,0 +1,1 @@
+@shared/config/product.config.ts:8 where is this .table config used in the app?
