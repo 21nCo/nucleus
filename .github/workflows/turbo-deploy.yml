@@ -31,7 +31,6 @@ on:
       - 'apps/**'
       - 'packages/**'
       - 'shared/**'
-      - 'server/**'
       - 'deployment/**'
 
 env:

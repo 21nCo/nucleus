@@ -1,2 +1,0 @@
-DEFINE TABLE PointAggFocusByGoal SCHEMALESS AS 
-SELECT count() AS entries, time::group(start, 'day') AS start, day, month, year, math::sum(focus) AS totalFocus, math::sum(brek) AS totalBreak, goalId, parent FROM PointLogTransformed GROUP BY goalId, day, month, year;

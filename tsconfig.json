@@ -434,26 +434,6 @@
       "@21n/shared-utils/*": [
         "./shared/utils/*"
       ],
-      "@21n/shared-dbo": [
-        "./shared/dbo/index.ts",
-        "./shared/dbo/index.tsx",
-        "./shared/dbo/index.js",
-        "./shared/dbo/index.mjs",
-        "./shared/dbo/index.cjs",
-        "./shared/dbo/index.svelte",
-        "./shared/dbo/index.d.ts",
-        "./shared/dbo/src/index.ts",
-        "./shared/dbo/src/index.tsx",
-        "./shared/dbo/src/index.js",
-        "./shared/dbo/src/index.mjs",
-        "./shared/dbo/src/index.cjs",
-        "./shared/dbo/src/index.svelte",
-        "./shared/dbo/src/index.d.ts",
-        "./shared/dbo"
-      ],
-      "@21n/shared-dbo/*": [
-        "./shared/dbo/*"
-      ],
       "@nucleum/schema": [
         "./schema/index.ts",
         "./schema/index.tsx",
@@ -523,7 +503,6 @@
     "**/.svelte-kit/**",
     "**/coverage/**",
     "deployment/**",
-    "server/**",
     "tests/**",
     "client/static/**",
     "**/*.d.ts"

@@ -6,7 +6,6 @@ const workspaceDir = path.dirname(fileURLToPath(import.meta.url));
 export default [
   path.join(workspaceDir, "projects/tooling.vitest.config.ts"),
   path.join(workspaceDir, "projects/shared.vitest.config.ts"),
-  // path.join(workspaceDir, "projects/server.vitest.config.ts"),
   path.join(workspaceDir, "projects/client.vitest.config.ts"),
   path.join(workspaceDir, "projects/integration.vitest.config.ts")
 ];

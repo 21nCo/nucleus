@@ -26,7 +26,6 @@
     "client/iconsV2",
     "client/cx",
     "shared/utils",
-    "shared/dbo",
     "schema",
     "tests",
     "client/application",
@@ -34,9 +33,7 @@
   ],
   "dependencies": {
     "@carbon/charts": "1.22.18",
-    "@carbon/charts-svelte": "1.22.18",
-    "@types/bcrypt": "^6.0.0",
-    "bcrypt": "^6.0.0"
+    "@carbon/charts-svelte": "1.22.18"
   },
   "devDependencies": {
     "@tsconfig/svelte": "^5.0.5",

@@ -1,3 +1,0 @@
-DEFINE FUNCTION fn::pointron::goals::fetchSubGoals($id: record, $isIncludeArchived: bool){
-return select fn::pointron::goals::fetchParent(id) as parent, label,id,isArchived, array::len(select value count() from PointGoal where array::last(parent) = $parent.id) as subGoalCount from PointGoal where array::last(parent) = $id and ($isIncludeArchived is true or ($isIncludeArchived is false and (isArchived is false or isArchived is none)))
-};
