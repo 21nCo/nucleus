@@ -1,0 +1,1 @@
+@apps/e2e-playwright/config/e2e.config.ts:1 are we using this import everywhere? if yes, why did we create another product.type in shared-config?
