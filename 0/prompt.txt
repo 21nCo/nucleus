@@ -1,0 +1,1 @@
+inventory all nucleus worktrees
