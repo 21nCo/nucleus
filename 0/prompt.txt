@@ -1,0 +1,3 @@
+create a linear issue to track the refactoring changes (nucleum team)
+
+Add a comment on linear issue about the changes that are already done, commit the reorganization changes that are already done (leave non organization changes into its own commit) and then work your recommendations
