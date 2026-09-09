@@ -1,0 +1,3 @@
+how about deriving schema and product table set from a factory function?
+
+each table or group of tables will be grouped by feature and then products combine feature sets?
