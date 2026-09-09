@@ -1,0 +1,5 @@
+perform this refactor fully
+
+use direct root `schema/` folder and @nucleum/schema as the package name (against the existing convention - we will be moving to @nucleum in other places later)
+
+also keep the file names short without schema. prefix like features.ts etc
