@@ -1,0 +1,5 @@
+They still say datafn because they are the public barrel names and I did not rename the export surface.
+
+rename these as well
+
+also fix the datafn/CLI issue (see if latest published npm package is correct)
