@@ -1,0 +1,3 @@
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_JWO0zbCty5U2ppZcrRrstry0\",0]","question":"Two existing Playwright helpers also reference the preferences module by filesystem path: tests/focus/focus-test-helpers.ts and tests/focus/active-session/session-test-support.ts. May I update those two paths when moving preferences into the focus feature? Their workflows and assertions will stay unchanged.","answer":"Allow both helper path updates"}]
+</send_user_message_question_reply>
