@@ -1,0 +1,3 @@
+@shared/data/datafn/schema.datafn.ts this is reused on client and server without duplication?
+
+Also how to make this derived from product config?
