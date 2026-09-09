@@ -1,0 +1,33 @@
+Anything worth looking at in this discussion?
+
+
+
+
+
+No. DataFn does **not** own those columns. The name `commonShareFields` is easy to misread as shareable-capability fields; they are Nucleum product fields that happen to be copied onto `node` and `objective`.
+
+DataFn injects fields only from capabilities. `shareableCapabilities` on those resources is `timestamps`, `audit`, `trash`, `archivable`, plus shareable — which becomes:
+
+| Capability | Injected fields          |
+| ---------- | ------------------------ |
+| timestamps | `createdAt`, `updatedAt` |
+| audit      | `createdBy`, `updatedBy` |
+| trash      | `trashedAt`, `trashedBy` |
+| archivable | `isArchived`             |
+| shareable  | `visibility`             |
+
+That is the full set. If you redeclared any of those on the resource, schema validation would reject them as a capability-field collision.
+
+`isStarred`, `isLocked`, and `importId` are app features (star in the UI, lock editing, import revert). DataFn has no capability for them. Collection and space even declare `isStarred` / `importId` themselves instead of using this helper, which is another sign they are product fields, not a DataFn contract.
+
+`isAncestorInactive` is the one that *looks* DataFn-owned. DataFn will write and filter it when a relation sets `inheritsInactive: true` (node parent, objective tree, task → objective). It still does **not** inject the column. Validation requires the resource to declare it:
+```680:685:/Users/serro/Documents/dev/n/superfunctions-dev/datafn/core/src/schema.ts
+        if (!dependentResource?.fields.some((field) => field.name === "isAncestorInactive")) {
+          return err(
+            "SCHEMA_INVALID",
+            `Invalid schema: relation.inheritsInactive requires resource "${name}" to define isAncestorInactive`,
+```
+
+That is opt-in on purpose: not every resource pays for the field. `task` declares it on its own for the same reason; collection/space never do.
+
+So this array is a Nucleum DRY helper for two resources, not a redeclaration of DataFn internals. The only overlap with DataFn is “we maintain `isAncestorInactive` at runtime if you put it on the schema.”
