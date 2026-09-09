@@ -1,0 +1,99 @@
+<skill>
+<name>diffpanel-chapters</name>
+<path>/Users/serro/Documents/dev/n/agent/experiments/diffpanel/skills/diffpanel-chapters/SKILL.md</path>
+---
+name: diffpanel-chapters
+description: Generate and publish persistent Diffpanel review chapters for local Git worktrees, staged changes, branch or commit ranges, and repository-wide snapshots. Use when a user asks to organize code into review chapters, create a repo-wide review plan, review current changes through Diffpanel, or populate the Diffpanel VS Code/Cursor extension.
+---
+
+# Diffpanel Chapters
+
+Prepare one immutable Diffpanel run, organize every review item into a coherent chapter hierarchy, validate exact coverage, and publish it to the local review library. Keep the repository read-only throughout generation.
+
+## Prerequisites
+
+Run all checks before preparing a review:
+
+```bash
+command -v diffpanel
+diffpanel doctor
+git rev-parse --is-inside-work-tree
+```
+
+If `diffpanel` is unavailable, stop and ask the user to install or locally link the Diffpanel CLI. If the Git check does not print `true`, stop because Diffpanel requires a repository.
+If `diffpanel doctor` fails, stop and report that local CLI/runtime error before preparing a run; do not work around it by changing repository dependencies during generation.
+
+## Prepare the snapshot
+
+Choose the narrowest scope matching the request:
+
+```bash
+# Auto: working tree when dirty, otherwise current branch against main/master
+diffpanel prep
+
+diffpanel prep --worktree --title "Auth session recovery"
+diffpanel prep --staged
+diffpanel prep main...feature --title "PR 568 DataFn foundations"
+diffpanel prep HEAD~5..HEAD
+diffpanel prep --repo HEAD
+diffpanel prep --repo HEAD --max-files 4000
+```
+
+Capture stdout as `RECEIPT_PATH`, then read that JSON file. Read its `generationInputPath` completely, in chunks when necessary. The receipt also provides the `runId` used for validation and publication.
+Pass `--title` whenever the user named the review, module, or PR so the Diffpanel panel shows that label instead of the git range. Copy the same string into the generated JSON `title` field. If the receipt already has a `title`, reuse it.
+
+Preparation stores immutable file blobs. The user may continue editing after this point. When a preview is insufficient, read the saved content rather than the mutable working tree:
+
+```bash
+diffpanel content <run-id> <file-id> before
+diffpanel content <run-id> <file-id> after
+```
+
+## Build the review
+
+Read [references/output-schema.md](references/output-schema.md) before writing the JSON.
+
+Group items by causal and architectural relationship:
+
+- Put foundations before behavior that depends on them.
+- Keep tests with the behavior they verify.
+- Treat moves and their replacements as one story.
+- Split changes only when a reviewer can understand them independently.
+- Use root chapters only for distinct, high-level review stories. Do not promote every module or implementation step to a root chapter.
+- When one high-level story has multiple reviewable steps, create one structural parent chapter and place those steps under it as ordered child chapters. Apply this to worktree, staged, range, and repository scopes.
+- For repository snapshots, roots normally represent systems and their children represent modules or flows.
+- Do not put numeric or alphabetic prefixes in chapter titles. Diffpanel numbers root chapters `1`, `2`, `3` and labels each root's child chapters `a`, `b`, `c` independently from the global `order` values.
+- Keep items from one file together within a chapter and in source order.
+- Use deterministic item IDs exactly as provided; never invent or recalculate them.
+
+Every review item must appear in exactly one chapter. Structural parent chapters may have no direct items when their child chapters own the coverage.
+
+Write summaries for a reviewer unfamiliar with the code:
+
+- Explain the concrete outcome, not only the implementation category. Name the primary paths, user-facing surfaces, configuration entries, APIs, or dependencies that make the scope understandable.
+- Use one or two sentences for a leaf chapter. Use two to four sentences for a structural parent and roll up every materially distinct child outcome; the parent must remain useful when its children are collapsed.
+- For broad deletion chapters, say explicitly when an entire directory, workspace, route family, or capability disappears, and describe the wiring removed with it.
+- State review-order dependencies only when they affect how the change should be understood. Do not pad summaries with generic review advice.
+- Before publishing, read the hierarchy top-down. Rewrite any summary that merely restates its title, relies on vague category nouns, or omits concrete information present in its child summaries.
+
+Key changes must be human judgment questions, not lint, type, formatting, or test reminders. Empty `keyChanges` arrays are valid.
+
+## Validate and publish
+
+Write the generated object to a temporary JSON file outside the repository. Validate before publishing:
+
+```bash
+diffpanel validate "$OUTPUT_PATH" --run "$RUN_ID"
+diffpanel publish "$OUTPUT_PATH" --run "$RUN_ID"
+```
+
+If validation reports missing, duplicate, or unknown item IDs, repair the JSON and validate again. Do not publish partial coverage.
+`diffpanel publish` also accepts `--title` to set or override the panel label without editing the JSON.
+
+After publication, report the run ID, review title, chapter count, scope, and that the review is available in the Diffpanel extension panel. Existing runs can be renamed later with `diffpanel title <run-id> "Readable name"`.
+
+## Human review of large migrations
+
+For restructuring and repetitive edits, explain the shared transformation once and identify exceptions, alias/export configuration, and any behavior changes in the summary and questions. Keep complete item coverage. The panel compresses conservative matching import edits and exact-content moves while preserving individual evidence. Use optional chapter diagrams with `diagramItemRefs` when a focused structural, sequence, or state view clarifies the change; follow the visual explanation rules in `references/output-schema.md`.
+
+</skill>
