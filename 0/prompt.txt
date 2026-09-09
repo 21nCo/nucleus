@@ -1,0 +1,1 @@
+search on linear whether there is already an issue created for db migrations in nucleum team
