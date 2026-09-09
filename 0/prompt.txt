@@ -1,0 +1,3 @@
+proceed with the recommended sequence
+
+create and maintain a document on linear attached to TIDY-442 with the inventory of review findings that are differed due to the constraints of not chaning user facing functionality or tests
