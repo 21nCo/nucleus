@@ -1,0 +1,1 @@
+which name is better for schema directory? schema or config? or somethign else?
