@@ -1,0 +1,6 @@
+memotron/           # node, capture, pdf, linking
+    pointron/           # focus, logs, analytics
+
+Why to put these features into products/?
+
+why not just in features?
