@@ -1,0 +1,3 @@
+when running session-items.spec test - some tests failed - check why
+
+Dont fix anything yet
