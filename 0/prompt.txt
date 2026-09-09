@@ -1,0 +1,1 @@
+is there any simplification possible? also product.config etc are also duplicated?
