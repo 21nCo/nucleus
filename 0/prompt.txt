@@ -1,0 +1,5 @@
+the commits are not just for PR review but also for long term atomic commit history
+
+proceed with the recommended safe mechanics
+
+the latest datafn, authfn etc are published to npm - so use those from npm instead of local links
