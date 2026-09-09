@@ -1,0 +1,1 @@
+@client/products/product.type.ts:9-11 does this provide type inference at all?
