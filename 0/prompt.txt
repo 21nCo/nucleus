@@ -1,0 +1,8 @@
+# Response annotations:
+Each item contains text selected from an earlier Codex response and may include a user comment. Treat items as Annotation 1, Annotation 2, and so on in array order. Use every selection as context and address every comment. For every annotation you address, include its inline directive `:codex-annotation{index="N"}`, where N is its one-based array position (for example, `:codex-annotation{index="1"}`). Do not use unstructured annotation labels.
+<response-annotations>
+[{"text":"Fix the confirmed defects, separate behavior changes from mechanical migration where practical, and establish passing compiler and product-level validation.","source":{"messageId":"msg_0df6648002582a08016a9e83fc9c4487d0b84d1531a760efd9","startOffset":3132,"endOffset":3288}}]
+</response-annotations>
+
+## My request:
+do it for me
