@@ -1,0 +1,1 @@
+should the files in @shared/data/datafn/index.ts named with .schema suffix instead of prefix?
