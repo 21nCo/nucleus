@@ -1,0 +1,5 @@
+9:49:57 pm [vite] Pre-transform error: Failed to resolve import "$lib/client/products/memotron/linking/link.type" from "../../client/features/memory/node/links/LinkTypeIndicator.svelte". Does the file exist?
+
+happening when I run npm --workspace nucleus-app run debug -- --force
+
+run it yourself and resolve any regressions
