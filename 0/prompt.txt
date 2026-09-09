@@ -1,0 +1,35 @@
+Any improvement can be made from this below ideation?
+
+
+
+They are typed — just inferred, not annotated. SearchFn already has the matching types; this file does not import them.
+
+`nucleumDatafnSearchDefaults` is a `SearchDefaults` from `@searchfn/adapter-contracts`:
+```85:89:/Users/serro/Documents/dev/n/superfunctions-dev/searchfn/adapter-contracts/src/index.ts
+export interface SearchDefaults {
+  fuzzy?: boolean | number;
+  prefix?: boolean;
+  fieldBoosts?: Record<string, number>;
+}
+```
+
+`nucleumDatafnSearchPipeline` is a `PipelineOptions` from `@searchfn/core`:
+```31:41:/Users/serro/Documents/dev/n/superfunctions-dev/searchfn/core/src/pipeline/types.ts
+export interface PipelineOptions {
+  enableStemming?: boolean;
+  // ...
+  enableEdgeNGrams?: boolean;
+  edgeNGramMinLength?: number;
+  edgeNGramMaxLength?: number;
+  edgeNGramFieldConfig?: Record<string, EdgeNGramFieldConfig>;
+}
+```
+
+`@21n/shared-data` only depends on `@datafn/core`, so this module cannot name those types without adding a SearchFn dependency. Call sites already check the shape: IndexedDB and OpenSearch adapters take `defaults` / `pipeline` on construct.
+
+`as const` is doing two things instead of an annotation:
+
+- Keeps literals (`prefix: true`, `fuzzy: 1`, boosts as exact numbers) for the index-version hash.
+- Does **not** check the object against SearchFn. A typo like `prefx` or `enableSteming` would still compile here and only fail later when passed into an adapter.
+
+If you want both, `satisfies SearchDefaults` / `satisfies PipelineOptions` is the fit: still `as const`-narrow, but validated. That would mean a type-only SearchFn import on this package, which it currently avoids.
