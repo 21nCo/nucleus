@@ -1,0 +1,38 @@
+what do you think of below suggestion?
+
+/Users/serro/Documents/dev/n/nucleus/shared/data/datafn/schema.datafn.ts
+
+
+
+
+
+Yes — as a DataFn API, not as a lift of Nucleum’s current helpers.
+
+`@datafn/core` already ships `defineSchema` specifically to keep field-name literals. It does **not** ship field factories, so every consumer has to reinvent the same const-generic trick. DataFn’s own client tests do exactly that:
+```75:88:/Users/serro/Documents/dev/n/superfunctions-dev/datafn/client/__tests__/types.test.ts
+    const stringField = <const Name extends string, const Required extends boolean>(name: Name, required: Required) =>
+      ({ name, type: "string", required, nullable: !required }) as const;
+    // ...
+            stringField("id", true),
+            stringField("title", true),
+            booleanField("done", false),
+```
+
+Official examples still use object literals, and tests sprinkle `type: "string" as const` so types do not widen. That is the footgun helpers exist to close.
+
+**What belongs in DataFn**
+
+- Typed factories that preserve `name`, `type`, `required`, and `nullable` as literals
+- The rest of the field contract (`enum`, `default`, `unique`, `min`/`max`, `pattern`, `encrypt`, `volatile`, `readonly`) as named options, not positional args
+
+Something like `stringField("status", { required: true, enum: [...] })` is library-shaped. Nucleum’s `(name, required?, nullable?, defaultValue?)` is not: `booleanField` already takes `default` before `nullable`, and enums are bolted on with `{ ...stringField("type", true), enum: [...] }`.
+
+**What should stay in Nucleum**
+
+`idField`, `labelField`, and `commonShareFields` are product conventions, not DataFn primitives. Those should keep living next to `nucleumDatafnSchema`.
+
+**Tradeoff**
+
+For a 2-resource example schema, inline objects are clearer. At Nucleum’s size, helpers are worth it — but only if DataFn owns the typing contract. If the helpers stay local, a small generic mistake silently widens `DatafnClient<NucleumDatafnSchema>` back to loosely typed records, and `defineSchema`’s index checking degrades with them.
+
+So: DataFn should provide a const-safe field builder. Nucleum should keep using helpers either way; it should not treat the current positional API as the one to upstream.
