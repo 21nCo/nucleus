@@ -1,0 +1,100 @@
+PR #568
+
+
+
+
+
+is the below review valid?
+
+
+
+
+
+
+
+
+
+
+
+Here is what is **declared but never imported** in this repo. Everything below is a `file:` (or leftover registry) pin, not a direct source dependency.
+
+## Safe to drop as direct deps (published versions)
+
+These have **zero** `from "..."` / `import()` hits. They only exist so local `file:` copies win over nested registry versions.
+
+### `services/account`
+
+| Declared package                  | Why it was there       | Pulled in by                             |
+| --------------------------------- | ---------------------- | ---------------------------------------- |
+| `@superfunctions/oauth-core`      | file: pin              | `@authfn/social-oauth`                   |
+| `@superfunctions/oauth-flow`      | file: pin              | `@authfn/social-oauth`                   |
+| `@superfunctions/oauth-http`      | file: pin              | `@authfn/social-oauth`                   |
+| `@superfunctions/oauth-providers` | file: pin              | `@authfn/social-oauth`                   |
+| `@superfunctions/oauth-storage`   | file: pin              | `@authfn/social-oauth` and `authfn`      |
+| `@superfunctions/auth`            | file: pin              | `authfn`                                 |
+| `@superfunctions/delivery`        | file: pin              | `authfn`                                 |
+| `@superfunctions/http-openapi`    | file: pin              | `authfn`                                 |
+| `@searchfn/adapter-elasticsearch` | file: pin              | `@searchfn/adapter-opensearch`           |
+| `@searchfn/adapter-contracts`     | file: pin              | opensearch / memory / datafn-provider    |
+| `@searchfn/core`                  | file: pin              | `@searchfn/adapter-memory`               |
+| `@datafn/core`                    | file: pin              | `@datafn/server`                         |
+| `@secfn/core`                     | registry pin (`0.0.1`) | `@secfn/server` (which asks for `0.0.2`) |
+
+Account **does** import `@secfn/server/audit`. `@secfn/core` is only a transitive.
+
+### `client/components`
+
+| Declared package | Notes                                                           |
+| ---------------- | --------------------------------------------------------------- |
+| `@authfn/svelte` | Registry `0.1.0`. Never imported. Not even a `file:` pin. Dead. |
+
+### `client/stores` and `client/products`
+
+| Declared package | Notes                                                                              |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| `@datafn/core`   | No imports in either workspace. Transitive of `@datafn/client` / `@datafn/svelte`. |
+
+### `client/data`
+
+| Declared package | Notes                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------------------- |
+| `@datafn/core`   | Declared, never imported. `@21n/data` talks to DataFn through `@21n/stores` and `@21n/shared-data`. |
+
+### Monorepo root
+
+| Declared package       | Notes                                              |
+| ---------------------- | -------------------------------------------------- |
+| `@authfn/client`       | Hoist-only. Real import is in `client/components`. |
+| `@superfunctions/http` | Hoist-only. Real imports in components + account.  |
+| `@superfunctions/db`   | Hoist-only. Real imports in account.               |
+
+Root has no source that imports these. Same story as the oauth pins: force one copy into top-level `node_modules`.
+
+## Also unused as imports (tooling / transitives)
+
+Not Superfunctions `file:` leftovers in the same way, but the same “declared, never imported” pattern:
+
+- `@apifn/collections`, `@apifn/core`, `@apifn/mock`, `@apifn/snippets` — only `@apifn/cli` is imported.
+- `@datafn/cli` — listed as a dep, but the generate script calls the `superfunctions-dev` path on disk, not the package name.
+
+## Keep (actually imported)
+
+Do **not** treat these as unused:
+
+**Account:** `authfn`, `@authfn/{api-keys,email-otp,multi-region,native-handoff,password,social-oauth,two-factor}`, `@datafn/{client,server}`, `@searchfn/{adapter-opensearch,adapter-memory,datafn-provider}`, `@superfunctions/{db,http,middleware,observability}`, `@logfn/core`, `@secfn/server`, `sendfn`, `@superfunctions/cli` (config files).
+
+**Client:** `@authfn/client`, `@datafn/client`, `@datafn/svelte`, `@superfunctions/http` (type-only in `auth.ts`), `@searchfn/{adapter-indexeddb,datafn-provider}` in stores, `@datafn/core` in `client/extensions` and `shared/data`.
+
+## Practical cut
+
+If you are moving off `file:` to published versions, the high-confidence removals are:
+
+1. The five `@superfunctions/oauth-*` packages on account
+2. `@superfunctions/{auth,delivery,http-openapi}` on account
+3. `@searchfn/{adapter-elasticsearch,adapter-contracts,core}` on account
+4. `@datafn/core` on account, stores, products, and `client/data`
+5. `@authfn/svelte` on components
+6. `@secfn/core` on account
+7. Root `@authfn/client` / `@superfunctions/{db,http}` once workspaces declare the published versions themselves
+
+Those were local-link pins, not API usage.
