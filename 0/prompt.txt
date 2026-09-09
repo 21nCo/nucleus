@@ -1,0 +1,3 @@
+/Users/serro/Documents/dev/n/agent/experiments/diffpanel
+
+source code for diffpanel - add the custom title support (commit and push if any existing changes present)
