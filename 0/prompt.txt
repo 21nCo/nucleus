@@ -1,0 +1,1 @@
+inventory all worktrees and let me know which worktrees can be removed
