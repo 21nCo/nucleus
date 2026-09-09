@@ -1,0 +1,5 @@
+this split sounds good... proceed and refactor such way
+
+Also rename packages to @nucleum/features etc.. only elements and any other primitive packages should be @21n/ prefixed
+
+Ask me any questions before starting
