@@ -1,0 +1,1 @@
+@/after/package.json:36-38 why are these packages added to monorepo root package.json?
