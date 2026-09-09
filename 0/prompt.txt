@@ -1,0 +1,1 @@
+Will it be better if the datafn provides these helpers?
