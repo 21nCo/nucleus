@@ -1,0 +1,1 @@
+is this necessary if we migrate data on the db when the update is released? just answer
