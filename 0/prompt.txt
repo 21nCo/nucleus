@@ -1,0 +1,3 @@
+why did the new CLI gen omitted that table? what is the root cause? is it latest datafn cli code bug? or somethign else? troubleshoot
+
+Also why still datafn prefix for some? @schema/features.ts:387
