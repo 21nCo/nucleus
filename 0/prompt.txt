@@ -1,0 +1,3 @@
+so all PRs from the stack is now merged?
+
+and also inventory local worktrees that can be removed
