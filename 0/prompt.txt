@@ -1,0 +1,7 @@
+the current client/ sub folders feels a little unorganized... how can the orgranization be improved?
+
+like features logic lies in components and also in products/
+
+data/datafn feels unecessarily nested
+
+datafn stores are present in stores/ as well etc
