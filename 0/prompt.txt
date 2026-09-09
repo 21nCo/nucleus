@@ -1,0 +1,4 @@
+They now sit in schema/features.ts inside @nucleum/schema, so datafn on the locals is redundant - remove
+
+Drop them only if you accept a one-time reorder of nucleumDatafnSchema and a regenerate of datafn-schema.drizzle.ts.
+Drop - one time reorder is fine
