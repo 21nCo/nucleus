@@ -1,0 +1,1 @@
+@apps/e2e-playwright/tests/focus/quick-focus.spec.ts:36 should collectPageErrors be a global helper instead of only in focus helpers?
