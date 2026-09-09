@@ -1,0 +1,9 @@
+</system_reminder>
+<timestamp>Thursday, Sep 3, 2026, 10:06 AM (UTC+5:30)</timestamp>
+
+```chat_selection
+agent_id: edc595f9-2a50-4167-8753-db0c5409cd5c
+selected_text:
+/Users/serro/Documents/dev/n/nucleus-tidy-442-snapshot-20260829-AfddWc — not a registered worktree, 9.6G. TIDY-442 snapshot from Aug 29 (patches, lockfile attempts, 6.8G incidental-split-worktree). Not empty, so it does not meet the removable leftover rule.
+```
+ If we want to remove this work tree, what should we do while still preserving branches or something like that?
