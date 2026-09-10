@@ -67,7 +67,6 @@
     "dev": "turbo run dev --parallel",
     "dev:nucleus": "turbo run dev --filter=nucleus-app",
     "dev:memotron": "turbo run dev --filter=memotron-app",
-    "dev:gathery": "turbo run dev --filter=gathery-app",
     "dev:pointron": "turbo run dev --filter=pointron-app",
     "dev:memotron-share": "turbo run dev --filter=memotron-share",
     "dev:memotron-clipper": "turbo run dev --filter=memotron-clipper",

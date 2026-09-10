@@ -146,8 +146,6 @@
     "./spaces/combination/SideNavCombination.svelte": "./spaces/combination/SideNavCombination.svelte",
     "./spaces/combination/combination.type": "./spaces/combination/combination.type.ts",
     "./spaces/combination/thumbnail/CombinationThumbnail.svelte": "./spaces/combination/thumbnail/CombinationThumbnail.svelte",
-    "./spaces/gatheryEvent.enum": "./spaces/gatheryEvent.enum.ts",
-    "./spaces/space.store": "./spaces/space.store.ts",
     "./system/accessLogging/accessLog.type": "./system/accessLogging/accessLog.type.ts"
   },
   "dependencies": {
