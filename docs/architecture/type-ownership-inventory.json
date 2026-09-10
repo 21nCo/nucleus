@@ -1681,12 +1681,6 @@
         "client/stores/uiState/uiState.store.ts",
         "client/types/action.type.ts",
         "client/types/data.type.ts",
-        "server/common/sync/legacy/sync.utils.ts",
-        "server/common/sync/legacy/syncV1.ts",
-        "server/common/sync/legacy/syncV3.ts",
-        "server/common/sync/providers/dynamodb.provider.ts",
-        "server/common/sync/providers/surreal.provider.ts",
-        "server/common/sync/providers/types.ts",
         "shared/types/sync.type.ts",
         "tests/fixtures/mutations.ts",
         "tests/fixtures/resources.ts"
@@ -1964,7 +1958,6 @@
         "client/types/data.type.ts",
         "client/types/persistance.type.ts",
         "client/utils/time.utils.ts",
-        "server/common/sync/providers/dynamodb.provider.ts",
         "tests/fixtures/mutations.ts"
       ]
     },
@@ -6827,9 +6820,7 @@
         "client/types/pointron/sessionComposition.type.ts",
         "client/types/preferences.type.ts",
         "client/types/space.type.ts",
-        "shared/types/sync.type.ts",
-        "shared/utils/surreal.utils.test.ts",
-        "shared/utils/surreal.utils.ts"
+        "shared/types/sync.type.ts"
       ]
     },
     {
@@ -9688,70 +9679,6 @@
       ]
     },
     {
-      "path": "deployment/cdk/types/customNestedStackProps.type.ts",
-      "disposition": "retained",
-      "destinations": [
-        "deployment/cdk/types/customNestedStackProps.type.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Infrastructure-local configuration contract retained with deployment implementation.",
-      "declarations": [
-        "CustomNestedStackProps",
-        "CustomLambdaNestedStackProps",
-        "CustomLambdaNestedStackPropsV2",
-        "CustomDatabaseNestedStackProps",
-        "CustomFilesNestedStackProps",
-        "CustomFilesLambdaNestedStackProps"
-      ],
-      "consumers": [
-        "deployment/cdk/backend.ts",
-        "deployment/cdk/database/databaseRegionalStack.ts",
-        "deployment/cdk/database/databaseStack.ts",
-        "deployment/cdk/database/masterDbStack.ts",
-        "deployment/cdk/server/accountLambdaFunctions.ts",
-        "deployment/cdk/server/fileRegionalStack.ts",
-        "deployment/cdk/server/filesLambdaFunctions.ts",
-        "deployment/cdk/server/lessFilesRegionalStack.ts",
-        "deployment/cdk/server/lessRegionalStack.ts",
-        "deployment/cdk/server/memotronLambdaFunctions.ts",
-        "deployment/cdk/server/pointronLambdaFunctions.ts",
-        "deployment/cdk/server/spacesLambdaFunctions.ts",
-        "deployment/cdk/server/utilsLambdaFunctions.ts",
-        "deployment/cdk/server/v2/accountLambdaFunctions.ts",
-        "deployment/cdk/server/v2/embedLambdaFunctions.ts",
-        "deployment/cdk/server/v2/planLambdaFunctions.ts",
-        "deployment/cdk/server/v2/syncLambdaFunctions.ts"
-      ]
-    },
-    {
-      "path": "deployment/cdk/types/env.type.ts",
-      "disposition": "retained",
-      "destinations": [
-        "deployment/cdk/types/env.type.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Infrastructure-local configuration contract retained with deployment implementation.",
-      "declarations": [
-        "IEnvironment",
-        "ILambdaEnvironmentVariables",
-        "IDatabaseEnvironmentVariables",
-        "IBaseEnvironmentVariables",
-        "IFilesEnvironmentVariables"
-      ],
-      "consumers": [
-        "deployment/cdk/backend.ts",
-        "deployment/cdk/cdk.utils.ts",
-        "deployment/cdk/database/databaseRegionalStack.ts",
-        "deployment/cdk/database/databaseStack.ts",
-        "deployment/cdk/database/masterDbStack.ts",
-        "deployment/cdk/server/fileRegionalStack.ts",
-        "deployment/cdk/server/lessFilesRegionalStack.ts",
-        "deployment/cdk/server/lessRegionalStack.ts",
-        "deployment/cdk/server/memotronLambdaFunctions.ts",
-        "deployment/cdk/types/customNestedStackProps.type.ts"
-      ]
-    },
-    {
       "path": "deployment/cdk/types/region.type.ts",
       "disposition": "retained",
       "destinations": [
@@ -9936,7 +9863,6 @@
         "schema/index.ts",
         "schema/index.ts",
         "schema/product.config.ts",
-        "shared/utils/surreal.utils.ts",
         "shared/utils/text.utils.test.ts",
         "shared/utils/text.utils.ts"
       ]
@@ -9981,240 +9907,6 @@
         "schema/search.provider.invariants.test.ts",
         "schema/search.provider.test.ts"
       ]
-    },
-    {
-      "path": "server/common/account/account.type.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/common/account/account.type.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "DatabaseQueryParams",
-        "CONTEXT",
-        "Agent",
-        "Context",
-        "SpaceAction",
-        "MemberRole",
-        "IActivity"
-      ],
-      "consumers": [
-        "server/account.ts",
-        "server/common/account/deleteUser.test.ts",
-        "server/common/auth/auth.utils.ts",
-        "server/common/auth/index.ts",
-        "server/common/logging/logger.test.ts",
-        "server/common/plan/modify/index.ts",
-        "server/common/plan/restore/index.ts",
-        "server/common/plan/subscribe/index.ts",
-        "server/common/plan/verify/index.ts",
-        "server/common/sync/legacy/sync.test.ts",
-        "server/common/sync/legacy/sync.ts",
-        "server/common/sync/legacy/syncV3.ts",
-        "server/common/user/user.ts",
-        "server/logger.ts",
-        "server/spaces/docs.ts",
-        "server/spaces/space.ts",
-        "server/surrealHelpers.ts"
-      ]
-    },
-    {
-      "path": "server/common/oauth/oauth.type.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/common/oauth/oauth.type.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "OAuthUserData",
-        "IOAuthProviderConfig"
-      ],
-      "consumers": [
-        "server/common/oauth/oauth.utils.ts"
-      ]
-    },
-    {
-      "path": "server/common/plan/applePaymentProvider.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/common/plan/applePaymentProvider.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "AppleVerificationResponse"
-      ],
-      "consumers": [
-        "server/common/plan/modify/index.ts",
-        "server/common/plan/verify/index.ts"
-      ]
-    },
-    {
-      "path": "server/common/plan/modify/index.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/common/plan/modify/index.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "ModifyRequest"
-      ],
-      "consumers": [
-        "server/common/plan/modify/modify.test.ts"
-      ]
-    },
-    {
-      "path": "server/common/plan/plan.utils.ts",
-      "disposition": "consolidated",
-      "destinations": [
-        "server/common/plan/plan.utils.ts",
-        "server/common/plan/applePaymentProvider.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Direct owner imports replace broad type-package coupling; runtime members and serialized shapes preserved.",
-      "declarations": [
-        "DodoPaymentResponse",
-        "AppleVerificationResponse"
-      ],
-      "consumers": [
-        "server/common/plan/modify/index.ts",
-        "server/common/plan/restore/index.ts",
-        "server/common/plan/subscribe/index.ts",
-        "server/common/plan/verify/index.ts"
-      ]
-    },
-    {
-      "path": "server/common/plan/verify/index.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/common/plan/verify/index.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "VerifyRequest"
-      ],
-      "consumers": [
-        "server/common/plan/verify/verify.test.ts"
-      ]
-    },
-    {
-      "path": "server/common/sync/providers/dynamodb.provider.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/common/sync/providers/dynamodb.provider.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "DynamoDBConfig",
-        "DynamoDBItem"
-      ],
-      "consumers": [
-        "server/common/sync/providers/__tests__/dynamodb.provider.test.ts",
-        "server/common/sync/providers/index.ts",
-        "server/common/sync/providers/index.ts"
-      ]
-    },
-    {
-      "path": "server/common/sync/providers/types.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/common/sync/providers/types.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "SyncProvider",
-        "ISyncProviderConfig",
-        "ISyncProvider"
-      ],
-      "consumers": [
-        "server/common/sync/providers/dynamodb.provider.ts",
-        "server/common/sync/providers/index.ts",
-        "server/common/sync/providers/index.ts",
-        "server/common/sync/providers/surreal.provider.ts"
-      ]
-    },
-    {
-      "path": "server/database/providers/dynamodb.provider.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/database/providers/dynamodb.provider.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "IDynamoBaseAttributes",
-        "DynamoDBConfig"
-      ],
-      "consumers": [
-        "server/database/providers/index.ts",
-        "server/database/providers/index.ts"
-      ]
-    },
-    {
-      "path": "server/database/providers/turso.provider.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/database/providers/turso.provider.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "TursoConfig"
-      ],
-      "consumers": [
-        "server/database/providers/index.ts",
-        "server/database/providers/index.ts",
-        "server/database/providers/turso.provider.test.ts"
-      ]
-    },
-    {
-      "path": "server/database/providers/types.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/database/providers/types.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Backend protocol or implementation-local contract; stays beside its account, database, delivery, or deployment owner.",
-      "declarations": [
-        "DatabaseProvider",
-        "IDatabaseProviderConfig",
-        "IDatabaseProvider",
-        "UserCreateData",
-        "GuestCreateData",
-        "UserPlanCreateData",
-        "SubscriptionCreateData",
-        "IProductConfig",
-        "ICreateUserIfNotExistsResponse"
-      ],
-      "consumers": [
-        "server/database/providers/dynamodb.provider.ts",
-        "server/database/providers/index.ts",
-        "server/database/providers/index.ts",
-        "server/database/providers/surreal.provider.ts",
-        "server/database/providers/turso.provider.ts"
-      ]
-    },
-    {
-      "path": "server/utils/run/run.test.ts",
-      "disposition": "retained",
-      "destinations": [
-        "server/utils/run/run.test.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Test-local contract retained with its fixture or assertions.",
-      "declarations": [
-        "SuccessResponse",
-        "ErrorResponse",
-        "MetadataResponse",
-        "ActionResponse"
-      ],
-      "consumers": []
     },
     {
       "path": "services/account/src/app.ts",
@@ -10748,18 +10440,7 @@
         "client/layout/topNav/TrailLeftIndicator.svelte",
         "client/stores/account.store.ts",
         "client/types/account.type.ts",
-        "client/utils/account.utils.ts",
-        "server/common/plan/modify/index.ts",
-        "server/common/plan/modify/modify.test.ts",
-        "server/common/plan/paymentProducts.ts",
-        "server/common/plan/plan.utils.ts",
-        "server/common/plan/plan.utils.ts",
-        "server/common/plan/restore/index.ts",
-        "server/common/plan/restore/index.ts",
-        "server/common/plan/restore/restore.test.ts",
-        "server/common/plan/subscribe/index.ts",
-        "server/common/plan/subscribe/subscribe.test.ts",
-        "server/common/plan/verify/index.ts"
+        "client/utils/account.utils.ts"
       ]
     },
     {
@@ -10869,22 +10550,6 @@
         "client/utils/browser.utils.ts",
         "shared/utils/obj.utils.property.test.ts",
         "shared/utils/text.utils.ts"
-      ]
-    },
-    {
-      "path": "shared/utils/surreal.utils.ts",
-      "disposition": "retained",
-      "destinations": [
-        "shared/utils/surreal.utils.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Cross-layer utility or legacy database contract; client dependencies are prohibited.",
-      "declarations": [
-        "IComparisonFilterValue",
-        "IDateFilterValue"
-      ],
-      "consumers": [
-        "shared/utils/surreal.utils.test.ts"
       ]
     },
     {
@@ -12024,19 +11689,6 @@
       "typeModules": 0
     },
     {
-      "path": "shared/dbo/package.json",
-      "name": "@21n/shared-dbo",
-      "exports": {
-        ".": {
-          "import": "./index.js",
-          "types": "./index.d.ts"
-        },
-        "./*": "./*"
-      },
-      "disposition": "retained: audit covers declarations, exports, aliases and importing modules",
-      "typeModules": 0
-    },
-    {
       "path": "shared/types/package.json",
       "name": "@21n/shared-types",
       "exports": {
@@ -12114,7 +11766,6 @@
     "@nucleum/cx": "client/cx",
     "@nucleum/client": "client",
     "@21n/shared-utils": "shared/utils",
-    "@21n/shared-dbo": "shared/dbo",
     "@nucleum/schema": "schema",
     "@nucleum/next": "client/next/noop",
     "@nucleum/application": "client/application"
@@ -13429,7 +13080,7 @@
     {
       "path": "client/features/memory/markdown/markdown.utils.ts",
       "name": "symbolPatterns",
-      "initializer": "[\n  { regex: /\u2190&gt;/g, replacement: \"\u2194\" },\n  { regex: /-&gt;/g, replacement: \"\u2192\" },\n  { regex: /&lt;-/g, replacement: \"\u2190\" },\n  { regex: /&lt;=/g, replacement: \"\u2264\" },\n  { regex: /&g",
+      "initializer": "[\n  { regex: /←&gt;/g, replacement: \"↔\" },\n  { regex: /-&gt;/g, replacement: \"→\" },\n  { regex: /&lt;-/g, replacement: \"←\" },\n  { regex: /&lt;=/g, replacement: \"≤\" },\n  { regex: /&g",
       "disposition": "retained with owning implementation; no runtime initializer changes",
       "ownership": "implementation-private"
     },
@@ -14129,7 +13780,7 @@
     {
       "path": "client/static/build.js",
       "name": "copyAssetsTo",
-      "initializer": "(targetDir) => {\n  console.log(`\ud83d\udcc2 Copying assets to ${targetDir}`);\n  \n  // Validate target directory path\n  const validatedTargetDir = validatePath(targetDir, process.cwd());\n  \n",
+      "initializer": "(targetDir) => {\n  console.log(`📂 Copying assets to ${targetDir}`);\n  \n  // Validate target directory path\n  const validatedTargetDir = validatePath(targetDir, process.cwd());\n  \n",
       "disposition": "retained with owning implementation; no runtime initializer changes",
       "ownership": "implementation-private"
     },
@@ -14474,13 +14125,6 @@
       "ownership": "implementation-private"
     },
     {
-      "path": "deployment/cdk/config.ts",
-      "name": "defaults",
-      "initializer": "{\n  rootDomain: \"tidigit.com\",\n  timeout: 10,\n  longRunningJobTimeout: 200,\n  jwtSecret: \"secret\",\n  subatom: \"POINTRON\",\n  tidyTokenKey: \"tokenone\",\n  adminNamespace: \"TIDYADMINDE",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "implementation-private"
-    },
-    {
       "path": "extensions/memotron-share/src/routes/+layout.js",
       "name": "ssr",
       "initializer": "false",
@@ -14696,20 +14340,6 @@
       "initializer": "{\n  localIndexedFields: resolveNucleumDatafnSearchResourceFields(),\n  serverIndexedFields: {\n    mode: \"account-service-opensearch\",\n    externalProviderEgress: true,\n    fields: r",
       "disposition": "retained with owning implementation; no runtime initializer changes",
       "ownership": "cross-layer"
-    },
-    {
-      "path": "server/common/plan/paymentProducts.ts",
-      "name": "paymentProductsList",
-      "initializer": "[\n  {\n    plan: PlanType.CLOUD_SYNC,\n    cycle: BillingCycle.MONTHLY,\n    dodoTestProductId: \"pdt_MYtXY6cpkOmjEXo269U4N\",\n    dodoProductId: \"pdt_xTFstdD3cBAmYZKlEI2TV\",\n    produc",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "implementation-private"
-    },
-    {
-      "path": "server/lambda.ts",
-      "name": "accessControlHeaders",
-      "initializer": "{\n  \"Access-Control-Allow-Origin\": \"*\", //TODO - dynamic origin\n  \"Access-Control-Allow-Headers\": \"Content-Type Authorization\",\n  \"Access-Control-Allow-Methods\": \"GET, POST, OPTION",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "implementation-private"
     },
     {
       "path": "services/account/src/auth/constants.ts",
@@ -15076,48 +14706,6 @@
       "ownership": "implementation-private"
     },
     {
-      "path": "shared/dbo/global.dbo.ts",
-      "name": "globalDbo",
-      "initializer": "{\n  \"fn::global::utils::resolveUrlParts::v2\": resolveUrlPartsV2(),\n  \"fn::user::time::date::v4\": userDatev4()\n}",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "cross-layer"
-    },
-    {
-      "path": "shared/dbo/global.tables.ts",
-      "name": "globalTables",
-      "initializer": "[\n  ...searchIndexSimpleAnalyser(),\n  ...searchIndexAsciiAnalyser()\n]",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "cross-layer"
-    },
-    {
-      "path": "shared/dbo/memotron.dbo.ts",
-      "name": "memotronDboDefinitions",
-      "initializer": "{\n  \"fn::memotron::node::fetch\": nodeFetch(),\n  \"fn::memotron::node::children\": nodeChildren(),\n  \"fn::memotron::node::parent\": nodeParent()\n}",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "cross-layer"
-    },
-    {
-      "path": "shared/dbo/memotron.tables.ts",
-      "name": "memotronTables",
-      "initializer": "[\n  ...nodeSchemaless(),\n  ...collectionSchemaless(),\n  ...linkTagSchemaless()\n]",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "cross-layer"
-    },
-    {
-      "path": "shared/dbo/pointron.dbo.ts",
-      "name": "pointronDboDefinitions",
-      "initializer": "{\n  \"fn::pointron::export\": pointronExport(),\n  \"fn::pointron::import\": pointronImport(),\n  \"fn::pointron::importChunk\": pointronImportChunk(),\n  \"fn::pointron::revertImport\": poin",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "cross-layer"
-    },
-    {
-      "path": "shared/dbo/pointron.tables.ts",
-      "name": "pointronTables",
-      "initializer": "[]",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "cross-layer"
-    },
-    {
       "path": "shared/utils/json.utils.ts",
       "name": "undefinedReplacer",
       "initializer": "(key: string, value: any) => {\n  return value === undefined ? UNDEFINED_MARKER : value;\n}",
@@ -15158,13 +14746,6 @@
       "initializer": "(val: any) => {\n  return parse(stringify(val, { isPreventReplacer: true }));\n}",
       "disposition": "retained with owning implementation; no runtime initializer changes",
       "ownership": "cross-layer"
-    },
-    {
-      "path": "tests/fixtures/agents.ts",
-      "name": "mockAgents",
-      "initializer": "{\n  dev: {\n    id: \"mc0lsom5c7jd8e7gkyu7g4kw\",\n    db: \"mc0lsom5c7jd8e7gkyu7g4kw\",\n    ns: \"user\",\n    tk: \"tokenone\",\n    region: \"insouth\",\n    iat: 1733282501,\n    exp: 17358745",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "implementation-private"
     },
     {
       "path": "tests/fixtures/aliases/template/src/example.ts",
@@ -15212,13 +14793,6 @@
       "path": "tests/fixtures/resources.ts",
       "name": "mockResources",
       "initializer": "{\n  node: {\n    id: \"test-node\",\n    type: Resource.node,\n    data: {\n      /* ... */\n    }\n  }\n} as const",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "implementation-private"
-    },
-    {
-      "path": "tests/server.env.ts",
-      "name": "environments",
-      "initializer": "{\n  dev: {\n    agent: mockAgents.dev,\n    domain: \"21n.dev\"\n  },\n  pre: {\n    agent: mockAgents.pre,\n    domain: \"21n.xyz\"\n  },\n  live: {\n    agent: mockAgents.live,\n    domain: \"2",
       "disposition": "retained with owning implementation; no runtime initializer changes",
       "ownership": "implementation-private"
     },
@@ -16470,16 +16044,13 @@
         "client/iconsV2",
         "client/cx",
         "shared/utils",
-        "shared/dbo",
         "schema",
         "tests",
         "client/application"
       ],
       "dependencies": {
         "@carbon/charts": "1.22.18",
-        "@carbon/charts-svelte": "1.22.18",
-        "@types/bcrypt": "^6.0.0",
-        "bcrypt": "^6.0.0"
+        "@carbon/charts-svelte": "1.22.18"
       },
       "devDependencies": {
         "@tsconfig/svelte": "^5.0.5",
@@ -16724,19 +16295,6 @@
       },
       "devDependencies": {
         "wrangler": "^4.85.0"
-      }
-    },
-    {
-      "path": "shared/dbo/package.json",
-      "name": "@21n/shared-dbo",
-      "version": "0.0.0",
-      "private": true,
-      "exports": {
-        ".": {
-          "import": "./index.js",
-          "types": "./index.d.ts"
-        },
-        "./*": "./*"
       }
     },
     {
