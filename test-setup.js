@@ -41,7 +41,7 @@ packages.forEach(pkg => {
 
 // Test 2: Check if product apps exist
 console.log('\n🏗️  Checking product apps...');
-const products = ['nucleus', 'memotron', 'gathery', 'pointron'];
+const products = ['nucleus', 'memotron', 'pointron'];
 products.forEach(product => {
   try {
     // Validate product name to prevent malicious input

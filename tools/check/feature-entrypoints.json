@@ -141,7 +141,5 @@
   "client/features/spaces/combination/SideNavCombination.svelte",
   "client/features/spaces/combination/combination.type.ts",
   "client/features/spaces/combination/thumbnail/CombinationThumbnail.svelte",
-  "client/features/spaces/gatheryEvent.enum.ts",
-  "client/features/spaces/space.store.ts",
   "client/features/system/accessLogging/accessLog.type.ts"
 ]
