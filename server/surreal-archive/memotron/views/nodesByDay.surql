@@ -1,1 +1,0 @@
-DEFINE TABLE nodesByDay AS SELECT count() as entries,time::group(created,'day') as created,day,month, year FROM nodesByTime GROUP BY day,month,year;

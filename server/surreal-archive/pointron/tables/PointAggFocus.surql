@@ -1,2 +1,0 @@
-#DEFUNCT - version 2024J
-DEFINE TABLE PointAggFocus AS SELECT count() AS total,goalId,start, time::day(fn::user::time::date(start)) AS day, time::month(fn::user::time::date(start)) AS month,time::year(fn::user::time::date(start)) AS year, totalFocus, totalBreak, goalId, goalId.parent as parent FROM PointLog;

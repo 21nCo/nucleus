@@ -1,19 +1,8 @@
 import { HostedZone, IHostedZone } from "aws-cdk-lib/aws-route53";
 import * as acm from "aws-cdk-lib/aws-certificatemanager";
 import { Stack } from "aws-cdk-lib";
-import { IBaseEnvironmentVariables } from "./types/env.type";
 import { Construct } from "constructs";
-// import { LayerVersion } from "aws-cdk-lib/aws-lambda";
 import { resolveDomainName } from "../deploy.utils";
-
-export function generateFunctionName(
-  prefix: string,
-  env: IBaseEnvironmentVariables,
-  x?: Stack
-) {
-  if (env.subdomain) return `${prefix}_${env.subdomain}_${env.region}`;
-  return `${prefix}_${env.region}`;
-}
 
 export function resolveAcmCertificate(
   scope: Construct,

@@ -35,7 +35,6 @@
     "../../node_modules",
     "../../**/node_modules",
     "../../deployment/**/*",
-    "../../server/**/*",
     "../../tests/**/*",
     "../memotron/**/*",
     "../nucleus/**/*",

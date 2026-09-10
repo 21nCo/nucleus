@@ -1,1 +1,0 @@
-This folder `server` is a legacy server codebase and is no longer used. Please use `services` folder instead.

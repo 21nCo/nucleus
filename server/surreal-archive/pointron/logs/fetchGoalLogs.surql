@@ -1,3 +1,0 @@
-DEFINE FUNCTION fn::pointron::logs::goal($date: datetime, $goalId: record) {
-    return select start, end, totalFocus, totalBreak, (array::first(select id, start, end from PointSession where id is $parent.sessionId)) as session, (array::first(select label, parent.label from PointGoal where id is $parent.goalId)) as goal from PointLog where (goalId is $goalId or $goalId in goalId.parent) and time::group(fn::user::time::date::v3(start), "day") is time::group($date, "day")
-};
