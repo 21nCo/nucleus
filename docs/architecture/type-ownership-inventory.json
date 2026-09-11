@@ -5356,19 +5356,6 @@
       ]
     },
     {
-      "path": "client/products/memotron/lab/infiniteGrid/GridInputElement.stories.ts",
-      "disposition": "retained",
-      "destinations": [
-        "client/products/memotron/lab/infiniteGrid/GridInputElement.stories.ts"
-      ],
-      "ownership": "implementation-private",
-      "rationale": "Product-specific composition or import adapter; similarly named import enums have different supported sources.",
-      "declarations": [
-        "Story"
-      ],
-      "consumers": []
-    },
-    {
       "path": "client/products/memotron/memotronPreferences.type.ts",
       "disposition": "retained",
       "destinations": [
@@ -13962,20 +13949,6 @@
       "path": "client/persistence/persistence.utils.ts",
       "name": "clientStorage",
       "initializer": "new ClientKeyValueStorage()",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "implementation-private"
-    },
-    {
-      "path": "client/products/memotron/lab/infiniteGrid/GridInputElement.stories.ts",
-      "name": "Default",
-      "initializer": "{}",
-      "disposition": "retained with owning implementation; no runtime initializer changes",
-      "ownership": "implementation-private"
-    },
-    {
-      "path": "client/products/memotron/lab/infiniteGrid/GridInputElement.stories.ts",
-      "name": "BoundValueAndChildrenPropagateToParent",
-      "initializer": "{\n  render: () => ({\n    Component: GridInputElementBoundStory\n  })\n}",
       "disposition": "retained with owning implementation; no runtime initializer changes",
       "ownership": "implementation-private"
     },

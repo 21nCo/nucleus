@@ -58,11 +58,6 @@ export const seedUserPreferences: IUserGlobalPreferences = {
     usedIcons: []
   },
   annotations: [],
-  mediaGridTestitems: [],
-  infiniteGrid: {
-    isGridCreated: false,
-    grid: []
-  },
   localAI: {
     semanticSearch: false,
     audioTranscription: false,
@@ -115,13 +110,7 @@ function normalizeUserPreferences(data?: Partial<IUserGlobalPreferences>) {
       ...seedUserPreferences.localAI,
       ...(value.localAI ?? {})
     },
-    infiniteGrid: {
-      ...seedUserPreferences.infiniteGrid,
-      ...(value.infiniteGrid ?? {})
-    },
     annotations: value.annotations ?? seedUserPreferences.annotations,
-    mediaGridTestitems:
-      value.mediaGridTestitems ?? seedUserPreferences.mediaGridTestitems,
     isAnonymousAnalyticsEnabled: value.isAnonymousAnalyticsEnabled ?? true,
     timeZone: resolveStoredTimeZone(value) ?? seedUserPreferences.timeZone
   };
@@ -177,12 +166,6 @@ export const userPreferences = {
     const n = this.get();
     const localAI = { ...n.localAI, ...x };
     this.modify({ localAI });
-  },
-
-  setInfiniteGrid(x: Partial<IUserGlobalPreferences["infiniteGrid"]>) {
-    const n = this.get();
-    const infiniteGrid = { ...n.infiniteGrid, ...x };
-    this.modify({ infiniteGrid });
   },
 
   setRecentCommands(recentCommands: IUserGlobalPreferences["recentCommands"]) {
