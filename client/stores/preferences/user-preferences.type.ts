@@ -38,20 +38,6 @@ export type IUserGlobalPreferences = {
     markdownQAChat: boolean;
     vectorGenerationInProgress: boolean;
   };
-
-  /**
-   * @deprecated
-   * Temporary
-   */
-  mediaGridTestitems: any[];
-  /**
-   * @deprecated
-   * Temporary for testing
-   */
-  infiniteGrid: {
-    isGridCreated: boolean;
-    grid: any[];
-  };
 };
 
 export type UserAppearanceSettings = {
