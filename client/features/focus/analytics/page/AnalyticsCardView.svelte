@@ -85,7 +85,6 @@
   let cardPeriod = $state<IAnalyticsCard["period"]>(resolveDefaultCardPeriod());
   let cardType = $state<IAnalyticsCard["type"]>(AnalyticsCardType.PIE);
   let timePeriodTitle = $derived(timePeriod?.title ?? "");
-  const isCarbonChart = false;
   const isCanRenderInSmallerArea = [
     AnalyticsCardType.PIE,
     AnalyticsCardType.DONUT,
@@ -431,13 +430,7 @@
     >
       {#key refreshId}
         {#if $isInEditMode}
-          <div
-            class={cn("w-full", {
-              "h-full":
-                !$view.isPortrait || ($view.isPortrait && !isCarbonChart),
-              "h-4/5": $view.isPortrait && isCarbonChart
-            })}
-          >
+          <div class="w-full h-full">
             <CardResolver
               {card}
               {data}
