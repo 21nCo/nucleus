@@ -35,6 +35,12 @@
       toasts.error("No valid plan found");
     } else if (response.status === "success") {
       toasts.success("Purchase restored");
+    } else if (response.status === "unavailable") {
+      toasts.error(
+        response.reason === "offline"
+          ? "Connect to the internet and try again"
+          : "Purchase restoration is unavailable. Try again later."
+      );
     }
     toasts.closeProgress("restorePlan");
   }

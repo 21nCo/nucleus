@@ -1,4 +1,3 @@
-import { navigation } from "@21n/layout/navigation/navigation";
 import { chromium, expect } from "@playwright/test";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -88,9 +87,10 @@ try {
         .find(
           (e) =>
             new URL(e.name).pathname ===
-            `/@fs${root}/client/stores/app.store.ts`
+            `/@fs${root}/client/layout/navigation/navigation.ts`
         )?.name;
-      const { appStore } = await import(modulePath);
+      if (!modulePath) throw new Error("Loaded navigation module not found");
+      const { navigation } = await import(modulePath);
       navigation.openResource(id, "r");
     },
     { root, id }

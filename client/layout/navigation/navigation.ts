@@ -27,6 +27,7 @@ import { determineResourceAccessMode } from "@nucleum/datafn/resource.utils";
 import { EmbedDataMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
 import { datafn, datafnRuntime } from "@nucleum/datafn/datafn.store";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
+import { resolveNavigationLinkTarget } from "@21n/layout/navigation/link-target";
 import { appStore } from "@nucleum/stores/app.store";
 const recordSpecificSearchParams = [
   /-type$/,
@@ -132,18 +133,23 @@ export const navigation = {
     logger.log({ at: "opening link", url });
     const ctx = get(context);
     if (!url) return;
-    if (!url.includes("http")) {
-      navigation.gotoPath(url);
+    const target = resolveNavigationLinkTarget(url, window.location.origin);
+    if (!target) {
+      logger.warn({ at: "navigation.openLink.unsupportedUrl" });
+      return;
+    }
+    if (target.kind === "internal") {
+      navigation.gotoPath(target.url);
       return;
     }
     if (ctx.isEmbed) {
       if (isOauthFlow) {
-        postDataToParent(EmbedDataMessage.OAUTH, url);
+        postDataToParent(EmbedDataMessage.OAUTH, target.url);
       } else {
-        postDataToParent(EmbedDataMessage.LINK, url);
+        postDataToParent(EmbedDataMessage.LINK, target.url);
       }
     } else {
-      let win = window?.open(url, "_blank", "noopener,noreferrer");
+      let win = window?.open(target.url, "_blank", "noopener,noreferrer");
       if (win) {
         win.focus();
       }
@@ -514,30 +520,6 @@ export const navigation = {
       navigation.toggleSearchParam({ [AppSearchParam.MAX]: null });
     } else {
       navigation.toggleSearchParam({ [AppSearchParam.MAX]: true });
-    }
-    return;
-    navigation.toggleSearchParam({ [AccessMode.FULL]: null });
-    const url =
-      navigation.toggleSearchParam(recordSpecificSearchParams, {
-        isPreventRefresh: true
-      }) ?? new URL(window.location.href);
-    removeSearchParam(currentMode);
-    if (currentMode === AccessMode.FULL) {
-      const prevMode = url.searchParams.get("prev");
-      logger.log({ at: "toggleFocusAccessMode", currentMode, prevMode });
-      if (prevMode) {
-        url.searchParams.set(prevMode as string, resourceId.toString());
-        removeSearchParam("prev");
-      }
-    } else {
-      url.searchParams.set(AccessMode.FULL, resourceId.toString());
-      url.searchParams.set("prev", currentMode);
-    }
-    navigation.gotoPath(url.href);
-
-    function removeSearchParam(param: string) {
-      if (!url.searchParams.get(param)) return;
-      url.searchParams.delete(param);
     }
   },
   setCurrentPath: (path: string) => {

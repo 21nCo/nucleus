@@ -1,7 +1,8 @@
 import { writable } from "svelte/store";
 import { postMessageToParent } from "@nucleum/client/runtime/embed/embed.utils";
 import { EmbedMessage } from "@nucleum/client/runtime/embed/embedMessage.enum";
-/** A scheduled focus reminder delivered through the native notification contract. */
+
+/** A scheduled reminder delivered through the native notification contract. */
 export type ScheduledNotification = {
   inSeconds: number;
   message: string;
@@ -11,32 +12,25 @@ export type ScheduledNotification = {
   id: string;
 };
 
-/** Pending focus notifications delivered by the application shell. */
+/** Pending notifications delivered by the application shell. */
 export const scheduledNotifications = initScheduledNotificationStore();
 
 function initScheduledNotificationStore() {
   const { subscribe, set, update } = writable<ScheduledNotification[]>([]);
   return {
     subscribe,
-    set: (m: ScheduledNotification[]) => {
-      set(m);
+    set: (notifications: ScheduledNotification[]) => {
+      set(notifications);
     },
     reset: () => {
-      update(() => {
-        return [];
-      });
+      set([]);
       postMessageToParent(EmbedMessage.CLEAR_NOTIFICATIONS);
     },
-    notify: (event: ScheduledNotification[]) => {
-      update((n: ScheduledNotification[]) => {
-        return event;
-      });
+    notify: (notifications: ScheduledNotification[]) => {
+      set(notifications);
     },
-    push: (event: ScheduledNotification) => {
-      update((n: ScheduledNotification[]) => {
-        n.push(event);
-        return n;
-      });
+    push: (notification: ScheduledNotification) => {
+      update((notifications) => [...notifications, notification]);
     }
   };
 }

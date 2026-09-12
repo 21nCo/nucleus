@@ -63,7 +63,6 @@
   "client/features/focus/logs/manualLog/ManualLogPane.svelte",
   "client/features/focus/logs/manualLog/QuickAddDurationsEditor.svelte",
   "client/features/focus/logs/session-items.utils.ts",
-  "client/features/focus/notifications/scheduled-notifications.store.ts",
   "client/features/focus/player/FocusPlayer.svelte",
   "client/features/focus/player/FocusPlayerCommandModeWidget.svelte",
   "client/features/focus/player/FocusTopNavWidget.svelte",

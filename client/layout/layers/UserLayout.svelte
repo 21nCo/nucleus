@@ -8,7 +8,7 @@
   import { onMount } from "svelte";
   import { appLoadingState, appStore } from "@nucleum/stores/app.store";
   import { appEvents } from "@nucleum/stores/events/app-events.store";
-  import { scheduledNotifications } from "@nucleum/features/focus/notifications/scheduled-notifications.store";
+  import { scheduledNotifications } from "@21n/layout/notifications/scheduled-notifications.store";
   import { postDataToParent } from "@nucleum/client/runtime/embed/embed.utils";
   import context from "@nucleum/stores/context.store";
   import view from "@nucleum/stores/view.store";

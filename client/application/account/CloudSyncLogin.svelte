@@ -1,6 +1,5 @@
 <script lang="ts">
   import { navigation } from "@21n/layout/navigation/navigation";
-  import { requireCommandHost } from "@nucleum/stores/commands/command-host";
 
   import { page } from "$app/stores";
   import Button from "@21n/elements/button/Button.svelte";
@@ -167,11 +166,6 @@
         return;
       }
     }
-    //TODO - login from extension case
-    // if (isLoginFromExtension) {
-    //   postTokenToExtension(json);
-    //   requireCommandHost().runAction(Action.EXTENSTION_LOGIN);
-    // } else await account.signIn(json, { isNewUser: isSignup });
     actionInProgress = false;
   }
 

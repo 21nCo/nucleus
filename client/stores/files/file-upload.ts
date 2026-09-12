@@ -1,4 +1,3 @@
-
 import { UserDataMode } from "@nucleum/client/runtime/account/account.type";
 
 import { getBucketNameandKey } from "@21n/utils/account.utils";
@@ -84,8 +83,7 @@ export const fileUpload = {
       const isHeicFile = fileName.toLowerCase().endsWith(".heic");
       if (isHeicFile) {
         try {
-          const { convertedBlob, convertedFileName } =
-            await convertHeicToPng(blob);
+          const { convertedBlob } = await convertHeicToPng(blob);
           blob = convertedBlob;
           contentType = "image/png";
           fileName = fileName.replace(/\.heic$/i, ".png");

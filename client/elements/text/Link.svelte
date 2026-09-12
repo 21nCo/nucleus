@@ -5,6 +5,7 @@
   import context from "@nucleum/stores/context.store";
   import { LinkVariant } from "@21n/elements/button/button.type";
   import { cn } from "@21n/utils/ui.utils";
+  import { goto } from "@21n/utils/browser.utils";
   import { isValidEmail } from "@21n/shared-utils/text.utils";
   import { isUrlMatchPattern } from "@21n/shared-utils/utils";
 
@@ -27,7 +28,7 @@
     if (href.includes("http")) navigation.openLink(href);
     else if (isEnforeHttpIfMatchPattern && isUrlMatchPattern(href))
       navigation.openLink(`https://${href}`);
-    else if (isValidEmail(href)) navigation.openLink(`mailto:${href}`);
+    else if (isValidEmail(href)) goto(`mailto:${href}`);
     else if (href) requireCommandHost().runAction(href);
     onclick?.(event);
   }

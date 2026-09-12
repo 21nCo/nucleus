@@ -2,7 +2,6 @@
 
 <script lang="ts">
   import { navigation } from "@21n/layout/navigation/navigation";
-  import { requireCommandHost } from "@nucleum/stores/commands/command-host";
 
   import type { Snippet } from "svelte";
   import { page } from "$app/stores";
@@ -62,7 +61,6 @@
           ? await clientStorage.get(ClientStorageKey.AUTHFN_TOKEN)
           : undefined;
         postTokenToExtension({ token, userInfo });
-        // requireCommandHost().runAction(Action.EXTENSTION_LOGIN);
         navigation.gotoPath("/ext/login");
         return;
       }

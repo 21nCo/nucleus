@@ -1,8 +1,5 @@
 <script lang="ts">
   import { navigation } from "@21n/layout/navigation/navigation";
-
-  // import { goto } from "$app/navigation";
-  // import { goto } from "$app/navigation";
   import { page } from "$app/stores";
   import AppLoadingView from "@21n/layout/paint/AppLoadingView.svelte";
   import { appStore } from "@nucleum/stores/app.store";

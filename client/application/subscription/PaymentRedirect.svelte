@@ -42,6 +42,15 @@
     const response = await subscription.verifyPayment(nonce);
     if (response?.status === "success") {
       requireCommandHost().runAction(Action.PLAN_ONBOARDING);
+    } else if (response?.status === "unavailable") {
+      error =
+        response.reason === "offline"
+          ? "You're offline"
+          : "Payment verification is unavailable";
+      errorSubText =
+        response.reason === "offline"
+          ? "Connect to the internet and reload this page."
+          : "Please reload this page and try again.";
     } else {
       if (statusUrlParam) {
         switch (statusUrlParam) {

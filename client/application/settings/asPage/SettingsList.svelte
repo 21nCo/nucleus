@@ -26,7 +26,6 @@
     )
       requireCommandHost().runAction(item, { isReturnIfComponent: true });
     else if (component?.path) navigation.gotoPath(component.path);
-    // else navigation.gotoPath("/cp/" + item);
     else
       navigation.toggleSearchParam({
         [AppSearchParam.SETTING]: item
