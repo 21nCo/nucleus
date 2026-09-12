@@ -178,7 +178,12 @@ async function startVite(app: string): Promise<ViteHarness> {
 
 async function warmUpViteUrl(url: string) {
   const { chromium } = await import("playwright");
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
+      ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH }
+      : {})
+  });
   try {
     for (let attempt = 0; attempt < 3; attempt += 1) {
       const page = await browser.newPage();
