@@ -494,17 +494,21 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
   /**
    * Continues the next interval in case of pre defined intervals.
    *
-   * Changing the currentBlockId and state of the session is taken care of in {@link _resumeTimer} method - via {@link _restorePredefinedSessionState} method.
+   * Advances predefined intervals without replacing the active timer.
    */
   private async _continueSession() {
     let session = this.get();
+    if (session.type !== SessionType.PREDEFINED_INTERVALS) return;
     if (session.state == SessionState.FOCUS_RUNNING) {
       appEvents.publish(PointronEvent.INTERVAL_ENDED);
     } else {
       appEvents.publish(PointronEvent.BREAK_ENDED);
       this.modify({ isBreakReminderNotified: false }, { isPersist: false });
     }
-    this._resumeTimer();
+    this._restorePredefinedSessionState(session);
+    this.modify({ timeElapsed: 0 }, { isPersist: false });
+    this.refreshNotifications(this.get());
+    this._postNotificationsToEmbed();
     await this.persist();
   }
 
@@ -679,7 +683,7 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
           );
           if (currentBlockIndex === session.intervals.length - 1) {
             this.prefinishSession();
-          } else {
+          } else if (session.type === SessionType.PREDEFINED_INTERVALS) {
             isContinueSession = true;
           }
         }
