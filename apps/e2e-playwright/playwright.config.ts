@@ -13,10 +13,18 @@ const defaultBaseURL = process.env.APP_BASE_URL ?? "http://127.0.0.1:4173";
 const authMode = resolveE2EAuthMode();
 const chromeLikeUserAgent =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+const configuredExecutablePath =
+  process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
 const chromeLaunchOptions = {
-  args: ["--disable-blink-features=AutomationControlled", "--no-sandbox"]
+  args: ["--disable-blink-features=AutomationControlled", "--no-sandbox"],
+  ...(configuredExecutablePath
+    ? { executablePath: configuredExecutablePath }
+    : {})
 };
 const defaultViewport = { width: 1512, height: 982 } as const;
+const browserChannel = configuredExecutablePath
+  ? {}
+  : { channel: "chrome" as const };
 
 function getProjectBaseURL(projectName: string): string {
   if (projectName === Product.NUCLEUM) {
@@ -48,7 +56,7 @@ function getProjectUse(projectName: string) {
     // Local dev uses Caddy `tls internal`; Playwright's bundled Chromium may not honor OS trust store.
     // Keeping this avoids CI/local flakes while still testing app behavior over HTTPS.
     ignoreHTTPSErrors: true,
-    channel: "chrome" as const,
+    ...browserChannel,
     userAgent: chromeLikeUserAgent,
     launchOptions: chromeLaunchOptions,
     baseURL
@@ -98,7 +106,7 @@ export default defineConfig({
     // Local dev uses Caddy `tls internal`; Playwright's bundled Chromium may not honor OS trust store.
     // Keeping this avoids CI/local flakes while still testing app behavior over HTTPS.
     ignoreHTTPSErrors: true,
-    channel: "chrome",
+    ...browserChannel,
     userAgent: chromeLikeUserAgent,
     launchOptions: chromeLaunchOptions
   },
