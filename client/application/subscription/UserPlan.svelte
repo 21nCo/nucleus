@@ -1,9 +1,11 @@
 <script lang="ts">
-  import PanelSwitcher from "@21n/elements/switcher/PanelSwitcher.svelte";
+  import { requireCommandHost } from "@nucleum/stores/commands/command-host";
+  import { subscription } from "@nucleum/application/subscription/subscription";
+
   import { Size } from "@21n/elements/size.enum";
-  import { PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+
   import type { IPlan } from "@nucleum/application/subscription/plan-presentation.type";
-import type { IBillingAddress } from "@nucleum/schema/account/subscription";
+  import type { IBillingAddress } from "@nucleum/schema/account/subscription";
   import { BillingCycle } from "@nucleum/schema/account/subscription";
   import PlanCard from "@nucleum/application/subscription/elements/PlanCard.svelte";
   import FullScreenCloseButton from "@21n/elements/button/FullScreenCloseButton.svelte";
@@ -66,7 +68,7 @@ import type { IBillingAddress } from "@nucleum/schema/account/subscription";
 
   async function onSwitchProceed() {
     isRedirecting = true;
-    const response = await account.modifySubscription({
+    const response = await subscription.modifySubscription({
       type: "switch",
       plan: selectedPlan?.type,
       cycle: selectedCycle,
@@ -80,7 +82,7 @@ import type { IBillingAddress } from "@nucleum/schema/account/subscription";
   }
 
   async function onCancel() {
-    appStore.runAction(Action.USER_PLAN_CANCELATION);
+    requireCommandHost().runAction(Action.USER_PLAN_CANCELATION);
   }
 
   async function onChoose(plan: IPlan) {
@@ -94,7 +96,7 @@ import type { IBillingAddress } from "@nucleum/schema/account/subscription";
 
   async function completePurchaseOnIOS() {
     const productId = formProductId();
-    const response = await account.initiateSubscription({
+    const response = await subscription.initiateSubscription({
       plan: selectedPlan?.type,
       cycle: selectedCycle,
       billing: billingAddress,
@@ -127,7 +129,7 @@ import type { IBillingAddress } from "@nucleum/schema/account/subscription";
       return;
     }
     isRedirecting = true;
-    const response = await account.initiateSubscription({
+    const response = await subscription.initiateSubscription({
       plan: selectedPlan?.type,
       cycle: selectedCycle,
       billing: billingAddress,
@@ -145,7 +147,7 @@ import type { IBillingAddress } from "@nucleum/schema/account/subscription";
     loadingText="Redirecting to payment..."
   />
 {:else if isBillingAddressCapture}
-  <BillingAddressCapture bind:billingAddress onProceed={onProceed} />
+  <BillingAddressCapture bind:billingAddress {onProceed} />
 {:else}
   <div
     class="flex flex-col gap-8 h-full w-full overflow-auto max-w-4xl mx-auto"
