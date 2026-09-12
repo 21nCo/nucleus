@@ -148,6 +148,8 @@ export const navigation = {
       } else {
         postDataToParent(EmbedDataMessage.LINK, target.url);
       }
+    } else if (target.kind === "system") {
+      window.location.assign(target.url);
     } else {
       let win = window?.open(target.url, "_blank", "noopener,noreferrer");
       if (win) {

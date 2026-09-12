@@ -43,7 +43,7 @@ export const subscription = {
       const isOffline = await determineIfOffline();
       if (isOffline) return unavailableResult("offline");
       const response = await persistenceInstance.initiateSubscription(params);
-      return response;
+      return response || unavailableResult("request-failed");
     } catch (e) {
       logger.error({ at: "initiateSubscription", error: e });
       return unavailableResult("request-failed");
@@ -60,7 +60,7 @@ export const subscription = {
           return n;
         });
       }
-      return response;
+      return response || unavailableResult("request-failed");
     } catch (e) {
       logger.error({ at: "modifySubscription", error: e });
       return unavailableResult("request-failed");
@@ -77,7 +77,7 @@ export const subscription = {
           return n;
         });
       }
-      return response;
+      return response || unavailableResult("request-failed");
     } catch (e) {
       logger.error({ at: "restorePurchase", error: e });
       return unavailableResult("request-failed");
@@ -99,7 +99,7 @@ export const subscription = {
         });
         return { status: "success" };
       }
-      return response;
+      return response || unavailableResult("request-failed");
     } catch (e) {
       logger.error({ at: "verifyPayment", error: e });
       return unavailableResult("request-failed");
