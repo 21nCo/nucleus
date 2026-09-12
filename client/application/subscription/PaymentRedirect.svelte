@@ -1,8 +1,11 @@
 <script lang="ts">
+  import { requireCommandHost } from "@nucleum/stores/commands/command-host";
+  import { subscription } from "@nucleum/application/subscription/subscription";
+
   import EmptyStatusView from "@21n/elements/feedback/EmptyStatusView.svelte";
   import ErrorStatusPane from "@21n/elements/feedback/ErrorStatusPane.svelte";
   import account from "@nucleum/stores/account.store";
-  import { appStore } from "@nucleum/stores/app.store";
+
   import { Action } from "@nucleum/client/config/action.enum";
   import { onMount } from "svelte";
 
@@ -36,9 +39,9 @@
 
   async function checkPaymentStatus() {
     if (!nonce) return;
-    const response = await account.verifyPayment(nonce);
+    const response = await subscription.verifyPayment(nonce);
     if (response?.status === "success") {
-      appStore.runAction(Action.PLAN_ONBOARDING);
+      requireCommandHost().runAction(Action.PLAN_ONBOARDING);
     } else {
       if (statusUrlParam) {
         switch (statusUrlParam) {

@@ -1,3 +1,4 @@
+import { requireCommandHost } from "@nucleum/stores/commands/command-host";
 import { Resource } from "@nucleum/datafn/resource.enum";
 import {
   type IActiveSessionStore,
@@ -28,17 +29,16 @@ import modalEvent, {
 } from "@nucleum/stores/overlays/modal.store";
 import {
   toasts,
-  scheduledNotifications,
-  fullPageLoadingScreen,
-  appEvents
+  fullPageLoadingScreen
 } from "@nucleum/stores/notification.store";
+import { appEvents } from "@nucleum/stores/events/app-events.store";
+import { scheduledNotifications } from "@nucleum/features/focus/notifications/scheduled-notifications.store";
 import { deepCopy, isValidArrayWithData } from "@21n/shared-utils/obj.utils";
 import { AlertType } from "@nucleum/stores/notifications/notification.type";
 import { generateResourceId } from "@nucleum/datafn/id.utils";
 import type { IRecordId } from "@nucleum/schema/legacy/data.type";
 import { logger } from "@nucleum/client/runtime/logging/logger";
 import {
-  type ISession,
   SessionType,
   type ISessionCapture,
   type ISessionLogCapture
@@ -847,7 +847,7 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
       savedSessionStore.state === SessionState.PRE_FINISHED
     ) {
       this.shallowReset();
-      appStore.runAction(PointronEvent.SESSION_FINISHED);
+      requireCommandHost().runAction(PointronEvent.SESSION_FINISHED);
       this.modify(savedSessionStore, { isPersist: false });
     } else {
       savedSessionStore = this.reset();
@@ -919,10 +919,7 @@ class ActiveSessionStore extends ObservableStore<IActiveSessionStore> {
       ? session.totalIdle
       : 0;
     const elapsed = sessionStart
-      ? Math.max(
-          0,
-          (end.getTime() - sessionStart.getTime()) / 1000 - totalIdle
-        )
+      ? Math.max(0, (end.getTime() - sessionStart.getTime()) / 1000 - totalIdle)
       : session.totalElapsed;
     const intervals = this.resolveFinishedIntervals(session, end, elapsed);
     const currentBlock = intervals.find((x) => x.id === session.currentBlockId);

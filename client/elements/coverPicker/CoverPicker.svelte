@@ -1,7 +1,12 @@
 <script lang="ts">
+  import { fileUpload } from "@nucleum/stores/files/file-upload";
+
   import modalEvent from "@nucleum/stores/overlays/modal.store";
   import { Action } from "@nucleum/client/config/action.enum";
-  import { BarStyle, PanelSwitcherStyle } from "@21n/elements/switcher/switcher.enum";
+  import {
+    BarStyle,
+    PanelSwitcherStyle
+  } from "@21n/elements/switcher/switcher.enum";
   import { TextStyle } from "@21n/elements/text/text.enum";
   import Button from "@21n/elements/button/Button.svelte";
   import ColorPicker from "@21n/elements/colorPicker/ColorPicker.svelte";
@@ -11,7 +16,7 @@
   import GradientsSelector from "@21n/elements/colorPicker/gradients/GradientsSelector.svelte";
   import { fileDrop } from "@nucleum/actions/fileDrop.action";
   import Icon from "@21n/elements/Icon.svelte";
-  import account from "@nucleum/stores/account.store";
+
   import type { IRecordId } from "@nucleum/schema/legacy/data.type";
   import { Resource } from "@nucleum/datafn/resource.enum";
   import FileView from "@nucleum/components/files/FileView.svelte";
@@ -118,7 +123,7 @@
     let file = files[0];
 
     let imageLocalURL = new Blob([file], { type: file.type });
-    let response = await account.uploadFileV2(
+    let response = await fileUpload.uploadFileV2(
       file.type,
       file.name,
       imageLocalURL

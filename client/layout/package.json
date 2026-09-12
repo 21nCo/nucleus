@@ -31,6 +31,7 @@
     "@nucleum/datafn": "*",
     "@nucleum/persistence": "*",
     "@nucleum/products": "*",
-    "@nucleum/stores": "*"
+    "@nucleum/stores": "*",
+    "@nucleum/features": "*"
   }
 }

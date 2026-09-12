@@ -1,5 +1,7 @@
 <script lang="ts">
-  import { appStore } from "@nucleum/stores/app.store";
+  import { navigation } from "@21n/layout/navigation/navigation";
+  import { requireCommandHost } from "@nucleum/stores/commands/command-host";
+
   import context from "@nucleum/stores/context.store";
   import { LinkVariant } from "@21n/elements/button/button.type";
   import { cn } from "@21n/utils/ui.utils";
@@ -22,11 +24,11 @@
 
   function handleClick(event: MouseEvent) {
     if (!href) return;
-    if (href.includes("http")) appStore.openLink(href);
+    if (href.includes("http")) navigation.openLink(href);
     else if (isEnforeHttpIfMatchPattern && isUrlMatchPattern(href))
-      appStore.openLink(`https://${href}`);
-    else if (isValidEmail(href)) appStore.openLink(`mailto:${href}`);
-    else if (href) appStore.runAction(href);
+      navigation.openLink(`https://${href}`);
+    else if (isValidEmail(href)) navigation.openLink(`mailto:${href}`);
+    else if (href) requireCommandHost().runAction(href);
     onclick?.(event);
   }
 </script>

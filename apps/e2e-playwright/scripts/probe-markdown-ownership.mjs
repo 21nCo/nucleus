@@ -1,3 +1,4 @@
+import { navigation } from "@21n/layout/navigation/navigation";
 import { chromium, expect } from "@playwright/test";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -90,7 +91,7 @@ try {
             `/@fs${root}/client/stores/app.store.ts`
         )?.name;
       const { appStore } = await import(modulePath);
-      appStore.openResource(id, "r");
+      navigation.openResource(id, "r");
     },
     { root, id }
   );

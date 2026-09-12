@@ -1,6 +1,9 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
+  import { navigation } from "@21n/layout/navigation/navigation";
+  import { requireCommandHost } from "@nucleum/stores/commands/command-host";
+
   import type { Snippet } from "svelte";
   import { page } from "$app/stores";
   import { ClientStorageKey } from "@nucleum/persistence/persistence.type";
@@ -10,7 +13,10 @@
   } from "@nucleum/stores/account.store";
   import { appStore } from "@nucleum/stores/app.store";
   import context from "@nucleum/stores/context.store";
-  import { UserDataMode, UserSessionType } from "@nucleum/client/runtime/account/account.type";
+  import {
+    UserDataMode,
+    UserSessionType
+  } from "@nucleum/client/runtime/account/account.type";
   import { Product } from "@nucleum/client/config/product.type";
   import { PlanType } from "@nucleum/schema/account/subscription";
   import { postTokenToExtension } from "@nucleum/client/runtime/embed/embed.utils";
@@ -42,7 +48,7 @@
         ...current,
         sessionType: UserSessionType.NEW
       }));
-      appStore.gotoPath("/bootstrap");
+      navigation.gotoPath("/bootstrap");
       return;
     }
     if (result) {
@@ -56,8 +62,8 @@
           ? await clientStorage.get(ClientStorageKey.AUTHFN_TOKEN)
           : undefined;
         postTokenToExtension({ token, userInfo });
-        // appStore.runAction(Action.EXTENSTION_LOGIN);
-        appStore.gotoPath("/ext/login");
+        // requireCommandHost().runAction(Action.EXTENSTION_LOGIN);
+        navigation.gotoPath("/ext/login");
         return;
       }
     }
@@ -87,7 +93,7 @@
         $account.plan &&
         $account.plan.plan !== PlanType.NUCLEUS
       ) {
-        appStore.gotoPath("/error/access-denied");
+        navigation.gotoPath("/error/access-denied");
         return false;
       }
       return true;
@@ -99,7 +105,7 @@
         currentPath: window.location.pathname
       });
       clearAccountStore();
-      appStore.gotoPath("/account/login", {
+      navigation.gotoPath("/account/login", {
         queryParams: { msg: "expired" },
         replaceState: true
       });
@@ -112,7 +118,7 @@
         error: resolution.error,
         currentPath: window.location.pathname
       });
-      appStore.gotoPath("/account/login", {
+      navigation.gotoPath("/account/login", {
         queryParams: { msg: "unavailable" },
         replaceState: true
       });
@@ -121,7 +127,7 @@
 
     if (resolution.status === "signed-out") {
       clearAccountStore();
-      appStore.gotoPath("/account/login", { replaceState: true });
+      navigation.gotoPath("/account/login", { replaceState: true });
       return false;
     }
 
@@ -182,7 +188,7 @@
       const plan =
         planResolution.status === "resolved" ? planResolution.plan : cachedPlan;
       if (plan?.plan !== PlanType.NUCLEUS) {
-        appStore.gotoPath("/error/access-denied");
+        navigation.gotoPath("/error/access-denied");
         return false;
       }
     }

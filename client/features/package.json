@@ -148,7 +148,8 @@
     "./spaces/combination/thumbnail/CombinationThumbnail.svelte": "./spaces/combination/thumbnail/CombinationThumbnail.svelte",
     "./spaces/gatheryEvent.enum": "./spaces/gatheryEvent.enum.ts",
     "./spaces/space.store": "./spaces/space.store.ts",
-    "./system/accessLogging/accessLog.type": "./system/accessLogging/accessLog.type.ts"
+    "./system/accessLogging/accessLog.type": "./system/accessLogging/accessLog.type.ts",
+    "./focus/notifications/scheduled-notifications.store": "./focus/notifications/scheduled-notifications.store.ts"
   },
   "dependencies": {
     "@antv/g6": "^5.0.26",
